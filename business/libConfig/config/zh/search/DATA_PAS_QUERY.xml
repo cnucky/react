@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_PAS" DisplayName="民航旅客离港">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="FLT_DATE" DisplayName="航班日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="FLT_NUMBER" DisplayName="航班号" ControlType="Text"/>
+            <Condition Item="PSR_ENAME" DisplayName="旅客拼音姓名" ControlType="Text"/>
+            <Condition Item="PSR_CNAME" DisplayName="旅客中文姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="TEL_NO" DisplayName="电话" ControlType="Text"/>
+            <Condition Item="ADDRESS" DisplayName="地址" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="FLT_DATE" DisplayName="航班日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="FLT_NUMBER" DisplayName="航班号" ControlType="Text"/>
+            <Condition Item="PSR_ENAME" DisplayName="旅客拼音姓名" ControlType="Text"/>
+            <Condition Item="PSR_CNAME" DisplayName="旅客中文姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="TEL_NO" DisplayName="电话" ControlType="Text"/>
+            <Condition Item="ADDRESS" DisplayName="地址" ControlType="Text"/>
+    </Template>
+</Search>

@@ -1,0 +1,51 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<style type="text/css">
+ul.fancytree-container {
+    min-height: 200px;
+    border: none;
+}
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<button type="button" title="新增用户组" data-toggle="tooltip" data-placement="bottom" id="btn-add-group" class="btn btn-primary mr10">
+    <i class="fa fa-plus" style="position:relative;"></i>
+</button>
+<button type="button" title="添加用户" data-toggle="tooltip" data-placement="bottom" id="btn-add-users" class="btn btn-system mr10">
+    <i class="fa fa-sign-in"></i>
+</button>
+<button type="button" title="删除" data-toggle="tooltip" data-placement="bottom" id="btn-delete-users" class="btn btn-danger" disabled="">
+    <i class="fa fa-sign-out"></i>
+</button>
+<!-- end shim -->
+<script>
+$(window).on("resize", function() {
+    var leftTray = $('.tray.tray-right');
+    var leftHeight = window.innerHeight - leftTray.offset().top;
+    $('.tray.tray-center').height(leftHeight);
+});
+</script>
+<section id="content" class="table-layout animated fadeIn">
+    <aside class="tray tray-right tray400 pt10 pl10 pr10 pbn br-n">
+        <div id="group-tree">
+            <div id="group-tree-filter" class="row mt10 pt10 mln mrn" style="background-color: white">
+                <div class="col-xs-8">
+                    <input class="form-control" name="searchGroup" placeholder="过滤...">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary" id="btnResetSearchGroup">清除
+                        <span id="matchesGroup"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center">
+        <div class="tray-scroller" id="form-container">
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/js/groups.js"></script>

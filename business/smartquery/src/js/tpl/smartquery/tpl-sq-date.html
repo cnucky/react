@@ -1,0 +1,72 @@
+ <!--<div class="col-xs-6 mt5">-->
+    <!--&lt;!&ndash;<div class="col-xs-1"></div>&ndash;&gt;-->
+    <!--<div class="col-xs-11 pln">-->
+        <!--<div class="col-xs-12 pln">-->
+            <!--<div class=" input-group" style="width:100%">-->
+                <!--<span id="field-name" class="input-group-addon" style="width:105px"></span>-->
+                <!--<div class="input-group date" id="date-range">-->
+                    <!--<span class="input-group-addon cursor">-->
+                                            <!--<i class="fa fa-calendar"></i>-->
+                                        <!--</span>-->
+                    <!--<input type="text" class="form-control" id="date-range-input" style="padding-right:0px" placeholder="时间段">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+ <div class="col-xs-6 mt5">
+     <div class="col-xs-11">
+         <div class="col-xs-6 pln">
+             <div class=" input-group">
+                 <span id="field-name" class="input-group-addon" style="width:105px;color:#232323"></span>
+
+                 <div class="input-group-btn">
+                     <select id="date_opr" class="opr-selector">
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-xs-6 pn" id="date_equal_div">
+             <div class="input-group date" id="date_picker">
+                 <span class="input-group-addon cursor"><i class="fa fa-calendar"></i></span>
+                 <input type="text" class="form-control" id="date-input"
+                        style="padding-right:0px; border-radius: 0px" placeholder="YYYY/MM/DD">
+             </div>
+         </div>
+
+         <div class="col-xs-6 pn" id="date_between_div" style="display: none">
+             <div class="input-group date" id="date_begin_picker"
+                  style="display: inline; width: 48%;">
+                 <!--<span class="input-group-addon cursor" style="width: 10%; display: inline;"><i class="fa fa-calendar"></i></span>-->
+                 <input type="text" class="form-control" id="date-begin-input"
+                        style="display: inline;width: 48%; padding-right:0px; border-radius: 0px"
+                        placeholder="开始日期">
+             </div>
+             <div class="input-group date" id="date_end_picker"
+                  style="display: inline; width: 48%;">
+                 <!--<span class="input-group-addon cursor" style="display: inline;width: 10%;"><i class="fa fa-calendar"></i></span>-->
+                 <input type="text" class="form-control" id="date-end-input"
+                        style="float:right; display: inline; width: 48%; padding-right:0px; border-radius: 0px"
+                        placeholder="结束日期">
+             </div>
+         </div>
+
+         <div class="input-group col-xs-6 pn" id="date_null_div" style="display: none">
+             <input type="text" class="form-control" readonly
+                    style="padding-right:0px; border-radius: 0px">
+         </div>
+
+         <!--<div class="col-xs-7 pn">-->
+             <!--<div class="input-group date" id="date-range">-->
+                 <!--<span class="input-group-addon cursor"><i class="fa fa-calendar"></i></span>-->
+                 <!--<input type="text" class="form-control" id="date-range-input" -->
+                        <!--style="padding-right:0px; border-radius: 0px"-->
+                        <!--placeholder="时间段">-->
+             <!--</div>-->
+         <!--</div>-->
+
+     </div>
+ </div>

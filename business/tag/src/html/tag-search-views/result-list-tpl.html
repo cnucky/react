@@ -1,0 +1,32 @@
+<div class='col-md-12'>
+    <div class='r-list' ng-click='openResult(item)'>
+        <div class='media'>
+            <div class='media-left pl20  va-m' style='height:100px'>
+                <div class='category-icon' style='background:{{getBackgroundColor(item.typeId)}};'>
+                    <span ng-class='getIconClass(item.typeId)'></span>
+                </div>
+            </div>
+            <div class='media-body pl10' style='max-width:410px;'>
+                <div class='media-head mt10'>
+                    <h4>({{item.typeName}}) <small class='text-primary'>{{item.id}}</small></h4>
+                </div>
+                <div style='display:block;' class='rlist-ellipsis'>
+                    <span ng-repeat='p in item.properties' ng-show='p.key!="地址"'>
+                    <span >{{p.key}}:</span>
+                    <span class='mr10 text-primary'>{{p.value}}</span>
+                    </span>
+                </div>
+                <div ng-repeat='p in item.properties' ng-show='p.key==="地址"' class='mt10 rlist-ellipsis'>
+                    <span>{{p.key}}:</span>
+                    <span class='mr10'>{{p.value}}</span>
+                </div>
+            </div>
+        </div>
+        
+            <ul class='tags' style='height:65px;width:40%;overflow:hidden;nowrap:white;position:absolute;top:10px;right:20px;'>
+                    <li ng-repeat='tag in item.tags'><a href>{{tag.key}}({{tag.value|autoAdjust}})</a></li>
+                    <!-- <div ng-repeat='tag in item.tags' class='tag'><span><i class='fa fa-tag'></i> {{tag.key}}(</span><span>{{tag.value|autoAdjust}}</span><span>)</span></div> -->
+            </ul>
+        
+    </div>
+</div>

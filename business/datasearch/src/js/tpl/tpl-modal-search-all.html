@@ -1,0 +1,205 @@
+<form class="form-horizontal" role="form">
+
+    <div class="row i18n-localize">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-11">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label "
+                               style="text-align: left" search_code="<%= search_code %>"><%= search_code_name
+                            %>:</label>
+
+                        <div class="col-lg-10">
+                            <% if(search_code == 'LAC_CI') {%>
+
+                            <div id="divLacciBatch" class="row ">
+                                <div class="col-sm-12"
+                                     style="padding:5px;border:0px solid!important;border-color: lightgray!important;">
+                                    <table style="width: 100%">
+                                        <tr style="width: 100%">
+                                            <td>
+                                                <div class="col-sm-12">
+                                                    <div class="col-sm-4 " style="padding-left: 0px">
+                                                        <select id="bs_carrier"
+                                                                class="form-control">
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input id="bs_lac" class="form-control"
+                                                               placeholder="LAC">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input id="bs_ci" class="form-control"
+                                                               placeholder="CI">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td width="100px">
+                                                <button type="button" id="add_lacci"
+                                                        class="btn btn-success mr10">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                                <button type="button" id="import_lacci"
+                                                        class="btn btn-primary mr10">
+                                                    <i class="fa fa-download"></i>
+                                                </button>
+                                                <input type="file" id="lacci_file_selector" class="hidden">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12 ">
+                                    <table class="table table-striped" id="basestation_table">
+                                        <thead>
+                                        <tr>
+                                            <th data-i18n="datasearch.searchall.basestation_table.carrier"></th>
+                                            <th data-i18n="datasearch.searchall.basestation_table.carrier_code"></th>
+                                            <th data-i18n="datasearch.searchall.basestation_table.base_station"></th>
+                                            <th data-i18n="datasearch.searchall.basestation_table.operation"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+
+                            <% } else { %>
+
+                            <div id="divNormalBatch" class="col-sm-12">
+                                <textarea id="txtConditions" style="height: 100px;margin-right: 2px;padding-right: 50px"
+                                          class="gui-input form-control" placeholder=""><%= conditions %></textarea>
+                            </div>
+
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+
+                <div class="col-lg-11">
+                    <div id="div_error" class="row mh5 hidden">
+                        <div class="row">
+                            <em id="input_error" class="state-error  mt5"
+                                style="color: #DE888A;"></em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-11">
+            <div id="search-range"></div>
+        </div>
+    </div>
+
+    <div class="row i18n-localize">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-11">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label " data-i18n="datasearch.searchall.labels.data_type"
+                               style="text-align: left"></label>
+
+                        <div class="col-lg-11">
+
+                            <div class="input-group mt10">
+                                <div class="icheck-inline">
+                                    <a class="bs-component">
+                                        <a class="radio-custom mb5">
+                                            <input type="radio" id="radio_all_categories" checked
+                                                   name="radio_yewu">
+                                            <label for="radio_all_categories" data-i18n="datasearch.searchall.labels.all"
+                                                   style="color:#666666;font-weight: 200"></label>
+                                        </a>
+                                    </a>
+                                    <a class="bs-component">
+                                        <a class="radio-custom  mb5">
+                                            <input type="radio" id="radio_self_categories"
+                                                   name="radio_yewu">
+                                            <label for="radio_self_categories" data-i18n="datasearch.searchall.labels.custom"
+                                                   style="color:#666666;font-weight: 200">
+                                            </label>
+                                        </a>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div id="panel_categories">
+                                <div class="panel-body" style="border: none; padding: 0">
+                                    <div class="row">
+                                        <div class="checkbox-custom" id="checkPa"
+                                             style="display: none;">
+                                            <input type="checkbox" id="btnProtocolAll">
+                                            <label for="btnProtocolAll" data-i18n="datasearch.searchall.labels.selectall"></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group" id="divCategories"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row i18n-localize">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="col-lg-1 control-label" style="text-align: left"
+                               data-i18n="datasearch.searchall.labels.search_position" ></label>
+
+                        <div class="col-lg-11">
+                            <div class="input-group mt10">
+                                <div class="icheck-inline">
+                                    <a class="bs-component">
+                                        <a class="radio-custom ">
+                                            <input type="radio" id="radio_structured"
+                                                   class="search-position"
+                                                   name="radio_search_position" search_position="0">
+                                            <label for="radio_structured" data-i18n="datasearch.searchall.labels.structured_only"
+                                                   style="color:#666666;font-weight: 200"></label>
+                                        </a>
+                                    </a>
+                                    <a class="bs-component">
+                                        <a class="radio-custom ">
+                                            <input type="radio" id="radio_structured_and_file"
+                                                   class="search-position"
+                                                   checked name="radio_search_position"
+                                                   search_position="1">
+                                            <label for="radio_structured_and_file" data-i18n="datasearch.searchall.labels.structured_text"
+                                                   style="color:#666666;font-weight: 200"></label>
+                                        </a>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

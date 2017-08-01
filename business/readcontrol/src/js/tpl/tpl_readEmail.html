@@ -1,0 +1,46 @@
+<div id="email-cont" class="tab-pane active fade in">
+    <div class="btn-group" id="warpBoxTools">
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-save"></i>
+                <span data-i18n="dataprocess.action.download"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="savaUrl">
+                <li><a href="" download="" data-i18n="dataprocess.action.include_struct"></a></li>
+                <li><a href="" download="" data-i18n="dataprocess.action.no_include_struct"></a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-cogs"></i>
+                <span data-i18n="dataprocess.action.change_subject_code"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="titleEnCode">
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-cogs"></i>
+                <span data-i18n="dataprocess.action.change_text_code"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="contEnCode">
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-font"></i>
+                <span data-i18n="dataprocess.action.choose_font"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="fontFamily">
+            </ul>
+        </div>
+    </div>
+    <div id="tplContBox">
+        <iframe class="content diyScroll" src="/readcontrol/loadEmail_table.html" id="emailIFM">
+        </iframe>
+    </div>
+</div>

@@ -1,0 +1,282 @@
+.functionPanel-out{
+    height: 100%;
+}
+#searchPOIPanel
+{
+    height: 100%;
+}
+.search-group-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.search-group-body
+{
+    /*height: */
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.buttonInToolbar-style{
+    border:1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.buttonInToolbar-style:hover{
+    background-color: #F0F0F0 !important;
+    cursor: pointer;
+}
+/*.leaflet-control{
+    margin-right:0px !important;
+    margin-top:0px !important;
+}*/
+.addressOrName-toggle{
+    /*margin-left: 5px;*/
+    border: 1px;
+    border-color: lightgrey;
+    width: 100%;
+    height:20px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    margin-top: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.z_search-input
+{
+    width: 90%;
+    height: 22px;
+    border: 1px solid lightgrey !important;
+}
+.z_search-input:focus
+{
+    border: 1px solid #000000 !important;
+}
+.z_search-input:hover
+{
+    border: 1px solid #E5E5E5 !important;
+}
+.z_search-button
+{
+    width: 50px;
+    height: 24px;
+    background-color: dodgerblue;
+    border: 0px #000000 solid;
+    color: #ffffff;
+    cursor: pointer;
+}
+.type-item-pic{
+    width: 36px;
+    height: 36px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.poiSearch-group-type
+{
+    height: 20px;
+    /*border-bottom: 1px #000000 solid;*/
+    background-color: #F8F8F8;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 5px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.poiSearch-result-group-type{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #FAFAD2;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 30px;
+}
+.type-selection{
+    background-color: #87ceeb
+}
+.search-result-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clearQueryResult-picture
+{
+    float: right;
+    width: 20px;
+    height: 20px;
+    padding-right:6px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.queryTypeStyle{
+    border: 1px solid grey;
+    display:none;
+    height: 157px;
+    margin: 5px;
+}
+.queryOutlookType
+{
+    border: 1px solid #000000;
+    display:none;
+    height: 157px;
+    margin: 5px;
+}
+.queryResult-table-scrollable {
+    min-height: 150px;
+    padding-top: 10px;
+    width: 312px;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px !important;
+    background-color: transparent;
+    float: right;
+    font-size: 13px;
+    color: #000000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.result_selection{
+    background: linear-gradient(to right,lightblue,#ffffff);
+}
+.img_common{
+    background-image: url("./image/markers_new.png");
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 18px;
+}
+.img_1{ background-position: 0px -139px;}
+.img_2{ background-position: -18px -139px;}
+.img_3{ background-position: -36px -139px;}
+.img_4{ background-position: -54px -139px;}
+.img_5{ background-position: -72px -139px;}
+.img_6{ background-position: -90px -139px;}
+.img_7{ background-position: -108px -139px;}
+.img_8{ background-position: -126px -139px;}
+.img_9{ background-position: -144px -139px;}
+.img_10{ background-position: -162px -139px;}
+.img_select_1{ background-position: 0px -166px;}
+.img_select_2{ background-position: -18px -166px;}
+.img_select_3{ background-position: -36px -166px;}
+.img_select_4{ background-position: -54px -166px;}
+.img_select_5{ background-position: -72px -166px;}
+.img_select_6{ background-position: -90px -166px;}
+.img_select_7{ background-position: -108px -166px;}
+.img_select_8{ background-position: -126px -166px;}
+.img_select_9{ background-position: -144px -166px;}
+.img_select_10{ background-position: -162px -166px;}
+.hr-seprator{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 0;
+    background: linear-gradient(to right,lightblue,#ffffff);
+    height: 2px;
+    width: 270px;
+}
+.mutiChar-display
+{
+    width: 260px;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom:5px
+}
+.portlet-extend{
+    border: 1px solid lightgray;
+}
+.portlet-title-extend-popup{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: white;
+    background-color: #4B8DF8;
+    padding-left: 8px;
+    font-family:'Open Sans';
+}
+.portlet-body-extend-popup{
+    font-family:'Open Sans';
+    font-size: 12px;
+}
+.portlet-body-extend-popup table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.portlet-body-extend-popup tr{
+    height: 22px;
+    background-color: #F8F8F8
+}
+.portlet-body-extend-popup td,.portlet-body-extend-popup th{
+    border:1px lightgray solid;
+    padding-left: 5px;
+}
+.portlet-body-extend-popup td
+{
+    min-width: 200px;
+}
+.portlet-body-extend-popup th{
+    min-width: 60px;
+    text-align: left;
+}
+.queryInfoTip{
+    /*border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: #FAFAD2;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 30px;*/
+
+    background-color: limegreen;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 30px;
+    color: white;
+}
+.query-type-tableScroll{
+    width: 100%;
+    height: 116px;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 12px;
+}

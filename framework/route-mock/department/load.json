@@ -1,0 +1,29 @@
+[{
+    "key": "30_1",
+    "title": "科室1",
+    "folder": true,
+    "extraClasses": "nv-department",
+    "children": [{
+        "key": "30_1_1",
+        "extraClasses": "nv-department-people",
+        "title": "刘xxxx"
+    }, {
+        "key": "30_1_2",
+        "extraClasses": "nv-department-people",
+        "title": "胡xxxx"
+    }]
+}, {
+    "key": "30_2",
+    "title": "科室2",
+    "folder": true,
+    "extraClasses": "nv-department",
+    "children": [{
+        "key": "30_2_1",
+        "extraClasses": "nv-department-people",
+        "title": "杨xxxx"
+    }, {
+        "key": "30_2_2",
+        "extraClasses": "nv-department-people",
+        "title": "wuli"
+    }]
+}]

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'antd-icon';
+  src: url('antd-iconfont.eot'); /* IE9*/
+  src: url('antd-iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+  url('antd-iconfont.woff') format('woff'), /* chrome、firefox */
+  url('antd-iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('antd-iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.antd-icon {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.antd-icon:before {
+  display: block;
+  font-family: "antd-icon" !important;
+}
+
+.antd-icon-cross:before { content:"\e62d"; }
+.antd-icon-plus:before { content:"\e63e"; }
+.arrow-test:before {
+  display: block;
+  content: "\e611" !important;
+}

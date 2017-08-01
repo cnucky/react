@@ -1,0 +1,20 @@
+{
+        "equal": "等于",
+        "not-equal": "不等于",
+        "in": "在列表中",
+        "not-in": "不在列表中",
+        "start-with": "以...开头",
+        "not-start-with": "不以...开头",
+        "end-with": "以...结尾",
+        "not-end-with": "不以...结尾",
+        "like": "类似于",
+        "not-like": "不类似于",
+        "is-null": "为空",
+        "is-not-null": "不为空",
+        "greater-than": "大于",
+        "less-than": "小于",
+        "between": "在...之间",
+        "not-between": "不在...之间",
+        "not-greater-than": "终止于",
+        "not-less-than": "起始于"
+}

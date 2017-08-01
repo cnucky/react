@@ -1,0 +1,135 @@
+<div class="tab-block mb10">
+    <ul class="nav tabs-left tabs-border">
+        <li class="active">
+            <a href=<%= "#"+pid %> id="relation-tab-company" data-toggle="tab" class="relation-company"><i class="fa fa-train text-purple pr5"></i>同行人</a>
+        </li>
+        <li>
+            <a href=<%= "#"+tid %> id="relation-tab-tickets" data-toggle="tab" class="relation-tickets"><i class="fa fa-ticket text-purple pr5"></i>同订票</a>
+        </li>
+        <li>
+            <a href=<%= "#"+iid %> id="relation-tab-imei" data-toggle="tab" class="relation-imei"><i class="fa fa-tablet text-purple pr5"></i>同机身号</a>
+        </li>
+        <li>
+            <a href=<%= "#"+cid %> id="relation-tab-charge" data-toggle="tab" class="relation-charge"><i class="fa fa-money text-purple pr5"></i>同计费号</a>
+        </li>
+        <li>
+            <a href=<%= "#"+aid %> id="relation-tab-address" data-toggle="tab" class="relation-address"><i class="fa fa-flag text-purple pr5"></i>同地址</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id=<%= pid %> class="tab-pane fade active in relation-company" style="min-height:560px;">
+            <div class="mt10">
+                <div class="row p10 mw900 mauto">
+                    <div class="col-sm-2">
+                        <select id="relation-company-type" style="display:none;">
+                            <option value="0">全部</option>
+                            <option value="1">火车</option>
+                            <option value="2">飞机</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-5" style="">
+                        <div class="input-group pull-right date" id="relation-date-range">
+                            <span class="input-group-addon cursor">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input type="text" class="form-control custom" id="relation-date-range-input" placeholder="YYYY/MM/DD-YYYY/MM/DD">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="input-group pull-right" id="relation-frequency">
+                            <input type="number" class="form-control" id="relation-frequency-input" placeholder="1">
+                            <span class="input-group-addon cursor">
+                          次
+                        </span>
+                        </div>
+                    </div>
+                    <button type="button" id="relation-btn-go" class="btn btn-primary col-md-1 ml10">
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <hr class="alt short mh10">
+            <div id="relation-company-empty" style="display:none;">
+                <p class="text-muted text-center ph20">没有符合条件的同行记录</p>
+            </div>
+            <div id="relation-company-result" class="mw900 mauto ph20" style="display:none;">
+                <div id="timeline" class="timeline-single mt30">
+                    <!-- Timeline Divider -->
+                    <div class="timeline-divider mtn">
+                        <div class="divider-label">
+                            <span class="" id="relation-company-logo">全部</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Timeline - Left Column -->
+                        <div class="col-sm-6 left-column" id="relation-company-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id=<%= tid %> class="tab-pane fade relation-tickets" style="min-height:560px;">
+            <div class="mt10">
+                <div class="row p10 mw900 mauto">
+                    <div class="col-sm-5" style="">
+                        <div class="input-group pull-right date" id="relation-tickets-date-range">
+                            <span class="input-group-addon cursor">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input type="text" class="form-control custom" id="relation-tickets-date-range-input" placeholder="YYYY/MM/DD-YYYY/MM/DD">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="input-group pull-right" id="relation-tickets-frequency">
+                            <input type="number" class="form-control" id="relation-tickets-frequency-input" placeholder="1">
+                            <span class="input-group-addon cursor">
+                          次
+                        </span>
+                        </div>
+                    </div>
+                    <button type="button" id="relation-tickets-btn-go" class="btn btn-primary col-md-1 ml10">
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <hr class="alt short mh10">
+            <div id="relation-tickets-empty" style="display:none;">
+                <p class="text-muted text-center ph20">没有符合条件的记录</p>
+            </div>
+            <div id="relation-tickets-result" class="mw900 mauto ph20" style="display:none;">
+                <div id="timeline" class="timeline-single mt30">
+                    <!-- Timeline Divider -->
+                    <div class="timeline-divider mtn">
+                        <div class="divider-label">
+                            <span class="fa fa-ticket fa-lg" id="relation-tickets-logo"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Timeline - Left Column -->
+                        <div class="col-sm-6 left-column" id="relation-tickets-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id=<%= iid %> class="tab-pane fade relation-imei" style="min-height: 560px">
+        </div>
+        <div id=<%= cid %> class="tab-pane fade relation-charge" style="min-height: 560px">
+        </div>
+        <div id=<%= aid %> class="tab-pane fade relation-address" style="min-height: 560px">
+            <div style="height:560px">
+                <table id="address-table" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>身份证号</th>
+                            <th>出生日期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="address-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+.group-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.group-body
+{
+    height: 160px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+.z_input
+{
+    width: 90%;
+    height: 32px;
+    border: 1px solid #E5E5E5 !important;
+}
+.z_input:focus
+{
+    border: 1px solid #000000 !important;
+}
+.z_button
+{
+    width: 50px;
+    height: 28px;
+    background-color: dodgerblue;
+    border: 1px #000000 solid;
+    color: #ffffff;
+    cursor: pointer;
+}
+.button-style{
+    border:1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+     font-size: 24px;
+    height: 24px;
+    width: 24px;
+    color:#3498db;
+}
+.button-style:hover{
+    background-color: #F0F0F0 !important;
+    cursor: pointer;
+}
+.leaflet-control{
+    margin-right:0px !important;
+    margin-top:0px !important;
+}
+
+
+.input-group {
+    height: 32px;
+}
+
+.btn-group {
+    height: 32px;
+}
+
+.btn-group .btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 32px;
+}
+
+.input-group span {
+    color: #232323;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 30px;
+}
+
+.input-group input.form-control {
+    height: 32px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid #aaa;
+}
+
+.bootstrap-tagsinput {
+    min-height: 32px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 1px solid #aaa;
+}
+
+.bootstrap-tagsinput .tag {
+    line-height: 20px;
+    padding: 3px 5px;
+}
+
+#query-div * {
+    box-sizing: border-box !important;
+}
+
+#queryCond .row {
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#queryCond label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+#query-div .row {
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.leaflet-top {
+    top: 35px;
+}

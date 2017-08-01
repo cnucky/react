@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DATA_CALL、DATA_DCNET、DATA_EVENT、DATA_FAX、DATA_SMS-->
+<Search Type="DATA_YY" DisplayName="YY通话">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="USER_NUM" DisplayName="用户号码" ControlType="Text"/>
+            <Condition Item="OPPO_NUM" DisplayName="对方号码" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+    </Template>
+</Search>

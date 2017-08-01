@@ -1,0 +1,23 @@
+{
+    "code": 0,
+    "data": {
+        "outputColumnDescList": [{
+            "aliasName": "isdn",
+            "columnName": "isdn",
+            "columnType": "Int",
+            "displayName": "手机号码",
+            "length": 100,
+            "scale": 2,
+            "codeUsage": 2,
+            "codeTag": 1,
+            "codeTable": "TBL_CERT_TYPE_CODE",
+            "codeField": "CODE",
+            "codeDisNameField": "CONTENT",
+            "semanticName": "手机/电话号码",
+            "group": "身份",
+            "common": 1,
+            "srcInput": "node1",
+            "tag": {}
+        }]
+    }
+}

@@ -1,0 +1,41 @@
+<div class="tab-pane active fade in">
+    <div class="btn-group" id="warpBoxTools">
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-save"></i>
+                <span data-i18n="dataprocess.action.download"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="savaUrl">
+                <li><a href="" download="" data-i18n="dataprocess.action.include_struct"></a></li>
+                <li><a href="" download="" data-i18n="dataprocess.action.no_include_struct"></a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-font"></i>
+                <span data-i18n="dataprocess.action.choose_font"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="fontFamily">
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-font"></i>
+                <span data-i18n="dataprocess.action.choose_view"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="viewType">
+                <li><a class="a" data-i18n="dataprocess.action.show_bubble_view"></a></li>
+                <li><a data-i18n="dataprocess.action.show_txt_view"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="tplContBox">
+    <div class="content diyScroll" id="chat-cont">
+    </div>
+    <div class="content diyScroll" id="wordView" style="display: none; padding-top:10px; ">
+    </div>
+</div>

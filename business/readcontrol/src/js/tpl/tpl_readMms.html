@@ -1,0 +1,67 @@
+<div id="email-cont" class="tab-pane active fade in">
+    <div class="btn-group" id="warpBoxTools">
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-save"></i>
+                <span data-i18n="dataprocess.action.download"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="savaUrl">
+                <li><a href="" download="" data-i18n="dataprocess.action.include_struct"></a></li>
+                <li><a href="" download="" data-i18n="dataprocess.action.no_include_struct"></a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-cogs"></i>
+                <span data-i18n="dataprocess.action.change_subject_code"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="titleEnCode">
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-cogs"></i>
+                <span data-i18n="dataprocess.action.change_text_code"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="contEnCode">
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default btn-sm" data-toggle="dropdown">
+                <i class="fa icon-font"></i>
+                <span data-i18n="dataprocess.action.choose_font"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu code" id="fontFamily">
+            </ul>
+        </div>
+    </div>
+    <div id="tplContBox">
+        <div class="content diyScroll">
+            <table class="table" width="100%" id="MMSContTable">
+                <tr>
+                    <td width="110px" class="text-right" data-i18n="dataprocess.name.sender"></td>
+                    <td><span id="senders" class="checkkeyword"></span><span id="sendTime"></span><span class="text-muted checkkeyword"></span></td>
+                </tr>
+                <tr>
+                    <td width="110px" class="text-right" data-i18n="dataprocess.name.receives"></td>
+                    <td id="receivers" class="checkkeyword"></td>
+                </tr>
+                <tr>
+                    <td width="110px" class="text-right" data-i18n="dataprocess.name.subject"></td>
+                    <td id="subject" class="checkkeyword"></td>
+                </tr>
+                <tr>
+                    <td width="110px" class="text-right" data-i18n="dataprocess.name.attachments"></td>
+                    <td id="attachments" class="checkkeyword"></td>
+                </tr>
+                <tr>
+                    <td id="segments" colspan="2" class="checkkeyword"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

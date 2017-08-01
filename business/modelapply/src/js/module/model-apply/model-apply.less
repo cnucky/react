@@ -1,0 +1,100 @@
+@import "~antd/dist/antd.less";
+@icon-url: "/fonts/anticon/iconfont";
+
+.admin-form .radio{
+    border: 1px solid transparent;
+    background: transparent;
+}
+.multiselect-container.dropdown-menu > li > a > label {
+    border: 1px solid transparent;
+    width: 100%;
+    background: transparent;
+}
+.card-sample-title {
+    margin: 0;
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+}
+
+.card-sample-content {
+    word-break: break-all;
+    line-height: 10px;
+    margin: 5px 0 0;
+    height: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    letter-spacing: -2px;
+    display: inline-block;
+    color: #f3f5f8;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.ant-card-bordered.active {
+	box-shadow: 0 1px 6px #7DCFE9;
+	border-color: #A7CFF0;
+}
+
+#tab-setting ul.fancytree-container {
+    max-height: 300px;
+}
+
+
+
+#favor-toggle{
+    display: none;
+}
+span.fancytree-node:hover #favor-toggle{
+    display: inline;
+}
+#favor-toggle{
+    cursor:pointer;
+
+}
+.Select-arrow-zone{
+    display: none;
+}
+
+/** 动画 **/
+
+.button { background: #222  repeat-x 0 0; display: inline-block; padding: 5px 15px 6px; color: #fff !important; font-size: 13px; font-weight: bold; line-height: 1; text-decoration: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); border-bottom: 1px solid rgba(0,0,0,0.25); position: relative; cursor: pointer; overflow: visible; width: auto; }
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+.button:hover { background-color: #111; color: #fff; }
+.button:active { -webkit-transform: translateY(1px); -moz-transform: translateY(1px); }
+/* Small Buttons */
+
+/* Large Buttons */
+.large.button { font-size: 14px; padding: 8px 19px 9px; }
+/* Colors for our beloved buttons */
+
+.red.button { background-color: #ff5c00; }
+.red.button:hover { background-color: #d45500; }
+
+
+/* Make the buttons super awesomer */
+
+.large.super.button { background-position: left bottom; -webkit-border-radius: 18px; -moz-border-radius: 18px; }
+.large.super.button span { font-size: 14px; padding: 7px 20px 9px; -webkit-border-radius: 17px; -moz-border-radius: 17px; }
+
+@-webkit-keyframes redPulse {
+    from { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #ff5c00; -webkit-box-shadow: 0 0 18px #ff5c00; }
+    to { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+a.button {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s; }
+
+.target-wrap {
+    height: ~"calc(100% - 70px)";
+}
+.card-wrap {
+    height: 100%;
+}

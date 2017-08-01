@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>寻匿</title>
+    <link rel="stylesheet" href="${ctxRoot}/css/leaflet.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/map.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/filterControl.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/dlg.css"/>
+    <link rel="stylesheet" href="${ctxRoot}/css/relation.css"/>
+</head>
+<body>
+<div class="title">
+    <h1>寻匿</h1>
+</div>
+
+
+
+
+
+
+<div class="relation-margin">
+    <div class="subtitle">
+        <p class="subtitle-text">关系人分析</p>
+    </div>
+    <div id="relation"></div>
+    <div class="dropup">
+        <div class="search-div" data-toggle="dropdown" herf="#"></div>
+        <div class="search-menu dropdown-menu shaixuanDiv" role="menu" aria-labelledby="search-div">
+            <div class="updown_box">
+                <h3 style="text-align: left">关系筛选</h3>
+                <ul id="00001">
+                    <li ><a id="tongxing" href="javascript:;" data-stopPropagation="true">同行</a>
+                    </li>
+                    <li ><a href="javascript:;" data-stopPropagation="true">亲属</a>
+                    </li>
+                    <li ><a href="javascript:;" data-stopPropagation="true">好友</a>
+                    </li>
+                    <li ><a href="javascript:;" data-stopPropagation="true">通联</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="relation-select" class="shaixuanDiv">
+		<label>
+			<span>开始时间:</span>
+			<input id="relation-select-starttime" type="text">
+		</label>
+		<label>
+			<span>结束时间:</span>
+			<input id="relation-select-endtime" type="text">
+		</label>
+		<label>
+			<span>同行次数:</span>
+			<input id="relation-select-number" type="text">
+		</label>
+		<button id="relation-select-button">确认</button>
+	</div>
+</div>
+<div class="list-margin">
+    <div class="subtitle right-subtitle">
+        <p class="subtitle-text">人员列表</p>
+    </div>
+    <div class="list-div">
+        <ul id="list">
+        </ul>
+    </div>
+</div>
+<div class="map-margin">
+    <div class="subtitle right-subtitle">
+        <p class="subtitle-text">人员位置</p>
+    </div>
+    <div id="map"></div>
+</div>
+<div id="options">
+    <div id="options-content">
+    </div>
+</div>
+<div class="header" id="header-top">
+</div>
+
+<div class="header" id="header-bottom">
+</div>
+<div id="thumbprint">
+    <img src="img/chevron-up.png"/>
+</div>
+
+<div class="header-animator" id="header-animator-inside"></div>
+<div class="header-animator" id="header-animator-outside"></div>
+<script src="/js/components/lib/jquery.js"></script>
+<script src="/js/components/lib/bootstrap.js"></script>
+<script src="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+<script src="/js/components/gisWidget/gisLibs/marker/leaflet-awesome-marker/leaflet.awesome-markers.js"></script>
+<script type="text/javascript" src="/js/components/jsc/leaflet/leaflet.smoothmarkerbouncing.js"></script>
+
+<script src="${entryRoot}/lmb_relation.js"></script>
+</body>
+</html>

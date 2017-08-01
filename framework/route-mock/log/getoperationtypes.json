@@ -1,0 +1,47 @@
+{
+    "code": 0,
+    "data": [{
+        "typeId": 1,
+        "typeName": "登录"
+    }, {
+        "typeId": 2,
+        "typeName": "登出"
+    }, {
+        "typeId": 3,
+        "typeName": "新增"
+    }, {
+        "typeId": 4,
+        "typeName": "删除"
+    }, {
+        "typeId": 5,
+        "typeName": "更改"
+    }, {
+        "typeId": 6,
+        "typeName": "浏览"
+    }, {
+        "typeId": 7,
+        "typeName": "移动"
+    }, {
+        "typeId": 8,
+        "typeName": "上传文件"
+    }, {
+        "typeId": 9,
+        "typeName": "下载文件"
+    }, {
+        "typeId": 10,
+        "typeName": "提交任务"
+    }, {
+        "typeId": 11,
+        "typeName": "保存任务"
+    }, {
+        "typeId": 12,
+        "typeName": "暂停任务"
+    }, {
+        "typeId": 13,
+        "typeName": "线索查询"
+    }, {
+        "typeId": 14,
+        "typeName": "线索扩展"
+    }],
+    "message": ""
+}

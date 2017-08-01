@@ -1,0 +1,704 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/nova-common/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/vis.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery.contextMenu.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/theme.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/tabledesign/layoutit.css">
+<style type="text/css">
+#network-container {
+    position: relative;
+}
+
+#drawing .vis-network,
+#drawing canvas {
+    outline: none;
+}
+
+
+/* 节点查询对话框 */
+
+#list-query-node {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#list-query-node li {
+    list-style: none;
+}
+
+#list-query-node li a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #999;
+}
+
+#list-query-node li:last-child a {
+    border-bottom: none;
+}
+
+#list-query-node li a:hover {
+    background: #fbfbfb;
+    color: #666;
+}
+
+.dropdown-menu span.caret {
+    display: none;
+}
+
+
+/* 缩略图 */
+
+#mini-scope {
+    position: absolute;
+    bottom: 42px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background: white;
+    z-index: 1;
+    display: none;
+}
+
+#mini-scope-drawing {
+    width: 100%;
+    height: 100%;
+}
+
+#mini-scope-overlap {
+    position: absolute;
+    border: 1px solid #3078D7;
+    z-index: 2;
+    background-color: rgba(100, 164, 225, 0.5);
+    height: 50px;
+    width: 100%;
+}
+
+#expression-content ul.fancytree-container {
+    border: none;
+    max-height: 100%;
+}
+
+#dir-tree-panel ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+#data-source-tree-container ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+div#dir-tree-panel {
+    padding: 0;
+}
+
+.small-panel-heading {
+    line-height: 40px;
+    height: auto;
+}
+
+.small-btn {
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.model-operator span {
+    font-size: 12px;
+}
+
+.modeling-top-bar {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+.modeling-bottom-bar {
+    bottom: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #DDD;
+}
+
+.modeling-bottom-bar ul {
+    text-align: center;
+    list-style: none;
+    color: #182A3C;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.modeling-bottom-bar ul li {
+    float: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 0 8px;
+    margin: 0 10px;
+}
+
+.modeling-bottom-bar ul li:hover {
+    color: #289DE9;
+}
+
+.modeling-bottom-bar li .icon {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+}
+
+#content .panel-heading {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+#left-panel-toggle:hover {
+    background-color: white;
+    border-right: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+#right-panel-toggle:hover {
+    background-color: white;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+span.fancytree-node.nv-data .fancytree-action-icon {
+    display: none;
+}
+
+span.fancytree-node:hover .fancytree-action-icon {
+    display: inline;
+}
+
+span.fancytree-action-icon {
+    cursor: pointer;
+}
+
+header#topbar {
+    display: none;
+}
+
+.multiselect-container.dropdown-menu > li.multiselect-item.filter {
+    min-width: 120px;
+}
+
+#right-panel-controllers a:hover {
+    font-size: 16px;
+}
+
+
+/*.control-label {
+    padding: 14px 2px 5px!important;
+}*/
+
+.container-fluid {
+    padding: 0px 20px;
+}
+
+.nav-header,
+.rows,
+.boxes {
+    list-style-type: none;
+}
+
+.label,
+.badge {
+    background-color: #999;
+}
+
+.nav-list {
+    padding: 0px 15px;
+    margin: 0px;
+}
+
+.navbar-brand {
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+input {
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204)
+}
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+$(function() {
+    var leftTray = $('.tray.tray-left');
+
+    var leftHeight = window.innerHeight - leftTray.offset().top;
+    $('#drawing').height(leftHeight);
+    $('.tray.tray-center').height(leftHeight);
+})
+</script>
+<section id="content" class="table-layout">
+    <aside id="tree-content" class="tray tray-left tray270 pn" data-tray-height="match" style="background: white;">
+        <div class="panel mbn flex-layout flex-vertical">
+            <div class="panel-heading" style="height: 42px;">
+                <ul class="nav panel-tabs panel-tabs-left pl10 mt10">
+                    <button type="button" class="btn btn-default btn-sm" id="btn-create-table" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="创建">
+                        <i class="fa fa-plus fa-fw"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" id="btn-delete-table" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="删除">
+                        <i class="fa fa-minus fa-fw"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm" id="btn-table-tree-refresh" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="刷新">
+                        <i class="fa fa-refresh fa-fw"></i>
+                    </button>
+                </ul>
+            </div>
+            <div class="row mt10 mln mrn">
+                <div class="col-xs-8">
+                    <input class="form-control input-sm" name="search-input" placeholder="查询...">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-reset">清除
+                        <span id="matches"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="dir-tree-panel" class="panel-body flex-item" style="border: none;overflow-y:auto;height:100%;">
+                <div class="tab-content pn br-n">
+                    <div id="tab-data-tree" class="dir-tree tab-pane active">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center pn">
+        <div class=" flex-layout flex-vertical" style="position:relative; width: 100%; height: 100%;">
+            <div class="flex-layout" style="position: absolute; height: 100%; width: 100%; top:0; bottom:0; z-index: 9; ">
+                <div class="flex-item flex-layout flex-vertical" style="position: relative;">
+                    <div id="top-toolbar" class="p10 modeling-top-bar inline-block" style="pointer-events: auto;height:42px;">
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-tbl-layout-list" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="布局列表">
+                            <span>布局列表</span>
+                        </button>
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-create-layout" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="新建">
+                            <span>新建</span>
+                        </button>
+                        <span class="font-preload" style='font-family: NovaCommon'></span>
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-metadata" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="元数据">
+                            <span>元数据</span>
+                        </button>
+                        <!-- <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-save-model" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="新建布局">
+                                <span>新建</span>
+                            </button> -->
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-saveTblDesign" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="保存布局">
+                            <span>保存</span>
+                        </button>
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-previewTblDesign" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="预览布局">
+                            <span>预览</span>
+                        </button>
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-editviewTblDesign" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="编辑布局">
+                            <span>编辑</span>
+                        </button>
+                        <button type="button" class="btn btn-xs btn-success btn-sm" id="btn-clearTblDesign" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="保存布局">
+                            <span>清除表单设计</span>
+                        </button>
+                        <!-- <div class="switch switch-info switch-inline inline-block">
+                            <input id="switchDesignView" name="switchDesignView" type="checkbox" checked="">
+                            <label for="switchDesignView" data-on="YES" data-off="NO"></label>
+                        </div> -->
+                    </div>
+                    <div class="panel mn pn hide" id="tbl-layout-list">
+                        <div class="panel-heading">
+                            表单布局列表
+                        </div>
+                        <div class="panel-body" id="tbl-layout-list-body">
+                        </div>
+                    </div>
+                    <div id="main-content-area" class="container-fluid edit flex-item flex-layout flex-vertical hide" style="min-width: 300px;overflow-x:hidden;overflow-y:auto;pointer-events: auto;width:100%;">
+                        <div class="row">
+                            <div style="min-height: 590px;" class="demo ui-sortable form-horizontal"></div>
+                            <div id="download-layout">
+                                <form class="container-fluid form-horizontal" role="form"></form>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="left-panel-toggle" class="text-primary p5" style="position: absolute;top: 50%; z-index: 10;pointer-events: auto;">
+                        <i class="fa fa-caret-right fs28"></i>
+                    </span>
+                    <span id="right-panel-toggle" class="p5" style="position: absolute;top: 50%; right: 0; z-index: 10;pointer-events: auto;">
+                        <i class="fa fa-caret-left fs28"></i>
+                    </span>
+                </div>
+                <div id="right-panel-container" class="tab-content hide" style="border-left: 1px solid #DDD; width:400px; height: 100%; overflow-y: auto; background:white; pointer-events: auto;">
+                    <div id="right-panel" class="panel mn flex-layout flex-vertical" style="height: 100%;">
+                        <div class="panel-heading small-panel-heading" style="height:42px; width: 100%; right: 0;">
+                            <ul class="nav panel-tabs panel-tabs-left">
+                                <li class="active">
+                                    <a id="show-layout" href="#tab-layout" data-toggle="tab" style="padding: 4px 20px 5px;">组件</a>
+                                </li>
+                                <li>
+                                    <a id="show-component" href="#tab-component" data-toggle="tab" style="padding: 4px 20px 5px;">对象</a>
+                                </li>
+                                <li>
+                                    <a id="show-cp-attribute" href="#tab-cp-attribute" data-toggle="tab" style="padding: 4px 20px 5px;">属性</a>
+                                </li>
+                            </ul>
+                            <span id="right-panel-controllers" class="panel-controls">
+                                <a class="fa fa-save " id="btn-node-save" style="color: #3498db;"></a>
+                                <a class="panel-control-fullscreen hide" id="result-fullscreen" style="color: #3498db;"></a>
+                            </span>
+                        </div>
+                        <div id="right-content-panel" class="flex-item panel-body pn xy-scroll-panel" style="border: none; ">
+                            <div id="right-tab-cotent" class="tab-content pn br-n " style="height: 100%;">
+                                <div id="tab-layout" class="tab-pane active" style="height: 100%;">
+                                    <div id="node-config-panel" class="sidebar-nav panel-body p15 pt5" style="height: 100%; border: none;">
+                                        <ul class="nav-list panel-default">
+                                            <li class="nav-header" id="layoutHead">
+                                                <i class="glyphicon glyphicon-plus glyphicon-white"></i> 布局设置 </li>
+                                            <li style="display: list-item;" class="rows" id="estRows">
+                                                <div class="lyrow ui-draggable">
+                                                    <a href="#close" class="remove label label-danger" title="删除">
+                                                        <i class="glyphicon glyphicon-remove glyphicon-white"></i>
+                                                    </a>
+                                                    <span class="drag label" title="拖动">
+                                                        <i class="glyphicon glyphicon-move"></i>
+                                                    </span>
+                                                    <div class="preview">
+                                                        <input value="12" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-12 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="6 6" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-6 column"></div>
+                                                            <div class="col-md-6 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="8 4" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-8 column"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="4 4 4" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-4 column"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="2 6 4" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-2 column"></div>
+                                                            <div class="col-md-6 column"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="2 4 2 4" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-2 column control-label"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                            <div class="col-md-2 column control-label"></div>
+                                                            <div class="col-md-4 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="1 5 1 5" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-1 column control-label"></div>
+                                                            <div class="col-md-5 column"></div>
+                                                            <div class="col-md-1 column control-label"></div>
+                                                            <div class="col-md-5 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="2 10" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-2 column control-label"></div>
+                                                            <div class="col-md-10 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lyrow ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">
+                                                        <input value="1 11" type="text">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-1 column control-label"></div>
+                                                            <div class="col-md-11 column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav-list panel-default">
+                                            <li class="nav-header" id="componentHead">
+                                                <i class="glyphicon glyphicon-plus glyphicon-white"></i>表单组件
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable">
+                                                    <a href="#close" class="remove label label-danger" title="删除">
+                                                        <i class="glyphicon glyphicon-remove glyphicon-white"></i>
+                                                    </a>
+                                                    <span class="drag label" title="拖动">
+                                                        <i class="glyphicon glyphicon-move"></i>
+                                                    </span>
+                                                    <div class="preview">标签</div>
+                                                    <div class="view">
+                                                        <label class="control-label">标签</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">输入框</div>
+                                                    <div class="view">
+                                                        <input type="text" class="form-control" placeholder=""> </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">密码框</div>
+                                                    <div class="view">
+                                                        <input type="password" class="form-control" placeholder=""> </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">单选框</div>
+                                                    <div class="view">
+                                                        <label class="radio-inline mr10">
+                                                            <input type="radio">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">复选框</div>
+                                                    <div class="view">
+                                                        <label class="checkbox-inline mr10">
+                                                            <input type="checkbox">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">下拉框</div>
+                                                    <div class="view">
+                                                        <select class="form-control"></select>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">文本域</div>
+                                                    <div class="view">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav-list panel-default">
+                                            <li class="nav-header" id="labelcompHead"><i class="glyphicon glyphicon-plus glyphicon-white"></i> 表单(Label)组件 </li>
+                                            <li class="boxes mute">
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">输入框</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">密码框</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="password" class="form-control" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">复选框</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="checkbox" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">文件上传</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="file" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">下拉框</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control select2-multiple select-primary" style="width:100%;"></select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">编码框</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="coder form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">多值输入</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <!-- <div class="tags"></div> -->
+                                                            <div class="multiInput form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">附件</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>附件</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="upload form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">图片</div>
+                                                    <div class="view">
+                                                        <div class="photo"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">文本域</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <textarea class="form-control" rows="3"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-danger" title="删除"><i class="glyphicon glyphicon-remove glyphicon-white"></i></a> <span class="drag label" title="拖动"><i class="glyphicon glyphicon-move"></i></span>
+                                                    <div class="preview">富文本</div>
+                                                    <div class="view">
+                                                        <div class="col-md-4">
+                                                            <label>标签</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="summernote" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="tab-component" class="tab-pane" style="height: 100%;">
+                                    <div id="result-container" class="panel-body" style="height: 100%; border: none;">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-cp-attribute" class="tab-pane" style="height: 100%;">
+                                    <div id="result-container" class="panel-body" style="height: 100%; border: none;">
+                                        <div class="row" id='propTable'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="main-content-area" class="flex-item flex-layout flex-vertical" style="min-width: 300px;overflow-x:hidden;overflow-y:auto"> -->
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/js/tbl-design.js"></script>
+<script type="text/javascript" src="/js/components/tabledesign/jquery.htmlClean.js"></script>
+<script type="text/javascript" src="/js/components/tabledesign/BootstrapMenu.js"></script>

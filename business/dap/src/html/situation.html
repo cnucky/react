@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>态势感知</title>
+
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-label/leaflet.label.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/controls/mini-map/Control.MiniMap.min.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-icon-pulse/L.Icon.Pulse.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.Default.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-awesome-marker/css/font-awesome.css">
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-ExtraMarkers/css/leaflet.extra-markers.min.css" />
+
+	<link rel="stylesheet" href="${ctxRoot}/css/dlg.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/situation.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/echartsQxMap.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/echartsPie.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/taishiTable.css">
+</head>
+
+<body>
+	<div id="main">
+		<div id="title">
+			<h1 id="title-text" class="none" :data-text="taskTitle">{{taskTitle}}</h1>
+			<h2 class="sub-title none">数据总量&nbsp;<span class="title-number" v-for="num in totalNums">{{num}}</span></h2>
+			<h2 class="sub-title none">中标总量&nbsp;<span class="title-number" v-for="num in hitNums">{{num}}</span></h2>
+			<a id="menubtn" class="icon -menu" :class="{active: showMenu}" @click="showMenu = !showMenu" title="任务列表">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+			<div id="menubar">
+				<!--<a class="icon -edit" title="编辑布局"></a>-->
+				<a class="icon -reset" title="恢复布局" @click="resetLayout(false)"></a>
+				<a class="icon -export" title="态势报告" target="_blank" :href="reportUrl"></a>
+			</div>
+			<div id="imptag" class="none">
+				<span class="impt-title">威胁等级：</span>
+				<span class="impt-level">{{imptlevel}}</span>
+			</div>
+		</div>
+		<div id="content">
+			<grid-layout :layout="children" :col-num="maxCol" :row-height="rowHgt" :is-draggable="false" :is-resizable="false" :vertical-compact="false"
+			    :use-css-transforms="true" :margin="margin">
+				<grid-item v-for="item in children" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" @resize="resizeEvent">
+					<component v-if="item.i==='威胁指数'" v-show="item.styleConfig.isEnlarge" :is="item.secondView" class="component" :data-config="item.dataConfig2"
+					    :style-config="item.styleConfig"></component>
+					<div id="map" v-if="item.i === '态势地图'"></div>
+					<component v-else-if="item.currentView !== ''" :is="item.currentView" class="component" :data-config="item.dataConfig" :style-config="item.styleConfig"
+					    :controller-config="item.controllerConfig" @chartchange="chartChange"></component>
+					<!--<span class="panel-deco none"></span>-->
+					<span class="panel-name none">
+						{{item.i}}
+					</span>
+					<span class="panel-zoom" v-if="!item.styleConfig.isEnlarge" title="查看详细" @click="zoom(item.i)"></span>
+				</grid-item>
+			</grid-layout>
+		</div>
+		<transition name="slidebar" class="none">
+			<div class="sidediv" v-show="showMenu">
+				<section @click="click"></section>
+				<aside class="sidebar">
+					<p v-for="task in tasks" :key="task" class="task-item" :class="{active: task.isCurrent}" @click="selectTask(task)">
+						<span class="task-name">{{task.name}}</span>
+						<span class="task-date">{{task.operation_time}}</span>
+						<span class="task-city">中国.{{task.info.city}}</span>
+					</p>
+				</aside>
+			</div>
+		</transition>
+		<div class="loader-div" v-if="loading">
+			<div class="loader1" v-if="!empty">
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alertmsg none" v-if="empty">没有任务权限，请获取授权后再<a href="">重试</a>。</div>
+		</div>
+	</div>
+
+	<dlg id="mydlg" :content="content" :dlgshow="dlgshow" @close="close"></dlg>
+
+	<script src="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/heatMap/heatmap.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/heatMap/leaflet-heatmap.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-label/leaflet.label.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/mini-map/Control.MiniMap.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/leaflet.toolbar-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/leaflet.RectZoomIn-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-icon-pulse/L.Icon.Pulse.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-ExtraMarkers/js/leaflet.extra-markers.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/leaflet.markercluster-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/highlight.js"></script>
+
+	<script src="/js/components/lib/jquery.js"></script>
+	<script src="/js/components/lib/underscore.js"></script>
+
+	<script src="${entryRoot}/situation.js"></script>
+</body>
+
+</html>

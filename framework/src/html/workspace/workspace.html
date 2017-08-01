@@ -1,0 +1,368 @@
+<!-- shim  styles-->
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link charset="utf-8" rel="stylesheet" href="${root}/css/workspace/style.css">
+<link charset="utf-8" rel="stylesheet" href="${root}/css/workspace/p-web-delay.css">
+<link charset="utf-8" rel="stylesheet" href="${root}/css/workspace/footable.core.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/tagmanager.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/datatables.bootstrap.css">
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery.dataTables.min.css">-->
+
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datepaginator.css">-->
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/theme.css">-->
+<style type="text/css">
+    ul.fancytree-container {
+        min-height: 200px;
+        border: none;
+        color: #000;
+    }
+
+    .filename-input-height {
+        height: 50;
+    }
+
+    .fancytree-icon-color {
+        color: #ffaf60;
+    }
+
+    .fancytree-icon-color-blue {
+        color: #1c86ee;
+    }
+
+    .fancytree-icon-color-green {
+        color: #32cd32;
+    }
+
+    .content-menu {
+        position: absolute;
+        overflow: hidden;
+        z-index: 10;
+        border: 1px solid #C8CCD5;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        background: #FFF none repeat scroll 0% 0%;
+        width: 160px;
+    }
+
+    .nav-color {
+        background-color: #c3d8f0;
+    }
+
+    #winpop {
+        width: 180px;
+        height: 20px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        border: 1px solid #666;
+        margin: 0px;
+        padding: 1px;
+        overflow: hidden;
+        /*display: none;*/
+    }
+
+    /*目录树新建目录CSS*/
+
+    .ui-contextmenu {
+        position: absolute;
+        z-index: 10000;
+    }
+
+    .add-newFolder-icon {
+        background-image: url('/img/plus.png');
+    }
+</style>
+<!-- end shim-->
+<script type="text/javascript">
+    $(window).on("resize", function () {
+        var leftTray = $('.tray.tray-left');
+        var leftHeight = window.innerHeight - leftTray.offset().top;
+        $('.tray.tray-center').height(leftHeight);
+    });
+</script>
+<section id="content" class="table-layout">
+    <aside style="padding-top:11px;" class="tray tray-left tray200" data-tray-height="match">
+        <div id="nav-spy" style="height:100%;">
+            <div style="margin:0 auto; display: none">
+                <button id="upload-file" type="button" class="btn btn-primary btn-block"
+                        style="width:100px;margin:0 auto;" disabled="">
+                    <span class="text" style="text-align:ceter;" data-i18n="workspace.uploadfile"></span>
+                </button>
+            </div> 
+            <div id="ul_nav" class="bg-dotted">
+                <div id="nav_dir" class="fc-event fc-event-info ui-draggable ui-draggable-handle nav-color">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-bars fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-directory">
+                    </div>
+                </div>
+                <div id="nav_task" class="fc-event fc-event-info ui-draggable ui-draggable-handle">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-tasks fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-task">
+                    </div>
+                </div>
+                <div id="nav_data" class="fc-event fc-event-info ui-draggable ui-draggable-handle">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-database fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-data">
+                    </div>
+                </div>
+                <div id="nav_doc" class="fc-event fc-event-info ui-draggable ui-draggable-handle">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-file-text-o fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-doc">
+                    </div>
+                </div>
+                <div id="nav_bi" class="fc-event fc-event-info ui-draggable ui-draggable-handle">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-bar-chart fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-report">
+                    </div>
+                </div>
+                <div id="nav_model" class="fc-event fc-event-info ui-draggable ui-draggable-handle">
+                    <div class="fc-event-icon">
+                        <span class="fa fa-sitemap fa-lg"></span>
+                    </div>
+                    <div class="fc-event-desc" data-i18n="workspace.menu-modeling">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center" style="padding-top:0;padding-left:0;">
+        <div id="" class="layout  module-disk dbview-module" style="height:100%;">
+            <div class="" style="height:100%; padding-left:0;">
+                <div class="col-md-12 pn" style="margin-top:8px;margin-bottom:8px;">
+                    <div id="disk-default-toolbar" class="col-md-8 clear"
+                         style="display: block;padding-left:0;padding-right:0;">
+                        <div id='main-btns-div' class="btn-message ml10">
+
+                            <a id="btn_refresh" class="g-btn g-btn-blue show-in-task show-in-data show-in-doc"
+                               style="display: inline-block;color:c2ff68" tabindex="-1">
+                                <span class="btn-inner  minpad ">
+                                    <i class="glyphicons glyphicons-refresh"></i>
+                                    <span class="text" data-i18n="workspace.btn-refresh"></span>
+                                </span>
+                            </a>
+
+                            <a id="btn_mkdir" class="g-btn g-btn-blue" style="display:none" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-folder_plus"></i>
+                                    <span class="text" data-i18n="workspace.btn-mkdir"></span>
+                                </span>
+                            </a>
+                            <a id="btn_del" class="g-btn g-btn-blue show-in-task " style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-bin"></i>
+                                    <span class="text" data-i18n="workspace.btn-delete"></span>
+                                </span>
+                            </a>
+                            <a id="btn_rename" class="g-btn g-btn-blue" style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-pencil"></i>
+                                    <span class="text" data-i18n="workspace.btn-rename"></span>
+                                </span>
+                            </a>
+                            
+                            <a id="btn_move" class="g-btn g-btn-blue" style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="fa fa-arrow-right"></i>
+                                    <span class="text" data-i18n="workspace.btn-move"></span>
+                                </span>
+                            </a>
+                            <a id="btn_share" class="g-btn g-btn-blue show-in-task" style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-share_alt"></i>
+                                    <span class="text" data-i18n="workspace.btn-share"></span>
+                                </span>
+                            </a>
+                            <a id="btn_download" class="g-btn g-btn-blue" style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-cloud-download"></i>
+                                    <span class="text" data-i18n="workspace.btn-download"></span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a id="btn_upload" class="g-btn g-btn-blue" style="display:none; " tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-cloud-upload"></i>
+                                    <span class="text" data-i18n="workspace.btn-upload"></span>
+                                </span>
+                            </a>
+                            <a id="btn_import" class="g-btn g-btn-blue" style="display:none;" tabindex="-1">
+                                <span class="btn-inner minpad">
+                                    <i class="glyphicons glyphicons-file_import"></i>
+                                    <span class="text" data-i18n="workspace.btn-importmodel"></span>
+                                </span>
+                            </a>
+                            <!--1.3不需要-->
+                            <!--<a id="btn_start" class="g-btn g-btn-blue show-in-task" style="display:none;margin-left:5px" tabindex="-1">-->
+                                <!--<span class="btn-inner minpad" style="background: #70CA63;border: 1px #20CA63 solid;">-->
+                                    <!--<i class="fa fa-play"></i>-->
+                                    <!--<span class="text" data-i18n="workspace.btn-start"></span>-->
+                                <!--</span>-->
+                            <!--</a>-->
+                            <!--<a id="btn_stop" class="g-btn g-btn-blue show-in-task" style="display:none;" tabindex="-1">-->
+                                <!--<span class="btn-inner minpad" style="background: #E9573F;border: 1px #E9203F solid;">-->
+                                    <!--<i class="fa fa-stop"></i>-->
+                                    <!--<span class="text" data-i18n="workspace.btn-stop"></span>-->
+                                <!--</span>-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <div id="search_text" style="display:none;font-size: 18px;font-family: 'Microsoft YaHei';"
+                         data-i18n="workspace.label-search">
+                        “keyword”：
+                    </div>
+                    <div class="col-md-4 clear" style="display: block;padding-left:0;padding-right:0;">
+                        <div class="view-mode-dropdown">
+                            <a id="btn_show_hide_dir" class="dbview-btn "
+                               data-i18n="[title]workspace.label-hidedirtree">
+                            </a>
+                            <a id="btn_show_mode_switch" class="dbview-btn-1"
+                               data-i18n="[title]workspace.label-showtype">
+                            </a>
+                        </div>
+                        <form id="search_form" class="navbar-form navbar-search alt"
+                              style="margin-top:0px;margin-bottom:0px;float:right;">
+                            <div class="form-group mt0" style="padding-top:4px;">
+                                <input id="search_input" class="form-control" placeholder="Search..." type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="tree_and_files" style="height:100%;">
+                    <div id="tree_div" class="col-md-0 panel-body lay-main-con"
+                         style="display:none;opacity: 1;overflow-y:auto;height:100%;">
+                        <div class="row mb15" style="display:none;">
+                            <div class="col-xs-8">
+                                <input class="form-control" name="search" placeholder="Filter...">
+                            </div>
+                        </div>
+                        <hr class="short alt mv15" style="display:none;">
+                        <div id="directory_tree">
+                        </div>
+                    </div>
+                    <div id="main-content" class="lay-main-con col-md-12"
+                         style="opacity: 1;height:100%;padding:0;">
+                        <div style="opacity: 1;" id="mainPathBar" class="lay-main-head">
+                            <div class="">
+                                <div class="wrap">
+                                    <label id="disk-all-checker" class="checkall mn"></label>
+
+                                    <div id="main-path" class="main-path">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="main-body">
+                            <div class="wrap" id="main-filelist">
+                                <div class="disk-view ui-view ui-thumbview selection-view" style="height:100%;">
+                                    <!-- 空目录时的提示 -->
+                                    <div class="g-empty sort-folder-empty">
+                                        <div class="empty-box">
+                                            <div class="ico"></div>
+                                            <p class="title" data-i18n="workspace.label-nofile"></p>
+
+                                            <p class="content" data-i18n="workspace.label-addbtn"></p>
+                                        </div>
+                                    </div>
+                                    <!-- 文件 -->
+                                    <div class="files-view">
+                                        <!-- 文件列表 -->
+                                        <div style="display: block;" id="filelist" class="files">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<table id="filetable" class="table footable mbn admin-form theme-info table-hover"-->
+                            <!--style="display:none">-->
+                            <!--<thead>-->
+                            <!--<tr>-->
+                            <!--<th class="text-left th-check" style="width:5%;" data-sort-ignore="true"-->
+                            <!--data-i18n="workspace.label-select"></th>-->
+                            <!--<th class="text-left th-img" style="width:6%;" data-sort-ignore="true">#</th>-->
+                            <!--<th class="text-left th-name" style="width:49%;"-->
+                            <!--data-i18n="workspace.label-name"></th>-->
+                            <!--<th class="text-left th-path" style="width:29%;display:none;"-->
+                            <!--data-i18n="workspace.label-path"></th>-->
+                            <!--<th class="text-left th-custom" style="width:10%;" data-sort-ignore="true"-->
+                            <!--data-i18n="workspace.label-size"></th>-->
+                            <!--<th class="text-left th-recordCount" style="width:7%;display:none;"-->
+                            <!--data-sort-ignore="true" data-i18n="workspace.label-resultcount"></th>-->
+                            <!--<th class="text-left th-createor" style="width:8%;"-->
+                            <!--data-i18n="workspace.label-creator"></th>-->
+                            <!--<th class="text-left th-time" style="width:15%;" data-type="date"-->
+                            <!--data-i18n="workspace.label-createtime"></th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody id="filetable-body">-->
+                            <!--</tbody>-->
+                            <!--</table>-->
+                            <div id="mytable" class="table-font"></div>
+                            <!--<div id = "searchtable"></div>-->
+                        </div>
+                    </div>
+                </div>
+                <div id="searchtable" class="lay-main-con col-md-10 table mbn  theme-info" style="height:100%;padding:0"></div>
+                <!--<table id="searchtable" class="lay-main-con col-md-10 table mbn admin-form theme-info table-hover"-->
+                <!--style="display: none;">-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th class="text-left" style="width:6%;">#</th>-->
+                <!--<th class="text-left" style="width:14%;" data-i18n="workspace.label-name"></th>-->
+                <!--<th class="text-left" style="width:30%;" data-i18n="workspace.label-path"></th>-->
+                <!--<th class="text-left" style="width:15%;" data-i18n="workspace.label-size"></th>-->
+                <!--<th class="text-left" style="width:15%;" data-i18n="workspace.label-resultcount"></th>-->
+                <!--<th class="text-left" style="width:20%;" data-i18n="workspace.label-createtime"></th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody id="searchtable-body">-->
+                <!--</tbody>-->
+                <!--</table>-->
+
+                <div id="winpop" style="display:none" data-i18n="workspace.resource-compressing"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<ul id="option" class="ui-helper-hidden content-menu">
+    <li data-command="open"><i class="fa fa-folder"></i><span data-i18n="workspace.label-opendir"></span></li>
+    <li data-command="reapproval"><i class="fa fa-spinner"></i><span data-i18n="workspace.label-reapproval"></span></li>
+    <li data-command="download"><i class="fa fa-arrow-down"></i><span data-i18n="workspace.btn-download"></span></li>
+    <li data-command="move"><i class="fa fa-arrow-right"></i><span data-i18n="workspace.btn-move"></span></li>
+    <li data-command="rename"><i class="fa fa-pencil"></i><span data-i18n="workspace.btn-rename"></span></li>
+    <li data-command="delete"><i class="fa fa-trash-o"></i><span data-i18n="workspace.btn-delete"></span></li>
+    <li data-command="share"><i class="glyphicon glyphicon-share"></i><span data-i18n="workspace.btn-share"></span></li>
+    <li data-command="data-manage"><i class="fa fa-table"></i><span
+            data-i18n="workspace.label-showdataconstruct"></span></li>
+    <li data-command="data-import"><i class="fa fa-level-down"></i><span data-i18n="workspace.label-importdata"></span>
+    <li data-command="export"><i class="fa fa-level-down"></i><span data-i18n="workspace.label-exportmodel"></span></li>
+    <li data-command="createas"><i class="fa fa-files-o"></i><span data-i18n="workspace.label-createas"></span></li>
+    <li data-command="restart"><i class="fa fa-rotate-left"></i><span data-i18n="workspace.label-restart"></span></li>
+    <!--1.3不需要-->
+    <!--<li data-command="start"><i class="fa fa-play"></i><span data-i18n="workspace.label-taskstart"></span>-->
+    <!--<li data-command="stop"><i class="fa fa-stop"></i><span data-i18n="workspace.label-taskstop"></span>-->
+    </li>
+</ul>
+<ul id="option1" class="ui-helper-hidden content-menu">
+    <li data-command="open"><i class="fa fa-folder"></i><span data-i18n="workspace.label-opendir"></span></li>
+</ul>
+<script type="text/javascript" src="/js/components/lib/jbase64.js"></script>
+<script type="text/javascript" src="/js/components/datatables/jquery.dataTables.js"></script>
+<!--<script src="/js/components/lib/bootstrap-datepaginator-mobile.js" type="text/javascript"></script>-->
+<script type="text/javascript" src="/js/components/datatables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src='/js/workspace.js'>
+
+</script>

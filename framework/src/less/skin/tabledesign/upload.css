@@ -1,0 +1,118 @@
+.upload{
+	box-sizing:border-box;
+	display:block;
+	line-height:1.231;
+	padding:0px;
+	min-height:37px;
+	height:auto;
+}
+.upload label{
+	z-index:10;
+	position:relative;
+	vertical-align:top;
+	display:inline-block;
+	outline:none;
+	min-height:34px;
+	width:100%;
+	margin:0px;
+	box-sizing:border-box;
+	max-width:100%;
+	line-height:1.231;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;		
+}
+.upload input{
+	display:block;
+	z-index:10;
+	padding:9px 12px;
+	border:none;
+	outline:1px solid transparent;
+	-webkit-transition:outline-color 0.5s ease;
+	position:relative;
+	vertical-align:top;
+	height:39px;
+	width:100%;
+	color:#555555;
+	font-weight:100;
+	line-height:1.49	
+}
+
+.upload .arrow{
+	pointer-events:none;
+	position:absolute;
+	top:12px;
+	right:8px;
+	width:24px;
+	color:#9F9F9F;
+	z-index:100
+}
+.upload .arrow:before{
+	content:'\4E0A\4F20';
+	bottom:4px;	
+}
+
+
+
+/*.upload ul.disabled{
+	padding-right:5px!important; 
+}	*/
+.upload .disabled .arrow{
+	color:#ddd
+}
+
+.upload label ul{
+	min-height:21px;
+	line-height:18px;
+	padding-left:8px;
+  margin-right:40px;  
+  outline:none;		
+  width:auto;
+  margin:10px 0px;	
+}
+
+.upload label ul li{
+	list-style-type:none;
+	margin:2px 36px 2px 2px!important;
+	line-height:21px;	
+	height:21px;
+}
+.upload span ul li div{
+	Text-Decoration:underline 
+}
+
+.upload .fileLabel{
+	cursor:pointer;
+	text-align:left;
+	padding:3px 0px;
+	margin-right:-40px;
+	line-height:16px;
+	white-space:nowrap;
+	display:inline-block;
+	text-overflow:ellipsis;
+	overflow:hidden;	
+	width:inherit;	
+	color:blue;
+	text-decoration:underline
+}
+.upload span.disabled .fileLabel{
+	color:#111!important;
+}
+.upload .editLabel{
+	/*background-image:url("edit.gif");*/
+	background-repeat:no-repeat;
+	cursor:pointer;
+	margin-left:1px;
+	margin-top:2px;
+	width:18px;
+	float:right
+}
+.upload .delLabel{
+	/*background-image:url(../../../img/delete.gif);*/
+	background-repeat:no-repeat;
+	cursor:pointer;
+	margin-left:1px;
+	margin-top:2px;
+	width:18px;
+	line-height:20px;
+}

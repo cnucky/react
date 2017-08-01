@@ -1,0 +1,410 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/glyphicons-pro/glyphicons-pro.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/vis.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-colorpicker.css">
+<!-- add by zhangu -->
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui-bts.css">
+<style type="text/css">
+#toolbox-body {
+    max-height: 626px;
+    overflow-y: auto;
+}
+
+#relationship-toolbar {
+    border-bottom: 1px solid #ddd;
+}
+
+#relationship-toolbar > * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#network-container {
+    position: relative;
+}
+
+#drawing .vis-network,
+#drawing canvas {
+    outline: none;
+}
+
+
+/* 节点查询对话框 */
+
+#list-query-node {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#list-query-node li {
+    list-style: none;
+}
+
+#list-query-node li a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #999;
+}
+
+#list-query-node li:last-child a {
+    border-bottom: none;
+}
+
+#list-query-node li a:hover {
+    background: #fbfbfb;
+    color: #666;
+}
+
+.dropdown-menu span.caret {
+    display: none;
+}
+
+
+/* 缩略图 */
+
+#mini-scope {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background: white;
+    z-index: 1;
+    display: none;
+}
+
+#mini-scope-drawing {
+    width: 100%;
+    height: 100%;
+}
+
+#mini-scope-overlap {
+    position: absolute;
+    border: 1px solid #3078D7;
+    z-index: 2;
+    background-color: rgba(100, 154, 225, 0.5);
+    height: 50px;
+    width: 100%;
+}
+
+
+/* save/load snapshot */
+
+#load-snapshot-tasks,
+#load-snapshot-list {
+    min-height: 300px;
+}
+
+#load-snapshot-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#load-snapshot-toolbar {
+    height: 40px;
+}
+
+#load-snapshot-toolbar > div {
+    padding-top: 5px;
+}
+
+#load-snapshot-footer {
+    height: 40px;
+}
+
+#load-snapshot-footer .page-ul {
+    margin: 4px;
+}
+
+
+/*#load-snapshot-list {
+        max-height: 420px;
+    }*/
+
+.snapshot-item {
+    float: left;
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.snapshot-item:hover {
+    background-color: #f0f0f0;
+}
+
+.snapshot-item .snapshot-title {
+    color: #333;
+    padding-left: 10px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.snapshot-item .snapshot-date {
+    color: #666;
+    padding-left: 10px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.snapshot-item .snapshot-image {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    list-style: none;
+    background-size: auto 100px;
+    background-position: center;
+}
+
+.snapshot-item .snapshot-button-panel {
+    display: none;
+    background: rgba(220, 220, 220, 0.8);
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    top: 0;
+}
+
+.snapshot-item:hover .snapshot-button-panel {
+    display: inline;
+}
+
+#toolbox-detail table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#toolbox-detail td.property-value {
+    word-wrap: break-word;
+    word-break: normal;
+    width: 200px;
+}
+
+/*筛选选择样式*/
+#select-node-all {
+    padding:0 3px;
+    text-align:center;
+}
+.select-type {
+    display: inline-block;
+    background: #ddd;
+    box-radius:2px;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+}
+#select-mode {
+    padding:0;
+    margin:0;
+    display: inline-block;
+    width:86px;
+}
+#frequency-new {
+    padding:0;
+    margin:0;
+    display: inline-block;
+    width:80px;
+}
+#min-frequency-new {
+    padding:0;
+    margin:0;
+    display: inline-block;
+    width:40px;
+}
+#max-frequency-new {
+    padding:0;
+    margin:0;
+    display: inline-block;
+    width:40px;
+}
+#select-node-all:hover{
+    cursor: pointer;
+}
+#select-node-reverse{
+    padding:0 3px;
+    text-align:center;
+}
+#select-node-reverse:hover{
+    cursor: pointer;
+}
+#select-graph-all {
+    padding:0 3px;
+    text-align:center;
+}
+#select-graph-all:hover {
+    cursor: pointer;
+}
+#select-graph-reverse{
+    padding:0 3px;
+    text-align:center;
+}
+#select-graph-reverse:hover{
+    cursor: pointer;
+}
+
+/*目录树新建目录CSS zhangu*/
+.ui-contextmenu {
+    position: absolute;
+    z-index: 10000;
+}
+.add-newFolder-icon{
+    background-image: url('/img/plus.png');
+}
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<div id="task-name-container" class="hide">
+    <span>当前任务:</span>
+    <span id="task-name" style="font-weight: bold"></span>
+  </div>
+<!-- end shim -->
+<section id="content" class="table-layout animated fadeIn" style="height: 600px;">
+    <div class="tray tray-center pn">
+        <div class="flex-layout flex-vertical" style="width: 100%; height: 100%;">
+            <div id="relationship-toolbar" class="p5">
+                <button type="button" class="btn btn-default btn-sm" id="btn-add" data-toggle="tooltip" data-placement="bottom" title="添加节点">
+                    <i class="fa fa-plus fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-zoomin" data-toggle="tooltip" data-placement="bottom" title="放大">
+                    <i class="fa fa-search-plus fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-zoomout" data-toggle="tooltip" data-placement="bottom" title="缩小">
+                    <i class="fa fa-search-minus fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-showall" data-toggle="tooltip" data-placement="bottom" title="显示全部">
+                    <i class="fa fa-square-o fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-overview" data-toggle="tooltip" data-placement="bottom" title="鹰眼图">
+                    <i class="fa fa-eye fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-multiselect" data-toggle="tooltip" data-placement="bottom" title="多选模式">
+                    <i class="fa fa-share-alt fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="隐藏名称" id="btn-hidelabel">
+                    <i class="fa fa-language fa-fw"></i>
+                </button>
+                <!-- <button type="button" id="addremarks" style="display: none"></button> -->
+                <button type="button" class="btn btn-default btn-sm" id="btn-delete" data-toggle="tooltip" data-placement="bottom" title="删除选中节点">
+                    <i class="fa fa-trash-o fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-combinenode" data-toggle="tooltip" data-placement="bottom" title="合并节点">
+                    <i class="fa fa-object-group fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-cancelcombine" data-toggle="tooltip" data-placement="bottom" title="取消合并">
+                    <i class="fa fa-object-ungroup fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-storefile" data-toggle="tooltip" data-placement="bottom" title="保存">
+                    <i class="fa fa-save fa-fw"></i>
+                </button>
+                <input type="file" id="myfile" value="载入" style="display: none">
+                <button type="button" class="btn btn-default btn-sm" id="btn-importfile" data-toggle="tooltip" data-placement="bottom" title="载入">
+                    <i class="fa fa-folder-open fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btn-storeimg" data-toggle="tooltip" data-placement="bottom" title="保存图片">
+                    <i class="fa fa-file-image-o fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-primary btn-sm active" data-toggle="tooltip" data-placement="bottom" title="自动布局" id="btn-autolayout">
+                    <i class="fa fa-magnet fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="层级模式" id="btn-hierarchical">
+                    <i class="fa fa-sitemap fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm disabled" data-toggle="tooltip" data-placement="bottom" title="撤销" id="btn-undo">
+                    <i class="fa fa-reply fa-fw"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm disabled" data-toggle="tooltip" data-placement="bottom" title="重做" id="btn-redo">
+                    <i class="fa fa-share fa-fw"></i>
+                </button>
+
+                <button type="button" class="btn btn-default btn-sm" id="btn-export" data-toggle="tooltip" data-placement="bottom" title="导出Excel">
+                    <i class="fa fa-share-square-o fa-fw"></i>
+                </button>
+            </div>
+            <div id="network-container" class="flex-item">
+                <div class="toolbox">
+                    <div class="panel-heading" unselectable="on" style="-webkit-user-select: none;">
+                    <span class="panel-icon">
+                        <i class="fa fa-exchange text-primary"></i>
+                    </span>
+                        <span class="panel-title">更多</span>
+                    </div>
+                    <div id="toolbox-panel" class="panel-body pn">
+                        <ul class="nav nav-list nav-list-sm pl10  mbn" role="tablist">
+                            <li id="extend-filter" class="hidden">
+                                <a href="#toolbox-extend-filter" role="tab" data-toggle="tab" aria-expanded="true">扩展节点筛选</a>
+                            </li>
+                            <li>
+                                <a href="#toolbox-filter-new" role="tab" data-toggle="tab" aria-expanded="true">新的筛选</a>
+                            </li>
+                            <li class="active">
+                                <a href="#toolbox-filter" role="tab" data-toggle="tab" aria-expanded="false">筛选</a>
+                            </li>
+                            <li id="tab-element-detail">
+                                <a href="#toolbox-detail" role="tab" data-toggle="tab" aria-expanded="true">详情</a>
+                            </li>
+                        </ul>
+                        <div id="toolbox-body" class="tab-content p10">
+                            <div role="tabpanel" class="tab-pane hide" id="toolbox-extend-filter">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="toolbox-filter-new">
+                            </div>
+                            <div role="tabpanel" class="tab-pane  active" id="toolbox-filter">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="toolbox-detail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mini-scope" style="border: 1px solid #9c9c9c">
+                    <div id="mini-scope-overlap"></div>
+                    <div id="mini-scope-drawing"></div>
+                </div>
+                <div id="drawing"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/template" id="tpl-load-snapshot-item">
+    <li class="snapshot-item" data-index="<%- index %>" title="<%- remark %>">
+        <div class="snapshot-button-panel">
+            <a class="snapshot-name-edit fs15">
+                <span class="fa fa-pencil"></span>
+            </a>
+            <a class="snapshot-item-delete ml5 fs15">
+                <span class="fa fa-times text-danger"></span>
+            </a>
+        </div>
+        <img class="snapshot-image" style="background-image:url('<%- data %>')"></img>
+        <div class="snapshot-title fs18">
+            <%- title %>
+        </div>
+        <div class="snapshot-title-change hide ml5 mr5">
+            <input type="text" class="snapshot-title-editor fs12" style="width:100%; height: 26px;" placeholder="新的快照名称">
+        </div>
+        <div class="snapshot-date">
+            <%- createTime %>
+        </div>
+    </li>
+</script>
+<script type="text/javascript" src="/js/components/vis/vis.min.js"></script>
+<script type="text/javascript" src="/js/components/lib/svg.js"></script>
+<script type="text/javascript" src="${entryRoot}/relationship.js"></script>

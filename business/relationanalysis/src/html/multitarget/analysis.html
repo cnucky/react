@@ -1,0 +1,54 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/navbutton/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+
+<style type="text/css">
+    .nav.tabs-left  >li >a{
+        color:#3498db;
+    }
+
+    header#topbar {
+        display: none;
+    }
+
+    table tbody.fixBody {
+        display:block;
+        height:210px;
+        overflow-y:scroll;
+    }
+
+
+    table thead, tbody tr {
+        display:table;
+        width:100%;
+        table-layout:fixed;
+    }
+
+
+    table thead {
+        width: calc( 100% - 1em )
+    }
+
+    .text-ellipsis {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+<!-- end shim -->
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+    var _pageConfig = {
+        title: '多目标群组分析'
+    };
+</script>
+<!-- end shim -->
+<section id="content-container">
+</section>
+<script type="text/javascript" src="/js/components/gojs/go.js"></script>
+<script type="text/javascript" src="/js/components/gojs/RealtimeDragSelectingTool.js"></script>
+<script type="text/javascript" src="${entryRoot}/multi-target-analysis.js"></script>
+<script type="text/javascript" src="/js/components/lib/linq.js"></script>

@@ -1,0 +1,18 @@
+{
+    "info": {
+        "notify-editrolefailed": "Edit role failure",
+        "notify-editerolesuccess": "Edit role success",
+        "dialog-edit-add": "Whether additional roles are added？",
+        "dialog-edit-reset": "Whether to reset the role？",
+        "dialog-edit-recycle": "Whether to recycle the role",
+        "notify-choose-role": "please choose the roles"
+    },
+    "warning": {
+    },
+    "module": {
+        "finish-btn": "confirm",
+        "cancel-btn": "cancel",
+        "role-edit": "modify the role",
+        "role-edit-reset": "reset the role"
+    }
+}

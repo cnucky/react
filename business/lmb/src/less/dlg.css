@@ -1,0 +1,192 @@
+.dlg-backgroud{
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 9998;
+    opacity: 0.9;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+}
+
+.dlg-content{
+    /*background-color: #326eff;*/
+    z-index: 9999;
+    left: 0px;
+    top: 0px;
+    width: 1400px;
+    height: 90%;
+    position: absolute;
+    display: none;
+}
+
+.dlg-close{
+    background: url("../img/close2.png");
+    border: 0px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.leftPanel{
+    float: left;
+    background-color: #ffffff;
+    width: 840px;
+    height: 100%;
+}
+
+#left-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+.rightPanel{
+    float: left;
+    background-color: rgba(0, 0, 28, 0.8);
+    width: 40%;
+    height: 100%;
+}
+
+#timeline-div {
+    position: absolute;
+    top: 0px;
+    width: 560px;
+    height: 100%;
+    background: url("../img/line.png") no-repeat 168px 48px/17px 100%;
+    border: 1px solid rgb(50, 110, 255);
+}
+
+#timeline-title {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(50, 110, 255);
+}
+
+#gradient {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    top: 48px;
+    left: 0px;
+    background: url("../img/gradient.png") no-repeat -1px 0px/101% 48px;
+}
+#timeline-content {
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 68px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#timeline-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#timeline-content::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#timeline-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(50, 110, 255);
+}
+
+#timeline {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#timeline li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+}
+
+.icon {
+    position: absolute;
+    height: 100%;
+    width: 133px;
+    top: 0px;
+    left: 110px;
+    text-align: center;
+}
+
+.icon img {
+    margin-top: 10px;
+    width: 37px;
+    height: 37px;
+}
+
+.content-text {
+    position: absolute;
+    top: 0px;
+    left: 243px;
+    right: 0px;
+    height: 100%;
+    width: calc(100% - 243px);
+    display: table;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(29, 32, 136, 0.8);
+    border-right: 4px solid transparent;
+}
+
+.content-text div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    color: rgb(100, 200, 255);
+    font-size: 14px;
+}
+
+.time {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto 0;
+    color: rgb(100, 200, 255);
+    font-size: 12px;
+    line-height: 56px;
+}
+
+#timeline li:hover {
+    background-color: rgba(50, 110, 255, 0.2);
+}
+
+#timeline li:hover .time {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#timeline li:hover .content-text {
+    border-right-color: rgb(50, 110, 255);
+}
+
+#timeline li:hover .content-text div {
+    color: rgba(255, 255, 255, 0.9);
+}

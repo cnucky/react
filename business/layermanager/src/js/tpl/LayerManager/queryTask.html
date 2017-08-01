@@ -1,0 +1,50 @@
+<div id="${TaskTabId}">
+    <div style="height: 40px;vertical-align: middle;">
+        <button id="${TaskTabId}_refresh" type="button" class="btn blue delete" style="padding: 7px 12px;margin-right: 10px;margin-bottom: 5px;">
+            <i class="icon-refresh icon-white"></i>
+            <span>刷新</span>
+        </button>
+        <button id="${TaskTabId}_delete" type="button" class="btn blue delete" style="padding: 7px 12px;margin-right: 10px;margin-bottom: 5px;">
+            <i class="icon-trash icon-white"></i>
+            <span>删除</span>
+        </button>
+        <button id="${TaskTabId}_option" type="button" class="btn blue delete" style="padding: 7px 12px;margin-right: 10px;margin-bottom: 5px;display: none">
+            <i class="icon-collapse-top icon-white"></i>
+            <span>收起</span>
+        </button>
+    </div>
+    <div class="portlet box green tabbable">
+        <div class="portlet-title " style="padding: 5px 0px 1px 10px;">
+            <div class="caption" style="font-size: 14px;margin-bottom: 3px;">
+                <i class="icon-reorder" style="margin-top: 3px;"></i> 任务列表
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="tabbable portlet-tabs ">
+                <div style="margin-right: 0px">
+                    <table class="table table-striped sampleData ">
+                        <thead>
+                            <tr>
+                                <th style="font-weight: 800;width: 7%;">选择</th>
+                                <th style="font-weight: 800;width: 15%;">任务名称</th>
+                                <th style="font-weight: 800;width: 14%;">任务开始时间</th>
+                                <th style="font-weight: 800;width: 14%;">任务结束时间</th>
+                                <th style="font-weight: 800;width: 9%;">图层名称</th>
+                                <th style="font-weight: 800;width: 7%;">成功记录数</th>
+                                <th style="font-weight: 800;width: 9%;">错误记录数</th>
+                                <th style="font-weight: 800;width: 9%;">任务状态</th>
+                                <th style="font-weight: 800;width: 15%;">任务进度</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tabbable portlet-tabs" id="${TaskTabId}_TaskTable">
+                    <table id="${TaskTabId}_DataImport_Details" class=" table table-striped table-hover sampleData">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

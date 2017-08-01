@@ -1,0 +1,122 @@
+div ::-webkit-scrollbar{
+    width:0.2%;
+}
+div::-webkit-scrollbar-thumb{
+    background:#d8d8d8;
+}
+progress{
+    padding: 1px;
+    background:white;
+    border: 1px solid #d8d8d8;
+}
+progress::-webkit-progress-value{
+    background:#5BBCDD;
+}
+progress::-webkit-progress-bar{
+    background:transparent;
+}
+.info{
+    position: relative;
+    width: 100%;
+    top:-10px;
+    height:300px;;
+    /*border: 1px solid #d8d8d8;*/
+}
+.details {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: auto;
+    overflow: hidden;
+    /*border: 1px solid #d8d8d8;*/
+}
+.infoTable progress{
+    width:90%;
+}
+.details progress{
+    width:75%;
+}
+.infoTable{
+    width: 100%;
+    height: 300px;
+    overflow:hidden;
+    overflow-y:auto;
+}
+.detailTable{
+    width: 100%;
+    height: 270px;
+    overflow:hidden;
+    overflow-y:auto;
+}
+#infoTableBody tr td{
+    text-overflow:ellipsis;
+    max-width: 115px;
+    /*min-width:115px;*/
+    /*max-width:10%;*/
+    /*min-width:10%;*/
+    width:10%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.detailTable td{
+    text-overflow:ellipsis;
+    /*text-align:center;*/
+    max-width: 140px;
+    min-width:140px;
+    /*max-width: 12.5%;*/
+    /*min-width:12.5%;*/
+    width:12.5%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.infoTableHead {
+    width:99.9%;
+    color:white;
+    background-color: #5BBCDD;
+    margin-bottom: 0;
+}
+.infoTableHead tr td{
+    border-left: 1px solid #d8d8d8;
+    width:10%;
+}
+#infoTableBody{
+    width:100%;
+    overflow: hidden;
+}
+/*.infoTableBody tr td:hover{*/
+/*cursor:pointer;*/
+/*}*/
+.detailTableHead {
+    /*width:inherit;*/
+    width:100%;
+    color:white;
+    background-color: #5BBCDD;
+    margin-bottom: 0;
+}
+.detailTableHead tr td{
+    border-left: 1px solid #d8d8d8;
+    width:10%;
+}
+.detailTableBody{
+    width:100%;
+    overflow: hidden;
+}
+.detailTableBody tr td:hover{
+    cursor:pointer;
+    /*background-color:#D9EDF6;*/
+}
+.barNumber{
+    font-size:1px;
+    position:relative;
+    left:-58%;
+    top:-2px;
+    /*z-index: 2;*/
+}
+.details .barNumber{
+    /*left:-75px;*/
+}
+.clicked {
+    background-color: #f0c36d;
+    /*#D9EDF6;*/
+}

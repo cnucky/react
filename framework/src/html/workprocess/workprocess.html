@@ -1,0 +1,92 @@
+<!--shim styles -->
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.win8.css">
+<style type="text/css">
+    .menu{
+        position: fixed;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-bottom: 50px;
+        width: 215px;
+        background-color: white;
+    }
+    .detail-right{
+        margin-left: 215px;
+    }
+    .menu::-webkit-scrollbar{
+        width: 5px;
+    }
+    .menu::-webkit-scrollbar-track{
+        background-color: #EEE;
+    }
+    .menu::-webkit-scrollbar-thumb{
+        background-color: rgba(0,0,0,0.2);
+    }
+    .menu-title{
+        padding: 11px 18px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+    }
+    .menu .nav li a .title{
+        padding-left: 6px;
+        font-weight: 600;
+        max-width: 135px;
+        overflow: hidden;
+        display: inline-flex;
+        white-space: nowrap;
+    }
+    .nav-stacked > li{
+        height: 40px;
+    }
+    .nav-pills > li > a{
+        cursor: pointer;
+        border: none;
+        border-radius: 0px;
+        height: 40px;
+        padding: 10px 13px;
+        background-color: transparent;
+        background-image: linear-gradient(to right, white, transparent 10%, transparent 90%, white), linear-gradient(to bottom, transparent, transparent 98%, silver);
+        transition: all 500ms ease;
+    }
+    .nav-pills > li > a >.badge{
+        background-color: lightsalmon;
+    }
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+      border: none;
+      /*background: linear-gradient(to right, white, transparent 2%, transparent 98%, white), linear-gradient(to bottom, white, #6EAFF7 8%, #6EAFF7 92%, white);*/
+      background-color: #6EAFF7;
+      background-image: none;
+    }
+    .nav-pills > li.active > a >.badge{
+        background-color: white;
+    }
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<!-- end shim -->
+<section id="content" class="table-layout animated fadeIn">
+    <div class="tray tray-center pn br-n">
+        <div id="spy-nav" class="menu">
+            <div class="menu-title" data-i18n='workprocess.names.todolist'></div>
+            <ul class="nav nav-pills nav-stacked"></ul>
+        </div>
+        <div class="detail-right">
+            <iframe id="ifm" frameborder="0" width="100%" scrolling="no" height="100%"  
+            marginheight="0"></iframe>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    window._pageConfig={
+        hideNavBar: true,
+    };
+</script>
+
+<script type="text/javascript" src="/js/workprocess.js"></script>

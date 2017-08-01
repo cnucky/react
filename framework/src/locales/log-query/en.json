@@ -1,0 +1,16 @@
+{
+	"translation": {
+		"log-query": "Log Query",
+		"moduel-name": "Moduel Name: ",
+		"operation-type": "Operation Type: ",
+		"user": "User: ",
+		"mac-address": "MAC Address: ",
+		"log-content": "Log Content: ",
+		"ip-address": "IP Address:",
+		"time-selection": "Time Selection: ",
+		"search-btn": "Search",
+		"prompt": "Please select a condition to search",
+		"next-page": "Next Page",
+		"front-page": "Front Page"
+	}
+}

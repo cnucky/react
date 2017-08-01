@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "message": "",
+  "data": {
+      "finished":1120,
+      "cancelling":220,
+      "running":110,
+      "error":73,
+      "parterror":68,
+      "cancelled":45
+  }
+}

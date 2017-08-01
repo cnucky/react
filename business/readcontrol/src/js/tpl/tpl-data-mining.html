@@ -1,0 +1,77 @@
+<link rel="stylesheet" type="text/css" href="../css/dataprocess/data-mining.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<div id="downHistory">
+    <span class="glyphicons glyphicons-circle_arrow_left text-center pull-left ban"></span>
+    <span class="glyphicons glyphicons-circle_arrow_right text-center pull-right ban"></span>
+
+    <div class="ulBox">
+        <ul class="list-unstyled">
+            <li title="初始状态">
+                <!--<b class="triangle-left"></b>-->
+                <div class="cont info"><span class="glyphicons glyphicons-refresh"></span></div>
+                <b class="triangle-right"></b>
+            </li>
+        </ul>
+    </div>
+    <div class="info">
+        <div class="cont"></div>
+    </div>
+</div>
+<!--<div class="cutline"></div>-->
+<section id="content" class="table-layout">
+    <!-- begin: .tray-left -->
+    <aside class="tray tray-left tray200 " style="padding: 0;">
+        <div class="diyScroll" id="downTree">
+            <ul class="list-unstyled">
+                <% _.each(data, function(num) { %>
+                <li><i class="glyphicon glyphicon-triangle-right"></i><h5 key="<%- num.key %>"><%- num.name %></h5>
+                    (<label>21</label>)
+                    <ul class="list-unstyled">
+                        <li><span>12</span><h5><%- num.name %>的统计</h5></li>
+                        <li><span>12</span><h5><%- num.name %>的统计</h5></li>
+                        <li><span>12</span><h5><%- num.name %>的统计</h5></li>
+                        <li><span>12</span><h5><%- num.name %>的统计</h5></li>
+                    </ul>
+                </li>
+                <% }) %>
+            </ul>
+            <div id="downTreeMenu">
+                <ul>
+                    <li class="down" mark="-1">下钻</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!-- end: .tray-left -->
+
+    <!-- begin: .tray-center -->
+    <div class="tray tray-center">
+        <div class="returnBtn">
+            <button type="button" class="btn btn-sm btn-info btn-block">返回列表</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="ec-sender" style="height: 400px; "></div>
+            </div>
+            <div class="col-md-6">
+                <div id="ec-receiver" style="height: 400px; "></div>
+            </div>
+        </div>
+
+        <div class="row mv10"></div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="ec-receiver-area" style="height: 600px;"></div>
+            </div>
+        </div>
+        <div id="select_time_range" class="form-inline">
+            开始时间：<input type="datetime" class="form-control input-sm">
+             结束时间：<input type="datetime" class="form-control input-sm">
+        </div>
+    </div>
+    <!-- end: .tray-center -->
+</section>
+
+
+

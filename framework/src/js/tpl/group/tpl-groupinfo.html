@@ -1,0 +1,32 @@
+<div id="group-form">
+    <div class="panel mb50" id="group-info">
+        <div class="panel-heading">
+            <span class="panel-title">用户组详情</span>
+            <div class="widget-menu pull-right mr10">
+                <button id="delete-group" type="button" class="btn btn-sm btn-danger ph15 mr5">删除</button>
+                <button id="move-group" type="button" class="btn btn-sm btn-default ph15 mr5" style="display:none;">移动</button>
+                <button id="edit-group" type="button" class="btn btn-sm btn-primary ph15">编辑</button>
+            </div>
+        </div>
+        <div class="panel-body p20">
+            <div class="admin-form">
+                <div class="section row mb10">
+                    <label for="group-name" class="field-label col-md-2">名称:</label>
+                    <div class="col-md-10">
+                        <label for="group-name" class="field">
+                            <input type="text" name="group-name" id="group-name" class="gui-input" value="<%- userGroupName %>" readonly="">
+                        </label>
+                    </div>
+                </div>
+                <div class="section row mb10">
+                    <label for="group-description" class="field-label col-md-2">描述:</label>
+                    <div class="col-md-10">
+                        <label for="group-description" class="field">
+                            <textarea class="gui-textarea" id="group-description" readonly=""><%- description %></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

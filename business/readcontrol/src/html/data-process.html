@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Loading...</title>
+    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="ByUTech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap-theme.min.css"> -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/loaders.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/tagmanager.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/nova.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/datatables/css/dataTables.bootstrap.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.base.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.bootstrap.css">-->
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/jqx.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/dataprocess.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/glyphicons-pro/glyphicons-pro.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/octicons/octicons.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap-datetimepicker.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/pagination_zh/pagination.css">-->
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/pagination.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/summernote.css">
+
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MyMarkerCluster.Default-4g.css">
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../js/utility/fuckie/html5shiv.js"></script>
+    <script src="../js/utility/fuckie/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../js/components/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/components/lib/jquery.history.js"></script>
+    <script type="text/javascript" src="../js/components/i18next/i18next.js"></script>
+    <script type="text/javascript" src="../js/components/jquery-i18next/jquery-i18next.js"></script>
+    <script type="text/javascript" src="../js/components/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/components/lib/underscore.js"></script>
+    <script type="text/javascript" src="../js/components/lib/q.min.js"></script>
+    <script type="text/javascript" src="${root}/config-window.js"></script>
+    <script src="../js/vendor.js"></script>
+
+    <!--map相关script-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/leaflet.markercluster-src-4g.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/heatmap/heatmap.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/heatmap/leaflet-heatmap.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/anti-line/leaflet-ant-path.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/selfDefination/esri-leaflet-clustered-feature-layer.js"></script>-->
+    <!--<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/bezier.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/gis-smooth.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/MovingMarker.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModule-4g.js"></script>-->
+    <script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrack-widget-files.js"></script>
+
+    <script type="text/javascript">
+        function hideLoader() {
+            $('#fullscreen-loader').fadeOut();
+        }
+
+        function showLoader() {
+            $('#fullscreen-loader').fadeIn();
+        }
+
+        function goFullscreen(panel) {
+            // If fullscreen mode is active, remove class and enable panel sorting
+            if ($('body.panel-fullscreen-active').length) {
+                $('body').removeClass('panel-fullscreen-active');
+                $('.panel-fullscreen').removeClass('panel-fullscreen');
+                panel.removeClass('panel-fullscreen');
+            }
+            // if not active add fullscreen classes and disable panel sorting
+            else {
+                $('body').addClass('panel-fullscreen-active');
+                panel.addClass('panel-fullscreen');
+            }
+            // Hide any open mobile menus or popovers
+            $('.panel-controls').removeClass('panel-controls-open');
+            $('.popover').popover('hide');
+
+            // Trigger a global window resize to resize any plugins
+            // the fullscreened content might contain.
+            setTimeout(function () {
+                $(window).trigger('resize');
+            }, 100);
+        }
+
+        function hideLeftMenu() {
+            $('#sidebar_left').hide();
+            $('#toggle_sidemenu_l').hide();
+            $('#content_wrapper').addClass('mln');
+        }
+
+        //        $(document).on("span.dropdown ul.dropdown-menu li a","click",function(){
+        //            $(this).parents("li").addClass("active");
+        //            $(this).parents("li").siblings().removeClass("active");
+        //        });
+    </script>
+</head>
+<body class="diyScroll" style="overflow: hidden;">
+<header class="navbar navbar-fixed-top navbar-shadow bg-dark navbar-btnlist" style="padding-left: 25px;">
+    <span class="navBtn-list hbtn active" style="display: inline-block;" data-i18n="[append]dataprocess.name.list">
+        <i class="glyphicons glyphicons-list icon"></i>
+        <div class="triangle"></div>
+    </span>
+    <span class="navBtn-entity hbtn" style="display: inline-block;" data-i18n="[append]dataprocess.name.entity">
+        <i class="glyphicons glyphicons-list icon"></i>
+        <div class="triangle" style="display:none;"></div>
+    </span>
+    <span class="navBtn-map hbtn" style="display: inline-block;" data-i18n="[append]dataprocess.name.map">
+        <i class="glyphicons glyphicons-google_maps icon"></i>
+        <div class="triangle" style="display:none;"></div>
+    </span>
+    <span class="navBtn-dataPivot hbtn" style="display: none;"data-i18n="[append]dataprocess.name.data_pivot">
+        <i class="glyphicons glyphicons-google_maps icon"></i>
+        <div class="triangle" style="display:none;"></div>
+    </span>
+    <span class="navBtn-timeLaw hbtn data-timeline" style="display: none;" data-i18n="[append]dataprocess.name.time_law">
+        <i class="glyphicons glyphicons-google_maps icon"></i>
+        <div class="triangle" style="display:none;"></div>
+    </span>
+
+    <span class="navBtn-conduct hbtn" style="display: none;" >
+        <i class="glyphicons glyphicons-snowflake icon"></i>
+        <div class="triangle" style="display:none;"></div>
+        关系分析
+    </span>
+</header>
+<div id="body-wrapper">
+    <div id="pages-wrapper" class="pages" style="padding: 0px;">
+        <div class="diyScroll" id='tree-new' style="background:whitesmoke"></div>
+        <div id="btn-list" class="btn-list" style="margin-top: 5px;">
+            <div class="right">
+                <button id="peric" type="button" class="btn btn-info btn-sm hidden" data-i18n="[append]dataprocess.action.pivot">
+                    <i class="glyphicons glyphicons-pencil icon"></i>
+                </button>
+                <div class="btn-group">
+                    <button id="importance" type="button" class="btn btn-info btn-sm dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="glyphicons glyphicons-pencil icon"></i>
+                        <span data-i18n="dataprocess.action.mark"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <button id="tableSort" class="btn btn-info btn-sm sort" data-toggle="modal" data-target="#myModal2"
+                        type="submit" data-i18n="[append]dataprocess.action.sort">
+                    <i class="glyphicon glyphicon-sort-by-attributes icon"></i>
+                </button>
+                <button id="tableFilter" class="btn btn-info btn-sm filter" data-toggle="modal" data-target="#myModal1"
+                        type="submit" data-i18n="[append]dataprocess.action.filter">
+                    <i class="glyphicons glyphicons-filter icon"></i>
+                </button>
+                <div id="gisBtnGroup" class="btn-group">
+                    <button id="btnGisData" type="button" class="btn btn-info btn-sm dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="glyphicons glyphicons-google_maps icon"></i>
+                        <span data-i18n="dataprocess.action.map"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-child gis-btn gis-selected">
+                            <a data-i18n="dataprocess.action.show_selected_record"></a>
+                        </li>
+                        <li class="dropdown-menu-child gis-btn gis-cached">
+                            <a data-i18n="dataprocess.action.show_cache_record"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tableDistinctByBtuGroup" class="btn-group">
+                </div>
+                <button id="tableMerge" class="btn btn-info btn-sm hidden disabled" type="submit" data-i18n="[append]dataprocess.action.merge">
+                    <i class="octicon octicon-git-merge icon"></i>
+                </button>
+                <button id="btnExtract" class="btn btn-info btn-sm" type="submit" data-i18n="[append]dataprocess.action.extract">
+                    <i class="octicon octicon-git-merge icon"></i>
+                </button>
+                <!--<button id="btnRelationAnalysis" class="btn btn-info btn-sm" type="submit">-->
+                    <!--<i class="octicon octicon-git-merge icon"></i>关系分析-->
+                <!--</button>-->
+
+                <div id="btnRelationAnalysisGroup" class="btn-group hidden">
+
+                </div>
+
+                <div id="exportBtnGroup" class="btn-group" >
+                    <button id="btnExportData" type="button" class="btn btn-info btn-sm dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cloud-download icon"></i>
+                        <span data-i18n="dataprocess.action.export"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li id="liExportCurrentPage" class="dropdown-menu-child">
+                            <a data-i18n="dataprocess.action.show_all_record"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<button id="btnExport" class="btn btn-info btn-sm" ><i class="fa fa-cloud-download icon"></i>导出</button>-->
+                <button class="btn btn-info btn-sm type" id="show_config" data-toggle="modal" data-target="#myModal" type="submit" data-i18n="[append]dataprocess.action.show_config">
+                    <i class="glyphicons glyphicons-settings icon"></i>
+                </button>
+                <div class="sign">
+                </div>
+            </div>
+            <div id="cachestate">
+            </div>
+        </div>
+        <div id="tableSpin" class="btn-list">
+            <div id='table'>
+                <div id="mainSplitter">
+                    <div class="splitter-panel" id="tableBox">
+                        <div id="jqxGrid"></div>
+                    </div>
+                    <div class="splitter-panel" id="warpBox">
+                    </div>
+                </div>
+            </div>
+            <div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+        </div>
+
+    </div>
+    <div id="map-wrapper" class="pages" style="display: none;padding: 0px"></div>
+    <div id="perspective" class="pages" style="display: none;"></div>
+    <div class="pages" style="display: none; padding: 0px">
+        <div id="timedays" class="change"></div>
+        <div id="timelines" class="change" style="display: none; overflow: auto"></div>
+    </div>
+    <div id="relationAnalysis" class="pages" style="display: none;">
+    </div>
+
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modal_config" data-i18n="dataprocess.name.mul_column_sort"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="list-group select-init">
+                        <div class="list-group-item">
+                            <div class="sort-font" data-i18n="dataprocess.name.first_column"></div>
+                            <div class="form-group form-select">
+                                <select class="form-control list-name sort-first"></select>
+                            </div>
+                            <div class="sort-font" ></div>
+                            <span data-sort="asc"><i></i></span>
+                            <div class="text-sort" data-i18n="dataprocess.name.asc"></div>
+                        </div>
+                        <div class="list-group-item second">
+                            <div class="sort-font" data-i18n="dataprocess.name.second_column"></div>
+                            <div class="form-group form-select">
+                                <select class="form-control list-name sort-second"></select>
+                            </div>
+                            <div class="sort-font" ></div>
+                            <span data-sort="asc"><i></i></span>
+
+                            <div class="text-sort" data-i18n="dataprocess.name.asc"></div>
+                        </div>
+                        <div class="list-group-item third">
+                            <div class="sort-font" data-i18n="dataprocess.name.third_column"></div>
+                            <div class="form-group form-select">
+                                <select class="form-control list-name sort-third"></select>
+                            </div>
+                            <div class="sort-font" ></div>
+                            <span data-sort="asc"><i></i></span>
+
+                            <div class="text-sort" data-i18n="dataprocess.name.asc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="dataprocess.action.cancel"></button>
+                <button type="button" class="btn btn-primary sort-button" data-i18n="dataprocess.action.confirm"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog filtration" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modal_filter" data-i18n="dataprocess.name.data_filter"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading add"><span class="add_item" data-i18n="[append]dataprocess.action.add_condiction"></span></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="dataprocess.action.cancel"></button>
+                <button type="button" class="btn btn-primary operation-save" data-i18n="dataprocess.action.confirm"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" data-i18n="dataprocess.name.config"></h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="dataprocess.action.cancel"></button>
+                <button type="button" class="btn btn-primary type-save" data-i18n="dataprocess.action.confirm"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="MK_NOTE" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" data-i18n="dataprocess.name.notes"></h4>
+            </div>
+            <div class="modal-body">
+                <textarea id="MK_NOTE_textarea" style="width: 100%; height: 150px"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="dataprocess.action.cancel"></button>
+                <button type="button" id="MK_NOTE_save" class="btn btn-primary" data-i18n="dataprocess.action.confirm"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="extractDataWin" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" data-i18n="dataprocess.action.extract"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div id="extractDataCol"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-custom">
+                            <input type="checkbox" id="do_merge">
+                            <label for="do_merge" data-i18n="dataprocess.action.merge"></label>
+                        </div>
+                    </div>
+                    <div  class="form-group">
+                        <button id="extractDataBtn" class="btn btn-sm btn-primary" data-i18n="dataprocess.action.confirm"></button>
+                    </div>
+                </div>
+                <div id="extractDataTable"></div>
+                <div id="extractDataTableInfo"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-i18n="dataprocess.action.export"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<iframe id='btn2' style="display:none;"></iframe>
+<input class="position" type="hidden" name="name" value="">
+<input class="default" type="hidden" name="name" value="">
+<div id='Menu' style="overflow: auto;"></div>
+<div id='timeRight' style="overflow: auto;"></div>
+<div id='jqxMenu' style="overflow: auto;"></div>
+<script type="text/javascript" src="../js/components/summernote/summernote.min.js"></script>
+<script type="text/javascript" src="../js/components/summernote/summernote-zh-CN.js"></script>
+<script type="text/javascript" src="../js/components/peaks/peaks.min.js"></script>
+<script type="text/javascript" src='/dataprocess/js/data-process.js'></script>
+<script type="text/javascript">
+    String.prototype.format=
+            function (args){
+                if(arguments.length==0){
+                    return this;
+                }
+
+                var result=this;
+                if(arguments.length==1 && typeof(args)=="object" )
+                {
+                    for(var key in args)
+                    {
+                        var reg=new RegExp("({" + key+"})","g");
+                        result=result.replace(reg,args[key]);
+                    }
+                }
+                else {
+                    for(var i=0;i<arguments.length;i++){
+                        if(arguments[i]==undefined)
+                        {
+                            return "";
+                        }
+                        else{
+                            var reg=new RegExp("({[" + i+"]})","g");
+                            result=result.replace(reg,arguments[i]);
+                        }
+                    }
+                }
+
+                return result;
+            };
+</script>
+</body>
+</html>

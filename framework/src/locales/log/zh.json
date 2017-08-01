@@ -1,0 +1,16 @@
+{
+	"translation": {
+		 "statistical-diagram": "统计图",
+		 "time-granularity": "时间粒度：",
+		 "time-period-select-option1": "最近一周",
+		 "time-period-select-option2": "最近一月",
+		 "time-period-select-option3": "最近一年",
+		 "filtering-module": "筛选模块：",
+		 "usage-statistics": "使用量统计",
+		 "module-selection": "模块选择：",
+		 "department-selection": "部门选择：",
+		 "time-selection": "时间选择：",
+		 "search-btn": "搜索",
+		 "prompt": "请选择条件进行搜索"
+	}
+}

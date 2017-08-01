@@ -1,0 +1,514 @@
+{
+  "gismodule": {
+    "common": {
+      "carriers": {
+        "cmcc": "中国移动",
+        "cucc": "中国联通",
+        "ctc": "中国电信",
+        "crc": "中国铁通",
+        "cnc": "中国网通",
+        "unknow": "Unknown"
+      },
+      "mapmenu": {
+        "cancleEdit": "Cancel Edit",
+        "edit": "Edit",
+        "delete": "Delete",
+        "save": "Save"
+      },
+      "mapToolbar": {
+        "scale": "Scale",
+        "province": "Province",
+        "city": "City",
+        "district": "District or County",
+        "lng": "Longitude:",
+        "lat": "Latitude:",
+        "showRegion": "Display Region"
+      }
+    },
+    "enclosureManageModule": {
+      "notify": {
+        "title": "Prompt",
+        "text": "Not select any base station!",
+        "text2": "Too many base stations, please narrow the range!",
+        "text3": "Fail to obtain base staion data!"
+      },
+      "panel": {
+        "title": "Base Station Detail Info.",
+        "OK": "Confirm",
+        "cancle": "Cancel"
+      },
+      "enclosuretoolbar": {
+        "circle": "Circle",
+        "rectangle": "Rectangle",
+        "polygon": "Polygon",
+        "drawcircle": "Draw Circle",
+        "drawrectangle": "Draw Rectangle",
+        "drawpolygon": "Draw Polygon"
+      },
+      "BSDetailTable": {
+        "selectAll": "Select All",
+        "carrier": "Carrier",
+        "description": "Description"
+      }
+    },
+    "getLatLngRangeModule": {
+      "drawToolbar": {
+        "rectangle": "Rectangle",
+        "drawrectangle": "Draw Rectangle"
+      },
+      "rangePanel": {
+        "title": "Coordinate Range",
+        "lngRange": "Longitude Range:",
+        "latRange": "Latitude Range:",
+        "OK": "Confirm",
+        "cancle": "Cancel"
+      }
+    },
+    "manageAimTrackModule": {
+      "btn": {
+        "playBtn": "Play",
+        "cancleBtn": "Cancel",
+        "colorBtn": "Color",
+        "currentColor": "Current Color",
+        "colorSelect": "Select trace color",
+        "colorBtnTip": "Don't change trace color during trace playing."
+      },
+      "playPanel": {
+        "title": "Play Trace",
+        "play": "Play",
+        "pause": "Pause",
+        "speedup": "Accerlerate",
+        "speeddown": "Slow down",
+        "replay": "Re-play",
+        "currentSpeed": "Play at current speed",
+        "statePlay": "Play Trace",
+        "statePause": "Pause",
+        "stateFilter": "Trace Filter",
+        "stateFinish": "Finish"
+      },
+      "log": {
+        "text1": "Error in Time Range",
+        "text2": "Illegal Coordinate"
+      },
+      "topMenu": {
+        "title": "Display Target Data",
+        "destribute": "Target Distribution",
+        "track": "Target Trace",
+        "heatmap": "Target Hotspot"
+      },
+      "trackList": {
+        "defaultTrack": "Default Target",
+        "trackWithNum": "Target with Number:",
+        "trackWithoutNum": "Target without Number:",
+        "target": "Target",
+        "loading": "Loading"
+      },
+      "popup": {
+        "target": "Target"
+      },
+      "pointInfo": {
+        "lng": "Longitude",
+        "lat": "Latitude",
+        "time": "Time",
+        "info": " Info."
+      },
+      "panel": {
+        "OK": "Confirm",
+        "cancle": "Cancel"
+      }
+    },
+    "LayerManager": {
+      "title": "Manage Layer",
+      "fancyTree": {
+        "alert1": "Retrieve Data",
+        "alert2": "Optimize Display",
+        "alert3": "Re-build Index",
+        "alert4": "Layer info is not obtained.",
+        "alert5": "Fail to create folder.",
+        "alert6": "Fail to edit folder.",
+        "alert7": "Layer under the folder is implementing task. Deleting the folder will cause layer , layer task and imported data all be deleted. \nDelete?",
+        "alert8": "The folder delete will cause the layer , layer task and imported data all be deleted. \nDelete?",
+        "alert9": "Fail to delete.",
+        "alert10": "Layer under the folder is implementing task. Deleting the folder will cause layer , layer task and imported data all be deleted. \nDelete?",
+        "alert11": "The folder delete will cause the layer , layer task and imported data all be deleted. \nDelete?",
+        "alert12": "Delete Layer",
+        "alert13": "Fail.",
+        "contextMenu": {
+          "newFolder": "Create Folder",
+          "editFolder": "Edit Folder",
+          "deleteFolder": "Delete Folder",
+          "newLayer": "Create Layer",
+          "queryData": "Retrieve Data",
+          "defineLayer": "Layer Definition",
+          "deleteLayer": "Delete Layer",
+          "importData": "Data Import",
+          "checkTask": "View Task",
+          "optimizeDisplay": "Optimize Display",
+          "rebuildIndex": "Re-build Index"
+        },
+        "layerDir": {
+          "personal": "Individual Layer",
+          "basic": "Basic Layer",
+          "share": "Shared Layer"
+        },
+        "basicLayers": {
+          "railwayStation": "Railway Station Data",
+          "airport": "Airport Data",
+          "baseStation": "Base Station Data"
+        }
+      },
+      "tabPage": {
+        "title": {
+          "newLayer": "Create Layer",
+          "defineLayer": "Layer Definition",
+          "importData": "Data Import",
+          "queryTask": "Query Task",
+          "optimizeDisplay":"Optimize Display"
+        }
+      },
+      "importData": {
+        "alert1": " Field",
+        "alert2": "Unable to mapping repeatedly.",
+        "alert3": "Task name can not be empty.",
+        "alert4": "No qualified file to inport from file list.",
+        "alert5": "Need to Set Mapping",
+        "alert6": "File import operation is submitted. Please view the process in task view page.",
+        "alert7": "Fail to import file",
+        "alert8": "Unable to sample data correctly.",
+        "alert9": "Matched field info is not obtained.",
+        "alert10": "Fail to refresh data file status.",
+        "alert11": "Fail to refresh file status.",
+        "alert12": "Delete fails.",
+        "confirm": "Cancel operation will shut down the page. Still cancel?",
+        "status": {
+          "waitForUpload": "To be uploaded.",
+          "uploading": "Uploading",
+          "uploadSuccess": "Upload succeeds.",
+          "uploadFailed": "Upload fails.",
+          "waitForCheck": "To be verified.",
+          "checking": "Verifying..",
+          "checkSuccess": "Verification succeeds.",
+          "checkFailed": "Verification fails."
+        },
+        "empty": "Empty",
+        "uiItem": {
+          "fileUpload": "Upload File",
+          "delete": "Delete",
+          "taskName": "Task Name",
+          "inputTaskName": "Please enter task name.",
+          "offset": "Offset?",
+          "fileList": "File List",
+          "tableCol": {
+            "select": "Select",
+            "state": "Status",
+            "fileName": "File Name",
+            "fileSize": "File Size",
+            "dataCount": "Total Data"
+          },
+          "sampleData": "Sampling Data",
+          "mappingRelation": "Please specify field mapping relation.",
+          "ok": "Confirm",
+          "cancel": "Cancel"
+        }
+      },
+      "newLayer": {
+        "alert1": "Name can not be empty.",
+        "alert2": "Max. Scale can not in lower porportion than Min. Scale.",
+        "alert3": "Please save the field being edited.",
+        "alert4": "Fail to create layer.",
+        "alert5": "Fail to edit layer.",
+        "alert6": "Not obtained",
+        "alert7": "Layer Info.",
+        "lat": "Latitude",
+        "lng": "Longitude",
+        "itemInfo": "Please add new field info.",
+        "confirm": "Cancel will shut down current page. Still Cancel?",
+        "layerIconTitle": "Icon Library",
+        "dataType": {
+          "string": "Character String",
+          "num": "Value",
+          "time": "Time"
+        },
+        "uiItem": {
+          "title": "Layer Info.",
+          "table": {
+            "title": "Field Info.",
+            "col": {
+              "indexContent": "Directory",
+              "icon": "Icon",
+              "lngField": "Longitude Field",
+              "latField": "Latitude Field",
+              "lng": "Longitude",
+              "lat": "Latitude",
+              "nameField": "Name Field",
+              "name": "Name",
+              "maxScale": "Max. Scale",
+              "minScale": "Min. Scale",
+              "addrField": "Address Field",
+              "addr": "Address",
+              "index": "Serial Number",
+              "displayName": "Display Name",
+              "type": "Type",
+              "length": "Length",
+              "accuracy": "Accuracy",
+              "string": "Character String",
+              "num": "Value",
+              "edit": "Edit",
+              "delete": "Delete"
+            },
+            "addField": "Add Field",
+            "fieldToAdd": "Field To be Added",
+            "addedField": "Existed Field",
+            "tip1": "Please Select Icon",
+            "tip2": "Please enter layer name.",
+            "ok": "Confirm",
+            "cancel": "Cancel"
+          }
+        }
+      },
+      "queryTask": {
+        "alert1": "Fail to obtain imported task1",
+        "alert2": "Fail to delete task at back end!",
+        "state": {
+          "waitForImport": "Wait Import",
+          "importing": "Importing",
+          "importSuccess": "Import successfully!",
+          "importFailed": "Fail to import."
+        },
+        "uiItem": {
+          "refresh": "Refresh",
+          "delete": "Delete",
+          "fold": "Fold",
+          "taskList": "Task List",
+          "tableCol": {
+            "select": "Select",
+            "taskName": "Task Name",
+            "startTime": "Task Start Time",
+            "endTime": "Task End Time",
+            "layerName": "Layer Name",
+            "successCount": "Success Record Number",
+            "failedCount": "Error Record Number",
+            "taskState": "Task Status",
+            "taskSchedule": "Task Process"
+          }
+        }
+      },
+      "editTable": {
+        "fieldType": {
+          "string": "Character String",
+          "num": "Value",
+          "time": "Time"
+        },
+        "btn": {
+          "save": "Save",
+          "cancelAdd": "Cancel Add",
+          "cancelEdit": "Cancel Edit",
+          "editField": "Edit Field",
+          "deleteField": "Delete Field"
+        },
+        "alert1": "Display name can not be empty.",
+        "alert2": " Field  ",
+        "alert3": "  exited, unable to add same field name.",
+        "alert4": "  length should be set between [1,65535].",
+        "alert5": "  accuracy should be set at 0 or empty.",
+        "alert6": "  length should be set between [1,1000].",
+        "alert7": "  accuracy should be set at 0 or empty [-10,10].",
+        "alert8": "  accuracy should be set at 0 or empty.",
+        "alert9": "  accuracy should be set at 0 or empty.",
+        "alert10": "Please save the field being edited.",
+        "alert11": "Delete the field info?",
+        "alert12": "Please save field being edited."
+      },
+      "novaDialog": {
+        "title": "Confirm Box",
+        "content": "Confirm?",
+        "leftBtn": "Cancel",
+        "rightBtn": "Confirm"
+      },
+      "mapTool": {
+        "title": "Map Query Tools",
+        "placeholder": "Please enter keywords.",
+        "edit": "Edit",
+        "add": "Add",
+        "delete": "Delete",
+        "save": "Save",
+        "columns": {
+          "lng": "Longitude",
+          "lat": "Latitude",
+          "name": "Name",
+          "address": "Address",
+          "carrier": "Carrier",
+          "originalLng": "Original Longitude",
+          "originalLat": "Original Latitude"
+        }
+      }
+    },
+    "enclosureManage": {
+      "title": "Manage Enclosure",
+      "toolbarBtn": {
+        "circle": "Circle",
+        "rectangle": "Rectangle",
+        "polygon": "Polygon",
+        "ok": "Confirm",
+        "cancel": "Cancel"
+      },
+      "dirName": "Enclosure",
+      "mapMenu": {
+        "clear": "Remove data in the area",
+        "display": "Display..",
+        "edit": "Edit",
+        "cancelEdit": "Cancel Edit",
+        "property": "Property",
+        "delete": "Delete",
+        "save": "Save"
+      },
+      "treeMenu": {
+        "newDir": "Create Directory",
+        "edit": "Edit",
+        "rename":"Rename",
+        "delete": "Delete",
+        "property": "Property"
+      },
+      "pointType": {
+        "tollGate": "Road Toll",
+        "airport": "Airport",
+        "railwayStation": "Railway Station",
+        "baseStation": "Base Station",
+        "busStation": "Bus Station",
+        "port": "Port"
+      },
+      "operateType": {
+        "newEnclosure": "Create Enclosure",
+        "editProperty": "Edit Property",
+        "viewProperty": "View Property"
+      },
+      "tableCol": {
+        "name": "Name",
+        "dir": "Directory",
+        "fillColor": "Fill Color",
+        "description": "Description"
+      },
+      "alert1": "Fail to obtain root node info.",
+      "alert2": "Fail to load data!",
+      "alert3": "Fail to create directory!",
+      "alert4": "Fail to edit enclosure!",
+      "alert5": "Fail to create enclosure!",
+      "alert6": "Fail to edit enclosure property!",
+      "alert7": "Fail to save picture!",
+      "alert8": "Fail to obtain enclosure property!",
+      "alert9": "Delete fails",
+      "alert10": "Fail to obtain enclosure info.",
+      "alert11": "Fail to obtain tree directory of enclosure.",
+      "alert12": "The enclosure is not added with property info.",
+      "alert13": "Please enter complete enclosure info.",
+      "alert14": "No data obtained yet!"
+    },
+    "intelligentQuery": {
+      "toolBtn": "Smart Query",
+      "locateBtn": "Manage Target Trace",
+      "dirName": "Enclosure",
+      "alert1": "Fail to load data!",
+      "alert2": "No data is obtained!",
+      "alert3": "Fail to obtain root node info."
+    },
+    "searchPOI": {
+      "btn": "Interest Point Search",
+      "searchCondition": {
+        "address": "Address",
+        "name": "Name",
+        "search": "Query",
+        "placeholder": "Please enter query conditions.",
+        "searchKind": "QueryType",
+        "resultList": "Result List",
+        "firstPage": "Home Page",
+        "prePage": "Previous Page",
+        "nextPage": "Next Page"
+      },
+      "pointKind": {
+        "fastFood": "Fast Food Restaurant",
+        "restaurant": "Restaurant",
+        "bar": "Bar",
+        "cafe": "Cafe",
+        "superMarket": "Supermarket",
+        "drugStore": "Drugstore",
+        "gasStation": "Gas Station",
+        "park": "Parking Lot",
+        "hotel": "Hotel",
+        "cinema": "Cinema",
+        "InternetBar": "Internet Cafe",
+        "hospital": "Hospital",
+        "railwayStation": "Railway Station",
+        "airport": "Airport",
+        "postOffice": "Post Office",
+        "scenerySpot": "Tourist Attraction",
+        "bank": "Bank",
+        "port": "Port, Dock",
+        "plot": "Community"
+      },
+      "resultProperty": {
+        "address": "Address:",
+        "kind": "Type:"
+      },
+      "popup": {
+        "address": "Address",
+        "kind": "Type",
+        "location": "Map Coordinates",
+        "lng": "Longitude",
+        "lat": "Latitude"
+      },
+      "info1": "Unfold panel of query conditions detail info.",
+      "info2": "Fold panel of query conditions detail info.",
+      "alert1": "Error in query result! Please re-query.",
+      "alert2": "No qualified info is found in current region.",
+      "alert3": "Please enter query conditions."
+    },
+    "setPosition": {
+      "toolBtn": "Map Locating",
+      "info1": "Please enter correctLongitude",
+      "info2": "Please enter correctLatitude",
+      "info3": "Please click this button or press Alt+p to locate.",
+      "tableCol": {
+        "lng": "Longitude",
+        "lat": "Latitude",
+        "location": "Locate"
+      }
+    },
+    "manageAimTrack": {
+      "alert1": "Illegal Coordinates",
+      "alert2": "Error in Time Range",
+      "info1": "Don't change trace color during trace playing.",
+      "title": "Manage Target Trace",
+      "tooltipTitle": " Info.",
+      "tooltipCol": {
+        "lng": "Longitude",
+        "lat": "Latitude",
+        "time": "Time"
+      },
+      "trackPanel": {
+        "title": "Trace",
+        "closeBtn": "Close",
+        "name": "Smart Trace Management",
+        "gobackBtn": "Back to Target List",
+        "okBtn": "Confirm",
+        "distributeBtn": "View Target Points Distribution",
+        "tip1": "Please select favorites (5 at most) from target list.",
+        "tip2": "No more than 5.",
+        "tip3": "No Target Data"
+      },
+      "aimName": "Target",
+      "playPanel": {
+        "title": "Play Trace",
+        "play": "Play",
+        "pause": "Pause",
+        "speedup": "Accelerate",
+        "speeddown": "Slow Down",
+        "replay": "Reset and Replay",
+        "currentSpeed": "Current Speed",
+        "statePlay": "Play Trace",
+        "statePause": "Pause",
+        "stateFilter": "Trace Filter",
+        "stateFinish": "Finish"
+      }
+    }
+  }
+}

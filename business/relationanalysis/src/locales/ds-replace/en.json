@@ -1,0 +1,8 @@
+{
+        "please-select-data-source-to-field-mapping": "please select data source to field mapping",
+        "data-source-replacement": "data source replacement",
+        "unable-replace": "unable to replace",
+        "types-are-inconsistent": "types are inconsistent",
+        "field-mapping-is-incomplete": "field mapping is incomplete",
+        "you-need-map-all-output-from-old-data-source-to-new-data-source": "you need map all output from old data source to new data source"
+}

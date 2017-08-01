@@ -1,0 +1,64 @@
+<style>
+.topbar {
+    /*  z-index: 2;
+       position: relative;
+       width: 100%;
+       min-height: 51px;
+       padding: 10px 21px;
+       background: none repeat scroll 0% 0% #FAFAFA;
+       border-bottom: 1px solid #E0E0E0; */
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.fancytree-icon-color {
+    color: #ffaf60;
+}
+
+.panel-tabs.panel-tabs-border > li.active > a {
+    margin-bottom: 1px;
+    border-bottom: 2px solid #3498db;
+}
+</style>
+<div class='tray tray-center pn' id='tray-div'>
+    <div class='panel-menu' id='panel-menu' style='height:7%; vertical-align: top'>
+    </div>
+    <div id='grid-div' style='margin-top: 20px;height:90%; vertical-align: bottom'>
+        <div id="gridContainer" style="height:100%"></div>
+    </div>
+    <div id="pagination">
+        <div class='dataTables_length' id='pager_length'>
+            <label style='font-weight: normal;text-align: left;white-space: nowrap;margin:19px 0;'>每页显示
+                <select style='display: inline-block;width: auto;vertical-align: middle;' name='pager_length' aria-controls='pager_length' id='pager_length_options' class='form-control input-sm'>
+                    <option value='10'>10</option>
+                    <option value='30'>30</option>
+                    <option value='50'>50</option>
+                    <option value='100'>100</option>
+                    <option value='200'>200</option>
+                    <option value='500'>500</option>
+                </select>条数据</label>
+        </div>
+        <div id='pager' style='margin:0;white-space:nowrap;text-align:right;float:right'>
+            <label style='font-weight: normal;text-align: left;white-space: nowrap;margin: 19px 20px 19px 0;vertical-align: top'>
+                跳转到
+                <input type='text' class='' style='display: inline-block;width:50px;height:30px;' id='toPage'></input> 页
+                <button id='toPageConfirm' class='btn btn-sm btn-primary' style='margin-left:5px;'> 确定</button>
+            </label>
+            <ul id="page-ul" class="pagination " style="display: inline-block;padding-left: 0;margin: 19px 0;border-radius: 4px;">
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="modal-form" class=" popup-basic admin-form mfp-with-anim mfp-hide">
+    <div class="panel">
+        <div class="panel-heading ptn pbn">
+            <span class="panel-title">
+                <i class="fa fa-rocket"></i>结果详情</span>
+        </div>
+        <form>
+            <div class="panel-body pn" id="detail">
+            </div>
+        </form>
+    </div>
+</div>

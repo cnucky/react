@@ -1,0 +1,33 @@
+<div class='panel'>
+    <div class='panel-heading'>
+        <span class='panel-title text-primary'>共<b id="result-count" class="text-primary"></b>
+    条<b id="result-keyword" class="text-primary"></b>
+    的搜索结果, 耗时<b id="time-count" class="text-primary"></b>秒</span>
+    </div>
+    <div class='panel-body'>
+        <ul id='yw-result-list'></ul>
+        <div id='yw-result-div'></div>
+        <div id="pagination">
+            <div class='dataTables_length' id='pager_length'>
+                <label style='font-weight: normal;text-align: left;white-space: nowrap;margin:19px 0;'>每页显示
+                    <select style='display: inline-block;width: auto;vertical-align: middle;' name='pager_length' aria-controls='pager_length' id='pager_length_options' class='form-control input-sm'>
+                        <option value='10'>10</option>
+                        <option value='30'>30</option>
+                        <option value='50'>50</option>
+                        <option value='100'>100</option>
+                        <option value='200'>200</option>
+                        <option value='500'>500</option>
+                    </select>条数据</label>
+            </div>
+            <div id='pager' style='margin:0;white-space:nowrap;text-align:right;float:right'>
+                <label style='font-weight: normal;text-align: left;white-space: nowrap;margin: 19px 20px 19px 0;vertical-align: top'>
+                    跳转到
+                    <input type='text' class='' style='display: inline-block;width:50px;height:30px;' id='toPage'></input> 页
+                    <button id='toPageConfirm' class='btn btn-sm btn-primary' style='margin-left:5px;'> 确定</button>
+                </label>
+                <ul id="page-ul" class="pagination " style="display: inline-block;padding-left: 0;margin: 19px 0;border-radius: 4px;">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

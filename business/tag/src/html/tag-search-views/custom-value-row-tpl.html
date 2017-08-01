@@ -1,0 +1,19 @@
+<div class='row hide-detail mt15'>
+    <div class='col-md-12'>
+        <p class='row-thead-custom center' title='{{tag.typeName}}'>{{tag.typeName}}</p>
+    </div>
+</div>
+<div class='row hide-detail'>
+    <div class='col-md-12 col-lg-12'>
+        <div class='row-tlist'>
+        <ul>
+            <li ng-repeat='value in tag.valueList' ng-class='{"selected-value":checkSelected(value,tag.typeId)}'><a href ng-click='clickTagValue($event)' data-tag-id='{{tag.typeId}}' data-tag-value='{{value}}' data-tag-name='{{tag.typeName}}' data-tag-type='{{tag.valueType}}' title='{{value}}'>{{value | autoAdjust}}</a></li>
+            <li>
+                <custom-value></custom-value>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+</div>
+</div>

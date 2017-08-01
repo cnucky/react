@@ -1,0 +1,87 @@
+<div class="planTitle current" index="<%= index %>" data-aim-id="<%= aimId %>" data-begin-time='<%= beginTime %>' data-end-time='<%= endTime %>' data-start-index='0' data-end-index='<%= endIndex %>'>
+    <div class="dir_tag">
+        <%= tabName %>
+    </div>
+    <p class="dir_base_info">
+        <!--         <span class="dir_base">标识名称</span> -->
+        <span class="dir_base"><%= aimId %></span>
+    </p>
+    <div class='control-line'>
+        <input type='color' value='<%= color %>' class='color-picker color-box' id='colorPicker<%= index %>'>
+        <label class='color-picker-caption' for='colorPicker<%= index %>'>轨迹颜色</label>
+        <input type='checkbox' class='chkbox2 show-target-btn' id='showTargetBtn<%= aimId %>' name='reviewAim' checked>
+        <label class='show-target-btn-caption' for='showTargetBtn<%= index %>'>显示轨迹</label>
+    </div>
+    <div class="sidebar">
+        <a class="" href="javascript:void(0)">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </div>
+</div>
+<div class='trackPlay' data-aim-id="<%= aimId %>">
+    <div class="video" style="width: 700px;">
+        
+        <div class="player" style="width: 99%;left: -166px;top:-13px;">
+            <div class="play-pause play"><span class="play-button trackPlayerPlay">►</span>
+                <div class="play-button" ><span class='trackPlayerPause'><i class='fa fa-pause'></i></span></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 0px;">
+                    <!-- <div class="button-holder">
+                        <div class="progress-button" style="left: -20px;"> </div>
+                    </div> -->
+                </div>
+                <!-- <div class="time"><span class="ctime">0:00</span><span class="stime"> / </span><span class="ttime">0:26</span></div> -->
+                <!-- <div class="buffered" style="left: 0%; width: 0.879509%;"></div> -->
+            </div>
+            <div class="volume">
+                <div class="player-icon"><span class='fa fa-backward trackPlayerSlow' title=''> </span></div>
+            </div>
+            <div class="volume volume-after">
+                
+                <div class="player-icon"><span class='fa fa-forward trackPlayerFast' title=''> </span></div>
+            </div>
+            <div class="volume volume-after">
+                <div class="player-icon"><i class='playing-speed' data-cur-speed='1'>1x</i></div>
+            </div>
+            <div class="volume volume-after">
+                
+                <div class="player-icon"><span class='fa fa-undo trackPlayerReplay' title=''> </span></div>
+            </div>
+            <!-- <div class="fullscreen">
+                <a href="http://www.inserthtml.com/demo/html5-video/#"> </a>
+            </div> -->
+        </div>
+    </div>
+</div>
+<dl class="plan plan-nobus <%= tabName %>" data-aim-id="<%= aimId %>" data-begin-time='<%= beginTime %>' data-end-time='<%= endTime %>' data-start-index='0' data-end-index='<%= endIndex %>'>
+    <!-- if begin -->
+    <% if(path.length==1){ %>
+        <dt class="end" index="0">
+            <h5 class="name"><%= path[0].mainInfo %></h5>
+            <% for(var j=0;j<path[0].otherInfo.length;j++){%>
+                <span class="distance grey"><%= path[0].otherInfo[j] %></span>
+                <%}%>
+        </dt>
+        <!-- if end -->
+        <!-- else begin -->
+        <%}else{%>
+            <!-- for begin -->
+            <% for(var i=0;i<path.length;i++){ %>
+                <%  if(i==0){%>
+                    <dt class="start route" index="<%= i %>">
+                        <%  }else if(i==path.length-1){%>
+                            <dt class="end " index="<%= i %>">
+                                <%  }else{%>
+                                    <dt class="route turn-advance" index="<%= i %>">
+                                        <%  }%>
+                                            <h5 class="name"><%= path[i].mainInfo %></h5>
+                                            <% for(var j=0;j<path[i].otherInfo.length;j++){%>
+                                                <span class="distance grey"><%= path[i].otherInfo[j] %></span>
+                                                <%}%>
+                                    </dt>
+                                    <!-- for end -->
+                                    <%} %>
+                                        <!-- else end -->
+                                        <% } %>
+</dl>

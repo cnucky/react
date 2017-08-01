@@ -1,0 +1,12 @@
+{
+    "appenders": [
+        {
+            "type": "dateFile",
+            "alwaysIncludePattern": true,
+            "filename":"./logs/route/",
+            "pattern": "yyyy-MM-dd.log"
+        }
+    ],
+    "replaceConsole": false,
+    "defaultLogLevel": "error"
+}

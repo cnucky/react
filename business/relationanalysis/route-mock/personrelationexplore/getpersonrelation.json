@@ -1,0 +1,46 @@
+{
+    "code": 0,
+    "data": {
+        "persons": [{
+            "nodes": [{ "nodeId": "417876446", "nodeType": 11}],
+            "personId": 3,
+            "personName": "未知"
+        }, {
+            "nodes": [{ "nodeId": "346348908", "nodeType": 11, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  }],
+            "personId": 4,
+            "personName": "未知"
+        }, {
+            "nodes": [{ "nodeId": "15601578201", "nodeType": 5, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  },
+                { "nodeId": "321284199011301218", "nodeType": 1, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  },
+                { "nodeId": "15298836152", "nodeType": 5, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  }
+            ],
+            "personId": 2,
+            "personName": "蒯越"
+        }, {
+            "nodes": [{ "nodeId": "364489536", "nodeType": 11, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  }],
+            "personId": 5,
+            "personName": "未知"
+        }, {
+            "nodes": [{ "nodeId": "15298836424", "nodeType": 5, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  },
+                { "nodeId": "320582199110253621", "nodeType": 1, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  }
+            ],
+            "personId": 1,
+            "personName": "吴秋霞"
+        }, {
+            "nodes": [{ "nodeId": "342181383", "nodeType": 11, "nodeTitle": "测试每个人悬浮显示包含的 nodeTitle"  }],
+            "personId": 6,
+            "personName": "未知"
+        }],
+        "edges": [
+            { "fromPerson": 3, "linkedTitle": ["社会关系sdfsdf, sdf"], "linkedType": [9], "toPerson": 1 },
+            { "fromPerson": 1, "linkedTitle": ["社会关系, fsdgjhgfwe"], "linkedType": [9], "toPerson": 3 },
+            { "fromPerson": 4, "linkedTitle": ["好友"], "linkedType": [8], "toPerson": 3 },
+            { "fromPerson": 2, "linkedTitle": ["社会关系"], "linkedType": [9], "toPerson": 5 },
+            { "fromPerson": 2, "linkedTitle": ["社会关系"], "linkedType": [9], "toPerson": 6 },
+            { "fromPerson": 5, "linkedTitle": ["好友"], "linkedType": [8], "toPerson": 3 },
+            { "fromPerson": 6, "linkedTitle": ["好友"], "linkedType": [8], "toPerson": 3 },
+            { "fromPerson": 6, "linkedTitle": ["好友"], "linkedType": [8], "toPerson": 4 }
+        ]
+    },
+    "message": ""
+}

@@ -1,0 +1,16 @@
+{
+	"translation": {
+		"log-query": "日志查询",
+		"moduel-name": "模块名称：",
+		"operation-type": "操作类型：",
+		"user": "用户：",
+		"mac-address": "MAC地址：",
+		"log-content": "日志内容：",
+		"ip-address": "IP地址：",
+		"time-selection": "时间选择：",
+		"search-btn": "搜索",
+		"prompt": "请选择条件进行搜索",
+		"next-page": "下一页",
+		"front-page": "上一页"
+	}
+}

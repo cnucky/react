@@ -1,0 +1,38 @@
+{
+    "code": 0,
+    "message": "",
+    "data": [{
+        "source": "51",
+        "caption": "电信话单",
+        "meta": [{
+            "name": "date",
+            "caption": "采集日期",
+            "type": 3
+        }, {
+            "name": "name",
+            "caption": "姓名",
+            "type" : 2
+        }],
+        "records": [
+            ["2014-09-12", "lin"],
+            ["2015-10-11", "ZHANG"]
+        ]
+    },
+    {
+        "source": "512",
+        "caption": "电信话单2",
+        "meta": [{
+            "name": "date",
+            "caption": "采集日期2",
+            "type": 3
+        }, {
+            "name": "name",
+            "caption": "姓名2",
+            "type" : 2
+        }],
+        "records": [
+            ["2014-09-122", "lin2"],
+            ["2015-10-112", "ZHANG2"]
+        ]
+    }]
+}

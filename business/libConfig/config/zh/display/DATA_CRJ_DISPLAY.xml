@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<CONFIG DATA_TYPE="DATA_CRJ" VERSION="20160918">
+    <UI_CONFIG>
+        <FILE_LAYOUT POISITION="RIGHT" BOTTOM_PX="400" RIGHT_PX="600"/>
+        <COLUMNS>
+            <!-- 基本信息 -->
+            <COLUMN NAME="CDR_ID" HEADER="话单编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CAP_TIME" HEADER="截获时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_ISREAD" HEADER="已读" CONVERT="IMG_MK_ISREAD" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_IMPORTANCE" HEADER="标记" CONVERT="IMG_MK_IMPORTANCE" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_NOTE" HEADER="注释" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <!-- 数据信息 -->
+            <COLUMN NAME="RECORD_ID" HEADER="记录标识" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ARC_ID" HEADER="对象编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="DEP_ID" HEADER="部门编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="FID" HEADER="出入境记录编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PASS_TIME" HEADER="出入境时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="NAME" HEADER="姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME" HEADER="英文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME_REG" HEADER="规整英文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME_SREG" HEADER="英文姓名字母排序" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME" HEADER="中文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_REG" HEADER="规整中文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_PYREG" HEADER="规整中文姓名拼音" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_PYSREG" HEADER="中文姓名拼音排序" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CLAST_NAME" HEADER="中文姓" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CFIRST_NAME" HEADER="中文名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="NATION_CODE" HEADER="国籍" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="GENDER" HEADER="性别" CONVERT="" TYPE="TINYINT" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BIRTHDAY" HEADER="出生日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_TYPE" HEADER="证件类别" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_NO" HEADER="证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_NO_REG" HEADER="规整证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="VISA_TYPE" HEADER="签证种类" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PERSON_TYPE_CODE" HEADER="人员类别" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PORT_NAME" HEADER="口岸名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TRAFFIC_TYPE" HEADER="交通方式" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TRAFFIC_INFO" HEADER="交通工具信息" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TO_NATION_CODE" HEADER="前往国家" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PASS_FLAG" HEADER="出入境标志" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PASS_REASON" HEADER="出入境理由" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="NAME_LNG_REMARKS" HEADER="超长姓名备注" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="NAME_CPT_REMARKS" HEADER="疑难字说明" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="VISA_NO" HEADER="签证号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="VISA_NO_REG" HEADER="规整签证号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="VISA_STAY_PERIOD" HEADER="停留期" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V2_01" HEADER="备份字段1" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V2_02" HEADER="备份字段2" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V2_03" HEADER="备份字段3" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V2_04" HEADER="备份字段4" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+        </COLUMNS>
+        <LIST_COLUMNS>
+            <COLUMN NAME="MK_ISREAD" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_IMPORTANCE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_NOTE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="CDR_ID" HIDDEN="True" LENGTH="150"/>
+            <COLUMN NAME="CAP_TIME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECORD_ID" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="ARC_ID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="DEP_ID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="FID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PASS_TIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME_SREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_PYREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_PYSREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CLAST_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CFIRST_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="NATION_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="GENDER" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BIRTHDAY" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="CERT_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CERT_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CERT_NO_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="VISA_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PERSON_TYPE_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PORT_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TRAFFIC_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TRAFFIC_INFO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TO_NATION_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PASS_FLAG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PASS_REASON" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="NAME_LNG_REMARKS" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="NAME_CPT_REMARKS" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="VISA_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="VISA_NO_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="VISA_STAY_PERIOD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V2_01" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V2_02" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V2_03" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V2_04" HIDDEN="False" LENGTH="150"/>
+        </LIST_COLUMNS>
+        <DETAIL_COLUMNS>
+            <COLUMN_GROUP NAME="基本信息" EXPAND="True">
+                <COLUMN NAME="CDR_ID"/>
+                <COLUMN NAME="CAP_TIME"/>
+            </COLUMN_GROUP>
+            <COLUMN_GROUP NAME="数据信息" EXPAND="True">
+                <COLUMN NAME="RECORD_ID"/>
+                <COLUMN NAME="ARC_ID"/>
+                <COLUMN NAME="DEP_ID"/>
+                <COLUMN NAME="FID"/>
+                <COLUMN NAME="PASS_TIME"/>
+                <COLUMN NAME="NAME"/>
+                <COLUMN NAME="ENAME"/>
+                <COLUMN NAME="ENAME_REG"/>
+                <COLUMN NAME="ENAME_SREG"/>
+                <COLUMN NAME="CNAME"/>
+                <COLUMN NAME="CNAME_REG"/>
+                <COLUMN NAME="CNAME_PYREG"/>
+                <COLUMN NAME="CNAME_PYSREG"/>
+                <COLUMN NAME="CLAST_NAME"/>
+                <COLUMN NAME="CFIRST_NAME"/>
+                <COLUMN NAME="NATION_CODE"/>
+                <COLUMN NAME="GENDER"/>
+                <COLUMN NAME="BIRTHDAY"/>
+                <COLUMN NAME="CERT_TYPE"/>
+                <COLUMN NAME="CERT_NO"/>
+                <COLUMN NAME="CERT_NO_REG"/>
+                <COLUMN NAME="VISA_TYPE"/>
+                <COLUMN NAME="PERSON_TYPE_CODE"/>
+                <COLUMN NAME="PORT_NAME"/>
+                <COLUMN NAME="TRAFFIC_TYPE"/>
+                <COLUMN NAME="TRAFFIC_INFO"/>
+                <COLUMN NAME="TO_NATION_CODE"/>
+                <COLUMN NAME="PASS_FLAG"/>
+                <COLUMN NAME="PASS_REASON"/>
+                <COLUMN NAME="NAME_LNG_REMARKS"/>
+                <COLUMN NAME="NAME_CPT_REMARKS"/>
+                <COLUMN NAME="VISA_NO"/>
+                <COLUMN NAME="VISA_NO_REG"/>
+                <COLUMN NAME="VISA_STAY_PERIOD"/>
+                <COLUMN NAME="BACK_V2_01"/>
+                <COLUMN NAME="BACK_V2_02"/>
+                <COLUMN NAME="BACK_V2_03"/>
+                <COLUMN NAME="BACK_V2_04"/>
+            </COLUMN_GROUP>
+        </DETAIL_COLUMNS>
+        <DISTINCT_COLUMNS>
+        </DISTINCT_COLUMNS>
+        <GIS_COLUMNS>
+        </GIS_COLUMNS>
+    </UI_CONFIG>
+</CONFIG>

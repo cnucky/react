@@ -1,0 +1,41 @@
+<style type="text/css">
+</style>
+<div class="form-group">
+    <label for="tbl_name" class="col-lg-2 control-label mt10" style="text-align:right;">名称</label>
+    <div class="col-lg-10 mt10">
+        <div class="bs-component">
+            <input type="text" id="tbl_name" class="form-control" placeholder="Type Here..." value="<%- tbl_name %>">
+        </div>
+    </div>
+</div>
+<!-- <div class="form-group ">
+    <label for="tbl_default" class="col-lg-2 control-label mt10" style="text-align:right;">默认</label>
+    <div class="col-lg-9 mt10">
+        
+    </div>
+</div> -->
+<div class="form-group ">
+    <label for="tbl_key" class="col-lg-2 control-label mt10" style="text-align:right;">标识</label>
+    <div class="col-lg-10 mt10">
+        <div class="bs-component">
+            <input type="text" id="tbl_key" class="form-control" placeholder="Type Here..." value="<%- tbl_key %>" disabled>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-lg-2 control-label mt10" style="text-align:right;">默认布局</label>
+    <div class="col-lg-10 mt10">
+        <div class="switch switch-info switch-inline">
+            <input id="tbl_default" type="checkbox" checked="">
+            <label for="tbl_default"></label>
+        </div>
+    </div>
+</div>
+<div class="form-group ">
+    <label class="col-lg-2 control-label mt10" for="tbl_desc" style="text-align:right;">描述</label>
+    <div class="col-lg-10 mt10">
+        <div class="bs-component">
+            <textarea class="form-control" id="tbl_desc" rows="5"><%- tbl_desc %></textarea>
+        </div>
+    </div>
+</div>

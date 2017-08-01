@@ -1,0 +1,154 @@
+#sts-ipTextAreas{
+    width: 170px;
+    height: 530px;
+    margin: 10px 0px 10px 10px;
+    float: left;
+}
+#sts-ipsDiv{
+    width: 599px;
+    height: 530px;
+    margin: 10px;
+    float: left
+}
+#sts-ip-address-search{
+    font-size:16px;
+    width: 170px;
+    height: 490px;
+}
+#sts-modal .tableBackground-color {
+    background-color: #eef5f9;
+}
+
+#sts-modal .radio-custom label{
+    padding-left: 23px;
+}
+#sts-telsTextAreas{
+    width: 170px;
+    height: 480px;
+    margin: 10px 0px 10px 10px;
+    float: left;
+}
+#sts-phoneComment1{
+    width: 170px;
+    height: 450px;
+    display: block;
+    font-size:16px;
+}
+
+#sts-phoneComment2{
+    width: 170px;
+    height: 450px;
+    display: none;
+    font-size:16px;
+}
+#sts-baseStaCon{
+    width: 779px;
+    height: 455px;
+    margin: 5px 10px 10px 10px;
+    float: left;
+}
+#sts-tab1{
+    width: 585px;
+    height: 50px;
+    float: left;
+    display: block;
+}
+#sts-tab2{
+    width: 585px;
+    height: 50px;
+    float: left;
+    display: none;
+}
+#sts-baseStationType{
+    margin-left:10px;
+    float: left;
+    height: 30px;
+}
+#sts-LACSearch{
+    margin-left:10px;
+    float: left;
+    height: 30px;
+    width: 190px;
+}
+#sts-CISearch{
+    margin-left:10px;
+    float: left;
+    height: 30px;
+    width: 190px;
+}
+#sts-address{
+    margin-left:10px;
+    height: 30px;
+    float: left;
+    width: 505px;
+}
+#sts-LACCI1{
+    width: 60px;
+    height: 30px;
+    float: right;
+}
+
+#sts-LACCI2{
+    width: 60px;
+    height: 30px;
+    float: right;
+}
+#sts-baseStationTabDiv{
+    width: 779px;
+    height: 414px;
+    background-color: #eef5f9;
+}
+#sts-md5Btn{
+    width: 60px;
+    height: 34px;
+    margin-top:11px;
+    float: right;
+    margin-right: 10px;
+}
+#sts-modal .panel-top{
+    height: 60px;
+    border: 1px solid #e2e2e2;
+}
+#sts-modal .col-md-6{
+    margin-top:8px;
+    width: 642px;
+}
+#sts-MD5TabDiv{
+    width: 779px;
+    height: 420px;
+    float: left;
+    background-color: #eef5f9;
+}
+#sts-radios{
+    width: 500px;
+    height: 28px;
+    margin-left:10px;
+}
+#sts-modal .flex-container{
+    display: -webkit-flex;
+    display: flex;
+    width: 779px;
+    height:492px;
+    margin:10px 10px 10px 10px;
+}
+
+#sts-leftArea{
+    width: 345px;
+    height: 492px;
+    float: left;
+    font-size:16px;
+}
+#sts-rightArea{
+    width: 345px;
+    height: 492px;
+    float: left;
+    margin-left:20px;
+    font-size:16px;
+}
+#sts-codeBtn{
+    margin:110px 0 0 10px;
+
+}
+#sts-decodeBtn,#sts-clearBtn{
+    margin:95px 0 0 10px;
+}

@@ -1,0 +1,11 @@
+{
+        "please-select-data-source-to-field-mapping": "请选择数据源进行字段映射",
+        "data-source-replacement": "数据源替换",
+        "unable-replace": "无法替换",
+        "types-are-inconsistent": "类型不一致",
+        "field-mapping-is-incomplete": "字段映射不完全",
+        "finish-btn": "完成",
+        "cancel-btn": "取消",
+        "and": "和",
+        "you-need-map-all-output-from-old-data-source-to-new-data-source": "你需要把老数据源的全部字段和新数据源进行映射"
+}

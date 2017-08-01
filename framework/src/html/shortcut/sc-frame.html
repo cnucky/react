@@ -1,0 +1,847 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/home.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<style>
+/* .panel {
+    position: relative;
+    margin-bottom: 27px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    background: rgba(200, 200, 200, 0.4);
+    border: 2px;
+}
+
+.panel-heading {
+    opacity: 1;
+}
+
+.border {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.19);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.function-title {
+    text-align: center;
+    display: block;
+    font-size: 29px;
+    font-weight: 900;
+    color: black;
+} */
+
+.buble-container {
+    background: rgba(255, 255, 255);
+}
+
+.buble-container:after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 9px 6px 0px 6px;
+    border-color: #3498db transparent transparent transparent;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #FFF;
+    background-color: #3498db;
+    border: 0px solid transparent;
+    border-color: rgba(0, 0, 0, 0.07) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.18);
+}
+
+.nav-pills > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 25px;
+    padding-right: 11px;
+    padding-left: 11px;
+    font-size: 7px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb .glyphicon {
+    color: #ccc;
+}
+
+.breadcrumb > li {
+    color: #ccc;
+}
+
+.crumb-link a {
+    color: #ccc;
+}
+
+#topbar {
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 0px solid #ddd;
+}
+
+#topbar.alt {
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 0px solid #ddd;
+}
+
+#topbar.alt {
+    display: none
+}
+
+.top-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 185px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/home/top-img.png");
+}
+
+.new-widget {
+    font-size: 60px;
+    font-weight: 100;
+    position: absolute;
+    color: gray;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+}
+
+.new-widget:hover {
+    cursor: pointer;
+}
+
+.list-group.list-group-links .list-group-item {
+    color: #5D4B4B;
+}
+
+.btn-class1 {
+    margin-right: 6px;
+    margin-bottom: -5px;
+    width: 85px;
+    height: 52px;
+    background: transparent;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+.btn-class2 {
+    margin-right: 6px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    width: 85px;
+    background: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+.icon-state-info {
+    color: #4EA5E0;
+}
+
+.icon-state-success {
+    color: #36c6d3;
+}
+</style>
+<!-- end shim -->
+<section id="content" class="table-layout ">
+    <div class='tray tray-center pn'>
+        <div class="row ">
+            <div class='top-img'></div>
+        </div>
+        <div style='padding:25px 20px 50px'>
+            <div class='col-md-6'>
+                <form class="form-horizontal">
+                    <div class="panel mt10">
+                        <div class="panel-heading">
+                            <div class="caption">
+                                <i class="glyphicon glyphicon-briefcase font-blue"></i>
+                                <span class="caption-subject font-blue bold uppercase">近期关注案件</span>
+                            </div>
+                            <div class="tools">
+                                <a href="" class="fullscreen" data-original-title="" title=""> </a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="">
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件1
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件2
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件3
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件4
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件5
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件6
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件7
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-briefcase icon-state-info" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 案件8
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel mt10" style="">
+                        <div class='panel-heading'>
+                            <span class="panel-icon">
+                      <i class="fa fa-male"></i>
+                    </span>
+                            <span class="panel-title"> 人立方</span>
+                        </div>
+                        <div class="panel-body" style="border:0;">
+                            <div class='row mt5'>
+                                <div class='col-sm-2'></div>
+                                <div class='col-sm-8'>
+                                    <div class='border'>
+                                        <div class="container-fluid">
+                                            <div class="row-fluid center">
+                                                <ul class="nav nav-pills mt10" style="">
+                                                    <li class='active buble-container'>
+                                                        <a href="#" data-toggle="tab">身份证</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">手机</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">IP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">QQ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">电子邮箱</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid mt10">
+                                            <div class="row-fluid">
+                                                <div class="admin-form ">
+                                                    <div class="section smart-widget sm-right smr-80" style="">
+                                                        <label class="field prepend-icon">
+                                                            <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                            <label for="keyword" class="field-icon">
+                                                                <i class="fa fa-search"></i>
+                                                            </label>
+                                                        </label>
+                                                        <button type="submit" class="button btn-primary">搜索</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  <div class="panel mt10" style="">
+               <div class='panel-heading'>
+                   <span class="panel-icon">
+                     <i class="fa fa-newspaper-o"></i>
+                   </span>
+                   <span class="panel-title"> 全文检索</span>
+               </div>
+               <div class="panel-body" style="border:0;">
+                   <div class='row mt5'>
+                       <div class='col-sm-2'></div>
+                       <div class='col-sm-8'>
+                           <div class='border'>
+                               <div class="container-fluid">
+                                   <div class="row-fluid center">
+                                       <ul class="nav nav-pills mt10" style="">
+                                           <li>
+                                               <a href="#" data-toggle="tab">近一天</a>
+                                           </li>
+                                           <li>
+                                               <a href="#" data-toggle="tab">近三天</a>
+                                           </li>
+                                           <li>
+                                               <a href="#" data-toggle="tab">近一周</a>
+                                           </li>
+                                           <li>
+                                               <a href="#" data-toggle="tab">近一月</a>
+                                           </li>
+                                           <li class="active buble-container">
+                                               <a href="#" data-toggle="tab" data-effect="mfp-zoomIn">自定义</a>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </div>
+                               <div class="container-fluid mt10">
+                                   <div class="row-fluid">
+                                       <div class="admin-form">
+                                           <div class="section smart-widget sm-right smr-80" style="">
+                                               <label class="field prepend-icon">
+                                                   <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                   <label for="keyword" class="field-icon">
+                                                       <i class="fa fa-search"></i>
+                                                   </label>
+                                               </label>
+                                               <button type="submit" class="button btn-primary">搜索</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            -->
+                    <div class="panel mt10" id="pchart10">
+                        <div class="panel-heading">
+                            <span class="panel-icon">
+                <i class="fa fa-pencil"></i>
+              </span>
+
+                            <span class="panel-title">存储量</span>
+                        </div>
+                        <div class="panel-body ">
+                            <div id="ec-pie" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-visible" id="spy1">
+                        <div class="panel-heading">
+                            <div class="panel-title hidden-xs">
+                                <span class="glyphicon glyphicon-tasks"></span>尚未备案操作</div>
+                        </div>
+                        <div class="panel-body pn">
+                            <div class="dataTables_wrapper form-inline dt-bootstrap no-footer" id="datatable_wrapper">
+                                <table style="width: 100%;" aria-describedby="datatable_info" role="grid" class="table table-striped table-hover dataTable no-footer" id="datatable" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr role="row">
+                                            <th aria-label="Name: activate to sort column descending" aria-sort="ascending" style="width: 235px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting_asc">Name</th>
+                                            <th aria-label="Position: activate to sort column ascending" style="width: 341px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting">Position</th>
+                                            <th aria-label="Office: activate to sort column ascending" style="width: 130px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting">Office</th>
+                                            <th aria-label="Age: activate to sort column ascending" style="width: 86px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting">Age</th>
+                                            <th aria-label="Start date: activate to sort column ascending" style="width: 167px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting">Start date</th>
+                                            <th aria-label="Salary: activate to sort column ascending" style="width: 121px;" colspan="1" rowspan="1" aria-controls="datatable" tabindex="0" class="sorting">Salary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even" role="row">
+                                            <td class="sorting_1">Haley Kennedy</td>
+                                            <td>Senior Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>43</td>
+                                            <td>2012/12/18</td>
+                                            <td>$313,500</td>
+                                        </tr>
+                                        <tr class="odd" role="row">
+                                            <td class="sorting_1">Jenette Caldwell</td>
+                                            <td>Development Lead</td>
+                                            <td>New York</td>
+                                            <td>30</td>
+                                            <td>2011/09/03</td>
+                                            <td>$345,000</td>
+                                        </tr>
+                                        <tr class="even" role="row">
+                                            <td class="sorting_1">Michael Silva</td>
+                                            <td>Marketing Designer</td>
+                                            <td>London</td>
+                                            <td>66</td>
+                                            <td>2012/11/27</td>
+                                            <td>$198,500</td>
+                                        </tr>
+                                        <tr class="odd" role="row">
+                                            <td class="sorting_1">Paul Byrd</td>
+                                            <td>Chief Financial Officer (CFO)</td>
+                                            <td>New York</td>
+                                            <td>64</td>
+                                            <td>2010/06/09</td>
+                                            <td>$725,000</td>
+                                        </tr>
+                                        <tr class="even" role="row">
+                                            <td class="sorting_1">Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2013/03/03</td>
+                                            <td>$342,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="dt-panelfooter clearfix">
+                                    <div aria-live="polite" role="status" id="datatable_info" class="dataTables_info">Showing 1 to 10 of 13 entries</div>
+                                    <div id="datatable_paginate" class="dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li id="datatable_previous" tabindex="0" aria-controls="datatable" class="paginate_button previous disabled"><a href="#">Previous</a></li>
+                                            <li tabindex="0" aria-controls="datatable" class="paginate_button active"><a href="#">1</a></li>
+                                            <li tabindex="0" aria-controls="datatable" class="paginate_button "><a href="#">2</a></li>
+                                            <li id="datatable_next" tabindex="0" aria-controls="datatable" class="paginate_button next"><a href="#">Next</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class='col-md-6'>
+                <form class="form-horizontal">
+                    <div class="panel mt10">
+                        <div class="panel-heading">
+                            <div class="caption">
+                                <i class="glyphicon glyphicon-link font-green"></i>
+                                <span class="caption-subject font-green bold uppercase">近期关注导图</span>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="">
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图1
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图2
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图3
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图4
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图5
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图6
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图7
+                                    </button>
+                                </div>
+                                <div class="btn-group-vertical">
+                                    <button class='btn-daotu btn-class1' href="javascript:;" aria-expanded="true"><span class="glyphicon glyphicon-link icon-state-success" style="font-size: 32px"></span></button>
+                                    <button class='btn btn-md btn-class2' href="javascript:;" aria-expanded="true"> 导图8
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel mt10" style="">
+                        <div class='panel-heading'>
+                            <span class="panel-icon">
+                      <i class="fa fa-search"></i>
+                    </span>
+                            <span class="panel-title"> 一键搜索</span>
+                        </div>
+                        <div class="panel-body" style="border:0;">
+                            <div class='row mt5'>
+                                <div class='col-sm-2'></div>
+                                <div class='col-sm-8'>
+                                    <div class='border'>
+                                        <div class="container-fluid">
+                                            <div class="row-fluid center">
+                                                <ul class="nav nav-pills mt10" style="">
+                                                    <li class='active buble-container'>
+                                                        <a href="#" data-toggle="tab">身份证</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">手机</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">IP</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">QQ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tab">电子邮箱</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid mt10">
+                                            <div class="row-fluid">
+                                                <div class="admin-form ">
+                                                    <div class="section smart-widget sm-right smr-80" style="">
+                                                        <label class="field prepend-icon">
+                                                            <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                            <label for="keyword" class="field-icon">
+                                                                <i class="fa fa-search"></i>
+                                                            </label>
+                                                        </label>
+                                                        <button type="submit" class="button btn-primary">搜索</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel mt10" id="pchart10">
+                        <div class="panel-heading">
+                            <span class="panel-icon">
+                <i class="fa fa-pencil"></i>
+              </span>
+                            <span class="panel-title">数据量</span>
+                        </div>
+                        <div class="panel-body ">
+                            <div id="ec-line" style="height: 370px; width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default mt10" style="height:100px;border-style: dashed;">
+                        <div class='row'>
+                            <span class='new-widget'>+</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="home-content" class="home-holo animated fadeIn">
+    <div style=' background-image: url("../img/home/top-img.png");'></div>
+    <div class="menu-bg"></div>
+    <div class="menu-mask"></div>
+</section>
+<div class="row">
+    <div class='top-img'></div>
+</div>
+<div class='col-sm-1'></div>
+<div class='col-sm-5'>
+    <form class="form-horizontal">
+        <div class="panel mt10" style="">
+            <div class="panel-body" style="border:0;">
+                <div class='row'>
+                    <span class='function-title'>人立方</span>
+                </div>
+                <div class='row mt5'>
+                    <div class='col-sm-2'></div>
+                    <div class='col-sm-8'>
+                        <div class='border'>
+                            <div class="container-fluid">
+                                <div class="row-fluid center">
+                                    <ul class="nav nav-pills mt10" style="">
+                                        <li class='active buble-container'>
+                                            <a href="#" data-toggle="tab">身份证</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">手机</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">IP</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">QQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">电子邮箱</a>
+                                        </li>
+                                        <li>
+                                           <a href="#" data-toggle="tab">护照</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">签证</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">电话</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">汽车</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">银行账户</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">宾馆</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">火车</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">飞机</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">微博</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">IP</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">QQ群组</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">淘宝</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">支付宝</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">姓名+出生日期</a>
+                                       </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-fluid mt10">
+                                <div class="row-fluid">
+                                    <div class="admin-form ">
+                                        <div class="section smart-widget sm-right smr-80" style="">
+                                            <label class="field prepend-icon">
+                                                <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                <label for="keyword" class="field-icon">
+                                                    <i class="fa fa-search"></i>
+                                                </label>
+                                            </label>
+                                            <button type="submit" class="button btn-primary">搜索</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel mt10" style="">
+            <div class="panel-body" style="border:0;">
+                <div class='row'>
+                    <span class='function-title'>全文检索</span>
+                </div>
+                <div class='row mt5'>
+                    <div class='col-sm-2'></div>
+                    <div class='col-sm-8'>
+                        <div class='border'>
+                            <div class="container-fluid">
+                                <div class="row-fluid center">
+                                    <ul class="nav nav-pills mt10" style="">
+                                        <li>
+                                            <a href="#" data-toggle="tab">近一天</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">近三天</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">近一周</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">近一月</a>
+                                        </li>
+                                        <li class="active buble-container">
+                                            <a href="#" data-toggle="tab" data-effect="mfp-zoomIn">自定义</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-fluid mt10">
+                                <div class="row-fluid">
+                                    <div class="admin-form">
+                                        <div class="section smart-widget sm-right smr-80" style="">
+                                            <label class="field prepend-icon">
+                                                <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                <label for="keyword" class="field-icon">
+                                                    <i class="fa fa-search"></i>
+                                                </label>
+                                            </label>
+                                            <button type="submit" class="button btn-primary">搜索</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="panel mt10" style="height:192px;border-style: dashed;">
+            <div class='row'>
+                <span class='function-title new-widget'>+</span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class='col-sm-5'>
+    <form class="form-horizontal">
+        <div class="panel mt10" style="">
+            <div class="panel-body" style="border:0;">
+                <div class='row'>
+                    <span class='function-title'>一键搜索</span>
+                </div>
+                <div class='row mt5'>
+                    <div class='col-sm-2'></div>
+                    <div class='col-sm-8'>
+                        <div class='border'>
+                            <div class="container-fluid">
+                                <div class="row-fluid center">
+                                    <ul class="nav nav-pills mt10" style="">
+                                        <li class='active buble-container'>
+                                            <a href="#" data-toggle="tab">身份证</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">手机</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">IP</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">QQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tab">电子邮箱</a>
+                                        </li>
+                                        <li>
+                                           <a href="#" data-toggle="tab">护照</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">签证</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">电话</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">汽车</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">银行账户</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">宾馆</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">火车</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">飞机</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">微博</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">IP</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">QQ群组</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">淘宝</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">支付宝</a>
+                                       </li>
+                                       <li>
+                                           <a href="#" data-toggle="tab">姓名+出生日期</a>
+                                       </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-fluid mt10">
+                                <div class="row-fluid">
+                                    <div class="admin-form ">
+                                        <div class="section smart-widget sm-right smr-80" style="">
+                                            <label class="field prepend-icon">
+                                                <input name="keyword" id="keyword" class="gui-input" placeholder="关键词" type="text">
+                                                <label for="keyword" class="field-icon">
+                                                    <i class="fa fa-search"></i>
+                                                </label>
+                                            </label>
+                                            <button type="submit" class="button btn-primary">搜索</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="panel mt10" style="">
+            <div class="panel-body" style="border:0;">
+                <div class='row'>
+                    <span class='function-title'>消息提醒</span>
+                </div>
+                <div class='row mt5'>
+                    <div class='col-sm-1'></div>
+                    <div class='col-sm-10'>
+                        <div class=border>
+                            <div class="list-group list-group-links">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-gear"></i> Email Settings
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope"></i> Messages
+                                    <span class="label badge-warning">2</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user"></i> Friends
+                                    <span class="label badge-warning">6</span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-trash-o"></i> Spam <span class="label badge-info">13</span>
+                                </a>
+                            </div>
+                        </div>
+                        end border
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+    </form>
+</div> -->
+<script type="text/javascript" src="/js/sc-frame.js"></script>

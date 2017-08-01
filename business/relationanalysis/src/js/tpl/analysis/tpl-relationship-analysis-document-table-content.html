@@ -1,0 +1,20 @@
+<table class="table table-condensed table-striped mb20">
+    <thead>
+        <tr>
+            <th class="text-center">属性</th>
+            <th class="text-center"><%- compare1 %></th>
+            <th class="text-center"><%- compare2 %></th>
+            <th class="text-center">相似度</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(category, function(item) { %>
+            <tr>
+                <td class="text-center"><%- item.category %>-<%- item.name %></td>
+                <td class="text-center"><%- item.valueA %></td>
+                <td class="text-center"><%- item.valueB %></td>
+                <td class="text-center"><%- item.resembleType %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

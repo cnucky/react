@@ -1,0 +1,210 @@
+<!-- shim ../index.html content -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '{i18n@usermanage.label-adduser}',
+    link: '/user/add-user.html',
+    parent: {
+        title: '{i18n@usermanage.label-depuser}',
+        link: '/group/departments.html'
+    }
+};
+</script>
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<section id="centent" class="table-layout">
+    <div class="tray tray-center" style="vertical-align:top;">
+        <div id="alert-container" style="margin:10px;">
+        </div>
+        <div class="" style="padding: 25px 20px 50px;">
+            <div class="center-block center-children">
+                <div class="admin-form theme-info tab-pane mw700 active" id="add-user" role="tabpanel">
+                    <div class="panel panel-info heading-border">
+                        <div class="panel-heading" style="background-image:none">
+                            <span class="panel-title">
+                      <i class="fa fa-pencil-square"></i>
+                      <span data-i18n="usermanage.label-adduser"></span>
+                    </span>
+                        </div>
+                        <!-- end .form-header section -->
+                        <form id="form-add" method="post" submit="">
+                            <div class="panel-body p25">
+                                <div class="section">
+                                    <label for="username" class="field-label" data-i18n="usermanage.label-loginname"></label>
+                                    <label for="username" class="field prepend-icon">
+                                        <input type="text" name="username" id="username" class="gui-input">
+                                        <label for="username" class="field-icon">
+                                            <i class="fa fa-user"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="password" class="field-label" data-i18n="usermanage.label-password"></label>
+                                    <label for="password" class="field prepend-icon">
+                                        <input type="password" name="password" id="password" class="gui-input">
+                                        <label for="password" class="field-icon">
+                                            <i class="fa fa-lock"></i>
+                                        </label>
+                                    </label>
+                                    <div id="password-tip">
+                                    </div>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="confirmPassword" class="field-label" data-i18n="usermanage.label-confirmpw"></label>
+                                    <label for="confirmPassword" class="field prepend-icon">
+                                        <input type="password" name="confirmPassword" id="confirmPassword" class="gui-input">
+                                        <label for="confirmPassword" class="field-icon">
+                                            <i class="fa fa-unlock-alt"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="department" class="field-label" data-i18n="usermanage.label-dep*"></label>
+                                    <label for="department" class="field prepend-icon file">
+                                        <span class="button btn-primary" data-i18n="usermanage.label-choosedep"></span>
+                                        <input type="text" name="department" id="department" class="gui-input" readonly>
+                                        <label for="department" class="field-icon">
+                                            <i class="fa fa-building"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="effectiveDate" class="field-label" data-i18n="usermanage.label-endtime"></label>
+                                    <label for="effectiveDate" class="field prepend-icon">
+                                        <input type="text" name="effectiveDate" id="effectiveDate" class="gui-input" placeholder="YYYY/MM/DD HH:mm:ss">
+                                        <label for="effectiveDate" class="field-icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div id="collapseDetail">
+                                    <label for="collapseDetail" class="field-label">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="text-decoration: none;">
+                                            <span id="collapse-click"> 
+                                            <i id="plus-minus" class="fa fa-plus"></i>
+                                            <span data-i18n="usermanage.label-userinfo"></span>
+                                            </span>
+                                        </a>
+                                    </label>
+                                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                        <div id="collapseDivider" class="divider mtn mb25">
+                                        </div>
+                                        <div class="section">
+                                            <label for="trueName" class="field-label" data-i18n="usermanage.label-name"></label>
+                                            <label for="trueName" class="field">
+                                                <input type="text" name="trueName" id="trueName" class="gui-input">
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="gender" class="field-label" data-i18n="usermanage.label-gender"></label>
+                                            <label class="field select">
+                                                <select id="gender" name="gender">
+                                                    <option value="0" data-i18n="usermanage.gender-null"></option>
+                                                    <option value="1" data-i18n="usermanage.gender-male"></option>
+                                                    <option value="2" data-i18n="usermanage.gender-female"></option>
+                                                </select>
+                                                <i class="arrow double"></i>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div id="div-position" class="section">
+                                            <label for="position" class="field-label" data-i18n="usermanage.label-position"></label>
+                                            <label class="field select">
+                                                <select id="position" name="position">
+                                                    <option value="0" data-i18n="usermanage.option-null"></option>
+                                                </select>
+                                                <i class="arrow double"></i>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="group" class="field-label" data-i18n="usermanage.label-group"></label>
+                                            <label for="group" class="field file">
+                                                <span class="button btn-primary" data-i18n="usermanage.label-choosegroup"></span>
+                                                <input type="text" name="group" id="group" class="gui-input" readonly>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="certNumber" class="field-label" data-i18n="usermanage.label-ID"></label>
+                                            <label for="certNumber" class="field">
+                                                <input type="text" name="certNumber" id="certNumber" class="gui-input">
+                                            </label>
+                                        </div>
+                                        <div class="section">
+                                            <label for="birthday" class="field-label" data-i18n="usermanage.label-birthday"></label>
+                                            <label for="birthday" class="field prepend-icon">
+                                                <input type="text" name="birthday" id="birthday" class="gui-input" placeholder="yyyy-MM-dd">
+                                                <label for="birthday" class="field-icon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <div class="section">
+                                            <label for="email" class="field-label">Email</label>
+                                            <label for="email" class="field prepend-icon">
+                                                <input type="email" name="email" id="email" class="gui-input" placeholder="example@domain.com...">
+                                                <label for="email" class="field-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="telphone" class="field-label" data-i18n="usermanage.label-contact"></label>
+                                            <label for="telphone" class="field prepend-icon">
+                                                <input type="tel" name="telphone" id="telphone" class="gui-input" placeholder="+86">
+                                                <label for="telphone" class="field-icon">
+                                                    <i class="fa fa-phone-square"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="address" class="field-label" data-i18n="usermanage.label-address"></label>
+                                            <label for="address" class="field prepend-icon">
+                                                <input type="text" name="address" id="address" class="gui-input">
+                                                <label for="address" class="field-icon">
+                                                    <i class="fa fa-map-marker"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <!-- <div class="section">
+                                                <label class="option">
+                                                    <input type="checkbox" name="check1">
+                                                    <span class="checkbox mr10"></span>Agree to our
+                                                    <a href="#" class="theme-link"> terms of service </a>
+                                                </label>
+                                            </div> -->
+                                        <!-- end section -->
+                                    </div>
+                                </div>
+                                <!-- end .collapseDetail -->
+                            </div>
+                            <!-- end .form-body section -->
+                            <div class="panel-footer">
+                                <button type="submit" class="button btn-primary" style="min-width:100px" data-i18n="usermanage.button-create"></button>
+                            </div>
+                            <!-- end .form-footer section -->
+                        </form>
+                    </div>
+                    <!-- end .admin-form section -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="tray tray-right tray320" data-tray-height="match" style="height:500px;vertical-align:top;">
+        <h4 data-i18n="usermanage.label-depuser"></h4>
+        <hr class="alt short">
+        <div id="right-container"></div>
+    </aside>
+</section>
+<script type="text/javascript" src="/js/add-user.js"></script>

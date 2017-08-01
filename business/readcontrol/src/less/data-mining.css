@@ -1,0 +1,66 @@
+header{ position: fixed; top: 0; left: 0;}
+section#content aside{ position: fixed;top:100px; left: 0;}
+section#content .tray-center{ margin-left: 200px; padding-top: 100px; display: inline-block; }
+/*下钻记录*/
+#downHistory{ height: 49px; background-color: #eee; position: fixed; top:50px; left: 0; z-index:998; border-bottom: 1px solid #ddd; }
+#downHistory > span{ height: 49px; line-height: 49px; width: 35px; overflow: hidden; display: block; font-size: 20px; cursor: pointer;}
+#downHistory > span:hover{ color:#1ca8dd;}
+#downHistory > span.ban{ color:#ccc; cursor: default;}
+#downHistory .ulBox{ position:relative; min-width: 160px; height: 49px; overflow: hidden; }
+#downHistory ul{ position: absolute; left: 0; top:0; padding: 0 !important; margin-bottom: 0; height: 49px; min-width: 62px; overflow:hidden; }
+#downHistory li{ float: left; width:144px; height: 49px; overflow: hidden; margin-left: -9px;}
+#downHistory li .cont{ width: 120px; height: 48px; overflow: hidden; float: left; background-color:#3bafda; color:#fff; }
+#downHistory li .cont p{ height: 20px; line-height:20px; margin: 3px 0 0 0 !important; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    padding: 0 5px; font-size: 12px;}
+#downHistory > .info{ position: absolute; top: 0; width: 144px; background-color: #3bafda; min-height:50px; cursor: pointer;
+    border: 1px solid #fff; border-top:none; display: none; border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; zoom:1; z-index: 999; }
+#downHistory > .info p{ line-height: 20px; margin: 3px 0 0 0 !important; padding: 0 5px; color:#fff;font-size: 12px;}
+#downHistory li b.triangle-left{display: inline-block; width: 0; height: 0; float: left; border: 24px solid #3bafda;
+    border-left:12px solid transparent; border-right-width: 0;}
+#downHistory li b.triangle-right{display: inline-block; width: 0; height: 0; float: left; border: 24px solid transparent;
+    border-left:12px solid #3bafda; border-right-width:0;}
+#downHistory li:first-child{ margin-left: 0; width: 62px;cursor: pointer;}
+#downHistory li:first-child .cont{ background-color: #00c09e; width:50px; line-height: 52px; color:#fff; text-align: center;}
+#downHistory li:first-child b.triangle-right{ border-left-color:#00c09e;}
+
+/*左边下钻树*/
+#perspective section{ height: 100%;}
+.diyScroll#downTree{ overflow-x: hidden;}
+#downTree{width: 200px;float: left; overflow: auto;}
+#downTree ul{ padding: 5px 5px 5px 10px; }
+#downTree ul li{ line-height: 19px; padding: 3px; position: relative; clear: both;  }
+#downTree ul > li > i.glyphicon{ margin-right: 5px;cursor: pointer;}
+#downTree ul > li > h5{ cursor: pointer; color: #666; padding-right: 5px; display: inline; font-weight: 600; font-size: 10px; }
+#downTree ul li ul{ display: none;}
+#downTree li li { overflow: hidden;  border-radius: 4px; font-weight: normal;  cursor: pointer; display: block;padding: 1px; margin: 2px 0;}
+#downTree li li:hover{ background-color: #e3f5fb; color: #333;}
+#downTree li li.active { background-color: #1ca8dd; color: #fff;}
+#downTree li li.active h5{ color:#fff;}
+#downTree li li.down { background: none; cursor: default; border: 3px solid transparent;}
+#downTree li li.down h5{ color:#999;}
+#downTree li li h5{ display: inline; font-weight: normal; color:#666;word-break: break-all; font-size: 10px;}
+#downTree ul li label{ color:#069; font-weight: normal; font-size: 10px;}
+#downTree ul li span { float:right; margin-right: 5px;
+    width: auto;
+    height: 22px;
+    line-height: 24px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #61afef;
+    color: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    font-weight:normal ;
+}
+.tray-center {
+    overflow-y: auto;
+}
+#select_time_range{ height: 40px; line-height: 40px; background-color: #f0f0f0; text-align: center;
+    border-top: 1px solid #bbb; overflow: hidden; position: fixed; right: 0; bottom: 0;}
+
+.returnBtn{
+    position: absolute;
+    top: 105px;
+    right: 5px;
+}

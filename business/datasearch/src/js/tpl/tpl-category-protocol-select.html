@@ -1,0 +1,9 @@
+<% _.each(data, function(item) { %>
+<div class='pull-left' tag="<%-  item.NAME %>">
+    <select class="category-multiselect" multiple="multiple" caption="<%-  item.CAPTION %>" id="bm<%-  item.CAPTION %>">
+        <% _.each(item.PROTOCOL, function(p) { %>
+        <option value="<%-  p.NAME %>"><%-  p.CAPTION %></option>
+        <% }) %>
+    </select>
+</div>
+<% }) %>

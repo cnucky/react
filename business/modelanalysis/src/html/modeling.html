@@ -1,0 +1,548 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/nova-common/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/vis.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery-contextmenu/jquery.contextMenu.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jqx.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css" href="/css/navbutton/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/dataTables.bootstrap.min.css">
+<!-- add by zhangu -->
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui-bts.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="/modelanalysis/fonts/operators/icomoon.css">
+<!-- the end -->
+<style type="text/css">
+#network-container {
+    position: relative;
+}
+
+#drawing .vis-network,
+#drawing canvas {
+    outline: none;
+}
+
+ .form-horizontal .multiselect {
+    min-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+/* 节点查询对话框 */
+
+#list-query-node {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#list-query-node li {
+    list-style: none;
+}
+
+#list-query-node li a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #999;
+}
+
+#list-query-node li:last-child a {
+    border-bottom: none;
+}
+
+#list-query-node li a:hover {
+    background: #fbfbfb;
+    color: #666;
+}
+
+.dropdown-menu span.caret {
+    display: none;
+}
+
+
+/* 缩略图 */
+
+#mini-scope {
+    position: absolute;
+    bottom: 42px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background: white;
+    z-index: 1;
+    display: none;
+}
+
+#mini-scope-drawing {
+    width: 100%;
+    height: 100%;
+}
+
+#mini-scope-overlap {
+    position: absolute;
+    border: 1px solid #3078D7;
+    z-index: 2;
+    background-color: rgba(100, 164, 225, 0.5);
+    height: 50px;
+    width: 100%;
+}
+
+#expression-content ul.fancytree-container {
+    border: none;
+    max-height: 100%;
+}
+
+#dir-tree-panel ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+#data-source-tree-container ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+div#dir-tree-panel {
+    padding: 0;
+}
+
+.small-panel-heading {
+    line-height: 40px;
+    height: auto;
+}
+
+.small-btn {
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.model-operator span {
+    font-size: 12px;
+}
+
+.modeling-top-bar {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+.modeling-bottom-bar {
+    bottom: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #DDD;
+    overflow-y: hidden;
+}
+
+.modeling-bottom-bar ul {
+    text-align: center;
+    list-style: none;
+    color: #182A3C;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.modeling-bottom-bar ul li {
+    float: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 0 8px;
+    margin: 0 10px;
+}
+
+.modeling-bottom-bar ul li:hover {
+    color: #289DE9;
+}
+
+.modeling-bottom-bar li .icon {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+}
+
+#content .panel-heading {
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+#left-panel-toggle {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    pointer-events: auto;
+    cursor: default;
+}
+
+#left-panel-toggle:hover {
+    background-color: white;
+    border-right: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+#right-panel-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    cursor: default;
+    pointer-events: auto;
+}
+
+#right-panel-toggle:hover {
+    background-color: white;
+    border-left: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+#right-panel-splitter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    z-index: 10;
+    pointer-events: auto;
+    height: 100%;
+    margin-right: -2px;
+}
+
+#right-panel-splitter:hover {
+    background-color: #3BAFDA;
+    cursor: w-resize;
+}
+
+#right-panel-container {
+    border-left: 1px solid #DDD;
+    width:400px;
+    height: 100%;
+    overflow-y: auto;
+    background:white;
+    pointer-events: auto;
+}
+
+span.fancytree-node.nv-data .fancytree-action-icon {
+    display: none;
+}
+
+span.fancytree-node:hover .fancytree-action-icon {
+    display: inline;
+}
+
+span.fancytree-action-icon {
+    cursor: pointer;
+}
+
+header#topbar {
+    display: none;
+}
+
+.multiselect-container.dropdown-menu > li.multiselect-item.filter {
+    min-width: 120px;
+}
+
+#right-panel-controllers a:hover {
+    font-size: 16px;
+}
+.primary .sortable{
+    padding: 8px;
+}
+/*目录树新建目录CSS zhangu*/
+.ui-contextmenu {
+    position: absolute;
+    z-index: 10000;
+}
+.add-newFolder-icon{
+    background-image: url('/img/plus.png');
+}
+
+.bottomBtn {
+    position: absolute;
+    width: 40px;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bottomUl {
+    position: relative;
+    border-top: 1px solid #DDD;
+    background: rgba(255,255,255,0.9);
+    float:center;
+}
+
+hr.litmargin {
+    margin: 5px 0;
+}
+
+.section-toggle{
+    margin-bottom: 0px;
+    float: right;
+}
+
+.no-padding-left{
+    padding-left: 0;
+}
+
+.modeDiv {
+    height:40px;
+}
+
+.save-btn{
+    background:rgb(52, 152, 219);
+    border-radius:2px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.save-btn:hover{
+    background:#2384c6;
+}
+
+.panel-controls .save-tex{
+    color:white;
+    opacity:1;
+}
+
+#node-config-panel #node-name{
+    text-decoration: none;
+    border-bottom: dashed 1px #0088cc;
+}
+
+.warning-info {
+    display: inline-block;
+    border-radius: 5px;
+    color: white;
+    /* box-shadow: 0 0 5px red; */
+    background: linear-gradient(to right, transparent, rgba(242, 0, 0, 0.5), rgba(242, 0, 0, 0.5), transparent);
+}
+
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+    window._pageConfig = {
+        title: "建模分析"
+    }
+</script>
+<section id="content" class="table-layout admin-panels animated fadeIn" style="height: 650px;">
+    <aside class="tray tray-left tray270 pn" style="background: white;">
+        <div class="panel mbn flex-layout flex-vertical" style="height: 100%;">
+            <div class="panel-heading" style="height: 42px;">
+                <ul class="nav panel-tabs panel-tabs-left">
+                    <!--           <li class="active">
+                        <a href="#tab-models" data-toggle="tab" style="padding: 4px 20px 5px;">模型</a>
+                    </li>-->
+                    <li class="active">
+                        <a id="show-data-tree" href="#tab-data-tree" data-toggle="tab" style="padding: 4px 20px 5px;" data-i18n="tab-data-tree"></a>
+                    </li>
+                    <li>
+                        <a id="show-components-tree" href="#tab-components-tree" data-toggle="tab" style="padding: 4px 20px 5px;" data-i18n="tab-components-tree"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row mt10 mln mrn">
+                <button type="button" class="btn btn-info btn-sm" id="btn-refresh">
+                    刷新
+                </button>
+                <div class="col-xs-6">
+                    <input class="form-control input-sm" name="search-input" data-i18n="[placeholder]searchInputPlaceholder">
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-reset" data-i18n="clear-btn">
+                    </button>
+                </div>
+            </div>
+            <div id="dir-tree-panel" class="panel-body flex-item" style="border: none;">
+                <div class="tab-content pn br-n">
+                    <!--   <div id="tab-models" class="ds-tree tab-pane flex-item active">
+                    </div>-->
+                    <div id="tab-data-tree" class="dir-tree tab-pane active">
+                    </div>
+                    <div id="tab-components-tree" class="dir-tree tab-pane ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center pn">
+        <div class=" flex-layout flex-vertical" style="position:relative; width: 100%; height: 100%;">
+            <div id="network-container" class="flex-item flex-layout flex-vertical" style="min-width: 300px;">
+                <div id="mini-scope" style="border: 1px solid #9c9c9c">
+                    <div id="mini-scope-overlap"></div>
+                    <div id="mini-scope-drawing"></div>
+                </div>
+                <div id="drawing" style="width: 100%; height: 100%;"></div>
+            </div>
+            <div class="flex-layout" style="position: absolute; height: 100%; width: 100%; top:0; bottom:0; z-index: 99; pointer-events: none;;">
+                <div class="flex-item flex-layout flex-vertical" style="position: relative;">
+                    <div id="top-toolbar" class="p5 modeling-top-bar" style="pointer-events: auto;">
+                        <span class="font-preload" style='font-family: NovaCommon'></span>
+                         <span class="font-preload" style='font-family: icomoonOp'></span>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-load-model" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]loadModelBtn">
+                            <i class="fa fa-folder-open fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-new-model" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]new-model">
+                            <i class="fa fa-copy fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm hide" id="btn-save-model" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]save-model">
+                            <i class="fa fa-save fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-import-model" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]import-model">
+                            <i class="fa fa-upload fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-export-model" data-toggle="tooltip" data-placement="bottom" title="" disabled data-i18n="[data-original-title]export-model">
+                            <i class="fa fa-download fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-ligature" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]ligature">
+                            <i class="fa fa-share-alt fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-removeEdge" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]removeEdge">
+                            <i class="fa fa-eraser fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-overview" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]overview">
+                            <i class="fa fa-eye fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-storeimg" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]storeimg">
+                            <i class="fa fa-file-image-o fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" id="btn-longitudinal-hierarchical" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]longitudinal-hierarchical">
+                            <i class="fa fa-sitemap fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-primary active" id="btn-toggle-direction" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]toggle-direction">
+                            <i class="fa fa-arrows-v fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-default hide" id="btn-model-apply" data-toggle="tooltip" data-placement="bottom" title="" data-i18n="[data-original-title]model-apply">
+                            <i class="fa fa-android fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-default hide" id="btn-bi-report" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="BI报表">
+                            <i class="fa fa-table"></i>
+                        </button>
+                    </div>
+                    <div id="model-hint-container" class="text-center p10 hide">
+                        <span id="model-hint" class="warning-info p5 fs14 pl50 pr50 fw600" ></span>
+                    </div>
+                    <div class="flex-item" style="pointer-events: none;">
+                    </div>
+                    <span id="left-panel-toggle" class="text-primary p5">
+                        <i class="fa fa-caret-right fs28"></i>
+                    </span>
+                    <span id="right-panel-toggle" class="p5">
+                        <i class="fa fa-caret-left fs28"></i>
+                    </span>
+                    <div id="right-panel-splitter">
+
+                    </div>
+                    <div id="bottom-toolbar" class="modeling-bottom-bar">
+                        <div id="model-title-container" class="text-center p5 hide">
+                            <h5 id="model-title" style="text-shadow: 0 0 15px #aaa;"></h5>
+                        </div>
+                        <div id="task-table-container" class="hide" style="max-height: 350px; overflow-y: auto;background: rgba(255,255,255,0.9); pointer-events: auto;"></div>
+                        <div style="pointer-events: auto;">
+                        <ul class="bottomUl">
+                            <li id="btn-start-task" data-toggle="tooltip" data-placement="top" data-i18n="[data-original-title]start-task">
+                                <span class="icon novac icon-runo24"></span>
+                                <span class="title fs14" data-i18n="runBtn"></span>
+                            </li>
+                            <li id="btn-resume-task" data-toggle="tooltip" data-placement="top" data-i18n="[data-original-title]rerun-suspended-task" class="hide">
+                                <span class="icon novac icon-rerun24"></span>
+                                <span class="title fs14" data-i18n="resume-run-btn"></span>
+                            </li>
+                            <li id="btn-pause-task" data-toggle="tooltip" data-placement="top" data-i18n="[data-original-title]click-to-pause-task" class="hide p8">
+                                <span class="fa fa-spinner fa-pulse fs20"></span>
+                                <span class="title fs14" data-i18n="pause"></span>
+                            </li>
+                            <li id="btn-restart-task" data-toggle="tooltip" data-placement="top" data-i18n="[data-original-title]rerun-task" class="hide">
+                                <span class="icon novac icon-runo24"></span>
+                                <span class="title fs14" data-i18n="rerun-btn"></span>
+                            </li>
+                            <div class="bottomBtn" id="btn-toggle-taskinfotable" data-toggle="tooltip" data-placement="top" data-i18n="[data-original-title]taskInfoBtn">
+                                <span class="fa fa-tasks fs20" style="margin-top: 12px"></span>
+                            </div>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-panel-container" class="tab-content hide">
+                    <div id="right-panel" class="panel mn flex-layout flex-vertical" style="height: 100%;">
+                        <div class="panel-heading small-panel-heading" style="height:42px; width: 100%; right: 0;">
+                            <ul class="nav panel-tabs panel-tabs-left">
+                                <li class="active">
+                                    <a id="show-detail" href="#tab-detail" data-toggle="tab" style="padding: 4px 20px 5px;" data-i18n="show-detail"></a>
+                                </li>
+                                <li>
+                                    <a id="show-result" href="#result-panel" data-toggle="tab" style="padding: 4px 20px 5px;" data-i18n="show-result"></a>
+                                </li>
+                            </ul>
+
+                             <span id="right-panel-controllers" class="panel-controls save-btn">
+                                <a class="fs12 save-tex" id="btn-node-save" style="min-width: 30px">保存</a>
+                                <a class="panel-control-fullscreen hide" id="result-fullscreen" style="color: white;"></a>
+                            </span>
+                </div>
+                        <div id="right-content-panel" class="flex-item panel-body pn xy-scroll-panel" style="border: none; ">
+                            <div id="right-tab-content" class="tab-content pn br-n " style="height: 100%;">
+                                <div id="tab-detail" class="tab-pane active" style="height: 100%;">
+                                    <div id="node-config-panel" class="panel-body p15 pt5" style="height: 100%; border: none;">
+                                    </div>
+                                </div>
+                                <div id="result-panel" class="tab-pane" style="height: 100%;">
+                                    <div id="result-container" class="panel-body" style="height: 100%; border: none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="/js/components/vis/vis.min.js"></script>
+<script type="text/javascript" src="${entryRoot}/modeling.js"></script>
+<script type="text/javascript" src="/js/components/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/js/components/datatables/dataTables.bootstrap.js"></script>

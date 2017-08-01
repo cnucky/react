@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_EMAIL" DisplayName="电子邮件" FullText="True">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="应用信息">
+            <Condition Item="APP_PROTOCOL" DisplayName="应用层协议" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_APP_PROTOCOL_EMAIL"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="ACT_TYPE" DisplayName="操作类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_ACT_TYPE_EMAIL"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="邮件信息">
+            <Condition Item="MAIL_FROM,RCPT_TO,SENDER,RECEIVER" DisplayName="收发方" ControlType="Text"/>
+            <Condition Item="SENDER_NICKNAME,RECEIVER_NICKNAME" DisplayName="收发方昵称" ControlType="Text"/>
+            <Condition Item="RECEIVER_TYPE" DisplayName="收方类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_RECEIVER_TYPE"/>
+            <Condition Item="RECEIVER_NUM" DisplayName="收方个数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="USER_NAME" DisplayName="用户账号" ControlType="Text"/>
+            <Condition Item="USER_UID" DisplayName="内部编号" ControlType="Text"/>
+            <Condition Item="SUBJECT" DisplayName="主题" ControlType="Text"/>
+            <Condition Item="MAIL_DIR" DisplayName="邮件目录" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_MAIL_DIR"/>
+            <Condition Item="SENDER_IP" DisplayName="发方IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SENDER_IP_AREA" DisplayName="发方区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SEND_TIME" DisplayName="发信时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="SENDER_TIMEZONE" DisplayName="发信/登录时区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_TIMEZONE"/>
+            <Condition Item="ATTACHMENT_NAME" DisplayName="附件名" ControlType="Text"/>
+            <Condition Item="ATTACHMENT_POSTFIX" DisplayName="附件扩展名" ControlType="Text"/>
+            <Condition Item="ATTACHMENT_NUM" DisplayName="附件数量" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="ATTACHMENT_SIZE" DisplayName="附件大小(B)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="KEYWORD" DisplayName="文本内容" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="数据标签">
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="APP_PROTOCOL" DisplayName="应用层协议" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_APP_PROTOCOL_EMAIL"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="ACT_TYPE" DisplayName="操作类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_ACT_TYPE_EMAIL"/>
+            <Condition Item="MAIL_FROM" DisplayName="信封发方" ControlType="Text"/>
+            <Condition Item="SENDER" DisplayName="发方" ControlType="Text"/>
+            <Condition Item="RCPT_TO" DisplayName="信封收方" ControlType="Text"/>
+            <Condition Item="RECEIVER" DisplayName="收方" ControlType="Text"/>
+            <Condition Item="SENDER_NICKNAME" DisplayName="发方昵称" ControlType="Text"/>
+            <Condition Item="RECEIVER_NICKNAME" DisplayName="收方昵称" ControlType="Text"/>
+            <Condition Item="RECEIVER_TYPE" DisplayName="收方类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_RECEIVER_TYPE"/>
+            <Condition Item="RECEIVER_NUM" DisplayName="收方个数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="USER_NAME" DisplayName="用户账号" ControlType="Text"/>
+            <Condition Item="USER_UID" DisplayName="内部编号" ControlType="Text"/>
+            <Condition Item="SUBJECT" DisplayName="主题" ControlType="Text"/>
+            <Condition Item="MAIL_DIR" DisplayName="邮件目录" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_MAIL_DIR"/>
+            <Condition Item="SENDER_IP" DisplayName="发方IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SENDER_IP_AREA" DisplayName="发方区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SEND_TIME" DisplayName="发信时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="SENDER_TIMEZONE" DisplayName="发信/登录时区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_TIMEZONE"/>
+            <Condition Item="ATTACHMENT_NAME" DisplayName="附件名" ControlType="Text"/>
+            <Condition Item="ATTACHMENT_POSTFIX" DisplayName="附件扩展名" ControlType="Text"/>
+            <Condition Item="ATTACHMENT_NUM" DisplayName="附件数量" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="ATTACHMENT_SIZE" DisplayName="附件大小(B)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

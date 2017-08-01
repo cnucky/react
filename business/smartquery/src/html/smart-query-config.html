@@ -1,0 +1,146 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/jquery-contextmenu/jquery.contextMenu.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+<style>
+.tray{
+	background-color: white;
+}
+
+#dir-tree-panel ul.fancytree-container{
+	border: none;
+	max-height: 100%
+	min-height:120px;
+}
+div#dir-tree-panel {
+    padding: 0;
+    overflow: auto;
+}
+#preview-container {
+	margin: 0;
+	height: 100%;
+	background-color: white;
+	/*width: 800px;*/
+	/*box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc;*/
+}
+.group-line{
+    height: 0px;
+    text-align: left;
+}
+.group-line span{
+	display: inline-block;
+    position: relative;
+    padding: 0px 20px 0px 20px;
+    color: steelblue;
+    font-weight: bold;
+    /*top: -11px;*/
+    font-size: 18px;
+    transition: all 0.2s ease-in-out 0s;
+    background: none repeat scroll 0% 0% transparent;
+}
+.group-container{
+	min-height: 100px;
+	width: 95%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 0;
+	background-color: #e9e9e9;
+	padding: 10px;
+	-webkit-user-select:none;
+}
+.shadow-box{
+	box-shadow: 3px 3px 10px 6px #ccc;
+}
+.concave-box{
+	box-shadow: inset 0 0 20px #333333;
+}
+
+.group-item-container{
+	width: 49%;
+	display: inline-block;
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: 5px;
+}
+.group-item{
+	position: relative;
+	font-size: 13px;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 30px;
+    
+    cursor: default;
+
+}
+
+.remove-span{
+	display: none;
+	position: absolute;
+	z-index: 10;
+	right: 5px;
+	top:5px;
+	color: #e9e9e9;
+	background-color: #bd432f;
+	height: 20px;
+	line-height: 20px;
+	width: 18px;
+
+}
+.group-item-container:hover .remove-span{
+	display: block;
+}
+.group-item-container:hover .remove-span:hover{
+	display: block;
+	background-color: #f3644c;
+}
+
+
+</style>
+<!-- end shim -->
+<section id="content" class="table-layout admin-panels animated fadeIn">
+    <aside class="tray tray-left tray270 pn" style="background: white;">
+        <div class="panel mbn flex-layout flex-vertical" style="height: 100%;">
+            <div class="panel-heading" style="height: 42px;">
+                <div class='media'>可用字段</div>
+            </div>
+            <div class="row mt10 mln mrn">
+                <div class="col-xs-8">
+                    <input class="form-control input-sm" name="search-input" placeholder="过滤...">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-reset">清除
+                        <span id="matches"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="dir-tree-panel" class="panel-body flex-item" style="border: none;">
+                <div class="pn br-n">
+                    <!--   <div id="tab-models" class="ds-tree tab-pane flex-item active">
+                    </div>-->
+                    <div id="datalist-tree" class="dir-tree">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center">
+        <div id='preview-container'></div>
+    </div>
+    <div class="tray tray-right"></div>
+</section>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '专项查询配置',
+};
+var treeHeight = window.innerHeight - $('#dir-tree-panel').offset().top;
+$('#dir-tree-panel').css({height:treeHeight});
+</script>
+<script type="text/javascript" src="${entryRoot}/smart-query-config.js"></script>
+<!-- END: page scripts -->

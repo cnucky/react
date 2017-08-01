@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_HTTPMULTI" DisplayName="Web综合" FullText="True">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="应用信息">
+            <Condition Item="SERVICE_TYPE" DisplayName="应用类别" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_SERVICE_TYPE_HTTPMULTI"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="ACT_TYPE" DisplayName="操作类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_ACT_TYPE_HTTPMULTI"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="HTTP信息">
+            <Condition Item="USER_NAME,PUBLISHER_NAME,RECEIVER_NAME" DisplayName="用户账号" ControlType="Text"/>
+            <Condition Item="USER_UID,PUBLISHER_UID,RECEIVER_UID" DisplayName="用户内部号" ControlType="Text"/>
+            <Condition Item="USER_NICKNAME,PUBLISHER_NICKNAME,RECEIVER_NICKNAME" DisplayName="用户昵称" ControlType="Text"/>
+            <Condition Item="URL" DisplayName="URL" ControlType="Text"/>
+            <Condition Item="HOST" DisplayName="主机名" ControlType="Text"/>
+            <Condition Item="METHOD" DisplayName="方法" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_HTTP_METHOD"/>
+            <Condition Item="ACCEPT_LANGUAGE" DisplayName="浏览器首选语言" ControlType="Text"/>
+            <Condition Item="XFORWARDEDFOR" DisplayName="代理IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="PUBLISH_TIME" DisplayName="发布时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="FILE_NAME" DisplayName="传输文件名" ControlType="Text"/>
+            <Condition Item="FILE_SIZE" DisplayName="传输文件大小(B)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="FILE_HASH_VALUE" DisplayName="文件HASH值" ControlType="Text"/>
+            <Condition Item="KEYWORD" DisplayName="文本内容" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="数据标签">
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVICE_TYPE" DisplayName="应用类别" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_SERVICE_TYPE_HTTPMULTI"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="ACT_TYPE" DisplayName="操作类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_ACT_TYPE_HTTPMULTI"/>
+            <Condition Item="USER_NAME" DisplayName="用户账号" ControlType="Text"/>
+            <Condition Item="PUBLISHER_NAME" DisplayName="发布者账号" ControlType="Text"/>
+            <Condition Item="RECEIVER_NAME" DisplayName="接收者账号" ControlType="Text"/>
+            <Condition Item="USER_UID" DisplayName="用户内部号" ControlType="Text"/>
+            <Condition Item="PUBLISHER_UID" DisplayName="发布者内部号" ControlType="Text"/>
+            <Condition Item="RECEIVER_UID" DisplayName="接收者内部号" ControlType="Text"/>
+            <Condition Item="USER_NICKNAME" DisplayName="用户昵称" ControlType="Text"/>
+            <Condition Item="PUBLISHER_NICKNAME" DisplayName="发布者昵称" ControlType="Text"/>
+            <Condition Item="RECEIVER_NICKNAME" DisplayName="接收者昵称" ControlType="Text"/>
+            <Condition Item="URL" DisplayName="URL" ControlType="Text"/>
+            <Condition Item="HOST" DisplayName="主机名" ControlType="Text"/>
+            <Condition Item="METHOD" DisplayName="方法" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_HTTP_METHOD"/>
+            <Condition Item="ACCEPT_LANGUAGE" DisplayName="浏览器首选语言" ControlType="Text"/>
+            <Condition Item="XFORWARDEDFOR" DisplayName="代理IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="PUBLISH_TIME" DisplayName="发布时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="FILE_NAME" DisplayName="传输文件名" ControlType="Text"/>
+            <Condition Item="FILE_SIZE" DisplayName="传输文件大小(B)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="FILE_HASH_VALUE" DisplayName="文件HASH值" ControlType="Text"/>
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

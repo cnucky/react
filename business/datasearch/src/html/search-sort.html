@@ -1,0 +1,54 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="${ctxRoot}/css/protocol-checkbtn.css">
+
+<style>
+    .form-control.search-input-date[disabled] {
+        background-color: #f0f0f0;
+        color: #999;
+    }
+
+    .select2-container--default.select2-container--focus .select2-selection--multiple {
+        border: solid #73B1E3 1px;
+    }
+
+    .select2-container--default .select2-selection--multiple {
+        border: 1px solid #ddd;
+    }
+</style>
+
+<!-- end shim -->
+
+
+<section id="content" class="table-layout animated fadeIn" style="background-color: white;">
+
+    <!-- begin: .tray-center -->
+    <div class="tray tray-center" style="padding-bottom: 80px">
+
+        <form id="search_range_protocol_form" class="form-horizontal" role="form">
+            <div id="search-range-protocol"></div>
+        </form>
+
+
+        <div id="search-input"></div>
+
+
+    </div>
+
+
+</section>
+
+<div style="position: fixed; height: 70px;bottom: 0; z-index: 10; width: 100%;background-color: rgba(160,160,160,0.5); "
+     class="text-center">
+    <button id="search_btn" type="submit" style="width: 100px;" class="btn btn-primary btn-sm mt20"
+            data-i18n="[append]datasearch.searchsort.button.search">
+        <span class="glyphicon glyphicon-search " style="margin-right: 10px !important;"></span>
+    </button>
+</div>
+
+
+<script type="text/javascript" src='${entryRoot}/search-sort.js'></script>
+

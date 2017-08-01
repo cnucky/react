@@ -1,0 +1,144 @@
+/*字体*/
+body{
+    font-size:14px;
+}
+/*按钮字体*/
+.jsc .btn , .jsc .fc button {
+    font-size: 16px;
+}
+
+/*确认按钮*/
+.jsc .button-blue{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/*关闭按钮*/
+.jsc .button-gray{
+    font-size: 16px;
+}
+
+/*label字体*/
+.jsc label {
+    font-size: 14px;
+    padding-bottom: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.jsc .material-label-change{
+    font-size: 16px;
+}
+
+.jsc .search-bar p{
+    font-size:24px;
+}
+
+.jsc .reminder{
+    font-size: 16px;
+}
+
+.jsc .card-class dl p{
+    font-size: 80px;
+}
+
+
+.jsc [type="radio"]:not(:checked) + label, .jsc [type="radio"]:checked + label {
+    font-size: 14px;
+}
+
+.jsc .dropdown-content li>a, .dropdown-content li>span{
+    font-size: 15px;
+}
+
+/*多选下拉框span样式*/
+.jsc .dropdown-content li > a, .jsc .dropdown-content li > span {
+    font-size: 16px;
+}
+
+/*fancytree*/
+.jsc .ui-fancytree .fa-folder-open{
+    font-size: 18px;
+}
+.jsc .ui-fancytree .fa-tasks{
+    font-size: 16px;
+}
+.jsc .ui-fancytree .fa-building{
+    font-size: 16px;
+}
+
+/*checkbox的label字体*/
+.jsc [type="checkbox"]+label{
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+}
+/*左边菜单栏父li字体*/
+.jsc .list-parent{
+    font-size: 16px;
+    padding: 10px 12px;
+    font-weight: 700;
+}
+
+/*左边菜单栏li字体*/
+.jsc .list-child{
+    font-size: 16px;
+}
+/*fancytree字体t*/
+.jsc ul.fancytree-container{
+    font-size: 14px;
+}
+/*fancytree边框*/
+.jsc ul.fancytree-container{
+    border: /*字体*/0;
+}
+/*pannel 标题字体*/
+.jsc .panel-heading{
+    font-size: 16px;
+}
+/*表格字体*/
+.jsc .table thead tr th{
+    font-size:16px;
+}
+.jsc .table tbody tr td{
+    font-size:14px;
+}
+/*datatable部件字体大小*/
+.jsc div.dataTables_length label,
+.jsc div.dataTables_length label select,
+.jsc div.dataTables_filter label,
+.jsc div.dataTables_filter input,
+.jsc div.dataTables_info,
+.jsc .pagination li a{
+    font-size:14px;
+}
+
+
+.jsc input:not([type]),
+.jsc input[type=text],
+.jsc input[type=password],
+.jsc input[type=email], input[type=url],
+.jsc input[type=time], input[type=date],
+.jsc input[type=datetime],
+.jsc input[type=datetime-local],
+.jsc input[type=tel],
+.jsc input[type=number],
+.jsc input[type=search],
+.jsc textarea.materialize-textarea {
+    font-size: 14px;
+    margin: 0px;/*日期控件*/
+}
+.jsc textarea.materialize-textarea{
+    padding: 10px 0 0 0;
+}
+
+.jsc .select-wrapper input.select-dropdown {
+    font-size: 16px;
+}
+
+.jsc .dropdown-content li>a, .dropdown-content li>span{
+    font-size: 16px;
+}
+.jsc .fc table{
+    font-size: 14px;
+}
+/*字体end*/

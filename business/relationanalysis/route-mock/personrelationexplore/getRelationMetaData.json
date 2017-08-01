@@ -1,0 +1,218 @@
+{
+  "code": 0,
+  "data": {
+    "entityMeta": [
+      {
+        "entityName": "身份",
+        "entityType": 1
+      },
+      {
+        "entityName": "护照",
+        "entityType": 2
+      },
+      {
+        "entityName": "签证",
+        "entityType": 3
+      },
+      {
+        "entityName": "电话",
+        "entityType": 4
+      },
+      {
+        "entityName": "手机",
+        "entityType": 5
+      },
+      {
+        "entityName": "汽车",
+        "entityType": 6
+      },
+      {
+        "entityName": "银行账户",
+        "entityType": 7
+      },
+      {
+        "entityName": "宾馆",
+        "entityType": 8
+      },
+      {
+        "entityName": "火车",
+        "entityType": 9
+      },
+      {
+        "entityName": "航班",
+        "entityType": 10
+      },
+      {
+        "entityName": "QQ",
+        "entityType": 11
+      },
+      {
+        "entityName": "电子邮箱",
+        "entityType": 12
+      },
+      {
+        "entityName": "微博",
+        "entityType": 13
+      },
+      {
+        "entityName": "IP",
+        "entityType": 14
+      },
+      {
+        "entityName": "QQ群组",
+        "entityType": 15
+      },
+      {
+        "entityName": "淘宝",
+        "entityType": 16
+      },
+      {
+        "entityName": "支付宝",
+        "entityType": 17
+      },
+      {
+        "entityName": "通行证",
+        "entityType": 18
+      },
+      {
+        "entityName": "出入境",
+        "entityType": 19
+      },
+      {
+        "entityName": "地址",
+        "entityType": 23
+      },
+      {
+        "entityName": "姓名日期检索",
+        "entityType": 27
+      },
+      {
+        "entityName": "计费账号",
+        "entityType": 28
+      },
+      {
+        "entityName": "IMEI",
+        "entityType": 29
+      },
+      {
+        "entityName": "雅虎",
+        "entityType": 30
+      },
+      {
+        "entityName": "IMSI",
+        "entityType": 31
+      },
+      {
+        "entityName": "硬件特征码",
+        "entityType": 41
+      },
+      {
+        "entityName": "即时聊天",
+        "entityType": 42
+      },
+      {
+        "entityName": "网络账号",
+        "entityType": 43
+      },
+      {
+        "entityName": "VPN",
+        "entityType": 44
+      },
+      {
+        "entityName": "用户唯一标识",
+        "entityType": 45
+      },
+      {
+        "entityName": "手机通讯录成员",
+        "entityType": 46
+      },
+      {
+        "entityName": "微信内部编号",
+        "entityType": 47
+      }
+    ],
+    "relationMeta": [
+      {
+        "relationName": "关联",
+        "relationType": 1
+      },
+      {
+        "relationName": "包含",
+        "relationType": 2
+      },
+      {
+        "relationName": "从属",
+        "relationType": 3
+      },
+      {
+        "relationName": "通联",
+        "relationType": 4
+      },
+      {
+        "relationName": "汇款",
+        "relationType": 6
+      },
+      {
+        "relationName": "好友",
+        "relationType": 8
+      },
+      {
+        "relationName": "社会关系",
+        "relationType": 9
+      },
+      {
+        "relationName": "火车同行",
+        "relationType": 10
+      },
+      {
+        "relationName": "飞机同行",
+        "relationType": 11
+      },
+      {
+        "relationName": "飞机同订票",
+        "relationType": 12
+      },
+      {
+        "relationName": "同QQ群",
+        "relationType": 13
+      },
+      {
+        "relationName": "同户籍地址",
+        "relationType": 14
+      },
+      {
+        "relationName": "主叫",
+        "relationType": 15
+      },
+      {
+        "relationName": "被叫",
+        "relationType": 16
+      },
+      {
+        "relationName": "发送短信",
+        "relationType": 17
+      },
+      {
+        "relationName": "接收短信",
+        "relationType": 18
+      },
+      {
+        "relationName": "登录（计费）",
+        "relationType": 19
+      },
+      {
+        "relationName": "通话",
+        "relationType": 20
+      },
+      {
+        "relationName": "短信",
+        "relationType": 21
+      },
+      {
+        "relationName": "同乡",
+        "relationType": 22
+      }
+    ]
+  },
+  "message": ""
+}

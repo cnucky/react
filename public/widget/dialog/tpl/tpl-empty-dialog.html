@@ -1,0 +1,21 @@
+<div id="modal-panel" class="popup-basic popup-<%- style %> bg-none mfp-with-anim"
+<% if (width > 0) { %>style="max-width: <%- width %>px"<% } %> >
+    <div class="panel">
+        <div class="panel-heading" id="nv-dialog-header">
+            <span id="nv-dialog-title" class="panel-title"> <%= title %> </span>
+        </div>
+        <div id="nv-dialog-body" class="panel-body "
+        <% 
+            var style;
+            if(innerHeight>0) style = "height:" + innerHeight + "px;";
+            else
+                style = "padding:0px; border:none; height:auto;"
+                    + "min-height:" + (minHeight>0 ? minHeight : 280) + "px;"
+                    + "max-height:" + (maxHeight>0 ? maxHeight : 500) + "px;"
+            print("style=\"" + style + "overflow-x: auto; overflow-y: auto\"");
+        %> >
+            <%= content %>
+        </div>
+
+    </div>
+</div>

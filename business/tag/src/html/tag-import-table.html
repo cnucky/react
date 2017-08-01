@@ -1,0 +1,133 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/tag-metadata-manage.css"> -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+<link rel="stylesheet" href="${root}/css/skin/jquery.dataTables.min.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/skin/select.bootstrap.min.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" href="${root}/css/skin/jquery.contextMenu.css">
+
+<style>
+.form-control[readonly] {
+    cursor: default;
+}
+
+/*#tag-treeview ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}*/
+
+/*aside.tray.tray-left {
+    background-color: #ffffff;
+    height: 100%;
+}*/
+
+/*
+#tagDetailTable th{
+    min-width: 60px;
+}*/
+
+table tr th,
+table tr td {
+    border-left: 1px solid #d8d8d8;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+.panel{
+    margin-bottom: -10px;
+}
+/*table.dataTable tr.odd{
+    background-color: #F9F9F9;
+}
+table.dataTable thead th{
+    background-color: #fff;
+}*/
+
+
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: #d8d8d8;
+}
+</style>
+<!-- end shim -->
+<section id="home-content" class="table-layout animated fadeIn">
+    
+    <div class="tray tray-center" style="vertical-align:top; padding:10px;">
+        <div class="container-fluid">
+            <div class="widget-menu ml10 mb10">
+                <button id="btn-create-task" title="新建任务" data-toggle="tooltip" data-placement="bottom" type="button" class="btn btn-sm btn-primary  ph15 mr5" data-original-title="新建任务"><span class="fa fa-plus"></span>  <span>新建任务</span></button>
+                <button id="btn-refresh" title="刷新" data-toggle="tooltip" data-placement="bottom" type="button" class="btn btn-sm btn-primary  ph15 mr5" data-original-title="刷新"><span class="fa fa-refresh"></span>  <span>刷新</span></button>
+            </div>
+            <div class="row">
+                <div class='col-md-12'>
+                    <div class='panel panel-visible'>
+                        <div class='panel-heading'>
+                            <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                <div class='row'>
+                                    <div class='col-md-6'>
+                                        <span style="color: #70ca63" class="glyphicon glyphicon-tasks"></span>标签导入任务详情
+                                    </div>
+                                    <!-- <div class='col-md-4 col-md-offset-2'>
+                                        <div class='col-md-8'>
+                                            <input class="form-control" name="table-filter" style="height: 30px;font-weight: normal;margin-top:12px;" placeholder="请输入关键字..">
+                                        </div>
+                                        <div class='col-md-4'>
+                                            <button type="button" class="btn btn-primary fs12 p5" id="btn-table-filter">
+                                                搜索
+                                            </button>
+                                            <button type="button" class="btn btn-primary fs12 p5" id="btn-table-filter-reset">清除
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table stripe" id="taskDetailTable" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <!-- <th style="text-align: left;color: #3498db;font-weight: bold">标签ID</th> -->
+                                        <th style="color: #3498db;font-weight: bold">任务名称</th>
+                                        <th style="color: #3498db;font-weight: bold">导入用户</th>
+                                        <th style="color: #3498db;font-weight: bold">导入时间</th>
+                                        <th style="color: #3498db;font-weight: bold">实体类型</th>
+                                        <th style="color: #3498db;font-weight: bold">实体数量</th>
+                                        <th style="color: #3498db;font-weight: bold">标签类型</th>
+                                        <th style="color: #3498db;font-weight: bold;">任务状态</th>
+                                        <th style="color: #3498db;font-weight: bold">备注</th>
+                                        <!-- <th style="display:none"></th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '标签导入'
+};
+</script>
+
+
+<script type="text/javascript" src="${entryRoot}/tag-import-table.js"></script>
+<!-- END: page scripts -->

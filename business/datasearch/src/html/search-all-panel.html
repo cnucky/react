@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Loading...</title>
+    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="ByUTech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-theme.min.css"> -->
+    <link rel="shortcut icon" href="${root}/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="${root}/css/loaders.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/tagmanager.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/theme.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/nova.css">
+
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.arctic.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+    <link rel="stylesheet" href="${root}/css/skin/jqx.base.css" type="text/css"/>
+    <link rel="stylesheet" href="${root}/css/skin/jqx.bootstrap.css" type="text/css"/>
+
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+    <link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+
+    <link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="../js/components/gisWidget/enclosureManageModule/enclosureManageModuleCSS.css"/>
+    <link rel="stylesheet"
+          href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/datatables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+
+    <link rel="stylesheet" type="text/css" href="${ctxRoot}/css/searchAll.css">
+
+    <style type="text/css">
+        .navbar,
+        .navbar-branding {
+            height: 40px;
+        }
+
+        .navbar-branding .navbar-brand {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #toggle_sidemenu_l {
+            line-height: 40px;
+        }
+
+        .navbar .nav > li > a {
+            height: 40px;
+        }
+
+        .navbar.navbar-fixed-top + #sidebar_left + #content_wrapper {
+            padding-top: 40px;
+        }
+
+        #topbar.alt {
+            min-height: 32px;
+        }
+
+        #topbar.alt .breadcrumb {
+            padding-top: 5px;
+        }
+
+        .navbar-btn {
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+
+        body.sb-l-m #sidebar_left.nano {
+            position: fixed;
+        }
+
+        #main:before{
+            background: white !important;
+        }
+    </style>
+
+
+
+</head>
+<!-- <body class="dashboard-page messages-page"> -->
+
+<body class="">
+<div id="main" class="" style="background: white;">
+    <section id="fullscreen-loader">
+        <div class="loader-container">
+            <div class="loader-inner line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="loader-close hidden" onclick="javascript:hideLoader()">
+                <i class="glyphicon glyphicon-off"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="content_wrapper" class="" style="margin: 0;">
+        <div id="body-wrapper">
+            <section id="content" style="padding: 0px; background: white; ">
+
+                <div class="page-content" style="margin-top: 0px">
+
+                    <div class="row" style="height: 45px;"></div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-xs-1">
+                        </div>
+                        <div class="col-sm-8 col-md-8 col-xs-10">
+                            <div class="panel" id="panel_single">
+                                <div class="tab-block">
+                                    <ul class="nav nav-tab nav-pills mt10">
+                                        <li class="buble-container active address">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="true" search_type="address"
+                                               data-i18n="datasearch.searchall.tab_header.li_address.text;[tip_s]datasearch.searchall.tab_header.li_address.tip_s;[tip_b]datasearch.searchall.tab_header.li_address.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="url">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="true" search_type="url"
+                                               data-i18n="datasearch.searchall.tab_header.li_url.text;[tip_s]datasearch.searchall.tab_header.li_url.tip_s;[tip_b]datasearch.searchall.tab_header.li_url.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="ip">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="false" search_type="ip"
+                                               data-i18n="datasearch.searchall.tab_header.li_ip.text;[tip_s]datasearch.searchall.tab_header.li_ip.tip_s;[tip_b]datasearch.searchall.tab_header.li_ip.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="lacci">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="false" search_type="lacci"
+                                               data-i18n="datasearch.searchall.tab_header.li_lacci.text;[tip_s]datasearch.searchall.tab_header.li_lacci.tip_s;[tip_b]datasearch.searchall.tab_header.li_lacci.tip_b">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="container-fluid mt10">
+                                    <div class="row-fluid">
+                                        <div id="tab_single" class="tab-pane active ">
+                                            <div class="row" id="input_single">
+                                                <div class="input-group bootstrap-touchspin">
+                                                    <input id="txtCondition" type="text" class="gui-input form-control"
+                                                           data-i18n="[placeholder]datasearch.searchall.tab_header.li_address.tip_s">
+                                                        <span class="input-group-btn ">
+                                                            <button id="btnSearch" class="btn btn-primary"
+                                                                    style="font-size: 13px"
+                                                                    data-i18n="[title]datasearch.searchall.buttons.btnSearch">
+                                                                <i class="glyphicon glyphicon-search"></i>
+                                                            </button>
+                                                        </span>
+                                                </div>
+                                                <div class="col-sm-12 hidden" id="div_lacci_s" style="padding-left: 0px">
+                                                    <table style="width: 100%" >
+                                                        <tr style="width: 100%">
+
+                                                            <td>
+                                                                <div class="col-sm-12" style="padding-left: 0px">
+                                                                    <div class="col-sm-4 col-xs-4" style="padding-left: 0px">
+                                                                        <select id="bs_carrier_s"
+                                                                                class="form-control">
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-xs-4">
+                                                                        <input id="bs_lac_s" class="form-control"
+                                                                               placeholder="LAC">
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-xs-4">
+                                                                        <input id="bs_ci_s" class="form-control"
+                                                                               placeholder="CI">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="50px">
+                                                                <button type="button" id="btn_lacci_search"
+                                                                        class="btn btn-primary">
+                                                                    <i class="glyphicon glyphicon-search"></i>
+                                                                </button>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div id="div_error" class="row mh5 hidden">
+                                                <div class="row">
+                                                    <em id="input_error" class="state-error  mt5"
+                                                        style="color: #DE888A;"></em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <form class="form-horizontal" role="form" style="">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--<div id="search-range"></div>-->
+                                <div id="datacenter_range"></div>
+                                <div id="time_range"></div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="row" style="display: none;">
+                        <div class="col-lg-1"></div>
+
+                        <div class="col-lg-11">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-lg-1 control-label "
+                                               style="text-align: left">数据类型:</label>
+
+                                        <div class="col-lg-11">
+
+                                            <div class="input-group mt10">
+                                                <div class="icheck-inline">
+                                                    <a class="bs-component">
+                                                        <a class="radio-custom mb5">
+                                                            <input type="radio" id="radio_all_categories" checked
+                                                                   name="radio_yewu">
+                                                            <label for="radio_all_categories"
+                                                                   style="color:#666666;font-weight: 200">全部 </label>
+                                                        </a>
+                                                    </a>
+                                                    <a class="bs-component">
+                                                        <a class="radio-custom  mb5">
+                                                            <input type="radio" id="radio_self_categories"
+                                                                   name="radio_yewu">
+                                                            <label for="radio_self_categories"
+                                                                   style="color:#666666;font-weight: 200">
+                                                                自定义</label>
+                                                        </a>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                            <div id="panel_categories">
+                                                <div class="panel-body" style="border: none; padding: 0">
+                                                    <div class="row">
+                                                        <div class="checkbox-custom" id="checkPa"
+                                                             style="display: none;">
+                                                            <input type="checkbox" id="btnProtocolAll">
+                                                            <label for="btnProtocolAll">全选</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group" id="divCategories"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="display: none;">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-11">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-lg-1 control-label" style="text-align: left">检索位置:</label>
+
+                                        <div class="col-lg-11">
+                                            <div class="input-group mt10">
+                                                <div class="icheck-inline">
+                                                    <a class="bs-component">
+                                                        <a class="radio-custom ">
+                                                            <input type="radio" id="radio_structured" class="search-position"
+                                                                   name="radio_search_position" search_position="0">
+                                                            <label for="radio_structured"
+                                                                   style="color:#666666;font-weight: 200">协议信息</label>
+                                                        </a>
+                                                    </a>
+                                                    <a class="bs-component">
+                                                        <a class="radio-custom ">
+                                                            <input type="radio" id="radio_structured_and_file" class="search-position"
+                                                                   checked name="radio_search_position" search_position="1">
+                                                            <label for="radio_structured_and_file"
+                                                                   style="color:#666666;font-weight: 200">协议信息+文本内容</label>
+                                                        </a>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+</div>
+<!-- End: Main -->
+<!-- BEGIN: PAGE SCRIPTS -->
+<!-- END: PAGE SCRIPTS -->
+</body>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="${root}/js/utility/fuckie/html5shiv.js"></script>
+<script src="${root}/js/utility/fuckie/respond.min.js"></script>
+<![endif]-->
+<!-- <script src="${root}/js/vendor.js"></script> -->
+<script type="text/javascript" src="/js/components/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/components/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/components/lib/jquery.history.js"></script>
+<script type="text/javascript" src="/js/components/lib/bootstrap.js"></script>
+<script type="text/javascript" src="/js/components/lib/underscore.js"></script>
+<script type="text/javascript" src="/js/components/lib/q.min.js"></script>
+<script type="text/javascript" src="/js/components/lib/socket.io-1.4.5.js"></script>
+<script type="text/javascript" src="/js/components/react-15.0.2/react.min.js"></script>
+<script type="text/javascript" src="/js/components/react-15.0.2/react-dom.min.js"></script>
+<script type="text/javascript" src="/js/components/fancytree/jquery.fancytree-all.js"></script>
+<script type="text/javascript"
+        src="${root}/js/components/fancytree/extensions/jquery.fancytree.childcounter.js"></script>
+<script type="text/javascript" src="${root}/js/components/fancytree/extensions/jquery.fancytree.filter.js"></script>
+<script type="text/javascript" src="${root}/js/components/fancytree/extensions/jquery.fancytree.edit.js"></script>
+<script type="text/javascript" src="${root}/js/components/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/js/components/i18next/i18next.js"></script>
+<script type="text/javascript" src="/js/components/jquery-i18next/jquery-i18next.js"></script>
+<script type="text/javascript" src="${root}/config-window.js"></script>
+<script type="text/javascript" src="${root}/js/vendor.js"></script>
+
+<script type="text/javascript">
+    function hideLoader() {
+        $('#fullscreen-loader').fadeOut('fast');
+    }
+
+    function showLoader() {
+        $('#fullscreen-loader').fadeIn('fast');
+    }
+
+    function goFullscreen(panel) {
+        // If fullscreen mode is active, remove class and enable panel sorting
+        if ($('body.panel-fullscreen-active').length) {
+            $('body').removeClass('panel-fullscreen-active');
+            $('.panel-fullscreen').removeClass('panel-fullscreen');
+            panel.removeClass('panel-fullscreen');
+        }
+        // if not active add fullscreen classes and disable panel sorting
+        else {
+            $('body').addClass('panel-fullscreen-active');
+            panel.addClass('panel-fullscreen');
+        }
+        // Hide any open mobile menus or popovers
+        $('.panel-controls').removeClass('panel-controls-open');
+        $('.popover').popover('hide');
+
+        // Trigger a global window resize to resize any plugins
+        // the fullscreened content might contain.
+        setTimeout(function () {
+            $(window).trigger('resize');
+        }, 100);
+    }
+
+    function setPageDescription(content, hasHtmlTags) {
+        if (hasHtmlTags) {
+            $('#page-description').html(content);
+        } else {
+            $('#page-description').text(content);
+        }
+    }
+
+    function hideLeftMenu() {
+        $('#sidebar_left').hide();
+        $('#toggle_sidemenu_l').hide();
+        $('#content_wrapper').addClass('mln');
+    }
+</script>
+
+<script src="/js/components/gisWidget/enclosureManageModule/enclosureManage-widget-files.js"></script>
+
+<script type="text/javascript" src="${entryRoot}/search-all-panel.js"></script>
+
+</html>

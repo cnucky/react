@@ -1,0 +1,48 @@
+<div class="form-group mn pt10">
+    <h1 id="dataType" class="text-primary text-ellipsis" style="text-align: center;"></h1>
+</div>
+<div class="form-group mn ml20 mt20 pt10" style="width:100%;display: inline-block;">
+    <div style="margin-top: 15px; margin-bottom: 30px;height: 0px;border-top: 1px solid #DDD;text-align: left;">
+        <span style="display: inline-block; position: relative; padding: 0px 20px 0px 5px;color: steelblue; font-weight: bold;
+        top: -11px;font-size: 18px;transition: all 0.2s ease-in-out 0s;background: none repeat scroll 0% 0% #FFF;">目标字段设置</span>
+    </div>
+    <div class="form-group mb30">
+        <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                目标字段
+            </span>
+            <select class="targetCol">
+            </select>
+        </div>
+    </div>
+    <div style="margin-top: 15px; margin-bottom: 30px;height: 0px;border-top: 1px solid #DDD;text-align: left;">
+        <span style="display: inline-block; position: relative; padding: 0px 20px 0px 5px;color: steelblue; font-weight: bold;
+        top: -11px;font-size: 18px;transition: all 0.2s ease-in-out 0s;background: none repeat scroll 0% 0% #FFF;">展示字段设置</span>
+    </div>
+    <div class="form-group mb10" style="text-align: center;">
+        <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                选择展示字段
+            </span>
+            <select id="displayCol" multiple="true">
+            </select>
+        </div>
+
+    </div>
+    <div style="margin-top: 30px; margin-bottom: 30px;height: 0px;border-top: 1px solid #DDD;text-align: left;">
+        <span style="display: inline-block; position: relative; padding: 0px 20px 0px 5px;color: steelblue; font-weight: bold;
+        top: -11px;font-size: 18px;transition: all 0.2s ease-in-out 0s;background: none repeat scroll 0% 0% #FFF;">位置设置</span>
+    </div>
+    <div class="btn-group mb20">
+        <a class="btn btn-primary btn-sm" id="addAction"><span>新建行为</span></a>
+        <a class="btn btn-danger btn-sm" id="delAction"><span>删除行为</span></a>
+        <a class="btn btn-default btn-sm" id="finishDelBtn" style="display: none"><span>完成</span></a>
+    </div>
+    <div id="layerContent"></div>
+</div>
+<div class="form-group mn ml20 mt20 pt10" style="width:100%;display: inline-block;">
+    <div class="btn-group">
+        <a class="btn btn-primary" id="saveSetting"><span>保存</span></a>
+        <a class="btn btn-danger" id="delSetting"><span>删除</span></a>
+    </div>
+</div>

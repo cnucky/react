@@ -1,0 +1,47 @@
+<!-- shim -->
+<link rel="stylesheet" type="text/css" href="${root}/css/nestable/nestable.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${ctxRoot}/css/searchTemplate.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+
+
+<!-- end shim -->
+<section id="content" class="table-layout animated fadeIn">
+    <!-- begin: .tray-left -->
+    <aside class="tray tray-left tray200 p15">
+
+        <h4 data-i18n="[append]datasearch.searchtemplate.aside.title"></h4>
+        <hr class="alt short">
+        <p class="text-muted" data-i18n="[append]datasearch.searchtemplate.aside.subtitle"></p>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <a data-toggle="tab" class="btn btn-primary btn-block br0 animation-nav"
+                   id="creat_template"
+                   data-i18n="[append]datasearch.searchtemplate.aside.create-template"></a>
+            </div>
+        </div>
+
+        <div class="tray-bin stretch btn-dimmer mt20 " id="templateList">
+            <ul id="form-list3" class="nav list-unstyled" role="tablist" style="overflow-y: auto;overflow-x: hidden;">
+                <li class="nav-label mtn"
+                    data-i18n="[append]datasearch.searchtemplate.aside.existing-template"></li>
+            </ul>
+        </div>
+
+
+    </aside>
+    <!-- end: .tray-left -->
+
+    <!-- begin: .tray-center -->
+    <div class="tray tray-center">
+        <form id="search_template_form" class="form-horizontal" role="form" >
+        </form>
+    </div>
+    <!-- end: .tray-center -->
+</section>
+
+
+<script type="text/javascript" src="${entryRoot}/search-template.js"></script>

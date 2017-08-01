@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>威胁预警</title>
+
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-label/leaflet.label.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/controls/mini-map/Control.MiniMap.min.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.css"
+	/>
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-icon-pulse/L.Icon.Pulse.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.Default.css" />
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-awesome-marker/css/font-awesome.css">
+	<link rel="stylesheet" href="/js/components/gisWidget/gisLibs/marker/leaflet-ExtraMarkers/css/leaflet.extra-markers.min.css"
+	/>
+
+	<link rel="stylesheet" href="${ctxRoot}/css/dlg.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/echartsPie.css">
+	<link rel="stylesheet" href="${ctxRoot}/css/threat.css" />
+</head>
+
+<body>
+	<div id="main">
+		<div id="title">
+			<h1 id="title-text" class="none">{{taskTitle}}</h1>
+			<h2 class="sub-title none">威胁总量&nbsp;<span class="title-number">{{totalNum}}</span>&nbsp;&nbsp;高威胁人数&nbsp;<span class="title-number">{{hitNum}}</span></h2>
+			<a id="menubtn" class="icon -menu" :class="{active: showMenu}" @click="showMenu = !showMenu" title="任务列表">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+		<div id="content">
+			<div class="right">
+				<div class="rightcenter margin-div">
+					<span class="panel-deco"></span>
+					<span class="panel-name">预警消息列表</span>
+					<div id="weixie" class="normaldiv">
+						<div id="spg" class="tabcontent">
+							<span v-for="(tab,index) in tabs" v-on:click="showTab" v-bind:propindex="index" class="tab" v-bind:class="{tabselect:tab.isActive}">{{tab.content}}（{{tab.count}}）</span>
+						</div>
+						<div class="listcontent">
+							<div id="list" class="typelist">
+								<div v-for="(type,index) in types" class="listContainer" v-bind:class="{selectedType:type.selected}" v-bind:propindex="index"
+								    v-on:click="showDetail">
+									<img v-bind:src="type.image">
+									<div>{{type.shortName}}</div>
+									<div class="message" v-show="type.notreadNum>0"></div>
+								</div>
+							</div>
+							<div class="detaillist none">
+								<div class="titlediv">
+									<span class="title">{{typeDetail.longName}}</span>
+									<a class="title" href="" style="margin-left:8px;" v-show="typeDetail.count>95">加载更多</a>
+									<span class="num"><font color="red">未读{{typeDetail.notreadNum}}条</font>/共{{typeDetail.count}}条</span>
+								</div>
+								<div class="contentdiv scroll">
+									<div v-for="(item,index) in typeDetail.data" class="item" v-bind:class="{itemselected:item.showDetail}">
+										<div v-show="item.showDetail" class="detailbox">
+											<!-- 威胁详细信息start -->
+											<div class="headdiv">
+												<div id="summary" class="summary" v-on:click="showItem" v-bind:propindex="index" v-bind:id="item.resultid">
+													<span class="rotatespan">&gt;</span>
+													<span v-html="threatItemDetail.summaryInfo"></span>
+													<span class="captime">{{threatItemDetail.captime}}</span>
+												</div>
+												<div id="newsDetail" class="news" v-if="threatItemDetail.newsShow">
+													<p v-html="newscontent"></p>
+												</div>
+												<div id="pno" class="relatepaople" v-show="threatItemDetail.personShow">
+													<div class="titletext">相关人员</div>
+													<div class="body">
+														<span v-for="(person,index) in threatItemDetail.persons" v-on:click.stop="selectPerson" v-bind:propindex="index" v-bind:proptype="person.id"
+														    v-bind:proptype="person.type" class="label" v-bind:class="{selected:person.isActive}">{{person.content}}</span>
+													</div>
+												</div>
+												<div id="p_acticity" v-show="threatItemDetail.activityShow">
+													<div id="kind" class="relatepaople">
+														<div class="titletext">行为类别</div>
+														<div class="body">
+															<span v-for="(kind,index) in threatItemDetail.kinds" v-on:click.stop="selectKind" v-bind:propvalue="kind.content" v-bind:propindex="index"
+															    class="label" v-bind:class="{selected:kind.isActive}">{{kind.content}}（{{kind.count}}）</span>
+														</div>
+													</div>
+													<div>
+														<span id="peopleinfo" class="simplebtn" v-on:click.stop="showpeopleinfo"><img src="./img/user.png" style="width: 15px;height: 15px;" />身份</span>
+														<span id="peoplerelation" class="simplebtn" v-on:click.stop="showpeoplerelation" v-show="threatItemDetail.relationBtnShow"><img src="./img/link.png" style="width: 15px;height: 15px;" />关系</span>
+													</div>
+													<ul id="activity" class="activitylist scroll">
+														<li v-for="(trace,index) in threatItemDetail.traceList" v-bind:proplat="trace.lat" v-bind:proplng="trace.lng" v-bind:proptolat="trace.to_lat"
+														    v-bind:proptolng="trace.to_lng" v-bind:type="trace.datatype" v-html="trace.info" v-on:click.stop="showactivity">
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<div id="btn_div" class="bottomdiv">
+												<div id="okBtn" v-on:click.stop="ok" v-show="threatItemDetail.okBtn"><img src="./img/handle.png" /><span v-html="threatItemDetail.okBtnContent"></span></div>
+												<div id="reportBtn" v-on:click.stop="report" v-show="threatItemDetail.reportBtnShow"><img src="./img/report.png" /><span>&nbsp;报&nbsp;告</span></div>
+											</div>
+
+											<div id="disposal_div" v-show="threatItemDetail.modalShow" class="modal">
+												<span v-for="(dep,index) in threatItemDetail.processDeps" v-on:click.stop="selectProcessDep" v-bind:propindex="index" v-bind:class="{selected:dep.isActive}">{{dep.name}}</span>
+												<span v-show="threatItemDetail.submittip" class="submittip">{{threatItemDetail.submittipcontent}}</span>
+
+												<textarea v-show="threatItemDetail.threatHandleShow" class="textinput1 scroll" placeholder="在此填写相关意见.(500字以内)" v-model="threatItemDetail.suggestContent"></textarea>
+												<button v-show="threatItemDetail.threatHandleShow" id="submitSuggestion" type="button" class="submitBtn" v-on:click.stop="submitsuggestion">提&nbsp;&nbsp;交</button>
+												<button v-show="threatItemDetail.threatHandleShow" id="cancelSuggestion" type="button" class="calcelBtn" v-on:click.stop="cancelSuggestion">取&nbsp;&nbsp;消</button>
+
+												<textarea v-show="threatItemDetail.evaluatShow" class="textinput2 scroll" v-model="threatItemDetail.suggestContent" readonly="readonly"></textarea>
+												<textarea v-show="threatItemDetail.evaluatShow" class="textinput3 scroll" placeholder="在此填写相关评价.(500字以内)" v-model="threatItemDetail.evaluateContent"></textarea>
+												<div v-show="threatItemDetail.evaluatShow" class="evaluatediv">评价等级：&nbsp;
+													<label><input type="radio" name="evaluate" value="低" v-model="threatItemDetail.evaluatePicked"/>低</label>
+													<label><input type="radio" name="evaluate" value="中" v-model="threatItemDetail.evaluatePicked"/>中</label>
+													<label><input type="radio" name="evaluate" value="高" v-model="threatItemDetail.evaluatePicked"/>高</label>
+												</div>
+												<button v-show="threatItemDetail.evaluatShow" id="submitEvaluation" type="button" class="submitBtn" v-on:click.stop="submitEvaluation">提&nbsp;&nbsp;交</button>
+												<button v-show="threatItemDetail.evaluatShow" id="cancelEvaluation" type="button" class="calcelBtn" v-on:click.stop="cancelEvaluation">取&nbsp;&nbsp;消</button>
+
+												<textarea v-show="threatItemDetail.compShow" class="textinput4 scroll" v-model="threatItemDetail.suggestContent" readonly="readonly"></textarea>
+												<textarea v-show="threatItemDetail.compShow" class="textinput5 scroll" v-model="threatItemDetail.evaluateContent" readonly="readonly"></textarea>
+												<textarea v-show="threatItemDetail.compShow" class="textinput6 scroll" placeholder="在此填写综合意见(500字以内)" v-model="threatItemDetail.compContent"></textarea>
+												<div v-show="threatItemDetail.compShow" class="evaluatediv">评价等级：&nbsp;
+													<label><input type="radio" name="evaluate" value="低" v-model="threatItemDetail.evaluatePicked"/>低</label>
+													<label><input type="radio" name="evaluate" value="中" v-model="threatItemDetail.evaluatePicked"/>中</label>
+													<label><input type="radio" name="evaluate" value="高" v-model="threatItemDetail.evaluatePicked"/>高</label>
+												</div>
+												<button v-show="threatItemDetail.compShow" id="submitcomp" type="button" class="submitBtn" v-on:click.stop="submitcomp">提&nbsp;&nbsp;交</button>
+												<button v-show="threatItemDetail.compShow" id="cancelcomp" type="button" class="calcelBtn" v-on:click.stop="cancelcomp">取&nbsp;&nbsp;消</button>
+											</div>
+											<!-- 威胁详细信息end-->
+										</div>
+										<div v-show="!item.showDetail" style="cursor: pointer" v-on:click="showItem" v-bind:propindex="index" v-bind:id="item.resultid">
+											<span>&gt;</span>
+											<span v-html="item.info"></span>
+											<span class="captime" style="">{{item.captime}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="middle">
+				<div class="margin-div mapdiv">
+					<span class="panel-deco"></span>
+					<span class="panel-name">威胁预警</span>
+					<div id="map"></div>
+				</div>
+			</div>
+			<div class="left">
+				<div class="leftup margin-div">
+					<span class="panel-deco"></span>
+					<span class="panel-name">威胁总量占比</span>
+					<echarts-pies class="component" :data-config="pies.dataConfig" :style-config="pies.styleConfig"></echarts-pies>
+				</div>
+				<div class="leftcenter margin-div">
+					<span class="panel-deco"></span>
+					<span class="panel-name">威胁数量及处理情况</span>
+					<datazoom-one-bar-one-line class="component" :data-config="bar.dataConfig" :style-config="bar.styleConfig"></datazoom-one-bar-one-line>
+				</div>
+				<div class="leftdown margin-div">
+					<span class="panel-deco"></span>
+					<span class="panel-name">人员积分变化</span>
+					<datazoom-one-bar-one-line class="component" :data-config="line.dataConfig" :style-config="line.styleConfig"></datazoom-one-bar-one-line>
+				</div>
+			</div>
+		</div>
+		<transition name="slidebar" class="none">
+			<div class="sidediv" v-show="showMenu">
+				<section @click="click"></section>
+				<aside class="sidebar">
+					<p v-for="task in tasks" :key="task" class="task-item" :class="{active: task.isCurrent}" @click="selectTask(task)">
+						<span class="task-name">{{task.name}}</span>
+						<span class="task-date">{{task.operation_time}}</span>
+						<span class="task-city">中国.{{task.info.city}}</span>
+					</p>
+				</aside>
+			</div>
+		</transition>
+		<div class="loader-div" v-if="loading">
+			<div class="loader1" v-if="!empty">
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alertmsg none" v-if="empty">没有任务权限，请获取授权后再<a href="">重试</a>。</div>
+		</div>
+	</div>
+	<dlg id="mydlg" :content="content" :dlgshow="dlgshow" @close="close"></dlg>
+
+	<script src="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/heatMap/heatmap.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/heatMap/leaflet-heatmap.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-label/leaflet.label.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/mini-map/Control.MiniMap.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/leaflet.toolbar-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/controls/leaflet.RectZoomIn-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-icon-pulse/L.Icon.Pulse.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/marker/leaflet-ExtraMarkers/js/leaflet.extra-markers.min.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/leaflet.markercluster-src.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/highlight.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/ant-line/bezier.js"></script>
+	<script src="/js/components/gisWidget/gisLibs/ant-line/leaflet-ant-path.js"></script>
+
+	<script src="/js/components/lib/jquery.js"></script>
+	<script src="/js/components/lib/underscore.js"></script>
+
+	<script src="${entryRoot}/threat.js"></script>
+</body>
+
+</html>

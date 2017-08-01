@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_TL" DisplayName="铁路客票">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="COLLECT_DATE" DisplayName="采集日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="PAS_NAME" DisplayName="姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="BOARD_DATE" DisplayName="乘车日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="RAILWAY_NO" DisplayName="车次" ControlType="Text"/>
+            <Condition Item="FROM_STATION" DisplayName="出发站" ControlType="Text"/>
+            <Condition Item="TO_STATION" DisplayName="到达站" ControlType="Text"/>
+            <Condition Item="CARRIAGE_NO" DisplayName="车厢号" ControlType="Text"/>
+            <Condition Item="SEAT_NO" DisplayName="座位号" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="COLLECT_DATE" DisplayName="采集日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="PAS_NAME" DisplayName="姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="BOARD_DATE" DisplayName="乘车日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="RAILWAY_NO" DisplayName="车次" ControlType="Text"/>
+            <Condition Item="FROM_STATION" DisplayName="出发站" ControlType="Text"/>
+            <Condition Item="TO_STATION" DisplayName="到达站" ControlType="Text"/>
+            <Condition Item="CARRIAGE_NO" DisplayName="车厢号" ControlType="Text"/>
+            <Condition Item="SEAT_NO" DisplayName="座位号" ControlType="Text"/>
+    </Template>
+</Search>

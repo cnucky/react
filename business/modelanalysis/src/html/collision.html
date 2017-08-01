@@ -1,0 +1,189 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-datetimepicker.css">
+<!-- add by zhangu 工作区目录树右键样式消失问题-->
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui-bts.css">
+<!-- the end-->
+<style type="text/css">
+#relationship-toolbar {
+    border-bottom: 1px solid #ddd;
+}
+
+#relationship-toolbar > * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#network-container {
+    position: relative;
+}
+
+#drawing .vis-network,
+#drawing canvas {
+    outline: none;
+}
+
+
+
+/* 节点查询对话框 */
+
+#list-query-node {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#list-query-node li {
+    list-style: none;
+}
+
+#list-query-node li a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #999;
+}
+
+#list-query-node li:last-child a {
+    border-bottom: none;
+}
+
+#list-query-node li a:hover {
+    background: #fbfbfb;
+    color: #666;
+}
+
+.dropdown-menu span.caret {
+    display: none;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.form-horizontal .field-label {
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #626262;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.form-horizontal .multiselect {
+    min-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul.fancytree-container {
+    min-height: 120px;
+    max-height: 360px;
+}
+
+#system-data ul.fancytree-container,
+#personal-data ul.fancytree-container {
+    border: none;
+    padding: 15px
+}
+
+.tm-tag {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+hr.litmargin {
+    margin: 5px 0;
+}
+
+.height-mid{
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.section-toggle{
+    margin-bottom: 0px;
+    float: right;
+}
+
+.right-aside {
+    height: 100%;
+    overflow-y: auto;
+    /*background:white;*/
+}
+
+.clear {
+    clear:both;
+}
+</style>
+<!-- end shim -->
+<section id="content" class="table-layout animated fadeIn">
+    <div class="tray tray-center pn">
+    <div id="xxcontainer">
+        <div id="relationship-toolbar" class="p5 ph10">
+            <!-- <button type="button" class="btn btn-default btn-sm" id="btn-add" data-toggle="tooltip" data-placement="bottom" title="展开数据源">
+                <i class="fa fa-database fa-fw"></i>
+            </button> -->
+            <button type="button" class="btn btn-primary btn-sm btn-collision-run" data-toggle="tooltip" data-placement="bottom" title="运行" id="btn-go">
+                <i class="fa fa-play fa-fw"></i>
+            </button>
+        </div>
+        <div id="network-container">
+            <div id="drawing">
+                <canvas id="thecanvas"></canvas>
+            </div>
+        </div>
+        </div>
+    </div>
+    <aside class="tray tray-right tray400 pn">
+        <div class="right-aside">
+            <div class="p20">
+                <div class="row mn">
+                <h4 id="task-title" class="ph10 mn col-md-8 height-mid" data-i18n="new-task"></h4>
+                <div class="col-md-3" style="text-align:right;">
+                    <a id="result-toggle" href="javascript:void(0);" style="display:none;" data-i18n="result-show"></a>
+                </div>
+                <span id="mode-change" class="pull-right hide" ></span>
+                </div>
+                <hr class="alt short">
+                <div id="collision-condition">
+                    <form class="form-horizontal" role="form" id="collision-detail">
+
+                        <div id="collision-type"></div>
+                        <div id="collision-semantic"></div>
+                        <div id="collision-datasource"></div>
+                        <div id="collision-fields"></div>
+
+                    </form>
+                    <hr class="alt short">
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-primary btn-block mnw100 btn-collision-run" id="<btn-go></btn-go>" data-i18n="runBtn"></button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="collision-result" style="height:100%;display:none;">
+                    <div class="result-table">
+                    </div>
+                    <div class="result-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</section>
+<script type="text/javascript" src="/js/components/lib/ocanvas-2.8.1.min.js"></script>
+<script type="text/javascript" src="${entryRoot}/collision.js"></script>

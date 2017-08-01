@@ -1,0 +1,13 @@
+<div class="form-horizontal">
+<div class="form-group">
+    <label for="single-input" class="col-lg-3 control-label"><%- label %></label>
+    <div class="col-lg-8">
+        <div class="bs-component">
+            <input type="text" id="single-input" class="form-control"
+                   <% if (obj.hints) {%>placeholder=<%-hints%><%} %>
+            <% if (obj.defaultVal) {%>value=<%-defaultVal%><%} %>
+            >
+    </div>
+        </div>
+</div>
+</div>

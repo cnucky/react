@@ -1,0 +1,10 @@
+.tray-left ul.fancytree-container {
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+}
+
+.multiselect .dropdown-toggle .btn .btn-primary {
+    white-space: normal
+}

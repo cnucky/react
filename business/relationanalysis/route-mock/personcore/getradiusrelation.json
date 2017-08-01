@@ -1,0 +1,27 @@
+{
+    "code": 0,
+    "message": "",
+    "data": [{
+        "radius": 872332,
+        "accounts": [{
+            "account": "hhhhh",
+            "freq": 20,
+            "valueType": 16
+        }, {
+            "account": "222@ 163. com",
+            "freq": 3,
+            "valueType": 17
+        }]
+    }, {
+        "radius": 12312313,
+        "accounts": [{
+            "account": "gggg",
+            "freq": 55,
+            "valueType": 16
+        }, {
+            "account": "xxxxxx",
+            "freq": 44,
+            "valueType": 13
+        }]
+    }]
+}

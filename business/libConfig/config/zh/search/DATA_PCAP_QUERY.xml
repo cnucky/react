@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_PCAP" DisplayName="原始报文">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="SIDE_ONE_IP" DisplayName="一端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SIDE_TWO_IP" DisplayName="对端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SIDE_ONE_PORT" DisplayName="一端端口" ControlType="Text"/>
+            <Condition Item="SIDE_TWO_PORT" DisplayName="对端端口" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="报文信息">
+            <Condition Item="IS_ROUTE_DATA" DisplayName="是否路由数据" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_PCAP_IS_ROUTER_DATA"/>
+            <Condition Item="SIZE" DisplayName="数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="PACKET_NUM" DisplayName="数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="SIDE_ONE_IP" DisplayName="一端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SIDE_TWO_IP" DisplayName="对端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SIDE_ONE_PORT" DisplayName="一端端口" ControlType="Text"/>
+            <Condition Item="SIDE_TWO_PORT" DisplayName="对端端口" ControlType="Text"/>
+            <Condition Item="IS_ROUTE_DATA" DisplayName="是否路由数据" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_PCAP_IS_ROUTER_DATA"/>
+            <Condition Item="SIZE" DisplayName="数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="PACKET_NUM" DisplayName="数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

@@ -1,0 +1,18 @@
+<table class='table table-bordered table-striped'>
+	<thead>
+		<tr>
+			<th>属性名</th>
+			<th>属性值</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% _.each(tableData,function(item){ %>
+		<tr>
+			<td class='table-col-1'><%= item.key %></td>
+			<td class='table-col-2'><%= item.value %></td>
+		</tr>
+		<% }); %>
+	</tbody>
+	
+
+</table>

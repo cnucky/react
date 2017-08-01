@@ -1,0 +1,44 @@
+{   
+    "workspace": {
+        "label-in":"in(",
+        "label-useip":")use IP(",
+        "label-executeshareoperation":")execute share resource operation，details:",
+        "label-adddir":")add directory(",
+        "label-desc":"description",
+        "label-parentdir":")parent directoryID(",
+        "label-movefileoperation":") execute move resource operation，details: move resource(",
+        "label-todir":")to directory(",
+        "label-deletefileoperation":")execute delete resource operation, delete resource(",
+        "label-renamefileoperation":")execute rename resource operation, rename resource(",
+        "label-for":") to("
+    },
+    
+
+    "login":{
+        "label-loginname":") login,login name(",
+        "label-loginout":") logout,login name(",
+        "label-adduser":") add user(",
+        "label-to":")to(",
+        "label-updateuserinfo":")update user infomation,details:name(",
+        "label-gender":")gender(",
+        "label-position":")position(",
+        "label-timevalid":")valid tima to(",
+        "label-sfz":")ID number(",
+        "label-birth":")birthday(",
+        "label-phone":")contact(",
+        "label-address":")contact address(",
+        "label-deleteuser":") delete user(",
+        "label-moveuser":") move user(",
+        "label-todepart":") to department(",
+        "label-changeuser":") change user(",
+        "label-oldpwd":") old password(",
+        "label-newpwd":") to new password(",
+        "label-resetuser":") reset user(",
+        "label-topwd":") password to(",
+        "label-lockuser":") lock user(",
+        "label-unlockuser":") unlock user("
+    },
+    "all":{
+        "label-needlogin":"need login"
+    }
+}

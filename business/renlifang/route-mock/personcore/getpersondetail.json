@@ -1,0 +1,1670 @@
+{
+  "code": 0,
+  "data": {
+    "summary": [
+      {
+        "groupName": "概要信息",
+        "children": [
+          {
+            "valueList": [
+              {
+                "intensity": 880.635589902455,
+                "confidence": 93.4,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "电信用户登记数据",
+                    "typeId": "9004"
+                  },
+                  {
+                    "count": 2,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9012"
+                  },
+                  {
+                    "count": 2,
+                    "name": "口岸出入境数据",
+                    "typeId": "3"
+                  },
+                  {
+                    "count": 9,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  },
+                  {
+                    "count": 8,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  },
+                  {
+                    "count": 56,
+                    "name": "民航旅客订座数据",
+                    "typeId": "5"
+                  },
+                  {
+                    "count": 12,
+                    "name": "铁路客票数据",
+                    "typeId": "18"
+                  },
+                  {
+                    "count": 3,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  },
+                  {
+                    "count": 10,
+                    "name": "民航旅客离港数据",
+                    "typeId": "8"
+                  }
+                ],
+                "value": "董俊华"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "董梓"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "梓"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "董俊华/1"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "大董"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "华子"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "黄孝晨辽信息"
+              },
+              {
+                "intensity": 8,
+                "confidence": 0.8,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  }
+                ],
+                "value": "懂俊华"
+              },
+              {
+                "intensity": 5.90848501887865,
+                "confidence": 0.6,
+                "source": [
+                  {
+                    "count": 3,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "董爱华"
+              }
+            ],
+            "name": "CNAME",
+            "caption": "中文姓名"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 347.33692243055805,
+                "confidence": 63.4,
+                "source": [
+                  {
+                    "count": 56,
+                    "name": "民航旅客订座数据",
+                    "typeId": "5"
+                  },
+                  {
+                    "count": 1,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "dongjunhua"
+              },
+              {
+                "intensity": 187.12631214428626,
+                "confidence": 34.2,
+                "source": [
+                  {
+                    "count": 12,
+                    "name": "铁路客票数据",
+                    "typeId": "18"
+                  }
+                ],
+                "value": "DONGJUNHUA"
+              },
+              {
+                "intensity": 13.010299956639813,
+                "confidence": 2.4,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "口岸出入境数据",
+                    "typeId": "3"
+                  }
+                ],
+                "value": "董俊华"
+              }
+            ],
+            "name": "ENAME",
+            "caption": "英文姓名"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 570.4502219535959,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "口岸出入境数据",
+                    "typeId": "3"
+                  },
+                  {
+                    "count": 56,
+                    "name": "民航旅客订座数据",
+                    "typeId": "5"
+                  },
+                  {
+                    "count": 10,
+                    "name": "民航旅客离港数据",
+                    "typeId": "8"
+                  },
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "中国"
+              }
+            ],
+            "name": "NATIONALITY",
+            "caption": "国籍"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 330.2396116673242,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "口岸出入境数据",
+                    "typeId": "3"
+                  },
+                  {
+                    "count": 12,
+                    "name": "铁路客票数据",
+                    "typeId": "18"
+                  },
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "男"
+              }
+            ],
+            "name": "GENDER",
+            "caption": "性别"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 100,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "182"
+              }
+            ],
+            "name": "HEIGHT",
+            "caption": "身高"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 834.2165598733696,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 12,
+                    "name": "铁路客票数据",
+                    "typeId": "18"
+                  },
+                  {
+                    "count": 3,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  },
+                  {
+                    "count": 56,
+                    "name": "民航旅客订座数据",
+                    "typeId": "5"
+                  },
+                  {
+                    "count": 2,
+                    "name": "机场安检照片",
+                    "typeId": "30661"
+                  },
+                  {
+                    "count": 10,
+                    "name": "民航旅客离港数据",
+                    "typeId": "8"
+                  },
+                  {
+                    "count": 1,
+                    "name": "电信用户登记数据",
+                    "typeId": "9004"
+                  },
+                  {
+                    "count": 8,
+                    "name": "铁路客票数据",
+                    "typeId": "9118"
+                  }
+                ],
+                "value": "210204199103292197"
+              }
+            ],
+            "name": "SFZ",
+            "caption": "身份证"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 130.10299956639813,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "汉族"
+              }
+            ],
+            "name": "NATION",
+            "caption": "民族"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 130.10299956639813,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "未婚"
+              }
+            ],
+            "name": "MARRIAGE",
+            "caption": "婚姻状况"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 100,
+                "confidence": 40.6,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "南京市玄武区四牌楼2号"
+              },
+              {
+                "intensity": 100,
+                "confidence": 40.6,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "辽宁省大连市沙河口区中长街26-2号1-3-2"
+              },
+              {
+                "intensity": 8,
+                "confidence": 3.2,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9012"
+                  }
+                ],
+                "value": "中长街26-2"
+              },
+              {
+                "intensity": 8,
+                "confidence": 3.2,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9012"
+                  }
+                ],
+                "value": "江苏省 南京市 江宁区 江宁区东南大学路2号 桃园5D238"
+              },
+              {
+                "intensity": 5.90848501887865,
+                "confidence": 2.4,
+                "source": [
+                  {
+                    "count": 3,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "江宁区东南大学路2号 桃园5d238"
+              },
+              {
+                "intensity": 5.90848501887865,
+                "confidence": 2.4,
+                "source": [
+                  {
+                    "count": 3,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "江苏省南京市江宁区东南大学12号"
+              },
+              {
+                "intensity": 5.204119982655925,
+                "confidence": 2.1,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "五一路12号"
+              },
+              {
+                "intensity": 5.204119982655925,
+                "confidence": 2.1,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "南京市"
+              },
+              {
+                "intensity": 4,
+                "confidence": 1.6,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "中长街26号碧海花园2#-1-3-2"
+              },
+              {
+                "intensity": 4,
+                "confidence": 1.6,
+                "source": [
+                  {
+                    "count": 1,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  }
+                ],
+                "value": "九龙胡"
+              }
+            ],
+            "name": "ADDRESS",
+            "caption": "地址"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 748.8546329271571,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "口岸出入境数据",
+                    "typeId": "3"
+                  },
+                  {
+                    "count": 56,
+                    "name": "民航旅客订座数据",
+                    "typeId": "5"
+                  },
+                  {
+                    "count": 12,
+                    "name": "铁路客票数据",
+                    "typeId": "18"
+                  },
+                  {
+                    "count": 8,
+                    "name": "民航旅客离港数据",
+                    "typeId": "8"
+                  },
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "1991-03-29"
+              }
+            ],
+            "name": "BIRTHDAY",
+            "caption": "出生日期"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 72.08971348474195,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 15,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9008"
+                  },
+                  {
+                    "count": 13,
+                    "name": "非邮快递运单数据_old",
+                    "typeId": "26"
+                  },
+                  {
+                    "count": 1,
+                    "name": "电信用户登记数据",
+                    "typeId": "9004"
+                  },
+                  {
+                    "count": 6,
+                    "name": "全国互联网基础数据",
+                    "typeId": "9012"
+                  }
+                ],
+                "value": "15651619533"
+              }
+            ],
+            "name": "USER_MSISDN",
+            "caption": "电话号码"
+          },
+          {
+            "valueList": [],
+            "name": "JOB",
+            "caption": "职业"
+          },
+          {
+            "valueList": [
+              {
+                "intensity": 130.10299956639813,
+                "confidence": 100,
+                "source": [
+                  {
+                    "count": 2,
+                    "name": "全国户籍数据",
+                    "typeId": "19"
+                  }
+                ],
+                "value": "大学本科（简称“大学”）"
+              }
+            ],
+            "name": "EDUCATION",
+            "caption": "学历"
+          }
+        ]
+      }
+    ],
+    "address": [
+      {
+        "source": [
+          "非邮快递运单数据_old"
+        ],
+        "value": "江宁区东南大学路2号 桃园5d238"
+      },
+      {
+        "source": [
+          "非邮快递运单数据_old"
+        ],
+        "value": "江苏省南京市江宁区东南大学12号"
+      },
+      {
+        "source": [
+          "非邮快递运单数据_old"
+        ],
+        "value": "五一路12号"
+      },
+      {
+        "source": [
+          "非邮快递运单数据_old"
+        ],
+        "value": "南京市"
+      },
+      {
+        "source": [
+          "全国户籍数据"
+        ],
+        "value": "南京市玄武区四牌楼2号"
+      }
+    ],
+    "attachment": [
+      {
+        "entityType": 1,
+        "files": [
+          {
+            "fileName": "Koala_001.tif",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "airplane_nj_001.jpg",
+            "source": [
+              "机场安检照片"
+            ]
+          }
+        ],
+        "entityId": "210204199103292197"
+      },
+      {
+        "entityType": 2,
+        "files": [
+          {
+            "fileName": "Koala_surprise_001.png",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "Tulips_absdf.bmp",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "airplane_jl_001.jpg",
+            "source": [
+              "机场安检照片"
+            ]
+          }
+        ],
+        "entityId": "E41428076"
+      }
+    ],
+    "information": [
+      {
+        "groupName": "身份信息",
+        "children": [
+          {
+            "itemName": "护照",
+            "itemKey": "E41428076",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.010299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "董俊华"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.010299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "男"
+                  }
+                ],
+                "name": "性别",
+                "propertyId": 12,
+                "key": "GENDER"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.010299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "董俊华"
+                  }
+                ],
+                "name": "英文姓名",
+                "propertyId": 2,
+                "key": "ENAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.010299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "1991-03-29"
+                  }
+                ],
+                "name": "出生日期",
+                "propertyId": 3,
+                "key": "BIRTHDAY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.010299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "国籍",
+                "propertyId": 4,
+                "key": "NATIONALITY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 27.78151250383644,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "机场安检照片",
+                        "typeId": "30661"
+                      },
+                      {
+                        "count": 2,
+                        "name": "口岸出入境数据",
+                        "typeId": "3"
+                      }
+                    ],
+                    "value": "E41428076"
+                  }
+                ],
+                "name": "护照号",
+                "propertyId": 51,
+                "key": "PASSPORT"
+              }
+            ]
+          },
+          {
+            "itemName": "身份",
+            "itemKey": "210204199103292197",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 802.1753600468105,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 12,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 3,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 56,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      },
+                      {
+                        "count": 10,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "董俊华"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 130.10299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "出生国家",
+                "propertyId": 11,
+                "key": "BIRTH_COUNTRY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 317.2293117106844,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 12,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "男"
+                  }
+                ],
+                "name": "性别",
+                "propertyId": 12,
+                "key": "GENDER"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 130.10299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "未服兵役"
+                  }
+                ],
+                "name": "兵役状况",
+                "propertyId": 14,
+                "key": "MILITARY_STATUS"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 130.10299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "大学本科（简称“大学”）"
+                  }
+                ],
+                "name": "学历",
+                "propertyId": 17,
+                "key": "EDUCATION"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "南京市玄武区四牌楼2号"
+                  },
+                  {
+                    "intensity": 100,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "辽宁省大连市沙河口区中长街26-2号1-3-2"
+                  }
+                ],
+                "name": "地址",
+                "propertyId": 18,
+                "key": "ADDRESS"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 347.33692243055805,
+                    "confidence": 65,
+                    "source": [
+                      {
+                        "count": 56,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "dongjunhua"
+                  },
+                  {
+                    "intensity": 187.12631214428626,
+                    "confidence": 35,
+                    "source": [
+                      {
+                        "count": 12,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      }
+                    ],
+                    "value": "DONGJUNHUA"
+                  }
+                ],
+                "name": "英文姓名",
+                "propertyId": 2,
+                "key": "ENAME"
+              },
+              {
+                "jumpType": 1,
+                "valueList": [
+                  {
+                    "intensity": 834.2165598733696,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 12,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 3,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 56,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      },
+                      {
+                        "count": 2,
+                        "name": "机场安检照片",
+                        "typeId": "30661"
+                      },
+                      {
+                        "count": 10,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      },
+                      {
+                        "count": 8,
+                        "name": "铁路客票数据",
+                        "typeId": "9118"
+                      }
+                    ],
+                    "value": "210204199103292197"
+                  }
+                ],
+                "name": "身份证",
+                "propertyId": 20,
+                "key": "SFZ"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 735.8443329705174,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 8,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 12,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 56,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "1991-03-29"
+                  }
+                ],
+                "name": "出生日期",
+                "propertyId": 3,
+                "key": "BIRTHDAY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 557.4399219969562,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 10,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 56,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "国籍",
+                "propertyId": 4,
+                "key": "NATIONALITY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 130.10299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "汉族"
+                  }
+                ],
+                "name": "民族",
+                "propertyId": 6,
+                "key": "NATION"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "182"
+                  }
+                ],
+                "name": "身高",
+                "propertyId": 7,
+                "key": "HEIGHT"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 130.10299956639813,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "未婚"
+                  }
+                ],
+                "name": "婚姻状况",
+                "propertyId": 9,
+                "key": "MARRIAGE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "手机信息",
+        "children": [
+          {
+            "itemName": "手机",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 65.4499298990047,
+                    "confidence": 51.4,
+                    "source": [
+                      {
+                        "count": 8,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      },
+                      {
+                        "count": 9,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      },
+                      {
+                        "count": 2,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9012"
+                      }
+                    ],
+                    "value": "董俊华"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "董梓"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "董俊华/1"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "华子"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "黄孝晨辽信息"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "梓"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "大董"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 6.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "懂俊华"
+                  },
+                  {
+                    "intensity": 5.90848501887865,
+                    "confidence": 4.6,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "董爱华"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 8,
+                    "confidence": 17.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9012"
+                      }
+                    ],
+                    "value": "中长街26-2"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 17.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9012"
+                      }
+                    ],
+                    "value": "江苏省 南京市 江宁区 江宁区东南大学路2号 桃园5D238"
+                  },
+                  {
+                    "intensity": 5.90848501887865,
+                    "confidence": 12.8,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "江宁区东南大学路2号 桃园5d238"
+                  },
+                  {
+                    "intensity": 5.90848501887865,
+                    "confidence": 12.8,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "江苏省南京市江宁区东南大学12号"
+                  },
+                  {
+                    "intensity": 5.204119982655925,
+                    "confidence": 11.3,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "五一路12号"
+                  },
+                  {
+                    "intensity": 5.204119982655925,
+                    "confidence": 11.3,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "南京市"
+                  },
+                  {
+                    "intensity": 4,
+                    "confidence": 8.7,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "中长街26号碧海花园2#-1-3-2"
+                  },
+                  {
+                    "intensity": 4,
+                    "confidence": 8.7,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "九龙胡"
+                  }
+                ],
+                "name": "地址",
+                "propertyId": 18,
+                "key": "ADDRESS"
+              },
+              {
+                "jumpType": 5,
+                "valueList": [
+                  {
+                    "intensity": 72.08971348474195,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 15,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      },
+                      {
+                        "count": 13,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      },
+                      {
+                        "count": 6,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9012"
+                      }
+                    ],
+                    "value": "15651619533"
+                  }
+                ],
+                "name": "手机号码",
+                "propertyId": 24,
+                "key": "USER_MSISDN"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 32,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "0025"
+                  }
+                ],
+                "name": "归属区号",
+                "propertyId": 28,
+                "key": "BELONG_AREA_CODE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "网络账号",
+        "children": [
+          {
+            "itemName": "电子邮箱",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 12,
+                "valueList": [
+                  {
+                    "intensity": 10.873408027750521,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9012"
+                      }
+                    ],
+                    "value": "493178878@qq.com"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "支付宝",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 17,
+                "valueList": [
+                  {
+                    "intensity": 6.400000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "493178878@qq.com"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "淘宝",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 16,
+                "valueList": [
+                  {
+                    "intensity": 6.400000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "israeledwarddong"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "IP",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 5.120000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "60.20.149.236"
+                  }
+                ],
+                "name": "登陆IP",
+                "propertyId": 46,
+                "key": "LOGIN_IP"
+              }
+            ]
+          },
+          {
+            "itemName": "电子邮箱",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 12,
+                "valueList": [
+                  {
+                    "intensity": 5.120000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "israeledwarddong@gmail.com"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "personId": 0,
+    "keyValueMap": [
+      {
+        "entityType": 11,
+        "values": [],
+        "name": "QQ",
+        "caption": "QQ"
+      },
+      {
+        "entityType": 7,
+        "values": [],
+        "name": "BANK_ACCOUNT",
+        "caption": "银行账号"
+      },
+      {
+        "entityType": 5,
+        "values": [
+          "15651619533"
+        ],
+        "name": "USER_MSISDN",
+        "caption": "手机号码"
+      },
+      {
+        "entityType": 1,
+        "values": [
+          "210204199103292197"
+        ],
+        "name": "SFZ",
+        "caption": "身份证"
+      },
+      {
+        "entityType": 12,
+        "values": [
+          "493178878@qq.com",
+          "israeledwarddong@gmail.com"
+        ],
+        "name": "EMAIL",
+        "caption": "电子邮箱"
+      },
+      {
+        "entityType": 2,
+        "values": [
+          "E41428076"
+        ],
+        "name": "PASSPORT",
+        "caption": "护照号"
+      }
+    ],
+    "tags": []
+  }
+}

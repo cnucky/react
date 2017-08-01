@@ -1,0 +1,108 @@
+<div class="p10">
+
+    <div id="collapseDetail">
+        <label for="collapseDetail" class="field-label">
+            <a data-toggle="collapse" data-parent="#accordion" href="#action-panel" aria-expanded="false"
+               aria-controls="action-panel" style="text-decoration: none;" class="collapsed">
+                <span id="collapse-click" class="fs15"> <i id="plus-minus" class="fa fa-plus"></i>
+                操作
+                </span>
+            </a>
+        </label>
+
+        <div id="action-panel" class="collapse">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="element-title" class="col-md-3 control-label pln">标题：</label>
+
+                    <div class="col-md-9">
+                        <div class="bs-component">
+                            <input type="text" id="element-title" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">颜色：</label>
+
+                    <div class="color-pick col-md-12 bs-component" style="height: 35px;">
+                        <div class="checkbox-custom checkbox-disabled fill col-md-2">
+                            <input type="radio" name="elemColor" id="color1" value="#b9b9b9">
+                            <label for="color1"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-primary col-md-2">
+                            <input type="radio" name="elemColor" id="color2" value="#4ea5e0">
+                            <label for="color2"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-success col-md-2">
+                            <input type="radio" name="elemColor" id="color3" value="#85d27a">
+                            <label for="color3"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-warning col-md-2">
+                            <input type="radio" name="elemColor" id="color4" value="#f7c65f">
+                            <label for="color4"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-danger col-md-2">
+                            <input type="radio" name="elemColor" id="color5" value="#e36d5a">
+                            <label for="color5"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-alert col-md-2" style="top: 8px;">
+                            <div name="elemColor" id="color6" class="input-group" style="width: 20px;height: 19px;">
+                                <span class="input-group-addon" style="min-width: 22px;min-height: 21px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;padding-right: 2px;border: 1px solid #0000aa">
+                                    <i style="border-left: 1;border-right: 1;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label ptn">字体：</label>
+
+                    <div class="color-pick col-md-12 bs-component" style="height: 35px;">
+                        <div class="checkbox-custom checkbox-disabled fill col-md-2">
+                            <input type="radio" name="fontColor" id="fontColor1" value="#b9b9b9">
+                            <label for="fontColor1"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-primary col-md-2">
+                            <input type="radio" name="fontColor" id="fontColor2" value="#4ea5e0">
+                            <label for="fontColor2"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-success col-md-2">
+                            <input type="radio" name="fontColor" id="fontColor3" value="#85d27a">
+                            <label for="fontColor3"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-warning col-md-2">
+                            <input type="radio" name="fontColor" id="fontColor4" value="#f7c65f">
+                            <label for="fontColor4"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-danger col-md-2">
+                            <input type="radio" name="fontColor" id="fontColor5" value="#e36d5a">
+                            <label for="fontColor5"></label>
+                        </div>
+                        <div class="checkbox-custom fill checkbox-danger col-md-2" style="top: 8px;">
+                            <div name="fontColor" id="fontColor6" class="input-group" style="width: 20px;height: 19px;">
+                                <span class="input-group-addon" style="min-width: 22px;min-height: 21px;padding-top: 2px;padding-bottom: 2px;padding-left: 2px;padding-right: 2px;border: 1px solid #0000aa">
+                                    <i style="border-left: 1;border-right: 1;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label ptn mb10" for="notes-edit">备注：</label>
+
+                    <div class="col-md-12 mb10 ml10" style="width: 258px;">
+                        <div class="bs-component">
+                            <textarea class="form-control" id="notes-edit" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <input class="form-control p5" id="search-input" style="height: 30px;display:none;" placeholder="请输入搜索关键字">
+    </div>
+
+    <div id="table-container" style="width:100%; min-height: 50px;"></div>
+</div>

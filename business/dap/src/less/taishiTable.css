@@ -1,0 +1,117 @@
+.sqk-thead-div {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.sqk-thead-div table {
+    width: calc(100% - 8px);
+    height: 40px;
+    border-collapse: collapse;
+}
+
+.sqk-thead-div table tr {
+    height: 34px;
+}
+
+.sqk-thead-div table th {
+    width: 17%;
+}
+
+.sqk-thead-div table th:first-child {
+    width: 32%;
+}
+
+.sqk-tbody-div,
+.sqk-tbody-div2 {
+    width: 100%;
+    height: calc(100% - 40px);
+    color: rgba(148, 164, 255, 1.0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.sqk-tbody-div,
+.sqk-tbody-div2 a {
+    color: rgba(148, 164, 255, 1.0);
+}
+
+.sqk-tbody-div h2,
+.sqk-tbody-div2 h2 {
+    line-height: 40px;
+    font-size: 32px;
+    text-align: center;
+    color: rgba(148, 164, 255, 1.0);
+}
+
+.sqk-tbody-div table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+.sqk-tbody-div2 table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.sqk-tbody-div table td {
+    width: 17%;
+    line-height: 30px;
+    border-top: 1px solid rgba(48, 164, 255, 0.1);
+    border-bottom: 1px solid rgba(48, 164, 255, 0.1);
+}
+
+.sqk-tbody-div table td:first-child {
+    width: 32%;
+}
+
+.sqk-tbody-div2 table td {
+    width: 14%;
+    line-height: 30px;
+    border-top: 1px solid rgba(48, 164, 255, 0.1);
+    border-bottom: 1px solid rgba(48, 164, 255, 0.1);
+}
+
+.sqk-tbody-div2 table td:first-child {
+    width: 16%;
+}
+
+.string-sqk {
+    text-align: center;
+}
+
+.number-sqk {
+    text-align: center;
+}
+
+.sqk-tbody-div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(48, 164, 255, 0.0);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.sqk-tbody-div2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(48, 164, 255, 0.0);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sqk-tbody-div::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(48, 164, 255, 0.0);
+}
+.sqk-tbody-div2::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(48, 164, 255, 0.0);
+}
+
+.sqk-tbody-div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(48, 164, 255, 0.3);
+    background-color: rgba(48, 164, 255, 1.0);
+}
+.sqk-tbody-div2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(48, 164, 255, 0.3);
+    background-color: rgba(48, 164, 255, 1.0);
+}

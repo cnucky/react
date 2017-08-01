@@ -1,0 +1,28 @@
+<a data-id="<%- id %>" data-key="<%- key %>" id="favorites-<%- title %>" data-link="<%- link %>" data-toggle="tooltip" data-placement="right" title="<%- title %>" <% if (children && children.length > 0) {%>class="accordion-toggle"<% } %>
+    <% if(openmode!=1){ %>target="<%- link %>" <% } %>
+    <% if(openmode == 3){ %>
+        href='/home-frame.html?redirectUrl=<%- link %>&pageName=<%- title %>'
+    <% }else{ %>
+        href="<%- link %>"
+        
+    <% } %>
+    >
+
+    <span class="<%- icon %>">
+        <img src="<%- favorites_icon %>"/>
+        
+    </span>
+    <% if (depth == 0) { %>
+    <% } else { %>
+        <%- title %>
+    <% } %>
+    <% if((!children || children.length == 0) && !!badge) { %>
+    <span class="sidebar-title-tray">
+        <span class="label label-xs bg-primary"><%- badge %></span>
+    </span>
+    <% } %>
+    <% if (children && children.length > 0) { %> 
+    <span class="caret"></span>
+    <% } %>
+
+</a>

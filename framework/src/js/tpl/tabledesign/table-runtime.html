@@ -1,0 +1,51 @@
+<div style="margin-top: 10px;">
+	<div id="mainTable">
+	</div>
+	<div id="subTables" class="tab-block mb25 hidden" style="margin-top:20px;">
+	    <ul class="nav nav-tabs">
+	    </ul>
+	    <div class="tab-content" style="overflow: initial">
+	    </div>
+	</div>
+	<div id="attachmentDiv" class="row hidden">
+		<button id="btnUpload" style="margin-left:10px;" class="pull-left btn btn-primary">上传附件</button>
+		<div id="attachments" class="pull-left">
+		</div>
+		<div class="hidden">
+			<div>
+			    <div class="table" id="previews">
+			        <div id="template" class="file-row">
+			            <div>
+			                <span class="name" data-dz-name></span>
+			            </div>
+			            <div>
+			                <span class="size" data-dz-size></span>
+			            </div>
+			            <div>
+			                <button class="btn btn-primary btn-sm start">
+			                    <i class="glyphicon glyphicon-upload"></i>
+			                    <span>上传</span>
+			                </button>
+			                <button id="canceled" data-dz-remove class="btn btn-sm btn-warning cancel">
+			                    <i class="glyphicon glyphicon-ban-circle"></i>
+			                    <span>取消</span>
+			                </button>
+			                <button data-dz-remove class="btn btn-sm btn-danger delete disabled" style="opacity:0">
+			                    <i class="glyphicon glyphicon-trash"></i>
+			                    <span>删除</span>
+			                </button>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<span class="fileupload-process">
+                <div id="total-progress" class="progress progress-striped active"
+                   role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progress-bar progress-bar-success" ddstyle="width:0%;"
+                       data-dz-uploadprogress>
+                    </div>
+                </div>
+            </span>
+		</div>
+	</div>
+</div>

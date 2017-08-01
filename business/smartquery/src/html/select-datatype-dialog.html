@@ -1,0 +1,110 @@
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<section id="content" class="table-layout animated fadeIn">
+    <aside class="tray tray-right tray400 p20 br-n">
+        <!-- <div class="panel-body br-n"> -->
+        <div id="datatype-tree" style="height:auto; overflow:auto"></div>
+        <form id="form-add">
+            <div class="section">
+                <label for="update-file-name" class="field-label">名称 *</label>
+                <label for="name" class="field">
+                    <input type="text" name="update-file-name" id="update-file-name" class="gui-input">
+                </label>
+            </div>
+            <!-- end section -->
+            <!-- <div class="section" id="update-file-type">
+                        <label for="update-file-type" class="field-label">分类 *</label>
+                        <label for="name" class="field">
+                            <input type="text" name="update-file-type" id="update-file-type" class="gui-input" value="工作区" readonly>
+                        </label>
+                    </div> -->
+            <!-- end section -->
+            <div class="section">
+                <label for="update-file-description" class="field-label">描述 *</label>
+                <label for="update-file-description" class="field">
+                    <textarea type="description" name="update-file-description" id="update-file-description" class="gui-textarea" style="vertical-align: top;"></textarea>
+                </label>
+            </div>
+            <!-- end section -->
+            <!-- end .form-body section -->
+        </form>
+        <!-- </div> -->
+    </aside>
+</section>
+<!--<script type="text/javascript">
+// require([ 'widget/datatype-tree'],
+//     function(Tree) {
+//         // 创建用户组树
+//         //用户组树
+//         $('#datatype-tree').fancytree({
+//             selectMode: 3,
+//             checkbox: false,
+//             clickFolderMode: 1,
+//             source: {
+//                 url: "/smartquery/getDataTypeTree"
+//             },
+//             // init: function(event, data) {
+//             //     data.tree.visit(function(node) {
+//             //         node.setExpanded(true);
+//             //     });
+//             // },
+//             postProcess: function(event, data) {
+//                 hideLoader();
+//                 var groups = data.response.data;
+//                 _.each(groups, function(g) {
+//                     //g.folder = true;
+//                     //g.lazy = true;
+//                     g.hideCheckbox = true;
+//                 });
+//                 data.result = groups;
+//             },
+//             autoScroll: true,
+//             extensions: ["childcounter"],
+//             childcounter: {
+//                 deep: true,
+//                 hideZeros: true,
+//                 hideExpanded: true
+//             },
+//             iconClass: function(event, data) {
+//                 if (data.node.isFolder()) {
+//                     return "fa fa-folder-open";
+//                 } else {
+//                     return "fa fa-file-o";
+//                 };
+//             },
+//             lazyLoad: function(event, tree) {
+//                 // console.log('lazyLoad', arguments);
+//                 // alert(tree.node.data.dirId);
+//                 // var dfd = new $.Deferred();
+//                 // tree.result = dfd.promise();
+//                 // $.getJSON('/usergroup/getdatatype', {
+//                 //     //id: tree.node.data.dirId
+//                 // }, function(rsp) {
+//                 //     if (rsp.code != 0) {
+//                 //         alert(rsp.message);
+//                 //         return;
+//                 //     }
+//                 //     dfd.resolve(rsp.data)
+//                 // });
+//             },
+//             loadChildren: function(event, data) {
+//                 // Apply parent's state to new child nodes
+//                 if (this.selectMode == 3) {
+//                     data.node.fixSelection3AfterClick();
+//                 }
+//             },
+//             activate: function(event, el) {
+//                 // choosenGroup = null;
+//                 // if (el.node.isFolder()) {
+//                 //     $('#btn-delete-users').attr('disabled', '');
+//                 //     GroupInfo.renderGroupInfo(el.node.data);
+//                 //     choosenGroup = el.node.data;
+//                 // } else {
+//                 //     userToDel = el.node.data;
+//                 //     $('#btn-delete-users').removeAttr('disabled');
+//                 //     choosenGroup = el.node.parent.data;
+//                 //     UserInfo.renderUserInfo(el.node.data);
+//                 // }
+//             }
+//         });
+//     });
+// </script>-->

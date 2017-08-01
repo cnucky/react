@@ -1,0 +1,67 @@
+<style type="text/css">
+    .dataTables_scrollBody {
+        max-height: 300px;
+        min-height: 120px;
+    }
+
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-lg-1 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.bs-info">:</label>
+
+            <div class="col-md-2 ">
+                <select id="bs_carrier" class="form-control">
+                </select>
+            </div>
+            <div class="col-md-1">
+                <input id="bs_lac" class="form-control" placeholder="LAC">
+            </div>
+            <div class="col-md-1">
+                <input id="bs_ci" class="form-control" placeholder="CI">
+            </div>
+            <div class="col-md-2">
+                <input id="bs_switch" class="form-control"
+                       data-i18n="[placeholder]datasearch.searchdianwei.text.msc-code">
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="add_lacci" class="btn btn-success mr10">
+                    <i class="fa fa-plus"></i>
+                </button>
+                <button type="button" id="import_lacci" class="btn btn-primary">
+                    <i class="fa fa-download"></i>
+                </button>
+                <input type="file" id="file_selector" class="hidden">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-7">
+                <div class="panel">
+                    <div class="panel-body pn">
+                        <table class="table table-striped" id="basestation_table">
+                            <thead>
+                            <tr>
+                                <th data-i18n="[append]datasearch.searchdianwei.datatable.carrier"></th>
+                                <th data-i18n="[append]datasearch.searchdianwei.datatable.carrier-code"></th>
+                                <th data-i18n="[append]datasearch.searchdianwei.datatable.base-station"></th>
+                                <th data-i18n="[append]datasearch.searchdianwei.datatable.msc-code"></th>
+                                <th data-i18n="[append]datasearch.searchdianwei.datatable.operation"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

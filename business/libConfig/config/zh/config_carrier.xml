@@ -1,0 +1,9 @@
+<CONFIG_DATA>
+    <CARRIER CODE="-1" NAME="不区分运营商" />
+    <CARRIER CODE="1" NAME="中国移动" />
+    <CARRIER CODE="2" NAME="中国联通" />
+    <CARRIER CODE="3" NAME="中国电信" />
+    <CARRIER CODE="4" NAME="中国铁通" />
+    <CARRIER CODE="5" NAME="中国网通" />
+    <CARRIER CODE="0" NAME="其他运营商" />
+</CONFIG_DATA>

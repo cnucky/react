@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DATA_CALL、DATA_DCNET、DATA_EVENT、DATA_FAX、DATA_SMS-->
+<Search Type="DATA_FAX" DisplayName="电信传真">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="USER_NUM" DisplayName="用户号码" ControlType="Text"/>
+            <Condition Item="USER_IMSI" DisplayName="用户IMSI" ControlType="Text"/>
+            <Condition Item="USER_IMEI" DisplayName="用户IMEI" ControlType="Text"/>
+            <Condition Item="OPPO_NUM" DisplayName="对方号码" ControlType="Text"/>
+            <Condition Item="USER_BELONG_COUNTRY_CODE" DisplayName="用户归属国家" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_USER_BELONG_COUNTRY_CODE"/>
+            <Condition Item="USER_BELONG_AREA_CODE" DisplayName="用户归属地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="OPPO_BELONG_COUNTRY_CODE" DisplayName="对方归属国家" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_USER_BELONG_COUNTRY_CODE"/>
+            <Condition Item="OPPO_BELONG_AREA_CODE" DisplayName="对方归属地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="DTMF" DisplayName="附加拨号" ControlType="Text"/>
+            <Condition Item="OTHER_MSISDN" DisplayName="第三方号码" ControlType="Text"/>
+            <Condition Item="CALL_DURATION" DisplayName="通话时长(秒)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="特征信息">
+            <Condition Item="ROAM_TYPE" DisplayName="漫游类型" ControlType="DropDownMultiSelect" ValueType="multi"  ItemConfig="DIC_ROAM_TYPE"/>
+            <Condition Item="CARRIER_CODE" DisplayName="运营商" ControlType="DropDownMultiSelect" ValueType="multi"  ItemConfig="DIC_CARRIER_CODE"/>
+            <Condition Item="USER_BASE_STATION" DisplayName="用户所在基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="USER_CURR_AREA_CODE" DisplayName="用户所在地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="OPPO_BASE_STATION" DisplayName="对方所在基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="OPPO_CURR_AREA_CODE" DisplayName="对方所在地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="USER_NUM" DisplayName="用户号码" ControlType="Text"/>
+            <Condition Item="USER_IMSI" DisplayName="用户IMSI" ControlType="Text"/>
+            <Condition Item="USER_IMEI" DisplayName="用户IMEI" ControlType="Text"/>
+            <Condition Item="OPPO_NUM" DisplayName="对方号码" ControlType="Text"/>
+            <Condition Item="USER_BELONG_COUNTRY_CODE" DisplayName="用户归属国家" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_USER_BELONG_COUNTRY_CODE"/>
+            <Condition Item="USER_BELONG_AREA_CODE" DisplayName="用户归属地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="OPPO_BELONG_COUNTRY_CODE" DisplayName="对方归属国家" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_USER_BELONG_COUNTRY_CODE"/>
+            <Condition Item="OPPO_BELONG_AREA_CODE" DisplayName="对方归属地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="DTMF" DisplayName="附加拨号" ControlType="Text"/>
+            <Condition Item="OTHER_MSISDN" DisplayName="第三方号码" ControlType="Text"/>
+            <Condition Item="CALL_DURATION" DisplayName="通话时长(秒)" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="ROAM_TYPE" DisplayName="漫游类型" ControlType="DropDownMultiSelect" ValueType="multi"  ItemConfig="DIC_ROAM_TYPE"/>
+            <Condition Item="CARRIER_CODE" DisplayName="运营商" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_CARRIER_CODE"/>
+            <Condition Item="USER_BASE_STATION" DisplayName="用户所在基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="USER_CURR_AREA_CODE" DisplayName="用户所在地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="OPPO_BASE_STATION" DisplayName="对方所在基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="OPPO_CURR_AREA_CODE" DisplayName="对方所在地区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

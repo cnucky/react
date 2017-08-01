@@ -1,0 +1,202 @@
+<!-- shim styles -->
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.arctic.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.bootstrap.css"> -->
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/setPositionModule/setPositionModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/setLayerModule/setLayerModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/searchPOIModule/searchPOIModuleCSS.css" />
+<!-- <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModuleCSS.css" /> -->
+ <link rel="stylesheet" href="../js/components/gisWidget/enclosureManageModule/fancyTree/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/enclosureManageModule/enclosureManageModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MyMarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.css">
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css" />
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css" />
+<!-- <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/intelligentQueryModule/intelligentQueryModule.css" /> -->
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="./css/gis/gis-style.css">
+<style type="text/css">
+.bootstrap-tagsinput input{
+    width: 100% !important
+}
+.bootstrap-tagsinput.bootstrap-tagsinput-max input{
+    width: auto !important
+}
+#map {
+    height: 100%;
+    min-height: 500px;
+}
+
+.functionPanel-out {
+    position: relative;
+    width: 315px;
+    float: right;
+    background-color: #ffffff;
+}
+
+.leaflet-mouse-marker {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+.leaflet-edit-move {
+    cursor: move;
+}
+
+.leaflet-draw-guide-dash {
+    font-size: 1%;
+    opacity: 0.6;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.measuring-label-tooltip .leaflet-popup-content-wrapper {
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    padding: 1px;
+    text-align: center;
+}
+
+.edit-look {
+    stroke-dasharray: 2, 10;
+}
+
+#mapContainer * {
+    box-sizing: content-box;
+}
+
+#mapContainer img {
+    vertical-align: baseline;
+}
+#mapToolBar [data-toggle="dropdown"]{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 29px;
+
+}
+
+#mapToolBar li{
+    height: 20px;
+}
+
+#mapToolBar a{
+    height: 20px;
+}
+
+#mapToolBar label{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 20px;
+    min-height: 20px;
+}
+
+/*#queryCond .btn-group button {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+#queryCond .btn-group {
+    display: block
+}
+#queryCond p{
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 32px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}*/
+
+</style>
+<!-- end shim -->
+<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/leaflet.markercluster-src.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>
+<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>
+<script src="../js/components/gisWidget/setPositionModule/setPositionModule.js"></script>
+<script src="../js/components/gisWidget/setLayerModule/setLayerModule.js"></script>
+<script src="../js/components/gisWidget/searchPOIModule/searchPOIModule.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/gis-smooth.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/bezier.js"></script>
+<script src="../js/components/gisWidget/gisLibs/ant-line/leaflet-ant-path.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/MovingMarker.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModule1.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/selfDefination/esri-leaflet-clustered-feature-layer.js"></script>
+
+<script src="../js/components/gisWidget/enclosureManageModule/fancyTree/fancytree-master/lib/jquery-ui-contextmenu/jquery.ui-contextmenu.min.js"></script>
+
+<script src="../js/components/gisWidget/enclosureManageModule/enclosureManageModual.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawEditMenu2-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawCircle-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawRectangle-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawPolygon-src.js"></script>
+<script src="../js/components/gisWidget/intelligentQueryModule/intelligentQueryModule.js"></script>
+
+<!-- <script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxsplitter.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxpanel.js"></script> -->
+<section id="content" class='table-layout pn'>
+    <!--  <div class="tray tray-center pn" style=""> -->
+    <form class="form-horizontal" role="form" id="map-form" style="height: 100%;">
+        <div class="panel mn" style="height: 100%;">
+            <div class="panel-body pn" id="map-panel" style="border: 0px;height: 100%; ">
+                <div id="mainSplitter" style="height: 100%;">
+                    <div class="splitter-panel" style="height: 100%;">
+                        <div id="mapContainer" style="border:0;height: 100%;">
+                        </div>
+                    </div>
+                  <!--   <div class="splitter-panel">
+                        <div class="panel-menu" id='panel-menu'>
+                            <a id="locate-button" class="btn btn-danger btn-xs" style=''><span class="fa fa-map-marker pr5"></span>电子地图</a>
+                        </div>
+                        <div id='grid-div'>
+                            <div id="gridContainer" ></div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- </div> -->
+</section>
+
+<script type="text/javascript" src="${entryRoot}/data-fence.js"></script>

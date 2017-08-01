@@ -1,0 +1,10 @@
+<button id="relationAnalysis_btn" type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="glyphicon glyphicon-compressed icon"></i><span>关系分析</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+    <% _.each(data, function(item) { %>
+        <li class="dropdown-menu-child relationAnalysis" data-detail="<%- JSON.stringify(item) %>">
+            <a href="javascript:void(0)"><%- item.NAME %></a>
+        </li>
+    <% }) %>
+</ul>

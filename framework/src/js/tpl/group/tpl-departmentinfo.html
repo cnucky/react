@@ -1,0 +1,32 @@
+<div id="department-form">
+    <div class="panel mb50" id="department-info">
+        <div class="panel-heading">
+            <span class="panel-title" data-i18n="usermanage.tpl-depdetail"></span>
+            <div class="widget-menu pull-right mr10">
+                <button id="delete-department" type="button" class="btn btn-sm btn-danger ph15 mr5" data-i18n="usermanage.tpl-delete"></button>
+                <button id="move-department" type="button" class="btn btn-sm btn-default ph15 mr5" style="display:none;" data-i18n="usermanage.tpl-move"></button>
+                <button id="edit-department" type="button" class="btn btn-sm btn-primary ph15" data-i18n="usermanage.tpl-edit"></button>
+            </div>
+        </div>
+        <div class="panel-body p20">
+            <div class="admin-form">
+                <div class="section row mb10">
+                    <label for="department-name" class="field-label col-md-2" data-i18n="usermanage.tpl-depname"></label>
+                    <div class="col-md-10">
+                        <label for="department-name" class="field">
+                            <input type="text" name="department-name" id="department-name" class="gui-input" value="<%- departmentName %>" readonly="">
+                        </label>
+                    </div>
+                </div>
+                <div class="section row mb10">
+                    <label for="department-description" class="field-label col-md-2" data-i18n="usermanage.tpl-depdesc"></label>
+                    <div class="col-md-10">
+                        <label for="department-description" class="field">
+                            <textarea class="gui-textarea" id="department-description" readonly=""><%- description %></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

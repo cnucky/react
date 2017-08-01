@@ -1,0 +1,56 @@
+{
+    "code": 0,
+    "data": {
+        "srcDataTypes": [
+            {
+                "index": "0",
+                "inputNode": "10000011",
+                "key": "10000011",
+                "dataType": {
+                    "centerCode": "100000",
+                    "zoneId": "1",
+                    "typeId": "1"
+                },
+                "fieldList":[{
+                     "codeUsage": "48",
+                     "field":["CERT_NO"]
+                  }],
+                "cond":{
+                    "composite": true,
+                    "logicOperator": "and",
+                    "children": [{
+                        "composite": true,
+                        "logicOperator": "and",
+                        "children": [{
+                            "composite": false,
+                            "column": "personal_no",
+                            "opr":    "equal",
+                            "value": [2132321]
+                        }]
+                    }]
+                }
+
+            }, {
+                "index": "0",
+                "inputNode": "10000021",
+                "key": "10000021",
+                "dataType": {
+                    "centerCode": "100000",
+                    "zoneId": "1",
+                    "typeId": "2"
+                },
+                "fieldList":[{
+                     "codeUsage": "48",
+                     "field":["ID_NO","PASSPORT_NO"]
+                  }]
+            }],
+            "semanticId": 48,
+            "collisionCount": 2,
+            "output":[{
+                "codeUsage": "48",
+                "displayName": "证件号码"
+            }]
+
+    },
+    "message": ""
+}

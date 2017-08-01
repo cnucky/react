@@ -1,0 +1,177 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "departmentId": 618,
+      "departmentName": "江苏省公安厅",
+      "departmentPath": "",
+      "departmentType": 2,
+      "description": "江苏省公安厅",
+      "extraClasses": "nv-department",
+      "folder": true,
+      "key": "dep-618",
+      "lazy": false,
+      "parentDepartmentId": -1,
+      "title": "江苏省公安厅",
+      "children": [
+        {
+          "departmentId": 620,
+          "departmentName": "二处",
+          "departmentPath": "",
+          "departmentType": 2,
+          "description": "江苏省公安厅二处",
+          "extraClasses": "nv-department",
+          "folder": true,
+          "key": "dep-620",
+          "lazy": false,
+          "parentDepartmentId": 618,
+          "title": "二处",
+          "children": [
+            {
+              "departmentId": 624,
+              "departmentName": "一科",
+              "departmentPath": "",
+              "departmentType": 2,
+              "description": "二处一科",
+              "extraClasses": "nv-department",
+              "folder": false,
+              "key": "dep-624",
+              "lazy": false,
+              "parentDepartmentId": 620,
+              "title": "一科"
+            },
+            {
+              "departmentId": 626,
+              "departmentName": "三科",
+              "departmentPath": "",
+              "departmentType": 2,
+              "description": "二处三科",
+              "extraClasses": "nv-department",
+              "folder": false,
+              "key": "dep-626",
+              "lazy": false,
+              "parentDepartmentId": 620,
+              "title": "三科"
+            }
+          ]
+        },
+        {
+          "departmentId": 619,
+          "departmentName": "一处q",
+          "departmentPath": "",
+          "departmentType": 2,
+          "description": "江苏省公安厅一处",
+          "extraClasses": "nv-department",
+          "folder": true,
+          "key": "dep-619",
+          "lazy": false,
+          "parentDepartmentId": 618,
+          "title": "一处q",
+          "children": [
+            {
+              "departmentId": 622,
+              "departmentName": "一科",
+              "departmentPath": "",
+              "departmentType": 2,
+              "description": "一处一科",
+              "extraClasses": "nv-department",
+              "folder": true,
+              "key": "dep-622",
+              "lazy": false,
+              "parentDepartmentId": 619,
+              "title": "一科",
+              "children": [
+                {
+                  "departmentId": 623,
+                  "departmentName": "二科",
+                  "departmentPath": "",
+                  "departmentType": 2,
+                  "description": "一处二科",
+                  "extraClasses": "nv-department",
+                  "folder": true,
+                  "key": "dep-623",
+                  "lazy": false,
+                  "parentDepartmentId": 622,
+                  "title": "二科",
+                  "children": [
+                    {
+                      "departmentId": 323,
+                      "departmentName": "1",
+                      "departmentPath": "",
+                      "departmentType": 2,
+                      "description": "1",
+                      "extraClasses": "nv-department",
+                      "folder": true,
+                      "key": "dep-323",
+                      "lazy": false,
+                      "parentDepartmentId": 623,
+                      "title": "1",
+                      "children": [
+                        {
+                          "departmentId": 324,
+                          "departmentName": "1_1",
+                          "departmentPath": "",
+                          "departmentType": 2,
+                          "description": "",
+                          "extraClasses": "nv-department",
+                          "folder": true,
+                          "key": "dep-324",
+                          "lazy": false,
+                          "parentDepartmentId": 323,
+                          "title": "1_1",
+                          "children": [
+                            {
+                              "departmentId": 325,
+                              "departmentName": "1_2",
+                              "departmentPath": "",
+                              "departmentType": 2,
+                              "description": "",
+                              "extraClasses": "nv-department",
+                              "folder": true,
+                              "key": "dep-325",
+                              "lazy": false,
+                              "parentDepartmentId": 324,
+                              "title": "1_2",
+                              "children": [
+                                {
+                                  "departmentId": 326,
+                                  "departmentName": "1-6",
+                                  "departmentPath": "",
+                                  "departmentType": 2,
+                                  "description": "",
+                                  "extraClasses": "nv-department",
+                                  "folder": false,
+                                  "key": "dep-326",
+                                  "lazy": false,
+                                  "parentDepartmentId": 325,
+                                  "title": "1-6"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "departmentId": 305,
+      "departmentName": "6所",
+      "departmentPath": "",
+      "departmentType": 2,
+      "description": "12432",
+      "extraClasses": "nv-department",
+      "folder": false,
+      "key": "dep-305",
+      "lazy": false,
+      "parentDepartmentId": -1,
+      "title": "6所"
+    }
+  ]
+}

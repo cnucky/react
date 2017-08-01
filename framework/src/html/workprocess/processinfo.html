@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Loading...</title>
+        <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+        <meta name="author" content="ByUTech">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="${root}/css/loaders.css">
+        <link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+        <link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="${root}/css/skin/theme.css">
+        <link rel="stylesheet" type="text/css" href="${root}/css/nova.css">
+        <link rel="stylesheet" type="text/css" href="/fonts/glyphicons-pro/glyphicons-pro.css">
+        <link rel="stylesheet"  href="${root}/css/skin/summernote.css">
+
+        <style>
+            .separator{
+                border-width: 5px 1px;
+                border-color: #DCD8D8;
+                border-style: solid;
+                margin: 0px 8px 0px 3px;
+            }
+            .alert-content > .alert{
+                font-weight: bold;
+                padding: 8px 35px 8px 8px;
+            }
+            .alert-suggest {
+                background-color: #626984;
+                color: #FFF;
+            }
+        </style>
+    </head>
+    <body style="background-color:#fff;">
+        <div id="process-form">
+            <div class="panel mb10" id="process-info">
+                <div class="panel-heading">
+                    <a class="btn btn-success btn-sm ml10" id="btn-flow-back">
+                        <span class="fa fa-chevron-left pr5"></span>
+                        <span data-i18n="workprocess.operations.back"></span>
+                    </a>
+                    <span id = "btn-flow-group"></span>
+                    <a class="btn btn-success btn-sm ml10" id="btn-flow-delete">
+                        <span class="glyphicons glyphicons-remove_2 pr5"></span>
+                        <span data-i18n="workprocess.operations.delete"></span>
+                    </a>
+                    <a class="btn btn-success btn-sm ml10 hidden" id="btn-flow-comment">
+                        <span class="glyphicons glyphicons-circle_info pr5"></span>
+                        <span  data-i18n="workprocess.operations.showComment"></span>
+                    </a>
+                    <a class="btn btn-success btn-sm ml10" id="btn-flow-save">
+                        <span class="fa fa-sign-in fa-lg"></span>
+                        <span data-i18n="workprocess.operations.save"></span>
+                    </a>
+                    <a class="btn btn-success btn-sm ml10" id="btn-flow-process">
+                        <span class="fa fa-picture-o fa-lg"></span>
+                        <span data-i18n='workprocess.operations.traceflow'></span>
+                    </a>
+                    <a class="btn btn-success btn-sm ml10" id="btn-flow-reset">
+                        <span class="fa fa-reply fa-lg"></span>
+                        <span data-i18n='workprocess.operations.reset'></span>
+                    </a>
+                    <span id = "custom-btn-group"></span>
+                </div>
+                <div class="panel-body">
+                    <div id="alert-content" class="alert-content"></div>
+                    <div id="process-content"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="${root}/js/components/lib/jquery.js"></script>
+        <script type="text/javascript" src="${root}/js/components/lib/jquery-ui.js"></script>
+        <script type="text/javascript" src="${root}/js/components/lib/bootstrap.js"></script>
+        <script type="text/javascript" src="${root}/js/components/lib/underscore.js"></script>
+        <script type="text/javascript" src="${root}/js/components/lib/q.min.js"></script>
+        <script type="text/javascript" src="${root}/js/components/summernote/summernote.min.js"></script>
+        <script type="text/javascript" src="${root}/js/components/summernote/summernote-zh-CN.js"></script>
+        <script type="text/javascript" src="${root}/js/components/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <script type="text/javascript" src="${root}/js/components/i18next/i18next.min.js"></script>
+        <script type="text/javascript" src="${root}/js/components/jquery-i18next/jquery-i18next.min.js"></script>
+        <script type="text/javascript" src="/js/processinfo.js"></script>
+    </body>
+</html>
+

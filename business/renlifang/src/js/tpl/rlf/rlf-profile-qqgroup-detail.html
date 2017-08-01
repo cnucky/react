@@ -1,0 +1,20 @@
+<div class="p5">
+    <h4> <%- name %> </h4>
+    <br/>
+    <div>
+        <label class="field-label">群信息</label>
+        <p class="default-text">
+            <span>群号:</span><span class="text-info ml10"><%- number %></span>
+            <br/>
+            <span>创建时间:</span><span class="text-info ml10"><%- createTime %></span>
+            <br/>
+            <span>群主:</span><span class="text-info ml10"><%= owners.join(', ') %></span>
+            <br/>
+            <span>描述:</span><span class="text-info ml10"><%- description %></span>
+        </p>
+    </div>
+</div>
+<div class="p5">
+    <label class="field-label">群成员</label>
+    <div class="qq-group mt10" id="relation-qqgroup-tree"></div>
+</div>

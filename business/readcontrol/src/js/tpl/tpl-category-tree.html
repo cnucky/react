@@ -1,0 +1,36 @@
+<div class="row" style="height: 10px"></div>
+<ul id="tree_entity" style="display: none;">
+    <li class="first">
+        <i class="glyphicon glyphicon-triangle-bottom"></i>
+        <i style="margin-left: 20px;color:#F1C405;"   class="fa fa-user "></i>
+        <label style="margin-left: 5px"><%- data['ENTITY']?data['ENTITY'].title:"" %></label>
+    </li>
+    <% if(data['ENTITY']) _.each(data['ENTITY'].children, function(entity_item) { %>
+    <li style="display: none" class="tree_child_data" data-key="<%- entity_item.key %>"><%-entity_item.title%>
+        <span id="<%- entity_item.key %>_COUNT"><%-entity_item.count%></span>
+    </li>
+    <% }) %>
+</ul>
+<ul id="tree_data">
+    <li class="first"><i class="glyphicon glyphicon-triangle-bottom"></i>
+        <i style="margin-left: 20px;color:#F1C405;" class="fa fa-bullseye"></i>
+        <label style="margin-left: 5px"><%- data['DATA'].title %></label>
+    </li>
+    <% _.each(data['DATA'].children, function(data_item) { %>
+    <li style="display: none" class="tree_child_data" data-key="<%- data_item.key %>"><%-data_item.title%>
+        <span id="<%- data_item.key %>_COUNT"><%-data_item.count%></span>
+    </li>
+    <% }) %>
+</ul>
+<ul id="tree_file">
+    <li class="first">
+        <i class="glyphicon glyphicon-triangle-bottom"></i>
+        <i style="margin-left: 20px;color:#F1C405;" class="fa fa-file"></i>
+        <label style="margin-left: 5px"><%- data['FILE'].title %></label>
+    </li>
+    <% _.each(data['FILE'].children, function(file_item) { %>
+    <li style="display: none" class="tree_child_data" data-key="<%- file_item.key %>"><%-file_item.title%>
+        <span id="<%- file_item.key %>_COUNT"><%-file_item.count%></span>
+    </li>
+    <% }) %>
+</ul>

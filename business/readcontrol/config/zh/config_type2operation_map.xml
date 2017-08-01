@@ -1,0 +1,36 @@
+<Type2Operation>
+    <Type name="int">
+        <Operation key="EXEQ" val="" />
+        <Operation key="GT" val="" />
+        <Operation key="GE" val="" />
+        <Operation key="LT" val="" />
+        <Operation key="LE" val="" />
+        <Operation key="BTW" val="" />
+    </Type>
+    <Type name="float">
+        <Operation key="EXEQ" val="" />
+        <Operation key="GT" val="" />
+        <Operation key="GE" val="" />
+        <Operation key="LT" val="" />
+        <Operation key="LE" val="" />
+        <Operation key="BTW" val="" />
+    </Type>
+    <Type name="string">
+        <Operation key="EXEQ" val="" />
+        <Operation key="NOTEQ" val="" />
+        <Operation key="ISNULL" val="" />
+        <Operation key="ISNOTNULL" val="" />
+        <Operation key="LIKE" val="无需用*进行模糊匹配" />
+        <Operation key="NOTLIKE" val="无需用*进行模糊匹配" />
+        <Operation key="STARTWITH" val="无需用*进行模糊匹配" />
+        <Operation key="ENDWITH" val="无需用*进行模糊匹配" />
+    </Type>
+    <Type name="ip">
+        <Operation key="EXEQ" val="" />
+        <Operation key="BTW" val="" />
+    </Type>
+    <Type name="date">
+        <Operation key="EXEQ" val="" />
+        <Operation key="BTW" val="" />
+    </Type>
+</Type2Operation>

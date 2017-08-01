@@ -1,0 +1,24 @@
+<li class="media clearfix pb20 mb20" style="margin-left: -20px;">
+    <div class="new-update clearfix">
+        <span class="update-done">
+            <a href="#" style="font-size: 15px" data-value="<%- doc %>" id="<%- id %>"><%- docName %></a>
+            <span style="margin-top: 5px;font-size:10px;">业务时间：<%- docModifyTime %> 导入时间：<%- docLoadTime %> 相似度：<%- docScore %></span>
+            <span style="margin-top: 10px; word-break: break-all;font-weight: normal;color: #000011">
+                <% var patt = new RegExp('<em>.*?</em>', 'g') %>
+                <% var ret, start = 0, end = 0 %>
+                <% while((ret=patt.exec(docSummary))!=null) { %>
+                    <% end = ret.index %>
+                    <%- docSummary.substring(start, end) %>
+                    <%= ret %>
+                    <% start = patt.lastIndex %>
+                <% } %>
+                <%- docSummary.substring(start, docSummary.length) %>
+            </span>
+        </span>
+    </div>
+    <span class="pull-right" style="margin-right: 20px">
+        <a href="#" class="button btn-primary btn-mini" data-effect="mfp-zoomIn" data-value="<%- doc %>">查看</a>
+        <a href="#" class="button btn-success btn-mini" data-value="<%- doc %>">浏览</a>
+        <a href="#" class="button btn-danger btn-mini" data-value="<%- doc %>">下载</a>
+    </span>
+</li>

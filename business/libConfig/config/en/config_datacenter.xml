@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONFIG_DATACENTER AREA_CODE="650000">
+    <DATA_AREA NAME="本地数据中心" CODE="area-001.local" AREA_CODE="650000">
+        <DATA_SYSTEM NAME="电信查询系统" CODE="local-50002" SYSTEM_CODE="50002" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="电子围控系统" CODE="local-50003" SYSTEM_CODE="50003" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true">
+            <FRONT_GROUP NAME="中国电信" CODE="1">
+                <FRONT_CITY NAME="乌鲁木齐" CODE="2"/>
+                <FRONT_CITY NAME="河田" CODE="3"/>
+            </FRONT_GROUP>
+        </DATA_SYSTEM>
+        <DATA_SYSTEM NAME="电子围栏侦控前台" CODE="front-50003" SYSTEM_CODE="50003" SUBMIT_POINT="front-501"
+                     QUERY_TYPE="remote-dw" SPY_TYPE="false"/>
+        <DATA_SYSTEM NAME="区域性国际长话侦控系统" CODE="local-50004" SYSTEM_CODE="50004" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="718系统" CODE="local-50005" SYSTEM_CODE="50005" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="电信短信查询系统" CODE="local-50006" SYSTEM_CODE="50006" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="923系统" CODE="local-50007" SYSTEM_CODE="50007" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="A接口系统" CODE="local-50008" SYSTEM_CODE="50008" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="993-2G系统" CODE="local-50009" SYSTEM_CODE="50009" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="993-3G系统" CODE="local-50010" SYSTEM_CODE="50010" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="互联网省市口侦控系统" CODE="local-70004" SYSTEM_CODE="70004" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="移动互联网侦控系统" CODE="local-70005" SYSTEM_CODE="70005" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="327-2系统" CODE="local-70006" SYSTEM_CODE="70006" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+        <DATA_SYSTEM NAME="烽火系统" CODE="local-80001" SYSTEM_CODE="80001" SUBMIT_POINT="local" QUERY_TYPE="local"
+                     SPY_TYPE="true"/>
+    </DATA_AREA>
+    <!-- 
+    <DATA_AREA NAME="部中心" CODE="area-001.bzx" AREA_CODE="100000">
+        <DATA_SYSTEM NAME="327平台" CODE="bzx-70001" SYSTEM_CODE="70001" SUBMIT_POINT="bzx-701" QUERY_TYPE="local" SPY_TYPE="false"/>
+        <DATA_SYSTEM NAME="923系统" CODE="bzx-50007" SYSTEM_CODE="50007" SUBMIT_POINT="bzx-501" QUERY_TYPE="local" SPY_TYPE="false">
+            <FRONT_GROUP NAME="北京出口局设备" CODE="1"/>
+            <FRONT_GROUP NAME="上海出口局设备" CODE="2"/>
+            <FRONT_GROUP NAME="广州出口局设备" CODE="3"/>
+        </DATA_SYSTEM>
+    </DATA_AREA>
+    <DATA_AREA_GROUP NAME="全国联网侦控" CODE="area-001.bzx">
+        <DATA_AREA NAME="江苏数据中心" CODE="area-001.js" AREA_CODE="320000">
+            <DATA_SYSTEM NAME="4G综合侦控平台" CODE="00001" SYSTEM_CODE="00001" SUBMIT_POINT=""/>
+            <DATA_SYSTEM NAME="电子围栏侦控系统" CODE="50003" SYSTEM_CODE="50003" SUBMIT_POINT=""/>
+            <DATA_SYSTEM NAME="区域性国际长话侦控系统" CODE="50004" SYSTEM_CODE="50004" SUBMIT_POINT=""/>
+            <DATA_SYSTEM NAME="互联网省市口侦控系统" CODE="70004" SYSTEM_CODE="70004" SUBMIT_POINT=""/>
+        </DATA_AREA>
+    </DATA_AREA_GROUP>
+    -->
+</CONFIG_DATACENTER>

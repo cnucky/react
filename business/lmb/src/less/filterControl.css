@@ -1,0 +1,31 @@
+ol, ul {list-style: none;}
+blockquote,q {quotes: none;}
+a{text-decoration:none;color:#4a9aff;}
+a:hover{text-decoration: none}
+a:focus{ outline:none;text-decoration: none}
+.content{margin:auto;width:100%;max-height: 100%;overflow-y: scroll}
+.content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.content::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(50, 110, 255);
+}
+.sx_updown{width:100%;height:75%;background:transparent;overflow:hidden;padding:32px 0 40px 0;z-index:9999;position:absolute;left:0;top:60px;text-align:left;}
+.updown_box{display: inline-block;min-height:100px;width:100%;-webkit-box-sizing: content-box;-moz-box-sizing: content-box; box-sizing: content-box;}
+.updown_box h3{font-size:16px;margin-bottom:18px;padding-left:30px;color: #4a9aff;background: url(../img/tag1.png) 3% center no-repeat}
+.updown_box h5{font-size:13px;margin: 0;padding-left:20px;color: #4a9aff;}
+.updown_box div{display: inline-block;margin-bottom: 5px;}
+.updown_box input{background: transparent;border: 1px solid #4a9aff;border-radius: 0px;margin-left: 20px;color:#4a9aff}
+.updown_box ul li{float:left;margin:0 10px 10px 10px;border: 1px solid #4a9aff}
+.updown_box ul li a{display:block;font-size:14px;padding:6px 20px 6px 15px;line-height:18px;}
+.updown_box ul li.selected a{background:url(../img/close1.png) 99% center no-repeat #4a9aff;color:#00002f;padding:6px 20px 6px 15px}

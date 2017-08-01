@@ -1,0 +1,259 @@
+<style>
+    .aplayer{
+        color: gray;
+        position: relative;
+    }
+    .aplayer >.channel >.waveform-container{
+        /*height: 50px;*/
+        width: 100%;
+    }
+    .aplayer >.channel >.aplayer-player{
+        display: none;
+    }
+    .aplayer >.aplayer-controls{
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        background-color: #303030;
+        padding-top: 3px;
+        border-radius: 5px;
+        padding-right: 350px;
+    }
+    .aplayer .aplayer-control {
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        /*margin: 4px;
+        font-size: 16px;*/
+        color: #c0c0c0;
+        text-align: center;
+    }
+    .aplayer .aplayer-control:hover,
+    .aplayer .aplayer-control:focus{
+        text-decoration: none;
+    }
+    #volume-controls{
+        position: absolute;
+        width: 20px;
+        height: 70px;
+        top: -75px;
+        left: 149px;
+        background: #303030;
+    }
+    .step-backward{
+        padding-left: 9px;
+    }
+    .play{
+        border: 2px solid #fff;
+        border-radius: 24px;
+        padding-left: 2px;
+        padding-top: 7px;
+        font-size: 18px;
+        border-color: #c0c0c0;
+    }
+    .pause{
+        border: 2px solid #fff;
+        border-radius: 24px;
+        padding-right: 1px;
+        padding-top: 7px;
+        font-size: 18px;
+        border-color: #c0c0c0;
+    }
+    .step-backward,
+    .step-forward,
+    .backward,
+    .forward{
+        font-size: 14px;
+    }
+    .displaytime{
+        color: #c0c0c0;
+    }
+    #volumerange{
+        max-width: 100px;
+        display: inline-block;
+        transform: rotate(270deg);
+        position: absolute;
+        width: 60px;
+        left: -20px;
+        top: 33px;
+        border-radius: 2px;
+        height: 4px;
+        background: #c0c0c0;
+    }
+    #playrange{
+        /*max-width: 470px;*/
+        position: absolute;
+        background: #c0c0c0;
+        border-radius: 4px;
+        display: inline-block;
+        vertical-align: 2px;
+        /*width: 60%;*/
+        width: 100%;
+        height: 9px;
+        margin-left: 120px;
+        margin-right: 200px;
+        margin-top: 14px;
+    }
+    .control-left{
+        position: absolute;
+        width: 120px;
+        top: 2.4px;
+    }
+    .control-right{
+        position: absolute;
+        width: 200px;
+        right: -10px;
+        top: 5px;
+    }
+    .control-left .tooltip.top,
+    .control-right .volume-up .tooltip.top,
+    .control-right .volume-off .tooltip.top{
+        width: 42px;
+    }
+    .control-right .togglewave .tooltip.top{
+        width: 55px;
+    }
+    .control-right .wave-show .tooltip.top,
+    .control-right .wave-hide .tooltip.top{
+        width: 68px;
+    }
+    .tooltip{
+        font-size: 13px;
+    }
+    .togglewave,
+    .wave-show,
+    .wave-hide{
+        padding-left: 8px;
+    }
+    .font-spymgr{
+        font-size: 19px;
+        position: relative;
+        top: 2px;
+    }
+    .loader-inner{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .loader-inner > div{
+        background: #9a8484;
+    }
+    .thum{
+        position: absolute;
+        cursor: pointer;
+        background: #eee;
+        border-radius: 8px;
+        top: -3px;
+        width: 16px;
+        height: 16px;
+    }
+    .thum > i{
+        position: absolute;
+        background: red;
+        border-radius: 3px;
+        width: 6px;
+        height: 6px;
+        top: 5px;
+        left: 5px;
+    }
+    .isprocess{
+        position: absolute;
+        background: #5b7fdd;
+        height: 9px;
+        width: 0px;
+        border-radius: 4px;
+    }
+    #play-process{
+        position: relative;
+    }
+    .volumeprocess{
+        height: 4px;
+        width: 60px;
+        border-radius: 2px;
+        background: #5b7fdd;
+        position: absolute;
+    }
+    .volumethum{
+        position: absolute;
+        cursor: pointer;
+        background: #eee;
+        width: 8px;
+        height: 8px;
+        left: 56px;
+        top: -2px;
+        border-radius: 4px;
+    }
+    .volumethum > i{
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        top: 2px;
+        left: 2px;
+        background: red;
+        position: absolute;
+    }
+    
+</style>
+<!--splitter-->
+<div class="aplayer">
+    <div class="wave-area">
+        <div id="loadericon">
+            <div class="loader-inner line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="channel0 channel">
+            <div class="waveform-container">
+            </div>
+            <audio class="aplayer-player">
+            </audio>
+        </div>
+        <div class="channel1 channel hidden">
+            <div class="waveform-container">
+            </div>
+            <audio class="aplayer-player">
+            </audio>
+        </div>
+    </div>
+    <div class="aplayer-controls">
+        <div class="control-left">
+            <a class="aplayer-control fa fa-step-backward step-backward"></a>
+            <a class="aplayer-control fa fa-backward backward"></a>
+            <a class="aplayer-control fa fa-play play"></a>
+            <a class="aplayer-control fa fa-pause pause"></a>
+            <a class="aplayer-control fa fa-forward forward"></a>
+            <a class="aplayer-control fa fa-step-forward step-forward"></a>
+        </div>
+        <div id="play-process">
+            <div id="playrange">
+                <div class="isprocess"></div>
+                <span class="thum">
+                    <i></i>
+                </span>
+            </div>
+        </div>
+        <div class="control-right">
+            <span class="displaytime"></span>
+            <a class="aplayer-control fa fa-random change-vol togglewave"></a>
+            <a class="aplayer-control fa fa-level-up change-left togglewave"></a>
+            <a class="aplayer-control fa fa-level-down change-right togglewave"></a>
+            <a class="aplayer-control font-spymgr icon-waves wave-show"></a>
+            <a class="aplayer-control font-spymgr icon-waves wave-hide"></a>
+            <a class="aplayer-control fa fa-volume-up volume-up"></a>
+            <a class="aplayer-control fa fa-volume-off volume-off"></a>
+            <div id="volume-controls">
+                <div id="volumerange">
+                    <div class="volumeprocess"></div>
+                    <span class="volumethum">
+                        <i></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

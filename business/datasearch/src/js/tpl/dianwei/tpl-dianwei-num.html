@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="form-group">
+
+            <label style="text-align: left;" class="col-sm-2 col-lg-1 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.num-type">:</label>
+
+            <div class="col-sm-10 col-lg-11">
+                <!--select type-->
+                <div class="input-group mt10">
+                    <div class="icheck-inline">
+                        <a class="radio-custom radio_relate_query_type mb5">
+                            <input type="radio" value="NUM" id="num_radio" checked="true" class="dw-num-type" name="dw_num_type"
+                                   data-i18n="[display]datasearch.searchdianwei.display-attr.number">
+                            <label for="num_radio" style="color:#666666;font-weight: 200"
+                                   data-i18n="[append]datasearch.searchdianwei.label.number"></label>
+                        </a>
+
+                        <a class="radio-custom radio_relate_query_type mb5">
+                            <input type="radio" value="USER_IMSI" id="imsi_radio" class="dw-num-type" name="dw_num_type"
+                                   data-i18n="[display]datasearch.searchdianwei.display-attr.imsi">
+                            <label for="imsi_radio" style="color:#666666;font-weight: 200"
+                                   data-i18n="[append]datasearch.searchdianwei.label.imsi"></label>
+                        </a>
+
+                        <a class="radio-custom radio_relate_query_type mb5">
+                            <input type="radio" value="USER_IMEI" id="imei_radio" class="dw-num-type" name="dw_num_type"
+                                   data-i18n="[display]datasearch.searchdianwei.display-attr.imei">
+                            <label for="imei_radio" style="color:#666666;font-weight: 200"
+                                   data-i18n="[append]datasearch.searchdianwei.label.imei"></label>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <input type="file" id="file_selector_relate" class="hidden">
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-sm-2 col-lg-1 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.num-content">:</label>
+            <!--input area batch-->
+            <div class="col-sm-10 col-lg-11 ">
+
+                <div class="row">
+                    <div class="col-sm-9 col-lg-6">
+
+                        <div class="row" id="input_batch_relate">
+                            <div class="col-sm-11 col-lg-10">
+
+                                <div>
+
+                                                        <span class="append-icon right  " for="import_mazhi">
+                                                            <div class="row" style="display:none;">
+                                                                <!--glyphicon glyphicon-import btn-link-->
+                                                                <i id="btn_import_relate"
+                                                                   data-i18n="[title]datasearch.searchdianwei.text.import-from-file"
+                                                                   class="fa fa-download btn-link  mr20"></i>
+                                                            </div>
+
+                                                        </span>
+                                    <textarea type="text" id="batch_input_num" name="batch_input_num"
+                                              style="height: 100px;margin-right: 2px;padding-right: 50px"
+                                              class="gui-input form-control"
+                                              data-i18n="[placeholder]datasearch.searchdianwei.text.one-each-line"></textarea>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 col-lg-6">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="num_check">
+    <div class="col-sm-12 col-md-12">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-sm-2 col-lg-1 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.match-side">:</label>
+
+            <div class="col-sm-10 col-lg-11 ">
+                <div class="checkbox-custom mt10">
+                    <input id="user_check" type="checkbox" class="num-check" name="num-check" value="USER"
+                           data-i18n="[display]datasearch.searchdianwei.display-attr.user" checked>
+                    <label for="user_check" style="color: #666666;font-weight: 200;"
+                           data-i18n="[append]datasearch.searchdianwei.label.user"></label>
+                    <input id="oppo_check" type="checkbox" class="num-check" name="num-check" value="OPPO"
+                           data-i18n="[display]datasearch.searchdianwei.display-attr.oppo" checked>
+                    <label for="oppo_check" style="color: #666666;font-weight: 200;"
+                           data-i18n="[prepend]datasearch.searchdianwei.label.oppo"></label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

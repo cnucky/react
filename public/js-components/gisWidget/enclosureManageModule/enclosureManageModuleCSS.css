@@ -1,0 +1,477 @@
+/*地图围栏样式begin*/
+.leaflet-mouse-marker {
+    background-color: #fff;
+    cursor: crosshair;
+}
+.leaflet-edit-move {
+    cursor: move;
+}
+.leaflet-draw-guide-dash {
+    font-size: 1%;
+    opacity: 0.6;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+.measuring-label-tooltip .leaflet-popup-content-wrapper {
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    padding: 1px;
+    text-align: center;
+}
+.edit-look {
+    stroke-dasharray:2, 10;
+}
+/*地图围栏样式end*/
+
+.enclosure-group-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.enclosure-group-body
+{
+    height: 430px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.enclosureList-style{
+    /*border: 1px solid #000000;*/
+    height: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.circle-style{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.circle-style:hover{ background-color: lightblue;}
+.rectangle-style{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.rectangle-style:hover{ background-color: lightblue;}
+.polygon-style{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.polygon-style:hover{ background-color: lightblue;}
+.enclosureMemu-style{
+    position: fixed;
+    background-color:aliceblue;
+    z-index: 1001;
+    width: 100px;
+    height: 150px;
+    display: none;
+    border:1px solid #000000;
+    padding: 8px;
+}
+.mapMenuParent-style{
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1001;
+    width: 180px;
+    height: 160px;
+    display: block;
+    border-top: 2px solid #E8E8E8;
+    border-left: 2px solid #E8E8E8;
+    border-right: 2px solid #E8E8E8;
+    border-bottom: 2px solid #E8E8E8;
+    padding: 1px;
+    /* margin-top: 5px; */
+    display: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mapMenu-style {
+    background-color: white;
+    width: 175px;
+    height: 150px;
+    padding: 3px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.mapMenu-oneItem{
+    height: 25px;
+}
+.mapMenu-oneItem:hover{
+    background-color:#2980b9;
+    cursor: default;
+}
+.innerPointParent-style{
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1001;
+    width: 100px;
+    /*height: 75px;*/
+    display: block;
+    border-top: 2px solid #E8E8E8;
+    border-left: 2px solid #E8E8E8;
+    border-right: 2px solid #E8E8E8;
+    border-bottom: 2px solid #E8E8E8;
+    padding: 1px;
+    font-size: 14px;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.innerPoint-style{
+    background-color: white;
+    width: 100%;
+    /*height: 100%;*/
+    padding: 3px;
+    font-size: 12px;
+}
+.enclosureAttribute-style{
+   /* position: fixed;
+    background-color:#ffffff;
+    z-index: 1001;*/
+    /*width: 240px;
+    height: 200px;*/
+    /*font-size: 12px;*/
+    /*display: none;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.attributeTitle-style{
+    height: 16px;
+    border:1px solid #000000;
+    padding: 4px;
+    background: linear-gradient(to right,#a9a9a9,#F0F0F0);
+    color: #ffffff;
+    font-weight: bolder;
+    /*width: 100%;*/
+}
+.attributeBody-style{
+    /*border-top: 2px solid #E8E8E8;*/
+    /*border-left: 1px solid #808080;
+    border-right:  1px solid #808080;
+    border-bottom: 1px solid #808080;*/
+    /*padding: 1px;*/
+    /*border:1px solid #000000;*/
+    /*height: 177px;*/
+    /*background-color:#E8E8E8 ;*/
+}
+.ui-menu { width: 180px;font-size: 63%;}
+.ui-menu kbd { float: right;}
+td.alignRight { text-align: right;}
+td input[type=input] { width: 40px;}
+.my-ui-icon-del{
+    background-image: url("../enclosureManageModule/fancyTree/image/error_16_p.png");
+    background-position: 0px 0px;
+}
+.my-ui-icon-edit{
+    background-image: url("../enclosureManageModule/fancyTree/image/layout_center_16_p.png");
+    background-position: 0px 0px;
+}
+.my-ui-icon-newDir{
+    background-image: url("../enclosureManageModule/fancyTree/image/folder.png");
+    background-position: 0px 0px;
+}
+.my-ui-icon-attribute{
+    background-image: url("../enclosureManageModule/fancyTree/image/document_edit_16_p.png");
+    background-position: 0px 0px;
+}
+.buttonInToolbar-style{
+    border:1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+      font-size: 24px;
+    height: 24px;
+    width: 24px;
+    color:#3498db;
+}
+.buttonInToolbar-style:hover{
+    background-color: #F0F0F0 !important;
+    cursor: pointer;
+}
+.dirTreePanel-style{
+    background-color:#ffffff;
+    z-index: 2001;
+    width: 300px;
+    /*height: 200px;*/
+    font-size: 12px;
+    display: none;
+    /*border:1px solid black;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#dirTree ul.fancytree-container{
+    /*width: 190px;*/
+    /*height: 160px;*/
+}
+.ecDir-style{
+    width: 280px;height:30px;float: left;border: 1px solid #989898;background-color: #ffffff;
+}
+.dirTreeButt-style{
+    float: left;width: 20px;height: 30px;background-color: #D8D8D8;padding-left: 3px;border-top: 1px solid #989898;border-bottom: 1px solid #989898;border-right: 1px solid #989898;
+}
+.dirTreeButtChild-style{
+    width: 0px;height: 0px;margin-top:10px;border-left: 6px solid transparent;border-right: 6px solid transparent;border-top:6px solid #000000;
+}
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0); 
+}
+.marker-icon{
+    background-color: rgb(110, 204, 57);
+    border-radius: 20px;
+}
+
+/* 自定义样式 */
+.checkbox-in-table{
+    background: url(./image/ico.png) no-repeat 0px -363px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 0;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+.checkbox-in-tool{
+    background: url(./image/ico.png) no-repeat 0px -363px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 0;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+
+.checkbox-checked .checkbox-in-tool{
+    background: url(./image/ico.png) no-repeat 0px -414px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 1;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+.checkbox-checked .checkbox-in-table{
+    background: url(./image/ico.png) no-repeat 0px -414px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 1;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+.table tbody tr td{
+    word-break: break-all;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: x-small;
+    color: #000000;
+}
+
+.table thead tr th{
+    border:1px solid #F2F2F2;
+    font-size:small;
+    color:#3489db;
+    font-weight:bold;
+
+}
+
+#map {
+    height: 100%;
+    min-height: 190px;
+}
+
+.functionPanel-out {
+    position: fixed;
+    width: 400px;
+    height: 500px;
+    float: right;
+    overflow: visible !important;;
+    background-color: #ffffff;
+    opacity: 0.9;
+    z-index: 999;
+    top: 135px;
+    right: 10px;
+    border: 1px solid:#e2e2e2;
+    border-radius: 3px;
+    box-shadow: 1px 2px 1px;
+}
+
+/*地图围栏样式begin*/
+.leaflet-mouse-marker {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+.leaflet-edit-move {
+    cursor: move;
+}
+
+.leaflet-draw-guide-dash {
+    font-size: 1%;
+    opacity: 0.6;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.measuring-label-tooltip .leaflet-popup-content-wrapper {
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    padding: 1px;
+    text-align: center;
+}
+
+.edit-look {
+    stroke-dasharray: 2, 10;
+}
+
+/*地图围栏样式end*/
+
+.enclosureMemu-style {
+    position: fixed;
+    background-color: aliceblue;
+    z-index: 1001;
+    width: 100px;
+    height: 150px;
+    display: none;
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+.mapMenuParent-style {
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1001;
+    width: 180px;
+    height: 88px;
+    display: block;
+    border-top: 2px solid #E8E8E8;
+    border-left: 2px solid #E8E8E8;
+    border-right: 2px solid #E8E8E8;
+    border-bottom: 2px solid #E8E8E8;
+    padding: 1px;
+    /* margin-top: 5px; */
+    display: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mapMenu-style {
+    background-color: white;
+    width: 170px;
+    height: 80px;
+    padding: 3px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.mapMenu-oneItem {
+    height: 25px;
+}
+
+.mapMenu-oneItem:hover {
+    background-color: #2980b9;
+    cursor: default;
+}
+
+
+.ui-menu {
+    width: 180px;
+    font-size: 63%;
+}
+
+.ui-menu kbd {
+    float: right;
+}
+
+td.alignRight {
+    text-align: right;
+}
+
+td input[type=input] {
+    width: 40px;
+}
+
+.my-ui-icon-del {
+    background-image: url("../enclosureManageModule/fancyTree/image/error_16_p.png");
+    background-position: 0px 0px;
+}
+
+.my-ui-icon-edit {
+    background-image: url("../enclosureManageModule/fancyTree/image/layout_center_16_p.png");
+    background-position: 0px 0px;
+}
+
+.my-ui-icon-newDir {
+    background-image: url("../enclosureManageModule/fancyTree/image/folder.png");
+    background-position: 0px 0px;
+}
+
+.my-ui-icon-attribute {
+    background-image: url("../enclosureManageModule/fancyTree/image/document_edit_16_p.png");
+    background-position: 0px 0px;
+}
+
+.marker-icon {
+    background-color: rgb(110, 204, 57);
+    border-radius: 20px;
+}
+
+.item-active{
+    background: #3498db;
+}
+
+.leaflet-top {
+    top: 35px;
+}

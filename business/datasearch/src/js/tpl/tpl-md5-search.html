@@ -1,0 +1,138 @@
+<!--<h3 class="form-section">MD5信息</h3>-->
+<h3 style="color: #3498db;" data-i18n="datasearch.searchfile.labels.search_conditions"></h3>
+<hr class="alt short">
+
+<div class="section mv5">
+    <input type="file" class="gui-file hidden" name="md5_file_selector" id="md5_file_selector">
+    <input type="file" class="gui-file hidden" name="import_file_selector" id="import_file_selector">
+
+    <div class="section mv5">
+        <div class="row">
+            <label class="control-label col-md-1 " style="text-align: left" data-i18n="datasearch.searchfile.labels.file_md5"></label>
+
+            <div class="col-md-11">
+                <div class="bs-component ">
+                    <span class="append-icon right  " for="import_mz">
+                        <div class="row">
+                            <i id="btn_file_import" data-i18n="[title]datasearch.searchfile.buttons.batch_import" style="font-size:large;margin-right:5px"
+                               class="fa fa-download mh5 btn-link"></i>
+                        </div>
+                         <div class="row">
+                             <i id="btn_file_md5" data-i18n="[title]datasearch.searchfile.buttons.pick_file" style="font-size: large;margin-right:5px"
+                                class="glyphicons glyphicons-calculator btn-link mt10 mh5"></i>
+                         </div>
+                    </span>
+                    <textarea id="txtmd5" condition_item="MT_FILE_MD5"
+                              style="height: 100px;margin-right: 2px;padding-right: 50px"
+                              class="gui-input form-control search-condition-text" supportBatch="true"
+                              data-i18n="[placeholder]datasearch.searchfile.text.md5_placeholder"
+                              ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.file_name"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <input type="text" class="form-control search-condition-text" id="txtFilename" condition_item="MT_FILE_NAME"
+                       placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.client_ip"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <!--<div condition_item="ClientIp" class="input-group search-condition-textrange search-condition-iprange">
+
+                    <input type="text" class="form-control search-condition-textrange-from search-input-ip"
+                           style="border-radius: 4px;" placeholder="">
+                    <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+                    <input type="text" class="form-control search-condition-textrange-to search-input-ip"
+                           style="border-radius: 4px;" placeholder="">
+
+                </div>-->
+
+                <table style="width: 100%" condition_item="CLIENT_IP"
+                       class="search-condition-textrange search-condition-iprange">
+                    <tr>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="clientIpFrom" name="clientIpFrom"
+                                       class="form-control search-condition-textrange-from search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+
+                        </td>
+                        <td valign="top" style="width: 10px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                        </td>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="clientIpTo" name="clientIpTo"
+                                       class="form-control search-condition-textrange-to search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.server_ip"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <!--<div condition_item="ServerIp" class="input-group search-condition-textrange search-condition-iprange">
+
+                    <input type="text" class="form-control search-condition-textrange-from search-input-ip"
+                           style="border-radius: 4px;" placeholder="">
+                    <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+                    <input type="text" class="form-control search-condition-textrange-to search-input-ip"
+                           style="border-radius: 4px;" placeholder="">
+
+                </div>-->
+                <table style="width: 100%" condition_item="SERVER_IP"
+                       class="search-condition-textrange search-condition-iprange">
+                    <tr>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="serverIpFrom" name="serverIpFrom"
+                                       class="form-control search-condition-textrange-from search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+
+                        </td>
+                        <td valign="top" style="width: 10px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                        </td>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="serverIpTo" name="serverIpTo"
+                                       class="form-control search-condition-textrange-to search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

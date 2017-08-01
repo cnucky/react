@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "new-task":"新任务",
+        "result-show":"显示结果",
+        "runBtn": "运行",
+        "collisionType":"碰撞类型",
+        "collisionSemantic":"碰撞语义",
+        "custom":"自定义",
+        "customSemantic":"自定义语义",
+        "add-button":"添加",
+        "semanticAdded":"已添加语义",
+        "other":"其它",
+        "firstSet":"首集合",
+        "collisionNumber":"碰撞次数",
+        "collisionCondition":"条件"
+    }
+}

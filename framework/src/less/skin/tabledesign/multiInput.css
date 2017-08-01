@@ -1,0 +1,75 @@
+.multiInput{
+	box-sizing:border-box;
+	display:block;
+	line-height:1.231;
+	font-weight:400;
+	font-size:14px;
+	padding:0px;
+}
+.multiInput label{
+	z-index:10;
+	position:relative;
+	vertical-align:top;
+	display:inline-block;
+	outline:none;
+	width:100%;
+	margin:0px;
+	box-sizing:border-box;
+	max-width:100%;
+	line-height:1.231;	
+	height:34px;	
+}
+.multiInput input{
+	display:block;
+	z-index:10;
+	padding:9px 12px;
+	border:none;
+	outline:1px solid transparent;
+	-webkit-transition:outline-color 0.5s ease;
+	position:relative;
+	font-weight:100;
+	color:#555555;
+	width:100%;
+	line-height:1.49	
+}
+
+.multiInput .arrow{
+	pointer-events:none;
+	position:absolute;
+	top:9px;
+	right:4px;
+	width:24px;
+	color:#9F9F9F;
+	z-index:100
+}
+.multiInput .arrow:before{
+	content:'\25BC';
+	bottom:4px;
+}
+.multiInput .disabled .arrow{
+	color:#ddd
+}
+.multiDiv {
+	border: 1px solid #ddd;
+	background:#f2f2f2;
+	z-index: 99999999; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+}
+
+.multiDiv ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+.multiDiv li{
+	padding:5px;
+}
+
+.multiDiv .form-control{
+	width:100%;
+	height:28px;
+}
+	

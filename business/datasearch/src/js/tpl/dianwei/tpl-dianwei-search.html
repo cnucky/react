@@ -1,0 +1,46 @@
+<div class="panel br-t bw5 br-primary">
+    <form class="form-horizontal" id="form-search-file">
+        <div class="panel-body bg-light">
+
+            <div class="form-body">
+                <!--<h3 class="form-section">查询范围</h3>-->
+                <h3 style="color: #3498db;"
+                    data-i18n="[append]datasearch.searchdianwei.title.search-range"></h3>
+                <hr class="alt short">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="datacenter_range"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="time_range"></div>
+                    </div>
+
+                </div>
+
+                <%= Types %>
+
+                <h3 style="color: #3498db;"
+                    data-i18n="[append]datasearch.searchdianwei.title.search-condition"></h3>
+                <hr class="alt short">
+
+                <div id="<%- ContentId %>"></div>
+
+            </div>
+        </div>
+
+        <div class="panel-footer text-center">
+            <button id="btnSearch" type="submit" style="width: 100px;"
+                    class="btn btn-primary btn-sm "
+                    data-i18n="[append]datasearch.searchdianwei.button.search">
+                                    <span class="glyphicon glyphicon-search "
+                                          style="margin-right: 10px !important;"></span>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+

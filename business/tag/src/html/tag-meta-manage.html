@@ -1,0 +1,217 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/tag-metadata-manage.css"> -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/js/components/gisWidget/enclosureManageModule/fancyTree/css/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+
+<link rel="stylesheet" href="${root}/css/skin/jquery.dataTables.min.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/skin/select.bootstrap.min.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+
+<style>
+.form-control[readonly] {
+    cursor: default;
+}
+
+#tag-treeview ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+aside.tray.tray-left {
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.ui-menu .ui-menu-item{
+    height: 1.75em;
+    padding: 0 1em 0 2em;
+}
+/*.ui-icon{
+    display: inline-block;
+}*/
+
+.my-ui-icon-plus{
+    background-image: url('/img/plus.png');
+}
+
+/*#tagDetailTable th{
+    min-width: 60px;
+}*/
+
+table tr th,
+table tr td {
+    border-left: 1px solid #d8d8d8;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.panel {
+    margin-bottom: 0px;
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: #d8d8d8;
+}
+</style>
+<!-- end shim -->
+<section id="home-content" class="table-layout animated fadeIn">
+    <aside class="tray tray-left tray290" data-tray-height="match" style="height:100%;vertical-align:top;">
+        <div class="row m10 mbn ">
+            <div class="col-xs-9">
+                <input class="form-control p5" name="search-input" style="height: 30px;" placeholder="过滤...">
+            </div>
+            <div class="col-xs-3">
+                <button type="button" class="btn btn-primary fs12 p5" id="btn-reset">清除
+                    <span id="matches"></span>
+                </button>
+            </div>
+        </div>
+        <div id="tag-treeview" align="top" class="of-y-a"></div>
+    </aside>
+    <div class="tray tray-center" style="vertical-align:top; padding:10px 10px 0px 10px;">
+        <div class="container-fluid">
+            <div class="widget-menu ml10 mb10">
+                <button id="btn-create-tag" title="新建标签" data-toggle="tooltip" data-placement="bottom" type="button" class="btn btn-sm btn-primary  ph15 mr5" data-original-title="新建标签"><span class="fa fa-plus"></span> <span>新建标签</span></button>
+            </div>
+            <div class="row">
+                <div class='col-md-12'>
+                    <div class='panel panel-visible'>
+                        <div class='panel-heading'>
+                            <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                <div class='row'>
+                                    <div class='col-md-6'>
+                                        <span style="color: #70ca63" class="glyphicon glyphicon-tasks"></span>标签元数据详情
+                                    </div>
+                                    <div class='col-md-4 col-md-offset-2'>
+                                        <div class='col-md-8'>
+                                            <input class="form-control" name="table-filter" style="height: 30px;font-weight: normal;margin-top:12px;" placeholder="请输入关键字..">
+                                        </div>
+                                        <div class='col-md-4'>
+                                            <button type="button" class="btn btn-primary fs12 p5" id="btn-table-filter">
+                                                搜索
+                                            </button>
+                                            <button type="button" class="btn btn-primary fs12 p5" id="btn-table-filter-reset">清除
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table" id="tagDetailTable" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <!-- <th style="text-align: left;color: #3498db;font-weight: bold">标签ID</th> -->
+                                        <th style="color: #3498db;font-weight: bold">标签ID</th>
+                                        <th style="color: #3498db;font-weight: bold">标签名称</th>
+                                        <th style="color: #3498db;font-weight: bold;width:80px;">标签值类型</th>
+                                        <th style="color: #3498db;font-weight: bold">一级类别</th>
+                                        <th style="color: #3498db;font-weight: bold">二级类别</th>
+                                        <th style="color: #3498db;font-weight: bold">实体数</th>
+                                        <th style="color: #3498db;font-weight: bold;">人数</th>
+                                        <th style="color: #3498db;font-weight: bold">创建时间</th>
+                                        <th style="color: #3498db;font-weight: bold">更新时间</th>
+                                        <th style="color: #3498db;font-weight: bold">用户ID</th>
+                                        <th style="color: #3498db;font-weight: bold">查询次数</th>
+                                        <!-- <th style="color: #3498db;font-weight: bold">点赞次数</th> -->
+                                        <th style="color: #3498db;font-weight: bold">备注</th>
+                                        <!-- <th style="display:none"></th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '标签元信息管理'
+};
+</script>
+<script type="text/javascript">
+// function calHeight(doc) {
+//     var cHeight = Math.max(doc.body.clientHeight, doc.documentElement.clientHeight);
+//     var sHeight = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+//     return Math.max(cHeight, sHeight);
+// }
+// var ifr = document.getElementById('ifr');
+// ifr.onload = function() {
+//     var childHeight = calHeight(ifr.contentDocument);
+//     ifr.style.height = childHeight + 'px';
+// }
+</script>
+
+<script type="text/template" id="tpl_dialogcontext">
+    <section class="table-layout">
+        <div class="tab-content mw900 center-block center-children">
+            <div class="admin-form theme-info tab-pane mw700 active" role="tabpanel">
+                <form>
+                    <div class='section'>
+                        <label for="tag-directory" class="field-label control-label">路径 *</label>
+                        <label for="tag-directory" class="field-label control-label validate-info" style='display:none;'>必须选择一个路径！</label>
+                        <label for="tag-directory" class="field">
+                            <input type="text" name="tag-directory" id="tag-directory" class="gui-input" readonly value='请选择路径'>
+                        </label>
+                        <div id='dialog-treeview' style='display:none;'></div>
+                    </div>
+                    <!-- end section -->
+                    <div class="section">
+                        <label for="tag-name" class="field-label control-label">名称 *</label>
+                        <label for="tag-directory" class="field-label control-label validate-info" style='display:none;'>名称不能为空！</label>
+                        <label for="tag-directory" class="field-label control-label validate-info-collision" style='display:none;'>名称与已有标签重复！</label>
+                        <label for="tag-name" class="field">
+                            <input type="text" name="tag-name" id="tag-name" class="gui-input">
+                        </label>
+                    </div>
+                    <!-- end section -->
+                    <div class="section">
+                        <label for="tag-type" class="field-label control-label">类型 *</label>
+                        <div class="field select">
+                            <select name="tag-type" id="tag-type">
+                                <option value='string'>字符串</option>
+                                <option value='int'>整数</option>
+                                <option value='date'>日期</option>
+                            </select>
+                            <i class="arrow"></i>
+                        </div>
+                    </div>
+                    <!-- end section -->
+                    <div class="section">
+                        <label for="tag-description" class="field-label control-label">描述 *</label>
+                        <label for="tag-directory" class="field-label control-label validate-info" style='display:none;'>描述不能为空！</label>
+                        <label for="tag-description" class="field">
+                            <textarea type="description" name="tag-description" id="tag-description" class="gui-textarea" style="vertical-align: top;"></textarea>
+                        </label>
+                    </div>
+                    <!-- end section -->
+                    <!-- end .form-body section -->
+                </form>
+                <!-- end .admin-form section -->
+            </div>
+        </div>
+    </section>
+</script>
+<script type="text/javascript" src="${entryRoot}/tag-meta-manage.js"></script>
+<!-- END: page scripts -->

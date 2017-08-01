@@ -1,0 +1,14 @@
+<li class="dropdown crumb-stash">
+    <a id="crumb-drop" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <%- title %>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="crumb-drop">
+        <% _.each(items, function(item) { %>
+            <li>
+                <a href="<%= item.link %>">
+                    <%- item.title %>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+</li>

@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "module": {
+                "1": 24,
+                "205": 2
+            },
+            "totalcount": 26,
+            "id": 1,
+            "name": "用户1",
+            "collapse": false
+        }
+    ]
+}

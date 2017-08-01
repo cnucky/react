@@ -1,0 +1,33 @@
+{
+	"translation":
+	{
+		"kMeans":
+		{
+			"characteristicSet":"characteristic set",
+			"numberOfClusters":"number of clusters",
+			"maxNumberOfIteration":"maximum number of iterations"
+		},
+		"bayes":
+		{
+			"label-column":"label column",
+			"positive-sample-label-value":"positive sample label value"
+		},
+		"logisticRegression-vectorMachine":
+		{
+			"label-column":"label column",
+			"positive-sample-label-value":"positive sample label value",
+			"maxNumberOfIteration":"maximum number of iterations"
+		},
+		"linearRegression":
+		{
+			"label-column":"label column",
+			"positive-sample-label-value":"positive sample label value",
+			"maxNumberOfIteration":"maximum number of iterations",
+			"step-size":"step size"
+		},
+		"prediction":
+		{
+
+		}
+	}
+}

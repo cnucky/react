@@ -1,0 +1,28 @@
+<!-- <div class='content-item' data-alphabet="<%=title.alphabet%>">
+    
+        <div class='content-title'>
+            <span><%=title.shortName%></span>
+        </div>
+        <div class='content-item-list'>
+            <ul>
+                <% for(var i=0;i<cities.length;i++){%>
+                    <li data-zone-code="<%=cities[i].zoneCode%>">
+                        <%=cities[i].content%>
+                    </li>
+                    <% }%>
+            </ul>
+        </div>
+    
+</div> -->
+<dt class='title' data-alphabet="<%=title.alphabet%>">
+    <%=title.shortName%>
+</dt>
+<dd>
+    
+        <% for(var i=0;i<cities.length;i++){%>
+            <li data-zone-code="<%=cities[i].zoneCode%>">
+                <%=cities[i].content%>
+            </li>
+            <% }%>
+    
+</dd>

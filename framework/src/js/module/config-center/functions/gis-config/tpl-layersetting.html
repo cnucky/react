@@ -1,0 +1,83 @@
+<div class="layerContent" style="float: left;width:40%;">
+    <div>
+        <!--<div class="mr40" style="float: right; cursor: pointer;"><span class="text-danger fs15 fa fa-trash-o p5" style="display: none"></span></div>-->
+        <div class="form-group mb10">
+            <span>行为设置</span>
+            <span class="text-danger fs15 fa fa-trash-o" style="margin-left:318px;cursor: pointer;display: none"></span>
+        </div>
+        <div class="form-group mb10">
+            <div class="input-group">
+                <span class="input-group-addon" style="width:200px;color:#232323">行为</span>
+                <input type="text" data-index="0"  class="actionName" style="height: 40px;width: 200px;">
+            </div>
+        </div>
+        <div class="form-group mb10">
+            <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                时间字段
+            </span>
+                <div class="timeColDisplay">
+                    <select class='timeCol'></select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mb10">
+            <span class="checkbox">
+                <label><input type="checkbox" class="isLongLat">是否使用经纬度上图</label>
+            </span>
+        </div>
+        <div class="form-group mb10 chooseLayer">
+            <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                选择要素图层
+            </span>
+                <input type="text" data-index="0" class="layerName" style="height: 40px;width: 165px;" disabled>
+                <input type="text" data-index="0" class="layerId" style="display:none">
+            <span class="input-group-addon layer btn" style="width:35px;color:#232323">
+                ...
+            </span>
+            </div>
+        </div>
+        <div class="input-group layerMapData">
+            <div class="form-group mb10 carrierColDisplay" style="display: none;">
+                <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                运营商字段
+            </span>
+                    <div class='carrierColSelect'>
+                    </div>
+                </div>
+            </div>
+            <table class="table" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>图层字段</th>
+                    <th>数据类型字段</th>
+                </tr>
+                </thead>
+                <tbody class="colMap table table-bordered">
+                </tbody>
+            </table>
+        </div>
+        <div  class="longLatDisplay">
+            <div class="form-group mb10">
+                <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                经度字段
+            </span>
+                    <div class="LongitudeDisplay">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb10">
+                <div class="input-group">
+            <span class="input-group-addon" style="width:200px;color:#232323">
+                纬度字段
+            </span>
+                    <div class="LatitudeDisplay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

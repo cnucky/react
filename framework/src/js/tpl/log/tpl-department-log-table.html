@@ -1,0 +1,50 @@
+<table id="log-table" data-export-mark="all" class="table display datatable-hacked" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="text-nowrap fixwidth"></th>
+            <th class="text-nowrap">部门</th>
+            <th class="text-nowrap">总计</th>
+            <% _.each(moduleTypesName, function(item) { %>
+                <th class="text-nowrap"><%- item.name %></th>
+            <% }) %>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(logData, function(item0) { %>
+            <tr>
+                <% if (!_.isEmpty(item0.user)) { %>
+                    <td class="fixwidth text-nowrap collapse-indecator" data-departmentid="<%- item0.id %>" data-collapse="<%- item0.collapse %>"><i class="fa fa-plus"></i></td>
+                <% } else { %>
+                    <td></td>
+                <% } %>
+                <td class="text-nowrap"><%- item0.name %></td>
+                <td class="text-nowrap"><%- item0.totalcount %></td>
+                <% _.each(moduleTypesName, function(item1) { %>
+                    <% if (item0.module[item1.moduleType+""]) { %>
+                        <td data-moduletype="<%- item1.moduleType %>"><%- item0.module[item1.moduleType+""] %></td>
+                    <% } else { %>
+                        <td></td>
+                    <% } %>
+                <% }) %>
+            </tr>
+            <% if (!_.isEmpty(item0.user)) { %>
+                <% _.each(item0.user, function(item2) { %>
+                    <tr class="<%- item0.id %>" style="display: none">
+                        <td></td>
+                        <td class="text-nowrap" data-userid="<%- item0.id %>"><%- item2.name %></td>
+                        <td class="text-nowrap"><%- item2.totalcount %></td>
+                        <% _.each(moduleTypesName, function(item3) { %>
+                            <% if (item2.module[item3.moduleType+""]) { %>
+                                <td data-moduletype="<%- item3.moduleType %>"><%- item2.module[item3.moduleType+""] %></td>
+                            <% } else { %>
+                                <td></td>
+                            <% } %>
+                        <% }) %>
+                    </tr>
+                <% }) %>
+            <% } %>
+
+
+        <% }) %>
+    </tbody>
+</table>

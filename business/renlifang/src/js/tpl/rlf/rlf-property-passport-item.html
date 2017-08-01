@@ -1,0 +1,314 @@
+<tr>
+    <td class="text-primary mn fs14 fw400 text-center">
+        <%- itemName %>
+    </td>
+    <td></td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5" rowspan='4'>照片</td>
+    <td class='col-md-4 col-sm-4' rowspan='4'>
+        <% if(photo.length>0&&photos[0]!=''){ %>
+        <img class="media-object mw80" src="data:image/png;base64,<%- photos[0]%>" alt='...'>
+        <% }else{ %>
+        <img class="media-object mw80" src="/img/avatar-placeholder.png" alt='...'>
+        <% } %>
+    </td>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">姓名</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'CNAME';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+
+        <% } %>
+    </td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">性别</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'GENDER';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+    
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">出生日期</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'BIRTHDAY';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">身份证</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'SFZ';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">护照号</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'PASSPORT';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">护照类型</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'CERT_TYPE';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">开始日期</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'START_DATE';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">结束日期</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'END_DATE';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+</tr>
+<tr>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5">发证机关</td>
+    <td class='col-md-4 col-sm-4'>
+        <% var property = _.find(properties,function(p){return p.key == 'ISSUER';}) %>
+        <% if(property!=undefined){ %>
+        <% _.each(property.valueList, function(item,index) { %>
+                <% if(index >= property.showItemsCount){%>
+                    <% if(index == property.showItemsCount){ %>
+                        &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title=<%- property.propertyToggleId %> ></span><div id=<%- property.propertyToggleId %> style="display:none">
+                    <% }%>
+                <% }%>
+
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> data-key=<%- property.key %> data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <% if(property.jumpType){ %>
+                            <span class="fs14 data-search"><a href="/renlifang/profile.html?entityid=<%- item.base64value %>&entitytype=<%- property.base64jumpType %>" ><%- item.value %></a></span>&nbsp
+                        <% }else { %>
+                            <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% }%>
+                    <% }%>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index >= property.showItemsCount &&index == property.valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }) %>
+            
+        <% } %>
+    </td>
+    <td class='col-md-2 col-sm-2 mn fs14 fw400 text-center' style="background-color: #f5f5f5"></td>
+    <td class='col-md-4 col-sm-4'></td>
+</tr>
+
+
+
+

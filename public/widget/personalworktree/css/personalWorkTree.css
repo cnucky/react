@@ -1,0 +1,13 @@
+.ui-contextmenu {
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
+}
+
+.add-newFolder-icon {
+    background-image: url('/img/plus.png');
+}
+
+.edit-folderName-icon{
+    background-image: url('/img/edit.png');
+}

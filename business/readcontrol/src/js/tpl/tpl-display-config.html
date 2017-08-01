@@ -1,0 +1,30 @@
+<div class="data dd" id='nestable3'>
+    <input type="hidden" class="version" value="">
+    <div class="dd3-content" style="position: fixed; width: 90.6%; z-index: 9999; margin: 0;">
+        <ul style="font-weight: bold;">
+            <li style="width:0px; display:none;">ColumnName</li>
+            <li style="width:60%;" data-i18n="dataprocess.action.colum_name"></li>
+            <li style="width:40%; border-right:none;" data-i18n="dataprocess.action.show_colum"></li>
+            <li style="width:30%; display:none;" data-i18n="dataprocess.action.colum_width"></li>
+            <li style="width:0px; display:none;">Convert</li>
+            <li style="width:0px; display:none;">Type</li>
+        </ul>
+    </div>
+    <ol class="dd-list" style="padding-top:30px;">
+    <% _.each(data, function(item) { %>
+        <li class="dd-item dd3-item">
+            <div class="dd-handle dd3-handle"></div>
+            <div class="dd3-content">
+                <ul>
+                    <li style="width:0px; display:none;" data-key="ColumnName"><%- item.ColumnName  %></li>
+                    <li style="width:60%;" data-key="HeaderCaption"><%- item.HeaderCaption %></li>
+                    <li style="width:40%;" data-key="Hidden"><p data-test="<%- item.Hidden %>"> <%= item.Hidden == 'True' ? i18n.t("dataprocess.common.no") : i18n.t("dataprocess.common.yes")%> </p><span class="<%= item.Hidden == 'True' ? 'active' : '' %>"><i></i></span></li>
+                    <li style="width:30%; display:none" class="column-length" data-key="ColumnLength"><%- item.ColumnLength %></li>
+                    <li style="width:0px; display:none;" data-key="Convert"><%-  item.Convert %></li>
+                    <li style="width:0px; display:none;" data-key="Type"><%-  item.Type %></li>
+                </ul>
+            </div>
+        </li>
+        <% }) %>
+    </ol>
+</div>

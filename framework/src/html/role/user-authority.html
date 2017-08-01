@@ -1,0 +1,79 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<style type="text/css">
+div#department-tree > ul {
+    /*min-height: 200px;*/
+    height:800px;
+    overflow-y: auto;
+    border: none;
+}
+</style>
+<!-- end shim -->
+<script>
+$(window).on("resize", function() {
+    var leftTray = $('.tray.tray-right');
+    var leftHeight = window.innerHeight - leftTray.offset().top;
+    $('.tray.tray-center').height(leftHeight);
+});
+</script>
+<section id="content" class="table-layout animated fadeIn">
+    <aside class="tray tray-right tray400 p20 br-n">
+        <div id="department-tree">
+            <div id="department-tree-filter" class="row mt10 pt10 mln mrn" style="background-color: white">
+                <div class="col-xs-8">
+                    <input class="form-control" name="searchDepartment" data-i18n="[placeholder]usermanage.holder-filter">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary" id="btnResetSearchDepartment" data-i18n="usermanage.button-clear">
+                        <!-- <span id="matchesDepartment"></span> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center">
+        <div class="mw700" id="auth-pane" style="display:none;">
+            <h4 data-i18n="rolemanage.label-userauthority"></h4>
+            <hr class="alt short">
+            <div class="admin-form">
+                <div class="section">
+                    <label id="user-name-label" class="field-label"
+                           data-i18n="rolemanage.label-username"></label>
+                    <div class="">
+                        <label for="user-name" class="field">
+                            <input type="text" name="user-name" id="user-name"
+                                   class="gui-input user-item" readonly="">
+                        </label>
+                    </div>
+                </div>
+                <div class="section" id="roles-section">
+                    <div class="">
+                        <label class="field-label" id="user-haverole-label"
+                               data-i18n="rolemanage.label-haverole"></label>
+                        <div class="hidden">
+                            <input type="hidden" id="tagmanager" class="form-control tm-input">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="" id="user-roles">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="role-container"></div>
+            <div class="text-right mt20">
+                <button id="role-add" class="btn btn-primary btn-sm ph15 mr5"
+                        data-i18n="rolemanage.enum-addrole" type="button"></button>
+                <button id="role-remove" class="btn btn-danger btn-sm ph15 mr5"
+                        data-i18n="rolemanage.enum-deleterole" type="button"></button>
+                <button id="role-reset" class="btn btn-default btn-sm ph15"
+                        data-i18n="rolemanage.enum-resetrole" type="button"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="${root}/js/components/bootbox/bootbox.js"></script>
+<script type="text/javascript" src="/js/user-authority.js"></script>

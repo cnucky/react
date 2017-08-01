@@ -1,0 +1,17 @@
+{
+    "translation": {
+		"open-model": "Open Model",
+		"none-selected-text": "Please select",
+		"n-selected-text": "have been selected",
+		"all-selected": "All selected",
+		"finish-btn": "Finish",
+		"cancel-btn": "Cancel",
+    	"warning": {
+    		"error": "error",
+    		"task-information-acquisition-failed": "Get task information failed"
+    	},
+    	"model-apply": {
+    		"some-data-may-not-be-saved": "Some data may not be saved"
+    	}
+    }
+}

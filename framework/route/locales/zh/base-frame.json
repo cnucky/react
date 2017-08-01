@@ -1,0 +1,44 @@
+{   
+    "workspace": {
+        "label-in":"在(",
+        "label-useip":")使用IP(",
+        "label-executeshareoperation":")执行共享资源操作，详情如下:",
+        "label-adddir":")添加目录(",
+        "label-desc":"描述",
+        "label-parentdir":")父级目录ID(",
+        "label-movefileoperation":") 执行移动文件操作，详情如下: 移动资源(",
+        "label-todir":")到目录(",
+        "label-deletefileoperation":")执行删除文件操作，删除资源(",
+        "label-renamefileoperation":")执行重命名操作， 重命名(",
+        "label-for":") 为("
+    },
+    
+
+    "login":{
+        "label-loginname":") 登录,登录名(",
+        "label-loginout":") 登出,登录名(",
+        "label-adduser":") 添加用户(",
+        "label-to":")至(",
+        "label-updateuserinfo":") 更新用户信息,详情如下:姓名(",
+        "label-gender":")性别(",
+        "label-position":")职位(",
+        "label-timevalid":")有效期至(",
+        "label-sfz":")身份证号(",
+        "label-birth":")生日(",
+        "label-phone":")联系方式(",
+        "label-address":")联系地址(",
+        "label-deleteuser":") 删除用户(",
+        "label-moveuser":") 移动用户(",
+        "label-todepart":") 至部门(",
+        "label-changeuser":") 更改用户(",
+        "label-oldpwd":") 的原密码(",
+        "label-newpwd":") 为新密码(",
+        "label-resetuser":") 重置用户(",
+        "label-topwd":") 的密码为(",
+        "label-lockuser":") 锁定用户(",
+        "label-unlockuser":") 解锁用户("
+    },
+    "all":{
+        "label-needlogin":"需要登录"
+    }
+}

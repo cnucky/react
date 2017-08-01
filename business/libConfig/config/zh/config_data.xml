@@ -1,0 +1,175 @@
+﻿<CONFIG_DATA>
+    <CATEGORIES NAME="ENTITY" CAPTION="实体">
+        <DATA_TYPE NAME="ENTITY_PHONE_NUM" CAPTION="手机号"/>
+        <DATA_TYPE NAME="ENTITY_IMSI" CAPTION="手机卡号"/>
+        <DATA_TYPE NAME="ENTITY_IMEI" CAPTION="手机机身号"/>
+        <DATA_TYPE NAME="ENTITY_TEL" CAPTION="手机"/>
+
+    </CATEGORIES>
+    <CATEGORIES NAME="DATA" CAPTION="活动">
+        <DATA_TYPE NAME="DATA_CALL" CAPTION="电信通话">
+            <SERVICE_TYPE NAME="CALL" CAPTION="电信通话"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_SMS" CAPTION="电信短信">
+            <SERVICE_TYPE NAME="SMS" CAPTION="电信短信"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_FAX" CAPTION="电信传真">
+            <SERVICE_TYPE NAME="FAX" CAPTION="电信传真"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_EVENT" CAPTION="电信事件">
+            <SERVICE_TYPE NAME="EVENT" CAPTION="电信事件"/>
+        </DATA_TYPE>
+        <!--<DATA_TYPE NAME="DATA_DCNET" CAPTION="电信上网计费">
+          <SERVICE_TYPE NAME="DCNET" CAPTION="电信上网计费"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_USERREG" CAPTION="电信用户登记">
+          <SERVICE_TYPE NAME="USERREG" CAPTION="电信用户登记"/>
+        </DATA_TYPE>-->
+        <DATA_TYPE NAME="DATA_RADIUS" CAPTION="宽带计费">
+            <SERVICE_TYPE NAME="RADIUS" CAPTION="宽带计费"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_WAPRADIUS" CAPTION="移动网计费">
+            <SERVICE_TYPE NAME="WAPRADIUS" CAPTION="移动网计费"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_EMAIL" CAPTION="电子邮件">
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_WAPMMS" CAPTION="彩信">
+            <SERVICE_TYPE NAME="WAPMMS" CAPTION="彩信"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_IM" CAPTION="即时通讯">
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="OLGAME" CAPTION="网络游戏"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_HTTPMULTI" CAPTION="HTTP综合">
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="HTTPBBS" CAPTION="论坛"/>
+            <SERVICE_TYPE NAME="HTTPWEIBO" CAPTION="微博"/>
+            <SERVICE_TYPE NAME="HTTPBLOG" CAPTION="博客"/>
+            <SERVICE_TYPE NAME="HTTPSNS" CAPTION="社交网站"/>
+            <SERVICE_TYPE NAME="HTTPCLOUD" CAPTION="云存储"/>
+            <SERVICE_TYPE NAME="HTTPSEARCH" CAPTION="搜索"/>
+            <SERVICE_TYPE NAME="HTTPNEWS" CAPTION="新闻"/>
+            <SERVICE_TYPE NAME="HTTPSHOP" CAPTION="电子商务"/>
+            <SERVICE_TYPE NAME="HTTPJOB" CAPTION="招聘求职"/>
+            <SERVICE_TYPE NAME="HTTPTICKET" CAPTION="旅业票务"/>
+            <SERVICE_TYPE NAME="HTTPEXPRESS" CAPTION="快递网站"/>
+            <SERVICE_TYPE NAME="HTTPDATING" CAPTION="婚恋"/>
+            <SERVICE_TYPE NAME="HTTPFORECAST" CAPTION="算命"/>
+            <SERVICE_TYPE NAME="HTTPGAMBLING" CAPTION="赌博"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_HTTPTRACE" CAPTION="网页浏览">
+            <SERVICE_TYPE NAME="HTTPTRACE" CAPTION="网页浏览"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_NETAV" CAPTION="网络音视频">
+            <SERVICE_TYPE NAME="NETVIDEO" CAPTION="网络视频"/>
+            <SERVICE_TYPE NAME="NETRADIO" CAPTION="网络电台"/>
+            <SERVICE_TYPE NAME="HTTPVIDEO" CAPTION="HTTP视频"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_VOIP" CAPTION="IP电话">
+            <SERVICE_TYPE NAME="VOIP" CAPTION="IP电话"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_SSL" CAPTION="SSL应用识别">
+            <SERVICE_TYPE NAME="PAYMENT" CAPTION="第三方支付"/>
+            <SERVICE_TYPE NAME="NETBANK" CAPTION="网银"/>
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="HTTPWEIBO" CAPTION="微博"/>
+            <SERVICE_TYPE NAME="HTTPSNS" CAPTION="社交网站"/>
+            <SERVICE_TYPE NAME="HTTPCLOUD" CAPTION="云存储"/>
+            <SERVICE_TYPE NAME="SSL" CAPTION="SSL加密应用"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_DOWNLOADER" CAPTION="下载">
+            <SERVICE_TYPE NAME="DOWNLOADER" CAPTION="下载"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_TTK" CAPTION="终端追踪信息">
+            <SERVICE_TYPE NAME="TTKTERMINALFLAG" CAPTION="终端标识信息"/>
+            <SERVICE_TYPE NAME="TTKDEVICEINFO" CAPTION="终端设备信息"/>
+            <SERVICE_TYPE NAME="TTKSOFTWAREINFO" CAPTION="终端软件环境"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PHONEBOOK" CAPTION="通讯录">
+            <SERVICE_TYPE NAME="CONTACTLIST" CAPTION="通讯录"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_FTP" CAPTION="FTP">
+            <SERVICE_TYPE NAME="FTP" CAPTION="FTP"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_TELNET" CAPTION="TELNET">
+            <SERVICE_TYPE NAME="TELNET" CAPTION="TELNET"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_REMOTECONNECT" CAPTION="远程连接">
+            <SERVICE_TYPE NAME="REMOTECONNECT" CAPTION="远程连接"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_VPN" CAPTION="VPN信息">
+            <SERVICE_TYPE NAME="VPNDETECT" CAPTION="VPN信息"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_TFTOOLS" CAPTION="突防检测">
+            <SERVICE_TYPE NAME="TFTOOLS" CAPTION="突防工具"/>
+            <SERVICE_TYPE NAME="VPNAPP" CAPTION="VPN应用"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PROXY" CAPTION="访问代理">
+            <SERVICE_TYPE NAME="HTTPPROXY" CAPTION="HTTP代理"/>
+            <SERVICE_TYPE NAME="HTTPSOCKS5" CAPTION="SOCKS代理"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_DNS" CAPTION="DNS">
+            <SERVICE_TYPE NAME="DNS" CAPTION="DNS"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PCAP" CAPTION="原始数据包">
+            <SERVICE_TYPE NAME="RAWDATA" CAPTION="原始数据包"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_FLOW" CAPTION="流数据">
+            <SERVICE_TYPE NAME="FLOWDATA" CAPTION="流数据"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_LBS" CAPTION="位置信息">
+            <SERVICE_TYPE NAME="LBS" CAPTION="位置信息"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_NAVINFOR" CAPTION="导航">
+            <SERVICE_TYPE NAME="NAVIGATION" CAPTION="导航"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_NID" CAPTION="网络身份">
+            <SERVICE_TYPE NAME="HTTPSHOP" CAPTION="电子商务"/>
+            <SERVICE_TYPE NAME="HTTPJOB" CAPTION="招聘求职"/>
+            <SERVICE_TYPE NAME="HTTPTICKET" CAPTION="旅业票务"/>
+            <SERVICE_TYPE NAME="HTTPEXPRESS" CAPTION="快递网站"/>
+            <SERVICE_TYPE NAME="HTTPDATING" CAPTION="婚恋"/>
+            <SERVICE_TYPE NAME="HTTPFORECAST" CAPTION="算命"/>
+            <SERVICE_TYPE NAME="HTTPGAMBLING" CAPTION="赌博"/>
+        </DATA_TYPE>
+        <!--
+        <DATA_TYPE NAME="DATA_CRJ" CAPTION="口岸出入境">
+          <SERVICE_TYPE NAME="DATA_CRJ" CAPTION="口岸出入境"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PNR" CAPTION="民航旅客订座">
+          <SERVICE_TYPE NAME="DATA_PNR" CAPTION="民航旅客订座"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PAS" CAPTION="民航旅客离港">
+          <SERVICE_TYPE NAME="DATA_PAS" CAPTION="民航旅客离港"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_TL" CAPTION="铁路客票">
+          <SERVICE_TYPE NAME="DATA_TL" CAPTION="铁路客票"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_KD" CAPTION="快递数据">
+          <SERVICE_TYPE NAME="DATA_KD" CAPTION="快递数据"/>
+        </DATA_TYPE>
+        -->
+    </CATEGORIES>
+    <CATEGORIES NAME="FILE" CAPTION="文件">
+        <DATA_TYPE NAME="DATA_MD5" CAPTION="文件MD5值">
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="HTTPCLOUD" CAPTION="云存储"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_DMT" CAPTION="Office元信息">
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="HTTPCLOUD" CAPTION="云存储"/>
+        </DATA_TYPE>
+        <DATA_TYPE NAME="DATA_PMT" CAPTION="图片元信息">
+            <SERVICE_TYPE NAME="EMAIL" CAPTION="电子邮件"/>
+            <SERVICE_TYPE NAME="IM" CAPTION="即时通讯"/>
+            <SERVICE_TYPE NAME="HTTPCLOUD" CAPTION="云存储"/>
+        </DATA_TYPE>
+    </CATEGORIES>
+</CONFIG_DATA>

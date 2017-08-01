@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_RADIUS" DisplayName="固网计费">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" FullText="true" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="ACCOUNT" DisplayName="计费账号" ControlType="Text"/>
+            <Condition Item="CALLING_NUM" DisplayName="主叫号码" ControlType="Text"/>
+            <Condition Item="CALLED_NUM" DisplayName="被叫号码" ControlType="Text"/>
+            <Condition Item="IP_ADDR" DisplayName="计费IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="ON_TIME" DisplayName="上线时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="OFF_TIME" DisplayName="下线时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="ACCOUNT" DisplayName="计费账号" ControlType="Text"/>
+            <Condition Item="CALLING_NUM" DisplayName="主叫号码" ControlType="Text"/>
+            <Condition Item="CALLED_NUM" DisplayName="被叫号码" ControlType="Text"/>
+            <Condition Item="IP_ADDR" DisplayName="计费IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="ON_TIME" DisplayName="上线时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="OFF_TIME" DisplayName="下线时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+    </Template>
+</Search>

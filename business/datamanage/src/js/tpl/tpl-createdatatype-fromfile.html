@@ -1,0 +1,191 @@
+<div id = "createdatatype-fromfile" style="height:100%">
+    <!--class="admin-form"-->
+    <form id="createdatatype-fromfile-dialog">
+        <div class="panel" style="border: 1px solid #DDD; padding: 4px 0px 0px 0px;">
+            <div class="panel-heading hide" style="padding: 0px 0px 0px 0px">
+                <div class="widget-menu ml10 mb10">
+                    <span><i class='glyphicon glyphicon-star' style='color: red'></i></span>
+                    <label>当前操作：</label>
+                    <label id="oprlabel" style="color: lightcoral; font-weight: bolder"></label>
+                    <div class="widget-menu ml10 mb10 pull-right" id="btn-group-editmode">
+                        <a type="button" id="btn-advanced-set" class="btn btn-sm btn-system ph10 mr5">
+                            <span class="fa fa-cogs pr5"></span>
+                            从数据文件获取字段
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body" style="padding: 0px 0px 10px 0px">
+                <div class="col-sm-12">
+                    <div class="panel heading-border" style="width:99.9%; margin: 0 auto;">
+                        <div class="panel-heading pn h-30" style="background-color:lavender">
+                            <h6 class="ml5" style="color: #1C1C1C">基础设置</h6>
+                            <!--(<em>excel文件不需要任何设置,直接点击上传预览</em>)-->
+                        </div>
+                        <div class="panel-body pn">
+                            <div class="col-sm-12">
+                                <div class="col-sm-5 form-horizontal mt10" style="width: 26%; padding-right: 2px;">
+                                    <div class="form-group">
+                                        <label for="filetype-select" class="col-sm-2 control-label" style="width: 28%; ">文件类型</label>
+                                        <div class="col-sm-8">
+                                            <div class="bs-component">
+                                                <select id="filetype-select" class="select2-white form-control"
+                                                        style="height: 35px;">
+                                                    <option value="1">文本文件(.txt, .bcp)</option>
+                                                    <option value="2">excel文件(.xlsx, .xls)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" >
+                                        <label for="filetype-select" class="col-sm-2 control-label" style="width: 28%; ">文件编码</label>
+                                        <div class="col-sm-8">
+                                            <div class="bs-component">
+                                                <select id="file-encoding-select" class="select2-white form-control"
+                                                        style="height: 35px;">
+                                                    <!--<option value="auto">自动识别</option>-->
+                                                    <option value="UTF-8" selected="selected">UTF-8</option>
+                                                    <option value="GB2312">GB2312</option>
+                                                    <option value="ascii">ASCII</option>
+                                                    <option value="UTF-16">Unicode(UTF-16)</option>
+                                                    <option value="UTF-32">UTF-32</option>
+                                                    <option value="GBK">GBK(中文)</option>
+                                                    <option value="Big5">Big5(中文繁体)</option>
+                                                    <option value=""> </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-5 form-horizontal mt10" style="width: 40%; padding-right: 2px;">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="path" style="width: 25%; "> 样本文件</label>
+
+                                        <div class="col-md-8">
+                                            <div class="input-group date pull-right edit" id="path">
+                                                <input type="text" value="" id="filename-Input" dirId="12"
+                                                       class="form-control gui-input edit" placeholder=""
+                                                       width="50%" readonly for="path">
+                                                    <span class="input-group-addon cursor" style="cursor: pointer">
+                                                        <i class="fa fa-file" style="cursor: pointer"></i>
+                                                        <input multiple="single" type="file" name="file"
+                                                               id="selectfile-btn"  accept=".txt,.bcp"
+                                                               style="position: absolute; width:50px; height:30px;right: 0px; top: 0px; font-family: Arial;
+                                                                font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="filetype-select" class="col-sm-2 control-label" style="width: 25%; ">行分隔符</label>
+                                        <div class="col-sm-8">
+                                            <div class="bs-component">
+                                                <select id="row-delimiter-select" class="select2-white form-control"
+                                                        style="height: 35px;">
+                                                    <option value="1">回车换行(\r\n)</option>
+                                                    <option value="2">换行(\n)</option>
+                                                    <option value="__other__">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" id="row-delimiter-form-group" style="display: none">
+                                        <div class="checkbox-custom checkbox-primary mt10 "
+                                             style="margin-left:40px; color:#1e2028;">
+                                            <input type="checkbox" checked id="row-delimiter-checkbox" class="edit">
+                                            <label for="row-delimiter-checkbox" >十六进制</label>
+                                            <input type="text" class="form-control" id="row-delimiter-input" style="display: inline; width: 60%" placeholder="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-5 form-horizontal mt10" style="width: 34%; padding-right: 2px;">
+                                    <div class="form-group">
+                                        <div class="checkbox-custom checkbox-primary mt10 "
+                                             style="margin-left:40px; color:#1e2028;">
+                                            <input type="checkbox" unchecked id="tableheader-Checkbox" class="edit">
+                                            <label for="tableheader-Checkbox" >首行是否为表头</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="filetype-select" class="col-sm-2 control-label" style="width: 25%; ">列分隔符</label>
+                                        <div class="col-sm-8">
+                                            <div class="bs-component">
+                                                <select id="col-delimiter-select" class="select2-white form-control"
+                                                        style="height: 35px;">
+                                                    <option value="1">Tab</option>
+                                                    <option value="2">分号</option>
+                                                    <option value="3">空格</option>
+                                                    <option value="4">逗号</option>
+                                                    <option value="__other__">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" id="col-delimiter-form-group" style="display: none">
+                                        <div class="checkbox-custom checkbox-primary mt10 "
+                                             style="margin-left:40px; color:#1e2028;">
+                                            <input type="checkbox" checked id="col-delimiter-checkbox" class="edit">
+                                            <label for="col-delimiter-checkbox" >十六进制</label>
+                                            <input type="text" class="form-control" id="col-delimiter-input" style="display: inline; width: 60%" placeholder="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt10">
+                    <div class="panel heading-border" style="width:99.9%; margin: 0 auto">
+                        <div class="panel-heading pn h-30" style="background-color: lavender">
+                            <h6 class="ml5" style="color: #1C1C1C">列定义
+                                <a id="warn-info" class="pull-center mr10" style="color:red; display: none" href="#">(正在解析文件，请耐心等待...)</a>
+                                <a id="file-preview" class="pull-right mr10" style="color:blue" href="#">列定义预览</a>
+                            </h6>
+                        </div>
+                        <div class="panel-body pn of-x-a" style="max-height: 400px; overflow-y: auto;">
+                            <table class="table table-striped table-hover" id="createdatatype-fromfile-table" cellspacing="0"
+                                   width="100%" style="font-size: 13px;">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:150px">字段名称</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;min-width:110px">类型</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;min-width:60px">长度</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;min-width:60px">精度</th>
+
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第1行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第2行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第3行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第4行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第5行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第6行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第7行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第8行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第9行</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">第10行</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

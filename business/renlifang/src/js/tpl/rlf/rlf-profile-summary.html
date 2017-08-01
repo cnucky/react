@@ -1,0 +1,82 @@
+<tr class="row">
+    <td class="col-md-2 col-sm-2 mn fs14 fw400 text-center" style="background-color: #f5f5f5">
+        <%- caption %>
+    </td>
+    <td class="col-md-10 col-sm-10">
+        <% _.each(valueList, function(item,index) { %>
+            <% if(name == "CNAME" && index >= showItemsCount) {%>
+                <% if(index == showItemsCount) {%>
+                    &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title="summary-cname"></span><div id="summary-cname" style="display:none">
+                <% }%>
+                
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> 
+                data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                    <% } %>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index == valueList.length-1){%>
+                    </div>
+                <% }%>
+
+            <% } else if(name == "ADDRESS" && index >= showItemsCount) {%>
+                <% if(index == showItemsCount) {%>
+                    &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title="summary-address"></span><div id="summary-address" style="display:none">
+                <% }%>
+                
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> 
+                data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                    <% } %>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index == valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }else if(name == "USER_MSISDN" && index >= showItemsCount) {%>
+                <% if(index == showItemsCount) {%>
+                    &nbsp<span class="glyphicon glyphicon-chevron-down text-primary mn fs14 fw500" data-title="summary-phone"></span><div id="summary-phone" style="display:none">
+                <% }%>
+                
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> 
+                data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if (item.value) { %>
+                        <span class="fs14 data-search"><a href="<%- item.linkUrl %>" ><%- item.value %></a></span>
+                        &nbsp
+                    <% } %>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+
+                <% if(index == valueList.length-1){%>
+                    </div>
+                <% }%>
+            <% }else {%>
+                <div class="mr10 meta-dialog" data-toggle="tooltip" data-placement="bottom" title=<%- item.tooltip %> 
+                data-value=<%- item.value %> data-source=<%- item.sourcearray %> style="display:inline-block">
+                    <% if(name == "SFZ" && item.value){%>
+                        <span class="fs14 data-search"><a href="<%- item.linkUrl %>" ><%- item.value %></a></span>
+                        &nbsp
+                    <% } else if(name == "USER_MSISDN" && item.value){%>
+                        <span class="fs14 data-search"><a href="<%- item.linkUrl %>" ><%- item.value %></a></span>
+                        &nbsp
+                    <% } else if (item.value) { %>
+                        <span class="fs14 data-search"><%- item.value %></span>&nbsp
+                        <% } %>
+                    <% if (item.confidence != 0) { %>
+                        <span class="text-primary mn fs14 fw500"><%- item.confidence + "%" %></span>
+                    <% } %>
+                </div>
+            <% }%>
+        <% }) %>
+    </td>
+</tr>

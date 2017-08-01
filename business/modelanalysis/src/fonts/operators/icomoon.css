@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'icomoonOp';
+  src:  url('icomoon.eot?o3bm6x');
+  src:  url('icomoon.eot?o3bm6x#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?o3bm6x') format('truetype'),
+    url('icomoon.woff?o3bm6x') format('woff'),
+    url('icomoon.svg?o3bm6x#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icomoonOp {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoonOp' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cluster:before {
+  content: "\e900";
+  color: #979797;
+}
+.icon-SVM:before {
+  content: "\e901";
+  color: #979797;
+}
+.icon-column-transformation:before {
+  content: "\e902";
+  color: #979797;
+}
+.icon-difference:before {
+  content: "\e903";
+  color: #979797;
+}
+.icon-bayes:before {
+  content: "\e904";
+  color: #979797;
+}
+.icon-union:before {
+  content: "\e905";
+  color: #979797;
+}
+.icon-intersection:before {
+  content: "\e906";
+  color: #979797;
+}
+.icon-contact:before {
+  content: "\e907";
+  color: #979797;
+}
+.icon-extract:before {
+  content: "\e908";
+  color: #979797;
+}
+.icon-order:before {
+  content: "\e909";
+  color: #979797;
+}
+.icon-uniq:before {
+  content: "\e90a";
+  color: #979797;
+}
+.icon-linear-regression:before {
+  content: "\e90b";
+  color: #979797;
+}
+.icon-logistic-regression:before {
+  content: "\e90c";
+  color: #979797;
+}
+.icon-database:before {
+  content: "\e90d";
+  color: #979797;
+}
+.icon-expert-analysis:before {
+  content: "\e90e";
+  color: #979797;
+}
+.icon-filter:before {
+  content: "\e90f";
+  color: #979797;
+}
+.icon-forecast:before {
+  content: "\e910";
+  color: #979797;
+}
+.icon-group:before {
+  content: "\e911";
+  color: #979797;
+}
+.icon-merge:before {
+  content: "\e912";
+  color: #979797;
+}
+.icon-search:before {
+  content: "\e913";
+  color: #979797;
+}

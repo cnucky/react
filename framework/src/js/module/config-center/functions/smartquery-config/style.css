@@ -1,0 +1,270 @@
+.tray {
+    background-color: white;
+}
+
+#init-reminder {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.ui-sortable-handle {
+    cursor: default;
+}
+
+ul.fancytree-container {
+    border: none;
+    max-height: 100%;
+    min-height: 120px;
+}
+
+div#dir-tree-panel,
+div#datafields-tree-panel {
+    overflow: auto;
+}
+
+#preview-container {
+    margin: 0;
+    height: 100%;
+    background-color: white;
+    /*width: 800px;*/
+    /*box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc;*/
+}
+
+.group-line {
+    height: 40px;
+    text-align: left;
+}
+
+.group-line span {
+    display: inline-block;
+    position: relative;
+    padding: 0px 20px 0px 20px;
+    color: steelblue;
+    font-weight: bold;
+    /*top: -11px;*/
+    font-size: 18px;
+    transition: all 0.2s ease-in-out 0s;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.group-container {
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+    background-color: #e9e9e9;
+    padding: 10px;
+    -webkit-user-select: none;
+}
+
+.shadow-box {
+    box-shadow: 3px 3px 10px 6px #ccc;
+}
+
+.concave-box {
+    box-shadow: inset 0 0 20px #333333;
+}
+
+
+/*.group-item-container{
+	width: 49%;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+
+}*/
+
+ul.group-list {
+    min-height: 80px;
+}
+
+.group-item {
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    width: 29%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5px;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 30px;
+    cursor: default;
+}
+
+.remove-span {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    right: 5px;
+    top: 5px;
+    color: #e9e9e9;
+    background-color: #bd432f;
+    height: 20px;
+    line-height: 20px;
+    width: 18px;
+    cursor: pointer;
+}
+
+.group-item:hover .remove-span {
+    display: block;
+}
+
+.group-item:hover .remove-span:hover {
+    display: block;
+    background-color: #f3644c;
+}
+
+.edit-span {
+    display: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.group-container:hover .edit-span {
+    display: inline-block;
+    color: #178416;
+}
+
+.group-container:hover .edit-span:hover {
+    display: inline-block;
+    color: #2de82a;
+}
+
+.group-remove {
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.group-container:hover .group-remove {
+    display: inline-block;
+    color: #bd432f;
+}
+
+.group-container:hover .group-remove:hover {
+    display: inline-block;
+    color: #f3644c;
+}
+
+.group-clear {
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 35px;
+    cursor: pointer;
+}
+
+.group-container:hover .group-clear {
+    display: inline-block;
+    color: #ccc60d;
+}
+
+.group-container:hover .group-clear:hover {
+    display: inline-block;
+    color: #f5ee18;
+}
+
+.edit-input {
+    width: 60px;
+    margin-left: 20px;
+}
+
+.confirm-edit-group-name-btn,
+.cancel-edit-group-name-btn {
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    margin-left: 5px;
+    color: white;
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+.confirm-edit-group-name-btn:hover,
+.cancel-edit-group-name-btn:hover {
+    background-color: #2384c6;
+}
+
+#top-container {
+    height: 80px;
+    display: none;
+    width: 100%;
+}
+.top-panel-button {
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #967adc;
+}
+
+.single-button {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-button {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+.top-panel-button:hover {
+    background-color: #7e5cd4;
+}
+
+.top-panel-button-form {
+    width: 200px;
+    display: inline-block;
+}
+
+.top-panel-button-form input {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+.save-button{
+	background-color: #2cbd08 !important;
+}
+.save-button:hover{
+	background-color: #33da09 !important;
+}
+
+#button-container{
+	display: block;
+	margin-right: 10px;
+	margin-left: 50px;
+
+}
+#caption{
+	font-size: 24px;
+	font-family: inherit;
+    font-weight: 600;
+    line-height: 1.1;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+
+}

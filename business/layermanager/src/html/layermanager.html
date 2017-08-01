@@ -1,0 +1,65 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/style.css">
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/font-awesome.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/LayerManager/style-metro.css"> -->
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/ui.fancytree.css">
+<link rel="stylesheet" type="text/css" href="./css/LayerManager/LayerManage.css">
+<link rel="stylesheet" type="text/css" href="${root}/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="${root}/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.css" />
+<link rel="stylesheet"  type="text/css" href="${root}/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/MarkerCluster.Default.css" />
+<link rel="stylesheet" type="text/css" href="${root}/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.css" />
+<!-- end shim -->
+
+<section id="content1" class='pn table-layout animated fadeIn'style="">
+    <div style="" id="layerManageParent"></div>
+</section>
+<script type="text/javascript" src="${root}/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+<script type="text/javascript" src="${root}/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/leaflet.markercluster-src.js"></script>
+<script type="text/javascript" src="${root}/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/DataLayer.js"></script>
+<!--<script type="text/javascript" src="${root}/js/components/i18next/i18next.min.js"></script>-->
+<!--<script type="text/javascript" src="${root}/js/components/jquery-i18next/jquery-i18next.min.js"></script>-->
+<!--<script type="text/javascript" src="${root}/js/i18n.js"></script>-->
+<script type="text/template" id="tpl_dialog">
+        <div id="modal-panel" class="popup-basic popup-<%- style %> bg-none mfp-with-anim"
+        <% if (width > 0) { %>style="max-width: <%- width %>px"<% } %> >
+        <div class="panel">
+            <div class="panel-heading">
+                <span id="nv-dialog-title" class="panel-title"> <%= title %> </span>
+            </div>
+            <div id="nv-dialog-body" class="panel-body " style="height:auto; max-height:500px; overflow-x: auto; overflow-y: auto; min-height: 280px">
+                <%= content %>
+            </div>
+            <div class="panel-footer text-right" id="nv-dialog-footer">
+                <button id="nv-dialog-leftbtn" class="btn btn-default" type="button" style="margin-right:15px;min-width:60px">
+                    <%= leftBtn %>
+                </button>
+                <button id="nv-dialog-rightbtn" class="btn btn-primary" type="button" style="min-width:60px">
+                    <%= rightBtn %>
+                </button>
+            </div>
+        </div>
+        </div>
+    </script>
+<!--<script type="text/javascript">-->
+<!--var _pageConfig = {-->
+    <!--title: i18n.t('gismodule.LayerManager.title')-->
+<!--};-->
+<!--</script>-->
+<!-- <script type="text/javascript" src="${root}/js/components/LayerManager/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="${root}/js/components/LayerManager/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/jquery.ui-contextmenu.min.js"></script>
+<!--<script type="text/javascript" src="${root}/js/components/LayerManager/jquery.fancytree.js"></script>-->
+<script type="text/javascript" src="${root}/js/components/LayerManager/select2.min.js"></script>
+<!--<script type="text/javascript" src="${root}/js/components/lib/jquery.datatables.min.js"></script>-->
+<script type="text/javascript" src="${root}/js/components/LayerManager/jquery.dataTables.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/DT_bootstrap.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/my-table-editable.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/ajaxfileupload.js"></script>
+<script type="text/javascript" src="${root}/js/components/LayerManager/nova-dialog.js"></script> 
+<!--<script type="text/javascript" src="${root}/js/components/LayerManager/jquery.ui-contextmenu.min.js"></script>-->
+
+<script type="text/javascript" src="${entryRoot}/LayerManager.js"></script>

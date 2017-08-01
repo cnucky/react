@@ -1,0 +1,35 @@
+<div class="timeline-item">
+    <div class="timeline-icon" id="<%- iconId %>">
+        <span class=""><%- frequency %></span>
+    </div>
+    <div class="panel panel-collapsed "id="<%- panelId %>">
+        <div class="panel-heading" id="relation-company-title">
+            <% if (valueType) { %>
+                <a class="rlf-auto-link panel-title" href="javascript:void(0);">
+                    <b><%- name %></b>
+                    <small class="ml5">
+                        <span class="fa fa-credit-card fw"></span>
+                        <%- cert %>
+                    </small>
+                </a>
+            <% } else { %>
+                <a class="panel-title company-collapse" href="javascript:void(0);">
+                    <b><%- name %></b>
+                    <small class="ml5">
+                        <span class="fa fa-credit-card fw"></span>
+                        <%- cert %>
+                    </small>
+                </a>
+            <% } %>
+            <span class="ml5"><%- desc %></span>
+            <span class="panel-controls">
+            <a href="javascript:void(0)" class="panel-control-loader"></a>
+            <a href="javascript:void(0)" class="panel-control-collapse"></a></span>
+        </div>
+        <div class="panel-body pn" id="relation-company-detail" style="display:none;">
+            <div class="text-center" style="height:100px;line-height:100px;" id="relation-detail-loader">
+                <span class="fa fa-2x fa-spinner fa-pulse fa-fw"></span>
+            </div>
+        </div>
+    </div>
+</div>

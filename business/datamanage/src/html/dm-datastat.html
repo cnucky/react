@@ -1,0 +1,525 @@
+<!-- shim ../index.html content -->
+<script type="text/javascript">
+    var _pageConfig = {
+        title: '数据统计',
+    };
+</script>
+<link rel="stylesheet" type="text/css" href="./css/datastat/jquery.treeTable.css">
+<link rel="stylesheet" type="text/css" href="./css/datastat/dm-daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+
+<style>
+    header#topbar {
+        display: none;
+    }
+
+    .nav-data {
+        /*position: absolute;*/
+        bottom: 30%;
+        /*left: -84.85281px;*/
+        /*right: -84.85281px;*/
+        height: 2px;
+    }
+
+    .nav-data .button {
+        position: absolute;
+        z-index: 99;
+        bottom: 16%;
+        height: 85px;
+        width: 60px;
+        /*margin-top: -30px;*/
+        color: #888;
+        font-family: monospace;
+        text-align: center;
+        cursor: pointer;
+        visibility: visible;
+    }
+
+    .nav-data .button2 {
+        position: absolute;
+        z-index: 70;
+        bottom: 36%;
+        height: 85px;
+        width: 60px;
+        /*margin-top: -30px;*/
+        color: ghostwhite;
+        font-family: monospace;
+        text-align: center;
+        cursor: pointer;
+        visibility: visible;
+    }
+
+    .nav-data .button svg {
+        position: relative;
+        width: auto;
+        margin: auto;
+        height: 100%;
+    }
+
+    .nav-data .button path {
+        fill: currentcolor;
+    }
+
+    .nav-data .button:hover {
+        color: orangered;
+        /*color: #000;*/
+    }
+
+    .nav-data .button2.first {
+        position: absolute;
+        left: 1060px;
+        bottom: 3px;
+        height: 25px;
+        width: 45px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .pageNum {
+        position: absolute;
+        left: 1020px;
+        bottom: 0px;
+        height: 25px;
+        width: 45px;
+        margin: 0px 0px 0px 0px;
+        /*margin-left: 5px;*/
+        /*margin-right: 5px;*/
+    }
+
+    .nav-data .button2.last {
+        position: absolute;
+        left: 1000px;
+        bottom: 3px;
+        height: 25px;
+        width: 45px;
+    }
+
+    .nav-data .button.prev {
+        left: -10px;
+    }
+
+    .nav-data .button.next {
+        left: 1060px;
+    }
+
+    div ::-webkit-scrollbar {
+        width: 12px;
+        height: 10px;
+    }
+
+    div::-webkit-scrollbar-thumb {
+        background: silver;
+        /*#d8d8d8;*/
+    }
+
+    /*div ::-webkit-scrollbar{*/
+    /*width:1%;*/
+    /*}*/
+    /*div::-webkit-scrollbar-thumb{*/
+    /*background:#d8d8d8;*/
+    /*}*/
+
+    .clicked {
+        /*lightblue; #EB8*/
+        background: palegoldenrod;
+        border: 2px solid lightblue;
+    }
+
+    .hovered {
+        /*#EEcc88 lightblue*/
+        background: antiquewhite;
+        border: 1px solid;
+    }
+
+    #table-panel {
+        width: 100%;
+        /*min-height: 320px;*/
+        /*max-height: 320px;*/
+        overflow-x: scroll;
+        overflow-y: scroll;
+        /*margin-left: 1px;*/
+
+        /*border: 2px solid #b2dba1;*/
+        padding: 0px;
+        margin-right: 15px;
+        border-radius: 5px;
+        margin-bottom: 3px;
+    }
+
+    .sum-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid lavenderblush;
+        border-collapse: collapse;
+        /*font-size:14px;*/
+    }
+
+    .sum-table td, th {
+        border: 1px solid lavenderblush;
+        border-collapse: collapse;
+        font-size: 15px;
+        min-width: 150px;
+        max-width: 250px;
+        height: 32px;
+        max-height: 35px;
+    }
+
+    td {
+        padding-left: 15px;
+    }
+
+    .dataTypeNameTd {
+        min-width: 250px;
+    }
+
+    .tablehead {
+        font-size: 16px;
+        height: 32px;
+        font-weight: bold;
+        text-align: center;
+        /*color: darkolivegreen;*/
+        /*antiquewhite*/
+        color: darkolivegreen;
+        background: lavender;
+        border: 1px solid lavenderblush;
+    }
+
+    .fixedThead {
+        display: block;
+        min-width: 200px;
+        height: 30px;
+        max-height: 35px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: darkolivegreen;
+    }
+
+    .scrollTbody {
+        display: block;
+        /*height: 200px;*/
+        overflow: scroll;
+        width: 90%;
+    }
+
+    /*.tree_table td,.tree_table th {*/
+    /*width: 200px;*/
+    /*border-bottom: none;*/
+    /*border-left: none;*/
+    /*border-right: 1px solid #CCC;*/
+    /*border-top: 1px solid #DDD;*/
+    /*padding: 2px 3px 3px 4px*/
+    /*}*/
+    /*.tree_table tr{*/
+    /*border-left: 1px solid #EB8;*/
+    /*border-bottom: 1px solid #B74;*/
+    /*}*/
+    .scrollTbody td {
+        padding-left: 15px;
+    }
+
+    .dataTypeTableBody {
+        width: 100%;
+    }
+
+    .dataTypeTableBody td {
+        /*width:25%;*/
+        line-height: 30px;
+        border: 1px solid lavenderblush;
+        border-collapse: collapse;
+    }
+
+    .CountTableBody td, th {
+        border: 1px solid lavenderblush;
+        border-collapse: collapse;
+    }
+
+</style>
+
+<section id="content" class="animated fadeIn table-layout"
+         style="background: white; padding: 0px; min-height: 700px;">
+    <div class="container-fluid" id="container" style="width: 100%; padding: 0px 0px 0px 0px">
+        <div class="row-fluid" style="width: 100%">
+            <div class="span9" style="width: 100%;">
+                <div style="height:50%;">
+                    <div class="panel-heading" style="position: relative">
+                        <ul class="nav panel-tabs-border panel-tabs panel-tabs-left" id="auth-tabs"
+                            style="width:100%;position:relative;left:-9px; ">
+                            <li class="type-tab active" id="business-datastat">
+                                <a data-toggle="tab">业务时间数据量统计</a>
+                            </li>
+                            <li class="type-tab" id="import-datastat">
+                                <a data-toggle="tab">接收/导入数据量统计</a>
+                            </li>
+
+                            <button id="btn-refresh" title="刷新页面" data-toggle="tooltip"
+                                    data-placement="bottom" type="button"
+                                    class="btn btn-rounded btn-sm btn-primary ph10 mr5"
+                                    style="margin: 8px; display: inline; float:right; padding-bottom: 5px;">
+                                <span class="glyphicon glyphicon-refresh"></span>
+                                <span> 刷新</span>
+                            </button>
+
+                            <button id="btn-datatype-filter" title="筛选数据类型" data-toggle="tooltip"
+                                    data-placement="bottom" type="button"
+                                    class="btn btn-rounded btn-sm btn-system ph10 mr5"
+                                    style="margin: 8px; display: inline; float:right; padding-bottom: 5px;">
+                                <span class="fa fa-filter"></span>
+
+                                <span>筛选数据类型</span>
+                            </button>
+
+                            <!--<div class="input-group" style="height: 30px; width:40%; max-width:380px; min-width:360px;-->
+                            <!--vertical-align: middle; padding-top: 5px; padding-right:5px; padding-left: 2px; float:right">-->
+                            <!--<span class="input-group-addon"-->
+                            <!--style="height: 30px; width:70px; color:#232323">筛选时间范围</span>-->
+
+                            <!--<div class="input-group date" id="" style="height: 30px;">-->
+                            <!--<span class="input-group-addon cursor"><i class="fa fa-calendar"></i></span>-->
+                            <!--<input type="text" class="form-control" id=""-->
+                            <!--style="padding-right:0px;z-index:auto;" placeholder="统计时间段">-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div style="height: 30px;vertical-align: middle;float:right">-->
+                            <!--&lt;!&ndash;class="col-md-6"&ndash;&gt;-->
+                            <!--<div style="height: 30px; vertical-align: middle;">-->
+                            <!--&lt;!&ndash;class="section"&ndash;&gt;-->
+                            <!--<label class="field" style="font-size:14px; height:30px; vertical-align:middle; float:left">-->
+                            <!--导入量/接收量差值比例</label>-->
+                            <!--<label class="field select" style="padding-left:5px; padding-right:5px; font-size:14px;-->
+                            <!--vertical-align:middle;float:left">-->
+                            <!--<input id="granularity" style="width:35px; height: 25px;" value="5">%-->
+                            <!--</label>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="checkbox-custom checkbox-primary mt10" style="color:#1e2028;float:right; line-height: 30px;">-->
+                            <!--<input type="checkbox" unchecked id="hasattachment" class="edit">-->
+                            <!--<label for="hasattachment">只显示有运行中的对接任务的数据类型</label>-->
+                            <!--</div>-->
+                        </ul>
+
+                    </div>
+
+                    <div class="panel" id="table-panel" style="height: auto; padding-top: -6px;">
+                        <!--class="table-panel"-->
+                        <table id="treeTable-sum-datastat" class="tree_table sum-table">
+                            <thead>
+                            <!--class="fixedThead"-->
+                            <tr>
+                                <th class="tablehead dataTypeNameTd">数据类型</th>
+                                <th class="tablehead dbSize">存储空间</th>
+                                <th class="tablehead" id="recCount">接收数据量</th>
+                                <th class="tablehead" id="count">导入数据量</th>
+                                <th class="tablehead" id="recCountToday">今日接收数据量</th>
+                                <th class="tablehead" id="countToday">今日导入数据量</th>
+                                <th class="tablehead" id="recCountYesterday">昨日接收数据量</th>
+                                <th class="tablehead" id="countYesterday">昨日导入数据量</th>
+                                <th class="tablehead" id="recCountBeforeYesterday">前日接收数据量</th>
+                                <th class="tablehead" id="countBeforeYesterday">前日导入数据量</th>
+                                <th class="tablehead" id="recCountWeek">最近一周接收</th>
+                                <th class="tablehead" id="countWeek">最近一周导入</th>
+                                <th class="tablehead" id="recCountMonth">最近一月接收</th>
+                                <th class="tablehead" id="countMonth">最近一月导入</th>
+                                <th class="tablehead" id="recCountYear">最近一年接收</th>
+                                <th class="tablehead" id="countYear">最近一年导入</th>
+                                <th class="tablehead">开始时间</th>
+                                <th class="tablehead">结束时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="background: linen; height: 43px; top: -7px; vertical-align: top">
+                        <!--<ul id="nav">-->
+                        <div id="stat-type" style="height: 30px;vertical-align: middle; padding-top: 5px;
+                    float:left;padding-left:5px;padding-right:5px;">
+                            <label class="field" style="font-size:14px ;height: 30px;vertical-align: middle; padding-top: 7px;
+                            padding-right:2px; float:left"> 统计内容 </label>
+                            <label class="field select" style="font-size:14px ;height: 35px;  vertical-align: middle;
+                            padding-top: 4px;padding-left:3px;float:right">
+                                <select id="statType" style="width:150px;height: 25px;">
+                                    <option value="1">总体数据量统计</option>
+                                    <option value="2">按用户数据量统计</option>
+                                    <option id="batchsOption" value="3">按任务数据量统计</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </label>
+                        </div>
+
+                        <div class="input-group" style="height: 30px; width:40%; max-width:380px; min-width:360px;
+                             vertical-align: middle; padding-top: 2px; padding-right:5px; padding-left: 2px; float:left">
+                            <span class="input-group-addon"
+                                  style="height: 30px; width:70px; color:#232323">统计时间范围</span>
+
+                            <div class="input-group date" id="dateRange_picker" style="height: 30px;">
+                                <span class="input-group-addon cursor"><i class="fa fa-calendar"></i></span>
+                                <input type="text" class="form-control" id="dateRange"
+                                       style="padding-right:0px;z-index:auto;" placeholder="统计时间段">
+                            </div>
+                        </div>
+
+                        <div style="height: 30px;vertical-align: middle; padding-top: 3px;float:left">
+                            <!--class="col-md-6"-->
+                            <div style="height: 30px; padding-top: 2px; padding-right:8px; padding-left: 2px; float:left">
+                                <!--class="section"-->
+                                <label class="field" style="font-size:14px ;height: 30px;vertical-align: middle; padding-top: 5px;
+                            padding-right:2px; float:left"> 时间粒度 </label>
+                                <label class="field select" style="font-size:14px ;height: 35px;  vertical-align: middle;
+                            padding-top: 4px;padding-left:3px;float:left">
+                                    <select id="stat-granularity" style="width:55px;height: 25px;">
+                                        <option value="1">天</option>
+                                        <option value="2">月</option>
+                                        <option value="3">年</option>
+                                    </select>
+                                    <i class="arrow"></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 6px; padding-bottom: 2px; float:left">
+                            <!--<button id="btn-query" title="查询" data-toggle="tooltip" type="button" class="btn btn-alert">-->
+                            <!--<i class="fa fa-search"></i>-->
+                            <!--</button>-->
+                            <button id="btn-query" title="查询" data-toggle="tooltip" data-placement="bottom" type="button"
+                                    class="btn btn-rounded btn-sm btn-system btn-block"
+                                    style="padding-top: 5px; width:65px; height: 32px;">
+                                <i class="fa fa-search"></i>
+                                <span> 查询</span>
+                            </button>
+                        </div>
+
+                        <div id="table-type"
+                             style="height: 30px;vertical-align: middle; padding-top: 5px;float:right;padding-right:4px;">
+                            <label class="field" style="font-size:14px ;height: 30px;vertical-align: middle; padding-top: 7px;
+                            padding-right:2px; float:left"> 表格内容类型 </label>
+                            <label class="field select" style="font-size:14px ;height: 35px;  vertical-align: middle;
+                            padding-top: 4px;padding-left:3px;float:right">
+                                <select id="tableType" style="width:100px;height: 25px;">
+                                    <option value="1">导入数据量</option>
+                                    <option value="2">接收数据量</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="top: -7px;">
+                    <!--style="height:50%;"-->
+                    <div id="mainGraphic" style="height: 300px;float:left;border-top: 1px solid #d8d8d8;width:70%">
+                        <div class='nav-data-btn' style="float:right; display: inline; ">
+
+                        </div>
+                    </div>
+
+
+                    <div class="nav-data" style="float:right; display: inline; ">
+                        <button type="button" class="btn btn-primary light button2 first fs12 p5" id="btn-firstPage">
+                            首页<span class="fa fa-arrow-right"></span>
+                        </button>
+                        <label class="pageNum" id="chartPageNum"></label>
+                        <button type="button" class="btn btn-primary light button2 last fs12 p5" id="btn-lastPage">
+                            <span class="fa fa-arrow-left"></span>尾页
+                        </button>
+                        <!--->
+                        <div id="prev" class="button prev">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 28">
+                                <path d="M0.703 15q0-0.203 0.156-0.359l7.281-7.281q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359t-0.156 0.359l-6.141 6.141 6.141 6.141q0.156 0.156 0.156 0.359t-0.156 0.359l-0.781 0.781q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359z"
+                                      fill="#000000">
+                                </path>
+                            </svg>
+                        </div>
+                        <div id="next" class="button next">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 28">
+                                <path d="M0.203 21.5q0-0.203 0.156-0.359l6.141-6.141-6.141-6.141q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l7.281 7.281q0.156 0.156 0.156 0.359t-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-0.781-0.781q-0.156-0.156-0.156-0.359z"
+                                      fill="#000000">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div id="CountTable" style="float:left; border-left: 1px solid #d8d8d8;
+                       border-top: 1px solid #d8d8d8; width:30%;">
+                        <div style="width:100%; ">
+                            <!--<table class="table table-striped  table-hover" cellspacing="0" width="100%">-->
+                            <!--<thead style="background: lavender">-->
+                            <!--<tr>-->
+                            <!--<td style="width:20%;text-align: center;color: #3498db;font-weight: bold; font-size: 16px; padding: 5px 0px 5px 0px">日期</td>-->
+                            <!--<td style="width:30%;text-align: center;color: #3498db;font-weight: bold; font-size: 16px; padding: 5px 0px 5px 0px">数据量(条)</td>-->
+                            <!--<td style="width:30%;text-align: center;color: #3498db;font-weight: bold; font-size: 16px; padding: 5px 0px 5px 0px">变化量(条)</td>-->
+                            <!--<td style="width:20%;text-align: center;color: #3498db;font-weight: bold; font-size: 16px; padding: 5px 0px 5px 0px">变化率</td>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <!--</table>-->
+                            <!--<div id="countTableBodyDiv" style="width:100%; height: 400px; overflow-y: scroll; ">-->
+                            <table id="CountTable1" class="table table-striped table-hover" cellspacing="0"
+                                   width="100%">
+                                <thead style="background: lavender; height: 32px;">
+                                <tr style="height: 32px;">
+                                    <td style="width:20%;text-align: center;color: #3498db;font-weight: bold;
+                                     font-size: 14px; padding: 5px 0px 5px 0px">
+                                        日期
+                                    </td>
+                                    <td id="countsCol"
+                                        style="width:30%;text-align: center;color: #3498db;font-weight: bold;
+                                        font-size: 16px; padding: 5px 0px 5px 0px">
+                                        数据量(条)
+                                    </td>
+                                    <td style="width:30%;text-align: center;color: #3498db;font-weight: bold;
+                                    font-size: 16px; padding: 5px 0px 5px 0px">
+                                        变化量(条)
+                                    </td>
+                                    <td style="width:18%;text-align: center;color: #3498db;font-weight: bold;
+                                    font-size: 16px; padding: 5px 0px 5px 0px">
+                                        变化率
+                                    </td>
+                                </tr>
+                                </thead>
+                                <tbody id="CountTableBody" class="dataTypeTableBody"
+                                       style="width:100%; overflow-y: scroll">
+                                <!--<tr>-->
+                                <!--<td style="width:20%;">2015/01/01</td>-->
+                                <!--<td style="width:35%;">2334665479780</td>-->
+                                <!--<td style="width:30%;">2334665479780</td>-->
+                                <!--<td style="width:15%;"><span class="fa fa-arrow-up" style="color:red"></span>4%</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                <!--<td style="width:20%;">2015/01/02</td>-->
+                                <!--<td style="width:35%;">2334665479780</td>-->
+                                <!--<td style="width:30%;">2334665479780</td>-->
+                                <!--<td style="width:15%;"><span class="fa fa-arrow-down" style="color:green"></span>4%</td>-->
+                                <!--</tr>-->
+
+                                <!--<tr>-->
+                                <!--<td style="width:20%;">2015/01/01</td>-->
+                                <!--<td style="width:35%;">2334665479780</td>-->
+                                <!--<td style="width:30%;">2334665479780</td>-->
+                                <!--<td style="width:15%;"><span class="fa fa-arrow-up" style="color:red"></span>4%</td>-->
+                                <!--</tr>-->
+                                </tbody>
+                            </table>
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <!--<div style=" width:30%; height:0px; border-left: 1px solid #d8d8d8;" id="pieGraphic">-->
+                    <!--&lt;!&ndash;border-left: 1px solid #d8d8d8;&ndash;&gt;-->
+                    <!--</div>-->
+
+                    <div id="pieGraphic" style="float:left;border-left: 1px solid #d8d8d8; height: 300px; width:30%;">
+
+                    </div>
+                    <!--border-bottom: 1px solid #d8d8d8;-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript" src='${entryRoot}/dm-datastat.js'></script>

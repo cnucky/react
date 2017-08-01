@@ -1,0 +1,92 @@
+<style>
+.topbar {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.fancytree-icon-color {
+    color: #ffaf60;
+}
+
+.panel-tabs.panel-tabs-border > li.active > a {
+    margin-bottom: 1px;
+    border-bottom: 2px solid #3498db;
+}
+</style>
+<div class='panel mn' id='sq-panel' style='height:100%'>
+    <div class='panel-heading' id='sq-head' style='border:0px;height:31px'>
+        <ul class="nav panel-tabs-border panel-tabs topbar">
+            <li id='cond-li' class="active">
+                <a aria-expanded="false" href="#tab1" data-toggle="tab" class='ptn pbn pl10 pr10' style='border-left:0px;border-right:0px;'>条件</a>
+            </li>
+            <li id='res-li' class="">
+                <a aria-expanded="false" href="#tab2" data-toggle="tab" class='ptn pbn pl10 pr10' style='border-left:0px;border-right:0px;'>结果</a>
+            </li>
+                <li id='map-li' class="">
+                <a aria-expanded="false" href="#tab3" data-toggle="tab" class='ptn pbn pl10 pr10' style='border-left:0px;border-right:0px;'>地图</a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-menu" id='panel-menu'>
+    </div>
+    <div class='panel-body pn' id='sq-body' style='border:0;'>
+        <div class="tab-content pn br-n pn" id='sq-tab'>
+            <div id="tab1" class="tab-pane active">
+                <form id="queryform" class="form-horizontal">
+                    <div class="panel panel-info heading-border" style="margin-bottom:0px">
+                        <div class="" id="panelquery">
+                            <div class="panel-body collapse in" id="panelbody" style="border:0;">
+                                <div id="panel-body-container">
+                                </div>
+                            </div>
+                            <div class="panel-footer pn" style="border:0;background: none repeat scroll 0% 0% #F2F2F2;" id="panelfooter">
+                                <div class="row  mn">
+                                    <div class="col-sm-5">
+                                        <div id="progressbar" style="display:none">
+                                            <div class="col-sm-7">
+                                                <div class="progress" style="margin-top:9px">
+                                                    <div id="task_progress_div" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                                        0%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="tab2" class="tab-pane">
+                <div id='grid-div'>
+                    <div id="gridContainer"></div>       
+                </div>
+                <div id='statistic-div'>
+                </div>
+            </div>
+                <div id="tab3" class="tab-pane">
+                <form class="form-horizontal" role="form" id="map-form">
+                    <div class="panel">
+                        <div class="panel-body pn" id='map-panel'>
+                            <div id="mapContainer"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-form" class=" popup-basic admin-form mfp-with-anim mfp-hide">
+    <div class="panel">
+        <div class="panel-heading ptn pbn">
+            <span class="panel-title">
+                <i class="fa fa-rocket"></i>结果详情</span>
+        </div>
+        <form>
+            <div class="panel-body pn" id="detail">
+            </div>
+        </form>
+    </div>
+</div>

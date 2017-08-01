@@ -1,0 +1,11 @@
+<div ng-show='tag.valueType === "string"'>
+	<input ng-model='stringVal' class='custom-input custom-input-string' style='' type='text' value></input> <div class='btn btn-xs btn-primary custom-add-btn string-btn'   >添加</div>
+</div>
+
+<div ng-show='tag.valueType === "date"'>
+	<input class='custom-input custom-input-date' style='' placeholder='2000-01-01 00:00:00' ng-model='dateVal1' mask='9999-19-39 29:69:69' mask-validate='false'   ng-pattern='/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])(\s([0-1][0-9]|2[0-3])\:([0-5][0-9])\:([0-5][0-9]))?$/'></input> 至 <input class='custom-input custom-input-date' style='' type='text' value placeholder='2001-01-01 00:00:00' ng-model='dateVal2' mask='9999-19-39 29:69:69' mask-validate='false' ng-pattern='/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])(\s([0-1][0-9]|2[0-3])\:([0-5][0-9])\:([0-5][0-9]))?$/'></input> <div class='btn btn-xs btn-primary custom-add-btn date-btn'  >添加</div>
+</div>
+
+<div ng-show='tag.valueType === "int"'>
+	<input class='custom-input custom-input-int' style='' type='text' value placeholder='' ng-model='intVal1' ng-pattern='/(^-?\d+)$|(\s)/'></input> 至 <input class='custom-input custom-input-int' style='' type='text' value placeholder='' ng-model='intVal2' ng-pattern='/(^-?\d+)$|(\s)/'></input> <div class='btn btn-xs btn-primary custom-add-btn int-btn'  >添加</div>
+</div>

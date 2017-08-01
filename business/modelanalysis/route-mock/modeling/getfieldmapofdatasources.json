@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "data": {
+        "outputColumnNameMapList": [{
+            "oldColumn": "isdn",
+            "newColumn": "isdn1"
+        }, {
+            "oldColumn": "isdn",
+            "newColumn": "isdn1"
+        }, {
+            "oldColumn": "isdn",
+            "newColumn": "isdn1"
+        }]
+
+    }
+}

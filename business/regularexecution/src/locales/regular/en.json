@@ -1,0 +1,13 @@
+{
+    "info": {
+        "deleteAllMsg": "Delete all scheduled execution tasks?"
+    },
+    "warning": {
+    },
+    "module": {
+        "finish-btn": "confirm",
+        "cancel-btn": "cancel",
+        "role-edit": "modify the role",
+        "role-edit-reset": "reset the role"
+    }
+}

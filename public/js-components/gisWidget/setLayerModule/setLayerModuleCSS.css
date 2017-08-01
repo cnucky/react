@@ -1,0 +1,65 @@
+.layer-group-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.layer-group-body
+{
+    height: 110px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.threeLayers
+{
+    height: 28px;
+}
+.threeLayers:hover
+{
+    background: linear-gradient(to right,lightgray,#ffffff);
+}
+.threeLayers_select
+{
+    background: linear-gradient(to right,lightblue,#ffffff);
+}
+.buttonInToolbar-style{
+    border:1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    color:#3498db;
+}
+.buttonInToolbar-style:hover{
+    background-color: #F0F0F0 !important;
+    cursor: pointer;
+}
+/*.leaflet-control{
+    margin-right:0px !important;
+    margin-top:0px !important;
+}*/
+
+.layer_table{
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-collapse: separate !important;
+}

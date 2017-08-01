@@ -1,0 +1,20 @@
+{
+	"equal": "Equal",
+	"not-equal": "Not Equal",
+	"in": "In",
+	"not-in": "Not In",
+	"start-with": "Start With",
+	"not-start-with": "Not Start With",
+	"end-with": "End With",
+	"not-end-with": "Not End With",
+	"like": "Like",
+	"not-like": "Not Like",
+	"is-null": "Is Null",
+	"is-not-null": "Is Not Null",
+	"greater-than": "Greater Than",
+	"less-than": "Less Than",
+	"between": "Between",
+	"not-between": "Not Between",
+	"not-greater-than": "Not Greater Than",
+    "not-less-than": "Not Greater Than"
+}

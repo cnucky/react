@@ -1,0 +1,55 @@
+
+<div class="panel <%- properties.length > 0 ? '' : 'hide' %>" style="margin-bottom: 10px;">
+    <div class="panel-heading" style="right: auto; width: auto; margin-right: auto;">
+        <span class="panel-title">
+        <span class="fa fa-table"></span><%- members.length > 1 || isMerged ? '成员' + (memberIndex + 1) : '基本属性' %></span>
+        <button type="button" class="btn-add-graph btn btn-rounded btn-primary btn-xs pull-right mt10 <%- isMerged ? '' : 'hide' %>" data-index=<%= memberIndex %>>
+            <i class="fa fa-arrow-right"></i>
+        </button>
+    </div>
+    <div class="panel-body pn">
+        <div class="bs-component">
+            <table class="table">
+                <tbody>
+                <% _.each(properties, function(p, index) { %>
+                <tr>
+                    <td style="width:40%">
+                        <span class="fs14 text-nowrap"><%- p.key %></span>
+                    </td>
+                    <td class="property-value" style="width:60%">
+                        <span><%- p.value %></span>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="panel <%- members.length > 0 ? '' : 'hide' %> mb20">
+    <div class="panel-heading" style="right: auto; width: auto; margin-right: auto;">
+          <span class="panel-title">
+            <span class="fa fa-group"></span>成员信息</span>
+    </div>
+    <div class="panel-body pn">
+        <div class="bs-component">
+            <table class="table" >
+                <tbody>
+                <% _.each(members, function(mbr, index) { %>
+                <tr>
+                    <td class="property-value">
+                        <div>
+                            <span class="fs14"><%- mbr.caption %></span>
+                            <button type="button" class="btn-add-graph btn btn-rounded btn-primary btn-xs pull-right <%- isMerged ? 'hide' : '' %>" data-index=<%= index %>>
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

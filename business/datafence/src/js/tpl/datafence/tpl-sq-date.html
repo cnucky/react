@@ -1,0 +1,26 @@
+<div class="col-xs-3 pn">
+    <div class=" input-group">
+        <span id="<%- fieldName %>_div" title="<%- fieldCaption %>" style="text-align: left;">
+            <%- fieldCaption %>
+        </span>
+    </div>
+</div>
+<input id='<%- fieldName %>_opr' value='between' style="display:none">
+<div class="col-xs-9 pn" id="<%- fieldName %>_between_div">
+    <div class="input-group">
+        <span id="" class="input-group-addon" style="width:34%;color:#232323">
+            开始日期
+        </span>
+        <input type="text" class="form-control" id="<%- fieldName %>_begin" style="display:inline;padding-right:3px; border-radius: 0px" placeholder="开始日期">
+    </div>
+</div>
+<div class="col-xs-3 pn">
+</div>
+<div class="col-xs-9 pn" id="<%- fieldName %>_between_div">
+    <div class="input-group">
+        <span id="" class="input-group-addon" style="width:34%;color:#232323">
+            结束日期
+        </span>
+        <input type="text" class="form-control" id="<%- fieldName %>_end" style="display:inline;padding-right:3px; border-radius: 0px" placeholder="结束日期">
+    </div>
+</div>

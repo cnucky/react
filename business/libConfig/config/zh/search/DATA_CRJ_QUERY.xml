@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_CRJ" DisplayName="口岸出入境">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="PASS_TIME" DisplayName="出入境时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="NAME" DisplayName="姓名" ControlType="Text"/>
+            <Condition Item="ENAME" DisplayName="英文姓名" ControlType="Text"/>
+            <Condition Item="CNAME" DisplayName="中文姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="VISA_NO" DisplayName="签证号码" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="PASS_TIME" DisplayName="出入境时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="NAME" DisplayName="姓名" ControlType="Text"/>
+            <Condition Item="ENAME" DisplayName="英文姓名" ControlType="Text"/>
+            <Condition Item="CNAME" DisplayName="中文姓名" ControlType="Text"/>
+            <Condition Item="CERT_NO" DisplayName="证件号码" ControlType="Text"/>
+            <Condition Item="VISA_NO" DisplayName="签证号码" ControlType="Text"/>
+    </Template>
+</Search>

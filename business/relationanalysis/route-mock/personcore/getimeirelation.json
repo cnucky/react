@@ -1,0 +1,31 @@
+{
+    "code": 0,
+    "message": "",
+    "data": [{
+        "imei": 872332,
+        "mobile": [{
+            "phone": 18951656132,
+            "freq": 20,
+            "valueType": 5
+        }, {
+            "phone": 18951656134,
+            "freq": 3,
+            "valueType": 5
+        }, {
+            "phone": 18951656133,
+            "freq": 1,
+            "valueType": 5
+        }]
+    }, {
+        "imei": 12312313,
+        "mobile": [{
+            "phone": 15996874525,
+            "freq": 55,
+            "valueType": 5
+        }, {
+            "phone": 24324,
+            "freq": 44,
+            "valueType": 5
+        }]
+    }]
+}

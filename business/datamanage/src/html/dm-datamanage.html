@@ -1,0 +1,357 @@
+<!-- shim styles -->
+<style>
+    header#topbar {
+        display: none;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    #actions {
+        margin: 2em 0;
+    }
+
+    .content-menu {
+        position: absolute;
+        overflow: hidden;
+        z-index: 10;
+        border: 1px solid #C8CCD5;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+        background: #FFF none repeat scroll 0% 0%;
+        width: 160px;
+    }
+
+    .my-ui-icon-del {
+        /*background-image: url("../../img/dm/datastat/arrow.png");*/
+        background: black;
+        /*#FFF none repeat scroll 0% 0%;*/
+        background-position: 0px 0px;
+    }
+
+    #task-treeview {
+        height: 800px;
+        overflow-y: auto;
+    }
+
+    div#task-treeview > ul {
+        border: none;
+    }
+
+    /*#dir-tree-panel ul.fancytree-container {*/
+
+    /*min-height: 120px;*/
+
+    /*max-height: 100%;*/
+
+    /*padding: 15px;*/
+
+    /*border: none;*/
+
+    /*}*/
+
+    .taskTable tr td {
+        text-overflow: ellipsis;
+        max-width: 140px;
+    }
+
+    table tr th,
+    table tr td {
+        border-left: 1px solid #d8d8d8;
+        /*text-overflow: ellipsis;*/
+        /*max-width: 140px;*/
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    div::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    div::-webkit-scrollbar-thumb {
+        background: #d8d8d8;
+    }
+
+    progress {
+        padding: 1px;
+        background: white;
+        border: 1px solid #d8d8d8;
+    }
+
+    progress::-webkit-progress-value {
+        background: #5BBCDD;
+    }
+
+    progress::-webkit-progress-bar {
+        background: transparent;
+    }
+
+    .barNumber {
+        font-size: 1px;
+        position: relative;
+        left: -45%;
+        top: -2px;
+        z-index: 2;
+    }
+
+    #div1 {
+        position: relative;
+        width: 0%;
+        height: auto;
+        margin: 0 auto;
+        /*250px*/
+    }
+
+    #div1 a {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-family: Microsoft YaHei;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 3px 6px;
+    }
+
+    #div1 a:hover {
+        border: 1px solid #eee;
+        background: #ccc;
+    }
+
+    #div1 .blue {
+        color: blue;
+    }
+
+    #div1 .red {
+        color: red;
+    }
+
+    #div1 .yellow {
+        color: yellow;
+    }
+
+    p {
+        font: 16px Microsoft YaHei;
+        text-align: center;
+        color: #ba0c0c;
+    }
+
+    p a {
+        font-size: 14px;
+        color: #ba0c0c;
+    }
+
+    p a:hover {
+        color: red;
+    }
+
+    .category {
+        display: inline-block;
+        width: 120px;
+        padding-left: 20px;
+    }
+
+    .category:hover {
+        cursor: pointer;
+    }
+
+    .category-icon {
+        display: inline-block;
+        background: rgb(60, 162, 224);
+        width: 36px;
+        height: 36px;
+        line-height: 32px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 26px;
+        border: 3px solid rgb(240, 240, 240);
+    }
+
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+        color: black;
+        background-color: #3498db;
+        border: 0px solid transparent;
+        border-color: rgba(0, 0, 0, 0.07) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.18);
+    }
+
+    .policySelect {
+    }
+
+    .errorRow {
+        background-color: orangered;
+    }
+
+    #left-panel-toggle {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        pointer-events: auto;
+        cursor: default;
+    }
+
+    #left-panel-toggle:hover {
+        background-color: lightgrey;
+        border-right: 1px solid #DDD;
+        border-top: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+    }
+
+    #right-panel-splitter {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        z-index: 10;
+        /*pointer-events: auto;*/
+        height: 100%;
+        margin-left: 2px;
+    }
+
+    #right-panel-splitter:hover {
+        background-color: lightskyblue;
+        cursor: w-resize;
+    }
+
+    #network-container {
+        position: relative;
+    }
+
+    /*zhangu delete css*/
+</style>
+
+<link rel="stylesheet" href="${root}/css/skin/jquery-ui.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.bootstrap.css">
+
+<!--<link rel="stylesheet" href="/datamanage/css/udp/modeldialog.css">-->
+<link rel="stylesheet" href="/datamanage/css/udp/udp-createdata.css">
+<!--<link rel="stylesheet" href="/datamanage/css/udp/udp-search.css">-->
+<link rel="stylesheet" type="text/css" href="/datamanage/css/udp/fileinput.css">
+<link rel="stylesheet" type="text/css" href="/datamanage/css/udp/dropzone.css">
+<!-- end shim -->
+
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="${root}/js/components/jqwidgets/jqxsplitter.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var leftTray = $('.tray.tray-left');
+
+        var leftHeight = window.innerHeight - leftTray.offset().top;
+//        console.log("window.innerHeight", window.innerHeight);
+//        console.log("leftTray.offset().top", leftTray.offset().top);
+//        console.log("leftHeight", leftHeight);
+
+        $('#form-container').height(leftHeight);
+        $('.tray.tray-center').height(leftHeight);
+
+//        console.log("('#dir-tree-panel').position().top", $('#dir-tree-panel').position().top);
+        $('#data-treeview').height(leftHeight - $('#dir-tree-panel').position().top - 40);
+        leftTray.height(leftHeight);
+    })
+</script>
+
+<section id="content1" class="pn table-layout animated fadeIn" style="height: 650px; background: white">
+    <aside class="tray tray-left flex-layout" id="right-panel-container"
+           style="background: white; padding: 0px 0px 0px 0px;" data-tray-height="match">
+        <div class="panel mbn flex-layout flex-vertical" style="height: 100%;">
+            <div class="row mt10 mln mrn">
+                <div class="col-xs-8">
+                    <input class="form-control input-sm" name="search-input" placeholder="过滤...">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-reset">清除
+                        <span id="matches"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="dir-tree-panel" class="panel-body flex-item" style="border: none; padding-right: 0px;">
+                <div class="pn br-n">
+                    <div id="data-treeview" class="dir-tree">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-panel-splitter" class="">
+        </div>
+    </aside>
+
+    <div class="tray tray-center pn" style="height: 444px; vertical-align: top; overflow-y: scroll"
+         id="network-container">
+        <div id="form-container" style="height:inherit;background: white">
+        </div>
+        <span id="left-panel-toggle" class="text-primary p5">
+            <i class="fa fa-caret-left fs28"></i>
+        </span>
+    </div>
+
+    <div id="modal-form-createfolder" class=" popup-basic admin-form mfp-with-anim mfp-hide">
+        <div class="panel">
+            <div class="panel-heading" id="createfolderhead">
+                <span class="panel-title">
+                   <i class="fa fa-pencil-square"></i>新建目录</span>
+            </div>
+            <form method="post" action="/" id="createFolderForm">
+                <div class="panel-body p25">
+                    <div class="section">
+                        <label for="folder_create" class="field-label">目录名称 *</label>
+                        <label for="folder_create" class="field prepend-icon">
+                            <input type="text" name="folder_create" id="folder_create" class="gui-input">
+                            <label for="folder_create" class="field-icon">
+                                <i class="fa fa-bookmark"></i>
+                            </label>
+                        </label>
+                    </div>
+                    <div class="section">
+                        <label for="folder_Desc" class="field-label">目录备注 *</label>
+                        <label for="folder_Desc" class="field prepend-icon">
+                            <textarea class="gui-textarea" id="folder_Desc" name="textlib_Desc"
+                                      placeholder=""></textarea>
+                            <label for="folder_Desc" class="field-icon">
+                                <i class="fa fa-comments"></i>
+                            </label>
+                        </label>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" id="createfolder" class="button btn-primary" style="horiz-align: right">新建
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="${entryRoot}/dm-datamanage.js">
+</script>

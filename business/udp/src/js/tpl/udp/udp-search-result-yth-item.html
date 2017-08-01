@@ -1,0 +1,51 @@
+<li class="media  pb20  mr10" style="margin-left: -35px; margin-top:2px;">
+    <div class="panel yth-result-panel" data-table-id='<%- tableId%>' data-record-id='<%- recordId%>' data-title='<%- title%>' data-link='<%-link%>'>
+        <div class='panel-heading'>
+            <span class='yth-result-panel-heading-text'><%- title%></span>
+            <% if(parseInt(hasAuth) == 1) {%>
+                <a href="<%-link%>" target='_blank' class='pull-right' style='margin-right:26px;margin-left:10px;'>查看详情</a>
+                <% }%>
+            <span class='pull-right yth-result-panel-heading-text'>最新修改时间:<span class='yth-result-title'><%- editTime%></span></span>
+            
+        </div>
+        <div class='panel-body'>
+            <div class='yth-result-line'>
+                <span class='yth-result-title'>录入人:</span><span class='yth-result-text'><%- creator%></span>
+                <span class='yth-result-title'>修改人:</span><span class='yth-result-text'><%- editor%></span>
+                <span class='yth-result-title'>录入时间:</span><span class='yth-result-text'><%- createTime%></span>
+                
+            </div>
+            <div class='yth-result-line' style='margin-bottom:13px;'>
+                <span class='yth-result-title'>摘要:</span>
+                
+                    <% if(parseInt(hasAuth) == 1){ %>
+                    <span class='yth-result-text'>
+                        <% var patt = new RegExp('<em>.*?</em>', 'g') %>
+                <% var ret, start = 0, end = 0 %>
+                <% while((ret=patt.exec(summary))!=null) { %>
+                    <% end = ret.index %>
+                    <%- summary.substring(start, end) %>
+                    <%= ret %>
+                    <% start = patt.lastIndex %>
+                <% } %>
+                <%- summary.substring(start, summary.length) %>
+          
+                    </span>
+                    
+                    <% }else{ %>
+                    <span class='yth-warning-text'>您没有查看该数据的权限</span>
+                    <% } %>
+                
+            </div>
+            <% if(parseInt(hasAuth) == 1){ for(var i=0;i<attachs.length;i++){ %>
+            <div class='yth-attach-line' data-attach-id='<%- attachs[i].attachId %>'>
+                <a class='attach-link' href="#"  data-path="<%-attachs[i].path%>"><span class='attach-name'><%- attachs[i].attachName %></span></a>
+                <span class="pull-right" style="margin-right: 20px">
+                    <a href="#" class="button btn-success btn-mini" data-path="<%-attachs[i].path%>">浏览</a>
+                    <a href="#" class="button btn-danger btn-mini" data-path="<%-attachs[i].path%>">下载</a>
+                </span>
+            </div>
+            <% }}%>
+        </div>
+    </div>
+</li>

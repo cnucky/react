@@ -1,0 +1,8 @@
+module.exports = {
+	OK: 0,
+	SERVICE_ERROR: -1,
+	OPERATION_ERROR: -2,
+	INVALID_RESPONSE: -3,
+	NEED_LOGIN: 1,
+	TGT_INVALID: 1001
+};

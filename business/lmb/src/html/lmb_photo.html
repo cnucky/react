@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<title>飓风：态势</title>
+	<meta charset="utf-8">
+	<!-- Tell IE to use the latest, best version. -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="${ctxRoot}/css/style.css" rel="stylesheet" />
+	<link href="${ctxRoot}/css/tag.css" rel="stylesheet" />
+	<link href="${ctxRoot}/css/dlg.css" rel="stylesheet" />
+
+</head>
+
+<body>
+	<!-- Canvas to render on -->
+	<div id="threejs-container">
+		<p style="margin-top:100px;">正在加载...</p>
+	</div>
+
+	<div class="title">
+		<h1>飓风：态势</h1>
+	</div>
+
+	<div id="options">
+		<div id="options-content">
+		</div>
+	</div>
+
+	<div class="header" id="header-top">
+	</div>
+
+	<div class="header" id="header-bottom">
+	</div>
+
+	<div id="thumbprint">
+		<img src="./img/chevron-up.png" />
+	</div>
+
+	<div class="header-animator" id="header-animator-inside"></div>
+	<div class="header-animator" id="header-animator-outside"></div>
+
+	<div id="menu">
+		<button id="table" style="display:none;">TABLE</button>
+		<button id="sphere" style="display:none;">SPHERE</button>
+		<button id="helix" style="display:none;">HELIX</button>
+		<button id="grid" style="display:none;">GRID</button>
+
+		<button id="reset">正面视角</button>
+		<button id="reset2">侧面视角</button>
+		<button id="sort">智能排序</button>
+		<p>
+			<button id="last">上翻</button>
+			<button id="next">下翻</button>
+		</p>
+	</div>
+
+	<div id="bar-control" style="visibility:hidden">
+	</div>
+
+	<div id="footer">
+		<p><span>提示：点击类目标卡片进行选择，点击头像查看详情，打开左侧边栏进行类目标筛选。</span></p>
+		<p><span>方向键（↑）</span> : 上翻 <span>方向键（↓）</span> : 下翻 <span>鼠标左键</span> : 旋转 <span>鼠标右键</span> : 平移 <span>鼠标滚轮</span> : 缩放。</p>
+	</div>
+
+	<script src="/js/components/lib/jquery.js"></script>
+	<script src="/js/components/lib/underscore.js"></script>
+
+	<script src="${entryRoot}/lmb_photo.js"></script>
+</body>
+
+</html>

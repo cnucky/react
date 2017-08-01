@@ -1,0 +1,33 @@
+.panel-body .dd{ max-width:none;}
+.dd3-handle,.dd3-handle:hover{ background: #3498db; width: 40px; height: 40px; line-height: 30px; border-color: #3498db; border-right-color: #ddd;}
+.dd3-content{ padding-left: 50px; height: 40px; }
+.dd-list .dropdown{ display: inline-block; position: relative; margin-left: 10px; }
+.dd-list .dropdown .fa-plus-square{ font-size: 20px; cursor: pointer; vertical-align: bottom; }
+.dd3-content select{ margin-top: -1px; margin-right:10px;}
+button.close{ margin-top: -5px; }
+button.btn-sm{ padding: 5px 12px; }
+button.btn span.caret{ margin-left:5px; }
+button.multiselect.dropdown-toggle{border: 1px solid #ddd;}
+.dd-list .dropdown .dropdown-menu{ min-width: 90px; }
+.dd-list .dropdown li a{ cursor: pointer; }
+.dd3-item > button{ margin-left: 40px; line-height:30px; font-size: 20px;}
+.dd3-item > button:focus{ outline: none; }
+.dd3-content div.input-group{ margin-top: -1px; margin-right: 10px;}
+.dd3-content span.checkbox-custom{ color: #444;}
+.form-inline.diy > select.form-control:first-child{ width: 170px;}
+.form-inline.diy > select.form-control:nth-child(2){ width: 100px;}
+.noHand .form-control[disabled]{cursor: default; background:none;}
+button.multiselect.disabled{background:none !important;}
+button.multiselect.disabled .caret{display: none;}
+.noHand input[enabled]{border-color: #666; }
+.noHand .dd3-handle{ cursor: default;}
+.panel-menu .pull-right button{ margin-left: 10px;}
+.diy .checkbox-custom label{ padding-left: 28px; margin-right:0;}
+.form-inline.diy .input-group .form-control{ width: 140px;}
+.dd-list .dd-list {
+     padding-top: 0;
+     padding-bottom: 0;
+}
+select.input-sm.noArrow{-webkit-appearance:none;line-height:normal;}
+.tpl-item{}
+.tpl-opt{}

@@ -1,0 +1,509 @@
+/*关系分析图*/
+/*关系分析图*/
+.conduct .draw .button{cursor: pointer;}
+#relation_charts{ width:100%; height: 100%; position: relative; overflow: hidden;}
+#relation_charts .nodeImg{ cursor: pointer;  }
+#relation_charts .forceText {fill: #069 ; text-anchor: middle ; font-size: 12px;font-family: SimSun; }
+#relation_charts .forceLine {cursor: pointer; }
+#relation_charts .linetext {fill:#f00; fill-opacity:0.0; font-family: SimSun; font-weight: bold; }
+#relation_charts .diagonalLine{fill:none;stroke-width: 1.5px; stroke: #ccc;}
+
+.graticule {fill: none;stroke: #333;stroke-width: 1px;}
+
+.country {stroke: black;stroke-width: 1px;}
+
+.overlay {fill: none;pointer-events: all;}
+/*提示信息*/
+#infoTip{font-size: 10px; min-width: 120px;height: auto;position: absolute;border:1px solid #999;background-color: white;border-radius: 5px;padding: 3px;}
+
+/*拖动选择范围*/
+#timeBox{ width: 100%; height: 100%; background: #eee; }
+#timeBox .select_ranger_box{  position: relative; width: 100%; height: 100%; }
+#timeBox .select_ranger_box .charts{ width: 100%; height: 100%;}
+#timeBox .select_ranger_box .select_ranger{  height:100%; position: absolute;top: 10px;left: 30px;}
+#timeBox .select_ranger_box .ranger{ width: 100%; height: 100%; background: #369; opacity: 0.5;
+    position: absolute; top: 0; left: 0;cursor:col-resize;}
+#timeBox .MyRect { fill: steelblue; stroke:#000;cursor: pointer;}
+#timeBox .MyRect:hover{fill:#f60;}
+
+#timeBox .MyText {text-anchor: middle; display: none;}
+/*#timeBox .axis text{ transform: rotateZ(90deg) translate(40px,-15px); font-size: 12px;}*/
+#timeBox .axis path,#timeBox .axis line{fill:none;stroke:black;shape-rendering: crispEdges;}
+
+/*左右剩余空白*/
+#timeBox .select_ranger_box .ranger_space{ position: absolute; top: 0; height: 100%; border:1px solid grey;  border-bottom:none; opacity: 0.5;}
+#timeBox .select_ranger_box .left_space{ left: 0; width: 0; border-left: none;}
+#timeBox .select_ranger_box .right_space{ right: 0; width: 0; border-right: none;}
+
+/*滑块*/
+#timeBox .select_ranger_box .ranger_square{ position: absolute; width: 6px; height: 16px; border: 1px solid grey; background: #fff; cursor: w-resize; }
+#timeBox .select_ranger_box .ranger_square.left_square{ left:-4px; }
+#timeBox .select_ranger_box .ranger_square.right_square{ right: -4px;}
+#timeBox .select_ranger_box .ranger_square .num{ position: absolute; background: white; padding: 3px 5px; }
+#timeBox .select_ranger_box .ranger_square.left_square .num{ left: 4px; top:-60px; border-radius:0 3px 3px 0; }
+#timeBox .select_ranger_box .ranger_square.right_square .num{ right: 4px; bottom:-60px; border-radius:3px 0  0 3px;}
+
+#timeBox .bottom_border{ height: 2px; width: 100%; background: #000; position: absolute; left: 30px; bottom: 8px;}
+
+.conduct .draw {
+    width: 83%;
+    height: 75%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #868686;
+    margin: .5% 0 .5% .5%;
+    float: left;
+}
+
+.conduct .draw .header {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    background-color: #eee;
+    border-bottom: #868686;
+    padding-left: 2%;
+}
+
+.conduct .draw .header .button {
+    width: 54px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    margin: 10px 8px 0;
+}
+
+.conduct .draw .header .button .img1 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    background-image: url("../img/readEmail/juzhen.png");
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .text {
+    width: 60px;
+    height: auto;
+    text-align: center;
+    display: block;
+    /*font-size: 12px;*/
+    color: #333;
+}
+
+.conduct .draw .header .button .img2 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/readEmail/lidao.png");
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img3 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    background-image: url("../img/readEmail/shuxing.png");
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img4 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    background-image: url("../img/readEmail/yuanxing.png");
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img5 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    background-image: url("../img/readEmail/cengci.png");
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img6 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/readEmail/quanju.png");
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img7 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/readEmail/jubu.png");
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img8 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/readEmail/suonue.png");
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .img9 {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.conduct .draw .header .button .bold {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.conduct .draw .header .button .inherit {
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: inherit;
+}
+
+.conduct .draw .header .button .text {
+    width: 54px;
+    height: auto;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+.conduct .draw .cotents {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.conduct .draw .zoom {
+    width: 40px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #868686;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+
+.conduct .draw .zoom span {
+    width: 40px;
+    height: 40px;
+    border-bottom: 1px solid #868686;
+    display: block;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.conduct .timeList {
+    height: 260px;
+    overflow: hidden;
+    position: absolute;
+    left: .5%;
+    bottom: .5%;
+    border: 1px solid #868686;
+}
+
+.conduct .timeList h1 {
+    width: 100%;
+    height: 32px;
+    overflow: hidden;
+    font-size: 18px;
+    text-indent: 1em;
+    line-height: 32px;
+    border-bottom: 1px solid #868686;
+    padding: 0;
+    margin: 0;
+}
+
+.conduct .timeList .time {
+    width: 150px;
+    height: 85%;
+    overflow: auto;
+    border-right: 1px solid #868686;
+    float: left;
+    padding-left: 30px;
+}
+
+.conduct .timeList .time .type {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.conduct .timeList .time .type h3 {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.conduct .timeList .time .type p {
+    text-indent: 1.6em;
+    font-size: 12px;
+}
+
+.conduct .statusBar {
+    width: 250px;
+    overflow: hidden;
+    float: right;
+    /*margin-left: .5%;*/
+    margin-right: .5%;
+
+    margin-top: .5%;
+    border: 1px solid #868686;
+}
+
+.conduct .statusBar .navStatus {
+    width: 100%;
+    height: 28px;
+    overflow: hidden;
+    border-bottom: 1px solid #868686;
+    margin: 0;
+    padding: 0;
+}
+
+.conduct .statusBar .pages {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.conduct .statusBar .extend h1 {
+    width: 94%;
+    height: 32px;
+    overflow: hidden;
+    line-height: 36px;
+    border-bottom: 2px solid #0040D0;
+    margin: 0 auto;
+    font-size: 14px;
+    text-indent: .5em;
+}
+
+.conduct .statusBar .extend ul {
+    margin: 0;
+    padding: 10px 0 0;
+    width: 94%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.conduct .statusBar .extend ul li {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.conduct .statusBar .extend ul li h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-indent: 1em;
+}
+
+.conduct .statusBar .extend ul li p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 28px;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.conduct .statusBar ul li p i {
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #000;
+    float: left;
+    margin: 9px;
+}
+
+.conduct .status .type {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.conduct .status .type h1 {
+    width: 94%;
+    height: 32px;
+    overflow: hidden;
+    line-height: 36px;
+    border-bottom: 2px solid #0040D0;
+    margin: 0 auto;
+    font-size: 14px;
+    text-indent: .5em;
+}
+
+.conduct .status .type p {
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    line-height: 32px;
+    margin: 0 auto;
+}
+
+.conduct .status .type p label {
+    padding-right: 10px;
+    float: left;
+}
+
+.conduct .status .type p input {
+    height: 20px;
+    margin: 5px 0;
+    float: left;
+    border: none;
+    border-bottom: 1px solid #000;
+    line-height: 20px;
+}
+
+.conduct .status .type p input[type='color'] {
+    width: 35px;
+}
+
+.conduct .status .type p input[type='range'] {
+    width: 100px;
+}
+
+.conduct .status .type p input[type='text'] {
+    width: 100px;
+}
+
+.conduct .statusBar ul li p input {
+    width: 35px;
+    height: 20px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.conduct .statusBar ul li p label {
+    padding-right: 5px;
+}
+
+.conduct .statusBar ul li p span:first-child {
+    float: left;
+    overflow: hidden;
+}
+
+.conduct .statusBar ul li p span:last-child {
+    float: right;
+    overflow: hidden;
+}
+
+.conduct .statusBar .navStatus li {
+    width: 30%;
+    height: 28px;
+    overflow: hidden;
+    float: left;
+    line-height: 28px;
+    border-right: 1px solid #868686;
+    font-size: 12px;
+    text-align: center
+}
+
+.conduct .statusBar .navStatus li.active {
+    background: #eee;
+}
+
+.shade {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: #7f8c8d;
+}
+
+.loading {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    z-index: 10;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.loading div {
+    text-align: center;
+}
+
+.loading p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.submit {
+    float: right;
+    padding-right: 20px;
+}
+
+.conduct .header .rows {
+    float: left;
+    width: 1px;
+    height: 50px;
+    margin: 5px 4px;
+    background: #000;
+}

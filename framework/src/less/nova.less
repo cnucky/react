@@ -1,0 +1,170 @@
+/* nova project styles */
+
+.default-text {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.49;
+    color: #666;
+}
+#content_wrapper {
+    position: relative;
+}
+
+#fullscreen-loader {
+    position: absolute;
+    // margin-left: 250px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    display: flex;
+}
+
+#fullscreen-loader .loader-container {
+    margin: auto;
+}
+
+#fullscreen-loader .ball-pulse > div {
+    background-color: #3498db;
+    width: 20px;
+    height: 20px;
+}
+
+#fullscreen-loader .loader-close {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    :hover {
+        color: #3498db;
+    }
+}
+
+#fullscreen-loader .loader-inner {}
+
+/*#fullscreen-loader .line-scale > div {
+    background-color: #3498D6;
+}*/
+
+/*===============================================
+ Right Side Toolbox
+================================================= */
+.toolbox {
+    z-index: 999;
+    overflow: visible !important;
+    position: fixed;
+    right: -300px;
+    width: 300px;
+    margin-top: 10px;
+    -webkit-transition: right 0.1s ease-in-out;
+    -moz-transition: right 0.1s ease-in-out;
+    transition: right 0.1s ease-in-out;
+}
+.toolbox-lg {
+    z-index: 999;
+    overflow: visible !important;
+    position: fixed;
+    right: -350px;
+    width: 350px;
+    margin-top: 10px;
+    -webkit-transition: right 0.1s ease-in-out;
+    -moz-transition: right 0.1s ease-in-out;
+    transition: right 0.1s ease-in-out;
+}
+.toolbox.toolbox-open {
+    right: 0;
+}
+.toolbox-lg.toolbox-open {
+    right: 0;
+}
+.toolbox .panel-heading {
+    cursor: pointer;
+    margin-right: 30px;
+    border: 1px solid #DDD;
+    width: 344px;
+    height: auto;
+    line-height: 42px;
+    right: 44px;
+    font-size: 14px;
+}
+.toolbox .panel-heading .panel-title {
+    padding-left: 0px;
+}
+.toolbox .panel-body {
+    border: 1px solid #DDD;
+    border-top: 0;
+    background: white;
+    padding: 23px;
+}
+.toolbox .panel-icon {
+    font-size: 22px;
+    padding-right: 20px;
+    padding-left: 6px;
+}
+
+.xy-scroll-panel {
+    overflow-x: auto;
+    overflow-y: auto;
+    width:100%;
+}
+
+.flex-layout {
+    display: -ms-flexbox;
+    display: flex;
+}
+// default
+.flex-horizontal {
+    flex-direction: row;
+}
+.flex-vertical {
+    flex-direction: column;
+}
+.flex-layout .flex-item {
+    -ms-flex:1;
+    flex: 1;
+}
+
+.text-ellipsize {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+}
+
+.drag-active {
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    background-color: #cbe8f6;
+    border: 1px solid #26a0da;
+}
+
+.text-ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.breadcrumb li.crumb-icon:before {
+    content: " ";
+    padding: 0;
+}
+
+.breadcrumb li.crumb-stash:before {
+    content: "\f054";
+    color: #276b1d;
+    padding: 0 5px;
+    font-family: FontAwesome;
+    font-size: 12px;
+}

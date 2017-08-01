@@ -1,0 +1,28 @@
+<table id="log-query-table" data-export-mark="all" class="table display datatable-hacked" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th data-i18n="logquery.th-name"></th>
+            <th data-i18n="logquery.th-modulename"></th>
+            <th data-i18n="logquery.th-oprtype"></th>
+            <th data-i18n="logquery.th-ip"></th>
+            <th data-i18n="logquery.th-mac"></th>
+            <th data-i18n="logquery.th-oprtime"></th>
+            <th data-i18n="logquery.th-detail"></th>
+            <th data-i18n="logquery.th-taskid"></th>
+        </tr>
+    </thead>
+    <tbody id='tbody'>
+        <% _.each(logData, function(item) { %>
+            <tr>
+                <td class=""><%- item.userName %></td>
+                <td><%- item.moduleName %></td>
+                <td><%- item.operationName %></td>
+                <td><%- item.ip %></td>
+                <td><%- item.mac %></td>
+                <td><%- item.operationTime %></td>
+                <td title="<%- item.content %>"><p><%- item.content %></p></td>
+                <td><%- item.relationId %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

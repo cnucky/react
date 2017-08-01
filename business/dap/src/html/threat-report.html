@@ -1,0 +1,136 @@
+<html lang="en">
+<html style="background: white;">
+<head>
+    <title>威胁报告</title>
+    <style>
+    .title{
+        text-align: center;
+        color: black;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 黑体;
+
+    }
+    .subtitle{
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 黑体;
+    }
+    .shortsummary{
+        text-indent: 2em;
+        margin-top:20px;
+        color: black;
+        font-size: 20px;
+        font-family: 仿宋_GB2312;
+    }
+    .blockdiv{
+        padding:1.0pt 4.0pt 1.0pt 4.0pt;
+        background:white;
+        border:3px solid #bdd6d6;
+        margin: 20px 10px
+    }
+    .firstTitle{
+        font-size:26pt;
+        font-family:黑体;
+        color:steelblue;
+    }
+    .secondTitle{
+        font-size:22pt;
+        font-family:仿宋_GB2312;
+        color:steelblue;
+    }
+    .contextFont{
+        font-size:20pt;
+        font-family:仿宋_GB2312;
+        color:black;
+    }
+    .tablecontent{
+        text-indent: 2em;
+        width: 100%;
+        display: block;
+    }
+    font{
+        color:black !important;
+    }
+    </style>
+</head>
+
+
+<body style="min-height:0px!important;background: white !important;height:100%;">
+    <div id = 'div_report'>
+        <div id="reporthead" class="container">
+            <div class="title"><span>威胁预警报告</span></div>
+            <div class="subtitle"><span>报告编号：{{report_no}}</span><span>&nbsp;&nbsp;&nbsp; </span><span>报告时间：{{report_time}}</span></div>
+        </div>
+        <div id="reportbody">
+            <div class="shortsummary"><span class="contextFont" v-html="shortsummary"></span><span class="contextFont">。相关情况如下：</span></div>
+            <div class="blockdiv">
+                <div><span class="firstTitle">一、威胁预警摘要</span></div>
+                <div>
+                    <span v-for="(summary,index) in summarys" ><span class="contextFont">{{index+1}}、</span><span class="contextFont" v-html="summary"></span></span>
+                </div>
+            </div>
+
+            <div class="blockdiv">
+                <div><span class="firstTitle">二、相关人员情况</span></div>
+                <div>
+                    <div v-for="(people,index) in threatpeoples">
+                        <div><span class="contextFont">{{index+1}}、{{people.desp}}</span></div>
+                        <div>
+                            <span class="secondTitle"><u>(1)身份概要：</u></span>
+                            <div>
+                                <span v-show="people.name!=''" class="tablecontent contextFont">姓名：{{people.name}}</span>
+                                <span v-show="people.sex!=''" class="tablecontent contextFont">性别：{{people.sex}}</span>
+                                <span v-show="people.birthday!=''" class="tablecontent contextFont">出生日期：{{people.birthday}}</span>
+                                <span v-show="people.height!=''" class="tablecontent contextFont">身高：{{people.height}}</span>
+                                <span v-show="people.marriage!=''" class="tablecontent contextFont">婚姻状况：{{people.marriage}}</span>
+                                <span v-show="people.nation!=''" class="tablecontent contextFont">民族：{{people.nation}}</span>
+                                <span v-show="people.idcard!=''" class="tablecontent contextFont">身份证：{{people.idcard}}</span>
+                                <span v-show="people.address!=''" class="tablecontent contextFont">地址：{{people.address}}</span>
+                                <span v-show="people.teladdr!=''" class="tablecontent contextFont">码址：{{people.teladdr}}</span>
+                                <span v-show="people.email!=''" class="tablecontent contextFont">电子邮箱账号：{{people.email}}</span>
+                                <span v-show="people.qq!=''" class="tablecontent contextFont">QQ：{{people.qq}}</span>
+                                <span v-show="people.taobao!=''" class="tablecontent contextFont">淘宝账号：{{people.taobao}}</span>
+                                <span v-show="people.alipay!=''" class="tablecontent contextFont">支付宝账号：{{people.alipay}}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="secondTitle"><u>(2)历史活动情况</u></span>
+                            <ul>
+                                <li v-for="(active,index) in people.activities" class="contextFont" v-html="active"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blockdiv">
+                <div><span class="firstTitle">三、威胁处置预案</span></div>
+                <div>
+                    <span v-for="(action,index) in departmentAction" class="contextFont tablecontent" style="margin:20px">{{index+1}}、{{action}}</span>
+                </div>
+            </div>
+
+            <div class="blockdiv">
+                <div><span class="firstTitle">四、结果反馈及评价</span></div>
+                <div v-for="(word,index) in departmentWords" class="tablecontent" style="margin:20px 10px">
+                    <span class="contextFont tablecontent">{{index+1}}、{{word.name}}核查结果：</span>
+                    <div class="contextFont tablecontent">{{word.content}}</div>
+                    <span class="contextFont tablecontent">威胁评价：{{word.evaluate}}</span>
+                </div>
+
+                <div class="contextFont tablecontent">事件核查总体情况：{{allword}}</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/components/lib/jquery.js"></script>
+	<script src="/js/components/lib/underscore.js"></script>
+    <script src="/js/components/lib/moment.js"></script>
+    
+    <script src="${entryRoot}/threat-report.js"></script>
+
+</body>
+</html>

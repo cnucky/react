@@ -1,0 +1,32 @@
+<% _.each(detailInfo, function(item) { %>
+    <tr id="<%- item.key %>" data-compare="<%- item.key %>">
+        <td style="width: 100px;">
+            <span><%- item.name %></span>
+        </td>
+        <td>
+            <span id="<%- item.key %>-for-display"><%- item.value %></span>
+
+            <label class="field" id="for-edit-text" style="display: none">
+                <input id="<%- item.key %>-for-input" type="text" class="form-control input-sm">
+            </label>
+
+
+            <label class="field select" id="for-edit-gender" style="display: none">
+                <select id="user-gender" name="user-gender">
+                    <option value="0">空</option>
+                    <option value="1">男性</option>
+                    <option value="2">女性</option>
+                </select>
+                <i class="arrow double"></i>
+            </label>
+
+
+            <!-- <label class="field select" id="for-edit-position" style="display: none">
+                <select id="user-position" name="user-position">
+                    <option value="0">空</option>
+                </select>
+                <i class="arrow double"></i>
+            </label> -->
+        </td>
+    </tr>
+<% }) %>

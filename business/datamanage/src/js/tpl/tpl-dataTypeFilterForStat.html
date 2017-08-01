@@ -1,0 +1,31 @@
+<section class="table-layout">
+    <div class="tab-content mw900 center-block center-children">
+        <div class="admin-form theme-info tab-pane mw700 active" id="dataTypeDetail" role="tabpanel">
+            <form id="form-dataTypeDetail">
+                <div class="checkbox-custom checkbox-primary mt10" style="margin-bottom: 20px; color:#1e2028;">
+                    <input type="checkbox" unchecked id="haveRunDJTask" class="edit">
+                    <label for="haveRunDJTask">只显示有运行中的对接任务的数据类型</label>
+                </div>
+
+                <div class="section" style="margin-bottom: 20px; ">
+                    <label class="field-label" style="font-weight: normal;font-size: 13px;">导入量/接收量差值比例阈值(%)：</label>
+                    <input type="text" class="form-control" id="diff-proportion"
+                           placeholder="请输入0-100间的整数" style="padding-right:0px;">
+                </div>
+
+                <div class="section" style="margin-bottom: 12px; ">
+                    <label class="field-label" style="font-weight: normal;font-size: 13px;">筛选时间范围：</label>
+
+                    <div class="input-group date" id="filterDateRange_picker" style="height: 30px;">
+                        <span class="input-group-addon cursor"><i class="fa fa-calendar"></i></span>
+                        <input type="text" class="form-control" id="filterDateRange"
+                               style="padding-right:0px;z-index:auto;" placeholder="筛选时间段">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+

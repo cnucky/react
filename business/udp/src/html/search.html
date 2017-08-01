@@ -1,0 +1,238 @@
+<!-- shim styles -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '全文检索',
+};
+</script>
+<link rel="stylesheet" href="${root}/css/udp/udp-search.css">
+<link rel="stylesheet" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" href="${root}/css/skin/theme.css">
+<link rel="stylesheet" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" href="${root}/css/select2/css/select2.css">
+<!-- end shim -->
+<div id="content">
+    <div class="container-fluid">
+        <div class="pull-right mtn10">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown menu-merge" id="setting">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">设置</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="panel w400 mn6">
+                                <div class="panel-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="spinner1" class="col-sm-3 control-label">每页条数</label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                      <i class="fa fa-level-up"></i>
+                                                    </span>
+                                                    <input id="spinner1" class="form-control ui-spinner-input" name="spinner" value="10" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style='display:none'>
+                                            <label for="spinner2" class="col-sm-3 control-label">摘要长度</label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                      <i class="fa fa-level-up"></i>
+                                                    </span>
+                                                    <input id="spinner2" class="form-control ui-spinner-input" name="spinner" value="400" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="panel-footer text-right">
+                                    <button class="btn btn-primary" type="button" id="settingButton">确定</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">帮助</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="panel w600">
+                                <p style='margin-left:20px;margin-top:20px;'>全文检索支持精确与模糊检索模式</p>
+                                <p style='margin-left:20px;margin-top:9.5px;'><span style='font-size:15px;font-weight:600;'>精确:</span> 仅支持单个关键词的精确检索，不支持通配符等符号</p>
+                                <p style='margin-left:20px;margin-top:9.5px;'><span style='font-size:15px;font-weight:600;'>模糊:</span> 支持多种符号检索</p>
+                                <ul class="mln20" style="list-style: none">
+                                    <li class="">
+                                        <p>[1] 检索符号：’空格‘，表示检索出的文档包含该词。 如查询 中国 美国，查询结果包含中国和美国中的一个或两个</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[2] 前缀检索符号：’+‘，表示检索出的文档必包含该词。如查询 +中国 美国，查询结果中一定包含中国，可能包含美国</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[3] 前缀检索符号：’-‘，表示检索出的文档必不包含该词。如查询 -中国 美国，查询结果中一定不包含中国，但包含美国</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[4] 括号：()，表示查询时先做括号中的运算。如查询 中国 -(美国 +日本),会先查询符合括号中的表达式的结果。</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[5] 引号： “”，表示精确查询。</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[6] 通配符： *，表示匹配任意字符。如查询 中*，查询结果中一定包含以中开头的内容，如中国</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[7] 特殊字符： + - && || ！ () {} []
+                                            <> ^ ~ * ? : \\ /，检索这些字符需要加上\\进行转义。</p>
+                                    </li>
+                                    <li class="">
+                                        <p>[8] 输入符号： 以上检索符号均为英文半角符号。</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="mt40" style="text-align: center">
+                <img img-responsive center-block style="width: 128px;height: 128px" alt="Udp" src="${root}/img/udp/udp-search.jpg">
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid" id="time">
+                <ul class="nav nav-pills mt40 mauto t-c" style="">
+                    <li>
+                        <a href="#" data-toggle="tab">近一天</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">近一周</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">近一月</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">近半年</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="tab">近一年</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" data-toggle="tab" data-effect="mfp-zoomIn">自定义</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--搜索框-->
+        <div class="container-fluid mt70">
+            <div class="row-fluid">
+                <div class="admin-form">
+                    <form class="section mw1000 mauto" id="search-form">
+                        <div class="smart-widget sm-right smr-80" style="width: 80%;margin: 0 auto">
+                            <label class="field prepend-icon">
+                                <input type="text" name="keyword" id="keyword" class="gui-input" placeholder="关键词">
+                                <label for="keyword" class="field-icon">
+                                    <i class="fa fa-search"></i>
+                                </label>
+                            </label>
+                            <button id="search-button" type="submit" class="button btn-primary">搜索</button>
+                            <ul style="position:absolute;top:10px;right:-80px;float:none;height:17px;line-height:17px;padding:0 8px;z-index:10">
+                                <li style="list-style-type: none">
+                                    <label class="option option-primary ml10" style="font-size: 13px">
+                                        <input id="precisemode" type="checkbox" name="precise">
+                                        <span class="checkbox"></span>精确</label>
+                                </li>
+                                <!--  <li style="list-style-type: none"><div id="textlibchoice" href="#" class='option-link'>数据选择</div></li> -->
+                                <!-- <li style="list-style-type: none"><a id="senior" href="#">高级</a></li> -->
+                            </ul>
+                        </div>
+                        <!-- end .smart-widget section -->
+                        <!--库选择-->
+                        <div class="container-fluid mt3" id="textlibpane">
+                            <div class="row-fluid">
+                                <div class="panel panel-info heading-border" style="width:82%; margin: 0 auto">
+                                    <div class="panel-heading pn h-30">
+                                        <p class="ml15 mr15" style="line-height:2.2">数据选择
+                                            <span class="pull-right " style="vertical-align:top;text-align:top;line-height:2.2;">
+                                                <input type="checkbox" id="quanxuan" name="AllOrNone" checked >全选
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="panel-body pn">
+                                        <div class="tab-block mb0">
+                                            <ul id="data-range-display" class="nav tabs-left tabs-border">
+                                            </ul>
+                                            <div id="data-range-display-tab" class=" tab-content fs-13 pt5" style="height:270px;font-family: Microsoft YaHei, sans-serif">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--高级-->
+                        <div class="container-fluid collapse mt3" id="seniorsearch">
+                            <div class="row-fluid">
+                                <div class="panel panel-info heading-border" style="width:61%; margin: 0 auto">
+                                    <div class="panel-heading pn h-30">
+                                        <h5 class="ml5">高级条件</h5>
+                                        <!-- <img class="pull-right" style="width: 32px;height: 32px;display:inline" src="${root}/img/filter.png"> -->
+                                    </div>
+                                    <div class="panel-body h-250 pn of-y-a">
+                                        <ul class="list-unstyled ">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--                     <div id="search-mode" class=" section mw1000 mauto">
+                            <div class="smart-widget sm-right smr-80" style="width: 60%;margin: 10px auto">
+                                <label class="search-mode-label">检索类别</label>
+                            </div>
+                            <div id="precise" class="smart-widget sm-right smr-80" style="width: 60%;margin: 10px auto">
+                                <label class="admin-form option option-primary mb10" style="font-size: 13px">
+                                    <input id="fuzzymode" type="radio" name="precise" checked>
+                                    <span class="radio"></span>模糊</label>
+                                <label class="option option-primary mb10" style="font-size: 13px">
+                                    <input id="precisemode" type="radio" name="precise" >
+                                    <span class="radio"></span>精确</label>
+                                
+                            </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="modal-panel" class="content-popup bg-none mfp-with-anim mfp-hide w400">
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-icon">
+                <i class="fa fa-star"></i>
+              </span>
+                    <span class="panel-title">自定义时间</span>
+                </div>
+                <div class="panel-body">
+                    <div class="row-fluid">
+                        <label style="font-family: Microsoft YaHei, sans-serif" class="col-sm-3 ml10 mt10 mrn20 fs-12">业务时间</label>
+                        <div class="input-group col-sm-4 " id="bussiness-date-range">
+                            <span class="input-group-addon cursor">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            <input type="text" class="form-control" style="width: 180px" name="bussiness-date-range" id="bussiness-date-range-input" placeholder="时间段">
+                        </div>
+                        <label style="font-family: Microsoft YaHei, sans-serif" class="col-sm-3  ml10 mt10 mrn20 fs-12">导入时间</label>
+                        <div class="input-group col-sm-4" id="fileload-date-range" style="margin-top: 5px">
+                            <span class="input-group-addon cursor">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            <input type="text" class="form-control" style="width: 180px" name="fileload-date-range" id="fileload-date-range-input" placeholder="时间段">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer text-right">
+                    <button class="btn btn-primary" type="button" id="timeButton">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src='${entryRoot}/udp-search.js'>
+</script>

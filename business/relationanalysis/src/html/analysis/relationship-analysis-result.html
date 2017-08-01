@@ -1,0 +1,280 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/vis.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-multiselect.css">
+<style type="text/css">
+    .qq-tree-container ul.fancytree-container {
+        height: 540px;
+        border: none;
+        padding: 10px
+    }
+
+    .qq-group ul.fancytree-container {
+        border: 1px solid #DDD;
+        height: 360px;
+    }
+
+    .meta-dialog:hover {
+        cursor: pointer;
+    }
+
+    /** timeline **/
+
+    #timeline .timeline-date {
+        z-index: 1;
+        position: absolute;
+        width: 80px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        background: #fff;
+        color: #1d6fa5;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 3px;
+        left: -30px;
+        right: auto;
+        box-shadow: 0 0 0 3px #eee;
+    }
+
+    #entity-detail-panel {
+        position: absolute;
+        height: 357px;
+        width: 270px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        margin: 20px 15px 20px 20px;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, .9);
+    }
+
+    #entity-detail-panel table {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+
+    #entity-detail-panel td.property-name {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100px;
+    }
+
+    #entity-detail-panel td.property-value {
+        word-wrap: break-word;
+        word-break: normal;
+    }
+    .vis-navigation-panel {
+        z-index: 10;
+        position: absolute;
+    }
+    .navigation-button {
+        touch-action: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        width: 34px;
+        height: 34px;
+        -moz-border-radius: 17px;
+        border-radius: 17px;
+        position: absolute;
+        display: inline-block;
+        background-position: 2px 2px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .up-button {
+        background-image: url('/img/vis-network/upArrow.png');
+        bottom: 50px;
+        left: 55px;
+    }
+    .down-button {
+        background-image: url('/img/vis-network/downArrow.png');
+        bottom: 10px;
+        left: 55px;
+    }
+    .left-button {
+        background-image: url('/img/vis-network/leftArrow.png');
+        bottom: 10px;
+        left: 15px;
+    }
+    .right-button {
+        background-image: url('/img/vis-network/rightArrow.png');
+        bottom: 10px;
+        left: 95px;
+    }
+    .panel-shadow{
+        box-shadow: 0 0 10px #888;
+    }
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<!-- end shim -->
+<script type="text/javascript">
+    window._pageConfig = {
+        page: '/relationanalysis/analysis/relationship-analysis-search.html'
+    }
+</script>
+<section id="content" class="animated fadeIn">
+    <div class="panel" id="panel-top">
+        <div class="panel-heading">
+            <span id="panel-title" class="panel-title">
+                <span class="fa fa-file-text"></span>中间人分析</span>
+            <div class="widget-menu pull-right mr10">
+                <button id="switch-table" type="button" class="btn btn-sm btn-primary" data-toggle="tooltip"
+                        data-placement="bottom" data-original-title="切换中间人分析和档案相似度分析">
+                    档案相似度分析
+                </button>
+            </div>
+        </div>
+        <div class="panel-body resizeMe" style="height: 400px;">
+            <div id="entity-div" style="height: 100%;">
+                <div style="border: 1px solid #e2e2e2; height: 100%;">
+                    <div id="entity" style="height: 100%;">
+                    </div>
+                    <div class="vis-navigation-panel">
+                        <div id="navigation-up" class="navigation-button up-button" ></div>
+                        <div id="navigation-down" class="navigation-button down-button" ></div>
+                        <div id="navigation-left" class="navigation-button left-button" ></div>
+                        <div id="navigation-right" class="navigation-button right-button"></div>
+                    </div>
+                </div>
+
+                <div id="entity-detail-panel" class="panel br-a br-r-n hide flex-layout flex-vertical">
+
+                    <div class="mr5 fs16" style="height: 42px; line-height: 38px;">
+                        <span class="panel-title">
+                        <span class="fa fa-table fs18" style="color: #3498db;"></span>详情</span>
+
+                        <div class="pull-right">
+                            <span id="btn-detail-close" class="fa fa-times-circle text-danger fs18"></span>
+                        </div>
+                    </div>
+                    <div id="entity-node-detail" class="flex-item" style="overflow-y: auto;"></div>
+                </div>
+
+                <img id="switch-value" class="cursor" src="/img/vis-network/switch.png" alt="switch"
+                     data-toggle="tooltip" data-placement="bottom" data-original-title="切换人物和人物实体"
+                     style="position: absolute; top: 30px; left: 35px;">
+
+
+            </div>
+            <div id="entity-table" data-initmark="true" style="height: 100%; display: none">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6" id="position0">
+            <div class="panel">
+                <div class="panel-heading">
+                    <ul class="nav panel-tabs-border panel-tabs panel-tabs-left">
+                        <li class="type-tab active" id="tab-properties">
+                            <a href="#properties0" data-toggle="tab">属性</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-relations">
+                            <a href="#relations0" data-toggle="tab">关系</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-relations-predict">
+                            <a href="#relations-predict0" data-toggle="tab">关系推测</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-behavior">
+                            <a href="#behaviors0" data-toggle="tab">行为数据</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-actioninfo">
+                            <a href="#actioninfo0" data-toggle="tab">行为轨迹</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-suspicious-action">
+                            <a href="#suspicious-action0" data-toggle="tab">可疑行为</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" style="background: #fff; overflow-y: scroll; height: 600px;">
+                    <div class="tab-content pn br-n" id="auth-content" style="min-width: 800px;">
+                        <div id="properties0" class="tab-pane fade in active"></div>
+                        <div id="relations0" class="tab-pane fade"></div>
+                        <div id="relations-predict0" class="tab-pane fade"></div>
+                        <div id="actioninfo0" class="tab-pane fade">
+                            <div id="timeline" class="mt30 timeline-single">
+                                <!-- Timeline Divider -->
+                                <div class="timeline-divider mtn row">
+                                    <div class="col-md-3 divider-label" id="actioninfo-start">
+                                        <span class="glyphicon glyphicon-map-marker"></span>
+                                    </div>
+                                    <div class="col-md-11" id="actioninfo-tag" style="padding-top:2px">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Timeline - Left Column -->
+                                    <div class="col-sm-6 left-column" id="actioninfo-timeline-items">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="suspicious-action" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="position1">
+            <div class="panel">
+                <div class="panel-heading">
+                    <ul class="nav panel-tabs-border panel-tabs panel-tabs-left">
+                        <li class="type-tab active" id="tab-properties">
+                            <a href="#properties1" data-toggle="tab">属性</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-relations">
+                            <a href="#relations1" data-toggle="tab">关系</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-relations-predict">
+                            <a href="#relations-predict1" data-toggle="tab">关系推测</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-behavior">
+                            <a href="#behaviors1" data-toggle="tab">行为数据</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-actioninfo">
+                            <a href="#actioninfo1" data-toggle="tab">行为轨迹</a>
+                        </li>
+                        <li class="type-tab hidden" id="tab-suspicious-action">
+                            <a href="#suspicious-action1" data-toggle="tab">可疑行为</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body" style="background: #fff; overflow-y: scroll; height: 600px;">
+                    <div class="tab-content pn br-n" id="auth-content" style="min-width: 800px;">
+                        <div id="properties1" class="tab-pane fade in active"></div>
+                        <div id="relations1" class="tab-pane fade"></div>
+                        <div id="relations-predict1" class="tab-pane fade"></div>
+                        <div id="actioninfo1" class="tab-pane fade">
+                            <div id="timeline" class="mt30 timeline-single">
+                                <!-- Timeline Divider -->
+                                <div class="timeline-divider mtn row">
+                                    <div class="col-md-3 divider-label" id="actioninfo-start">
+                                        <span class="glyphicon glyphicon-map-marker"></span>
+                                    </div>
+                                    <div class="col-md-11" id="actioninfo-tag" style="padding-top:2px">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Timeline - Left Column -->
+                                    <div class="col-sm-6 left-column" id="actioninfo-timeline-items">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="suspicious-action" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/js/components/vis/vis.js"></script>
+<script type="text/javascript" src="${entryRoot}/relationship-analysis-result.js"></script>

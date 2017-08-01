@@ -1,0 +1,5 @@
+.react-fancytree ul.fancytree-container {
+    min-height: 100px;
+    padding: 10px;
+    border: none;
+}

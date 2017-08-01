@@ -1,0 +1,91 @@
+<style>
+    #map * {
+        box-sizing: content-box;
+    }
+    #mapToolBar
+    {
+        position:relative;
+        top:0px;
+        left: 0px;
+        right: 0px;
+        height:35px;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1001;
+    }
+    #mapToolBar [data-toggle="dropdown"]{
+        padding-top: 2px;
+        padding-bottom: 2px;
+        height: 29px;
+
+    }
+    #mapToolBar li{
+        height: 20px;
+    }
+
+    #mapToolBar a{
+        height: 20px;
+    }
+
+    #mapToolBar label{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 20px;
+        min-height: 20px;
+    }
+    .latlng
+    {
+        color:white;
+        position: absolute;
+        left:10px;
+    }
+    .latlngtop
+    {
+        top:18px;
+    }
+    #lng
+    {
+        position: absolute;
+        left:40px;
+        color: white;
+    }
+    #lat
+    {
+        position: absolute;
+        left:40px;
+        color: white;
+    }
+    .regionLabel
+    {
+        color: white;
+    }
+    #scale
+    {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+</style>
+<div style="height: 100%">
+
+    <div class="functionPanel-out out-panel-open" id="out-panel">
+        <div id="manageAimTrackPanel" style="display: block;">
+
+        </div>
+    </div>
+
+    <div id="map">
+        <div id="mapToolBar">
+            <div style="float: right;margin-right: 20px">
+                <select id="provinceList" size="2"></select>
+                <select id="cityList" size="2"></select>
+                <select id="countyList" size="2"></select>
+                <label class="checkbox-inline" style="color: white">
+                    <input type="checkbox" id="regionCheck" value="option1">显示区域
+                </label>
+            </div>
+            <label class="latlng">经度:</label>
+            <label id="lng"></label>
+            <label class="latlng latlngtop">纬度:</label>
+            <label class="latlngtop" id="lat"></label>
+        </div>
+    </div>
+
+</div>

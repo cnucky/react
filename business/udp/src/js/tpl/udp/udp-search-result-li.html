@@ -1,0 +1,11 @@
+<div class="list-group list-group-links mt10" id="textlibsDir-<%- libDirID %>">
+    <div class="list-group-header"> <%- libDirName %> <img class="msg-count pull-right" style="width: 26px;height: 26px;margin-top:-10px;" src="../../img/udp/Loading.gif"> <span class='ml10 fa fa-sort-asc pull-right'></span></div>
+    <div class="panel">
+        <div  class="panel-body of-x-a pn" style="border:none;max-height:400px" class='textlibs'>
+            <% for(var i=0;i<textlibs.length;i++){ %>
+            <a href="#" category = '<%- textlibs[i].category%>'  id= '<%- textlibs[i].libID%>' class="list-group-item" style='display:none;'><%- textlibs[i].libName%><img class="msg-count" style="width: 26px;height: 26px" src="../../img/udp/Loading.gif"></a>
+
+            <% } %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<% _.each(records, function(recordValues, idx) { %>
+<div class="panel mb15" id="edge-properties" style="margin-bottom: auto;">
+    <div class="panel-heading"  style="right: auto; width: auto; margin-right: auto;">
+          <span class="panel-title ">
+            <span class="fa fa-table"></span><%- '记录' + (idx + 1) %></idx></span>
+    </div>
+    <div class="panel-body pn">
+        <div class="bs-component">
+            <table class="table">
+                <tbody>
+                <% _.each(recordValues, function(value, index) { %>
+                <tr>
+                    <td class="text-nowrap">
+                        <%- meta[index].caption %>
+                    </td>
+                    <td >
+                        <%- value %>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<% }) %>
+

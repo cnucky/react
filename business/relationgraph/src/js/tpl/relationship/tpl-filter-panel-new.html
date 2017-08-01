@@ -1,0 +1,71 @@
+<form class="form-horizontal p10" role="form">
+    <div class=" form-group ">
+        <label class="control-label col-md-4 mb10 ptn pln">实体类型：</label>
+        <div class="col-md-8">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <span  class="col-md-6" id="select-node-all"><span class="select-type">全选</span></span>
+                <span  class="col-md-6" id="select-node-reverse"><span class="select-type">反选</span></span>
+            </div>
+        </div>
+        <div id="node-grid">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="filter-keyword-new" class="col-md-4 control-label pln">实体名称：</label>
+
+        <div class="col-md-8">
+            <div class="bs-component">
+                <input type="text" id="filter-keyword-new" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class=" form-group ">
+        <label class="control-label col-md-4 mb10 ptn pln">关系类型：</label>
+        <div class="col-md-8">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <span   class="col-md-6" id="select-graph-all"><span class="select-type">全选</span></span>
+                <span   class="col-md-6" id="select-graph-reverse"><span class="select-type">反选</span></span>
+            </div>
+        </div>
+
+
+        <div id="graph-grid">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-3 control-label pln">边权值：</label>
+        <div class="col-md-9">
+            <select name="selectMode" class="form-control" id="select-mode">
+                <option value="0">等于</option>
+                <option value="1">不等于</option>
+                <option value="2">大于</option>
+                <option value="3">小于</option>
+                <option value="4">在...之间</option>
+                <option value="5">不在...之间</option>
+            </select>
+            <input type="number" id="frequency-new" class="form-control" min="0" >
+            <input type="number" id="min-frequency-new" class="form-control" min="0" >
+            <input type="number" id="max-frequency-new" class="form-control" min="0" >
+        </div>
+
+
+        <!--<div class="col-md-3">-->
+            <!--<input type="number" id="min-frequency-new" class="form-control" min="0" placeholder="从">-->
+        <!--</div>-->
+        <!--<div class="col-md-3">-->
+            <!--<input type="number" id="max-frequency-new" class="form-control" min="0" placeholder="到">-->
+        <!--</div>-->
+    </div>
+
+</form>
+
+<div class="text-right m10">
+    <button id="button-filter-new" type="button" class="btn btn-sm btn-primary ph15  mr15">筛选</button>
+    <button id="button-recovery-new" type="button" class="btn btn-sm btn-primary ph15">还原</button>
+</div>
+

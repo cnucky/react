@@ -1,0 +1,33 @@
+{
+	"translation":
+	{
+		"kMeans":
+		{
+			"characteristicSet":"特征列",
+			"numberOfClusters":"聚类数",
+			"maxNumberOfIteration":"最大迭代次数"
+		},
+		"bayes":
+		{
+			"label-column":"标签列",
+			"positive-sample-label-value":"正样本标签值"
+		},
+		"logisticRegression-vectorMachine":
+		{
+			"label-column":"标签列",
+			"positive-sample-label-value":"正样本标签值",
+			"maxNumberOfIteration":"最大迭代次数"
+		},
+		"linearRegression":
+		{
+			"label-column":"标签列",
+			"positive-sample-label-value":"正样本标签值",
+			"maxNumberOfIteration":"最大迭代次数",
+			"step-size":"步长"
+		},
+		"prediction":
+		{
+
+		}
+	}
+}

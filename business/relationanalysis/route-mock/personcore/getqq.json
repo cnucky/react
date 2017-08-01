@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "data": [{
+        "friendGroups": [{
+            "friends": [{
+                "nick": "晴晴",
+                "qq": "2548905162",
+                "valueType": 11
+            }, {
+                "nick": "张琴",
+                "qq": "403448795",
+                "valueType": 11
+            }, {
+                "nick": "贝儿",
+                "qq": "434908024",
+                "valueType": 11
+            }, {
+                "nick": "汤思彦",
+                "qq": "455071933",
+                "valueType": 11
+            }],
+            "name": "My Friends"
+        }],
+        "groups": [{
+            "count": 0,
+            "name": "月光下…独白",
+            "number": "220455692"
+        }],
+        "qq": "1721279553"
+    }],
+    "message": ""
+}

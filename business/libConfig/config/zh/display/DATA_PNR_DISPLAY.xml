@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<CONFIG DATA_TYPE="DATA_PNR" VERSION="20160918">
+    <UI_CONFIG>
+        <FILE_LAYOUT POISITION="RIGHT" BOTTOM_PX="400" RIGHT_PX="600"/>
+        <COLUMNS>
+            <!-- 基本信息 -->
+            <COLUMN NAME="CDR_ID" HEADER="话单编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CAP_TIME" HEADER="截获时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_ISREAD" HEADER="已读" CONVERT="IMG_MK_ISREAD" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_IMPORTANCE" HEADER="标记" CONVERT="IMG_MK_IMPORTANCE" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_NOTE" HEADER="注释" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <!-- 数据信息 -->
+            <COLUMN NAME="RECORD_ID" HEADER="记录编号" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PNR_REF" HEADER="订座记录编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PNR_CR_DATE" HEADER="PNR创建日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_CNAME" HEADER="旅客中文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_ELNAME" HEADER="旅客英文姓" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_EFNAME" HEADER="旅客英文名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME" HEADER="合成英文全名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME_REG" HEADER="规整英文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="ENAME_SREG" HEADER="英文姓名字母排序" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_REG" HEADER="规整中文姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_PYREG" HEADER="规整中文姓名拼音" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CNAME_PYSREG" HEADER="中文姓名拼音排序" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CLAST_NAME" HEADER="中文姓" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CFIRST_NAME" HEADER="中文名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_CARR_CD" HEADER="航空公司名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_FLT_NBR" HEADER="航班号" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_FLT_NBR_SFX" HEADER="航班后缀" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_CODE" HEADER="合成航班号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_DPT_DT_LCL" HEADER="当地出发日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_DPT_TM_LCL" HEADER="当地出发时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_ARRV_DT_LCL" HEADER="当地到达日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_ARRV_TM_LCL" HEADER="当地到达时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_CD" HEADER="登机机场名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_COUN" HEADER="离港国家名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_AREA" HEADER="离港地区名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_CD" HEADER="到达机场名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_COUN" HEADER="到达国家名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_AREA" HEADER="到达地区名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SUB_CLS_CD" HEADER="子舱位" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="DEPUTY_CODE" HEADER="代理人代号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="OPR_STAT_CODE" HEADER="订票状态" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RSP_AIRLN_CODE" HEADER="订座GDS代号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RSP_DEPUTY_CODE" HEADER="操作代理人代号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_ID" HEADER="旅客序号" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_CERT_TYPE" HEADER="证件类型" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_CERT_TYPE_REG" HEADER="规整证件类型" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_CERT_NUM" HEADER="证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_CERT_NUM_REG" HEADER="规整证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="FFP_CERT_NUM" HEADER="常旅客号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="FFP_CERT_NUM_REG" HEADER="规整常旅客号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="GROUP_IDEN" HEADER="团体标识" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="GROUP_NAME" HEADER="团体名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="VIP_IDEN" HEADER="VIP标识" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PNR_SEAT_NUM" HEADER="订座数量" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_BIRTHDAY" HEADER="出生日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="OPERATETIME" HEADER="操作时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_NATION" HEADER="国籍" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_FOR_FLAG" HEADER="是否外国人" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_DIV_CODE" HEADER="行政区划名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_GENDER" HEADER="性别" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+        </COLUMNS>
+        <LIST_COLUMNS>
+            <COLUMN NAME="MK_ISREAD" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_IMPORTANCE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_NOTE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="CDR_ID" HIDDEN="True" LENGTH="150"/>
+            <COLUMN NAME="CAP_TIME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECORD_ID" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PNR_REF" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PNR_CR_DATE" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_CNAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_ELNAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_EFNAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="ENAME_SREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_PYREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CNAME_PYSREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CLAST_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CFIRST_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_CARR_CD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_FLT_NBR" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="AIR_SEG_FLT_NBR_SFX" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_DPT_DT_LCL" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="AIR_SEG_DPT_TM_LCL" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="AIR_SEG_ARRV_DT_LCL" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="AIR_SEG_ARRV_TM_LCL" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_CD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_COUN" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_DPT_AIRPT_AREA" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_CD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_COUN" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="AIR_SEG_ARRV_AIRPT_AREA" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SUB_CLS_CD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="DEPUTY_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="OPR_STAT_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RSP_AIRLN_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RSP_DEPUTY_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_ID" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_CERT_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_CERT_TYPE_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_CERT_NUM" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_CERT_NUM_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="FFP_CERT_NUM" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="FFP_CERT_NUM_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="GROUP_IDEN" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="GROUP_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="VIP_IDEN" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PNR_SEAT_NUM" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_BIRTHDAY" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="OPERATETIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_NATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_FOR_FLAG" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_DIV_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_GENDER" HIDDEN="False" LENGTH="100"/>
+        </LIST_COLUMNS>
+        <DETAIL_COLUMNS>
+            <COLUMN_GROUP NAME="基本信息" EXPAND="True">
+                <COLUMN NAME="CDR_ID"/>
+                <COLUMN NAME="CAP_TIME"/>
+            </COLUMN_GROUP>
+            <COLUMN_GROUP NAME="数据信息" EXPAND="True">
+                <COLUMN NAME="RECORD_ID"/>
+                <COLUMN NAME="PNR_REF"/>
+                <COLUMN NAME="PNR_CR_DATE"/>
+                <COLUMN NAME="PAS_CNAME"/>
+                <COLUMN NAME="PAS_ELNAME"/>
+                <COLUMN NAME="PAS_EFNAME"/>
+                <COLUMN NAME="ENAME"/>
+                <COLUMN NAME="ENAME_REG"/>
+                <COLUMN NAME="ENAME_SREG"/>
+                <COLUMN NAME="CNAME_REG"/>
+                <COLUMN NAME="CNAME_PYREG"/>
+                <COLUMN NAME="CNAME_PYSREG"/>
+                <COLUMN NAME="CLAST_NAME"/>
+                <COLUMN NAME="CFIRST_NAME"/>
+                <COLUMN NAME="AIR_CARR_CD"/>
+                <COLUMN NAME="AIR_SEG_FLT_NBR"/>
+                <COLUMN NAME="AIR_SEG_FLT_NBR_SFX"/>
+                <COLUMN NAME="AIR_CODE"/>
+                <COLUMN NAME="AIR_SEG_DPT_DT_LCL"/>
+                <COLUMN NAME="AIR_SEG_DPT_TM_LCL"/>
+                <COLUMN NAME="AIR_SEG_ARRV_DT_LCL"/>
+                <COLUMN NAME="AIR_SEG_ARRV_TM_LCL"/>
+                <COLUMN NAME="AIR_SEG_DPT_AIRPT_CD"/>
+                <COLUMN NAME="AIR_SEG_DPT_AIRPT_COUN"/>
+                <COLUMN NAME="AIR_SEG_DPT_AIRPT_AREA"/>
+                <COLUMN NAME="AIR_SEG_ARRV_AIRPT_CD"/>
+                <COLUMN NAME="AIR_SEG_ARRV_AIRPT_COUN"/>
+                <COLUMN NAME="AIR_SEG_ARRV_AIRPT_AREA"/>
+                <COLUMN NAME="SUB_CLS_CD"/>
+                <COLUMN NAME="DEPUTY_CODE"/>
+                <COLUMN NAME="OPR_STAT_CODE"/>
+                <COLUMN NAME="RSP_AIRLN_CODE"/>
+                <COLUMN NAME="RSP_DEPUTY_CODE"/>
+                <COLUMN NAME="PAS_ID"/>
+                <COLUMN NAME="PAS_CERT_TYPE"/>
+                <COLUMN NAME="PAS_CERT_TYPE_REG"/>
+                <COLUMN NAME="PAS_CERT_NUM"/>
+                <COLUMN NAME="PAS_CERT_NUM_REG"/>
+                <COLUMN NAME="FFP_CERT_NUM"/>
+                <COLUMN NAME="FFP_CERT_NUM_REG"/>
+                <COLUMN NAME="GROUP_IDEN"/>
+                <COLUMN NAME="GROUP_NAME"/>
+                <COLUMN NAME="VIP_IDEN"/>
+                <COLUMN NAME="PNR_SEAT_NUM"/>
+                <COLUMN NAME="PAS_BIRTHDAY"/>
+                <COLUMN NAME="OPERATETIME"/>
+                <COLUMN NAME="PAS_NATION"/>
+                <COLUMN NAME="PAS_FOR_FLAG"/>
+                <COLUMN NAME="PAS_DIV_CODE"/>
+                <COLUMN NAME="PAS_GENDER"/>
+            </COLUMN_GROUP>
+        </DETAIL_COLUMNS>
+        <DISTINCT_COLUMNS>
+        </DISTINCT_COLUMNS>
+        <GIS_COLUMNS>
+        </GIS_COLUMNS>
+    </UI_CONFIG>
+</CONFIG>

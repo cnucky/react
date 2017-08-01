@@ -1,0 +1,124 @@
+<div id="user-form" class="mw700" style="height:100%">
+    <div class="panel mn" id="user-info" style="height:100%">
+        <div class="panel-heading">
+            <span class="panel-title" data-i18n="usermanage.label-personinfo"></span>
+            <i id="user-locked-icon" class="fa fa-lock text-warning" data-toggle="tooltip" data-placement="bottom" data-i18n="[title]usermanage.title-lock" style="display: none"></i>
+            <div class="widget-menu pull-right mr10" id="edit-menu">
+                <button id="lock-user" type="button" class="btn btn-sm btn-alert ph15 mr5" style="display: none" data-i18n="usermanage.button-lockuser"></button>
+                <button id="reset-password" type="button" class="btn btn-sm btn-warning ph15 mr5" data-i18n="usermanage.button-resetpw"></button>
+                <button id="delete-user" type="button" class="btn btn-sm btn-danger ph15 mr5" data-i18n="usermanage.tpl-delete"></button>
+                <button id="edit-user" type="button" class="btn btn-sm btn-primary ph15" data-i18n="usermanage.tpl-edit"></button>
+            </div>
+        </div>
+        <form id="user-info-form" class="form-horizontal">
+            <div class="panel-body p20" style="border:none">
+                <div class="admin-form ">
+                    <div class="section row mb10">
+                        <label for="user-name" class="field-label col-md-2" data-i18n="usermanage.label-name"></label>
+                        <div class="col-md-10">
+                            <label for="user-name" class="field">
+                                <input type="text" name="user-name" id="user-name" class="gui-input user-item" value="<%- trueName %>" readonly="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="section row mb10">
+                        <label for="user-gender" class="field-label col-md-2" data-i18n="usermanage.label-gender"></label>
+                        <div class="col-md-10 ">
+                            <label class="field select">
+                                <input type="text" name="user-gender" id="user-gender-display" class="gui-input" value="<%- displayGender %>" readonly="">
+                                <select id="user-gender" name="user-gender" class="user-item" style="display:none;">
+                                    <option value="0" data-i18n="usermanage.option-null"></option>
+                                    <option value="1" data-i18n="usermanage.gender-male"></option>
+                                    <option value="2" data-i18n="usermanage.gender-female"></option>
+                                </select>
+                                <i class="arrow double"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="div-position" class="section row mb10">
+                        <label for="user-position" class="field-label col-md-2" data-i18n="usermanage.label-position"></label>
+                        <div class="col-md-10 ">
+                            <label class="field select">
+                                <input type="text" name="user-position" id="user-position-display" class="gui-input" value="<%- displayPosition %>" readonly="">
+                                <select id="user-position" name="user-position" class="user-item" style="display:none;">
+                                    <option value="0" data-i18n="usermanage.option-null"></option>
+                                </select>
+                                <i class="arrow double"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="section row mb10">
+                        <label for="user-expire" class="field-label col-md-2" data-i18n="usermanage.label-endtime"></label>
+                        <label for="user-expire" class="col-md-10 field">
+                            <input type="text" name="user-expire" id="user-expire" class="gui-input user-item" value="<%- accountExpireTime %>" readonly="">
+                        </label>
+                    </div>
+
+                    <div class="section row mb10" id="user-department-section">
+                        <label for="user-department" class="field-label col-md-2" data-i18n="usermanage.label-department"></label>
+                        <div class="col-md-10 ">
+                            <label class="field select">
+                                <input type="text" name="user-department" id="user-department-display" class="gui-input" value="<%- displayDepartment %>" readonly="">
+                                <select id="user-department" name="user-department" class="user-item" style="display:none;">
+                                    <option value="0" data-i18n="usermanage.option-null"></option>
+                                </select>
+                                <i class="arrow double"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="section row mb10" id="user-group-section">
+                        <label for="user-group" class="field-label col-md-2" data-i18n="usermanage.label-group"></label>
+                        <div class="col-md-10 ">
+                            <label class="field select">
+                                <input type="text" name="user-group" id="user-group-display" class="gui-input" value="<%- displayGroupNames %>" readonly="">
+                                <select id="user-group" name="user-group" class="user-item" style="display:none;">
+                                    <option value="0" data-i18n="usermanage.option-null"></option>
+                                </select>
+                                <i class="arrow double"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="section row mb10">
+                        <label for="user-certNumber" class="field-label col-md-2" data-i18n="usermanage.label-ID"></label>
+                        <label for="user-certNumber" class="col-md-10 field">
+                            <input type="text" name="user-certNumber" id="user-certNumber" class="gui-input user-item" value="<%- certNumber %>" readonly="">
+                        </label>
+                    </div>
+                    <div class="section row mb10">
+                        <label for="user-birthday" class="field-label col-md-2" data-i18n="usermanage.label-birthday"></label>
+                        <label for="user-birthday" class="field col-md-10">
+                            <input type="text" name="user-birthday" id="user-birthday" class="gui-input user-item" value="<%- birthday %>" readonly="">
+                        </label>
+                    </div>
+                    <div class="section row mb10">
+                        <label for="user-email" class="field-label col-md-2">Email:</label>
+                        <label for="user-email" class="field col-md-10">
+                            <input type="email" name="user-email" id="user-email" class="gui-input user-item" value="<%- email %>" readonly="">
+                        </label>
+                    </div>
+                    <!-- end section -->
+                    <div class="section row mb10">
+                        <label for="user-telphone" class="field-label col-md-2" data-i18n="usermanage.label-contact"></label>
+                        <label for="user-telphone" class="field col-md-10">
+                            <input type="tel" name="user-telphone" id="user-telphone" class="gui-input user-item" value="<%- telphone %>" readonly="">
+                        </label>
+                    </div>
+                    <!-- end section -->
+                    <div class="section row mb10">
+                        <label for="user-address" class="field-label col-md-2" data-i18n="usermanage.label-address"></label>
+                        <label for="user-address" class="field col-md-10">
+                            <input type="text" name="user-address" id="user-address" class="gui-input user-item" value="<%- address %>" readonly="">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer text-right" id="user-edit-footer" style="display:none;">
+                <button id="cancel-edit-user" class="btn btn-default btn-sm ph15 mr5" type="button" data-i18n="usermanage.tpl-cancel"></button>
+                <button id="complete-edit-user" class="btn btn-primary btn-sm ph15" type="button" data-i18n="usermanage.tpl-done"></button>
+            </div>
+        </form>
+    </div>
+</div>

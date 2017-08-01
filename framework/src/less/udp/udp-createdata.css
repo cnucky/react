@@ -1,0 +1,98 @@
+.increasing-box-div-style {
+    margin-left: 30px;
+    padding: 0px;
+}
+
+input[type="checkbox"] .increasing-box-style {
+    margin: auto;
+}
+
+#data-treeview {
+    height: 800px;
+    overflow-y: auto;
+}
+
+div#data-treeview > ul {
+    min-height: 800px;
+    border: none;
+}
+
+#createDataTable tr th,
+#createDataTable tr td {
+    border-left: 1px solid #d8d8d8;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: #d8d8d8;
+}
+
+#createDataTable > tbody > tr > td {
+    padding: 0px;
+}
+
+#partition-pilicy-table > tbody > tr > td {
+    padding: 0px;
+}
+
+.trSelected {
+    /*background-color: #d8d8d8;*/
+}
+
+
+/* Select2  contextual */
+
+.select2-white + .select2-container .select2-selection--single,
+.select2-white + .select2-container .select2-selection--single .select2-selection__rendered {
+    color: dark;
+    border-color: white;
+    background-color: white;
+}
+
+
+/* arrow */
+
+.select2-white + .select2-container .select2-selection__arrow b {
+    display: none !important;
+    border-top-color: #FFF;
+}
+
+.select2-white + .select2-container.select2-container--open .select2-selection__arrow b {
+    border-bottom-color: #FFF;
+}
+
+.ui-spinner {
+    background-color: white;
+}
+
+.ui-spinner-input {
+    min-height: 31px !important;
+    height: 31px !important;
+    border: 0px !important;
+    border-radius: 0px !important;
+}
+
+.ui-spinner-up {
+    top: 3px;
+}
+
+.ui-spinner-down {
+    bottom: 3px;
+}
+
+.trSelected .form-control {
+    background: #b6daf2;
+}
+
+.trError .form-control {
+    background: #fae5e2;
+}
+

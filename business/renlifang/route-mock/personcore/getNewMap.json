@@ -1,0 +1,10 @@
+﻿{
+  "code": 0,
+  "data": {
+      "QQ":["QQACCOUNT"],
+      "SFZ":["IDCARD"],
+      "USER_MSISDN":["MSISDN"]
+    }
+  ,
+  "message": ""
+}

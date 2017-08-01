@@ -1,0 +1,50 @@
+{
+    "code": 0,
+    "data": {
+        "accountLockState": 1,
+        "address": "南京",
+        "birthday": "1989-02-19",
+        "certNumber": "321182198902190512",
+        "departmentId": 624,
+        "departmentInfo": {
+            "departmentId": 624,
+            "departmentName": "一科",
+            "departmentPath": "/江苏省公安厅/二处/一科",
+            "departmentType": 2,
+            "description": "二处一科",
+            "extraClasses": "nv-department",
+            "folder": true,
+            "key": 624,
+            "lazy": false,
+            "parentDepartmentId": 0,
+            "title": "一科"
+        },
+        "departmentPath": "/江苏省公安厅/二处/一科",
+        "email": "693204022@qq.com",
+        "extraClasses": "nv-department-people",
+        "gender": 1,
+        "key": 727,
+        "loginName": "guqun",
+        "loginType": 1,
+        "passWord": "",
+        "position": "1",
+        "telphone": "18951656672",
+        "title": "guqun",
+        "trueName": "顾群",
+        "userGroupIds": [606],
+        "userGroupInfos": [{
+            "description": "YYY专项组",
+            "extraClasses": "nv-group",
+            "key": 606,
+            "parentUserGroupId": -1,
+            "title": "YYY专项组",
+            "userGroupId": 606,
+            "userGroupName": "YYY专项组"
+        }],
+        "userGroupNames": ["YYY专项组"],
+        "userId": 727,
+        "userState": 1,
+        "workPhone": "34514"
+    },
+    "message": ""
+}

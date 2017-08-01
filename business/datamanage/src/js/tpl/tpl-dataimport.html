@@ -1,0 +1,747 @@
+<section id="centent" class="table-layout" style="width: 100%; height: 100%;">
+    <div class="container-fluid" style="width: inherit;padding: 0px 0px 0px 0px; vertical-align: top">
+        <div class="row-fluid" style="width: inherit">
+
+            <div class="span9" style="width: inherit">
+                <div class="card card-small" style="margin-left:auto; margin-top: -10px; border: 0px">
+
+                    <div class="card-body" style="width: inherit; margin-top: 0px">
+                        <p></p>
+
+                        <ul class="nav nav-pills">
+                            <li>
+                                <button type="button" id="back-Button" class="btn btn-primary"
+                                        style="margin-top:2px;display: none;">
+                                    <i class="fa fa-angle-left"></i>
+                                    <span>上一步</span>
+                                </button>
+                            </li>
+                            <li class="active"><a href="#step1" id="step1_href" class="step">第 1 步：基本设置</a></li>
+                            <li><a href="#step2" id="step2_href" class="step">第 2 步：选择样本文件</a></li>
+                            <li><a href="#step3" id="step3_href" class="step">第 3 步：预处理设置</a></li>
+                            <li><a href="#step4" id="step4_href" class="step">第 4 步：设置字段映射</a></li>
+                            <li><a href="#step5" id="step5_href" class="step">第 5 步：提交导入任务</a></li>
+                            <!--<li><a href="#step6" id="step6_href" class="step hide">第 2 步：提交导入任务</a></li>-->
+                            <li>
+                                <button type="button" id="next-Button" class="btn btn-raised btn-primary "
+                                        style="margin-top:2px;">
+                                    <span>下一步</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button  id="submit-Button" class="btn btn-success"
+                                         style="margin-top:2px;display: none">
+                                    <!--type="submit"-->
+                                    <span>创建任务</span>
+                                </button>
+                                <lable id="submit-lable" style="margin-top:2px;display: none">后台正在处理上传的文件，请稍后...</lable>
+                            </li>
+                        </ul>
+
+                        <form id="mainForm" class="form-horizontal" style="width: inherit">
+                            <div class="steps">
+                                <div id="step1" class="stepDetails">
+                                    <fieldset>
+                                        <div style="padding-left: 50px;">
+                                            <div>
+                                                <div class="admin-form theme-info tab-pane mw700 active" id="baseset"
+                                                     role="tabpanel">
+                                                    <div class="panel panel-info heading-border" align="left">
+                                                        <div class="panel-heading" style="background-image:none">
+                                                        </div>
+                                                        <form id="form-baseset">
+                                                            <div class="panel-body p25">
+                                                                <div class="section">
+                                                                    <label for="dataType-Select" class="field-label">数据类型
+                                                                        *</label>
+                                                                    <label for="dataType-Select" class="field file">
+                                                                        <span class="button btn-primary">选择数据类型</span>
+                                                                        <input type="text" name="dataType-Select"
+                                                                               id="dataType-Select" class="gui-input"
+                                                                               readonly="readonly">
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="section">
+                                                                    <label for="taskType-Select" class="field-label">任务类型
+                                                                        *</label>
+                                                                    <select name="tasktype" id="taskType-Select">
+                                                                        <option id="file-import" value="1"
+                                                                                selected="selected">结构化文件导入
+                                                                        </option>
+                                                                        <option id="DJ-import" value="2">对接数据</option>
+                                                                        <option id="DB-import" value="6">数据库抽取</option>
+                                                                        <option id="unstruct-file-import" value="4">
+                                                                            非结构化文件导入
+                                                                        </option>
+                                                                        <option id="unstruct-DJ-import" value="5">
+                                                                            非结构化对接数据
+                                                                        </option>
+                                                                    </select>
+                                                                    <i class="arrow double"></i>
+                                                                </div>
+
+                                                                <div id="collapseDetail" style="display: none;">
+                                                                    <label for="collapseDetail" class="field-label">
+                                                                        <a data-toggle="collapse"
+                                                                           data-parent="#accordion" href="#collapseOne"
+                                                                           aria-expanded="true"
+                                                                           aria-controls="collapseOne"
+                                                                           style="text-decoration: none;">
+                                                                            <span id="collapse-click">
+                                                                            <i id="plus-minus" class="fa fa-minus"></i>
+                                                                            对接任务信息
+                                                                            </span>
+                                                                        </a>
+                                                                    </label>
+
+                                                                    <div id="collapseOne" class="collapse in"
+                                                                         role="tabpanel" aria-labelledby="headingOne">
+                                                                        <div id="collapseDivider"
+                                                                             class="divider mtn mb25">
+                                                                        </div>
+
+                                                                        <div class="section">
+                                                                            <label for="watchDir-Input"
+                                                                                   class="field-label">设置监视目录 *</label>
+                                                                            <label for="watchDir-Input"
+                                                                                   class="field file">
+                                                                                <span class="button btn-primary"
+                                                                                      id="watchDir-btn">设置监视目录</span>
+                                                                                <input type="text" name="trueName"
+                                                                                       id="watchDir-Input"
+                                                                                       class="gui-input">
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="section" id="unStructedDiv">
+                                                                            <label for="unStructed-Checkbox"
+                                                                                   class="field file">
+                                                                                <input unchecked
+                                                                                       id="unStructed-Checkbox"
+                                                                                       type="checkbox"
+                                                                                       style="display:inline; margin-top: -2px">
+                                                                                <label for="unStructed-Checkbox"
+                                                                                       style="display:inline; ">是否为复合对接任务</label>
+                                                                            </label>
+                                                                        </div>
+
+                                                                        <div class="section">
+
+                                                                            <label class="field-label">设置文件名过滤规则(输入均不能包含以下字符:
+                                                                                \ / : | < > ? * @ )</label>
+
+                                                                            <div class="section">
+                                                                                <label for="filterStart-input"
+                                                                                       class="control-label">以...开头：</label>
+                                                                                <input name="table-comment"
+                                                                                       id="filterStart-Input" value=""
+                                                                                       type="text" >
+                                                                            </div>
+
+                                                                            <div class="section">
+                                                                                <label style="margin-top: auto"
+                                                                                       for="filterEnd-Input"
+                                                                                       class="control-label">以...结尾：</label>
+                                                                                <input name="table-comment"
+                                                                                       id="filterEnd-Input" value=""
+                                                                                       type="text">
+                                                                            </div>
+                                                                            <div class="section">
+                                                                                <label style="margin-top: auto"
+                                                                                       for="filterInclude-Input"
+                                                                                       class="control-label">包含：</label>
+                                                                                <input name="table-comment"
+                                                                                       id="filterInclude-Input" value=""
+                                                                                       type="text">
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="unStructDetail" style="display: none;">
+                                                                    <label for="collapseDetail" class="field-label">
+                                                                        <a data-toggle="collapse"
+                                                                           data-parent="#accordion"
+                                                                           href="#unStructCollapseDiv"
+                                                                           aria-expanded="true"
+                                                                           aria-controls="unStructCollapseDiv"
+                                                                           style="text-decoration: none;">
+                                                                            <span id="collapse-unStruct">
+                                                                            <i id="unStruct-plus-minus"
+                                                                               class="fa fa-minus"></i>
+                                                                            对接信息设置
+                                                                            </span>
+                                                                        </a>
+                                                                    </label>
+
+                                                                    <div id="unStructCollapseDiv" class="collapse in"
+                                                                         role="tabpanel" aria-labelledby="headingOne">
+                                                                        <div class="section">
+                                                                            <label for="unStruct-watchDir"
+                                                                                   class="field-label">设置监视目录 *</label>
+                                                                            <label for="unStruct-watchDir"
+                                                                                   class="field file">
+                                                                                <input type="text" name="trueName"
+                                                                                       id="unStruct-watchDir"
+                                                                                       class="gui-input">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="section" id="unStruct-upLoadFile"
+                                                                     style="display: none">
+                                                                    <div id="unStruct-upLoadFileDiv">
+                                                                        <button id="unStruct-upload-file" type="button"
+                                                                                class="btn btn-primary"
+                                                                                style="margin-top: 10px;">
+                                                                            <span class="text"
+                                                                                  style="text-align: center;">上传文件</span>
+                                                                        </button>
+                                                                        <br>
+                                                                    </div>
+                                                                    <div>
+                                                                        <label id="unStruct-upLoadFileSpan"
+                                                                               style="margin-top: 10px;">已上传文件</label>
+
+                                                                        <div style="margin-top:15px;font-size: 14px;width:60%;line-height: 30px;">
+                                                                            <div id="unStruct-fileUploaded" class="table"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="section" id="unStruct-batchName"
+                                                                     style="display: none">
+                                                                    <label for="unStruct-watchDir" class="field-label">任务名称
+                                                                        *</label>
+                                                                    <label for="unStruct-watchDir" class="field file">
+                                                                        <input id="batchName-unStruct" name="path"
+                                                                               value="" type="text" class="gui-input"
+                                                                               placeholder="请输入任务名称" width="30%">
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-footer" id="unStruct-submit" width="100%"
+                                                                 style="align-content: stretch; display: none">
+                                                                <button id="unStruct-Submit-Btn" class="btn btn-success"
+                                                                        style="min-width:100px; horiz-align: right ;margin-left: 300px; font-weight: bold;">
+                                                                    创建任务
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+
+                                <div id="step2" class="stepDetails " style="display: none">
+                                    <fieldset>
+                                        <div class="control-group" style="">
+                                            <label for="tableTitle-Checkbox" class="control-label">样本类型 *</label>
+
+                                            <div class="controls">
+                                                <select id="fileType-Select" name="fileType-Select">
+                                                    <option id="txtOption" value="txt" selected="selected">文本文件(.txt, .bcp)</option>
+                                                    <option id="excelOption" value="excel">excel文件(.xlsx,.xls)</option>
+                                                    <option id="dumpOption" value="dump" class="hide">dump文件(.dump)</option>
+                                                    <option id="dataBaseOption" value="dataBase" class="hide">数据库</option>
+                                                </select>
+
+                                                <span class="help-block" style="display:inline;">
+                                                    样本文件类型，必须设置。
+                                                </span>
+                                            </div>
+                                            <br>
+
+                                            <label class="control-label">样本文件 *</label>
+
+                                            <div class="controls">
+                                                <input id="filepath-Input" name="path" value="" type="text"
+                                                       class="pathChooser input-xxlarge"
+                                                       placeholder="请点击按钮选择样本文件" width="50%" readonly>
+                                                <!--qq-upload-button-->
+                                                <a class="btn btn-system" id="selectFileBtn"
+                                                   style="position: relative; overflow: hidden; direction: ltr;">
+                                                    <span class="fa fa-file-text pr3"></span>
+                                                    选择文件
+                                                    <input multiple="single" type="file" name="file" accept=".txt,.bcp" id="selectFile-Button"
+                                                           style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px;
+                                                                           margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                                                </a>
+
+                                                 <span class="help-inline error-inline hide">
+                                                    此字段为必填字段。
+                                                </span>
+                                                <span class="help-block" style="display:inline;">
+                                                    选择样本文件
+                                                </span>
+
+                                            </div>
+
+                                            <label id="tableTitleLable" for="tableTitle-Checkbox" class="control-label">表头
+                                                *</label>
+
+                                            <div id="tableTitleDiv" class="controls">
+                                                <label class="checkbox">
+                                                    <input unchecked id="tableTitle-Checkbox" name="tabletitle"
+                                                           type="checkbox">
+                                                    首行是否为表头
+                                                    <span class="help-block"></span>
+                                                </label>
+                                            </div>
+
+                                            <label id="fileEcodingLable" for='fileEcoding-Select' class="control-label">文件编码
+                                                *</label>
+
+                                            <div id="fileEcodingDiv" class="controls">
+                                                <select id="fileEcoding-Select" name="fileEcoding-Select">
+                                                    <option value="UTF-8" selected="selected">UTF-8</option>
+                                                    <option value="GB2312">GB2312</option>
+                                                    <option value="ascii">ASCII</option>
+                                                    <option value="UTF-16">Unicode(UTF-16)</option>
+                                                    <option value="UTF-32">UTF-32</option>
+                                                    <option value="GBK">GBK(中文)</option>
+                                                    <option value="Big5">Big5(中文繁体)</option>
+                                                    <!--<option value="ISO-8859-2">ISO-8859-2</option>-->
+                                                    <option value=""> </option>
+                                                </select>
+
+                                                <a id="autoGetEncodingBtn" class="btn btn-system">
+                                                    <span class="fa fa-fire pr3"></span>
+                                                    自动识别
+                                                </a>
+
+                                                <span class="help-inline error-inline hide">
+                                                    此字段为必填字段。不允许有空格。
+                                                </span>
+                                                <span class="help-block" style="display:inline;" id="fileEcodingSpan">
+                                                    文件编码，必须设置。
+                                                </span>
+                                            </div>
+                                            <br>
+
+                                            <label id="rowSplitLable" class="control-label">行分隔符 *</label>
+
+                                            <div id="rowSplitDiv" class="controls">
+                                                <select id="id_delimiter_row0-Select" name="delimiter_row0">
+                                                    <option value="1" selected="selected">回车换行(\r\n)</option>
+                                                    <option value="2">换行(\n)</option>
+                                                    <option value="__other__">其他</option>
+                                                </select>
+
+                                                <label class="checkbox" style="display: inline">
+                                                    <input checked style="margin-top: 8px;line-height: 30px;vertical-align: middle " id="delimiter_row_check" type="checkbox">
+                                                    <span id="delimiter_row_text" style="line-height: 30px; vertical-align: middle"> 十六进制</span>
+                                                </label>
+
+                                                <!--<input checked style="margin-bottom: 0px; margin-top: 0px; line-height: 25px; vertical-align: middle; display: none;"-->
+                                                <!--id="delimiter_row_check" type="checkbox">十六进制-->
+                                                <!--<span id="delimiter_row_text"-->
+                                                <!--style="line-height: 30px; vertical-align: middle"> 十六进制</span>-->
+                                                <input id="id_delimiter_row1" name="delimiter_row1" type="text"
+                                                       placeholder="在此处输入您的分隔符"
+                                                       style="margin-left: 4px; display: none;">
+
+                                                <span class="help-inline error-inline hide">
+                                                    此字段为必填字段。不允许有空格。
+                                                </span>
+                                                <span class="help-block" style="display:inline;">
+                                                    行分隔符，必须设置。
+
+                                                </span>
+                                            </div>
+                                            <br>
+
+                                            <label id="colSplitLable" class="control-label">列分隔符 *</label>
+
+                                            <div id="colSplitDiv" class="controls">
+                                                <select id="id_delimiter_col0" name="delimiter_col0">
+                                                    <option value="1" selected="selected">Tab</option>
+                                                    <option value="2">分号</option>
+                                                    <option value="3">空格</option>
+                                                    <option value="4">逗号</option>
+                                                    <option value="__other__">其他</option>
+                                                </select>
+
+                                                <label class="checkbox" style="display: inline">
+                                                    <input checked style="margin-top: 8px;line-height: 30px;vertical-align: middle " id="delimiter_col_check" type="checkbox">
+                                                    <span id="delimiter_col_text" style="line-height: 30px; vertical-align: middle"> 十六进制</span>
+                                                </label>
+
+                                                <input id="id_delimiter_col1" name="delimiter_col1" type="text"
+                                                       placeholder="在此处输入您的分隔符"
+                                                       style="margin-left: 4px; display: none;">
+
+                                                <span class="help-inline error-inline hide">此字段为必填字段。不允许有空格。</span>
+                                                <span class="help-block" style="display:inline;">
+                                                    列分隔符，必须设置。
+                                                </span>
+                                            </div>
+
+                                            <div class="controls">
+                                                <a id="submit_preview" class="btn btn-danger"
+                                                   style="width: 65px; color:wheat; margin-top: 10px; margin-bottom: 10px">
+                                                    <span class="fa fa-book pr3"></span>预览
+                                                </a>
+                                            </div>
+
+                                            <div class="controls">
+                                                <div style="width:100%;max-height:350px;overflow-x: auto;overflow-y: auto;">
+                                                    <table id="viewTable" class="viewTable"
+                                                           style="border: 1px solid #D8D8D8;">
+                                                        <thead id="theadViewTable">
+                                                        </thead>
+                                                        <tbody id="tableTbody">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tray tray-center" style="display: none">
+                                            <div id="alert-container2" style="margin:10px;">
+                                            </div>
+                                            <div class="" style="padding: 25px 20px 50px;">
+                                                <div class="center-block center-children">
+                                                    <div class="admin-form theme-info tab-pane mw700 active"
+                                                         id="add-file" role="tabpanel">
+                                                        <div class="panel panel-info heading-border">
+                                                            <div class="panel-heading" style="background-image:none">
+                                                               <span class="panel-title">
+                                                                     <!--<i class="fa fa-pencil-square"></i>新增用户-->
+                                                                   <div class="alert alert-info"><h3>第 2
+                                                                       步：选择文件(选择导入文件，设置分割符等信息)</h3></div>
+                                                               </span>
+                                                            </div>
+                                                            <form id="form-addfile">
+                                                                <div class="panel-body p25">
+                                                                    <div class="section">
+                                                                        <label for="path" class="field-label">待导入文件
+                                                                            *</label>
+
+                                                                        <input id="filepath1" name="path" value=""
+                                                                               type="text"
+                                                                               class="pathChooser input-xxlarge"
+                                                                               placeholder="c:" width="80%"
+                                                                               content="aa">
+
+                                                                        <a class="qq-upload-button"
+                                                                           style="position: relative; overflow: hidden; direction: ltr;">
+                                                                            ...
+                                                                            <input multiple="single" type="file"
+                                                                                   name="file"
+                                                                                   style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px;
+                                                                           margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                    <div class="section">
+                                                                        <label for="tabletitle1" class="control-label">
+                                                                            <input checked="checked" id="tabletitle1"
+                                                                                   name="tabletitle" type="checkbox">
+                                                                            首行是否为表头
+                                                                        </label>
+                                                                    </div>
+
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+
+                                <div id="step3" class="stepDetails " style="display: none">
+                                    <fieldset>
+                                        <!--<div class="alert alert-info"><h3>第 3 步：预处理设置(为列设置预处理规则)</h3>-->
+                                        <!--</div>-->
+
+                                        <section class="table-layout" style="width:100%; margin-top: -10px">
+                                            <div class="container-fluid" style="width: inherit">
+                                                <div class="row-fluid" style="width: inherit">
+                                                    <div class="span9" style="width: inherit">
+                                                        <div style="margin-top:0px; margin-left:auto">
+                                                            <!--class="card card-small"-->
+
+                                                            <div class="info"
+                                                                 style="margin-top:-5px; width:inherit;max-height:350px;overflow-x: auto;overflow-y: auto; overflow-x: auto;">
+                                                                <table id="preView-Table" class="preViewTable"
+                                                                       class="table table-hover table-striped table-bordered infoTable">
+                                                                    <thead>
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                    </tbody>
+
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <div style="margin-bottom:5px; margin-top: 5px;">
+                                            <span class="icon"
+                                                  style="float:left; display:inline; margin-top: 5px; margin-left: 14px;"><i
+                                                    class="glyphicon glyphicon-star" style="color: red"></i></span>
+                                            <label style="float:left; display:inline; margin-top: 4px; width:120px; font-size: 13px">当前选中字段：</label>
+                                            <label id="selectedFieldName"
+                                                   style="float:left; display:inline; margin-top: 4px; width:40%; text-align: left; color: red; font-size: 13px"></label>
+
+                                            <!--<input id="reLoad-Button" readonly  class="btn btn-system hide" style="cursor:pointer; margin-top: 4px;-->
+                                            <!--margin-right: 80px;float:right; display:inline; width: 80px" value="重新载入" >-->
+
+                                            <a id="preView-Button" readonly class="btn btn-danger" style="cursor:pointer; margin-bottom: 2px;
+                                            margin-right: 5px;float:right; display:inline; width: 60px" value="预览">
+                                                <span class="fa fa-book pr3"></span>
+                                                预览</a>
+
+                                            <a id="addColumn-Button" readonly class="btn btn-sm  btn-system"
+                                               style="cursor:pointer; margin-bottom: 2px;
+                                            margin-right: 5px;float:right; display:inline; width: 70px" value="新建列">
+                                                <span class="fa fa-plus pr3"></span>新建列</a>
+                                            <a id="delColumn-Button" readonly class="btn btn-sm  btn-system" style="cursor:pointer; margin-bottom: 2px;
+                                            margin-right: 5px;float:right; display:inline; width: 70px"
+                                               value="删除列">
+                                                <span class="fa fa-minus pr3"></span>删除列</a>
+
+                                        </div>
+
+                                        <section class="table-layout"
+                                                 style="height:400px; vertical-align:top; margin-top: -10px">
+                                            <aside class="tray tray-right tray320" data-tray-height="match" style="border: 1px solid #D8D8D8; height:400px;
+                                                vertical-align:top; padding: 10px 10px 5px 0px; width:25%">
+                                                <div id="preRulesTree" align="top"
+                                                     style="height:400px; overflow-y: auto;"></div>
+                                            </aside>
+
+                                            <aside class="tray tray-right tray320" data-tray-height="match" style="height:400px; width: 50px;
+                                             horiz-align: center; vertical-align:middle; padding: 10px 0px 5px 0px">
+                                                <div style="horiz-align: center; margin: 0px 0px 0px 10px;">
+                                                    <button type="button" id="btn-add" class="btn btn-primary"
+                                                            style="margin: 0px 0px 10px 0px;">
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </button>
+                                                    <span>
+                                                     &nbsp
+                                                    </span>
+                                                    <button type="button" id="btn-delnode" class="btn btn-danger"
+                                                            style="margin: 10px 0px 0px 0px;">
+                                                        <i class="fa fa-chevron-left"></i>
+                                                    </button>
+                                                </div>
+                                            </aside>
+
+                                            <aside class="tray tray-right tray320" data-tray-height="match" style="border: 1px solid #D8D8D8; height:400px;
+                                             vertical-align:top; padding: 10px 10px 5px 0px; width:20%">
+                                                <div id="selectedRulesTree" align="top"
+                                                     style="height:400px; overflow-y: auto;"></div>
+                                            </aside>
+
+
+                                            <div class="tray tray-center" style="vertical-align:top; ; width:50%">
+                                                <div class="panel"
+                                                     style="margin: 0px 0px 0px ;background-color:#ffffff; height:400px; overflow-y: auto;">
+                                                    <div class="panel-heading"
+                                                         style="margin: 0px 0px 0px 0px; height: 30px;color: #1f75cc">
+                                                        <h5 id="ruleName" style="vertical-align:top">规则名称</h5>
+                                                    </div>
+                                                    <div class="panel-body" style="vertical-align:top">
+                                                        <div class="tab-content pn br-n" id="auth-content">
+                                                            <div class="tray tray-center">
+                                                                <div class="" style="padding: 0px 0px 0px;">
+                                                                    <div class="center-block center-children">
+                                                                        <div id="parameterView" class="section"
+                                                                             style="background-color:#ffffff; vertical-align:top">
+                                                                        </div>
+
+                                                                        <div id="conditionView" class="panel" style="margin-top:10px; border: 1px solid #D8D8D8;
+                                                                            background-color:#ffffff; vertical-align:middle">
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+                                    </fieldset>
+                                </div>
+
+                                <div id="step4" class="stepDetails " style="display: none">
+                                    <fieldset>
+                                        <div class="col-md-12">
+                                            <div class="panel panel-visible" id="spy2" style="margin-bottom: 0px">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title hidden-xs"
+                                                         style="color: #3498db;font-weight: bold">
+                                                        <span style="color: #70ca63"
+                                                              class="glyphicon glyphicon-tasks"></span>映射操作
+
+                                                        <span style="color: grey; font-size: 12px; width:inherit">  顺序映射偏移量</span>
+                                                        <input name="autoMap-input" type="text" id="autoMap-offSet" value="1"
+                                                               class="gui-input" style="min-height: 22px; width: 40px;">
+
+                                                        <a id="orderMappingBtn" title="顺序映射" data-toggle="tooltip"
+                                                           data-placement="bottom" type="button"
+                                                           class="btn btn-xs btn-system ph5 mr3"
+                                                           style="color: white">
+                                                            <span class="glyphicon glyphicon-sort pr3"></span>顺序映射
+                                                        </a>
+                                                        <a id="smartMappingBtn" title="智能推荐" data-toggle="tooltip"
+                                                                data-placement="bottom" type="button"
+                                                                class="btn btn-xs btn-system ph5 mr3"
+                                                                style="color: white">
+                                                            <span class="fa fa-magic pr3"></span>智能推荐
+                                                        </a>
+                                                        <a id="cancle-mapping-btn" title="取消映射"
+                                                           data-toggle="tooltip" data-placement="bottom"
+                                                           type="button"
+                                                           class="btn btn-xs btn-system ph5 mr3"
+                                                           style="color: white">
+                                                            <span class="glyphicon glyphicon-remove-circle pr3"></span>取消映射
+                                                        </a>
+                                                        <a id="check-mapping-btn" title="检查字段设置"
+                                                           data-toggle="tooltip" data-placement="bottom"
+                                                           type="button"
+                                                           class="btn btn-xs btn-system ph5 mr3"
+                                                           style="color: white">
+                                                            <span class="fa fa-check-square-o pr3"></span>检查映射设置
+                                                        </a>
+                                                        <a id="generate-tableHead-btn" title="生成表头"
+                                                           data-toggle="tooltip" data-placement="bottom"
+                                                           type="button"
+                                                           class="btn btn-xs btn-system ph5 mr3 hide"
+                                                           style="color: white">
+                                                            <!--<span class="fa fa-check-square-o pr3"></span>-->
+                                                            生成表头
+                                                        </a>
+                                                        <a id="get-mapSet-btn" title="获取映射配置"
+                                                           data-toggle="tooltip" data-placement="bottom"
+                                                           type="button"
+                                                           class="btn btn-xs btn-system ph5 mr3"
+                                                           style="color: white">
+                                                            <!--<span class="fa fa-check-square-o pr3"></span>-->
+                                                            获取映射配置
+                                                        </a>
+
+                                                        <a id="save-model" title="保存当前模型" data-toggle="tooltip"
+                                                           data-placement="bottom" type="button"
+                                                           class="btn btn-xs btn-system ph5 mr5 disabled"
+                                                           style="float: right; margin-top: 10px; color: white">
+                                                            <span class="fa fa-file pr3"></span>保存当前模型
+                                                        </a>
+                                                        <a id="save-as-model" title="另存为模型" data-toggle="tooltip"
+                                                           data-placement="bottom" type="button"
+                                                           class="btn btn-xs btn-system ph5 mr5"
+                                                           style="float: right; margin-top: 10px; color: white">
+                                                            <span class="fa fa-files-o pr3"></span>另存为模型
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group" id="div2">
+                                            <label class="control-label">字段对应关系定义</label>
+
+                                            <div>
+                                                <div style="max-height:500px; width: 95%;overflow-x: auto;overflow-y: auto;margin-left: 30px;">
+                                                    <table id="setTable" class="viewTable" style="border: 1px solid #D8D8D8; width:inherit;
+                                                    overflow-x: auto;overflow-y: auto; overflow-x: auto;">
+                                                        <thead>
+                                                        <tr>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div id="step5" class="stepDetails" style="display: none">
+                                    <fieldset>
+                                        <div class="alert alert-info"><h3 id="h3_step5">第 5 步：创建导入任务</h3>
+                                        </div>
+
+                                        <!--<div class="control-group" style="">-->
+                                        <!--<label class="control-label" >待上传文件</label>-->
+                                        <!--<div class="controls">-->
+                                        <!--<input id = "uploadfilepath" name="path" value="" type="text" class="pathChooser input-xxlarge"-->
+                                        <!--placeholder=""  width="50%" readonly>-->
+
+                                        <!--&lt;!&ndash;<input id="uploadfileBtn" class="btn btn-info" style="width: 100px" value="上传文件"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;name="uploadfileBtn" >&ndash;&gt;-->
+                                        <!--<span class="help-block">-->
+                                        <!--待上传文件</span>-->
+
+                                        <!--</div>-->
+
+                                        <label class="control-label">任务名称</label>
+
+                                        <div class="controls">
+                                            <input id="batchName-Input" name="path" value="" type="text"
+                                                   class="pathChooser input-xxlarge"
+                                                   placeholder="" width="50%">
+                                                <span class="help-inline error-inline hide">
+                                                    此字段为必填字段。
+                                                </span>
+                                                <span class="help-block">
+                                                    请输入任务名称。
+                                                </span>
+
+                                        </div>
+
+                                        <div id="upLoadFileDiv0" class="show">
+                                            <label id="upLoadFileLable" class="control-label" style="margin-top: 10px;">上传文件</label>
+
+                                            <div id="upLoadFileDiv">
+                                                <button id="upload-file" type="button" class="btn btn-primary"
+                                                        style="margin-top: 10px;margin-left: 20px;">
+                                                    <span class="text" style="text-align: center;">上传文件</span>
+                                                </button>
+                                                <br>
+                                            </div>
+                                            <div>
+                                                <span id="upLoadFileSpan" class="control-label">已上传文件</span>
+
+                                                <div style="position: relative;left:220px;margin-top:15px;font-size: 14px;width:60%;line-height: 30px;">
+                                                    <div id="fileUploaded" class="table"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--</div>-->
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

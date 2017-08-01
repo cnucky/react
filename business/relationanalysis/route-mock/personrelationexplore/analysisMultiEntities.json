@@ -1,0 +1,208 @@
+{
+  "code": 0,
+  "message": "",
+  "data": {
+    "personInfo": {
+      "persons": [
+        {
+          "personId": 1,
+          "personName": "张三",
+          "personDegree":10,
+          "nodes": [
+            {
+              "nodeType": 1,
+              "nodeId": "123456"             
+            },
+            {
+              "nodeType": 1,
+              "nodeId": "111111"              
+            },
+            {
+              "nodeType": 1,
+              "nodeId": "000001"             
+            }
+          ],
+          "isInit" : true        
+        },
+        {
+          "personId": 2,
+          "personName": "李四",
+          "personDegree":9,
+          "nodes": [
+            {
+              "nodeType": 1,
+              "nodeId": "222222"
+            }
+          ],
+          "isInit" : false 
+        },
+        {
+          "personId": 3,
+          "personName": "王五",
+          "personDegree":8,
+          "nodes": [
+            {
+              "nodeType": 1,
+              "nodeId": "000002"
+            }
+          ],
+          "isInit":false
+        }
+      ],
+      "edges": [
+        {
+          "fromPersonId": 1,
+          "toPersonId": 2,
+          "linkDetail": [
+            {
+              "fromNodeType": 1,
+              "fromNodeId": "111111",
+              "toNodeType": 1,
+              "toNodeId": "222222",
+              "linkedType": 10,
+              "linkedTitle": "火车同行",
+              "detail": [
+                {
+                  "startTime": "2016-11-01 00:00:00",
+                  "endTime": "2016-11-30 00:00:00",
+                  "frequency": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fromPersonId": 1,
+          "toPersonId": 3,
+          "linkDetail": [
+            {
+              "fromNodeType": 1,
+              "fromNodeId": "000001",
+              "toNodeType": 1,
+              "toNodeId": "000002",
+              "linkedType": 10,
+              "linkedTitle": "火车同行",
+              "detail": [
+                {
+                  "startTime": "2016-11-01 00:00:00",
+                  "endTime": "2016-11-30 00:00:00",
+                  "frequency": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "nodeInfo": {
+      "nodes": [
+        {
+          "nodeType": 1,
+          "nodeId": "123456",
+          "nodeTitle": "身份证(123456)",
+          "personId": 1,
+          "nodeDegree":10,
+          "isExtend":true
+        },
+        {
+          "nodeType": 1,
+          "nodeId": "111111",
+          "nodeTitle": "身份证(111111)",
+          "personId": 1,
+          "nodeDegree":9,
+          "isExtend":true
+        },
+        {
+          "nodeType": 1,
+          "nodeId": "000001",
+          "nodeTitle": "身份证(000001)",
+          "personId": 1,
+          "nodeDegree":8,
+          "isExtend":false
+        },
+        {
+          "nodeType": 1,
+          "nodeId": "222222",
+          "nodeTitle": "身份证(222222)",
+          "personId": 2,
+          "nodeDegree":7,
+          "isExtend":false
+        },
+        {
+          "nodeType": 1,
+          "nodeId": "000002",
+          "nodeTitle": "身份证(000002)",
+          "personId": 3,
+          "nodeDegree":6,
+          "isExtend":false
+        }
+      ],
+      "edges": [
+        {
+          "fromNodeType": 1,
+          "fromNodeId": "123456",
+          "toNodeType": 1,
+          "toNodeId": "111111",
+          "linkDetail": [
+            {
+              "linkedType": 1,
+              "linkedTitle": "关联",
+              "detail": []
+            }
+          ]
+        },
+        {
+          "fromNodeType": 1,
+          "fromNodeId": "123456",
+          "toNodeType": 1,
+          "toNodeId": "000001",
+          "linkDetail": [
+            {
+              "linkedType": 1,
+              "linkedTitle": "关联",
+              "detail": []
+            }
+          ]
+        },
+        {
+          "fromNodeType": 1,
+          "fromNodeId": "111111",
+          "toNodeType": 1,
+          "toNodeId": "222222",
+          "linkDetail": [
+            {
+              "linkedType": 10,
+              "linkedTitle": "火车同行",
+              "detail": [
+                {
+                  "startTime": "2016-11-01 00:00:00",
+                  "endTime": "2016-11-30 00:00:00",
+                  "frequency": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fromNodeType": 1,
+          "fromNodeId": "000001",
+          "toNodeType": 1,
+          "toNodeId": "000002",
+          "linkDetail": [
+            {
+              "linkedType": 10,
+              "linkedTitle": "火车同行",
+              "detail": [
+                {
+                  "startTime": "2016-11-01 00:00:00",
+                  "endTime": "2016-11-30 00:00:00",
+                  "frequency": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

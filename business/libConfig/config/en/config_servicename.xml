@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ServiceTypes>
+    <ServiceType Name="DNS">
+        <ServiceName Name="DNS"/>
+    </ServiceType>
+    <ServiceType Name="FTP">
+        <ServiceName Name="FTP"/>
+    </ServiceType>
+    <ServiceType Name="IM">
+        <ServiceName Name="AIM"/>
+        <ServiceName Name="AireTalk"/>
+        <ServiceName Name="CoCo"/>
+        <ServiceName Name="doshow"/>
+        <ServiceName Name="GTalk"/>
+        <ServiceName Name="ICQ"/>
+        <ServiceName Name="kakao"/>
+        <ServiceName Name="line"/>
+        <ServiceName Name="Nonoh"/>
+        <ServiceName Name="oovoo"/>
+        <ServiceName Name="paltalk"/>
+        <ServiceName Name="SinaUC"/>
+        <ServiceName Name="Skype"/>
+        <ServiceName Name="Talkbox"/>
+        <ServiceName Name="Tango"/>
+        <ServiceName Name="voxer"/>
+        <ServiceName Name="YahooMsg"/>
+        <ServiceName Name="Zello"/>
+    </ServiceType>
+    <ServiceType Name="RADIUS">
+        <ServiceName Name="RADIUS"/>
+    </ServiceType>
+    <ServiceType Name="SSL">
+        <ServiceName Name="SSL"/>
+    </ServiceType>
+    <ServiceType Name="TELNET">
+        <ServiceName Name="Telnet"/>
+    </ServiceType>
+    <ServiceType Name="WAPMMS">
+        <ServiceName Name="MMS"/>
+    </ServiceType>
+    <ServiceType Name="WAPRADIUS">
+        <ServiceName Name="WAPRADIUS"/>
+    </ServiceType>
+</ServiceTypes>

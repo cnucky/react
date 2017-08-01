@@ -1,0 +1,19 @@
+
+
+
+
+<table class="table detail-table-striped">
+    <tbody>
+    <% _.each(properties, function(prop){ %>
+         <tr>
+                <td style="width:40%">
+                    <span className="fs14 text-nowrap fw600"><%- prop.key %></span>
+                </td>
+                <td className="property-value" style="width:60%">
+                    <span><%- prop.value %></span>
+                </td>
+            </tr>
+    <% }) %>
+    </tbody>
+</table>
+

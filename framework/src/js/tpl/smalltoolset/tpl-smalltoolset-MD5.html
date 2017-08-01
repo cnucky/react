@@ -1,0 +1,37 @@
+<div class="small-tool-set-i18n">
+    <div id="sts-modal">
+        <div class="panel" style="width: 779px; height: 60px; margin: 10px 10px 10px 10px;">
+            <div class="panel-top">
+                <div class="admin-form theme-primary">
+                    <div class="col-md-6">
+                        <label class="field prepend-icon append-button file">
+                            <span class="button btn-primary" data-i18n="smalltoolset.md5.selectFile"></span>
+                            <input type="file" class="gui-file" name="file1" id="sts-md5_file_selector" multiple="multiple" onchange="document.getElementById('fileText').value = this.value;">
+                            <input type="text" class="gui-input" id="sts-fileText">
+                            <label class="field-icon">
+                                <i class="fa fa-upload"></i>
+                            </label>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" id="sts-md5Btn" class="btn btn-sm btn-info btn-block" style="'display:block;'" data-i18n="smalltoolset.md5.md5Btn">计算</button>
+            </div>
+            <div style="width: 779px; height: 460px; margin: 10px 10px 10px 0px;float: left;" >
+                <table class="table" style="width: 100%;">
+                    <thead >
+                    <tr class="primary">
+                        <th width="10%" data-i18n="smalltoolset.md5.tableNumber"></th>
+                        <th width="15%" data-i18n="smalltoolset.md5.tableFileName"></th>
+                        <th width="75%" data-i18n="smalltoolset.md5.tablemd5"></th>
+                    </tr>
+                    </thead>
+                </table>
+                <div id="sts-MD5TabDiv" class="clearDiv" style="overflow-y: auto;">
+                    <table id="sts-md5Tab" class="table" style="width: 100%;word-break: break-all;word-wrap: break-word;">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

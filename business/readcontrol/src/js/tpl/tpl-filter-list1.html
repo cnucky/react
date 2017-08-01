@@ -1,0 +1,137 @@
+<% var datatype = "" %>
+<% var selectData = "" %>
+<% var selectDatatype = "" %>
+<div class="list-group select-init">
+    <div class="list-group-item">
+        <div class="form-group form-select">
+            <select class="form-control list-name">
+
+                <% _.each(data, function(num) { //此处应该使用_.find()重构!!!%>
+                <% if (num.data == select.field) { %>
+                <% selectData = num %>
+                <% datatype = num.type %>
+                <% datatype_.val = num.typeName ; console.log(datatype_.val)%>
+                <option value="<%- num.data %>" selected="selected" ><%- num.headercaption %></option>
+                <% }else{%>
+                <option value="<%- num.data %>" ><%- num.headercaption %></option>
+                <% }%>
+                <% }) %>
+            </select>
+        </div>
+        <div class="form-group form-select">
+            <select class="form-control operation" data-colname="<%-select.field%>">
+                <% _.each(datatype, function(num) { %>
+                <option value="<%- num.key %>" data-key="<%-num.val%>" <% if (num.key == select.operate) { console.log(num.key);selectDatatype=num.val; %>selected="selected"<% }%> ><%- mathArry[num.key] %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="end-select">
+            <%
+            var convertName = selectData.convertName ? selectData.convertName[0] : '';
+            if (!convertName) {
+            if (select.operate !== 'BTW') {
+            if (selectData.typeName === 'date') {
+            %>
+            <input type="text" name="name" class="load_form_datetime_ form-text-left" value="<%- select.values[0] %>">
+            <%
+            }else{
+            if(select.operate == 'ISNULL' || select.operate == 'ISNOTNULL'){
+            %>
+            <input type="text" class="hide" name="name" value="<%- select.values[0] %>">
+            <%
+            }else{
+            %>
+            <input type="text" class="autoComplete" value="<%- select.values[0] %>">
+            <%
+            }
+            }
+            } else {
+            if (selectData.typeName === 'date') {
+            %><input type="text" name="name" class="load_form_datetime_ form-text-left" value="<%- select.values[0] %>"><input type="text" name="name" class="load_form_datetime_ form-text-right" value="<%- select.values[1] %>"><%
+            }else{
+            if(select.operate == 'ISNULL' || select.operate == 'ISNOTNULL'){
+            %>
+            <input type="text" class="hide" name="name" value="<%- select.values[0] %>">
+            <%
+            }else{
+            %><input type="text" name="name" class="form-text-left" placeholder="<%- selectDatatype %>" value="<%- select.values[0] %>"><input type="text" name="name" class="form-text-right" placeholder="<%- selectDatatype %>" value="<%- select.values[1] %>"><%
+            }
+            }
+            }
+
+            }else{
+            %>
+            <div class="check-box">
+                <%
+                var tmp = select.values.toString()
+                %>
+                <%
+                var tmp__ = [];
+
+                _.each(selectData.filter,function(item){
+                for(var cv1 in select.values)
+                {
+                if (item.name == select.values[cv1])
+                {
+                tmp__.push(item.desc);
+                }
+                }
+                });
+                console.log("tmp__",tmp__)
+                console.log("tmp__.length",tmp__.length)
+                var tmpStr = "";
+                for(var o = tmp__.length-1 ; o >= 0 ; o--){
+                console.log(tmp__[o]);
+                tmpStr += tmp__[o] + ",";
+                }
+                tmpStr = tmpStr.substring(0,tmpStr.length-1);
+                %>
+                <div class="check-val" data-val="<%- tmp %>"><%-tmpStr%></div>
+                <ul class="check-list">
+                    <%
+                    $.ajax({
+                    "url": '/dataprocess/getExtract',
+                    "type": "POST",
+                    "async":false,
+                    "data": arr,
+                    "success": function (json) {
+                    var tmpExtractData = json.results; //???????
+                    var tmpExtractDataMap = {}
+                    for(var g = 0 ; g < tmpExtractData.length ; g++){
+                    tmpExtractDataMap[tmpExtractData[g][0]] = tmpExtractData[g][1] ;
+                    }
+
+                    _.each(selectData.filter,function(item){
+                    var tmpExtractItem = (typeof tmpExtractDataMap[item.name]) == 'undefined' ? 0 : tmpExtractDataMap[item.name];
+                    var isChecked = true;
+                    for(var cv1 in select.values)
+                    {
+                    if (item.name == select.values[cv1])
+                    {
+                    %>
+                    <li><input type="checkbox" name="<%- item.name %>" value="<%- item.name %>" checked="checked"><p class="in-or-notin-select-left" title="<%-item.desc%>"><%-item.desc%></p><p class="text-right in-or-notin-select-right"><%-tmpExtractItem%></p></li>
+                    <%
+                    isChecked = false;
+                    }
+                    }
+                    if(isChecked)
+                    {
+                    %>
+                    <li><input type="checkbox" name="<%- item.name %>" value="<%- item.name %>"><p class="in-or-notin-select-left" title="<%-item.desc%>"><%-item.desc%></p><p class="text-right in-or-notin-select-right"><%-tmpExtractItem%></p></li>
+                    <%
+                    }
+
+                    })
+                    }
+                    })
+                    %>
+                </ul>
+                <div class="check-icon up"></div>
+            </div>
+            <%
+            }
+            %>
+        </div>
+        <button style="float:right;" type="button" class="btn btn-sm btn-danger" data-i18n="dataprocess.common.delete"></button>
+    </div>
+</div>

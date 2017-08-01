@@ -1,0 +1,16 @@
+<div class="media"> 
+    <div class="media-body" style="padding: 0px 5px;">
+        <h5 class="media-heading">
+            <span style="display: inline-block; height: 13px; overflow:hidden; padding-right:5px; color: #AAA;">
+                <span class="glyphicon glyphicon-user"></span>
+            </span>
+            <span class="issue-content" style="display: inline-block; max-width: 40px; color: #333;"><%= userName %></span>
+            <span style="display: inline-block; overflow:hidden;">&nbsp;-&nbsp;</span>
+            <span class="issue-tasktype issue-content"><%= taskType %></span>
+            <span class="issue-time"><%= time %></span>
+        </h5>
+        <a class="task-link" data-taskId="<%= taskId %>" href="javascript:;" style="text-decoration: none;display: block;width: 100%;">
+            <p class="issue-content" style="color: #3bafda;"><%= taskContent %></p>
+        </a>
+    </div>
+</div>

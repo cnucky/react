@@ -1,0 +1,11 @@
+<div id="modal-panel" class="popup-basic popup-<%- style %> bg-none mfp-with-anim"
+<% if (width > 0) { %>style="max-width: <%- width %>px"<% } %> >
+    <div class="panel" style="background-color: rgba(200,200,200,0.9)">
+        <div id="nv-dialog-title" class="panel-heading" style="background-color: transparent">
+            <span class="panel-title" style="color: #555"> <%= title %> </span>
+        </div>
+        <div id="nv-dialog-body" class="panel-body form-horizontal " style="height:auto; max-height:500px; overflow-x: auto; overflow-y: auto; min-height: 280px;">
+            <%= content %>
+        </div>
+    </div>
+</div>

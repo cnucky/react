@@ -1,0 +1,199 @@
+<!-- shim styles -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '公告管理',
+    link: '/messagecenter/noticemanage.html',
+};
+</script>
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/skin/select.bootstrap.min.css">
+<link charset="utf-8" rel="stylesheet" href="${root}/css/workspace/p-web-delay.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" href="${root}/css/skin/codemirror.css">
+<link rel="stylesheet" href="${root}/css/skin/monokai.css">
+<link rel="stylesheet" href="${root}/css/skin/summernote.css">
+<style>
+.hideCol {
+    display: none;
+}
+
+.notice-panel-body {
+    position: relative;
+    padding: 15px;
+}
+body.messages-page .message-view .hrStyle {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    border-color: red;
+    border-top: 5px ridge red;
+    height: 5px;
+}
+.panel-heading ul li a{
+    color: #FFF;
+    background-color: #3498db;
+}
+.panel-heading ul li a:hover{
+    color: #FFF;
+    background-color: #3498db;
+}
+
+.dt-panelfooter{
+    background-color:white;
+}
+</style>
+<!-- end shim -->
+<script>
+$(window).on("resize", function() {
+    var leftTray = $('.tray.tray-center');
+    var leftHeight = window.innerHeight - leftTray.offset().top;
+    $('.tray.tray-center').height(leftHeight);
+});
+</script>
+<section id="content" class="table-layout animated fadeIn" data-tray-height="match">
+    <div class="tray tray-center pn">
+        <div class="col-md-2">
+        </div>
+        <div id="sendnotice" class="col-md-8 panel pn panel-primary mbn" style="height:100%;">
+            <div class="panel-heading">
+                <ul class="nav panel-tabs-border panel-tabs panel-tabs-left panel-primary">
+                    <li class="active">
+                        <a href="#tab_1" data-toggle="tab">
+                            <i class="fa fa-eye">
+                            </i>公告管理
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#tab_2" data-toggle="tab">
+                            <i class="fa fa-pencil-square">
+                            </i>公告发送
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-body pn mt10" style="border:0px;">
+                <div class="tab-content">
+                    <div id="tab_1" class="tab-pane active">
+                        <div id="notice-show" class="col-md-12">
+                            <div class="panel-title hidden-xs col-md-12" style="color: #3498db;font-weight: bold;font-size:18px;">
+                                <span style="color: #70ca63" class=""></span>
+                                <div class="btn-group mr10 pull-left">
+                                    <button type="button" id="selectAllOrNot" class="btn btn-dark  btn-block" style="width:75px;">全选</button>
+                                </div>
+                                <div class="btn-group pull-left">
+                                    <button id="btn-refresh" type="button" class="btn btn-default btn-default light">
+                                        <i class="fa fa-refresh">刷新</i>
+                                    </button>
+                                    <button id="btn-trash" type="button" class="btn btn-default light">
+                                        <i class="fa fa-trash">删除</i>
+                                    </button>
+                                </div>
+                            </div>
+                            <hr class="mt15 mb5 col-md-12 pn" style="color:#C71313;size:10">
+                            <div class="lay-main-con pn of-x-a col-md-12">
+                                <table class="table stripe footable mbn admin-form" id="notice-table" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="" style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;width:10%;font-size:15px">选中</th>
+                                            <th class="" style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;width:50%;font-size:15px">主题</th>
+                                            <th class="" style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;font-size:15px;display:none">公告ID</th>
+                                            <th class="" style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;width:20%;font-size:15px">发送者</th>
+                                            <th class="" style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;width:20%;font-size:15px">发送时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="notice-detail" class="col-md-12 pn pt10" style="display:none">
+                                <div class="message-view col-md-12 pn pl15 pr15">
+                                    <div class="col-md-12 pn" style="">
+                                        <button id="btn-return" type="button" class="pull-left btn btn-sm btn-system ">
+                                            <span class="glyphicon glyphicon-circle-arrow-left">返回</span>
+                                        </button>
+                                    </div>
+                                    <form class="form-horizontal col-md-12 pn">
+                                        <div class="well well-sm col-md-12 pn mt10 mbn">
+                                            <div class="col-md-7">
+                                                <h4 id="notice-subject" class="subject text-default" style="font-weight:bold;font-size:13px"></h4>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <label id="notice-send-time" class="control-label pull-right text-muted"></label>
+                                            </div>
+                                        </div>
+                                        <div class="well well-sm col-md-12 pn mbn mt10">
+                                            <div class="col-md-10">
+                                                <h4 class="subject text-default" style="font-weight:bold;font-size:13px">接收人:<label id="notice-receiver" class="subject text-default pn" data-toggle="tooltip" data-placement="bottom" data-original-title="接收人为空" style="font-weight:bold;font-size:13px;margin:0px;"></label></h4>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label id="notice-consult" class="control-label pull-right text-muted"></label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div id="notice-content-div" class="col-md-12 pn mt10">
+                                        <div id="notice-content" class="message-body" style="font-size:13px;">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div id="tab_2" class="tab-pane">
+                        <div class="col-md-12">
+                            <form class="form-horizontal admin-form">
+                                <div class="form-group ">
+                                    <label class="col-md-2 control-label" style="margin-top:10px;text-align:center;font-size:18px;">接收人<label style="color:red;font-size:18px;">*</label></label>
+                                    <div class="col-md-10 control-group has-success" style="paddding-right:0px;">
+                                        <label class="field prepend-icon file mt10">
+                                            <span id="choose-people-button" class="button btn-primary">选择接收人</span>
+                                            <input class="gui-input" id="getPeople" placeholder="选择接收人" data-toggle="tooltip" type="text" data-placement="bottom" readonly data-original-title="接收人不能为空">
+                                            <label class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" style="text-align:center;font-size:18px;paddding-right:3px;">红头</label>
+                                    <div class="col-md-10 control-group">
+                                        <input type="text" id="inputTopTitle" class="form-control" placeholder="请输入红头" AUTOCOMPLETE="OFF">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" style="text-align:center;font-size:18px;">主题<label style="color:red;font-size:18px;">*</label></label>
+                                    <div class="col-md-10 control-group">
+                                        <input type="text" id="inputProject" class="form-control" placeholder="请输入主题" AUTOCOMPLETE="OFF">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div id="noticeContent" class="col-md-10 control-group summernote-quick">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin-form pull-right" style="margin-bottom:10px;">
+                            <div class="col-md-12">
+                                <button id="submit-btn" type="submit" class="button btn-primary" style="min-width:100px">发送</button>
+                                <!-- <button type="button" id='cancelBtn' class="button btn-default" style="min-width:100px">取消</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/js/noticemanage.js"></script>
+<script type="text/javascript" src="${root}/js/components/summernote/summernote.min.js"></script>
+<script type="text/javascript" src="${root}/js/components/summernote/summernote-zh-CN.js"></script>
+<script type="text/javascript" src="${root}/js/components/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="${root}/js/components/codemirror/formatting.js"></script>
+<script type="text/javascript" src="${root}/js/components/codemirror/xml.js"></script>

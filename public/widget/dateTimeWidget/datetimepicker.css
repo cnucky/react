@@ -1,0 +1,47 @@
+.datetimePickerInput {
+	position: relative;
+	top: 1px;
+}
+
+.dataTimeSingle {
+	float: left;
+}
+
+.dataTimeDel {
+	cursor: pointer;
+    font-weight: bold;
+}
+
+.dateTimeRangeGroup .dataTimeDel {
+    position: relative;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: 5px;
+    float: right;
+}
+
+.datetimeSingleGroup .dataTimeDel {
+	position: relative;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: -25px;
+    float: right;
+}
+
+.calenderRangeGroup input{
+    padding-left:5px;
+} 
+
+.calenderRangeGroup .jqx-fill-state-focus{
+    border-color: #c7c7c7;
+} 
+
+.calenderRangeGroup #beginCalender.borderColor.jqx-widget-content{
+    border-color: #f10f0f;
+} 
+
+.calenderRangeGroup #endCalender.borderColor.jqx-widget-content{
+    border-color: #f10f0f;
+} 

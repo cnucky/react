@@ -1,0 +1,10 @@
+.gisModule #pathBox{
+	/*position: relative;*/
+	/*top:40px;
+	right:50px;
+	left:auto;*/
+}
+
+.gisModule #pathDisplayBox #dirBox{
+	/*max-height: 500px;*/
+}

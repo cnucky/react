@@ -1,0 +1,93 @@
+<!-- shim ../index.html content -->
+<script type="text/javascript">
+    var _pageConfig = {
+        title: '数据流程',
+    };
+</script>
+
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">-->
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">-->
+<!--<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">-->
+
+<!--<link type="text/css" href="${root}/css/datamanage/dataimport/bootplus.css" rel="stylesheet">-->
+<!--&lt;!&ndash;<link type="text/css" href="${root}/css/css/hue3.css" rel="stylesheet">&ndash;&gt;-->
+<!--<link type="text/css" href="${root}/css/datamanage/dataimport/font-awesome.min.css" rel="stylesheet">-->
+<!--<link type="text/css" href="${root}/css/datamanage/dataimport/fileuploader.css" rel="stylesheet">-->
+<!--&lt;!&ndash;<link type="text/css" href="${root}/css/datamanage/dataimport/importmanage.css" rel="stylesheet">&ndash;&gt;-->
+<style>
+    .textClass{
+        width: 210px;
+        height: 150px;
+        background: black;
+        color: orange;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size:18px;
+        overflow-x:hidden;
+        overflow-y:hidden
+    }
+    .lableClass{
+        width: 20px;
+        height: 150px;
+        color:white;
+        margin-left: 90px;
+        margin-right: 100px;
+        font-size:24px;
+        font-weight: bold;
+        align-content: center;
+    }
+</style>
+
+<section id="content" class="table-layout" style="width:100%">
+    <!--width:1120px;-->
+    <div class="container-fluid" id="container" style="width: 100%; padding: 0px 0px 0px 0px">
+        <div class="row-fluid" style="width: 100%">
+            <div class="span9" style="width: 100%;background-color:black ">
+
+                <canvas id="canvas1" width="1200" height="530" style="background-color:#000" >
+                    <p></p>
+                </canvas>
+                <br>
+                <div>
+                    <lable readonly class="lableClass" wrap="hard" >人</lable>
+
+                    <lable readonly class="lableClass" wrap="hard" >地</lable>
+
+                    <lable readonly class="lableClass"  wrap="hard" >事</lable>
+
+                    <lable readonly class="lableClass" wrap="hard" >组织</lable>
+
+                    <lable readonly class="lableClass" wrap="hard" >档案</lable>
+                    <!--<textarea readonly class="textClass" name="addrText" wrap="hard" >-->
+
+                    <!--</textarea>-->
+
+                    <!--<textarea readonly class="textClass" name="thingText" wrap="hard" >-->
+
+                    <!--</textarea>-->
+                    <!--<textarea readonly class="textClass" name="orgText" wrap="hard" >-->
+
+                    <!--</textarea>-->
+
+                    <!--<textarea readonly class="textClass" name="fileText" wrap="hard" >-->
+
+                    <!--</textarea>-->
+                </div>
+                <div>
+                    <textarea readonly class="textClass" title="人" name="personText" wrap="hard"></textarea>
+
+                    <textarea readonly class="textClass" title="地" name="addrText" wrap="hard"></textarea>
+
+                    <textarea readonly class="textClass" title="事物" name="thingText" wrap="hard"></textarea>
+
+                    <textarea readonly class="textClass" title="组织" name="orgText" wrap="hard"></textarea>
+
+                    <textarea readonly class="textClass" title="档案" name="fileText" wrap="hard"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src='${entryRoot}/dataflow.js'></script>

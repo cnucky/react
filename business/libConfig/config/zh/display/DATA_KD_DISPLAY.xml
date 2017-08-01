@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<CONFIG DATA_TYPE="DATA_KD" VERSION="20160918">
+    <UI_CONFIG>
+        <FILE_LAYOUT POISITION="RIGHT" BOTTOM_PX="400" RIGHT_PX="600"/>
+        <COLUMNS>
+            <!-- 基本信息 -->
+            <COLUMN NAME="CDR_ID" HEADER="话单编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CAP_TIME" HEADER="截获时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_ISREAD" HEADER="已读" CONVERT="IMG_MK_ISREAD" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_IMPORTANCE" HEADER="标记" CONVERT="IMG_MK_IMPORTANCE" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_NOTE" HEADER="注释" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <!-- 数据信息 -->
+            <COLUMN NAME="BILL_NUMBER" HEADER="运单号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_TIME" HEADER="寄件时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NATION_NAME" HEADER="寄件国家名称" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NATION_CODE" HEADER="寄件国家代码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_NAME" HEADER="寄件网点" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_CODE" HEADER="寄件网点代码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_NATION" HEADER="寄件网点国家" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_PROVINCE" HEADER="寄件网点省" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_CITY" HEADER="寄件网点市" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NET_COUNTY" HEADER="寄件网点县" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NAME" HEADER="寄件人姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_NAME_REG" HEADER="规整寄件人姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_ADDR" HEADER="寄件人地址" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_CERTID" HEADER="寄件人证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_ZIPCODE" HEADER="寄件人邮编" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_PHONENUMBER" HEADER="寄件人电话" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_PHONE_LOCAL" HEADER="寄件人电话主机号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEND_AREA_CODE" HEADER="寄件人电话区号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NATION_NAME" HEADER="收件国家" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NATION_CODE" HEADER="收件国家代码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_NAME" HEADER="收件网点" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_CODE" HEADER="收件网点代码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_NATION" HEADER="收件网点国家" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_PROVINCE" HEADER="收件网点省" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_CITY" HEADER="收件网点市" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NET_COUNTY" HEADER="收件网点县" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NAME" HEADER="收件人姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_NAME_REG" HEADER="规整收件人姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_ADDR" HEADER="收件人地址" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_CERTID" HEADER="收件人证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_ZIPCODE" HEADER="收件人邮编" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RECEIVE_PHONENUMBER" HEADER="收件人电话" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+        </COLUMNS>
+        <LIST_COLUMNS>
+            <COLUMN NAME="MK_ISREAD" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_IMPORTANCE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_NOTE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="CDR_ID" HIDDEN="True" LENGTH="150"/>
+            <COLUMN NAME="CAP_TIME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BILL_NUMBER" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_TIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="SEND_NATION_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NATION_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_NATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_PROVINCE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_CITY" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NET_COUNTY" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_NAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_ADDR" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_CERTID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_ZIPCODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_PHONENUMBER" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_PHONE_LOCAL" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEND_AREA_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NATION_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NATION_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_NATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_PROVINCE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_CITY" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NET_COUNTY" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_NAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_ADDR" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_CERTID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_ZIPCODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECEIVE_PHONENUMBER" HIDDEN="False" LENGTH="150"/>
+        </LIST_COLUMNS>
+        <DETAIL_COLUMNS>
+            <COLUMN_GROUP NAME="基本信息" EXPAND="True">
+                <COLUMN NAME="CDR_ID"/>
+                <COLUMN NAME="CAP_TIME"/>
+            </COLUMN_GROUP>
+            <COLUMN_GROUP NAME="数据信息" EXPAND="True">
+                <COLUMN NAME="BILL_NUMBER"/>
+                <COLUMN NAME="SEND_TIME"/>
+                <COLUMN NAME="SEND_NATION_NAME"/>
+                <COLUMN NAME="SEND_NATION_CODE"/>
+                <COLUMN NAME="SEND_NET_NAME"/>
+                <COLUMN NAME="SEND_NET_CODE"/>
+                <COLUMN NAME="SEND_NET_NATION"/>
+                <COLUMN NAME="SEND_NET_PROVINCE"/>
+                <COLUMN NAME="SEND_NET_CITY"/>
+                <COLUMN NAME="SEND_NET_COUNTY"/>
+                <COLUMN NAME="SEND_NAME"/>
+                <COLUMN NAME="SEND_NAME_REG"/>
+                <COLUMN NAME="SEND_ADDR"/>
+                <COLUMN NAME="SEND_CERTID"/>
+                <COLUMN NAME="SEND_ZIPCODE"/>
+                <COLUMN NAME="SEND_PHONENUMBER"/>
+                <COLUMN NAME="SEND_PHONE_LOCAL"/>
+                <COLUMN NAME="SEND_AREA_CODE"/>
+                <COLUMN NAME="RECEIVE_NATION_NAME"/>
+                <COLUMN NAME="RECEIVE_NATION_CODE"/>
+                <COLUMN NAME="RECEIVE_NET_NAME"/>
+                <COLUMN NAME="RECEIVE_NET_CODE"/>
+                <COLUMN NAME="RECEIVE_NET_NATION"/>
+                <COLUMN NAME="RECEIVE_NET_PROVINCE"/>
+                <COLUMN NAME="RECEIVE_NET_CITY"/>
+                <COLUMN NAME="RECEIVE_NET_COUNTY"/>
+                <COLUMN NAME="RECEIVE_NAME"/>
+                <COLUMN NAME="RECEIVE_NAME_REG"/>
+                <COLUMN NAME="RECEIVE_ADDR"/>
+                <COLUMN NAME="RECEIVE_CERTID"/>
+                <COLUMN NAME="RECEIVE_ZIPCODE"/>
+                <COLUMN NAME="RECEIVE_PHONENUMBER"/>
+            </COLUMN_GROUP>
+        </DETAIL_COLUMNS>
+        <DISTINCT_COLUMNS>
+        </DISTINCT_COLUMNS>
+        <GIS_COLUMNS>
+        </GIS_COLUMNS>
+    </UI_CONFIG>
+</CONFIG>

@@ -1,0 +1,58 @@
+<link rel="stylesheet"  href="../../css/udp/fileinput.css">
+<link rel="stylesheet"  href="../../css/udp/dropzone.css">
+<!-- Admin Dock Quick Compose Message -->
+<div class="quick-compose-form" id="upload-panel">
+    <div class="widget-menu m10">
+        <span class="btn btn-success fileinput-button dz-clickable">
+            <i class="glyphicon glyphicon-plus"></i>
+            <span>添加</span>
+        </span>
+        <button id="startupload" type="button" class="btn btn-primary start">
+            <i class="glyphicon glyphicon-upload"></i>
+            <span>上传</span>
+        </button>
+        <button id='cancelupload' type="reset" class="btn btn-warning cancel">
+            <i class="glyphicon glyphicon-ban-circle"></i>
+            <span>取消</span>
+        </button>
+        <span class="fileupload-process">
+              <div id="total-progress" class="progress progress-striped active"
+                   role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <div class="progress-bar progress-bar-success" ddstyle="width:0%;"
+                       data-dz-uploadprogress></div>
+              </div>
+        </span>
+    </div>
+    <section class="ml10 table-layout animated fadeIn">
+        <div class="tray tray-center" >
+            <div class="center-block mw600" id="behavior-table-container" style="height:100%;"></div>
+            <div class="table" id="previews" >
+                <div id="template" class="file-row">
+                    <!-- This is used as the file preview template -->
+                    <div>
+                        <span class="name" data-dz-name></span>
+                    </div>
+                    <div>
+                        <span class="size" data-dz-size></span>
+                    </div>
+                     <!-- <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div> -->
+                    <div>
+                        <button class="btn btn-primary btn-sm start">
+                            <i class="glyphicon glyphicon-upload"></i>
+                            <span>上传</span>
+                        </button>
+                        <button data-dz-remove class="btn btn-sm btn-warning cancel">
+                            <i class="glyphicon glyphicon-ban-circle"></i>
+                            <span>取消</span>
+                        </button>
+                        <button data-dz-remove class="btn btn-sm btn-danger delete">
+                            <i class="glyphicon glyphicon-trash"></i>
+                            <span>删除</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>

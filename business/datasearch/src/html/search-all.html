@@ -1,0 +1,380 @@
+<!-- shim -->
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<link rel="stylesheet" href="${root}/css/skin/jqx.base.css" type="text/css"/>
+<link rel="stylesheet" href="${root}/css/skin/jqx.bootstrap.css" type="text/css"/>
+
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css"/>
+<link rel="stylesheet" type="text/css"
+      href="../js/components/gisWidget/enclosureManageModule/enclosureManageModuleCSS.css"/>
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+
+<link rel="stylesheet" type="text/css" href="${ctxRoot}/css/searchAll.css">
+
+<!-- end shim -->
+
+
+
+
+<div class="tray tray-center">
+    <section id="content" style="padding-top: 10px;padding-bottom: 0px">
+        <div class="panel">
+
+            <div class="panel-body">
+                <div class="page-content" style="margin-top: 0px">
+
+                    <div class="row col-sm-12" style="height: 30px">
+                        <button id="btnBatch" class="pull-right btn btn-link gray"
+                                data-i18n="datasearch.searchall.buttons.btnBatch"
+                                style="cursor: hand;font-weight: 800 " value="b">
+                        </button>
+                        <button id="btnSingle" class="pull-right btn btn-link "
+                                data-i18n="datasearch.searchall.buttons.btnSingle"
+                                style="cursor: hand;font-weight: 800 "
+                                value="s">
+                        </button>
+
+                    </div>
+                    <div class="row">
+                        <input type="file" id="file_selector" class="hidden">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2">
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <div class="panel" id="panel_single">
+                                <div class="tab-block">
+                                    <ul class="nav nav-tab nav-pills mt10">
+                                        <li class="buble-container active address">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="true" search_type="address"
+                                               data-i18n="datasearch.searchall.tab_header.li_address.text;[tip_s]datasearch.searchall.tab_header.li_address.tip_s;[tip_b]datasearch.searchall.tab_header.li_address.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="url">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="true" search_type="url"
+                                               data-i18n="datasearch.searchall.tab_header.li_url.text;[tip_s]datasearch.searchall.tab_header.li_url.tip_s;[tip_b]datasearch.searchall.tab_header.li_url.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="ip">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="false" search_type="ip"
+                                               data-i18n="datasearch.searchall.tab_header.li_ip.text;[tip_s]datasearch.searchall.tab_header.li_ip.tip_s;[tip_b]datasearch.searchall.tab_header.li_ip.tip_b">
+                                            </a>
+                                        </li>
+                                        <li class="lacci">
+                                            <a class="tab_header" href="#tab_single" data-toggle="tab"
+                                               aria-expanded="false" search_type="lacci"
+                                               data-i18n="datasearch.searchall.tab_header.li_lacci.text;[tip_s]datasearch.searchall.tab_header.li_lacci.tip_s;[tip_b]datasearch.searchall.tab_header.li_lacci.tip_b">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="container-fluid mt10">
+                                    <div class="row-fluid">
+                                        <div id="tab_single" class="tab-pane active ">
+                                            <div class="row" id="input_single">
+                                                <div class="input-group bootstrap-touchspin">
+                                                    <input id="txtCondition" type="text" class="gui-input form-control"
+                                                           data-i18n="[placeholder]datasearch.searchall.tab_header.li_address.tip_s">
+                                                        <span class="input-group-btn ">
+                                                            <button id="btnSearch" class="btn btn-primary"
+                                                                    style="font-size: 13px"
+                                                                    data-i18n="[title]datasearch.searchall.buttons.btnSearch">
+                                                                <i class="glyphicon glyphicon-search"></i>
+                                                            </button>
+                                                        </span>
+                                                </div>
+                                                <div class="col-sm-12 hidden" id="div_lacci_s"
+                                                     style="padding-left: 0px">
+                                                    <table style="width: 100%">
+                                                        <tr style="width: 100%">
+
+                                                            <td>
+                                                                <div class="col-sm-12" style="padding-left: 0px">
+                                                                    <div class="col-sm-4 " style="padding-left: 0px">
+                                                                        <select id="bs_carrier_s"
+                                                                                class="form-control">
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <input id="bs_lac_s" class="form-control"
+                                                                               placeholder="LAC">
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <input id="bs_ci_s" class="form-control"
+                                                                               placeholder="CI">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td width="50px">
+                                                                <button type="button" id="btn_lacci_search"
+                                                                        data-i18n="[title]datasearch.searchall.buttons.btnSearch"
+                                                                        class="btn btn-primary">
+                                                                    <i class="glyphicon glyphicon-search"></i>
+                                                                </button>
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="row hidden" id="input_batch">
+                                                <div id="divNormalBatch" class="col-sm-12">
+                                                    <div class="row ">
+                                                        <div>
+                                                        <span class="append-icon right  " for="import_mz">
+                                                            <div class="row">
+                                                                <i id="btn_import"
+                                                                   data-i18n="[title]datasearch.searchall.buttons.btn_import"
+                                                                   class="fa fa-download btn-link"></i>
+                                                            </div>
+                                                        </span>
+                                                        <textarea id="txtConditions"
+                                                                  style="height: 235px;margin-right: 2px;padding-right: 50px"
+                                                                  class="gui-input form-control" ></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="divLacciBatch" class="row hidden">
+                                                    <div class="col-sm-12"
+                                                         style="padding:5px;border:0px solid!important;border-color: lightgray!important;">
+                                                        <table style="width: 100%">
+                                                            <tr style="width: 100%">
+                                                                <td>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="col-sm-4 "
+                                                                             style="padding-left: 0px">
+                                                                            <select id="bs_carrier"
+                                                                                    class="form-control">
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <input id="bs_lac" class="form-control"
+                                                                                   placeholder="LAC">
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <input id="bs_ci" class="form-control"
+                                                                                   placeholder="CI">
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td width="150px">
+                                                                    <button type="button" id="add_lacci"
+                                                                            class="btn btn-success mr10"
+                                                                            data-i18n="[title]datasearch.searchall.buttons.btn_add">
+                                                                        <i class="fa fa-plus"></i>
+                                                                    </button>
+                                                                    <button type="button" id="import_lacci"
+                                                                            class="btn btn-primary mr10"
+                                                                            data-i18n="[title]datasearch.searchall.buttons.btn_import">
+                                                                        <i class="fa fa-download"></i>
+                                                                    </button>
+                                                                    <button type="button" id="btn_map"
+                                                                            class="btn btn-primary"
+                                                                            data-i18n="[title]datasearch.searchall.buttons.btn_map" >
+                                                                        <i class="glyphicons glyphicons-google_maps"></i>
+                                                                    </button>
+                                                                    <input type="file" id="lacci_file_selector"
+                                                                           class="hidden">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="col-md-12 ">
+                                                        <table class="table table-striped" id="basestation_table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th data-i18n="datasearch.searchall.basestation_table.carrier"></th>
+                                                                <th data-i18n="datasearch.searchall.basestation_table.carrier_code"></th>
+                                                                <th data-i18n="datasearch.searchall.basestation_table.base_station"></th>
+                                                                <th data-i18n="datasearch.searchall.basestation_table.operation"></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row mt5">
+                                                <div class="col-sm-12" style="padding-left: 0px;padding-right: 0px ">
+                                                    <div class="col-sm-6">
+                                                        <div id="div_error" class="hidden">
+                                                            <em id="input_error" class="state-error  mt5"
+                                                                style="color: #DE888A;"></em>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6" style="padding-left: 0px;padding-right: 0px ">
+                                                        <button id="btnSearchb" style="float: right"
+                                                                data-i18n="[title]datasearch.searchall.buttons.btnSearch;datasearch.searchall.buttons.btnSearch"
+                                                                class="hidden btn btn-sm btn-primary">
+                                                            <i class="glyphicon glyphicon-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div style="height: 0px"></div>
+                    <hr class="short alt">
+
+                    <form class="form-horizontal" role="form">
+
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+
+                            <div class="col-lg-11">
+                                <div id="search-range"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+
+                            <div class="col-lg-11">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-lg-1 control-label " data-i18n="datasearch.searchall.labels.data_type"
+                                                   style="text-align: left"></label>
+
+                                            <div class="col-lg-11">
+
+                                                <div class="input-group mt10">
+                                                    <div class="icheck-inline">
+                                                        <a class="bs-component">
+                                                            <a class="radio-custom mb5">
+                                                                <input type="radio" id="radio_all_categories" checked
+                                                                       name="radio_yewu">
+                                                                <label for="radio_all_categories" data-i18n="datasearch.searchall.labels.all"
+                                                                       style="color:#666666;font-weight: 200"></label>
+                                                            </a>
+                                                        </a>
+                                                        <a class="bs-component">
+                                                            <a class="radio-custom  mb5">
+                                                                <input type="radio" id="radio_self_categories"
+                                                                       name="radio_yewu">
+                                                                <label for="radio_self_categories" data-i18n="datasearch.searchall.labels.custom"
+                                                                       style="color:#666666;font-weight: 200">
+                                                                    </label>
+                                                            </a>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div id="panel_categories">
+                                                    <div class="panel-body" style="border: none; padding: 0">
+                                                        <div class="row">
+                                                            <div class="checkbox-custom" id="checkPa"
+                                                                 style="display: none;">
+                                                                <input type="checkbox" id="btnProtocolAll">
+                                                                <label for="btnProtocolAll" data-i18n="datasearch.searchall.labels.selectall"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="form-group" id="divCategories"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-11">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="col-lg-1 control-label" style="text-align: left"
+                                                   data-i18n="datasearch.searchall.labels.search_position" ></label>
+
+                                            <div class="col-lg-11">
+                                                <div class="input-group mt10">
+                                                    <div class="icheck-inline">
+                                                        <a class="bs-component">
+                                                            <a class="radio-custom ">
+                                                                <input type="radio" id="radio_structured"
+                                                                       class="search-position"
+                                                                       name="radio_search_position" search_position="0">
+                                                                <label for="radio_structured" data-i18n="datasearch.searchall.labels.structured_only"
+                                                                       style="color:#666666;font-weight: 200"></label>
+                                                            </a>
+                                                        </a>
+                                                        <a class="bs-component">
+                                                            <a class="radio-custom ">
+                                                                <input type="radio" id="radio_structured_and_file"
+                                                                       class="search-position"
+                                                                       checked name="radio_search_position"
+                                                                       search_position="1">
+                                                                <label for="radio_structured_and_file" data-i18n="datasearch.searchall.labels.structured_text"
+                                                                       style="color:#666666;font-weight: 200"></label>
+                                                            </a>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</div>
+
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>-->
+<!--<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>-->
+<!--<script src="../js/components/gisWidget/enclosureManageModule/fancyTree/fancytree-master/lib/jquery-ui-contextmenu/jquery.ui-contextmenu.min.js"></script>-->
+
+<!--<script src="../js/components/gisWidget/enclosureManageModule/enclosureManageModule-4g.js"></script>-->
+<!--<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawEditMenu2-src.js"></script>-->
+<!--<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawCircle-src-4g.js"></script>-->
+<!--<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawRectangle-src-4g.js"></script>-->
+<!--<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawPolygon-src-4g.js"></script>-->
+<script src="/js/components/gisWidget/enclosureManageModule/enclosureManage-widget-files.js"></script>
+
+<script type="text/javascript" src="${entryRoot}/search-all.js"></script>
+
+

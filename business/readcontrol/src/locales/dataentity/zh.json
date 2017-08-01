@@ -1,0 +1,23 @@
+{
+  "mobileentity": {
+    "mobileinfo": {
+      "phone_loc": "归属地区:",
+      "phonebook_remake": "码址簿备注:",
+      "phone_book_name": "码址簿姓名:",
+      "entity_count": "出现次数:",
+      "phonebook_exist" : "匹配码址簿:",
+      "menu": {
+        "mobile_archive": "Phone Archive:",
+        "time_sequence": "Time Sequence Info.",
+        "mobile_trace": "Number Trace"
+      }
+    },
+    "notify": {
+      "exceed_max_cache": "Reach the upper limit of data obtaining!",
+      "info_detail": "Info. Detail",
+      "query_cache_failure": "Fail to obtain cache!",
+      "query_cache_failure2": "Fail to obtain cache (from countCache)!",
+      "query_mobile_entity_failure": "Fail to obtain cell phone target!"
+    }
+  }
+}

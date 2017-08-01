@@ -1,0 +1,83 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/home.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css">
+<style>
+.breadcrumb .glyphicon {
+    color: #fff;
+}
+
+.breadcrumb > li {
+    color: #fff;
+}
+
+#topbar {
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 0px solid #ddd;
+}
+
+#topbar.alt {
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 0px solid #ddd;
+}
+
+#topbar.alt {
+    display: none
+}
+</style>
+<!-- end shim -->
+<section id="home-content" class="home-holo animated fadeIn">
+    <div class="menu-bg"></div>
+    <div class="menu-mask"></div>
+    <div id="alert-container" style="">
+    </div>
+    <div class="container">
+        <div class="row mt50">
+            <div class="panel" style="">
+                <ul id='app-menu'></ul>
+                <ul id='add-btn-ul'></ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '我的应用'
+};
+</script>
+<script type="text/template" id="tpl_app_container">
+    <li>
+        <a class="app-container">
+            <div class="app" id="<%- id %>">
+                <div class="app-icon">
+                    <div class='triangle-topleft'></div>
+                    <i class='fa fa-times uninstall-span'></i>
+                    
+                    <div class="sub-menu" count="<%- count %>">             
+                    </div>
+                </div>
+                <div class="app-title"><%- title %></div>
+            </div>
+        </a>
+    </li>
+</script>
+<script type="text/template" id="tpl_app_file">
+    <a  class="app-file <%- finish_class %> " href="<%- app_link %>" <% if(obj.app_open_mode!=1 && app_link!='#'){ %>target="<%- app_link %>" <% } %>>
+        <img class="img-<%- size_class %>" src='<%- img_src %>'></img>
+    </a>
+</script>
+<script type="text/template" id="tpl_dialogmenu">
+    <ul id='app-menu-popup' class="popup-sortable ">
+    </ul>
+</script>
+<script type="text/template" id="tpl_leftmenu_item">
+    <li>
+        <a data-id="<%- data_id %>" data-key="">
+        </a>
+    </li>
+</script>
+
+<script type="text/javascript" src="${root}/js/home.js"></script>
+<!-- END: page scripts -->

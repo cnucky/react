@@ -1,0 +1,34 @@
+{
+  "name": "react-i18next",
+  "main": "./react-i18next.min.js",
+  "dependencies": {},
+  "ignore": [
+    "test/",
+    "dist/",
+    "src/",
+    "bin/",
+    "coverage/",
+    "example/",
+    ".babelrc",
+    ".gitignore",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc",
+    ".npmignore",
+    "gulpfile.js",
+    "package.json",
+    "karma.conf.js"
+  ],
+  "homepage": "https://github.com/i18next/react-i18next",
+  "version": "1.4.0",
+  "_release": "1.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.0",
+    "commit": "3851bf60ccb50527ffd7ad6c9b47ca5c8aa7412d"
+  },
+  "_source": "https://github.com/i18next/react-i18next.git",
+  "_target": "^1.4.0",
+  "_originalSource": "react-i18next",
+  "_direct": true
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>态势感知系统</title>
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/leaflet.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/map.css" />
+    <link rel="stylesheet" href="../js/components/gisWidget/lmb/css/charts.css" />
+    <link href="../js/components/gisWidget/lmb/css/dlg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="tooltip"></div>
+    <div class="map-margin" id="map-div">
+        <div class="map-title">
+            <p class="title">重点人员位置图</p>
+        </div>
+        <div id="map">
+        </div>
+    </div>
+    <img src="" alt="四个主要嫌疑人图片" id="fourImg">
+    <div class="right">
+        <div class="radar-margin">
+            <div class="radar-title">
+                <p class="right-title">威胁程度指标图</p>
+            </div>
+            <div id="radar-select">&nbsp;</div>
+            <div class="radar" id="radar-div"></div>
+        </div>
+        <div class="relation-margin">
+            <div class="relation-title">
+                <p class="right-title">关系人分析</p>
+            </div>
+            <div class="relation-control-margin">
+                <div class="relation-control">
+                    <input type="radio" class="relation-select" name="relation-type" checked="checked" id="all" />
+                    <a href="#">全部</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation1" />
+                    <a href="#">同行</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation2" />
+                    <a href="#">同户籍</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation3" />
+                    <a href="#">通联</a>
+                </div>
+            </div>
+            <div class="relation" id="relation-div"></div>
+        </div>
+    </div>
+    <div class="bar-margin">
+        <div class="bar-title">
+            <p class="title">重点人员电信/互联网活跃度</p>
+        </div>
+        <div class="bar-control-margin">
+            <div class="bar-control">
+                <input type="radio" class="bar-select" name="bar-type" checked="checked" id="bar-all" />
+                <a href="#">所有</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation1" />
+                <a href="#">电信</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation2" />
+                <a href="#">互联网</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation3" />
+                <a href="#">寄递</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation4" />
+                <a href="#">出行</a>
+            </div>
+        </div>
+        <div class="bar" id="bar-div"></div>
+    </div>
+
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/bootstrap-timepicker.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/d3.min.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/echarts-all.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/bezier.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet-src.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/heatmap.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet-heatmap.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet-ant-path.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet.groupedlayercontrol.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/MovingMarker.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet.markercluster-src.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/leaflet.awesome-markers.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/lib/LeafletPlayback.js"></script>
+
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/lmb_config.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/app/traceplay_control.js"></script>
+    <script type="text/javascript" src="../js/components/gisWidget/lmb/js/app/dlg.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/app/taishi_map.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/app/taishi_chart.js"></script>
+	<script type="text/javascript" src="../js/components/gisWidget/lmb/js/app/lmb_taishi.js"></script>
+</body>
+
+</html>

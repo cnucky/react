@@ -1,0 +1,127 @@
+<script type="text/javascript">
+window._pageConfig = {
+    page: '/renlifang/search.html'
+}
+</script>
+<style type="text/css">
+.nav >li >a{
+    color:#3498db;
+}
+.dt-panelfooter{
+    background-color:white;
+    padding: 0;
+}
+</style>
+<div class="tab-block mb10">
+    <ul class="nav tabs-left tabs-border">
+        <li class="active">
+            <a href="#relation-qq" id="relation-tab-qq" data-toggle="tab" class="relation-qq"><i class="fa fa-qq text-purple pr5"></i>QQ</a>
+        </li>
+        <li>
+            <a href="#relation-social" id="relation-tab-social" data-toggle="tab" class="relation-social"><i class="fa fa-link text-purple pr5"></i>通讯录</a>
+        </li>
+        <li>
+            <a href="#phone-link" id="phone-tab-link" data-toggle="tab" class="phone-link"><i class="fa fa-phone text-purple pr5"></i>电话通联</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="relation-qq" class="tab-pane fade active in relation-qq">
+            <div style="height:560px">
+                <div class="p10 col-xs-6">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <input class="form-control" name="search" placeholder="过滤...">
+                        </div>
+                        <div class="col-xs-4">
+                            <button type="button" class="btn btn-primary" id="btnResetSearch">清除
+                                <span id="matches"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p10 col-xs-12" id="relation-qq-container" style="height:100%"></div>
+                </div>
+                <div class="col-xs-6" style="padding-left:20px;border-left:1px solid #DDD;height:100%;display:none;" id="relation-qqgroup-detail">
+                </div>
+            </div>
+        </div>
+        <div id="relation-social" class="tab-pane fade relation-social">
+            <div style="height:560px">
+                <table id="social-table" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>电话</th>
+                            <th>城市</th>
+                        </tr>
+                    </thead>
+                    <tbody id="social-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="phone-link" class="tab-pane fade phone-link">
+            <div style="height:560px">
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col-md-2">
+                            <select id="phone-multiselect" class="multiselect2" multiple="multiple">
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group pull-right date" id="phone-link-range">
+                                <div class="input-group " id="datetime_period">
+                                    <input style="padding-top: 0px;padding-bottom: 0px;height:40px; " type="text" class="form-control datetime_input" id="date-range-begin"　>
+                                    <span class="input-group-addon" style="padding-top: 0px;padding-bottom: 0px;height:40px;">到</span>
+                                    <input style="padding-top: 0px;padding-bottom: 0px;height:40px;" type="text" class="form-control datetime_input" id="date-range-end">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" id="phone-btn-go" class="btn btn-primary">
+                                <span>确定</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="alt short mh10">
+                <div class="col-md-12">
+                    <div class="col-md-1 pn">
+                        <ul id="tabs-info" class="nav tabs-left" style="">
+                        </ul>
+                    </div>
+                    <div id="table-info" class="col-md-10 pn">
+                        <div class="col-md-12">
+                            <div class="panel panel-visible" id="spy2">
+                                <!-- <div class="panel-heading">
+                                    <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                        <span style="color: #70ca63" class="glyphicon glyphicon-tasks"></span>电话通联
+                                    </div>
+                                </div> -->
+                                <div class="panel-body pn of-x-a">
+                                    <table class="table" id="loadPhoneInfoTable" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left;color: #3498db;font-weight: bold">手机号</th>
+                                                <th style="text-align: left;color: #3498db;font-weight: bold">登记用户</th>
+                                                <th style="text-align: left;color: #3498db;font-weight: bold">归属地</th>
+                                                <th style="text-align: left;color: #3498db;font-weight: bold">关系强度（频次）</th>
+                                                <th style="text-align: left;color: #3498db;font-weight: bold">手机卡类型</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 pn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1749 @@
+
+{
+  "code": 0,
+  "data": {
+    "attachment": [
+      {
+        "entityType": 1,
+        "files": [
+          {
+            "fileName": "Koala_001.tif",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "airplane_nj_001.jpg",
+            "source": [
+              "机场安检照片"
+            ]
+          }
+        ],
+        "entityId": "210204199103292197"
+      },
+      {
+        "entityType": 2,
+        "files": [
+          {
+            "fileName": "Koala_surprise_001.png",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "Tulips_absdf.bmp",
+            "source": [
+              "机场安检照片"
+            ]
+          },
+          {
+            "fileName": "airplane_jl_001.jpg",
+            "source": [
+              "机场安检照片"
+            ]
+          }
+        ],
+        "entityId": "E41428076"
+      }
+    ],
+    "summary": [
+      {
+        "groupName": "概要信息",
+        "type": "newData",
+        "children": [
+          {
+            "name": "ID",
+            "caption": "对象ID",
+            "valueList": [
+              {
+                "value": "1867"
+              }
+            ]
+          },
+          {
+            "name": "ENEMY_OBJECT_STATE",
+            "caption": "敌情标识",
+            "valueList": [
+              {
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "name": "SPY_OBJECT_STATE",
+            "caption": "对象标识",
+            "valueList": [
+              {
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "name": "dept_from",
+            "caption": "来源单位",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "status",
+            "caption": "当前状态",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "ARMY_STATE",
+            "caption": "兵役状况",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "caption": "身高",
+            "valueList": [
+              {
+                "value": "170"
+              }
+            ]
+          },
+          {
+            "name": "IDENTITY_JOB",
+            "caption": "身份职业",
+            "valueList": [
+              {
+                "value": "自由职业者"
+              }
+            ]
+          },
+          {
+            "name": "EDUCATION",
+            "caption": "学历",
+            "valueList": [
+              {
+                "value": "小学"
+              }
+            ]
+          },
+          {
+            "name": "RELIGION",
+            "caption": "宗教",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "NATION",
+            "caption": "民族",
+            "valueList": [
+              {
+                "value": "维吾尔族"
+              }
+            ]
+          },
+          {
+            "name": "BIRTH_ADDRESS",
+            "caption": "出生地",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "SEX",
+            "caption": "性别",
+            "valueList": [
+              {
+                "value": "女性"
+              }
+            ]
+          },
+          {
+            "name": "OBJECT_BIRTHDAY",
+            "caption": "出生年月",
+            "valueList": [
+              {
+                "value": "1975/06/10 00:00:00"
+              }
+            ]
+          },
+          {
+            "name": "NATIVE",
+            "caption": "籍贯",
+            "valueList": [
+              {
+                "value": "新疆阿勒泰地区"
+              }
+            ]
+          },
+          {
+            "name": "COUNTRY",
+            "caption": "国籍",
+            "valueList": [
+              {
+                "value": "中华人民共和国"
+              }
+            ]
+          },
+          {
+            "name": "FOREIGN_NAME",
+            "caption": "外文名",
+            "valueList": [
+              {
+                "value": "KIT"
+              }
+            ]
+          },
+          {
+            "name": "OTHER_NAME",
+            "caption": "别名",
+            "valueList": [
+              {
+                "value": "迪热"
+              }
+            ]
+          },
+          {
+            "name": "NAME",
+            "caption": "姓名",
+            "valueList": [
+              {
+                "value": "迪热买买提"
+              }
+            ]
+          },
+          {
+            "name": "business_type",
+            "caption": "业务方向",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "shared_dept",
+            "caption": "共享部门",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "handle_dept",
+            "caption": "经办部门",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "OBJECT_PHOTO",
+            "caption": "头像",
+            "valueList": [
+              {
+                "value": ""
+              }
+            ]
+          },
+          {
+            "name": "REMARK",
+            "caption": "备注",
+            "valueList": [
+              {
+                "value": "这是一个备注，这是一个备注，这是一个备注，这是一个备注，这是一个备注，这是一个备注，这是一个备注，这是一个备注，这是一个备注，"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "个人履历",
+        "children": [
+          {
+            "properties": [
+              {
+                "name": "DATA_SOURCE",
+                "caption": "数据来源",
+                "valueList": [
+                  ""
+                ]
+              },
+              {
+                "name": "COUNTRY_NAME",
+                "caption": "单位/组织名称",
+                "valueList": [
+                  "新疆伊犁囍泰食品厂"
+                ]
+              },
+              {
+                "name": "BEGIN_TIME",
+                "caption": "开始日期",
+                "valueList": [
+                  "2016-08-30"
+                ]
+              },
+              {
+                "name": "END_TIME",
+                "caption": "结束日期",
+                "valueList": [
+                  "2017-05-31"
+                ]
+              },
+              {
+                "name": "DUTY",
+                "caption": "身份/职务",
+                "valueList": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "properties": [
+              {
+                "name": "DATA_SOURCE",
+                "caption": "数据来源",
+                "valueList": [
+                  ""
+                ]
+              },
+              {
+                "name": "COUNTRY_NAME",
+                "caption": "单位/组织名称",
+                "valueList": [
+                  "新疆洋洋纺织厂"
+                ]
+              },
+              {
+                "name": "BEGIN_TIME",
+                "caption": "开始日期",
+                "valueList": [
+                  "2012-01-09"
+                ]
+              },
+              {
+                "name": "END_TIME",
+                "caption": "结束日期",
+                "valueList": [
+                  "2014-08-20"
+                ]
+              },
+              {
+                "name": "DUTY",
+                "caption": "身份/职务",
+                "valueList": [
+                  "职工"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "社会组织",
+        "children": [
+          {
+            "properties": [
+              {
+                "name": "ORG_NAME",
+                "caption": "组织名称",
+                "valueList": [
+                  "东伊运"
+                ]
+              },
+              {
+                "name": "BEGIN_DATE",
+                "caption": "开始日期",
+                "valueList": [
+                  "1991-08-21"
+                ]
+              },
+              {
+                "name": "END_DATE",
+                "caption": "结束日期",
+                "valueList": [
+                  "1999-12-27"
+                ]
+              },
+              {
+                "name": "DUTY",
+                "caption": "身份职务",
+                "valueList": [
+                  "参与者"
+                ]
+              }
+            ]
+          },
+          {
+            "properties": [
+              {
+                "name": "ORG_NAME",
+                "caption": "组织名称",
+                "valueList": [
+                  "ISIS"
+                ]
+              },
+              {
+                "name": "BEGIN_DATE",
+                "caption": "开始日期",
+                "valueList": [
+                  "2014-02-05"
+                ]
+              },
+              {
+                "name": "END_DATE",
+                "caption": "结束日期",
+                "valueList": [
+                  "2017-05-31"
+                ]
+              },
+              {
+                "name": "DUTY",
+                "caption": "身份职务",
+                "valueList": [
+                  "头目"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "参与事件",
+        "children": [
+          {
+            "properties": [
+              {
+                "name": "EVENT_NAME",
+                "caption": "事件名称",
+                "valueList": [
+                  "75爆恐"
+                ]
+              },
+              {
+                "name": "EVENT_DATE",
+                "caption": "发生日期",
+                "valueList": [
+                  "2010-07-05"
+                ]
+              },
+              {
+                "name": "COUNTRY",
+                "caption": "国家地区",
+                "valueList": [
+                  "中华人民共和国"
+                ]
+              },
+              {
+                "name": "CITY",
+                "caption": "城市",
+                "valueList": [
+                  "伊犁"
+                ]
+              },
+              {
+                "name": "ROLE",
+                "caption": "角色",
+                "valueList": [
+                  "参与者"
+                ]
+              }
+            ]
+          },
+          {
+            "properties": [
+              {
+                "name": "EVENT_NAME",
+                "caption": "事件名称",
+                "valueList": [
+                  "923暴动"
+                ]
+              },
+              {
+                "name": "EVENT_DATE",
+                "caption": "发生日期",
+                "valueList": [
+                  "2014-01-29"
+                ]
+              },
+              {
+                "name": "COUNTRY",
+                "caption": "国家地区",
+                "valueList": [
+                  "中华人民共和国"
+                ]
+              },
+              {
+                "name": "CITY",
+                "caption": "城市",
+                "valueList": [
+                  "拉萨"
+                ]
+              },
+              {
+                "name": "ROLE",
+                "caption": "角色",
+                "valueList": [
+                  "参与者"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "address": [],
+    "information": [
+      {
+        "groupName": "实体拓扑",
+        "children": [
+          {
+              "edges": [{
+                  "fromNodeId": "15298836424",
+                  "fromNodeType": 5,
+                  "linkedTitle": "关联",
+                  "linkedType": 1,
+                  "toNodeId": "320582199110253621",
+                  "toNodeType": 1
+              }, {
+                  "fromNodeId": "15601578201",
+                  "fromNodeType": 5,
+                  "linkedTitle": "社会关系",
+                  "linkedType": 9,
+                  "toNodeId": "342181383",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "417876446",
+                  "fromNodeType": 11,
+                  "linkedTitle": "社会关系",
+                  "linkedType": 9,
+                  "toNodeId": "15298836424",
+                  "toNodeType": 5
+              }, {
+                  "fromNodeId": "346348908",
+                  "fromNodeType": 11,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "417876446",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "15298836152",
+                  "fromNodeType": 5,
+                  "linkedTitle": "关联",
+                  "linkedType": 1,
+                  "toNodeId": "321284199011301218",
+                  "toNodeType": 1
+              }, {
+                  "fromNodeId": "15298836152",
+                  "fromNodeType": 5,
+                  "linkedTitle": "社会关系",
+                  "linkedType": 9,
+                  "toNodeId": "342181383",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "15298836152",
+                  "fromNodeType": 5,
+                  "linkedTitle": "社会关系",
+                  "linkedType": 9,
+                  "toNodeId": "364489536",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "321284199011301218",
+                  "fromNodeType": 1,
+                  "linkedTitle": "关联",
+                  "linkedType": 1,
+                  "toNodeId": "15601578201",
+                  "toNodeType": 5
+              }, {
+                  "fromNodeId": "364489536",
+                  "fromNodeType": 11,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "417876446",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "342181383",
+                  "fromNodeType": 11,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "346348908",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "342181383",
+                  "fromNodeType": 11,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "417876446",
+                  "toNodeType": 11
+              }, {
+                  "fromNodeId": "417876446",
+                  "fromNodeType": 11,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "320582199110253625",
+                  "toNodeType": 1
+              }, {
+                  "fromNodeId": "15601578201",
+                  "fromNodeType": 5,
+                  "linkedTitle": "好友",
+                  "linkedType": 8,
+                  "toNodeId": "320582199110253626",
+                  "toNodeType": 1
+              }],
+              "nodes": [{
+                  "nextLevelNodes": [],
+                  "nextNodes": [{
+                      "linkType": 1,
+                      "nodeId": "320582199110253621",
+                      "nodeType": 1
+                  }],
+                  "nodeId": "15298836424",
+                  "nodeTitle": "手机(15298836424)",
+                  "nodeType": 5
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 9,
+                      "nodeId": "342181383",
+                      "nodeType": 11
+                  }],
+                  "nextNodes": [],
+                  "nodeId": "15601578201",
+                  "nodeTitle": "手机(15601578201)",
+                  "nodeType": 5
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 9,
+                      "nodeId": "15298836424",
+                      "nodeType": 5
+                  }],
+                  "nextNodes": [],
+                  "nodeId": "417876446",
+                  "nodeTitle": "QQ(417876446)",
+                  "nodeType": 11
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 8,
+                      "nodeId": "417876446",
+                      "nodeType": 11
+                  }],
+                  "nextNodes": [],
+                  "nodeId": "346348908",
+                  "nodeTitle": "QQ(346348908)",
+                  "nodeType": 11
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 9,
+                      "nodeId": "342181383",
+                      "nodeType": 11
+                  }, {
+                      "linkType": 9,
+                      "nodeId": "364489536",
+                      "nodeType": 11
+                  }],
+                  "nextNodes": [{
+                      "linkType": 1,
+                      "nodeId": "321284199011301218",
+                      "nodeType": 1
+                  }],
+                  "nodeId": "15298836152",
+                  "nodeTitle": "手机(15298836152)",
+                  "nodeType": 5
+              }, {
+                  "nextLevelNodes": [],
+                  "nextNodes": [{
+                      "linkType": 1,
+                      "nodeId": "15601578201",
+                      "nodeType": 5
+                  }],
+                  "nodeId": "321284199011301218",
+                  "nodeTitle": "身份(321284199011301218)",
+                  "nodeType": 1
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 8,
+                      "nodeId": "417876446",
+                      "nodeType": 11
+                  }],
+                  "nextNodes": [],
+                  "nodeId": "364489536",
+                  "nodeTitle": "QQ(364489536)",
+                  "nodeType": 11
+              }, {
+                  "nextLevelNodes": [],
+                  "nextNodes": [],
+                  "nodeId": "320582199110253621",
+                  "nodeTitle": "身份(320582199110253621)",
+                  "nodeType": 1
+              }, {
+                  "nextLevelNodes": [{
+                      "linkType": 8,
+                      "nodeId": "346348908",
+                      "nodeType": 11
+                  }, {
+                      "linkType": 8,
+                      "nodeId": "417876446",
+                      "nodeType": 11
+                  }],
+                  "nextNodes": [],
+                  "nodeId": "342181383",
+                  "nodeTitle": "QQ(342181383)",
+                  "nodeType": 11
+              }, {
+                  "nextLevelNodes": [],
+                  "nextNodes": [],
+                  "nodeId": "320582199110253625",
+                  "nodeTitle": "身份(320582199110253625)",
+                  "nodeType": 1
+              }, {
+                  "nextLevelNodes": [],
+                  "nextNodes": [],
+                  "nodeId": "320582199110253626",
+                  "nodeTitle": "身份(320582199110253626)",
+                  "nodeType": 1
+              }]
+          }
+        ]
+      },
+      {
+        "groupName": "身份信息",
+        "children": [
+          {
+            "itemName": "身份",
+            "itemKey": "320481198705120055",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 798.7307916344245,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 79,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 33,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      },
+                      {
+                        "count": 8,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "出生国家",
+                "propertyId": 11,
+                "key": "BIRTH_COUNTRY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 360.78643821613974,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 79,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "男"
+                  }
+                ],
+                "name": "性别",
+                "propertyId": 12,
+                "key": "GENDER"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "未服兵役"
+                  }
+                ],
+                "name": "兵役状况",
+                "propertyId": 14,
+                "key": "MILITARY_STATUS"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "研究生"
+                  }
+                ],
+                "name": "学历",
+                "propertyId": 17,
+                "key": "EDUCATION"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 71.4,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "南京市鼓楼区广州路213－1号"
+                  },
+                  {
+                    "intensity": 40,
+                    "confidence": 28.6,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "南京市新庄路48号7幢3号门301室"
+                  }
+                ],
+                "name": "地址",
+                "propertyId": 18,
+                "key": "ADDRESS"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 260.78643821613974,
+                    "confidence": 44.4,
+                    "source": [
+                      {
+                        "count": 79,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      }
+                    ],
+                    "value": "TANGSIYAN"
+                  },
+                  {
+                    "intensity": 226.66625458900987,
+                    "confidence": 38.6,
+                    "source": [
+                      {
+                        "count": 33,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "tangsiyan"
+                  },
+                  {
+                    "intensity": 100,
+                    "confidence": 17,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "shangsaiyan"
+                  }
+                ],
+                "name": "英文姓名",
+                "propertyId": 2,
+                "key": "ENAME"
+              },
+              {
+                "jumpType": 1,
+                "valueList": [
+                  {
+                    "intensity": 798.7307916344245,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 79,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 33,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      },
+                      {
+                        "count": 8,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "320481198705120055"
+                  }
+                ],
+                "name": "身份证",
+                "propertyId": 20,
+                "key": "SFZ"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 758.7307916344246,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 8,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 79,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 33,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "1987-05-12"
+                  }
+                ],
+                "name": "出生日期",
+                "propertyId": 3,
+                "key": "BIRTHDAY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 487.6746434121892,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 7,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 29,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "国籍",
+                "propertyId": 4,
+                "key": "NATIONALITY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "软件工程师"
+                  }
+                ],
+                "name": "职业",
+                "propertyId": 55,
+                "key": "JOB"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "汉族"
+                  }
+                ],
+                "name": "民族",
+                "propertyId": 6,
+                "key": "NATION"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "175"
+                  }
+                ],
+                "name": "身高",
+                "propertyId": 7,
+                "key": "HEIGHT"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 100,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "未婚"
+                  }
+                ],
+                "name": "婚姻状况",
+                "propertyId": 9,
+                "key": "MARRIAGE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "手机信息",
+        "children": [
+          {
+            "itemName": "手机",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 32,
+                    "confidence": 33.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "郭红建"
+                  },
+                  {
+                    "intensity": 32,
+                    "confidence": 33.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "罗娟"
+                  },
+                  {
+                    "intensity": 32,
+                    "confidence": 33.3,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 32,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "南京市新庄路48号7幢3号门301室"
+                  },
+                  {
+                    "intensity": 32,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "南京市浦口区点将台路40号"
+                  }
+                ],
+                "name": "地址",
+                "propertyId": 18,
+                "key": "ADDRESS"
+              },
+              {
+                "jumpType": 5,
+                "valueList": [
+                  {
+                    "intensity": 47.2678801510292,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "13222735090"
+                  }
+                ],
+                "name": "手机号码",
+                "propertyId": 24,
+                "key": "USER_MSISDN"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 47.2678801510292,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 3,
+                        "name": "电信用户登记数据",
+                        "typeId": "9004"
+                      }
+                    ],
+                    "value": "0025"
+                  }
+                ],
+                "name": "归属区号",
+                "propertyId": 28,
+                "key": "BELONG_AREA_CODE"
+              }
+            ]
+          },
+          {
+            "itemName": "手机",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 16.1655707406329,
+                    "confidence": 40.2,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      },
+                      {
+                        "count": 11,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 19.9,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "18951656144"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 19.9,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "汤思妍"
+                  },
+                  {
+                    "intensity": 8,
+                    "confidence": 19.9,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      }
+                    ],
+                    "value": "汤思燕"
+                  }
+                ],
+                "name": "姓名",
+                "propertyId": 1,
+                "key": "CNAME"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 18.40823996531185,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 20,
+                        "name": "test",
+                        "typeId": "501"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ],
+                "name": "归属国家",
+                "propertyId": 116,
+                "key": "BELONG_COUNTRY"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 7.612359947967774,
+                    "confidence": 45.3,
+                    "source": [
+                      {
+                        "count": 8,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "浦江路23号"
+                  },
+                  {
+                    "intensity": 5.204119982655925,
+                    "confidence": 30.9,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "集庆门大街218号"
+                  },
+                  {
+                    "intensity": 4,
+                    "confidence": 23.8,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "建邺区江东商业文化旅游中心区集庆门大街218号万达西地二街区10栋1单元504"
+                  }
+                ],
+                "name": "地址",
+                "propertyId": 18,
+                "key": "ADDRESS"
+              },
+              {
+                "jumpType": 5,
+                "valueList": [
+                  {
+                    "intensity": 57.43247067739491,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 4,
+                        "name": "全国互联网基础数据",
+                        "typeId": "9008"
+                      },
+                      {
+                        "count": 18,
+                        "name": "HTTP综合业务",
+                        "typeId": "713"
+                      },
+                      {
+                        "count": 11,
+                        "name": "非邮快递运单数据_old",
+                        "typeId": "26"
+                      },
+                      {
+                        "count": 20,
+                        "name": "test",
+                        "typeId": "501"
+                      }
+                    ],
+                    "value": "18951656144"
+                  }
+                ],
+                "name": "手机号码",
+                "propertyId": 24,
+                "key": "USER_MSISDN"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 13.59176003468815,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "test",
+                        "typeId": "501"
+                      }
+                    ],
+                    "value": "中国电信"
+                  },
+                  {
+                    "intensity": 13.59176003468815,
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "test",
+                        "typeId": "501"
+                      }
+                    ],
+                    "value": "中国联通"
+                  }
+                ],
+                "name": "运营商",
+                "propertyId": 27,
+                "key": "CARRIER"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 18.40823996531185,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 20,
+                        "name": "test",
+                        "typeId": "501"
+                      }
+                    ],
+                    "value": "江苏省南京市"
+                  }
+                ],
+                "name": "归属地",
+                "propertyId": 29,
+                "key": "BELONG_AREA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "银行账户",
+        "children": [
+          {
+            "itemName": "银行账户",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 8,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "国内国际汇款数据_old",
+                        "typeId": "21"
+                      }
+                    ],
+                    "value": "交通银行"
+                  }
+                ],
+                "name": "开户银行",
+                "propertyId": 33,
+                "key": "BANK"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 8,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "国内国际汇款数据_old",
+                        "typeId": "21"
+                      }
+                    ],
+                    "value": "6222620210002185527"
+                  }
+                ],
+                "name": "银行账号",
+                "propertyId": 34,
+                "key": "BANK_ACCOUNT"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "groupName": "网络账号",
+        "children": [
+          {
+            "itemName": "支付宝",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 17,
+                "valueList": [
+                  {
+                    "intensity": 8,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "淘宝",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 16,
+                "valueList": [
+                  {
+                    "intensity": 6.400000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "heavenpasser"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "QQ",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 11,
+                "valueList": [
+                  {
+                    "intensity": 19.11533909930397,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 97,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "455071933"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              },
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 18.682099791206877,
+                    "confidence": 32.8,
+                    "source": [
+                      {
+                        "count": 83,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "intensity": 11.38016800245532,
+                    "confidence": 20,
+                    "source": [
+                      {
+                        "count": 6,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "HK"
+                  },
+                  {
+                    "intensity": 10.253183944498963,
+                    "confidence": 18,
+                    "source": [
+                      {
+                        "count": 4,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤八"
+                  },
+                  {
+                    "intensity": 8.326591972249481,
+                    "confidence": 14.6,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hk"
+                  },
+                  {
+                    "intensity": 8.326591972249481,
+                    "confidence": 14.6,
+                    "source": [
+                      {
+                        "count": 2,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "HellKnight"
+                  }
+                ],
+                "name": "昵称",
+                "propertyId": 48,
+                "key": "NET_NICKNAME"
+              }
+            ]
+          },
+          {
+            "itemName": "电子邮箱",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 12,
+                "valueList": [
+                  {
+                    "intensity": 5.120000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ],
+                "name": "账号",
+                "propertyId": 43,
+                "key": "NET_ACCOUNT"
+              }
+            ]
+          },
+          {
+            "itemName": "IP",
+            "itemKey": "",
+            "properties": [
+              {
+                "jumpType": 0,
+                "valueList": [
+                  {
+                    "intensity": 5.120000000000001,
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "电商数据",
+                        "typeId": "9005"
+                      }
+                    ],
+                    "value": "121.229.2.81"
+                  }
+                ],
+                "name": "登陆IP",
+                "propertyId": 46,
+                "key": "LOGIN_IP"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "personId": 0,
+    "keyValueMap": [
+      {
+        "entityType": 5,
+        "name": "MSISDN",
+        "caption": "移动号码",
+        "values": [
+          "18951656144",
+          "15758596663"
+        ]
+      },
+      {
+        "entityType": 1,
+        "name": "IDCARD",
+        "caption": "居民身份证",
+        "values": [
+          "320106198907159999"
+        ]
+      },
+      {
+        "entityType": 11,
+        "name": "QQACCOUNT",
+        "caption": "QQ号",
+        "values": [
+          "8956232"
+        ]
+      }
+    ],
+    "tags": [],
+    "focusLevel": ["普通关注"]
+  }
+}
+

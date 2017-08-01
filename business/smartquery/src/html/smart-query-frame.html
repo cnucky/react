@@ -1,0 +1,608 @@
+<!-- shim styles -->
+<title id='Description'>智能查询</title>
+<!-- add by zhangu -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+<!-- <link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui.css"> -->
+<!-- the end -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.arctic.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jqx.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/setPositionModule/setPositionModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/setLayerModule/setLayerModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/searchPOIModule/searchPOIModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/enclosureManageModule/enclosureManageModuleCSS.css" />
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MyMarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.css">
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css" />
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css" />
+<link rel="stylesheet" type="text/css" href="${root}/datafence/css/gis/gis-style.css">
+
+<style type="text/css">
+#map {
+    height: 100%;
+    min-height: 190px;
+}
+
+.functionPanel-out {
+    position: relative;
+    width: 315px;
+    float: right;
+    background-color: #ffffff;
+}
+
+.leaflet-mouse-marker {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+.leaflet-edit-move {
+    cursor: move;
+}
+
+.leaflet-draw-guide-dash {
+    font-size: 1%;
+    opacity: 0.6;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.measuring-label-tooltip .leaflet-popup-content-wrapper {
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    padding: 1px;
+    text-align: center;
+}
+
+.edit-look {
+    stroke-dasharray: 2, 10;
+}
+
+#mapToolBar [data-toggle="dropdown"] {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 29px;
+}
+
+#mapToolBar li {
+    height: 20px;
+}
+
+#mapToolBar a {
+    height: 20px;
+}
+
+#mapToolBar label {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 20px;
+    min-height: 20px;
+}
+</style>
+<style type="text/css">
+#panel-menu{
+    padding-left: 20px;
+}
+.admin-form .checkbox {
+    border: none;
+    background: none;
+}
+
+.admin-form .radio {
+    border: none;
+    background: none;
+}
+
+#statistic-div {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0px;
+    height: 320px;
+    display: none;
+}
+
+.float-button-left {
+    position: absolute;
+    right: 30px;
+    display: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.float-button-right {
+    position: absolute;
+    right: 0px;
+    display: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+#btn-create-statistic {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    ;
+    right: 12px;
+    top: 0px;
+}
+
+.selected-line {
+    background-color: rgba(12, 136, 243, 0.42);
+}
+
+#statisticList > li > a:hover,
+#statisticList > li > a:focus {
+    text-decoration: none;
+    background-color: rgba(12, 136, 243, 0.42);
+}
+
+.font-datatype {
+    color: orange;
+    text-align: center;
+}
+
+
+/*ul.fancytree-container {
+    min-height: 200px;
+    border: none;
+}*/
+
+#search-input:hover {
+    border-color: #888;
+}
+
+.jqx-filename-cell {
+    text-decoration: underline;
+    color: #3498db;
+    cursor: pointer;
+}
+
+ul.nav-tabs {
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+
+ul.nav-tabs li {
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+ul.nav-tabs li a {
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+
+ul.nav-tabs li.active a,
+ul.nav-tabs li.active a:hover {
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+
+ul.nav-tabs li:last-child a {
+    border-radius: 0 0 4px 4px;
+}
+
+ul.nav-tabs.affix {
+    top: 30px;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+/* #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} */
+
+.toolbox {
+    margin-top: 0px;
+    z-index: 1000;
+    position: fixed;
+    right: -200px;
+    width: 200px;
+    -webkit-transition: right 0.1s ease-in-out;
+    -moz-transition: right 0.1s ease-in-out;
+    transition: right 0.1s ease-in-out;
+}
+
+#mapContainer * {
+    box-sizing: content-box;
+}
+
+#mapContainer img {
+    vertical-align: baseline;
+}
+
+::-webkit-scrollbar-track {
+    /*border-radius:4px;*/
+}
+
+::-webkit-scrollbar-track-piece {
+    /*-webkit-border-radius:4px;*/
+}
+
+::-webkit-scrollbar-track-piece:hover {}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    border-radius: 0px;
+    background-color: #f5f6f9;
+    border: solid 1px #eff1f5;
+}
+
+::-webkit-scrollbar:hover {
+    background: #DCE1E4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d8dce5;
+    /*border:solid 1px #d8dce5;
+    border-radius:4px;*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9198a6;
+    border-color: #9198a6;
+}
+
+::-webkit-scrollbar-arrow {
+    color: #F00;
+    background: #0F0;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    width: 8px;
+    height: 10px;
+    /*border-radius:4px;*/
+    border: 1px solid #B5BBBF;
+    display: none;
+}
+
+::-webkit-scrollbar-button:hover {
+    border-color: #5F6366;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+.input-group {
+    height: 32px;
+}
+
+.btn-group {
+    height: 32px;
+}
+
+.btn-group .btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 32px;
+}
+#queryform .multiselect-selected-text{
+    color: #ffffff;
+}
+.input-group span {
+    color: #232323;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 30px;
+}
+
+.input-group input.form-control {
+    height: 32px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid #aaa;
+}
+
+.bootstrap-tagsinput {
+    min-height: 32px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 1px solid #aaa;
+}
+
+.bootstrap-tagsinput .tag {
+    line-height: 20px;
+    padding: 3px 5px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid #3498db 1px;
+    outline: 0;
+}
+
+/*zhangu delete css*/
+
+/*#modal-form.popup-basic{
+    max-width: 550px;
+}*/
+
+.readCont .panel-tabs > li > a {
+    padding: 2px 14px;
+}
+
+.readCont .panel-tabs > li > a {
+    font-size: 13px;
+}
+
+#close-span {
+    color: #3498db;
+    font-size: 18px;
+}
+
+.table-col-1 {
+    min-width: 140px;
+}
+
+.table-col-2 {
+    min-width: 200px;
+}
+
+span.fancytree-node.nv-data .fancytree-action-icon {
+    visibility: hidden;
+}
+
+span.fancytree-node:hover .fancytree-action-icon {
+    visibility: visible;
+}
+
+span.fancytree-action-icon {
+    cursor: pointer;
+    display: inline;
+}
+
+span.fancytree-action-icon:after{
+    content: '';
+    width: 17px;
+    user-select:none;
+}
+
+#dir-tree-panel ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding: 15px;
+    border: none;
+}
+
+div#dir-tree-panel {
+    padding: 0;
+}
+#left-panel-toggle {
+    position: absolute;
+    top: 107px;
+    z-index: 10;
+    pointer-events: auto;
+    cursor: default;
+}
+#left-panel-toggle:hover {
+    background-color: white;
+    border-right: 1px solid #DDD;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+#winpop{
+    width:180px;
+    height:20px;
+    /*position: fixed;
+    right: 0px;
+    bottom: 0px;*/
+    border: 1px solid #666;
+    margin:0px;
+    padding: 1px;
+    overflow: hidden;
+    color: #333;
+    margin-left: 20px;
+    /*display: none;*/
+}
+
+.bootstrap-tagsinput{
+    max-height: 65px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+.bootstrap-tagsinput::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+#wrapBox .panel-tabs.panel-tabs-border > li.active > a{
+    border-bottom: none;
+    padding: 10px 20px;
+}
+
+/*common*/
+.readCont{background:#fff; font-size: 13px; margin-bottom: 0; min-width: 313px; }
+.readCont .text-gray{ color: #666;}
+.readCont .panel-body{ padding:5px 2px;}
+.readCont .panel-heading span.pull-right a.ban{ cursor: default; text-decoration: none; color: #ccc;}
+.readCont .panel-tabs > li > a{  font-size: 13px; }
+.readCont .panel-tabs > li > a{ padding: 10px 20px;}
+.readCont .mark{ color: #f00 !important; font-weight: bold;}
+.readCont td,.readCont div{ word-break:break-all; }
+.readCont pre { margin: 0;overflow: hidden; white-space: pre-wrap;border-radius:2px; background-color: #f9f9f9; font-size: 13px; color: #666;}
+#tplContBox{padding:0 0 0 5px;}
+#tplContBox > .content{ overflow: auto; width: 100%; height: 100%; }
+#tplContBox > .content .cont h5 a{ cursor: pointer;}
+#wrapBox,#ifm{ color: #666;}
+#wrapBox .jqx-widget-content{ border: none;}
+div[role=row] div[role=gridcell]:first-child{  cursor: pointer;}
+#cachestate{ line-height: 30px;}
+#datatable9 > tbody > #contBox > td{ padding: 0;}
+.jqx-fill-state-pressed{ background: #1ca8dd;}
+iframe.diyScroll{ min-height: 400px; width: 100%; height: 100%; border: none; overflow: scroll; background: none;}
+
+
+/*工具栏*/
+#warpBoxTools{ display: none; float:left; border-bottom: 1px solid #d0d0d0;  padding:0 0 5px 0; width: 100%;}
+.readCont #warpBoxTools ul li{ font-size: 12px; }
+.readCont #warpBoxTools button{ min-width: 76px; padding: 5px; }
+.readCont .tab-pane ul.code a{padding: 3px 10px;}
+.readCont .tab-pane ul.code a.a{ background-color:#fed22f; }
+#titleEnCode,#contEnCode{ height: 300px;  overflow:auto; width: auto;}
+#titleEnCode li,#contEnCode li,#fontFamily li a,#viewType li a{ cursor: pointer;}
+#titleEnCode li:hover,#contEnCode li:hover,#fontFamily li:hover,#viewType li:hover{ background-color:#fafafa; }
+
+/*解析http*/
+#http-cont table{ font-size: 13px;}
+#http-page .cont{ border-bottom: 1px #ccc dashed; padding-bottom: 10px;}
+#http-cont .cont > table{ width: 100%; display: none;}
+#http-cont td{ padding: 3px 5px;}
+#http-cont tr td:nth-child(1){word-break:normal;}
+#http-cont tr td:nth-child(2){word-break:break-all; white-space:normal;}
+#http-cont .contBox{ display: none; width: 100%;}
+#http-cont #reqBody .contBox{ display: block;}
+#http-cont .contBox>.IMG img{ width: 100%; margin-bottom: 10px;}
+
+/*解析邮件*/
+
+
+/*解析聊天*/
+#chat-cont dl{ clear: both;}
+#chat-cont dl dt{ width: 60px; text-align:center; }
+#chat-cont dl dd{ margin-left: 60px;}
+#chat-cont dl dd a.pull-right{ cursor: pointer;}
+#chat-cont .cont h5 a{ cursor: pointer;}
+#chat-cont .cont{ border-bottom: 1px #ccc dashed; padding-bottom: 10px; overflow: hidden;}
+.dl-horizontal.out dt{ float: right; margin-left: 0;}
+.dl-horizontal dd{ margin:0 60px;}
+#chat-cont dd.msg{ position: relative; display: block; padding: 5px; background-color: #fafafa;}
+#chat-cont dd.msg span.arrow{ display: block; position: absolute; top:5px;
+    border-top: 8px solid transparent; border-bottom: 8px solid transparent; width: 0; height: 0;}
+#chat-cont .in dd.msg{ border-left: 2px solid #F3565D; }
+#chat-cont .in span.arrow{left:-8px; border-right: 8px solid #F3565D}
+#chat-cont .out dd.msg{ border-right: 2px solid #1BBC9B;}
+#chat-cont .out span.arrow{right:-8px; border-left: 8px solid #1BBC9B; }
+#chat-cont .chatInfos{ clear: both;}
+#chat-cont .userInfo{ display: none; background-color: #fefefe; overflow: hidden; margin: 5px;}
+#chatCont p{ margin: 0; padding: 0;}
+#chatCont .userInfo .col-md-5:last-child{ text-align: right;}
+#chat-cont .in .time b{ color:#F3565D ; font-weight: normal;}
+#chat-cont .out .time b{ color:#1BBC9B ;font-weight: normal;}
+#chat-cont .otherAudio{ display: none;}
+#chat-page #wordView p{ display: inline; margin: 0 5px;}
+#chat-page .text-host{ color: #F3565D;}
+#chat-page .text-guest{ color: #1BBC9B;}
+#chat-page .userInfo .col-md-2{ text-align: center; vertical-align: middle;}
+
+/*解析通讯录*/
+#addr-cont ul{ border-top:1px dotted #ccc; padding-top: 10px; margin-top:10px; overflow: hidden; }
+#addr-cont li{ list-style: none;}
+/*.bootstrap-maxlength.maxlength-right.label{
+    display: none !important;
+}*/
+
+
+</style>
+<!-- end shim -->
+
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxsplitter.js"></script>
+
+<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/leaflet.markercluster-src.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>
+<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>
+<script src="../js/components/gisWidget/setPositionModule/setPositionModule.js"></script>
+<script src="../js/components/gisWidget/setLayerModule/setLayerModule.js"></script>
+<script src="../js/components/gisWidget/searchPOIModule/searchPOIModule.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/gis-smooth.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/bezier.js"></script>
+<script src="../js/components/gisWidget/gisLibs/ant-line/leaflet-ant-path.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/MovingMarker.js"></script>
+<script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModule1.js"></script>
+<script src="../js/components/gisWidget/gisLibs/leaflet/selfDefination/esri-leaflet-clustered-feature-layer.js"></script>
+
+<script src="../js/components/gisWidget/enclosureManageModule/fancyTree/fancytree-master/lib/jquery-ui-contextmenu/jquery.ui-contextmenu.min.js"></script>
+
+<script src="../js/components/gisWidget/enclosureManageModule/enclosureManageModual.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawEditMenu2-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawCircle-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawRectangle-src.js"></script>
+<script src="../js/components/gisWidget/enclosureManageModule/leaflet.drawPolygon-src.js"></script>
+<script src="../js/components/gisWidget/intelligentQueryModule/intelligentQueryModule.js"></script>
+<script type="text/javascript" src="../js/components/echarts/echarts.min.js"></script>
+<section id="content" class="table-layout">
+    <aside class="tray tray-left tray270 pn" style="background: white;">
+        <div class="panel mbn flex-layout flex-vertical" style="height: 100%;">
+            <div class="row mt10 mln mrn">
+                <div class="col-xs-8">
+                    <input class="form-control input-sm" name="search-input" placeholder="过滤...">
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-reset">清除
+                        <span id="matches"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="dir-tree-panel" class="panel-body flex-item" style="border: none;">
+                <div class="pn br-n">
+                    <!--   <div id="tab-models" class="ds-tree tab-pane flex-item active">
+                    </div>-->
+                    <div id="data-type-tree" class="dir-tree">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center pn">
+        <div id="form-container" style="height:inherit;">
+        </div>
+        <span id="left-panel-toggle" class="text-primary p5">
+            <i class="fa fa-caret-left fs28"></i>
+        </span>
+    </div>
+</section>
+<script type="text/javascript" src="${entryRoot}/smart-query-frame.js"></script>

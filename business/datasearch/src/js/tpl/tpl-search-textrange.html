@@ -1,0 +1,22 @@
+<table is_full_text="<%- Control.FullText %>"  display="<%- Control.DisplayName %>" condition_item="<%- Control.Item %>" style="width: 100%;" class="search-condition-textrange ">
+    <tr>
+        <td valign="top">
+            <div class="input-div">
+                <input id="<%- Control.Id %>_from" type="text" name="<%- Control.Id %>_from_<%- Control.Rule %>" class="form-control search-condition-textrange-from search-input-<%- Control.Rule %>"
+                       style="border-radius: 4px;" placeholder="">
+            </div>
+
+        </td>
+        <td valign="top" style="width: 40px;">
+            <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+        </td>
+        <td valign="top">
+            <div class="input-div">
+                <input id="<%- Control.Id %>_to" type="text" name="<%- Control.Id %>_to_<%- Control.Rule %>" class="form-control search-condition-textrange-to search-input-<%- Control.Rule %>"
+                       style="border-radius: 4px;" placeholder="">
+            </div>
+        </td>
+
+    </tr>
+</table>

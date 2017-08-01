@@ -1,0 +1,653 @@
+<!-- shim -->
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+
+<link rel="stylesheet" type="text/css"
+      href="../js/components/gisWidget/getLatLngRangModule/getLatLngRangModuleCSS.css"/>
+<link rel="stylesheet" type="text/css"
+      href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css"
+      href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MyMarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css"
+      href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.css">
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css"/>
+<link rel="stylesheet" href="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.css" />
+
+<link rel="stylesheet" type="text/css" href="${ctxRoot}/css/search-file.css">
+
+<!-- end shim -->
+
+
+
+<section id="content" class="table-layout animated fadeIn">
+
+<!-- begin: .tray-left -->
+
+
+<aside class="tray tray-left tray200">
+    <h4 data-i18n="datasearch.searchfile.labels.filetype"></h4>
+
+    <div id="nav-spy">
+        <ul class="nav tray-nav tray-nav-border" data-spy="affix" data-offset-top="200">
+            <li class="active">
+                <a href="#tab-pane" class="tab_header file_type hidden" template="tpl_office"
+                   postUrl="/datasearch/office_meta_search_post" protocol="DATA_DMT"
+                   data-i18n="[append]datasearch.searchfile.labels.office_meta_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header file_type hidden" template="tpl_photo" postUrl="/datasearch/photo_meta_search_post"
+                   protocol="DATA_PMT" data-i18n="[append]datasearch.searchfile.labels.photo_meta_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header file_type hidden" template="tpl_md5" postUrl="/datasearch/md5_search_post"
+                   protocol="DATA_MD5" data-i18n="[append]datasearch.searchfile.labels.file_md5_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header hidden" data-i18n="[append]datasearch.searchfile.labels.bin_character_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header hidden" data-i18n="[append]datasearch.searchfile.labels.similar_picture_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header hidden" data-i18n="[append]datasearch.searchfile.labels.fax_note_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+            <li>
+                <a href="#tab-pane" class="tab_header hidden" data-i18n="[append]datasearch.searchfile.labels.voice_query">
+                    <span class="fa fa-search fa-lg"></span></a>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+<!-- end: .tray-left -->
+<!-- begin: .tray-center -->
+<div class="tray tray-center">
+<div class="">
+<div class="col-md-12">
+<div class="row">
+    <div class="panel br-t bw5 br-primary">
+        <form class="form-horizontal" id="form-search-file">
+            <div class="panel-body bg-light">
+
+                <div class="form-body">
+
+
+                    <!--<h3 class="form-section">查询范围</h3>-->
+                    <h3 style="color: #3498db;" data-i18n="[append]datasearch.searchfile.labels.search_range"></h3>
+                    <hr class="alt short">
+                    <div id="search-range"></div>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-pane">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="panel-footer text-center">
+                <button id="btnSearch" type="submit" style="width: 100px;"
+                        class="btn btn-primary btn-sm " data-i18n="[append]datasearch.searchfile.buttons.btnSearch">
+                                    <span class="glyphicon glyphicon-search "
+                                          style="margin-right: 10px !important;"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+<!--<div class="row " id="tabl_content">
+    <div class="col-md-12">
+        <div class="tab-content">
+
+
+            &lt;!&ndash;tab_yyth&ndash;&gt;
+                            <div class="tab-pane " id="tab_yyth">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        语音查询
+                                    </div>
+                                    <div class="panel-body ">
+                                        &lt;!&ndash; BEGIN FORM&ndash;&gt;
+                                        <form action="#" class="form-horizontal">
+                                            <div class="form-body">
+                                                <h3 class="form-section">查询范围</h3>
+
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2">数据中心</label>
+
+                                                            <div class="col-md-10">
+                                                                <div class="input-group mv10">
+                                                                    <a class="bs-component">
+                                                                        <a class="checkbox-custom mb5">
+                                                                            <input type="checkbox" checked=""
+                                                                                   id="checkboxDefault3">
+                                                                            <label for="checkboxDefault3">本地数据中心</label>
+                                                                        </a>
+                                                                    </a>
+                                                                    <a class="bs-component">
+                                                                        <a class="checkbox-custom  mb5">
+                                                                            <input type="checkbox" checked=""
+                                                                                   id="checkboxExample4">
+                                                                            <label for="checkboxExample4">数据中心1</label>
+                                                                        </a>
+                                                                    </a>
+                                                                    <a class="bs-component">
+
+                                                                        <a class="checkbox-custom  mb5">
+                                                                            <input type="checkbox" checked=""
+                                                                                   id="checkboxExample5">
+                                                                            <label for="checkboxExample5">数据中心2</label>
+                                                                        </a>
+
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-2">截获时间</label>
+
+                                                            <div class="col-md-10">
+                                                                <div class="input-group mv10">
+                                                                    <div class="icheck-inline">
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom mb5">
+                                                                                <input type="radio" id="radioExample3"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample3">近一周 </label>
+                                                                            </a>
+                                                                        </a>
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom  mb5">
+                                                                                <input type="radio" id="radioExample4"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample4"> 近一月</label>
+                                                                            </a>
+                                                                        </a>
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom  mb5">
+                                                                                <input type="radio" id="radioExample5"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample5">近半年</label>
+                                                                            </a>
+                                                                        </a>
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom  mb5">
+                                                                                <input type="radio" id="radioExample6"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample6">自定义</label>
+                                                                            </a>
+                                                                        </a>
+
+                                                                        <div style="float: right; margin-left: 0px; margin-top: -10px;"
+                                                                             class="input-group input-large date-picker input-daterange"
+                                                                             data-date="10/11/2012"
+                                                                             data-date-format="mm/dd/yyyy">
+                                                                            <input type="text" class="form-control"
+                                                                                   name="from">
+                                                                            <span class="input-group-addon"> 到 </span>
+                                                                            <input type="text" class="form-control"
+                                                                                   name="to">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <h3 class="form-section">话务信息</h3>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">号码</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder="电信号码／手机卡号／机身码等">
+                                                                <span class="help-block"> 支持模糊号码,多个号码以空格分隔 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">通话时长</label>
+
+                                                            <div class="col-md-2">
+                                                                <select name="foo" class="form-control">
+                                                                    <option value="1">大于</option>
+                                                                    <option value="1">小于</option>
+                                                                    <option value="1">介于</option>
+                                                                </select>
+                                                                <span class="help-block">  </span>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <input type="text" class="form-control" placeholder="数字(秒)">
+                                                                <span class="help-block">秒</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">号码类型</label>
+
+                                                            <div class="col-md-9">
+                                                                <div class="input-group mv10">
+                                                                    <div class="icheck-inline">
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom mb5">
+                                                                                <input type="radio" id="radioExample3"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample3">号码 </label>
+                                                                            </a>
+                                                                        </a>
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom  mb5">
+                                                                                <input type="radio" id="radioExample4"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample4"> 卡号</label>
+                                                                            </a>
+                                                                        </a>
+                                                                        <a class="bs-component">
+                                                                            <a class="radio-custom  mb5">
+                                                                                <input type="radio" id="radioExample5"
+                                                                                       name="radioExample">
+                                                                                <label for="radioExample5">机身码</label>
+                                                                            </a>
+                                                                        </a>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">识别语种</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control">
+                                                                    <option value="">普通话</option>
+                                                                    <option value="">韩语</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">标记语种</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control"
+                                                                        data-placeholder="Choose a Category"
+                                                                        tabindex="1">
+                                                                    <option value="Category 1">普通话</option>
+                                                                    <option value="Category 2">韩语</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                <h3 class="form-section">位置信息</h3>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">区域</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">归属地</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="form-section">处理信息</h3>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">出材标记</label>
+
+                                                            <div class="col-md-9">
+                                                                <a class="bs-component">
+                                                                    <a class="checkbox-custom mb5">
+                                                                        <input type="checkbox" checked=""
+                                                                               id="checkboxDefault3">
+                                                                        <label for="checkboxDefault3">出材</label>
+                                                                    </a>
+                                                                </a>
+                                                                &lt;!&ndash;<label>&ndash;&gt;
+&lt;!&ndash;<input type="checkbox" class="form-control">已出材</label>&ndash;&gt;
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">处理标记</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Post Code</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Country</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control">
+                                                                    <option>Country 1</option>
+                                                                    <option>Country 2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    &lt;!&ndash;chaxun&ndash;&gt;
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-offset-5 col-md-6">
+                                                        <button style="width: 100px;" type="submit" class="btn green">查询
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            &lt;!&ndash;tab_empty&ndash;&gt;
+                            <div class="tab-pane " id="tab_empty">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        语音查询
+                                    </div>
+                                    <div class="panel-body ">
+                                        &lt;!&ndash; BEGIN FORM&ndash;&gt;
+                                        <form action="#" class="form-horizontal">
+                                            <div class="form-body">
+                                                <h3 class="form-section">Person Info</h3>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">First Name</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder="Chee Kin">
+                                                                <span class="help-block"> This is inline help </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group has-error">
+                                                            <label class="control-label col-md-3">Last Name</label>
+
+                                                            <div class="col-md-9">
+                                                                <select name="foo" class="form-control">
+                                                                    <option value="1">Option 1</option>
+                                                                    <option value="1">Option 2</option>
+                                                                    <option value="1">Option 3</option>
+                                                                </select>
+                                                                <span class="help-block"> This field has error. </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Gender</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control">
+                                                                    <option value="">Male</option>
+                                                                    <option value="">Female</option>
+                                                                </select>
+                                                                <span class="help-block"> Select your gender. </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Date of Birth</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder="dd/mm/yyyy"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Category</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control"
+                                                                        data-placeholder="Choose a Category" tabindex="1">
+                                                                    <option value="Category 1">Category 1</option>
+                                                                    <option value="Category 2">Category 2</option>
+                                                                    <option value="Category 3">Category 5</option>
+                                                                    <option value="Category 4">Category 4</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Membership</label>
+
+                                                            <div class="col-md-9">
+                                                                <div class="radio-list">
+                                                                    <label class="radio-inline">
+                                                                        <div class="radio"><span><input type="radio"
+                                                                                                        name="optionsRadios2"
+                                                                                                        value="option1"></span>
+                                                                        </div>
+                                                                        Free </label>
+                                                                    <label class="radio-inline">
+                                                                        <div class="radio"><span class="checked"><input
+                                                                                type="radio" name="optionsRadios2"
+                                                                                value="option2" checked=""></span></div>
+                                                                        Professional </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                <h3 class="form-section">Address</h3>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Address 1</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Address 2</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">City</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">State</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Post Code</label>
+
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control"></div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">Country</label>
+
+                                                            <div class="col-md-9">
+                                                                <select class="form-control">
+                                                                    <option>Country 1</option>
+                                                                    <option>Country 2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    &lt;!&ndash;/span&ndash;&gt;
+                                                </div>
+                                                &lt;!&ndash;/row&ndash;&gt;
+
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    &lt;!&ndash;chaxun&ndash;&gt;
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-offset-5 col-md-6">
+                                                        <button style="width: 100px;" type="submit" class="btn green">查询
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>-->
+</div>
+</div>
+
+</div>
+<!-- end: .tray-center -->
+
+</section>
+
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>-->
+<!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>-->
+<!--<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>-->
+<!--<script src="../js/components/gisWidget/getLatLngRangModule/getLatLngRangModule.js"></script>-->
+<!--<script src="../js/components/gisWidget/getLatLngRangModule/leaflet.drawSimpleRectangle-src.js"></script>-->
+<script src="/js/components/gisWidget/getLatLngRangModule/getLatLngRange-widget-files.js"></script>
+<script src="/js/components/gisWidget/enclosureManageModule/enclosureManage-widget-files.js"></script>
+
+<script type="text/javascript" src="${entryRoot}/search-file.js"></script>

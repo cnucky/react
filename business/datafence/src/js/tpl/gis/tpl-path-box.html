@@ -1,0 +1,50 @@
+<div id='pathLoadingBox'>
+    <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+    <span id='waitingText'>加载中...</span>
+</div>
+<div id='targetSelectionBox' class='bg-Blue-3D'>
+    <div id='showTargetsGroup'>
+        <input type='checkbox' id='aimDistribute' name='aimDistribute' class='chkbox'>
+        <label for='aimDistribute' class='title-label'></label>
+        <input type='checkbox' id='showPath' name='showTargets' class='chkbox'>
+        <label for='showPath' class='title-label'>展示目标轨迹</label>
+    </div>
+</div>
+<div id='pathDisplayBox' class="blue-scoll-bar">
+    <section id="dirBox" class="dirBox">
+        <div id="dirbox" class="dirbox" style="display: block;">
+            <div id='openResult'>
+                <a id='openAllResult' class='dir_close' target="_blank">查看所有结果</a>
+            </div>
+            <div id='backToQuery'>
+                <span class='dir_close'>返回搜索条件</span>
+            </div>
+            <div id="indexbox">
+                <div class="content">
+                    <div id="noResult" style="display:none">
+                        <a>无查询结果</a>
+                    </div>
+                    <div class="plan_wrap">
+                        <div class="plan_wrap_item plan_list" id="planList" style="display: block;">
+                            <div class="planlist_wrap planlist_car ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

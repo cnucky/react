@@ -1,0 +1,4 @@
+<NODE_TYPES>
+    <NODE_TYPE NAME="email" CAPTION="电子邮件" IMG="email.png"/>
+    <NODE_TYPE NAME="qq" CAPTION="QQ" IMG="qq.png"/>
+</NODE_TYPES>

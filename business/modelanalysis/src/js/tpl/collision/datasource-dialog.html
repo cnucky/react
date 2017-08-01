@@ -1,0 +1,40 @@
+<div id="datasource-panel" class="panel">
+    <div class="panel-heading">
+        <ul class="nav panel-tabs panel-tabs-left">
+            <li class="active">
+                <a href="#system-data" data-toggle="tab">系统区</a>
+            </li>
+            <li>
+                <a href="#personal-data" data-toggle="tab">个人区</a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body pn">
+        <div class="tab-content pn br-n">
+            <div id="system-data" class="tab-pane active">
+                <div id="systemTree-filter" class="row mt10 mln mrn">
+                    <div class="col-xs-8">
+                        <input class="form-control" name="searchSystem" placeholder="过滤...">
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-primary" id="btnResetSearchSystem">清除
+                            <span id="matchesSystem"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="personal-data" class="tab-pane">
+                <div id="personalTree-filter" class="row mt10 mln mrn" style="display: none">
+                    <div class="col-xs-8">
+                        <input class="form-control" name="searchPersonal" placeholder="过滤...">
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-primary" id="btnResetSearchPersonal">清除
+                            <span id="matchesPersonal"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

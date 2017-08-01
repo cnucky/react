@@ -1,0 +1,43 @@
+<section class="table-layout">
+    <div class="tab-content mw900 center-block center-children">
+        <div class="admin-form theme-info tab-pane mw700 active" id="dataTypeDetail" role="tabpanel">
+            <form id="form-dataTypeDetail" >
+                <div class="section" style="margin-bottom: 12px;">
+                    <label class="field-label" style="font-weight: normal;font-size: 13px;"> 表头文件：</label>
+                    <input readonly type="text" class="form-control" readonly id="dataTypeDisName" style="padding-right:0px;">
+                    <a class="btn btn-system" id="selectFileBtn"
+                       style="position: relative; overflow: hidden; direction: ltr;">
+                        <span class="fa fa-file-text pr3"></span>
+                        选择文件
+                        <input multiple="single" type="file" name="file" accept=".txt,.bcp"
+                               id="selectFile-Button"
+                               style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px;
+                                                                           margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                    </a>
+                </div>
+
+                <div class="section" style="margin-bottom: 12px; ">
+                    <label class="field-label" style="font-weight: normal;font-size: 13px;">分隔符：</label>
+                    <div id="rowSplitDiv" class="controls">
+                        <select id="id_delimiter_row0-Select" name="delimiter_row0">
+                            <option value="1" selected="selected">回车换行(\r\n)</option>
+                            <option value="2">换行(\n)</option>
+                            <option value="__other__">其他</option>
+                        </select>
+
+                        <label class="checkbox" style="display: inline">
+                            <input checked style="margin-top: 8px;line-height: 30px;vertical-align: middle " id="delimiter_row_check" type="checkbox">
+                            <span id="delimiter_row_text" style="line-height: 30px; vertical-align: middle"> 十六进制</span>
+                        </label>
+                        <input id="id_delimiter_row1" name="delimiter_row1" type="text"
+                               placeholder="在此处输入您的分隔符"
+                               style="margin-left: 4px; display: none;">
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</section>
+

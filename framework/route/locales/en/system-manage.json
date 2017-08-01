@@ -1,0 +1,34 @@
+{
+    "rolemanage": {
+        "enum-nomal": "Normal Role",
+        "enum-useradmin": "User Manager",
+        "enum-authadmin": "Authority Manager",
+        "enum-logadmin": "Log Manager",
+
+        "label-in": "in(",
+        "label-useip": ") use IP(",
+        "label-createroleoperation": ") create role,role name(",
+        "label-desc": ")description(",
+        "label-deleterolenameoperation": ")delete role,role name(",
+        "label-roleid": ")role ID(",
+        "label-addauthoperation": ") add authoriy(",
+        "label-torole": ")to role(",
+        "label-deleteroleoperation": ") delete role(",
+        "label-toauth": ")to authoriy(",
+        "label-updateroledesc": ") update role name,role name(",
+        "label-updatedescto": ")update description to(",
+        "label-updateusrrole": ")update user role,user(",
+        "label-update": ")upadte(",
+        "label-role": ") role("
+    },
+    "log":{
+        "label-getuserlogsfail":"fail to obtain user logs",
+        "label-submitlogquery":")submit log query,conditions:module name(",
+        "label-operationtype":")operation type(",
+        "label-user":")username(",
+        "label-macaddress":")MAC address(",
+        "label-logcontent":")log content(",
+        "label-ipaddress":")IP address(",
+        "label-timarange":")time range("
+    }
+}

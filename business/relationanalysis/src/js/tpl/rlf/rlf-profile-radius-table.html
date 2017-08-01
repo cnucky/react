@@ -1,0 +1,22 @@
+<table id="radius-table" class="table table-bordered mb10">
+    <tbody>
+        <tr>
+            <td class="text-center">计费号</td>
+            <td><%- radius %></td>
+        </tr>
+        <% _.each(accounts, function(item) { %>
+            <tr>
+                <td class="col-md-2 col-sm-2 mn fs14 fw400 text-center" style="background-color: #f5f5f5">
+                    <%- item.name %>
+                </td>
+                <td class="col-md-10 col-sm-10">
+                    <% if (item.valueType) { %>
+                        <a class="rlf-auto-link" href="javascript:void(0);" target-link="<%- item.targetLink %>"><%- item.account %> <%- item.freq %>%</a>
+                    <% } else { %>
+                        <%- item.account %><%- item.freq %>
+                    <% } %>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

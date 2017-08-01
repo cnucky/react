@@ -1,0 +1,107 @@
+{
+  "minddiagram": {
+    "button": {
+      "open-diagram": "Open",
+      "refresh-diagram": "Refresh",
+      "manage-diagram": "Manage Mind Map",
+      "add-diagram": "Create",
+      "del-diagram": "Delete",
+      "edit-diagram": "Edit",
+      "back-diagram": "Return"
+    },
+    "label": {
+      "diagram-name": "Name",
+      "diagram-desc": "Description",
+      "diagram-state": "Status",
+      "diagram-start": "Use",
+      "diagram-stop": "End",
+      "name": "Name",
+      "condition": "Conditions",
+      "desc": "Description"
+    },
+    "text": {
+      "multi-lines-input": "Multi-row, input one every row."
+    },
+    "sidebar": {
+      "tab": {
+        "node-type": "Select Node Type",
+        "node-mark": "Flag Node"
+      },
+      "node-group": {
+        "known-condition": "Known Condtions"
+      },
+      "mark-type": {
+        "color": "Flag Color",
+        "state": "Flag Status"
+      },
+      "state-type": {
+        "important": "Import",
+        "common": "Normal",
+        "doubtful": "Question",
+        "default": "Default"
+      }
+    },
+    "dialog-title": {
+      "select-diagram": "Select",
+      "new-diagram": "Create",
+      "edit-diagram": "Edit",
+      "detail": "Detail",
+      "add-node": "Add Node",
+      "edit-node": "Edit Node"
+    },
+    "notify-title": {
+      "choose-one-diagram": "Please select only one mind map for editing!",
+      "input-diagram-name": "Please input the name of mind map!",
+      "task-del": "Task is deleted. Please delete corresponding node!",
+      "input-node-name": "Please enter node name!",
+      "input-condition": "Please enter conditions info!",
+      "get-diagram-list-faild": "Fail to obtain mind map list!",
+      "get-diagram-content-faild": "Fail to obtain mind map content!",
+      "get-node-type-faild": "Fail to obtain node type!",
+      "add-diagram-faild": "Fail to create!",
+      "del-diagram-faild": "Fail to delete!",
+      "update-diagram-faild": "Fail to refresh!",
+      "add-node-faild": "Fail to add node!",
+      "del-node-faild": "Fail to delete node!",
+      "update-node-faild": "Fail to refresh node!",
+      "update-multi-nodes-faild": "Fail to refresh multi-node!",
+      "add-link-faild": "Fail to add line!",
+      "del-link-faild": "Fail to delete line!",
+      "update-link-faild": "Fail to refresh line!",
+      "pick-up-success": "Extract successfully!",
+      "pick-up-faild": "Fail to extract!",
+      "no-related-diagram": "No related mind map!",
+      "get-task-status-faild": "Fail to get task process!"
+    },
+    "bootbox-msg": {
+      "is-del": "Delete?"
+    },
+    "carrier": {
+      "none": "Not Distinguish Carrier"
+    },
+    "lacci-operate": {
+      "del": "Delete"
+    },
+    "node-text": {
+      "to-fill-in": "To be filled",
+      "name": "Name",
+      "condition": "Conditions",
+      "result": "Result"
+    },
+    "link-text": {
+      "custom": "Customization",
+      "pick-up": "Extract"
+    },
+    "circle-menu-btn": {
+      "watch": "View",
+      "comment": "Note",
+      "delete": "Delete",
+      "detail": "Detail",
+      "search": "Query",
+      "search-all": "One-click Search",
+      "clue-expand": "Smart Clue Seeking",
+      "relate": "Location Companion",
+      "similar-account": "Similar Account"
+    }
+  }
+}

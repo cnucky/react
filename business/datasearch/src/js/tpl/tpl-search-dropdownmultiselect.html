@@ -1,0 +1,6 @@
+<select  display="<%- Control.DisplayName %>" is_full_text="<%- Control.FullText %>" condition_item="<%- Control.Item %>" class="dropdown-multi-select search-condition-multiselect" multiple="multiple">
+    <% _.each(Data, function(item) { %>
+    <option value="<%- item.name %>"><%- item.desc %></option>
+    <% }) %>
+
+</select>

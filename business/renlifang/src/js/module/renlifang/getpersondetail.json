@@ -1,0 +1,1812 @@
+{
+  "code": 0,
+  "data": {
+    "information": [
+      {
+        "children": [
+          {
+            "itemName": "身份",
+            "properties": [
+              {
+                "key": "CNAME",
+                "name": "中文姓名",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 71,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 7,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "汤益康"
+                  }
+                ]
+              },
+              {
+                "key": "BIRTH_COUNTRY",
+                "name": "出生国家",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ]
+              },
+              {
+                "key": "GENDER",
+                "name": "性别",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 72,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "男"
+                  }
+                ]
+              },
+              {
+                "key": "EDUCATION",
+                "name": "学历",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "中专毕业"
+                  }
+                ]
+              },
+              {
+                "key": "ADDRESS",
+                "name": "地址",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "广东省广州市越秀区环市东路412号"
+                  }
+                ]
+              },
+              {
+                "key": "ENAME",
+                "name": "英文姓名",
+                "valueList": [
+                  {
+                    "confidence": 89,
+                    "source": [
+                      {
+                        "count": 71,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      }
+                    ],
+                    "value": "TANGYIKANG"
+                  },
+                  {
+                    "confidence": 8,
+                    "source": [
+                      {
+                        "count": 7,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "tangyikang"
+                  },
+                  {
+                    "confidence": 1,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "shangyikang"
+                  }
+                ]
+              },
+              {
+                "key": "SFZ",
+                "name": "身份证",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 72,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 7,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "440102196302114415"
+                  }
+                ]
+              },
+              {
+                "key": "BIRTHDAY",
+                "name": "出生日期",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 72,
+                        "name": "铁路客票数据",
+                        "typeId": "18"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 7,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "1963-02-11"
+                  }
+                ]
+              },
+              {
+                "key": "NATIONALITY",
+                "name": "国籍",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 5,
+                        "name": "民航旅客离港数据",
+                        "typeId": "8"
+                      },
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      },
+                      {
+                        "count": 7,
+                        "name": "民航旅客订座数据",
+                        "typeId": "5"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ]
+              },
+              {
+                "key": "JOB",
+                "name": "职业",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "海员"
+                  }
+                ]
+              },
+              {
+                "key": "NATION",
+                "name": "民族",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "汉族"
+                  }
+                ]
+              },
+              {
+                "key": "MARRIAGE",
+                "name": "婚姻状况",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全国户籍数据",
+                        "typeId": "19"
+                      }
+                    ],
+                    "value": "已婚"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "签证",
+            "properties": [
+              {
+                "key": "CNAME",
+                "name": "中文姓名",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "汤益康"
+                  }
+                ]
+              },
+              {
+                "key": "GENDER",
+                "name": "性别",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "男"
+                  }
+                ]
+              },
+              {
+                "key": "ENAME",
+                "name": "英文姓名",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "TangYiKang"
+                  }
+                ]
+              },
+              {
+                "key": "BIRTHDAY",
+                "name": "出生日期",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "1963-02-11"
+                  }
+                ]
+              },
+              {
+                "key": "NATIONALITY",
+                "name": "国籍",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "中国"
+                  }
+                ]
+              },
+              {
+                "key": "VISA",
+                "name": "签证号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "E3975163"
+                  }
+                ]
+              },
+              {
+                "key": "START_DATE",
+                "name": "开始日期",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "2005-05-03"
+                  }
+                ]
+              },
+              {
+                "key": "END_DATE",
+                "name": "结束日期",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "全球签证数据",
+                        "typeId": "1"
+                      }
+                    ],
+                    "value": "2015-05-02"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "身份信息"
+      },
+      {
+        "children": [
+          {
+
+            "otherProperties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "Facebook Internship",
+                "valueList": [
+                  {
+                    "itemName": "单位名称",
+                    "value" : 	"广东深圳局五处一科"
+                  },
+                  {
+                    "itemName": "身份/职务",
+                    "value" : 	"软件工程师"
+                  },
+                  {
+                    "itemName": "开始时间",
+                    "value" : 	"2010/5/10"
+                  },
+                  {
+                    "itemName": "结束时间",
+                    "value" : 	"2013/5/10"
+                  }
+                ]
+              },
+              {
+
+                "key": "NET_ACCOUNT",
+                "name": "Facebook Internship",
+                "valueList": [
+                  {
+                    "itemName": "单位名称",
+                    "value" : 	"广东深圳局五处三科"
+                  },
+                  {
+                    "itemName": "身份/职务",
+                    "value" : 	"软件工程师"
+                  },
+                  {
+                    "itemName": "开始时间",
+                    "value" : 	"2015/5/10"
+                  },
+                  {
+                    "itemName": "结束时间",
+                    "value" : 	"2017/5/10"
+                  }
+                ]
+              }
+
+            ]
+          }
+        ],
+        "groupName": "个人履历"
+      },
+      {
+        "children": [
+          {
+
+            "otherProperties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "Facebook Internship",
+                "valueList": [
+                  {
+                    "itemName": "组织名称",
+                    "value" : 	"广东深圳局五处一科"
+                  },
+                  {
+                    "itemName": "身份/职务",
+                    "value" : 	"软件工程师"
+                  },
+                  {
+                    "itemName": "开始时间",
+                    "value" : 	"2010/5/10"
+                  },
+                  {
+                    "itemName": "结束时间",
+                    "value" : 	"2013/5/10"
+                  }
+                ]
+              },
+              {
+
+                "key": "NET_ACCOUNT",
+                "name": "Facebook Internship",
+                "valueList": [
+                  {
+                    "itemName": "组织名称",
+                    "value" : 	"广东深圳局五处三科"
+                  },
+                  {
+                    "itemName": "身份/职务",
+                    "value" : 	"软件工程师"
+                  },
+                  {
+                    "itemName": "开始时间",
+                    "value" : 	"2015/5/10"
+                  },
+                  {
+                    "itemName": "结束时间",
+                    "value" : 	"2017/5/10"
+                  }
+                ]
+              }
+
+            ]
+          }
+        ],
+        "groupName": "社会组织"
+      },
+      {
+        "children": [
+          {
+            "event":[
+              {
+                "group": true,
+                "topCityList": [{
+                  "cityName": "南京",
+                  "freq": 11
+                }, {
+                  "cityName": "北京",
+                  "freq": 6
+                }, {
+                  "cityName": "上海",
+                  "freq": 3
+                }],
+                "action":[
+                  {
+                    "date": "2015年2月",
+                    "action": [{
+                      "action": "于2015-02-23日,从昆明乘坐8L9884次飞机去往南京",
+                      "address": "乘坐飞机",
+                      "time": "2015-02-23 00:00:00",
+                      "type": 2
+                    }, {
+                      "action": "于2015-02-23日,从西双版纳乘坐KY8204次飞机去往昆明",
+                      "address": "乘坐飞机",
+                      "time": "2015-02-23 00:00:00",
+                      "type": 2
+                    }, {
+                      "action": "于2015-02-16日,从南京乘坐8L9883次飞机去往昆明",
+                      "address": "乘坐飞机",
+                      "time": "2015-02-16 00:00:00",
+                      "type": 2
+                    }, {
+                      "action": "于2015-02-16日,从昆明乘坐MU5789次飞机去往西双版纳",
+                      "address": "乘坐飞机",
+                      "time": "2015-02-16 00:00:00",
+                      "type": 2
+                    }]
+                  }, {
+                    "date": "2014年11月",
+                    "action": [{
+                      "action": "于2014-11-13日,从杭州东乘坐G58次列车去往溧阳",
+                      "address": "乘坐火车",
+                      "time": "2014-11-13 00:00:00",
+                      "type": 1
+                    }, {
+                      "action": "于2014-11-12日,从杭州乘坐D5604次列车去往溧阳",
+                      "address": "乘坐火车",
+                      "time": "2014-11-12 00:00:00",
+                      "type": 1
+                    }, {
+                      "action": "于2014-11-12日,从杭州东乘坐G1224次列车去往溧阳",
+                      "address": "乘坐火车",
+                      "time": "2014-11-12 00:00:00",
+                      "type": 1
+                    }, {
+                      "action": "于2014-11-12日,从广州乘坐T170次列车去往杭州东",
+                      "address": "乘坐火车",
+                      "time": "2014-11-12 00:00:00",
+                      "type": 1
+                    }, {
+                      "action": "于2014-11-09日,从溧阳乘坐D2289次列车去往杭州东",
+                      "address": "乘坐火车",
+                      "time": "2014-11-09 00:00:00",
+                      "type": 1
+                    }, {
+                      "action": "于2014-11-09日,从杭州东乘坐K511次列车去往广州",
+                      "address": "乘坐火车",
+                      "time": "2014-11-09 00:00:00",
+                      "type": 1
+                    }]
+                  }
+                ]
+              }
+            ]
+
+          }
+        ],
+        "groupName": "参与事件"
+      }
+
+    ],
+
+    "entityInformation": [
+      {
+        "children": [
+          {
+            "itemName": "手机",
+            "properties": [
+              {
+                "key": "CNAME",
+                "name": "中文姓名",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "汤益康"
+                  }
+                ]
+              },
+              {
+                "key": "ADDRESS",
+                "name": "地址",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "广东省广州市越秀区环市东路412号"
+                  }
+                ]
+              },
+              {
+                "key": "USER_MSISDN",
+                "name": "电话号码",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "非邮快递运单数据",
+                        "typeId": "26"
+                      }
+                    ],
+                    "value": "13533859109"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "电话"
+      },
+      {
+        "children": [
+          {
+            "itemName": "QQ",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "1721279553"
+                  }
+                ]
+              },
+              {
+                "key": "NET_NICKNAME",
+                "name": "昵称",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "爸爸"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "网络账号"
+      },
+      {
+        "children": [
+          {
+            "itemName": "手机",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "姓名",
+                "valueList": [
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "郭红建",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "郭红建"
+                  },
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": " 罗娟 ",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": " 罗娟 "
+                  },
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": " 汤思彦 ",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": " 汤思彦 "
+                  }
+                ]
+              },
+              {
+                "key": "NET_NICKNAME",
+                "name": "地址",
+                "valueList": [
+                  {
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "南京市新庄路48号7幢3号门301室",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "南京市新庄路48号7幢3号门301室"
+                  },
+                  {
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "南京市浦口区点将台路40号",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "南京市浦口区点将台路40号"
+                  }
+                ]
+              },
+              {
+                "key": "NET_HAOMA",
+                "name": "手机号码",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "13222735090",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "13222735090"
+                  }
+                ]
+              },
+              {
+                "key": "NET_QU",
+                "name": "归属区号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "0025",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "0025"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "手机",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "姓名",
+                "valueList": [
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "汤思彦",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": " 18951656144 ",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": " 18951656144 "
+                  },
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": " 汤思妍 ",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": " 汤思妍 "
+                  },
+                  {
+                    "confidence": 33,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": " 汤思燕 ",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": " 汤思燕 "
+                  }
+                ]
+              },
+              {
+                "key": "NET_NICKNAME",
+                "name": "地址",
+                "valueList": [
+                  {
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "浦江路23号",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "浦江路23号"
+                  },
+                  {
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "集庆门大街218号",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "集庆门大街218号"
+                  },
+                  {
+                    "confidence": 50,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "建邺区江东商业文化旅游中心区集庆门大街218号万达西地二街区10栋1单元504",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "建邺区江东商业文化旅游中心区集庆门大街218号万达西地二街区10栋1单元504"
+                  }
+                ]
+              },
+              {
+                "key": "NET_HAOMA",
+                "name": "手机号码",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "13222735090",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "13222735090"
+                  }
+                ]
+              },
+              {
+                "key": "NET_QU",
+                "name": "归属区号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "0025",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "0025"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "手机信息"
+      },
+      {
+        "children": [
+          {
+            "itemName": "银行账户",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "开户行",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "交通银行",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "交通银行"
+                  }
+                ]
+              },
+              {
+                "key": "NET_NICKNAME",
+                "name": "银行账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "6222620210002185527",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "6222620210002185527"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "银行账户"
+      },
+      {
+        "children": [
+          {
+            "itemName": "淘宝",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "heavenpasser"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "支付宝",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              },
+              {
+                "key": "NET_ACCOUNT",
+                "name": "昵称",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "HK"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤八"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hk"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "QQ",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "455071933"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "电子邮箱",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "IP",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "登录IP",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "121.229.2.81"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "网络账号"
+      },
+      {
+        "children": [
+          {
+            "itemName": "车辆",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "heavenpasser"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "支付宝",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              },
+              {
+                "key": "NET_ACCOUNT",
+                "name": "昵称",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "HK"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤八"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hk"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "QQ",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "455071933"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "电子邮箱",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "IP",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "登录IP",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "121.229.2.81"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "车辆"
+      },
+      {
+        "children": [
+          {
+            "itemName": "护照",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "heavenpasser"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "支付宝",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              },
+              {
+                "key": "NET_ACCOUNT",
+                "name": "昵称",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤思彦"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "HK"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "汤八"
+                  },
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hk"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "QQ",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "455071933"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "电子邮箱",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "账号",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "hellknight@live.cn"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "itemName": "IP",
+            "properties": [
+              {
+                "key": "NET_ACCOUNT",
+                "name": "登录IP",
+                "valueList": [
+                  {
+                    "confidence": 100,
+                    "source": [
+                      {
+                        "count": 1,
+                        "name": "QQ聊天",
+                        "typeId": "87"
+                      }
+                    ],
+                    "value": "121.229.2.81"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "groupName": "护照"
+      }
+    ],
+
+    "keyValueMap": [
+      {
+        "name": "QQ",
+        "values": [
+          "1721279553"
+        ]
+      },
+      {
+        "name": "BANK_ACCOUNT",
+        "values": [
+          "622908406328984417"
+        ]
+      },
+      {
+        "name": "USER_MSISDN",
+        "values": [
+          "13533859109",
+          "18564561233",
+          "13222488880"
+        ]
+      },
+      {
+        "name": "SFZ",
+        "values": [
+          "440102196302114415"
+        ]
+      },
+      {
+        "name": "PASSPORT",
+        "values": [
+          "G40897697"
+        ]
+      }
+    ],
+    "personId": 0,
+    "summary": [
+      {
+        "caption": "中文姓名",
+        "name": "CNAME",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全球签证数据",
+                "typeId": "1"
+              },
+              {
+                "count": 1,
+                "name": "境外中国人护照数据",
+                "typeId": "2"
+              },
+              {
+                "count": 1,
+                "name": "非邮快递运单数据",
+                "typeId": "26"
+              },
+              {
+                "count": 7,
+                "name": "民航旅客订座数据",
+                "typeId": "5"
+              },
+              {
+                "count": 71,
+                "name": "铁路客票数据",
+                "typeId": "18"
+              },
+              {
+                "count": 5,
+                "name": "民航旅客离港数据",
+                "typeId": "8"
+              },
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "汤益康"
+          }
+        ]
+      },
+      {
+        "caption": "职业",
+        "name": "JOB",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "海员"
+          }
+        ]
+      },
+      {
+        "caption": "学历",
+        "name": "EDUCATION",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "中专毕业"
+          }
+        ]
+      },
+      {
+        "caption": "性别",
+        "name": "GENDER",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全球签证数据",
+                "typeId": "1"
+              },
+              {
+                "count": 1,
+                "name": "境外中国人护照数据",
+                "typeId": "2"
+              },
+              {
+                "count": 72,
+                "name": "铁路客票数据",
+                "typeId": "18"
+              },
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "男"
+          }
+        ]
+      },
+      {
+        "caption": "身高",
+        "name": "HEIGHT",
+        "valueList": []
+      },
+      {
+        "caption": "身份证",
+        "name": "SFZ",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 5,
+                "name": "民航旅客离港数据",
+                "typeId": "8"
+              },
+              {
+                "count": 72,
+                "name": "铁路客票数据",
+                "typeId": "18"
+              },
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              },
+              {
+                "count": 7,
+                "name": "民航旅客订座数据",
+                "typeId": "5"
+              }
+            ],
+            "value": "440102196302114415"
+          }
+        ]
+      },
+      {
+        "caption": "民族",
+        "name": "NATION",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "汉族"
+          }
+        ]
+      },
+      {
+        "caption": "婚姻状况",
+        "name": "MARRIAGE",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "已婚"
+          }
+        ]
+      },
+      {
+        "caption": "地址",
+        "name": "ADDRESS",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "非邮快递运单数据",
+                "typeId": "26"
+              },
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "广东省广州市越秀区环市东路412号"
+          }
+        ]
+      },
+      {
+        "caption": "出生日期",
+        "name": "BIRTHDAY",
+        "valueList": [
+          {
+            "confidence": 100,
+            "source": [
+              {
+                "count": 1,
+                "name": "全球签证数据",
+                "typeId": "1"
+              },
+              {
+                "count": 1,
+                "name": "境外中国人护照数据",
+                "typeId": "2"
+              },
+              {
+                "count": 7,
+                "name": "民航旅客订座数据",
+                "typeId": "5"
+              },
+              {
+                "count": 72,
+                "name": "铁路客票数据",
+                "typeId": "18"
+              },
+              {
+                "count": 5,
+                "name": "民航旅客离港数据",
+                "typeId": "8"
+              },
+              {
+                "count": 1,
+                "name": "全国户籍数据",
+                "typeId": "19"
+              }
+            ],
+            "value": "1963-02-11"
+          }
+        ]
+      }
+    ]
+  },
+  "message": ""
+}

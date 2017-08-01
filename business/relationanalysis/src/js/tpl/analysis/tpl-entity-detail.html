@@ -1,0 +1,48 @@
+
+
+<div class="panel mb5 <%- properties.length > 0 ? '' : 'hide' %>" >
+    <div class="panel-heading" style="right: auto; width: auto; margin-right: auto;">
+        <span class="panel-title"><%- memberIndex > 0 ? '成员' + memberIndex : '基本属性' %></span>
+    </div>
+    <div class="panel-body pn">
+        <div class="bs-component">
+            <table class="table">
+                <tbody>
+                <% _.each(properties, function(p, index) { %>
+                <tr>
+                    <td class="property-name">
+                        <span class="fs14 text-nowrap"><%- p.key %></span>
+                    </td>
+                    <td class="property-value text-right" >
+                        <span ><%- p.value %></span>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="panel mb5 <%- members.length > 0 ? '' : 'hide' %> mb20">
+    <div class="panel-heading" style="right: auto; width: auto; margin-right: auto;">
+          <span class="panel-title">成员信息</span>
+    </div>
+    <div class="panel-body pn">
+        <div class="bs-component">
+            <table class="table" >
+                <tbody>
+                <% _.each(members, function(mbr, index) { %>
+                <tr>
+                    <td class="property-value">
+                        <div>
+                            <span class="fs14"><%- mbr.caption %></span>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

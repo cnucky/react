@@ -1,0 +1,155 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/buttons.bootstrap.min.css">
+<style type="text/css">
+.form-horizontal .control-label {
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table td {
+    /*width: 100px;*/
+    /*word-wrap: break-word;*/
+}
+#pagination:hover {
+    cursor: default;
+}
+#log-query-table p{
+    overflow: hidden;
+    /*max-height: 3.6em;*/
+    text-overflow: ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+
+}
+.dataTables_scrollBody{
+    min-height: 200px!important;
+}
+#pagination>span{ padding-right: 20px; padding-top:18px}
+</style>
+<!-- end shim -->
+<section id="content" class="animated fadeIn pn">
+    <div class="panel" style="margin: 0;">
+        <div class="panel-heading">
+            <span class="panel-title">
+                <span class="fa fa-file-text" data-i18n="logquery.label-logquery"></span></span>
+        </div>
+        <div id="panel-body-div" class="panel-body pn mt10 ml10 mr10" style="border:none;height:100%;">
+            <div class="col-md-12">
+                <div class="admin-from">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-modulename"></label>
+                                <div class="col-md-8" style="padding-top: 5px;">
+                                    <select id="modueltypes-multiselect" multiple="multiple">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-oprtype"></label>
+                                <div class="col-md-8" style="padding-top: 5px;">
+                                    <select id="operationtypes-multiselect" multiple="multiple">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-operator"></label>
+                                <div class="col-md-8">
+                                    <div class="input-group text" id="department">
+                                        <input type="text" class="form-control" id="department-input" disabled style="cursor:auto;background-color:transparent;">
+                                        <span class="input-group-addon cursor" id="department-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-mac"></label>
+                                <div class="col-md-8 pt5">
+                                    <input class="form-control input-sm" type="text" id="mac-input" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="admin-from">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-content"></label>
+                                <div class="col-md-8 pt5">
+                                    <input class="form-control input-sm" type="text" id="keyword-input" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4" data-i18n="logquery.label-ip"></label>
+                                <div class="col-md-8 pt5">
+                                    <input class="form-control input-sm" type="text" id="ip-input" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label pln col-md-3" data-i18n="logquery.label-logtime"></label>
+                                <div class="col-md-9 ">
+                                    <div class="input-group pull-right date" id="date-range">
+                                        <input type="text" class="form-control custom" id="date-range-input"
+                                               placeholder="YYYY/MM/DD-YYYY/MM/DD">
+                                        <span class="input-group-addon cursor" id="date-range-icon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 pt5 pl30">
+                                <button id="search-log" type="button" class="btn btn-sm btn-primary"
+                                        data-i18n="logquery.button-search"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 divider mt10 mb10">
+            </div>
+            <div id="log-query-div" class="col-md-12" style="">
+                <label class="control-label pln pt10" id="notify-text" data-i18n="logquery.label-choosefilter"></label>
+                <div id="log-query-table-wrapper"></div>
+            </div>
+            <div id="pagination" style="display: none">
+
+                <ul id="page-ul" class="pagination mn pv10 pull-right">
+                    <li id="pre-page" class="prev">
+                        <a data-i18n="logquery.label-lastpage">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li class="active"><a id="current-page">1</a></li>
+                    <li id="next-page" data-lastpage-mark="false" class="next">
+                        <a data-i18n="logquery.label-previouspage">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--<span class="pull-right">页数</span>-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FBI WARNING -->
+<!-- datatables is being hacked by JC, please do not update or modified it!!! -->
+<script type="text/javascript" src="${root}/js/components/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/buttons.html5.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/dataTables.buttons.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/buttons.bootstrap.js"></script>
+<script type="text/javascript" src="${root}/js/log-query.js#4655464645"></script>

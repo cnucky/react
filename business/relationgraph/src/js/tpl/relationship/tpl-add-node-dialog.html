@@ -1,0 +1,33 @@
+<form id="add-search-form">
+    <div class="input-group">
+        <div class="input-group-btn" id="query-node-box">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="<%- types[0].icon.name %> fa-fw"></span>
+                <%- types[0].caption %>
+                    <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <% _.each(types, function(type){ %>
+                    <li>
+                        <a href="javascript:void(0);" data-type='<%- type.type %>' id="button_<%- type.type %>">
+                        <span class='<%- type.icon.name %> fa-fw'></span>
+                        <%- type.caption %>
+                            <span class="caret"></span>
+                    </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+        <!-- /btn-group -->
+        <input id="txt-query-node-key" type="text" class="form-control" aria-label="...">
+        <div class="input-group-btn">
+            <button id="btn-query-node-search" type="submit" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-search"></span> 搜索
+            </button>
+        </div>
+    </div>
+</form>
+<div id="load-query-result" style="min-height: 220px">
+    <ul id="list-query-node">
+    </ul>
+</div>

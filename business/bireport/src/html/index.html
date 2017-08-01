@@ -1,0 +1,242 @@
+<!-- shim -->
+
+<!-- end shim -->
+<section id="content">
+    <body class="bodyBG">
+    <div id="alert-container" style="margin:10px;">
+    </div>
+    <div class="row mb15" id="search-header">
+        <div class="col-md-8 center-block">
+            <div class="row table-layout table-clear-xs">
+                <div class="col-xs-12 col-sm-8 br-a br-light bg-light dark va-t p10 va-m">
+                    <div id="dock-content" class="ph20">
+                        <div id="dock-image" class="active-content">
+                            <div class="dock-item" data-title="Logo">
+                                <img class="img-responsive center-block" src="/bireport/img/background8.png" width="100%" height="100%" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bg" class="bodyDiv ">
+        <table class="panelTable" cellspacing="0" border="0">
+            <tbody>
+            <tr>
+                <td align="center">
+                    <table class="mainTable contentW" border="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td class="actionTD indexBG">
+                                <div class="actionTable " align="center" border="0" cellspacing="0">
+                                    <div class="actionTR actionBG">
+                                        <div idx="query" class="actionCell">
+                                            <div class="iconTD">
+                                                <div class="imgDiv imgArea imgPosition actionW">
+                                                    <div class="iconDiv queryIcon"></div>
+                                                    <font class="actionN">连接数据</font>
+                                                </div>
+                                            </div>
+
+                                            <div class="desDiv" style="visibility:hidden">
+                                                <div class="contentDiv imgPosition desW">管理查询</div>
+                                            </div>
+                                        </div>
+
+                                        <div idx="db" class="actionCell">
+                                            <div class="iconTD">
+                                                <div class="imgDiv imgArea imgPosition actionW">
+                                                    <div class="iconDiv dbIcon"></div>
+                                                    <font class="actionN">编辑应用</font>
+                                                </div>
+                                            </div>
+                                            <div class="desDiv" style="visibility:hidden">
+                                                <div class="contentDiv imgPosition desW">管理报告</div>
+                                            </div>
+                                        </div>
+
+                                        <div idx="viewer" class="actionCell">
+                                            <div class="iconTD">
+                                                <div class="imgDiv imgArea imgPosition actionW">
+                                                    <div class="iconDiv viewerIcon"></div>
+                                                    <font class="actionN">应用列表</font>
+                                                </div>
+                                            </div>
+                                            <div class="desDiv" style="visibility:hidden">
+                                                <div class="contentDiv imgPosition desW">
+                                                    用户门户，访问已经存在的报告
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10%;">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    </body>
+</section>
+
+<style>
+    .bodyBG {
+        width: 100%;
+        height: 100%;
+    }
+
+    .indexBG {
+        /*background-image: url(../img/bireport/background.jpg);*/
+        background-color: #3498DB;
+        color: #e1f0fa;
+    }
+
+    .bodyDiv {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        min-width: 950px;
+        position: absolute;
+    }
+
+    .panelTable {
+        width: 100%;
+        height: auto;
+    }
+
+    .layoutTD {
+        height: 15%;
+    }
+
+    .mainTable, .mainTable tr, .mainTable td {
+        border: 0px solid #000;
+    }
+
+    .mainTable {
+        height: 100%;
+        border-collapse: collapse;
+    }
+
+    .contentW {
+        width: 67%;
+    }
+
+    .actionTD {
+        background-repeat: no-repeat;
+        min-height: 300px;
+    }
+
+    .actionTable {
+        width: 360px;
+        position: relative;
+        display: table;
+        margin: auto auto auto auto;
+    }
+
+    .actionTR {
+        display: table-row;
+    }
+
+    .actionCell {
+        display: table-cell;
+    }
+
+    .iconTD {
+        display: table-cell;
+        width: 10%;
+        min-width: 130px;
+        /*height: 125px;*/
+    }
+
+    .queryIcon {
+        background-image: url(../bireport/img/query.png);
+    }
+
+    .dbIcon {
+        background-image: url(../bireport/img/db.png);
+    }
+
+    .viewerIcon {
+        background-image: url(../bireport/img/viewer.png);
+    }
+
+    .actionW {
+        width: 105px;
+    }
+
+    .actionN {
+        color: #FFF;
+        top: -10px;
+        position: relative;
+    }
+
+    .imgArea {
+        /*padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        /!*height: 98px;*!/*/
+    }
+
+    .imgDiv {
+        cursor: pointer;
+    }
+
+    .imgPosition {
+        margin: 0px auto;
+        /*text-align: center;*/
+    }
+
+    .iconDiv {
+        width: 80px;
+        height: 80px;
+    }
+
+    .desDiv {
+        position: relative;
+    }
+
+    .desDiv {
+        width: 100%;
+       /* background: url(../img/bireport/contentbg.png);*/
+        background-color: #2489cc;
+        color: #74C43D;
+    }
+
+    .contentDiv {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        min-height: 50px;
+        word-wrap: break-word;
+        white-space: normal;
+        padding: 10px 5px 1px;
+        box-sizing: content-box;
+    }
+
+    .desW {
+        width: 105px;
+    }
+
+    .desBottom {
+        background: transparent;
+    }
+
+    .desBottom {
+        height: 9px;
+        padding: 0px 5px;
+    }
+
+</style>
+
+<script type="text/javascript" src="${entryRoot}/bireport-index.js"></script>

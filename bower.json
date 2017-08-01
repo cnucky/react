@@ -1,0 +1,14 @@
+{
+  "name": "nj-project",
+  "description": "nj project",
+  "main": "index.js",
+  "authors": [
+    "Byutech.com"
+  ],
+  "directory": "src/js-components",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "i18next": "^2.5.1"
+  }
+}

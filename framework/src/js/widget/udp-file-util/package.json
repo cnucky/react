@@ -1,0 +1,4 @@
+{
+  "name": "udp-file-util-module",
+  "main": "udp-file-util.js"
+}

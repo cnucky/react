@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/components/lib/jquery.js"></script>
+    <script src="${entryRoot}/report.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        @-webkit-keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        .loader1,
+        .loader2,
+        .loader3,
+        .loader4 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: block;
+            overflow: hidden;
+            left: calc(50% - 100px);
+            top: calc(50% - 100px);
+        }
+        
+        .loader1 div,
+        .loader2 div,
+        .loader3 div,
+        .loader4 div {
+            height: 100%;
+            box-sizing: border-box;
+        }
+        /* loader 1 */
+        
+        .loader1,
+        .loader1 div {
+            border-radius: 50%;
+            padding: 8px;
+            border: 4px solid transparent;
+            -webkit-animation: rotate linear 4.5s infinite;
+            animation: rotate linear 4.5s infinite;
+            border-top-color: rgba(255, 88, 88, 0.75);
+            border-bottom-color: rgba(88, 88, 255, 0.75);
+        }
+        
+        .loader1 div:hover {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+        
+        .loader-div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-div">
+        <div class="loader1">
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

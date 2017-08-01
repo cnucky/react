@@ -1,0 +1,106 @@
+<div id='tagSearchApp' ng-app='tagSearchApp' ng-controller='rootCtrl' ng-cloak>
+    <!-- CONTAINER 1 BEGIN -->
+    <div class='my-jumbotron'>
+        <div class='container' id='top'>
+            <div class='row mt15' ng-controller='submitCtrl'>
+                <div class='col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 keyword-div' style='padding-right:0 !important;'>
+                    <div class='form-group'>
+                        <span class='fa fa-times btn append-icon right cursor br-n pn' id='clear-icon' ng-click='clear()'></span>
+                        <input name='searchInput' id='searchInput' type='text' class='form-control' placeholder='请输入筛选关键字' ng-model='keyword' ng-keyup='myKeyup($event)' />
+                    </div>
+                </div>
+                <div class='col-md-2 col-lg-2' style='padding-left:0 !important;'>
+                    <button class='btn btn-primary' id='searchBtn' ng-click='submit()'><i class='fa fa-search'></i></button>
+                    <!-- 
+                <button class='btn btn-primary' style='background-color:#3bafda' id='searchBtn' ng-click='clear()'>清除关键字</button> -->
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12 col-lg-12'>
+                    <div ng-controller='selectedTagCtrl' id='selected-tags'>
+                        
+                        <!-- <div id='style-btn' class='btn btn-info btn-rounded' ng-click='buttonStyle = !buttonStyle'>标签样式</div> -->
+                        <div id='custom-btn' class='btn btn-primary' ng-controller='customTagCtrl' ng-click='showTagTree()'>自选标签</div>
+                        
+                        <div ng-repeat='tag in tags' ng-class='{"tag":buttonStyle,"tag2":!buttonStyle}'><i class='fa fa-tag'></i> <span ng-class='{"black":buttonStyle}'>{{tag.tagName}}(</span><span title='{{v}}' ng-repeat='v in tag.tagValueList'>{{$last?(v|autoAdjust):(v|autoAdjust)+','}}</span><span ng-class='{"black":buttonStyle}'>)</span><span>  <i class='fa fa-times'  ng-click='removeTag($index)' data-tag-id='{{tag.tagId}}'></i></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTAINER 1 END -->
+    <!-- PANEL BEGIN -->
+    <div class='panel panel-primary top panel-border' id='my-panel'>
+        <!-- PANEL BODY 1 BEGIN -->
+        <div class='panel-body my-fade' ng-show='showFiltratingFlag'>
+            <!-- <div class='my-jumbotron'> -->
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-md-12 col-lg-12' ng-controller='frequentTagCtrl' id='frequentTags'>
+                            <tag-value-row ng-repeat='tag in tags' ng-controller='frequentTagRowCtrl'></tag-value-row>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        <!-- PANEL BODY 1 END -->
+        <div class='admin-form theme-primary '>
+            <div class='section-divider' id='my-divider'>
+                <span ng-click='toggleCollapse()'>{{collapseContext}}<i class='fa' ng-class='{"fa-sort-asc my-asc":showFiltratingFlag,"fa-sort-desc my-desc":!showFiltratingFlag}'></i></span>
+            </div>
+        </div>
+        <div class='panel-body' id='loading-bar-container'></div>
+        <!-- PANEL BODY 2 BEGIN -->
+        <div class='panel-body' id='panel-body-2'>
+            <div class='my-jumbotron'>
+                <div class='container'>
+                    <div class='row mt10' ng-controller='resultCtrl' ng-show='showFlag' id='result-div'>
+                        <div id='result-head'></div>
+                        <div class='col-md-2 col-lg-2' ng-controller='statTreeCtrl'>
+                            <h4 class='center'>热门标签命中情况</h4>
+                            <treecontrol class="tree-classic" tree-model="dataForTheTree" options="treeOptions" on-selection="selectNode(node,selected)" selected-node="node" expanded-nodes="exNodes">
+                                {{node.isLeaf?(overFlag?(node.tagValue|autoAdjust:1):(node.tagValue|autoAdjust:1)+'('+node.tagShoot+')'):(overFlag?node.title:node.title+'('+node.tagStat+')')}}
+                            </treecontrol>
+                            
+                            
+
+                        </div>
+                        <div class='col-md-10 col-lg-10'>
+                            <div class='row'>
+                                <div class='col-md-6'>
+                                    <div class='ml20'>
+                                        <h4>本次查询共 {{result.totalCount}} 条匹配结果<span ng-show='showNumber'>，显示 {{pos+1}}-{{pos+result.entities.length}} 条</span></h4>
+                                    </div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class='pull-right'>
+                                        <button class='btn my-btn' ng-class="{'active':showOpt==='card'}" id='btn-card' ng-click='toggleCard()'><i class='fa fa-qrcode'></i></button>
+                                        <button class='btn my-btn' ng-class="{'active':showOpt==='list'}" id='btn-list' ng-click='toggleList()'><i class='fa fa-tasks'></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row' ng-show='loading'>
+                                <div class='ml20'>
+                                    <h4>加载中...</h4>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div ng-show='showOpt==="card"' ng-repeat='item in result.entities'>
+                                    <result-card></result-card>
+                                </div>
+                                <div ng-show='showOpt==="list"' ng-repeat='item in result.entities'>
+                                    <result-list></result-list>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <paging page="currentPage" page-size="pageSize" total="displayTotal" show-prev-next="true" show-first-last="true" paging-action='gotoPage(page)' class='center'>
+                                </paging>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PANEL BODY 2 END -->
+    </div>
+</div>

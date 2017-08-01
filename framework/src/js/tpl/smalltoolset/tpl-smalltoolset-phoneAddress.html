@@ -1,0 +1,37 @@
+<div class="small-tool-set-i18n">
+
+    <div id="sts-modal">
+        <div id="sts-telsTextAreas">
+            <div style="width: 170px;height:30px;margin-top: 10px;padding-left: 3px;">
+                <a class="radio-custom mb5">
+                    <input type="radio" id="sts-MSISDNRad" checked name="telradio">
+                    <label for="sts-MSISDNRad" style="margin-right: 0px;" data-i18n="smalltoolset.phoneAddress.MSISDNRad"></label>
+                </a>
+
+                <a class="radio-custom mb5">
+                    <input type="radio" id="sts-IMSIRad" name="telradio">
+                    <label for="sts-IMSIRad" style="margin-right: 0px;" data-i18n="smalltoolset.phoneAddress.IMSIRad"></label>
+                </a>
+            </div>
+            <textarea class="gui-textarea bgnoscroll" id="sts-phoneComment1" name="comment" data-i18n="[placeholder]smalltoolset.phoneAddress.MSISDNRad" placeholder=""></textarea>
+            <textarea class="gui-textarea bgnoscroll" id="sts-phoneComment2" name="comment" data-i18n="[placeholder]smalltoolset.phoneAddress.IMSIRad" placeholder=""></textarea>
+            <button type="button" id="sts-telNumberTel" class="btn btn-primary btn-block" style="width: 170px;height: 37px;margin-top:5px;">查询</button>
+        </div>
+        <div id="sts-telsDiv" class="tableBackground-color" style="width: 599px; height: 530px; margin: 10px;float: left;" >
+            <table class="table">
+                <thead >
+                <tr class="primary">
+                    <th width="10%" data-i18n="smalltoolset.phoneAddress.tableNumber">序号</th>
+                    <th width="25%" data-i18n="smalltoolset.phoneAddress.tablePhoneAddress">号码</th>
+                    <th width="65%" data-i18n="smalltoolset.phoneAddress.tableAddress">归属地</th>
+                </tr>
+                </thead>
+            </table>
+            <div id="sts-telsTabDiv" class="clearDiv" style="height:492px; max-height:492px; overflow-y: auto;">
+                <table id="sts-telsTab" class="table"  style="width: 100%;word-break: break-all;word-wrap: break-word;">
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>态势感知系统</title>
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="${ctxRoot}/css/leaflet.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/jquery-ui.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/map.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/charts2.css" />
+    <link rel="stylesheet" href="${ctxRoot}/css/dlg.css" />
+</head>
+
+<body>
+    <div id="tooltip"></div>
+    <div class="map-margin" id="map-div">
+        <div class="map-title">
+            <p class="title">重点人员位置图</p>
+        </div>
+        <div id="map">
+        </div>
+    </div>
+    <img src="" alt="四个主要嫌疑人图片" id="fourImg">
+    <div class="right">
+        <div class="radar-margin">
+            <div class="radar-title">
+                <p class="right-title">威胁程度指标图</p>
+            </div>
+            <div id="radar-select">&nbsp;</div>
+            <div class="radar" id="radar-div"></div>
+        </div>
+        <div class="relation-margin">
+            <div class="relation-title">
+                <p class="right-title">关系人分析</p>
+            </div>
+            <div class="relation-control-margin">
+                <div class="relation-control">
+                    <input type="radio" class="relation-select" name="relation-type" checked="checked" id="all" />
+                    <a href="#">全部</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation1" />
+                    <a href="#">同行</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation2" />
+                    <a href="#">同户籍</a>
+                    <input type="radio" class="relation-select" name="relation-type" id="relation3" />
+                    <a href="#">通联</a>
+                </div>
+            </div>
+            <div class="relation" id="relation-div"></div>
+        </div>
+    </div>
+    <div class="bar-margin">
+        <div class="bar-title">
+            <p class="title">重点人员电信/互联网活跃度</p>
+        </div>
+        <div class="bar-control-margin">
+            <div class="bar-control" id="bar-control-div">
+                <!--<input type="radio" class="bar-select" name="bar-type" checked="checked" id="bar-all" />
+                <a href="#">所有</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation1" />
+                <a href="#">电信</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation2" />
+                <a href="#">互联网</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation3" />
+                <a href="#">寄递</a>
+                <input type="radio" class="bar-select" name="bar-type" id="bar-relation4" />
+                <a href="#">出行</a>-->
+            </div>
+        </div>
+        <div class="bar" id="bar-div"></div>
+    </div>
+
+    <script src="/js/components/lib/jquery.js"></script>
+    <script src="/js/components/lib/jquery-ui.js"></script>
+    <script src="/js/components/lib/bootstrap.js"></script>
+    <script src="/js/components/lib/underscore.js"></script>
+
+    <script src="/js/components/gisWidget/gisLibs/ant-line/bezier.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/heatMap/heatmap.min.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/heatMap/leaflet-heatmap.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/ant-line/leaflet-ant-path.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/controls/layer-switch/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="/js/components/gisWidget/manageAimTrackModule/MovingMarker.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/leaflet/plugins/markercluster2/leaflet.markercluster-src.js"></script>
+    <script src="/js/components/gisWidget/gisLibs/marker/leaflet-awesome-marker/leaflet.awesome-markers.js"></script>
+<!--
+    <script src="/js/components/jsc/bootstrap/bootstrap-timepicker.js"></script>
+    <script src="/js/components/jsc/leaflet/LeafletPlayback.js"></script>
+    <script src="/js/components/jsc/traceplay_control/traceplay_control.js"></script>
+-->
+    <script src="${entryRoot}/lmb_taishi.js"></script>
+</body>
+
+</html>

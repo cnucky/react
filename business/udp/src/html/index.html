@@ -1,0 +1,138 @@
+<!-- shim styles -->
+<link rel="stylesheet" href="${root}/css/udp/udp-search.css">
+<link rel="stylesheet" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" href="${root}/css/skin/theme.css">
+<link rel="stylesheet" href="${root}/css/skin/magnific-popup.css">
+<style type="text/css">
+.jqx-filename-cell {
+    text-decoration: underline;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.list-group-header {
+    position: relative;
+}
+
+.list-group-header:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.header-badge {
+    right: 10px;
+    top: 0;
+}
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+window._pageConfig = {
+    title: '全文检索',
+    page: '/udp/search.html'
+}
+</script>
+<section>
+    <div class="container-fluid h60 blue-scoll-bar">
+        <div class="row-fluid">
+            <div class="mw1000 mauto mln20" style="position:relative;padding:20px 0 10px 20px;">
+                <div class="admin-form section mtn10 w600" id="search">
+                    <form id="search-form">
+                        <div class="smart-widget sm-right smr-80">
+                            <label class="field prepend-icon">
+                                <input type="text" name="keyword" id="keyword" class="gui-input" placeholder="关键词">
+                                <label for="keyword" class="field-icon">
+                                    <i class="fa fa-search"></i>
+                                </label>
+                            </label>
+                            <button id="search-button" type="submit" class="button btn-primary">搜索</button>
+                            <ul style="position:absolute;top:0;right:-80px;float:none;height:17px;line-height:17px;padding:0 8px;z-index:10">
+                                <li style="list-style-type: none;margin-top:10px;"><label class="option option-primary ml10" style="font-size: 13px">
+                                    <input id="precisemode" type="checkbox" name="precise" >
+                                    <span class="checkbox"></span>精确</label></li>
+                            </ul>
+                        </div>
+                        <!-- end .smart-widget section -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blue-scoll-bar" style="background: white">
+        <div id="search-result hide">
+            <div id="search-content">
+                <div id="search-wrapper" class="tab-content">
+                    <div class="row">
+                        <div class="col-sm-2 col-lg-2 col-md-2 mt10 blue-scoll-bar" id='result-list'>
+                            <!-- <div class="list-group list-group-links mt10">
+                                <div class="list-group-header"> 检索时间过滤 </div>
+                                <span class="list-group-item"><lable style="font-size: 12px;font-family: Microsoft YaHei, sans-serif;font-weight: normal;color:#000011">业务时间</lable></span>
+                                <div class="input-group date mt5" id="bussiness-date-range">
+                                    <span class="input-group-addon cursor">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="bussiness-date-range-input" placeholder="时间段">
+                                </div>
+                                <span  class="list-group-item"><lable style="font-size: 12px;font-family: Microsoft YaHei, sans-serif;font-weight: normal;color:#000011">导入时间</lable></span>
+                                <div class="input-group date mt5" id="fileload-date-range">
+                                    <span class="input-group-addon cursor">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <input type="text" class="form-control" id="fileload-date-range-input" placeholder="时间段">
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- Classic Search Pane -->
+                        <div class="tab-pane active col-sm-10 col-md-10 col-lg-10 blue-scoll-bar" id='result-col'>
+                            <!-- Begin Search Result Entries -->
+                            <div class="search-result">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-panel" class="content-popup bg-none mfp-with-anim mfp-hide">
+        <div class="panel">
+            <div class="panel-heading">
+                <span class="panel-icon">
+                <i class="fa fa-star"></i>
+              </span>
+                <span class="panel-title">文件内容</span>
+            </div>
+            <div class="panel-body h-500 of-y-a" id="content">
+            </div>
+        </div>
+    </div>
+    <div id="file-panel" class="content-popup bg-none mfp-with-anim mfp-hide">
+        <div class="panel">
+            <div class="panel-body h-600 w400 of-y-a" id="file">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src='${entryRoot}/udp-index.js'></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="../js/components/jqwidgets/jqxsplitter.js"></script>

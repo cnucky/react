@@ -1,0 +1,386 @@
+{
+  "datasearch": {
+    "onekey-search": "One-click Search",
+    "sort-search": "Classfied Query",
+    "template-search": "Pattern Query",
+    "file-search": "File Query",
+    "system-search": "System Query",
+    "dianwei-search": "Enclosure Query",
+    "special-search": "Special Query",
+    "searchall": {
+      "buttons": {
+        "btnBatch": "Batch Query",
+        "btnSingle": "Single Search",
+        "btnSearch": "Query",
+        "btn_import": "Import from File",
+        "btn_map": "Import from Map",
+        "btn_add": "Add",
+        "btn_cancel": "Cancel"
+      },
+      "tab_header": {
+        "li_address": {
+          "text": "Account / Keyword",
+          "tip_s": "Network Account / MSISDN / IMSI / IMEI / Billing Account / Keyword, etc",
+          "tip_b": "An Network Account / MSISDN / IMSI / IMEI / Billing Account / Keyword in each row"
+        },
+        "li_url": {
+          "text": "Website Info",
+          "tip_s": "Host Name / Url",
+          "tip_b": "A host name / url in each row"
+        },
+        "li_ip": {
+          "text": "IP Address / Segment",
+          "tip_s": "Support IPv4 and IPv6, the two IPs in IP segment should be seperated by minus.",
+          "tip_b": "An IP or IP segment in each row, the two IPs in IP segment should be seperated by minus."
+        },
+        "li_lacci": {
+          "text": "Base Station Info",
+          "tip_s": "LAC and CI should be seperated by comma.",
+          "tip_b": "A LAC and a CI in each row, seperated by comma."
+        }
+      },
+      "basestation_table": {
+        "carrier": "Carrier",
+        "carrier_code": "Carrier No.",
+        "base_station": "Base Station",
+        "operation": "Operation"
+      },
+      "labels": {
+        "data_type": "Data Type",
+        "all": "All",
+        "custom": "Customization",
+        "selectall": "Select All",
+        "search_position": "Retrieve Location:",
+        "structured_only": "Protocol Info",
+        "structured_text": "Protocol Info + Text Content"
+      },
+      "js": {
+        "basestation": "Base Station:",
+        "carrier": "Carrier:",
+        "select_basestation": "Select Base Station",
+        "delete": "Delete",
+        "import_warning": "Data already exists or contains errors. Import part data successfully!",
+        "illegal_input": "Illegal Input!",
+        "failed": "Fail to submit!",
+        "succeeded": "Submit successfully!",
+        "wrong_time_range": "Please imput correct time range!",
+        "lack_datacenter": "Please select data center!",
+        "lack_search_position": "Please select retrieval range!",
+        "lack_datatype": "Please data type!",
+        "too_many_conditions": "Too Much Query Conditions",
+        "max_conditions": "Query Conditions Can't Exceed 1000 rows",
+        "batch": "Batch",
+        "one_key_search": "One-click Search",
+        "wrong_address": "Please input Address or Keyword correctly.",
+        "wrong_url": "Please input hostname or URL correctly.",
+        "wrong_ip": "Please input legal IP or IP field",
+        "address": "Address:",
+        "cap_time": "Intercepted Time",
+        "search_position": "Retrieval Range",
+        "one_key_search_type": "One-Click Search Type:",
+        "basestation_exists": "Base station exits!",
+        "address_type": "Address / Keyword",
+        "url_type": "Website Info",
+        "ip_type": "IP Address / Segment",
+        "basestation_type": "Base Station Info",
+        "datatable": {
+          "processing": "Loading hit data...",
+          "lengthMenu": "Display_MENU_data on every page.",
+          "sZeroRecords": "0 record.",
+          "info": "Current _START_ to_END_ items, _TOTAL_ in total.",
+          "search": "Search",
+          "paginate": {
+            "sFirst": "Home Page",
+            "previous": "Previous Page",
+            "next": "Next Page",
+            "sLast": "Final Page"
+          }
+        }
+      },
+      "notify":{
+        "pick-up-success": "提取成功!",
+        "pick-up-faild": "提取失败!",
+        "no-related-diagram": "无关联导图!"
+      }
+    },
+    "datacenter-range": {
+      "return_numbers": "Returned Numbers",
+      "max_numbers": "Max Returned Numbers of Each Data Center:",
+      "datacenter": "Data Center:",
+      "message": {
+        "no-datacenter": "no datacenter right"
+      }
+    },
+    "time-range": {
+      "recent_week": "Recent One Week",
+      "recent_month": "Recent One Month",
+      "recent_halfyear": "Recent Half Year",
+      "recent_year": "Recent One Year",
+      "custom": "Customization",
+      "to": "To",
+      "select_time": "Select Time:"
+    },
+    "search-service": {
+      "failed": "Fail to submit task!",
+      "succeeded": "Submit task successfully!",
+      "checkresult_faild": "check result faild!",
+      "failed_cluelist": "has failed cluelist!",
+      "failed_resourcelist": "resource is insufficient!",
+      "examinfos_failed": "get exam info failed!"
+    },
+    "searchfile": {
+      "labels": {
+        "filetype": "File Type",
+        "office_meta_query": "Office Meta Info",
+        "photo_meta_query": "Picture Meta Info",
+        "file_md5_query": "File MD5",
+        "bin_character_query": "Query Two Digit Feature",
+        "similar_picture_query": "Similar Picture Query",
+        "fax_note_query": "Fax Handwriting Query",
+        "voice_query": "Voice Feature Query",
+        "search_range": "Query Range",
+        "file_md5": "File MD5",
+        "search_conditions": "Query Conditions",
+        "file_name": "File Name:",
+        "client_ip": "Client IP:",
+        "server_ip": "Server IP:",
+        "office_title": "Tittle:",
+        "office_author": "Author:",
+        "office_company": "Company:",
+        "office_template": "Template:",
+        "file_postfix": "File Extensions:",
+        "app_device": "App/Device:",
+        "long_lat": "Coordinate:"
+      },
+      "buttons": {
+        "btnSearch": "Query",
+        "btn_import": "Import from File",
+        "btn_map": "Import from Map",
+        "batch_import": "Batch Input MD5 Value",
+        "pick_file": "Select a file for calculation."
+      },
+      "message": {
+        "not_authorized": "Fail to judeg authority!",
+        "lack_datacenter": "Please select data center!",
+        "wrong_time_range": "Please select correct time range.",
+        "failed": "Fail to submit!",
+        "succeeded": "Submit successfully!!"
+      },
+      "title": {
+        "coordinate_position": "Select Coordinate Range:",
+        "longitude": "Longitude:",
+        "latitude": "Latitude:",
+        "longitude_range": "Longitude Range",
+        "latitude_range": "Latitude Range"
+      },
+      "text": {
+        "file_search": "File Query:",
+        "cap_time": "Intercepted Time:",
+        "md5_placeholder": "One MD5 value in each row. You can import from pre-edited file or just select local file,of which the MD5 value will be calculated by the system."
+      }
+    },
+    "search-validation": {
+      "wrong_ip": "Please enter correct IP address!",
+      "wrong_email": "Please enter correct Email address!",
+      "wrong_number": "Please enter correct number!",
+      "wrong_int": "Please enter correct integer!",
+      "wrong_time": "Please enter correct time!"
+    },
+    "searchsort": {
+      "button": {
+        "search": "Query"
+      },
+      "group-name": {
+        "search-range": "Query Range"
+      },
+      "notify-title": {
+        "input-right-num-range": "Please enter correct range!",
+        "choose-datacenter": "Please select data center!"
+      },
+      "param-str": {
+        "cap-time": "Intercepted Time:"
+      }
+    },
+    "protocol-checkbtn": {
+      "label": {
+        "data-type": "Data Type",
+        "use-vpn": "Use VPN"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "Select All",
+        "non-selected-text": "Not Selected",
+        "selected-text": "Selected",
+        "all-selected-text": "All"
+      },
+      "tag-multi-select-param": {
+        "placeholder": "Please click to select"
+      },
+      "message": {
+        "no-data-type": "no datatype right"
+      }
+    },
+    "searchtemplate": {
+      "aside": {
+        "title": "Select Pattern",
+        "subtitle": "Select existed pattern or create new pattern.",
+        "create-template": "Create Pattern",
+        "existing-template": "Existed Pattern"
+      },
+      "button": {
+        "save": "Save",
+        "save-as": "Save as",
+        "delete": "Delete",
+        "search": "Query",
+        "clear-template": "Clear Pattern"
+      },
+      "label": {
+        "can-edit": "Editable",
+        "template-name": "Pattern Name",
+        "use-vpn": "Use VPN"
+      },
+      "text": {
+        "input-template-name": "Please enter pattern name."
+      },
+      "notify-title": {
+        "get-template-list-faild": "Fail to obtain pattern list.",
+        "add-template-success": "Add successfully!",
+        "add-template-faild": "Fail to add!",
+        "del-template-success": "Delete successfully!",
+        "del-template-faild": "Fail to delete!",
+        "update-template-success": "Refresh successfully!",
+        "update-template-faild": "Fail to refresh!",
+        "get-template-condition-faild": "Fail to obtain pattern content!",
+        "get-datatype-faild": "Fail to obtain protocol classfication!",
+        "get-opt-type-faild": "Fail to obtain operation type!",
+        "get-dropdown-item-faild": "Fail to obtain drop down items.",
+        "choose-datacenter": "Please select data center!",
+        "input-condition": "Please input query conditions.",
+        "input-template-name": "Please input pattern name!",
+        "input-wrong": "Error in input format!",
+        "template-is-empty": "Empty pattern content!"
+      },
+      "dialog-title": {
+        "prompt": "Prompt",
+        "change-template": "Change pattern type. Unsaved pattern content will be deleted!",
+        "is-clear-template": "Clear Pattern?",
+        "template-save-as": "Save as"
+      },
+      "bootbox-msg": {
+        "is-del": "Delete?"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "Select All",
+        "non-selected-text": "Not Selected",
+        "selected-text": "Selected",
+        "all-selected-text": "All"
+      },
+      "param-str": {
+        "cap-time": "Intercepted Time:"
+      },
+      "template-bar": {
+        "relation": "Relation",
+        "condition": "Conditions"
+      }
+    },
+    "searchsystem": {
+      "aside": {
+        "file-type": "File Type",
+        "dianwei-search": "Enclosure Query"
+      }
+    },
+    "searchdianwei": {
+      "title": {
+        "search-range": "Query Range",
+        "search-condition": "Query Conditions"
+      },
+      "button": {
+        "search": "Query",
+        "delete": "Delete"
+      },
+      "label": {
+        "search-type": "Query Type",
+        "num-type": "Number Query",
+        "number": "Telephone Number",
+        "imsi": "IMSI",
+        "imei": "IMEI",
+        "num-content": "Number Content",
+        "match-side": "Match Loaction",
+        "user": "Local End",
+        "oppo": "Opposite End",
+        "user-country": "User Home Country",
+        "user-area": "User Home Region",
+        "oppo-country": "Opposite Home Country",
+        "oppo-area": "Opposite Home Region",
+        "bs-info": "Base Station Info",
+        "sms-content": "SMS Content"
+      },
+      "display-attr": {
+        "number": "Number",
+        "imsi": "User IMSI",
+        "imei": "User IMEI",
+        "user": "User",
+        "oppo": "Opposite End",
+        "user-country": "User Home Country",
+        "user-area": "User Home Region",
+        "oppo-country": "Opposite Home Country",
+        "oppo-area": "Opposite Home Region",
+        "sms-content": "SMS Content"
+      },
+      "text": {
+        "import-from-file": "Import from",
+        "one-each-line": "One per row",
+        "msc-code": "Switch Code",
+        "in-20": "Within 20 character"
+      },
+      "search-type": {
+        "number-search": "Number Query",
+        "area-search": "Home Location Query",
+        "bs-search": "Base StationQuery",
+        "sms-search": "SMS Query"
+      },
+      "notify-title": {
+        "choose-datacenter": "Please select data center!",
+        "input-number": "Please input number!",
+        "choose-num-side": "Please select match location !",
+        "choose-country-or-area": "Please select country or region!",
+        "only-country-or-area": "Only allow to select country or region!",
+        "basestation-already-exist": "Base station already existed!",
+        "part-data-import-success": "Data existed or errors. Import part data successfully!",
+        "input-basestation-info": "Please input base staion info.!",
+        "too-much-search-condition": "Too Much Query Conditions",
+        "cannot-greater-than-1000": "Query conditions can't exceed 1000 rows!",
+        "input-sms-content": "Please enter SMS content!",
+        "sms-content-too-long": "Input too long content (must within 20 characters)!"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "Select All",
+        "non-selected-text": "Not Selected",
+        "selected-text": "Selected",
+        "all-selected-text": "All"
+      },
+      "datatable": {
+        "processing": "Loading hit data",
+        "lengthMenu": "Display_MENU_data on every page.",
+        "sZeroRecords": "0 data",
+        "info": "Current _START_ to_END_ items, _TOTAL_ in total.",
+        "search": "Search",
+        "sFirst": "Home Page",
+        "previous": "Previous Page",
+        "next": "Next Page",
+        "sLast": "Final Page",
+        "carrier": "Carrier",
+        "carrier-code": "Carrier Code",
+        "base-station": "Base Station",
+        "msc-code": "Switch Code",
+        "operation": "Operation"
+      },
+      "param-str": {
+        "cap-time": "Intercepted Time:",
+        "carrier-code": "Carrier Code",
+        "user-msc": "User Switch Code",
+        "user-bs": "User Current Base Station",
+        "bs-info": "Base Station Info."
+      }
+    }
+  }
+}

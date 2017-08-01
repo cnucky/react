@@ -1,0 +1,148 @@
+<div class="admin-form">
+    <form id="form-advancedset-dialog">
+        <div class="panel">
+            <div class="panel-heading hide" style="padding: 0px 0px 0px 0px">
+                <div class="widget-menu ml10 mb10">
+                    <span><i class='glyphicon glyphicon-star' style='color: red'></i></span>
+                    <label>当前操作：</label>
+                    <label id="oprlabel" style="color: lightcoral; font-weight: bolder"></label>
+
+                    <div class="widget-menu ml10 mb10 pull-right" id="btn-group-editmode">
+                        <a type="button" id="btn-advanced-set" class="btn btn-sm btn-system ph10 mr5">
+                            <span class="fa fa-cogs pr5"></span>
+                            高级设置
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body" style="padding: 3px 0px 10px 0px">
+                <div class="col-sm-12">
+                    <div class="panel heading-border" style="width:99.9%; margin: 0 auto;">
+                        <div class="panel-heading pn h-30" style="background-color:lavender">
+                            <h6 class="ml5" style="color: #1C1C1C">基础设置</h6>
+                        </div>
+                        <div class="panel-body pn">
+                            <div class="col-sm-12">
+                                <div class="col-sm-5 form-horizontal mt10" style="width: 45%;">
+                                    <div class="form-group" style="margin-bottom: 8px;">
+                                        <label class="col-sm-2 control-label"
+                                               style="font-size:14px; padding: 10px 0px 10px 0px;width:120px">分中心名称</label>
+
+                                        <div class="col-sm-8" style="width: 200px;">
+                                            <div class="bs-component">
+                                                <select id="center-select" class="font-size:14px; select2-white form-control edit lock-edit"
+                                                        style="height: 40px;">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group hide"  id="index-partition-field-div" style="margin-bottom: 8px;">
+                                        <label class="col-sm-2 control-label"
+                                               style="padding: 10px 0px 10px 0px;width:120px">索引分库字段名称</label>
+
+                                        <div class="col-sm-8" style="width: 200px;">
+                                            <div class="bs-component">
+                                                <select id="index-partition-field" class="select2-white form-control edit lock-edit"
+                                                        style="height: 40px;">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom: 8px;">
+                                        <div class="checkbox-custom checkbox-primary mt10 "
+                                             style="padding-left: 14%; color:#1e2028">
+                                            <input type="checkbox" id="fieldTypeCheck" class="edit">
+                                            <label for="fieldTypeCheck" style="font-size:14px; ">是否进行字段类型检测</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-5 form-horizontal mt10" style="width: 54%;">
+
+                                    <div class="form-group" style="margin-bottom: 8px;">
+                                        <label class="col-sm-2 control-label"
+                                               style="font-size:14px; padding: 10px 0px 10px 0px;width:150px">业务时间字段名称</label>
+
+                                        <div class="col-sm-8" style="width: 220px;">
+                                            <div class="bs-component">
+                                                <select id="business-field-select" class="select2-white form-control edit lock-edit"
+                                                        style="height: 40px;">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom: 8px;">
+                                        <div class="checkbox-custom checkbox-primary mt10"
+                                             style="padding-left: 8%; color:#1e2028">
+                                            <input type="checkbox" checked id="metaCheck" class="edit">
+                                            <label for="metaCheck" style="font-size:14px;" title="解析数据，将数据里的Tab、换行符进行转义">是否进行元字符转义</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group hide" id="index-id-field-div" style="margin-bottom: 8px;">
+                                        <label class="col-sm-2 control-label"
+                                               style="padding: 10px 0px 10px 0px;width:150px">索引唯一标识字段名称</label>
+
+                                        <div class="col-sm-8" style="width: 220px;">
+                                            <div class="bs-component">
+                                                <select id="index-id-field" class="select2-white form-control edit lock-edit"
+                                                        style="height: 40px;">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt10">
+                    <div class="panel heading-border" style="width:99.9%; margin: 0 auto">
+                        <div class="panel-heading pn h-30" style="background-color: lavender">
+                            <h6 class="ml5" style="color: #1C1C1C">分区策略设置</h6>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table table-striped table-hover" id="partition-policy-table" cellspacing="0"
+                                   width="100%" style="font-size: 13px;">
+                                <thead>
+                                <tr>
+                                    <!--<th class="hide" style="text-align: center;color: #3498db;font-weight: bold;width:50px">序号</th>-->
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:150px">字段名称</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:120px">策略类型</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:130px">标识</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:120px">取值位数</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:120px">取模基数</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:120px">逻辑类型</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">长度</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">精度</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-footer text-right" style="padding: 5px 5px 5px 0px">
+                <div class="container-fluid">
+                    <div class="row">
+                        <span class="btn btn-sm btn-success" id="btn-add-policy"><i class="fa fa-plus"></i></span>
+                        <span class="btn btn-sm btn-danger" id="btn-delete-policy"><i class="fa fa-minus"></i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

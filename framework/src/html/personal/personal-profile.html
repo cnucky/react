@@ -1,0 +1,115 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+<style type="text/css">
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '个人信息'
+};
+</script>
+<section id="content" class=" animated fadeIn">
+    <div class="page-heading" style="background-color:#ffffff;">
+        <div class="media clearfix">
+            <div class="media-left pr30">
+                <a href="javascript:void(0);">
+                    <img id="profile-avatar" class="media-object mw80" src="/img/avatar-placeholder.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body va-m">
+                <h3 class="media-heading">
+                    <a href="javascript:void(0);">
+                        <span id="profile-name">--</span>
+                    </a>
+                    <small class="ml10">
+                        <span class="fa fa-credit-card"></span>
+                        <span id="profile-cert">--</span>
+                    </small>
+                </h3>
+                <div class="mt10">
+                    <a href="javascript:void(0);">
+                        <span class="fa fa-building hidden"></span>
+                        <span id="profile-department">--</span>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <span class="fa fa-map-marker hidden ml10"></span>
+                        <span id="profile-address">--</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel pn">
+                <div class="panel-heading">
+                    <span class="panel-icon">
+                        <i class="fa fa-info-circle"></i>
+                    </span>
+                    <span class="panel-title">详细信息</span>
+                    <span class="panel-controls">
+                        <a href="javascript:void(0);" class="panel-control-title" id="edit-profile"></a>
+                    </span>
+                </div>
+                <div class="panel-body" style="height: 580px;">
+                    <div class="admin-form ">
+                        <form id="user-info-form">
+                            <table class="table table-hover mbn tc-med-1 tc-fs13-last">
+                                <tbody id="personal-info-item">
+                                </tbody>
+                            </table>
+                            <div class="text-right" id="user-edit-footer" style="display: none">
+                                <button id="cancel-edit-user" class="btn btn-default btn-sm ph15 mr5" type="button">取消</button>
+                                <button id="complete-edit-user" class="btn btn-primary btn-sm ph15" type="button">完成</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel">
+                <div class="panel-heading">
+                    <ul class="nav panel-tabs-border panel-tabs panel-tabs-left">
+                        <li class="active" style="min-width: 115px">
+                            <a href="#tab1" data-toggle="tab"><i class="fa fa-tasks"></i> 一般任务</a>
+                        </li>
+                        <li style="min-width: 115px">
+                            <a href="#tab2" data-toggle="tab"><i class="fa fa-puzzle-piece"></i> 人立方</a>
+                        </li>
+                        <li style="min-width: 115px">
+                            <a href="#tab3" data-toggle="tab"><i class="fa fa-male"></i> 关系图谱</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-body p20" style="height: 580px;">
+                    <div class="tab-content pn br-n">
+                        <div id="tab1" class="tab-pane active">
+                            <label>一般任务</label>
+                            <table id="normal-table" class="table table-bordered table-hover mbn mt10 tc-med-1 tc-fs13-last">
+                                <tbody id="normal-item">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab2" class="tab-pane">
+                            <label>人立方最近搜索</label>
+                            <table id="renlifang-table" class="table table-bordered table-hover mbn mt10 tc-med-1 tc-fs13-last">
+                                <tbody id="search-item">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab3" class="tab-pane">
+                            <label>关系图谱最近任务</label>
+                            <table id="relationship-table" class="table table-bordered table-hover mbn mt10 tc-med-1 tc-fs13-last">
+                                <tbody id="relationship-item">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="${entryRoot}/js/personal-profile.js"></script>

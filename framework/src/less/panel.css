@@ -1,0 +1,50 @@
+ /*异常详情列表样式*/
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #e7505a;
+    border-color: #337ab7;
+}
+
+
+ /*开关样式*/
+   .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+       color: #fff;
+       background: #e7505a;
+   }
+
+ /*设置面板中字体样式*/
+   .note p, .page-loading, .panel .panel-body {
+       font-size: 18px;
+   }
+
+  /*modal样式调整*/
+ .modal-content {
+     background: url("../img/background/1.jpg") rgba(0,0,0,0.4);
+     color: white;
+     border-color: steelblue;
+ }
+
+
+ .modal-body{
+        padding: 0px !important;
+    }
+
+ .close {
+     float: right;
+     font-size: 25px;
+     font-weight: bold;
+     line-height: 1;
+     color: white !important;
+     text-shadow: 0 1px 0 #fff;
+     filter: alpha(opacity=20);
+     opacity: 0.8;
+ }
+
+ .modal_close {
+     color: white;
+     float: right;
+     background: transparent;
+     border: none;
+     font-size: 25px;
+     margin-top: -8px;
+ }

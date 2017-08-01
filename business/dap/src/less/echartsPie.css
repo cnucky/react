@@ -1,0 +1,10 @@
+.echarts div.pie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 
+.echarts div.grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 

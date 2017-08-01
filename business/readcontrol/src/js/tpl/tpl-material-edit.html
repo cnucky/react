@@ -1,0 +1,107 @@
+<style type="text/css">
+    .form-control-label{
+        font-size: 12px;
+        text-align: left;
+        padding-top: 7px;
+        padding-left: 1px;
+        padding-right: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-bottom: 0;
+    }
+    .form-input{
+        font-size: 11px;
+        text-align: left;
+        padding-left: 1px;
+        padding-right: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    .form-group{
+        margin-bottom: 5px;
+    }
+    .other-info-edit{
+        position: relative;
+        min-height: 100%;
+        padding: 15px;
+    }
+    #materialcontent .note-toolbar .btn{  height: 28px;}
+    #materialcontent .panel-heading{
+        height: 45px;
+        line-height: 45px;
+        background: #fff;
+        border-right: none;
+        min-width: 310px;
+    }
+    #materialcontent .panel-heading.note-toolbar>.btn-group{
+        margin-top: 0px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+</style>
+<div>
+    <div class="pn of-h">
+        <div class="summernote">
+        </div>
+    </div>
+    <div id="material-otherinfo-edit" class="pt10 readCont" style="display: block; float:right; width:300px;">
+        <form id="" class="form-horizontal" role="role" novalidate='novalidate'>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <div class="form-group pl5">
+                            <label class="form-control-label col-xs-4" for="input-callername" data-i18n="dataprocess.spyprocess.materiallabel.maincallman"></label>
+                            <div class="col-xs-7 form-input">
+                                <input type="text" class="form-control input-sm" id="input-callername"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="form-group pr5">
+                            <label class="col-xs-4 form-control-label" for="select-callersex" data-i18n="dataprocess.spyprocess.materiallabel.sex"></label>
+                            <div class="col-xs-7 form-input">
+                                <select id="select-callersex" class="select2-single form-control input-sm">
+                                    <option value="">&nbsp</option>
+                                    <option value="0" data-i18n="dataprocess.spyprocess.materiallabel.male"></option>
+                                    <option value="1" data-i18n="dataprocess.spyprocess.materiallabel.female"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-7">
+                        <div class="form-group pl5">
+                            <label class="form-control-label col-xs-4" for="input-receivername" data-i18n="dataprocess.spyprocess.materiallabel.calledman"></label>
+                            <div class="col-xs-7 form-input">
+                                <input type="text" class="form-control input-sm" id="input-receivername">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="form-group pr5">
+                            <label class="col-xs-4 form-control-label" for="select-receiversex" data-i18n="dataprocess.spyprocess.materiallabel.sex"></label>
+                            <div class="col-xs-7 form-input">
+                                <select id="select-receiversex" class="select2-single form-control input-sm">
+                                    <option value="">&nbsp</option>
+                                    <option value="0" data-i18n="dataprocess.spyprocess.materiallabel.male"></option>
+                                    <option value="1" data-i18n="dataprocess.spyprocess.materiallabel.female"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-7">
+                        <div class="form-group pl5">
+                            <label class="col-xs-4 form-control-label" for="input-language" data-i18n="dataprocess.spyprocess.materiallabel.language"></label>
+                            <div class="col-xs-7 form-input">
+                                <input type="text" class="form-control input-sm" id="input-language">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

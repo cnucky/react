@@ -1,0 +1,167 @@
+<!--<h3 class="form-section">图片元信息</h3>-->
+<h3 style="color: #3498db;" data-i18n="datasearch.searchfile.labels.search_conditions"></h3>
+<hr class="alt short">
+
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.long_lat"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" condition_item="MT_LONGITUDE"  data-i18n="[title]datasearch.searchfile.title.longitude_range" class="search-condition-tuderange">
+                                <tr>
+                                    <td valign="top">
+                                        <div class="input-div">
+                                            <input type="text" id="LongitudeFrom" name="LongitudeFrom" class="form-control search-condition-textrange-from "
+                                                   style="border-radius: 4px;"  data-i18n="[placeholder]datasearch.searchfile.title.longitude_range">
+                                        </div>
+
+                                    </td>
+                                    <td valign="top" style="width: 10px">
+                                        <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                                    </td>
+                                    <td valign="top">
+                                        <div class="input-div">
+                                            <input type="text" id="LongitudeTo" name="LongitudeTo" class="form-control search-condition-textrange-to "
+                                                   style="border-radius: 4px;"  data-i18n="[placeholder]datasearch.searchfile.title.longitude_range">
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top" style="width: 10px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666"></span>
+
+                        </td>
+                        <td>
+                            <table style="width: 100%" condition_item="MT_LATITUDE"  data-i18n="[title]datasearch.searchfile.title.longitude_range"  class="search-condition-tuderange">
+                                <tr>
+                                    <td valign="top">
+                                        <div class="input-div">
+                                            <input type="text" id="LatitudeFrom" name="LatitudeFrom" class="form-control search-condition-textrange-from "
+                                                   style="border-radius: 4px;"  data-i18n="[placeholder]datasearch.searchfile.title.latitude_range">
+                                        </div>
+
+                                    </td>
+                                    <td valign="top" style="width: 10px">
+                                        <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                                    </td>
+                                    <td valign="top">
+                                        <div class="input-div">
+                                            <input type="text" id="LatitudeTo" name="LatitudeTo" class="form-control search-condition-textrange-to "
+                                                   style="border-radius: 4px;"  data-i18n="[placeholder]datasearch.searchfile.title.latitude_range">
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top" style="width: 30px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666">
+                                <i id="mapbutton"  class="glyphicons glyphicons-google_maps btn-link" style="cursor:hand;margin-top:-5px;font-size: x-large"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.app_device"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <input type="text" class="form-control search-condition-text" id="txtPhotoCamera" condition_item="MT_APPLICATION"
+                       placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.file_postfix"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <input type="text" class="form-control search-condition-text" id="txtPostfix" condition_item="MT_FILE_EXT"
+                       placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left" data-i18n="datasearch.searchfile.labels.client_ip"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+
+                <table style="width: 100%" condition_item="CLIENT_IP" class="search-condition-textrange search-condition-iprange">
+                    <tr>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="clientIpFrom" name="clientIpFrom" class="form-control search-condition-textrange-from search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+
+                        </td>
+                        <td valign="top" style="width: 10px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                        </td>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="clientIpTo" name="clientIpTo" class="form-control search-condition-textrange-to search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section mv5">
+    <div class="row">
+        <label class="control-label col-md-1" style="text-align: left"  data-i18n="datasearch.searchfile.labels.server_ip"></label>
+
+        <div class="col-md-11">
+            <div class="bs-component ">
+                <table style="width: 100%" condition_item="SERVER_IP" class="search-condition-textrange search-condition-iprange">
+                    <tr>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="serverIpFrom" name="serverIpFrom" class="form-control search-condition-textrange-from search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+
+                        </td>
+                        <td valign="top" style="width: 10px">
+                            <span class="input-group-addon" style="border: none; background: none; color: #666">—</span>
+
+                        </td>
+                        <td valign="top">
+                            <div class="input-div">
+                                <input type="text" id="serverIpTo" name="serverIpTo" class="form-control search-condition-textrange-to search-input-ip"
+                                       style="border-radius: 4px;" placeholder="">
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

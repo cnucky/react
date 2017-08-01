@@ -1,0 +1,15 @@
+<div class='group-container shadow-box' id='<%-groupId%>'>
+    <div class="group-line">
+    	<span class='group-name'><%-groupName%></span>
+    	<i class='edit-span fa fa-edit' data-toggle='tooltip' data-original-title='编辑组名'></i>
+    	<i class='group-clear fa fa-eraser' data-toggle='tooltip' data-original-title='清空该分组'></i>
+    	<i class='group-remove fa fa-times' data-toggle='tooltip' data-original-title='清空并移除该分组'></i>
+    </div>
+    <ul class='group-list'>
+        <%_.each(items,function(item){%>
+            <li class='group-item' id='<%-item.itemId%>'>
+                <span class='media'><%-item.itemName%></span><i class='remove-span fa fa-times'></i>
+            </li>
+            <%})%>
+    </ul>
+</div>

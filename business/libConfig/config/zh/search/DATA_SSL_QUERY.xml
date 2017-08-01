@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_SSL" DisplayName="SSL应用识别">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="应用信息">
+            <Condition Item="SERVICE_TYPE" DisplayName="应用类别" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_SERVICE_TYPE_SSL"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="SSL信息">
+            <Condition Item="ENCRYPT_ALGORITHM" DisplayName="加密算法" ControlType="Text"/>
+            <Condition Item="DATA_COMPRESS_ALGORITHM" DisplayName="数据压缩算法" ControlType="Text"/>
+            <Condition Item="CERT_HOST_NAME" DisplayName="证书使用者主机名" ControlType="Text"/>
+            <Condition Item="CERT_ORG_NAME" DisplayName="证书使用者机构名" ControlType="Text"/>
+            <Condition Item="CERT_ISSUER_HOST_NAME" DisplayName="证书颁发服务器" ControlType="Text"/>
+            <Condition Item="CERT_ISSUER_ORG_NAME" DisplayName="证书颁机构" ControlType="Text"/>
+            <Condition Item="SERVER_CERT_MD5" DisplayName="服务端证书MD5" ControlType="Text"/>
+            <Condition Item="CLIENT_CERT_MD5" DisplayName="客户端证书MD5" ControlType="Text"/>
+            <Condition Item="CERT_MD5" DisplayName="证书MD5" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="数据标签">
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVICE_TYPE" DisplayName="应用类别" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_SERVICE_TYPE_SSL"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="ENCRYPT_ALGORITHM" DisplayName="加密算法" ControlType="Text"/>
+            <Condition Item="DATA_COMPRESS_ALGORITHM" DisplayName="数据压缩算法" ControlType="Text"/>
+            <Condition Item="CERT_HOST_NAME" DisplayName="证书使用者主机名" ControlType="Text"/>
+            <Condition Item="CERT_ORG_NAME" DisplayName="证书使用者机构名" ControlType="Text"/>
+            <Condition Item="CERT_ISSUER_HOST_NAME" DisplayName="证书颁发服务器" ControlType="Text"/>
+            <Condition Item="CERT_ISSUER_ORG_NAME" DisplayName="证书颁机构" ControlType="Text"/>
+            <Condition Item="SERVER_CERT_MD5" DisplayName="服务端证书MD5" ControlType="Text"/>
+            <Condition Item="CLIENT_CERT_MD5" DisplayName="客户端证书MD5" ControlType="Text"/>
+            <Condition Item="CERT_MD5" DisplayName="证书MD5" ControlType="Text"/>
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

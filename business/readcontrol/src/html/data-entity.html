@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Loading...</title>
+    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="ByUTech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/loaders.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/nova.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/dataprocess.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/glyphicons-pro/glyphicons-pro.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.bootstrap.css">
+    <!-- Dialog样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/skin/magnific-popup.css">
+    <!-- 卡片样式 -->
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/cardlist.css">
+    <!-- 右键菜单需要的样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/skin/jquery-contextmenu-improve.css">
+    <!-- 分页样式 -->
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/pagination.css">
+
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/data-entity.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../js/utility/fuckie/html5shiv.js"></script>
+    <script src="../js/utility/fuckie/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="../js/components/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/components/lib/jquery.history.js"></script>
+    <script type="text/javascript" src="../js/components/i18next/i18next.js"></script>
+    <script type="text/javascript" src="../js/components/jquery-i18next/jquery-i18next.js"></script>
+    <script type="text/javascript" src="../js/components/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/components/lib/underscore.js"></script>
+    <script type="text/javascript" src="../js/components/lib/q.min.js"></script>
+    <script src="../js/vendor.js"></script>
+
+</head>
+<body style="background: #fff;">
+<div id="mobile-main" class="flex-layout flex-vertical" >
+    <section id="fullscreen-loader">
+        <div class="loader-container">
+            <div class="loader-inner line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="loader-close hidden" onclick="javascript:hideLoader()">
+                <i class="glyphicon glyphicon-off"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="content_wrapper2">
+
+        <div id="mobile-panel" style="overflow-y: auto; overflow-x: auto;">
+            <div class="list-panel">
+                <div >
+                    <div id="mobile-list-panel" class="ui-thumbview" ></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="mobile-pagination" class="pagination" style="width:100%;margin-bottom:-26px;text-align: right;"></div>
+    </section>
+</div>
+<script type="text/javascript" src="../js/components/summernote/summernote.min.js"></script>
+<script type="text/javascript" src="../js/components/summernote/summernote-zh-CN.js"></script>
+<script type="text/javascript" src="../js/components/peaks/peaks.min.js"></script>
+
+<script type="text/javascript" src="/dataprocess/js/data-entity.js"></script>
+<script type="text/javascript">
+    String.prototype.format=
+            function (args){
+                if(arguments.length==0){
+                    return this;
+                }
+
+                var result=this;
+                if(arguments.length==1 && typeof(args)=="object" )
+                {
+                    for(var key in args)
+                    {
+                        var reg=new RegExp("({" + key+"})","g");
+                        result=result.replace(reg,args[key]);
+                    }
+                }
+                else {
+                    for(var i=0;i<arguments.length;i++){
+                        if(arguments[i]==undefined)
+                        {
+                            return "";
+                        }
+                        else{
+                            var reg=new RegExp("({[" + i+"]})","g");
+                            result=result.replace(reg,arguments[i]);
+                        }
+                    }
+                }
+
+                return result;
+            };
+</script>
+</body>
+</html>

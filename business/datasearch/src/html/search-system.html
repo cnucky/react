@@ -1,0 +1,56 @@
+<!-- shim -->
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.win8.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/datatables.bootstrap.css">
+
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons-pro/glyphicons-pro.css">
+
+<link rel="stylesheet" type="text/css" href="${ctxRoot}/css/protocol-checkbtn.css">
+
+<!-- end shim -->
+
+<section id="content" class="table-layout animated fadeIn">
+
+    <!-- begin: .tray-left -->
+
+
+    <aside class="tray tray-left tray200">
+        <h4 data-i18n="[append]datasearch.searchsystem.aside.system-type"></h4>
+
+        <div id="nav-spy">
+            <ul class="nav tray-nav tray-nav-border" >
+                <li class="active">
+                    <a href="#tab-pane" class="tab_header" func_type="dianwei" template="tpl_dianwei_search"
+                       postUrl="/datasearch/dianwei_search" protocol="DATA_DMT"
+                       data-i18n="[append]datasearch.searchsystem.aside.dianwei-search">
+                        <span class="fa fa-search fa-lg"></span> </a>
+                </li>
+                <!--<li>
+                    <a href="#tab-pane" class="tab_header" template="tpl_photo" postUrl="/search/photo_meta_search_post"
+                       protocol="DATA_PMT">
+                        <span class="fa fa-search fa-lg"></span> bbb查询</a>
+                </li>-->
+
+            </ul>
+        </div>
+    </aside>
+    <!-- end: .tray-left -->
+    <!-- begin: .tray-center -->
+    <div class="tray tray-center">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-pane"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end: .tray-center -->
+
+</section>
+
+
+<script type="text/javascript" src="${entryRoot}/search-system.js"></script>

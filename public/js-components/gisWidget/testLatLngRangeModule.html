@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>WebGis</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="http://192.168.19.115:8080/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="./getLatLngRangModule/getLatLngRangModuleCSS.css">
+    <link rel="stylesheet" type="text/css" herf="http://192.168.19.115:8080/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" herf="http://192.168.19.115:8080/bootstrap/bootstrap-theme.min.css">
+
+    <script src="http://192.168.19.115:8080/leaflet/0.7.7/leaflet.js"></script>
+    <script src="http://192.168.19.115:8080/esri-leaflet-1.0.0/esri-leaflet.js"></script>
+    <script src="http://192.168.19.115:8080/jquery/jquery.min.js"></script>
+    <script src="http://192.168.19.115:8080/bootstrap/bootstrap.min.js"></script>
+    <script src="http://192.168.19.115:8080/leaflet/plugins/markercluster/dist/leaflet.markercluster-src.js"></script>
+    <script src="http://192.168.19.115:8080/leaflet/selfDefination/esri-leaflet-clustered-feature-layer.js"></script>
+    <script src="./leaflet.toolbar-src.js"></script>
+    <script src="./getLatLngRangModule/getLatLngRangModule.js"></script>
+    <script src="./getLatLngRangModule/leaflet.drawSimpleRectangle-src.js"></script>
+
+    <style>
+        #map {
+            height: 100%;
+            min-height: 190px;
+        }
+        .functionPanel-out
+        {
+            position: relative;
+            width: 315px;
+            float: right;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 100%;top:0;bottom: 0px;left: 0px;position: absolute;width: 100%">
+
+    <div class="functionPanel-out" id="out-panel">
+
+        <div id="getLatLngRangPanel" style="display: none;"></div>
+
+    </div>
+
+    <div id="map">
+    </div>
+</div>
+
+<script>
+var userID = "2";
+var map;
+var showPanelID = "setPositionPanel";
+showMap();
+addGetLatLngRange();
+
+function showMap() {
+
+    map = L.map('map').setView([39, 105], 5);
+    L.esri.tiledMapLayer({
+        url: "http://192.168.19.115:8080/GJAQ_Service/arcgis/rest/services/world_satellite/MapServer"
+    }).addTo(map);
+}
+
+function addGetLatLngRange()
+{
+    var toolbar = new L.control.toolbar({
+        collapsed:true,
+        position:'topright',
+        autoZIndex:true
+    });
+    toolbar.addTo(map);
+
+    var getLatLngRangeButton = new getLatLngRange({panelParentID:"getLatLngRangPanel"});
+    getLatLngRangeButton.addTo(toolbar);
+}
+
+</script>
+</body>
+</html>

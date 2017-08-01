@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-lg-2 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.user-country">:</label>
+
+            <div class="col-lg-9">
+                <div class="bs-component ">
+                    <select id="user_country" class="dropdown-multi-select search-condition-multiselect" code="USER_BELONG_COUNTRY_CODE"
+                            data-i18n="[display]datasearch.searchdianwei.display-attr.user-country" multiple="multiple">
+                        <% _.each(Country, function(item) { %>
+                        <option value="<%- item.name %>"><%- item.desc %></option>
+                        <% }) %>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-lg-2 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.user-area">:</label>
+
+            <div class="col-lg-9">
+                <div class="bs-component ">
+                    <select id="user_area" class="dropdown-multi-select search-condition-multiselect" code="USER_BELONG_AREA_CODE"
+                            data-i18n="[display]datasearch.searchdianwei.display-attr.user-area" multiple="multiple">
+                        <% _.each(Area, function(item) { %>
+                        <option value="<%- item.name %>"><%- item.desc %></option>
+                        <% }) %>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-lg-2 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.oppo-country">:</label>
+
+            <div class="col-lg-9">
+                <div class="bs-component ">
+                    <select id="oppo_country" class="dropdown-multi-select search-condition-multiselect" code="OPPO_BELONG_COUNTRY_CODE"
+                            data-i18n="[display]datasearch.searchdianwei.display-attr.oppo-country" multiple="multiple">
+                        <% _.each(Country, function(item) { %>
+                        <option value="<%- item.name %>"><%- item.desc %></option>
+                        <% }) %>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label style="text-align: left;" class="col-lg-2 control-label"
+                   data-i18n="[prepend]datasearch.searchdianwei.label.oppo-area">:</label>
+
+            <div class="col-lg-9">
+                <div class="bs-component ">
+                    <select id="oppo_area" class="dropdown-multi-select search-condition-multiselect" code="OPPO_BELONG_AREA_CODE"
+                            data-i18n="[display]datasearch.searchdianwei.display-attr.oppo-area" multiple="multiple">
+                        <% _.each(Area, function(item) { %>
+                        <option value="<%- item.name %>"><%- item.desc %></option>
+                        <% }) %>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

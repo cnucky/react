@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<CONFIG DATA_TYPE="DATA_TL" VERSION="20160918">
+    <UI_CONFIG>
+        <FILE_LAYOUT POISITION="RIGHT" BOTTOM_PX="400" RIGHT_PX="600"/>
+        <COLUMNS>
+            <!-- 基本信息 -->
+            <COLUMN NAME="CDR_ID" HEADER="话单编号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CAP_TIME" HEADER="截获时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_ISREAD" HEADER="已读" CONVERT="IMG_MK_ISREAD" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_IMPORTANCE" HEADER="标记" CONVERT="IMG_MK_IMPORTANCE" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="MK_NOTE" HEADER="注释" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <!-- 数据信息 -->
+            <COLUMN NAME="RECORD_ID" HEADER="记录标识" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="COLLECT_DATE" HEADER="采集日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_NAME" HEADER="姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_NAME_REG" HEADER="规整姓名" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_NAME_PY" HEADER="规整姓名拼音" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="PAS_NAME_PY_SREG" HEADER="姓名拼音排序" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="GENDER" HEADER="性别" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BIRTHDAY" HEADER="出生日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_NO" HEADER="证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_NO_REG" HEADER="规整证件号码" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CERT_TYPE" HEADER="证件类型" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="DIVISION_CODE" HEADER="身份证行政区划" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TICKET_OFFICE" HEADER="售票处" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="WINDOW_NO" HEADER="窗口号/售票机号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TICKET_NO" HEADER="票号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BUSS_TYPE" HEADER="业务类型" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BOARD_DATE" HEADER="乘车日期" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="RAILWAY_NO" HEADER="车次" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="FROM_STATION" HEADER="出发站" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TO_STATION" HEADER="到达站" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="FROM_TIME" HEADER="发车时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TO_TIME" HEADER="到站时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="CARRIAGE_NO" HEADER="车厢号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEAT_NO" HEADER="座位号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SEAT_TYPE" HEADER="席别" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="DEAL_STATION" HEADER="购票/退票/改签车站" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="OFFICER_NO" HEADER="售票员工号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="DEAL_TIME" HEADER="购票/退票/改签时间" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TICKET_NO_OLD" HEADER="改签前票号" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="TICKET_ID" HEADER="客票标识" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="SALE_TYPE" HEADER="售票类型" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V_1" HEADER="备用字段1" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_V_2" HEADER="备用字段2" CONVERT="" TYPE="string" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_N_1" HEADER="备用字段3" CONVERT="" TYPE="int" MENU="" ADDR_TYPE=""/>
+            <COLUMN NAME="BACK_DT_1" HEADER="备用字段4" CONVERT="" TYPE="date" MENU="" ADDR_TYPE=""/>
+        </COLUMNS>
+        <LIST_COLUMNS>
+            <COLUMN NAME="MK_ISREAD" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_IMPORTANCE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="MK_NOTE" HIDDEN="False" LENGTH="35"/>
+            <COLUMN NAME="CDR_ID" HIDDEN="True" LENGTH="150"/>
+            <COLUMN NAME="CAP_TIME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="RECORD_ID" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="COLLECT_DATE" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="PAS_NAME" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_NAME_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_NAME_PY" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="PAS_NAME_PY_SREG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="GENDER" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="BIRTHDAY" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="CERT_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CERT_NO_REG" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="CERT_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="DIVISION_CODE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TICKET_OFFICE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="WINDOW_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TICKET_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BUSS_TYPE" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="BOARD_DATE" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="RAILWAY_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="FROM_STATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TO_STATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="FROM_TIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="TO_TIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="CARRIAGE_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEAT_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SEAT_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="DEAL_STATION" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="OFFICER_NO" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="DEAL_TIME" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="TICKET_NO_OLD" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="TICKET_ID" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="SALE_TYPE" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V_1" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_V_2" HIDDEN="False" LENGTH="150"/>
+            <COLUMN NAME="BACK_N_1" HIDDEN="False" LENGTH="100"/>
+            <COLUMN NAME="BACK_DT_1" HIDDEN="False" LENGTH="100"/>
+        </LIST_COLUMNS>
+        <DETAIL_COLUMNS>
+            <COLUMN_GROUP NAME="基本信息" EXPAND="True">
+                <COLUMN NAME="CDR_ID"/>
+                <COLUMN NAME="CAP_TIME"/>
+            </COLUMN_GROUP>
+            <COLUMN_GROUP NAME="数据信息" EXPAND="True">
+                <COLUMN NAME="RECORD_ID"/>
+                <COLUMN NAME="COLLECT_DATE"/>
+                <COLUMN NAME="PAS_NAME"/>
+                <COLUMN NAME="PAS_NAME_REG"/>
+                <COLUMN NAME="PAS_NAME_PY"/>
+                <COLUMN NAME="PAS_NAME_PY_SREG"/>
+                <COLUMN NAME="GENDER"/>
+                <COLUMN NAME="BIRTHDAY"/>
+                <COLUMN NAME="CERT_NO"/>
+                <COLUMN NAME="CERT_NO_REG"/>
+                <COLUMN NAME="CERT_TYPE"/>
+                <COLUMN NAME="DIVISION_CODE"/>
+                <COLUMN NAME="TICKET_OFFICE"/>
+                <COLUMN NAME="WINDOW_NO"/>
+                <COLUMN NAME="TICKET_NO"/>
+                <COLUMN NAME="BUSS_TYPE"/>
+                <COLUMN NAME="BOARD_DATE"/>
+                <COLUMN NAME="RAILWAY_NO"/>
+                <COLUMN NAME="FROM_STATION"/>
+                <COLUMN NAME="TO_STATION"/>
+                <COLUMN NAME="FROM_TIME"/>
+                <COLUMN NAME="TO_TIME"/>
+                <COLUMN NAME="CARRIAGE_NO"/>
+                <COLUMN NAME="SEAT_NO"/>
+                <COLUMN NAME="SEAT_TYPE"/>
+                <COLUMN NAME="DEAL_STATION"/>
+                <COLUMN NAME="OFFICER_NO"/>
+                <COLUMN NAME="DEAL_TIME"/>
+                <COLUMN NAME="TICKET_NO_OLD"/>
+                <COLUMN NAME="TICKET_ID"/>
+                <COLUMN NAME="SALE_TYPE"/>
+                <COLUMN NAME="BACK_V_1"/>
+                <COLUMN NAME="BACK_V_2"/>
+                <COLUMN NAME="BACK_N_1"/>
+                <COLUMN NAME="BACK_DT_1"/>
+            </COLUMN_GROUP>
+        </DETAIL_COLUMNS>
+        <DISTINCT_COLUMNS>
+        </DISTINCT_COLUMNS>
+        <GIS_COLUMNS>
+        </GIS_COLUMNS>
+    </UI_CONFIG>
+</CONFIG>

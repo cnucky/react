@@ -1,0 +1,65 @@
+{
+    "spyprocess": {
+
+		"materiallabel": {
+			"maincallman": "MO",
+			"calledman": "MT",
+			"sex": "Gender",
+			"male": "Male",
+			"female": "Female",
+			"language": "Language",
+			"serialnumber": "Serial No.",
+			"recid": "Record ID",
+			"approvalno": "Approval No.",
+			"objectname": "Object Name",
+			"caseproperty": "Case Property",
+			"ordinarytype": "Normal",
+			"specialtype": "Special",
+			"spycategory": "Interception Type",
+			"exemplarycasecode": "Special Case Code",
+			"spyobjectno": "Object Code",
+			"maincallnum": "MO Number",
+			"maincall": "MO",
+			"callednum": "MT Number",
+			"called": "MT",
+			"callersex": "Gender",
+			"callstarttime": "Start Time",
+			"calllength": "Call Duration",
+			"calllanguage": "Language",
+			"telspymaterial": "Telecom Interception Material",
+			"materialdept": "Department of Material",
+			"materialtime": "Material Time",
+			"materialman": "Material Man",
+			"tabledept": "Department of Form",
+			"reporttime": "Report Time",
+			"tableman": "Table Man",
+			"tableexamer": "Examer",
+			"casename": "Case Name"
+		},
+		"materialeditinfo": {
+			"editcontent": "Edit the material content…",
+			"savefileerror": "Error to save the material content!",
+			"savedataerror": "Error to save the material manage data!",
+			"getobjectinfoerror": "Error to get the object detail info!",
+			"getcaseinfoerror": "Error to get the case detail info!",
+			"getcontenterror": "Error to get the material detail info!",
+			"contentdeleted": "Material content has deleted!",
+			"getcontentidnull": "The bill ID is null when get material content!"
+		},
+        "audioplayer": {
+            "play": "Play",
+            "pause": "Pause",
+            "forward": "Fast Forward",
+            "backward": "Fast Backward",
+            "lastitem": "Previous",
+            "nextitem": "Next",
+            "hidewave": "Hide Wave",
+            "showwave": "Display Wave",
+            "firstvoice": "First Channel",
+            "secondvoice": "Second Channel",
+            "bothvoice": "Dual Channel",
+            "mute": "Mute",
+            "unmute": "Volume"
+        }
+    }
+}

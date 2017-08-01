@@ -1,0 +1,202 @@
+<div id="department-form">
+    <div class="tray tray-center" style="vertical-align:top">
+        <div class="panel">
+            <div class="panel-heading ">
+                <div class="widget-menu ml10 mb10">
+                    <span><i class='glyphicon glyphicon-star' style='color: red'></i></span>
+                    <label>当前操作：</label>
+                    <label id="oprlabel" style="color: blue; font-weight: bolder"></label>
+
+                    <div class="widget-menu ml10 mb10 pull-right" id="btn-group-editmode">
+                        <button id="btn-save-as" title="另存" data-toggle="tooltip" data-placement="bottom" type="button"
+                                class="btn btn-sm btn-system  ph15 mr5" style="display: none;"><span>另存</span></button>
+                        <button id="btn-edit-submit" title="保存修改" data-toggle="tooltip" data-placement="bottom"
+                                type="button"
+                                class="btn btn-sm btn-system  ph15 mr5" style="display: none;"><span>保存修改</span>
+                        </button>
+
+                        <button id="btn-edit" data-toggle="tooltip" data-placement="bottom" type="button"
+                                class="btn btn-sm btn-primary  ph15 mr5">
+                            <span>修改</span></button>
+
+                        <button id="btn-edit-new" data-toggle="tooltip" data-placement="bottom" type="button"
+                                class="btn btn-sm btn-primary  ph15 mr5">
+                            <span>编辑为新数据</span></button>
+
+                        <a type="button" id="btn-advanced-set" class="btn btn-sm btn-system ph10 mr5">
+                            <span class="fa fa-cogs pr5"></span>
+                            高级设置
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="datapanel" style="display:none;">
+                <div class="panel-body">
+                    <label id="oprInfolabel" style="color: lightcoral; font-weight: bolder"></label>
+
+                    <div class="col-sm-12">
+                        <div class="panel heading-border" style="width:99.9%; margin: 0 auto;">
+                            <div class="panel-heading pn h-30" style="background-color:lavender">
+                                <h6 id="basicInfo" class="ml5" style="color: #1C1C1C">基本信息</h6>
+                            </div>
+                            <div class="panel-body pn">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-6 form-horizontal mt10">
+                                        <div class="form-group">
+                                            <label for="dataname" class="col-sm-2 control-label">数据名称</label>
+
+                                            <div class="col-sm-8">
+                                                <div class="bs-component">
+                                                    <input type="text" id="dataname" class="form-control edit"
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group hide">
+                                            <label for="username" class="col-sm-2 control-label">创建者</label>
+
+                                            <div class="col-sm-8">
+                                                <div class="bs-component">
+                                                    <input type="text" id="username" class="form-control" readonly
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" for="path">数据路径</label>
+
+                                            <div class="col-md-8">
+                                                <div class="input-group date pull-right edit" id="path">
+                                                    <input type="text" value="" id="datapath" dirId="12"
+                                                           class="form-control gui-input edit">
+                                                    <span class="input-group-addon cursor">
+                                                        <i class="fa fa-folder"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-6 form-horizontal mt10">
+                                        <div class="form-group">
+                                            <div class="checkbox-custom checkbox-primary mt10 " style="color:#1e2028">
+                                                <input type="checkbox" checked id="hasattachment" class="edit">
+                                                <label for="hasattachment">是否包含非结构化数据</label>
+
+                                                <input type="checkbox" checked id="isindex" class="edit">
+                                                <label for="isindex">是否建立索引</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group hide">
+                                            <label for="createtime" class="col-sm-2 control-label"
+                                                   style="margin-left:-40px !important">创建时间</label>
+
+                                            <div class="col-sm-8" style="width: 80%">
+                                                <div class="bs-component">
+                                                    <input type="text" id="createtime" class="form-control" readonly
+                                                           placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="datadesc"
+                                                   style="margin-left:-40px !important">数据描述</label>
+
+                                            <div class="col-sm-8" style="width: 80%">
+                                                <div class="bs-component">
+                                                    <textarea type="description" name="error-reason" id="datadesc"
+                                                              title=""
+                                                              class="gui-textarea form-control edit"
+                                                              style="vertical-align: top; overflow-y: scroll;">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt10">
+                        <div class="panel heading-border" style="width:99.9%; margin: 0 auto">
+                            <div class="panel-heading pn h-30" style="background-color: lavender">
+                                <h6 class="ml5" style="color: #1C1C1C">字段定义
+                                    <a id="colFill" class="pull-right mr10" style="color:blue" href="#">字段填充</a>
+                                    <a id="btn-fromfile" class="pull-right mr10" style="color:red"
+                                       href="#">从数据文件获取字段</a>
+                                </h6>
+                            </div>
+                            <div class="panel-body pn of-x-a">
+                                <table class="table table-striped table-hover" id="createDataTable" cellspacing="0"
+                                       width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th class="hide"
+                                            style="text-align: center;color: #3498db;font-weight: bold;width:50px">序号
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold">显示名称</th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold;width:160px">
+                                            逻辑类型
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold;width:90px">最大长度
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold;width:70px">精度
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">
+                                            是否可查
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold;">代码表</th>
+                                        <th class="" style="text-align: center;color: #3498db;font-weight: bold;">
+                                            语义映射
+                                        </th>
+                                        <th style="text-align: center;color: #3498db;font-weight: bold">字段描述</th>
+                                        <th class="hide" style="text-align: center;color: #3498db;font-weight: bold">
+                                            名称
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-footer text-right" id="table-panel-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-2" style="text-align:left">
+                                <span class="btn btn-success" id="btn-add-row"><i class="fa fa-plus"></i></span>
+                                <span class="btn btn-danger" id="btn-delete-row"><i class="fa fa-minus"></i></span>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-2">
+                                <div class="input-group" id="add-multiple-row">
+                                    <div class="input-group-addon">添加</div>
+                                    <input id="line-count" type="text" style="height:39px">
+
+                                    <div class="input-group-addon">行</div>
+                                    <button id="btn-add-row-multiple" class="btn btn-system">确定</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 pull-right">
+                                <button class="btn btn-primary" type="button" id="create-data">创建</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

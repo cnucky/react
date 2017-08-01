@@ -1,0 +1,238 @@
+/*对jquery.contextMenu样式进行进一步设置*/
+/*页面字体*/
+/* body,
+ button,
+ input,
+ select,
+ textarea {
+        font: 12px/1.5 Microsoft YaHei, Tahoma, SimSun, Verdana;
+ }*/
+
+/*下拉菜单 */
+.content-menu{
+    position: absolute;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid #c8ccd5;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    background: #FFF;
+}
+
+.content-menu ul{
+    /*max-height: 200px;*/
+    /*_height: 200px; 由js处理滚动条*/
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.content-menu li{
+    overflow: hidden;
+    height: 32px;
+}
+.content-menu .split{
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    margin:1px 0;
+    _margin-top: -2px;
+    overflow: hidden;
+}
+.content-menu .split .line{
+    padding-left: 27px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+}
+.content-menu .split .line div{
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    background: #eeeff4;
+    overflow: hidden;
+}
+.content-menu a{
+    position: relative;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    padding: 5px 0;
+    color: #3a404a;
+    border-top: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+}
+.content-menu a,
+.content-menu a *{
+    cursor: pointer;
+}
+.content-menu a:hover,
+.content-menu a.flash-hover{
+    background: #f3f8ff;
+    border-top: 1px #d5e5f5 solid;
+    border-bottom: 1px #d5e5f5 solid;
+}
+.content-menu span{
+    display: block;
+    padding: 0 12px 0 32px;
+    line-height: 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    word-wrap:normal;
+    text-overflow:ellipsis;
+}
+.content-menu i{
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+.content-menu a:hover i{
+    background-color: #f3f8ff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.content-menu a em{
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    opacity: .7;
+    filter: alpha(opacity=70);
+
+    width: 0;
+    height: 0;
+    line-height:0;
+    font-size:0;
+    border-color: transparent;
+    border-style: dashed;
+
+    border-width: 5px;
+    border-right-width: 0;
+    border-left-style: solid;
+    border-left-color: #999999;
+}
+.content-menu a:hover em,
+.content-menu a.flash-hover em/*flash用*/,
+.content-menu a.flash-hover i/*flash用*/{
+    background-color: #f3f8ff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+/*大宽度模式*/
+.content-menu .large{
+    width: 160px;
+}
+.content-menu .large span{
+    *width:116px;
+}
+/*小宽度模式*/
+.content-menu .small{
+    width: 100px;
+}
+.content-menu .small span{
+    *width:56px;
+}
+/*自动宽度，ie6，7使用固定宽度替代*/
+.content-menu .auto{
+    *width: 160px;
+}
+.content-menu .auto span{
+    *width:116px;
+}
+
+
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	position: relative;
+	margin: 0;
+	padding: 3px 1em 3px .4em;
+	cursor: pointer;
+	min-height: 0; /* support: IE7 */
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item {
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .2em;
+	margin: auto 0;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	left: auto;
+	right: 0;
+}
+
+/* Interaction states
+----------------------------------*/
+
+ .ui-menu-item.ui-state-focus
+ {
+	border: 1px solid #448dae;
+	background: #79c9ec url("../images/ui-bg_glass_75_79c9ec_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #026890;
+}
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget li {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1.1em;
+}
+.ui-widget .ui-widget li  {
+	font-size: 1em;
+}
+
+.ui-widget-content  li {
+	/*border: 1px solid #a6c9e2;*/
+	background: #fcfdfd url("../images/ui-bg_inset-hard_100_fcfdfd_1x100.png") 50% bottom repeat-x;
+	color: #222222;
+}
+.ui-widget-content  a {
+	color: #222222;
+}
+ .ui-widget-header {
+	border: 1px solid #4297d7;
+	background: #2191c0 url("../images/ui-bg_gloss-wave_75_2191c0_500x100.png") 50% 50% repeat-x;
+	color: #eaf5f7;
+	font-weight: bold;
+}
+ .ui-widget-header a {
+	color: #eaf5f7;
+}
+
+
+

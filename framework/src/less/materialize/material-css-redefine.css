@@ -1,0 +1,438 @@
+/*颜色定义*/
+ :root {
+    /*强调色*/
+    --accentcolor:#03a9f4;
+    /*辅助色,比强调色淡一点*/
+    --secondarycolor:#60ccfd;
+}
+
+
+
+
+
+.jsc .row{
+    margin-bottom: 0px;
+}
+
+/*/////////以下是被materialize覆盖的样式，需要恢复成nova样式//////////////*/
+/*消息图标按钮样式*/
+.jsc .navbar .navbar-btn.btn-group > .btn {
+    height: 30px;
+    padding: 0 11px 0 11px;
+    line-height:0px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0 rgba(0, 0, 0, 0.12), 0 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*新消息字体颜色*/
+.jsc .navbar .navbar-btn .dropdown-menu .panel .panel-menu> .panel-title {
+    color: #666666;
+}
+
+/*flag图标按钮样式*/
+.jsc .navbar .navbar-btn .dropdown-menu .panel .panel-menu> .btn {
+    border: 1px solid #dcdcdc;
+    height: 22px;
+    width: 24px;
+    padding: 0 0px 0 0px;
+    line-height:0px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0 rgba(0, 0, 0, 0.12), 0 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*flag图标字体颜色*/
+.jsc .navbar .navbar-btn .dropdown-menu .panel .panel-menu .btn i {
+    color: #666666;
+    font-size: 0.8rem;
+}
+/*////////////恢复结束/////////////*/
+
+
+/*输入框等边框样式*/
+.jsc input:not([type]):focus:not([readonly]),
+.jsc input[type=text]:focus:not([readonly]),
+.jsc input[type=password]:focus:not([readonly]),
+.jsc input[type=email]:focus:not([readonly]),
+.jsc input[type=url]:focus:not([readonly]),
+.jsc input[type=time]:focus:not([readonly]),
+.jsc input[type=date]:focus:not([readonly]),
+.jsc input[type=datetime]:focus:not([readonly]),
+.jsc input[type=datetime-local]:focus:not([readonly]),
+.jsc input[type=tel]:focus:not([readonly]),
+.jsc input[type=number]:focus:not([readonly]),
+.jsc input[type=search]:focus:not([readonly]),
+.jsc textarea:focus:not([readonly]),
+.jsc textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #03a9f4;
+    box-shadow: 0 1px 0 0 #03a9f4;
+}
+
+
+/*datatable公共样式*/
+.jsc .datatable-public{
+    margin-top: 15px;
+}
+
+
+/*datatable分页选择器样式*/
+.jsc .menu-datatable-public div.dataTables_length select{
+    height: 35px;
+}
+/*datatable搜索框样式*/
+.jsc .menu-datatable-public input[type=search]{
+    width: 70%;
+    margin:-10px 0 5px 10px;
+}
+
+.jsc .menu-datatable-public .modal{
+
+    padding-right: 0px;
+}
+
+.jsc .menu-datatable-public .modal-content{
+    position: static;
+    background-color: #fafafa;
+}
+
+.jsc .modal{
+    background: transparent;
+    width: 100%;
+    min-height: 100%;
+}
+
+.jsc .menu-datatable-public [type="radio"]:checked+label:after,
+.jsc [type="radio"].with-gap:checked+label:after{
+
+    background-color: #03a9f4;
+}
+.jsc .menu-datatable-public [type="radio"]:checked+label:after,
+.jsc [type="radio"].with-gap:checked+label:before,
+.jsc [type="radio"].with-gap:checked+label:after {
+    border:2px solid #03a9f4;
+}
+
+
+.jsc [type="checkbox"].filled-in:checked + label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #03a9f4;
+    background-color: #03a9f4;
+    z-index: 0;
+}
+.jsc [type="checkbox"].filled-in:disabled:checked + label:after {
+    background-color: #60ccfd;
+    border-color: #60ccfd;
+}
+
+.jsc [type="checkbox"].filled-in:disabled:not(:checked) + label:after {
+    border-color: #BDBDBD;
+   background-color: transparent;
+}
+
+.jsc .dropdown-content li>a, .dropdown-content li>span{
+    color:#03a9f4 ;
+    /*font-size: 15px;*/
+    line-height: 13px;
+}
+
+.jsc .menu-datatable-public .row .col{
+    padding-left: 0px;
+}
+.menu-datatable-public textarea.materialize-textarea{
+    padding: 0.8rem 0 0 0;
+}
+.jsc .modal-content{
+    border: 0px;
+    border-radius: 0px;
+}
+.jsc .common-background{
+    background-color: #03a9f4;
+}
+.jsc .displaynone{
+    display:none;
+}
+
+/*选择框小三角图标*/
+/*.jsc .btn .caret {
+    margin-left: 0;
+}
+.jsc .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}*/
+
+.jsc .btn-default {
+    color: #333;
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+/*.open .dropdown-toggle.btn-default*/
+
+.jsc .btn-default:hover,
+.jsc .btn-default:focus,
+.jsc .btn-default:active,
+.jsc .btn-default.active,
+{
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+.jsc .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-decoration: none;
+    border-color: #adadad;
+}
+
+
+.jsc .btn-group > .btn:hover,
+.jsc .btn-group-vertical > .btn:hover,
+.jsc .btn-group > .btn:focus,
+.jsc .btn-group-vertical > .btn:focus,
+.jsc .btn-group > .btn:active,
+.jsc .btn-group-vertical > .btn:active,
+.jsc .btn-group > .btn.active,
+.jsc .btn-group-vertical > .btn.active {
+    z-index: 0;
+}
+
+.jsc .btn-default:hover {
+    background-color: #ebebeb;
+}
+
+/*左侧导航栏*/
+.jsc aside{
+    display:table-cell;
+}
+/*多行输入Textarea样式*/
+.jsc textarea{
+   /* max-height: 90px;*/
+    overflow-y: auto;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #AAA;
+    resize: none;
+}
+
+
+/*material日期控件颜色*/
+/*翻页按钮颜色*/
+.jsc .picker__nav--prev:hover{
+    background-color: #e1f5fe;
+}
+.jsc .picker__nav--next:hover{
+    background-color: #e1f5fe;
+}
+.jsc .picker__weekday-display{
+    background-color: #0277bd;
+}
+.jsc .picker__date-display,
+.jsc .picker__day--selected,
+.jsc .picker__day--selected:hover,
+.jsc .picker--focused .picker__day--selected
+{
+    background-color: #039be5;
+}
+.jsc .picker__day.picker__day--today
+{
+    color: #039be5;
+}
+.jsc .picker__today{
+    color: #039be5;
+}
+.jsc .picker__close{
+    color: #039be5;
+}
+.jsc .btn-default:hover {
+    background-color: #e1f5fe;
+}
+.bootstrap-datetimepicker-widget td.active, .bootstrap-datetimepicker-widget td.active:hover{
+    background-color: #039be5;
+}
+
+/*blockquote提示文字*/
+.jsc blockquote {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #039be5;
+}
+/*多选下拉框span样式*/
+.jsc .dropdown-content li > a, .jsc .dropdown-content li > span {
+    /*font-size: 16px;*/
+    color: #333;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+/*地区选择下拉框样式*/
+.jsc button:focus {
+    background-color: transparent;
+}
+.jsc .btn:focus {
+    background-color: transparent;
+}
+.jsc [type="radio"]:checked + label:after, .jsc [type="radio"].with-gap:checked + label:after {
+    background-color: #039be5;
+}
+.jsc [type="radio"]:checked + label:after, .jsc [type="radio"].with-gap:checked + label:before, .jsc [type="radio"].with-gap:checked + label:after {
+    border: 2px solid #039be5;
+}
+.jsc [type="radio"]:not(:checked) + label, .jsc [type="radio"]:checked + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    /*font-size: 14px;*/
+    transition: .28s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*模态框通过“X”图标按钮关闭,图标CSS*/
+.jsc .modal-close-by-icon .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.2rem;
+    padding: 0.5rem 0.6rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+.jsc .modal-close-by-icon .close:before{
+    content: "\2715";
+    color: #fff;
+}
+
+/*common css*/
+
+.jsc .height-40{
+    height: 40px;
+}
+.jsc .position-relative{
+    position: relative;
+}
+.jsc .text-align-center{
+    text-align: center;
+}
+.jsc .width-perc-10 {
+    width: 10%;
+}
+.jsc .width-perc-30 {
+    width: 30%;
+}
+.jsc .width-perc-90 {
+    width: 90%;
+}
+.jsc .margin-10 {
+    margin: 10px;
+}
+.jsc .margin-top-8 {
+    margin-top: 8px;
+}
+.jsc .margin-top-10 {
+    margin-top: 10px;
+}
+.jsc .margin-top-11{
+    margin-top: 11px;
+}
+.jsc .margin-top-15{
+    margin-top: 15px;
+}
+.jsc .margin-top-20{
+    margin-top: 20px;
+}
+.jsc .margin-top--30{
+    margin-top: -30px;
+}
+.jsc .margin-right-5 {
+    margin-right:5px;
+}
+.jsc .margin-right-10 {
+    margin-right: 10px;
+}
+.jsc .margin-right-20 {
+    margin-right: 20px;
+}
+.jsc .margin-right--24{
+    margin-right: -24px;
+}
+.jsc .margin-bottom-5{
+    margin-bottom: 5px;
+}
+.jsc .margin-bottom-10{
+    margin-bottom: 10px;
+}
+.jsc .margin-left--10{
+    margin-left: -10px;
+}
+.jsc .margin-left--20{
+    margin-left: -20px;
+}
+.jsc .margin-left--40{
+    margin-left: -40px;
+}
+.jsc .margin-left--13{
+    margin-left: -13px;
+}
+.jsc .margin-left-62{
+    margin-left: 62px;
+}
+.jsc .margin-10-10-0-0{
+    margin:10px 10px 0 0;
+}
+.jsc .margin-10-0-10-0{
+    margin:10px 0px 10px 0px;
+}
+.jsc .margin-10-20-0-0{
+    margin:10px 20px 0 0;
+}
+.jsc .padding-top-10{
+    padding-top: 10px;
+}
+.jsc .border-left-0{
+    border-left: 0px;
+}
+.jsc .width-inherit{
+    width:inherit !important;
+}
+.jsc .text-align-center{
+    text-align: center;
+}
+@media (max-width: 1020px) {
+    body.messages-page.tray-rescale #content.table-layout .tray-center {
+        padding-right:0px !important;
+    }
+}
+.bootstrap-datetimepicker-widget td span.active {
+    background-color: #039be5;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/*属地设置左侧collection文字颜色*/
+.jsc .collection a.collection-item {
+    display: block;
+    transition: .25s;
+    color: #039be5;
+}
+.jsc .collection .collection-item.active {
+    background-color: #039be5;
+    color: #eafaf9;
+}
+.jsc .collapsible-header{
+    font-size: 16px;
+}
+/*单位选择鼠标浮动到列表时出现手型*/
+.jsc .collection a.collection-item:not(.active):hover {
+    background-color: #ddd;
+    cursor: pointer;
+}

@@ -1,0 +1,183 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/udp/fileinput.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/udp/dropzone.css">
+<style>
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    height: 37px;
+}
+
+.select2-container--default .select2-selection--single:hover {
+    border-color: #888;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px
+}
+
+.admin-form .file {
+    width: auto
+}
+.fancytree-filter{
+    margin-bottom: 10px;
+}
+.center {
+    display: table;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<!-- end shim -->
+<section id="content" class="table-layout ">
+    <div class="tray tray-center">
+        <div id="alert-container" style="margin:10px;">
+        </div>
+        <div class="" style="padding: 25px 20px 50px;">
+            <div class="center-block center-children">
+                <div class="admin-form theme-info tab-pane mw700 active" id="add-user" role="tabpanel">
+                    <div class="panel panel-info heading-border">
+                        <div class="panel-heading" style="background-image:none">
+                            <span class="panel-title">
+                      <i class="fa fa-pencil-square"></i>创建导入任务
+                    </span>
+                        </div>
+                        <!-- end .form-header section -->
+                        <form id="form-add" novalidate="novalidate">
+                            <div class="panel-body p25">
+                                <div class="section">
+                                    <label for="taskname" class="field-label">任务名称*</label>
+                                    <label for="taskname" class="field prepend-icon">
+                                        <input type="text" name="taskname" id="taskname" class="gui-input">
+                                        <label for="taskname" class="field-icon">
+                                            <i class="fa fa-tasks"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="remark" class="field-label">备注*</label>
+                                    <label for="remark" class="field prepend-icon">
+                                        <input type="text" name="remark" id="remark" class="gui-input">
+                                        <label for="remark" class="field-icon">
+                                            <i class="fa fa-bookmark"></i>
+                                        </label>
+                                    </label>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="selectFile" class="field-label">选择文件*</label>
+                                    <label for="selectFile" class="field prepend-icon">
+                                        <input type="text" name='selectFile' id="selectFile"  class="gui-input fileinput-button dz-clickable" readOnly="true">
+                                        <label for="selectFile" class="field-icon">
+                                            <i class="fa fa-folder-open"></i>
+                                        </label>
+                                    </label>
+                                    <div>
+                                        <div class="hide table" id="previews">
+                                            <div id="template" class="file-row">
+                                                <div>
+                                                    <span class="name" data-dz-name></span>
+                                                </div>
+                                                <div>
+                                                    <span class="size" data-dz-size></span>
+                                                </div>
+                                                <div>
+                                                    <button class="hide btn btn-primary btn-sm start">
+                                                        <i class="glyphicon glyphicon-upload"></i>
+                                                        <span>上传</span>
+                                                    </button>
+                                                    <button id="canceled" data-dz-remove class="btn btn-sm btn-warning cancel">
+                                                        <i class="glyphicon glyphicon-ban-circle"></i>
+                                                        <span>取消</span>
+                                                    </button>
+                                                    <button data-dz-remove class="btn btn-sm btn-danger delete" style="opacity:0">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                        <span>删除</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="fileupload-process">
+                            <div id="total-progress" class="progress progress-striped active"
+                               role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar progress-bar-success" ddstyle="width:0%;"
+                                   data-dz-uploadprogress>
+                                </div>
+                            </div>
+                        </span>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="delimiter" class="field-label">列分隔符</label>
+                                    <label for="delimiter" class="field prepend-icon">
+                                        <!--     <input type="text" name="delimiter" id="delimiter" class="gui-input">
+                                    <label for="delimiter" class="field-icon">
+                                        <i class="fa fa-code"></i>
+                                    </label> -->
+                                        <select id="delimiter" class="select2-multiple form-control select-primary">
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class='section' style='display:none' id='otherDelimiter'>
+                                    <div class="row">
+                                        <div class='col-sm-3' style='padding-right: 0px; margin-top: 4px;'>
+                                            <div class="checkbox-custom">
+                                                <input id="checkboxInput" type="checkbox">
+                                                <label id="delimiter_row_text" for="checkboxInput" style="margin-top: 0px;padding-top: 3px;margin-bottom: 0px;">十六进制</label>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-4' style='padding-left: 0px;'>
+                                            <label for="customDelimiter" class="field">
+                                                <input type="text" name="customDelimiter" id="customDelimiter" placeholder="在此处输入您的分隔符" class="gui-input" style='height:30px'>
+                                            </label>
+                                        </div>
+                                        <div class='col-sm-2' style='margin-top: 2px;'>
+                                            <button id="preview" class="btn btn-primary btn-xs" style="margin-left: 4px; ">
+                                                <i class="fa fa-print"></i>
+                                                <span>预览</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end section -->
+                                <div class="section">
+                                    <label for="previewTable" class="field-label">数据预览</label>
+                                    <div  style="width: 95%;overflow-x: auto;overflow-y: auto;margin-left: 30px;">
+                                        <table id="previewTable"  class="display" style='width:100%'>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end section -->
+                            </div>
+                            <!-- end .form-body section -->
+                            <div class="panel-footer">
+                                <button type="submit" class="button btn-primary" style="min-width:100px">创建</button>
+                                <button type="button" id='cancelBtn' class="button btn-default" style="min-width:100px">取消</button>
+                            </div>
+                            <!-- end .form-footer section -->
+                        </form>
+                    </div>
+                    <!-- end .admin-form section -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="${entryRoot}/tag-import.js"></script>
+<script type="text/javascript">
+var _pageConfig = {
+    title: '创建导入标签任务'
+};
+</script>

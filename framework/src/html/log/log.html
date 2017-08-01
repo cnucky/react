@@ -1,0 +1,124 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/buttons.bootstrap.min.css">
+<style type="text/css">
+td.collapse-indecator:hover {
+    cursor: pointer;
+}
+
+#lineChartAndPieChart {
+    max-width: 1200px;
+}
+</style>
+<!-- end shim -->
+<section id="content" class="animated fadeIn">
+    <div class="panel">
+        <div class="panel-heading">
+            <span class="panel-title">
+                <span class="fa fa-line-chart"></span>统计图</span>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12 mb10">
+                <div class="admin-from">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4">时间粒度：</label>
+                                <div class="col-md-8" style="padding-top: 5px;">
+                                    <select id="time-period-select">
+                                        <option value="1" selected="selected">最近一周</option>
+                                        <option value="3">最近一月</option>
+                                        <option value="5">最近一年</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4">筛选模块：</label>
+                                <div class="col-md-8" style="padding-top: 5px;">
+                                    <select id="modueltypes-multiselect-for-charts" multiple="multiple">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 panel-body pn">
+                <div id="lineChart" class="col-md-8">
+                    <div id="myLineChart"></div>
+                </div>
+                <div id="pieChart" class="col-md-4">
+                    <div id="myPieChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel" style="min-height: 460px">
+        <div class="panel-heading">
+            <span class="panel-title">
+                <span class="fa fa-table"></span>使用量统计</span>
+            <div class="pull-right hidden-xs">
+            </div>
+        </div>
+        <div class="panel-body" style="border-bottom: 0px solid #e2e2e2">
+            <div class="col-md-12">
+                <div class="admin-from">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label class="control-label pln col-md-4">模块选择：</label>
+                                <div class="col-md-8" style="padding-top: 5px;">
+                                        <select id="modueltypes-multiselect" multiple="multiple">
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label pln col-md-4">部门选择：</label>
+                                <div class="col-md-8">
+                                    <div class="input-group text" id="department">
+                                        <input type="text" class="form-control" id="department-input">
+                                        <span class="input-group-addon cursor" id="department-icon">
+                                            <i class="fa fa-building"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label pln col-md-4">时间选择：</label>
+                                <div class="col-md-8">
+                                    <div class="input-group pull-right date" id="date-range">
+                                        <input type="text" class="form-control custom" id="date-range-input" placeholder="YYYY/MM/DD-YYYY/MM/DD">
+                                        <span class="input-group-addon cursor" id="date-range-icon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="padding-top: 5px;">
+                                <button id="search-log" type="button" class="btn btn-sm btn-primary mr10">搜索</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 divider mt10 mb10">
+            </div>
+            <div id="log-div" class="col-md-12" style="padding-top: 10px; min-height: 150px">
+                <label class="control-label pln col-md-3">请选择条件进行搜索</label>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FBI WARNING -->
+<!-- datatables is being hacked by JC, please do not update or modified it!!! -->
+<script type="text/javascript" src="${root}/js/components/datatables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/buttons.html5.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/dataTables.buttons.js"></script>
+<script type="text/javascript" src="${root}/js/components/datatables/buttons.bootstrap.js"></script>
+<script type="text/javascript" src="${root}/js/components/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="${root}/js/log.js"></script>

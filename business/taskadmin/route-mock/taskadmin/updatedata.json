@@ -1,0 +1,26 @@
+{
+    "code": 0,
+    "data": {
+        "assignment_status": [
+            { "signment_type": "建模xx", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "运行中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "waiting"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "start"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "done"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "pause"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"},
+            { "signment_type": "建模分析", "name": "任务测试2", "priority": 1, "status": "排队中", "creator": "byu1", "creation_time": "2017-03-20 08-46-20", "operateType": "stop"}
+        ]
+    },
+    "message": ""
+}

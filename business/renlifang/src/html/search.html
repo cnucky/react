@@ -1,0 +1,273 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+<!-- <link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css"> -->
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui-bts.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<style type="text/css">
+.category {
+    display: inline-block;
+    min-width: 100px;
+    margin-left: 20px;
+}
+
+.category:hover {
+    cursor: default;
+}
+
+.category-icon {
+    display: inline-block;
+    background: rgb(60, 162, 224);
+    width: 36px;
+    height: 36px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 26px;
+    border: 3px solid rgb(240, 240, 240);
+}
+
+.category-text {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.checked .category-icon {
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.checked .category-text {
+    color: rgb(17, 141, 240);
+    font-weight: 600;
+}
+
+.sisuo-select-pic-btn {
+    z-index: 1;
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    cursor: pointer;
+}
+
+#savepath {
+    cursor: pointer;
+}
+#btn-sisuo-reselect-pic{
+    display: none;
+}
+#imgShow{
+    width: 70%;
+}
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<div class="mt5">
+    <label class="">保存目录:</label>
+    <a id="choose-button">
+        <label id="savepath"></label>
+    </a>
+</div>
+<!-- end shim -->
+<section id="content">
+    <div id="alert-container" style="margin:10px;">
+    </div>
+    <div class="row mb30" id="search-header">
+        <div class="col-md-8 center-block">
+            <div class="row table-layout table-clear-xs">
+                <div class="col-xs-12 col-sm-8">
+                    <div id="dock-content" class="ph10">
+                        <div id="dock-image" class="active-content">
+                            <div class="dock-item" data-title="Logo">
+                                <img class="img-responsive center-block" src="${root}/renlifang/img/map.png" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="admin-form" id="search">
+        <form class="section mw1000 mauto" action="index.html" id="search-form">
+            <div class="smart-widget sm-right smr-80">
+                <label class="field prepend-icon">
+                    <input type="text" name="keyword" id="keyword" class="gui-input" placeholder="关键词">
+                    <label for="keyword" class="field-icon">
+                        <i id="search-icon" class="fa fa-search" style="color: #4ea5e0"></i>
+                    </label>
+                </label>
+                <span id="sisuo-select-pic" class="sisuo-select-pic-btn hide" title="选择人脸图片">
+                    <i class="fa fa-camera" style="color: #4ea5e0"></i>
+                </span>
+                <input type="file" id="sisuo-file-input" accept="image/jpeg,image/jpg,image/gif,image/png" style="display:none">
+                </input>
+                <button id="search-button" type="submit" class="button btn-primary">搜索</button>
+            </div>
+            <!-- end .smart-widget section -->
+        </form>
+    </div>
+    <div id="search-mode" class="section mw1000 mauto">
+        <div class="col-md-12 pn">
+            <div class="col-md-6 pn">
+                <div class="col-md-12 mb10 ml15">
+                    <label>检索类别</label>
+                </div>
+                <div id="precise" class="admin-form col-md-12 ml15 mb10 option-group field">
+                    <label class="option option-primary mb10" style="font-size: 13px">
+                        <input id="precisemode" type="radio" name="payment" checked="">
+                        <span class="radio"></span>精确</label>
+                    <label class="admin-form option option-primary mb10" style="font-size: 13px">
+                        <input type="radio" name="payment">
+                        <span class="radio"></span>模糊</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fuzzy-hint" class="section mw1000 mauto" style="display:none">
+        <div class="col-md-12 mb10 ml15">
+            <label>提示：人立方模糊检索是针对人的属性检索，例如 张三 或 张三 东宝路 ,出生日期格式采用如下格式：1986-04-05。对于检索结果上限控制，如需检索更多结果，请使用标签筛选功能。
+            </label>
+        </div>
+    </div>
+    <div id="search-category" class=" section mw1000 mauto">
+        <div class="col-md-12 mb10 ml15">
+            <label class="">类别</label>
+        </div>
+        <div class="category mb10" id="category-user" value="1">
+            <div class="category-icon" style="background: #F6B132"><span class="fa fa-user"></span></div>
+            <div class="category-text">
+                <p>身份证</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-mobile" value="5">
+            <div class="category-icon" style="background: #6EAFF7"><span class="fa fa-phone-square"></span></div>
+            <div class="category-text">
+                <p>手机</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-qq" value="11">
+            <div class="category-icon" style="background: #E95D35"><span class="fa fa-qq"></span></div>
+            <div class="category-text">
+                <p>QQ</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-mail" value="12">
+            <div class="category-icon" style="background: #6B4897"><span class="fa fa-envelope"></span></div>
+            <div class="category-text">
+                <p>电子邮箱</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-ticket" value="2">
+            <div class="category-icon" style="background: #F64662"><span class="fa fa-ticket"></span></div>
+            <div class="category-text">
+                <p>护照</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-cc-visa" value="3">
+            <div class="category-icon" style="background: #5457A6"><span class="fa fa-cc-visa"></span></div>
+            <div class="category-text">
+                <p>签证</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-tel" value="4">
+            <div class="category-icon" style="background: #F39C9C"><span class="fa fa-phone-square"></span></div>
+            <div class="category-text">
+                <p>电话</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-bus" value="6">
+            <div class="category-icon" style="background: #29CDB5"><span class="fa fa-bus"></span></div>
+            <div class="category-text">
+                <p>汽车</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-credit-card" value="7">
+            <div class="category-icon" style="background: #0066CC"><span class="fa fa-credit-card"></span></div>
+            <div class="category-text">
+                <p>银行账户</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-bed" value="8">
+            <div class="category-icon" style="background: #80EF91"><span class="fa fa-bed"></span></div>
+            <div class="category-text">
+                <p>宾馆</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-train" value="9">
+            <div class="category-icon" style="background: #EC952E"><span class="fa fa-train"></span></div>
+            <div class="category-text">
+                <p>火车</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-plane" value="10">
+            <div class="category-icon" style="background: #4BC87F"><span class="fa fa-plane"></span></div>
+            <div class="category-text">
+                <p>飞机</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-weibo" value="13">
+            <div class="category-icon" style="background: #F06161"><span class="fa fa-weibo"></span></div>
+            <div class="category-text">
+                <p>微博</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="categroy-ip" value="14">
+            <div class="category-icon" style="background: #A2453D"><span class="fa fa-wifi"></span></div>
+            <div class="category-text">
+                <p>IP</p>
+            </div>
+        </div>
+        <div class="category mb10 hidden" id="category-users" value="15">
+            <div class="category-icon" style="background: #00ADB5"><span class="fa fa-users"></span></div>
+            <div class="category-text">
+                <p>QQ群组</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-taobao" value="16">
+            <div class="category-icon" style="background: #FF5500"><span class="alibaba alitao fs14"></span></div>
+            <div class="category-text">
+                <p>淘宝</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-alipay" value="17">
+            <div class="category-icon" style="background: #01AAEF"><span class="alibaba alipay fs14"></span></div>
+            <div class="category-text">
+                <p>支付宝</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-car" value="6" style='display:none'>
+            <div class="category-icon" style="background: #009688"><span class="fa fa-car"></span></div>
+            <div class="category-text">
+                <p>车辆</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-hkid" value="50" style='display:none'>
+            <div class="category-icon" style="background: #ef01a6"><img src="/renlifang/img/hk2.png" height='15' width='15' style='filter: invert(1);margin-left: 1px;'></div>
+            <div class="category-text">
+                <p>香港居民身份证</p>
+            </div>
+        </div>
+        <div class="category mb10" id="category-twid" value="51" style='display:none'>
+            <div class="category-icon" style="background: #ef01a6"><img src="/renlifang/img/tw2.png" height='18' width='18' style='filter: invert(1)'></div>
+            <div class="category-text">
+                <p>台湾居民身份证</p>
+            </div>
+        </div>
+        <!--<div class="category mb10" id="category-name-birthday" value="27">-->
+        <!--<div class="category-icon" style="background: #80EF91"><span class="fa fa-calendar fs14"></span></div>-->
+        <!--<div class="category-text">-->
+        <!--<p>姓名+出生日期</p>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</section>
+<ul id="option" class="ui-helper-hidden content-menu">
+    <li data-command="open"><i class="fa fa-search"></i><span>&nbsp;&nbsp;百科检索</span></li>
+</ul>
+<script type="text/javascript" src="${entryRoot}/url-util.js"></script>
+<script type="text/javascript" src="${entryRoot}/renlifang-search.js"></script>

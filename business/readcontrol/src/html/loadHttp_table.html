@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/skin/theme.css">
+    <style type="text/css">
+        .diyCSS *{ font-size: 13px !important; color: #666 !important; font-family: "Open Sans", Helvetica, Arial, sans-serif !important;}
+        .diyCSS .fa {font-family: FontAwesome !important;color:#3498db !important;}
+        .diyCSS .glyphicon{font-family:'Glyphicons Halflings' !important;}
+        .text-muted{ color: #999 !important;}
+
+        /*::-webkit-scrollbar{ display: block !important;}*/
+        body{ background:none !important; height: auto !important;min-height:30px !important;}
+        /*解析http*/
+        table{ font-size: 13px;}
+        body >.cont{ display: none; border-bottom: 1px #ccc dashed; padding-bottom: 10px;}
+        body > .cont > table{ width: 100%; display: none;}
+        td{ padding: 3px 5px;}
+        tr td:nth-child(1){word-break:normal;}
+        tr td:nth-child(2){word-break:break-all; white-space:normal;}
+        .contBox>.IMG img{ width: 100%; margin-bottom: 10px;}
+        h5 a{ cursor: pointer;}
+        #main:before{ position: relative !important; display: none!important;}
+    </style>
+
+    <script type="text/javascript" src="../js/components/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/components/lib/jquery.history.js"></script>
+    <script type="text/javascript" src="../js/components/i18next/i18next.js"></script>
+    <script type="text/javascript" src="../js/components/jquery-i18next/jquery-i18next.js"></script>
+    <script type="text/javascript" src="../js/components/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/components/lib/underscore.js"></script>
+    <script type="text/javascript" src="../js/components/lib/q.min.js"></script>
+    <script src="../js/vendor.js"></script>
+</head>
+<body style="overflow: auto !important; ">
+<div class="cont" id="reqHeader">
+    <h5 class="diyCSS" data-i18n="[append]dataprocess.name.reqHeader_info"><a class="fa fa-plus-square"></a></h5>
+    <table class="table table-bordered text-gray checkkeyword" style="display: none;">
+        <tbody></tbody>
+    </table>
+</div>
+<div class="cont" id="reqBody">
+    <h5 class="diyCSS" data-i18n="[append]dataprocess.name.reqBody_info"><a class="fa fa-minus-square"></a></h5>
+    <div class="contBox checkkeyword">
+    </div>
+</div>
+<div class="cont" id="respHeader">
+    <h5 class="diyCSS" data-i18n="[append]dataprocess.name.respHeader_info"><a class="fa fa-plus-square"></a></h5>
+    <table class="table table-bordered text-gray checkkeyword" style="display: none;">
+    </table>
+</div>
+<div class="cont" id="respBody">
+    <h5 class="diyCSS" data-i18n="[append]dataprocess.name.respBody_info"><a class="fa fa-minus-square"></a></h5>
+    <div class="contBox checkkeyword"></div>
+</div>
+
+<![endif]-->
+<script type="text/javascript" src='/readcontrol/js/loadHttp_table.js'></script>
+
+
+</body>
+</html>

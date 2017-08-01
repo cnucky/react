@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="fs15 text-center">
+                <%- caption %>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-hover table-bordered">
+    <thead>
+        <% _.each(meta, function(metaItem) { %>
+            <th>
+                <%- metaItem.caption %>
+            </th>
+        <% }) %>
+    </thead>
+    <tbody>
+        <% _.each(records, function(recordItem) { %>
+            <tr>
+                <% _.each(recordItem, function(item) { %>
+                    <td>
+                        <%- item %>
+                    </td>
+                <% }) %>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

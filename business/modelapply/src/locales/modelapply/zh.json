@@ -1,0 +1,18 @@
+{
+    "translation": {
+		"loadModelBtn": "载入模型",
+		"open-model": "打开模型",
+		"finish-btn": "确定",
+		"cancel-btn": "取消",
+		"none-selected-text": "请选择",
+		"n-selected-text": "个已选择",
+		"all-selected": "全选",
+    	"warning": {
+    		"error": "错误",
+    		"task-information-acquisition-failed": "加载任务信息失败"
+    	},
+    	"model-apply": {
+    		"some-data-may-not-be-saved": "您可能有数据未保存"
+    	}
+    }
+}

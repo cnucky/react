@@ -1,0 +1,60 @@
+{
+	"code": 0,
+	"message": "",
+  	"data": [{
+      	"taskName": "同行人分析任务 (ID:3026)",
+      	"taskId": 3026,
+  		"taskDirId": 1004,
+		"taskPath": "/个人区/任务保存路径",
+		"taskStatus": "finished",
+		"taskType": 107,
+		"taskRatio": 80,
+		"resultCount": 10000,
+		"createTime": "2017-05-20 10:00:00",  //返回时按该字段降序
+		"finishTime": "2017-05-20 12:00:00"
+ 	}, {
+ 		"taskName": "同行人分析任务 (ID:3026)",
+      	"taskId": 3026,
+  		"taskDirId": 1004,
+		"taskPath": "/个人区/任务保存路径",
+		"taskStatus": "finished",
+		"taskType": 107,
+		"taskRatio": 80,
+		"resultCount": 10000,
+		"createTime": "2017-05-20 10:00:00",  //返回时按该字段降序
+		"finishTime": "2017-05-20 12:00:00"
+ 	}, {
+ 		"taskName": "同行人分析任务 (ID:3026)",
+      	"taskId": 3026,
+  		"taskDirId": 1004,
+		"taskPath": "/个人区/任务保存路径",
+		"taskStatus": "finished",
+		"taskType": 107,
+		"taskRatio": 80,
+		"resultCount": 10000,
+		"createTime": "2017-05-20 10:00:00",  //返回时按该字段降序
+		"finishTime": "2017-05-20 12:00:00"
+ 	}, {
+ 		"taskName": "同行人分析任务 (ID:3026)",
+      	"taskId": 3026,
+  		"taskDirId": 1004,
+		"taskPath": "/个人区/任务保存路径",
+		"taskStatus": "finished",
+		"taskType": 107,
+		"taskRatio": 80,
+		"resultCount": 10000,
+		"createTime": "2017-05-20 10:00:00",  //返回时按该字段降序
+		"finishTime": "2017-05-20 12:00:00"
+ 	}, {
+ 		"taskName": "同行人分析任务 (ID:3026)",
+      	"taskId": 3026,
+  		"taskDirId": 1004,
+		"taskPath": "/个人区/任务保存路径",
+		"taskStatus": "finished",
+		"taskType": 107,
+		"taskRatio": 80,
+		"resultCount": 10000,
+		"createTime": "2017-05-20 10:00:00",  //返回时按该字段降序
+		"finishTime": "2017-05-20 12:00:00"
+ 	}]
+}

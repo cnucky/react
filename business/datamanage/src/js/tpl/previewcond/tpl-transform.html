@@ -1,0 +1,37 @@
+<div>
+    <label>选择转换资源：</label>
+
+    <div>
+        <select id="transform-type" class="gui-input" style="width: 35%;margin-bottom: 5px; display: inline;">
+            <option value="0">代码表</option>
+            <option value="1">转换文件</option>
+        </select>
+
+        <div id="codeTableDiv" style="display: inline"></div>
+
+        <div id="fileDiv" style="display: none">
+            <lable>支持txt文件，文件编码为utf-8，以Tab符为列分隔符，回车换行为行分隔符</lable>
+            <input id="transform-file-input" name="path" value="" type="text" class="pathChooser input-xxlarge"
+                   placeholder="请点击按钮选择文件" width="50%" readonly>
+            <a class="btn btn-system"  style="position: relative; overflow: hidden; direction: ltr;">
+                选择文件
+                <input multiple="single" type="file" name="file" id="transform-file-btn" accept=".txt"
+                       style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px;
+                            margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+            </a>
+        </div>
+    </div>
+
+    <label class="checkbox hide"><input unchecked id="caseSensitiveCheckbox" type="checkbox">忽略大小写</label>
+    <br>
+
+    <div>
+        <label style="display: inline">无法转换处理策略：</label>
+        <select id="transform-error" class="gui-input" style="width: 50%;margin-bottom: 5px; display: inline">
+            <option value="1">出错处理</option>
+            <option value="2">转换为空值</option>
+            <option value="3">保留原值</option>
+        </select>
+    </div>
+
+</div>

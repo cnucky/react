@@ -1,0 +1,45 @@
+<div class='panel panel-primary blue-scoll-bar'>
+	<div class='panel-heading'>
+		<span class='panel-title'><%- tableName%></span>
+		<span class='panel-controls'>
+			<a class='panel-control-collapse'></a>
+		</span>
+	</div>
+	<div class='panel-body '>
+		<table class='table table-bordered'>
+			<tbody>
+				<% for(var i=0;i<fields.length;i++){ %>
+				<tr class='row'>
+					<td class='text-center' style='width:138px;'><%- fields[i].fieldCaption%></td>
+					<td class='text-center'><%- fields[i].fieldValue%></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+</div>
+<% for(var i=0;i<subTables.length;i++){ %>
+<div class='panel panel-primary panel-collapsed blue-scoll-bar'>
+	<div class='panel-heading'>
+		<span class='panel-title'><%- subTables[i].tableName%></span>
+		<span class='panel-controls'>
+			<a class='panel-control-collapse'></a>
+		</span>
+	</div>
+	<div class='panel-body ' style='display:none'>
+		<table class='table table-bordered'>
+			<tbody>
+				<% for(var j=0;j<subTables[i].records[0].fields.length;j++){ %>
+				<tr class='row'>
+					<td class='text-center' style='width:138px;'><%- subTables[i].records[0].fields[j].fieldCaption%></td>
+					<% for(var k=0;k<subTables[i].records.length;k++){ %>
+					<td class='text-center'><%- subTables[i].records[k].fields[j].fieldValue%></td>
+					<% } %>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<% } %>

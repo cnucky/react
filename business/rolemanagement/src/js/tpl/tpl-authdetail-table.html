@@ -1,0 +1,30 @@
+<table class="table table-hover admin-form">
+    <thead>
+    <tr id="headRow">
+        <th >字段</th>
+        <th >最低权限</th>
+        <th >描述</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% _.each(data, function(item) { %>
+    <tr>
+        <td>
+            <%- item.name %>
+        </td>
+        <td>
+            <%- item.requireAuthLevel %>
+        </td>
+        <td>
+            <%- item.description %>
+        </td>
+        <td class="text-right">
+            <label class="option block mn">
+                <i class="fa fa-lg fa-check text-success"></i>
+            </label>
+        </td>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>

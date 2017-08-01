@@ -1,0 +1,29 @@
+<div class='row hide-detail' ng-class='{"last-ftag":$last}'>
+    <div class='col-md-2 col-lg-2'><p class='row-thead ' title='{{tag.typeName}}'>{{tag.typeName}}</p></div>
+    <div class='col-md-9 col-lg-9'>
+        <!-- <div class='row'>
+                            <div class='col-md-2' ng-repeat='value in tag.valueList' ng-click='selectTagValue($event)' ><span class='tag-value center' data-tag-id='{{tag.typeId}}' data-tag-value='{{value}}'>{{value}}</span></div>
+
+                        </div> -->
+        <div class='row-tlist'>
+            <!-- ng-class='{"hide-detail": multiLineFlag}' -->
+            <ul >
+                <li ng-repeat='value in tag.valueList'  ng-class='{"selected-value":checkSelected(value,tag.typeId)}'><a href ng-click='clickTagValue($event)' data-tag-id='{{tag.typeId}}' data-tag-value='{{value}}' data-tag-name='{{tag.typeName}}' data-tag-type='{{tag.valueType}}' title='{{value}}'>{{value | autoAdjust}}</a></li>
+
+                <li>
+                    
+                    <custom-value></custom-value>
+                   
+                    
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- <div class='col-md-1 col-lg-1'>
+        <div class='pull-right'>
+            
+            
+        </div>
+    </div> -->
+</div>

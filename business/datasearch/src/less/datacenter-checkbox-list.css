@@ -1,0 +1,7 @@
+#datacenter_check_div .dropdown{ display: inline-block; margin-right:10px;}
+#datacenter_check_div .dropdown:last-child .btn-sm, .btn-group-sm > .btn{ padding: 3px 10px 4px 10px; }
+#datacenter_check_div .dropdown label{margin-right:0;}
+#datacenter_check_div .dropdown button{ position: static; outline: none;}
+#datacenter_check_div .dropdown .menu{ max-height:150px; padding-top: 10px; display: none; position: absolute; top:26px; left: 0; z-index: 100; border-radius: 4px;box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
+#datacenter_check_div label span{display:inline-block; width: 12px; height: 11px; position: absolute; background-color: #666; top:5px; left: 5px; border-radius:2px;}
+#datacenter_check_div .dropdown-menu{ width: 200px;  padding: 10px;}

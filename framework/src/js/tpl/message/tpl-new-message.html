@@ -1,0 +1,20 @@
+<li class="timeline-item">
+    <div class="timeline-date">
+        <button class="btn btn-default light btn-xs pull-right" type="button"><i class="fa fa-flag-o"></i></button>
+    </div>
+    <div class="timeline-icon bg-dark light">
+        <span class="fa fa-envelope-o"></span>
+    </div>
+    <div class="timeline-desc">
+        <a href=
+        <% if (isLink) { %>
+            <%- linkUrl %>
+        <% } else { %>
+            "/messagecenter/messageshow.html?msgId=<%- id %>"
+        <% } %>
+            id=<%- id %>  target="_blank"><%- subject %></a>
+    </div>
+    <div class="timeline-desc">
+        <%- sendTime %>
+    </div>
+</li>

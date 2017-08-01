@@ -1,0 +1,1662 @@
+<TRANSLATE>
+    <!--标记-->
+    <DIC NAME="IMG_MK_ISREAD">
+        <ELEINFO CODE="0" VALUE="N,glyphicons-envelope,#669933"/>
+        <ELEINFO CODE="1" VALUE="Y,glyphicons-message_full,#CCCC33"/>
+    </DIC>
+    <DIC NAME="IMG_MK_IMPORTANCE">
+        <ELEINFO CODE="0" VALUE="UNKNOWN,glyphicons-star,#FFFFFF"/>
+        <ELEINFO CODE="1" VALUE="NORMAL,glyphicons-star,#669933"/>
+        <ELEINFO CODE="2" VALUE="IMPORTANT,glyphicons-star,#E63F24"/>
+        <ELEINFO CODE="3" VALUE="USELESS,glyphicons-star,#9C9C9C"/>
+    </DIC>
+    <!-- 出材 -->
+    <DIC NAME="IMG_MK_MATERIAL">
+        <ELEINFO CODE="0" VALUE="N,glyphicons-nameplate,#FFFFFF"/>
+        <ELEINFO CODE="1" VALUE="Y,glyphicons-nameplate,#61AFEF"/>
+    </DIC>
+    <!--SERVICE_TYPE QUERY-->
+    <DIC NAME="DIC_SERVICE_TYPE_DNS">
+        <ELEINFO CODE="DNS" VALUE="DNS"/>
+        <ELEINFO CODE="IM" VALUE="IM"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_EMAIL">
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_IM">
+        <ELEINFO CODE="IM" VALUE="IM"/>
+        <ELEINFO CODE="OLGAME" VALUE="OLGAME"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_VOIP">
+        <ELEINFO CODE="VOIP" VALUE="VOIP"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_HTTPTRACE">
+        <ELEINFO CODE="HTTPTRACE" VALUE="HTTPTRACE"/>
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+        <ELEINFO CODE="IM" VALUE="IM"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_HTTPMULTI">
+        <ELEINFO CODE="HTTPBLOG" VALUE="HTTPBLOG"/>
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+        <ELEINFO CODE="HTTPBBS" VALUE="HTTPBBS"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="HTTPSNS"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_VPNDETECT">
+        <ELEINFO CODE="VPNDETECT" VALUE="VPNDETECT"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_SSL">
+        <ELEINFO CODE="SSL" VALUE="SSL"/>
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+        <ELEINFO CODE="IM" VALUE="IM"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="HTTPSNS"/>
+        <ELEINFO CODE="HTTPWEIBO" VALUE="HTTPMICROBLOG"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_FILE">
+        <ELEINFO CODE="FTP" VALUE="FTP"/>
+        <ELEINFO CODE="VOIP" VALUE="VOIP"/>
+        <ELEINFO CODE="TELNET" VALUE="TELNET"/>
+        <ELEINFO CODE="HTTPBLOG" VALUE="HTTPBLOG"/>
+        <ELEINFO CODE="WAPMMS" VALUE="WAPMMS"/>
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+        <ELEINFO CODE="IM" VALUE="IM"/>
+        <ELEINFO CODE="HTTPBBS" VALUE="HTTPBBS"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="HTTPSNS"/>
+        <ELEINFO CODE="HTTPTRACE" VALUE="HTTPTRACE"/>
+        <ELEINFO CODE="HTTPWEIBO" VALUE="HTTPMICROBLOG"/>
+    </DIC>
+    <!--SERVICE_TYPE DISPLAY-->
+    <DIC NAME="DIC_SERVICE_TYPE">
+        <ELEINFO CODE="DNS" VALUE="DNS"/>
+        <ELEINFO CODE="FTP" VALUE="FTP"/>
+        <ELEINFO CODE="VOIP" VALUE="VOIP"/>
+        <ELEINFO CODE="SSL" VALUE="SSL"/>
+        <ELEINFO CODE="TELNET" VALUE="TELNET"/>
+        <ELEINFO CODE="VPNDETECT" VALUE="VPNDETECT"/>
+        <ELEINFO CODE="HTTPBLOG" VALUE="HTTPBLOG"/>
+        <ELEINFO CODE="WAPMMS" VALUE="WAPMMS"/>
+        <ELEINFO CODE="EMAIL" VALUE="EMAIL"/>
+        <ELEINFO CODE="RADIUS" VALUE="RADIUS"/>
+        <ELEINFO CODE="IM" VALUE="IM"/>
+        <ELEINFO CODE="FLOWDATA" VALUE="FLOWDATA"/>
+        <ELEINFO CODE="HTTPBBS" VALUE="HTTPBBS"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="HTTPSNS"/>
+        <ELEINFO CODE="HTTPTRACE" VALUE="HTTPTRACE"/>
+        <ELEINFO CODE="HTTPWEIBO" VALUE="HTTPMICROBLOG"/>
+        <ELEINFO CODE="WAPRADIUS" VALUE="WAPRADIUS"/>
+        <ELEINFO CODE="RAWDATA" VALUE="RAWDATA"/>
+    </DIC>
+    <!--ACK_TYPE-->
+    <DIC NAME="DIC_ACT_TYPE_FTP">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="DATA" VALUE="File"/>
+        <ELEINFO CODE="DATA_DOWNLOAD" VALUE="Download File"/>
+        <ELEINFO CODE="DATA_LIST" VALUE="File List"/>
+        <ELEINFO CODE="DATA_UPLOAD" VALUE="Upload File"/>
+        <ELEINFO CODE="CMD" VALUE="Command Trail"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_IM">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="IM_LOGON" VALUE="Login"/>
+        <ELEINFO CODE="IM_LOGOFF" VALUE="Exit"/>
+        <ELEINFO CODE="IM_INUSE" VALUE="Use test"/>
+        <ELEINFO CODE="IM_PAYMENT" VALUE="Pay"/>
+        <ELEINFO CODE="IM_TEXTCHAT" VALUE="Text Chat"/>
+        <ELEINFO CODE="IM_FILETRANS" VALUE="File Transfer"/>
+        <ELEINFO CODE="IM_AUDIOCHAT" VALUE="Voice Chat"/>
+        <ELEINFO CODE="IM_VIDEOCHAT" VALUE="Video Chat"/>
+        <ELEINFO CODE="IM_GROUP_TEXTCHAT" VALUE="Group Chat"/>
+        <ELEINFO CODE="IM_SUBGROUP_TEXTCHAT" VALUE="Discussion Group Chat"/>
+        <ELEINFO CODE="IM_GROUP_FILETRANS" VALUE="Group File Tranfer"/>
+        <ELEINFO CODE="IM_GROUP_AUDIOCHAT" VALUE="Group VoIP"/>
+        <ELEINFO CODE="IM_GROUP_VIDEOCHAT" VALUE="Group Video Chat"/>
+        <ELEINFO CODE="IM_BROADCAST_TEXT" VALUE="Broadcast/Update Status (Text)"/>
+        <ELEINFO CODE="IM_BROADCAST_AUDIO" VALUE="Broadcast/Update Status (Audio)"/>
+        <ELEINFO CODE="IM_BROADCAST_VIDEO" VALUE="Broadcast/Update Status (Video)"/>
+        <ELEINFO CODE="IM_BROADCAST_FILETRANS" VALUE="Broadcast/Update Status (File)"/>
+        <ELEINFO CODE="IM_RAWDATA" VALUE="Raw Data"/>
+        <ELEINFO CODE="IM_SHORTMSG" VALUE="SMS"/>
+        <ELEINFO CODE="IM_FRIEND_LIST" VALUE="Friend List"/>
+        <ELEINFO CODE="IM_FRIEND_LIST_KW" VALUE="Friend List (9K)"/>
+        <ELEINFO CODE="IM_FRIEND_IP" VALUE="Friend IP"/>
+        <ELEINFO CODE="IM_REGISTER" VALUE="Register"/>
+        <ELEINFO CODE="IM_GROUP_REGISTER" VALUE="Group Register"/>
+        <ELEINFO CODE="IM_GROUP" VALUE="Group Message"/>
+        <ELEINFO CODE="IM_GROUPMEMBER_LIST" VALUE="Group Member List"/>
+        <ELEINFO CODE="IM_ADDRESS_BOOK" VALUE="Phonebook"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_EMAIL">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="MAIL_LOGIN" VALUE="Login"/>
+        <ELEINFO CODE="MAIL_LOGOUT" VALUE="Exit"/>
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="Receive Tittle"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="Receive Text"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="Receive mail "/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="Inbox"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="Receive Fragment"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="Send Tittle"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="Send Text (Email)"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="Send Email"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="Send Attachment"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="Cyber Space"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="Mail List"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="Contact"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="Contact List"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_HTTPMULTI">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="MAIL_LOGIN" VALUE="Login (Email)"/>
+        <ELEINFO CODE="MAIL_LOGOUT" VALUE="Exit(Email)"/>
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="Receive Tittle (Email)"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="Receive Text(Email)"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="Receive mail (Email)"/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="Inbox (Email)"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="Receive Fragment (Email)"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="Send Tittle (Email)"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="Send Text (Email)"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="Send Email (Email)"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="Send Attachment (Email)"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="Cyber Space (Email)"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="Mail List(Email)"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="Contact (Email)"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="Contact List (Email)"/>
+        <ELEINFO CODE="BBS_LOGIN" VALUE="Login (BBS)"/>
+        <ELEINFO CODE="BBS_LOGOUT" VALUE="Exit (BBS)"/>
+        <ELEINFO CODE="BBS_POST" VALUE="Post (BBS)"/>
+        <ELEINFO CODE="BBS_READ" VALUE="Read Post (BBS)"/>
+        <ELEINFO CODE="BBS_ATTACH_POST" VALUE="Upload File (BBS)"/>
+        <ELEINFO CODE="BBS_ATTACH_READ" VALUE="Download File (BBS)"/>
+        <ELEINFO CODE="BBS_READ_MSG" VALUE="Read SMS (BBS)"/>
+        <ELEINFO CODE="BBS_SEND_MSG" VALUE="Send Message (Social Network)"/>
+        <ELEINFO CODE="BBS_COMMENT_POST" VALUE="Reply (BBS)"/>
+        <ELEINFO CODE="SNS_LOGIN" VALUE="Login (Social Network)"/>
+        <ELEINFO CODE="SNS_USER_INFO" VALUE="User Info. (Social Network)"/>
+        <ELEINFO CODE="SNS_GROUP_INFO" VALUE="Group Message (Social Network)"/>
+        <ELEINFO CODE="SNS_READ_TXT" VALUE="Read Text (Social Network)"/>
+        <ELEINFO CODE="SNS_SEND_TXT" VALUE="Send Text (Social Network)"/>
+        <ELEINFO CODE="SNS_READ_MSG" VALUE="Read SMS (Social Network)"/>
+        <ELEINFO CODE="SNS_SEND_MSG" VALUE="Send Message (Social Network)"/>
+        <ELEINFO CODE="SNS_REPLY_MSG" VALUE="Reply (Social Network)"/>
+        <ELEINFO CODE="SNS_POST_FILE" VALUE="Upload File (Social Network)"/>
+        <ELEINFO CODE="SNS_GET_FILE" VALUE="Download File (Social Network)"/>
+        <ELEINFO CODE="SNS_FRIEND_LIST" VALUE="Friend List (Social Network)"/>
+        <ELEINFO CODE="SNS_FOLLOWER_LIST" VALUE="Followers (Social Network)"/>
+        <ELEINFO CODE="SNS_FOLLOWING_LIST" VALUE="Followed Person (Social Network)"/>
+        <ELEINFO CODE="SNS_LOGOUT" VALUE="Exit (Social Network)"/>
+        <ELEINFO CODE="SNS_SEND_FILE" VALUE="Send File (Social Network)"/>
+        <ELEINFO CODE="SNS_RECV_FILE" VALUE="Receive File (Social Network)"/>
+        <ELEINFO CODE="SNS_SHARE_FILE" VALUE="File sharing (Social Network)"/>
+        <ELEINFO CODE="SNS_SHARE_FILE_INFO" VALUE="File Info. (Social Network)"/>
+        <ELEINFO CODE="SNS_DEL_FILE" VALUE="Delete File (Social Network)"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_HTTPTRACE">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="POST" VALUE="Browse (POST)"/>
+        <ELEINFO CODE="GET" VALUE="Browse (GET)"/>
+        <ELEINFO CODE="LOGIN" VALUE="Login"/>
+        <ELEINFO CODE="REG" VALUE="Register"/>
+        <ELEINFO CODE="COMPOSE" VALUE="Send Email"/>
+        <ELEINFO CODE="UPFILE" VALUE="Upload File"/>
+        <ELEINFO CODE="UNKNOWN" VALUE="Unknown"/>
+        <ELEINFO CODE="SITE" VALUE="Browse (SITE)"/>
+        <ELEINFO CODE="JUMP" VALUE="Skip"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_WAPRADIUS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="3GWZ_LOGIN" VALUE="3G Login"/>
+        <ELEINFO CODE="3GWZ_ENTER" VALUE="3G Enter"/>
+        <ELEINFO CODE="3GWZ_LEAVE" VALUE="3G Exit"/>
+        <ELEINFO CODE="3GWZ_LOGOUT" VALUE="3G Leave"/>
+        <ELEINFO CODE="4GWZ_LOGIN" VALUE="4G Login"/>
+        <ELEINFO CODE="4GWZ_ENTER" VALUE="4G Enter"/>
+        <ELEINFO CODE="4GWZ_LEAVE" VALUE="4G Leave"/>
+        <ELEINFO CODE="4GWZ_LOGOUT" VALUE="4G Exit"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_RAWDATA">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="IP_RAW_DATA" VALUE="IP Fields"/>
+        <ELEINFO CODE="DPI_RAW_DATA" VALUE="DPI"/>
+        <ELEINFO CODE="ALL_RAW_DATA" VALUE="All Receive"/>
+        <ELEINFO CODE="SAMPLE_RAW_DATA" VALUE="Samples"/>
+        <ELEINFO CODE="PORT_RAW_DATA" VALUE="Ports"/>
+        <ELEINFO CODE="IPSPORT_RAW_DATA" VALUE="Ports of Local IP"/>
+        <ELEINFO CODE="IPDPORT_RAW_DATA" VALUE="Ports of Opposite IP Field"/>
+        <ELEINFO CODE="IPPORTSEG_RAW_DATA" VALUE="Ports of Local IP Fields"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_TELNET">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="FILE_TRANS" VALUE="File Transfer"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_RADIUS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="RADIUS_UP" VALUE="Online"/>
+        <ELEINFO CODE="RADIUS_DOWN" VALUE="Offline"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_WAPMMS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="SEND_MMS" VALUE="Send MMS"/>
+        <ELEINFO CODE="RECV_MMS" VALUE="Receive MMS"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_VOIP">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="AUDIO_CHAT" VALUE="Voice Chat"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_VPN">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="VPN_UP" VALUE="Connection Attempts"/>
+        <ELEINFO CODE="VPN_DOWN" VALUE="Connection Ends"/>
+        <ELEINFO CODE="VPN_CONNECT" VALUE="Connection Established"/>
+        <ELEINFO CODE="LOGON" VALUE="Login"/>
+        <ELEINFO CODE="INUSE" VALUE="Normal Use"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_DNS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="DNS" VALUE="Domain Name Request"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_FLOW">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="FLOWINFO" VALUE="Stream Data"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_SSL">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="Account Info."/>
+        <ELEINFO CODE="ACCESS" VALUE="Use  "/>
+        <ELEINFO CODE="CERT" VALUE="Certificate"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_FILE">
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="Receive Tittle"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="Receive Text"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="Receive mail "/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="Inbox"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="Send Tittle"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="Send Text"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="Send Email"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="Send Attachment"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="Cyber Space"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="Mail List"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="Contact"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="Contact List"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="Receive Fragment"/>
+        <ELEINFO CODE="IM_TEXTCHAT" VALUE="Text Chat"/>
+        <ELEINFO CODE="IM_GROUP_TEXTCHAT" VALUE="Group Chat"/>
+        <ELEINFO CODE="IM_SUBGROUP_TEXTCHAT" VALUE="Discussion Group Chat"/>
+        <ELEINFO CODE="IM_FILETRANS" VALUE="File Transfer"/>
+        <ELEINFO CODE="IM_AUDIOCHAT" VALUE="Voice Chat"/>
+        <ELEINFO CODE="IM_VIDEOCHAT" VALUE="Video Chat"/>
+        <ELEINFO CODE="IM_FRIEND_LIST" VALUE="Friend List"/>
+        <ELEINFO CODE="IM_RAWDATA" VALUE="Raw Data"/>
+        <ELEINFO CODE="IM_SHORTMSG" VALUE="SMS"/>
+        <ELEINFO CODE="IM_GROUP_FILETRANS" VALUE="Group File Tranfer"/>
+    </DIC>
+    <!--APP_PROTOCOL -->
+    <DIC NAME="DIC_APP_PROTOCOL_EMAIL">
+        <ELEINFO CODE="SMTP" VALUE="SMTP"/>
+        <ELEINFO CODE="POP3" VALUE="POP3"/>
+        <ELEINFO CODE="IMAP" VALUE="IMAP"/>
+        <ELEINFO CODE="HTTP" VALUE="HTTP"/>
+    </DIC>
+    <!-- 各协议翻译字段 -->
+    <DIC NAME="DIC_HTTP_METHOD">
+        <ELEINFO CODE="OPTIONS" VALUE="OPTIONS"/>
+        <ELEINFO CODE="GET" VALUE="GET"/>
+        <ELEINFO CODE="HEAD" VALUE="HEAD"/>
+        <ELEINFO CODE="POST" VALUE="POST"/>
+        <ELEINFO CODE="PUT" VALUE="PUT"/>
+        <ELEINFO CODE="DELETE" VALUE="DELETE"/>
+        <ELEINFO CODE="TRACE" VALUE="TRACE"/>
+        <ELEINFO CODE="CONNECT" VALUE="CONNECT"/>
+    </DIC>
+    <DIC NAME="DIC_MAIL_DIR">
+        <ELEINFO CODE="1" VALUE="Drafts"/>
+        <ELEINFO CODE="2" VALUE="Outbox"/>
+        <ELEINFO CODE="3" VALUE="Inbox"/>
+        <ELEINFO CODE="4" VALUE="Deleted"/>
+        <ELEINFO CODE="5" VALUE="Junk Box"/>
+        <ELEINFO CODE="6" VALUE="Subscribe"/>
+        <ELEINFO CODE="7" VALUE="Customization"/>
+        <ELEINFO CODE="8" VALUE="Unknown"/>
+    </DIC>
+    <DIC NAME="DIC_COORD_TYPE">
+        <ELEINFO CODE="COORD_GPS" VALUE="COORD_GPS"/>
+        <ELEINFO CODE="COORD_BAIDU" VALUE="COORD_BAIDU"/>
+        <ELEINFO CODE="COORD_SOGOU" VALUE="COORD_SOGOU"/>
+        <ELEINFO CODE="COORD_GOOGLE" VALUE="COORD_GOOGLE"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_END_SIDE">
+        <ELEINFO CODE="0" VALUE="Data Source"/>
+        <ELEINFO CODE="1" VALUE="Data Destination"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_START_FLAG">
+        <ELEINFO CODE="0" VALUE="Start from normal data packets."/>
+        <ELEINFO CODE="1" VALUE="Start from TCP's syn or synack packets."/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_END_FLAG">
+        <ELEINFO CODE="0" VALUE="Timeout End"/>
+        <ELEINFO CODE="1" VALUE="Send RST message to source."/>
+        <ELEINFO CODE="2" VALUE="Send RST message to destination."/>
+        <ELEINFO CODE="3" VALUE="Two way RST Message"/>
+        <ELEINFO CODE="4" VALUE="Send FIN message to source."/>
+        <ELEINFO CODE="6" VALUE="&quot;FIN message to source, RST message to destination.&quot;"/>
+        <ELEINFO CODE="8" VALUE="Send FIN message to destination."/>
+        <ELEINFO CODE="9" VALUE="&quot;RST message to source, FIN message to destination.&quot;"/>
+        <ELEINFO CODE="12" VALUE="Two Way FIN Message"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_IM_DATA_TYPE">
+        <ELEINFO CODE="0" VALUE="Two Party Voice"/>
+        <ELEINFO CODE="1" VALUE="User Video"/>
+        <ELEINFO CODE="2" VALUE="Friend Video"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_IM_NODATA_REASON">
+        <ELEINFO CODE="0" VALUE="Normal Interception"/>
+        <ELEINFO CODE="1" VALUE="File Size Restrict"/>
+        <ELEINFO CODE="2" VALUE="One party rejects or cancels"/>
+        <ELEINFO CODE="3" VALUE="Transimission falis due to network."/>
+        <ELEINFO CODE="4" VALUE="File Suffix Restrict"/>
+        <ELEINFO CODE="5" VALUE="Exit or Other "/>
+    </DIC>
+    <DIC NAME="DIC_DATA_HTTP_NODATA_REASON">
+        <ELEINFO CODE="OVER_SIZE" VALUE="OVER_SIZE"/>
+        <ELEINFO CODE="OVER_TIME" VALUE="OVER_TIME"/>
+        <ELEINFO CODE="EXIST_IN_SERVER" VALUE="EXIST_IN_SERVER"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_VPN_OUTPUT_REASON">
+        <ELEINFO CODE="CONNECTION_CLOSE" VALUE="CONNECTION_CLOSE"/>
+        <ELEINFO CODE="TIME_OUT" VALUE="TIME_OUT"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_SSL_DETECT_PRECISION">
+        <ELEINFO CODE="10" VALUE="Suspicious"/>
+        <ELEINFO CODE="20" VALUE="Highly Suspicious"/>
+        <ELEINFO CODE="30" VALUE="Accurate"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_PCAP_IS_ROUTER_DATA">
+        <ELEINFO CODE="YES" VALUE="YES"/>
+        <ELEINFO CODE="NO" VALUE="NO"/>
+    </DIC>
+    <DIC NAME="DIC_MSISDN_PHONE_TYPE">
+        <ELEINFO CODE="0" VALUE="Unknown"/>
+        <ELEINFO CODE="1" VALUE="Mobile Phone"/>
+        <ELEINFO CODE="2" VALUE="Fixed Line"/>
+        <ELEINFO CODE="3" VALUE="Mobile Newpaper"/>
+        <ELEINFO CODE="4" VALUE="Public Service Number"/>
+        <ELEINFO CODE="5" VALUE="One Card Two Number"/>
+    </DIC>
+    <DIC NAME="DIC_CALL_STATUS_CODE">
+        <ELEINFO CODE="0" VALUE="Unknown"/>
+        <ELEINFO CODE="1" VALUE="Line Busy "/>
+        <ELEINFO CODE="2" VALUE="Not Answer "/>
+        <ELEINFO CODE="3" VALUE="Off Hook(Call Established)"/>
+        <ELEINFO CODE="4" VALUE="On Hook (Call Finished)"/>
+        <ELEINFO CODE="5" VALUE="MO Hang Up (Call Ends)"/>
+        <ELEINFO CODE="6" VALUE="MT Hang Up (Call finishes)"/>
+        <ELEINFO CODE="7" VALUE="Call Cancel Status (SIP Only)"/>
+        <ELEINFO CODE="8" VALUE="Call Rejected (SIP Only)"/>
+    </DIC>
+    <DIC NAME="DIC_ORIG_SMS_CODE">
+        <ELEINFO CODE="0" VALUE="7bit"/>
+        <ELEINFO CODE="4" VALUE="8bit"/>
+        <ELEINFO CODE="8" VALUE="UCS2"/>
+        <ELEINFO CODE="10" VALUE="ASCII"/>
+        <ELEINFO CODE="13" VALUE="SMS Card Writing "/>
+        <ELEINFO CODE="14" VALUE="Two digit info."/>
+        <ELEINFO CODE="15" VALUE="GB18030"/>
+        <ELEINFO CODE="20" VALUE="SMSC Default Character"/>
+        <ELEINFO CODE="21" VALUE="IA5(CCITTT.50)/ASCII(ANSI X3.4)"/>
+        <ELEINFO CODE="22" VALUE="8 Digit Code Unspecified"/>
+        <ELEINFO CODE="23" VALUE="Latin1 ISO-8859-1"/>
+        <ELEINFO CODE="24" VALUE="8 Digit Code Unspecified"/>
+        <ELEINFO CODE="25" VALUE="JIS(X 0208-1990)"/>
+        <ELEINFO CODE="26" VALUE="Cyrllic ISO-8859-5"/>
+        <ELEINFO CODE="27" VALUE="Latin/Hebrew ISO-8859-8"/>
+        <ELEINFO CODE="28" VALUE="UCS2 ISO/IEC-10646"/>
+        <ELEINFO CODE="29" VALUE="Pictographic Coding"/>
+        <ELEINFO CODE="30" VALUE="ISO-2022-JP"/>
+        <ELEINFO CODE="31" VALUE="Reserve"/>
+        <ELEINFO CODE="32" VALUE="Reserve"/>
+        <ELEINFO CODE="33" VALUE="Expand Kanji JIS(X 0212-1990)"/>
+        <ELEINFO CODE="34" VALUE="KS C 5601"/>
+        <ELEINFO CODE="35" VALUE="Reserve"/>
+    </DIC>
+    <DIC NAME="DIC_CONTENT_STATUS">
+        <ELEINFO CODE="0" VALUE="Regular Content"/>
+        <ELEINFO CODE="1" VALUE="No Content"/>
+        <ELEINFO CODE="2" VALUE="Unknown Error"/>
+        <ELEINFO CODE="101" VALUE="Voice Timeout"/>
+        <ELEINFO CODE="102" VALUE="Only Voice from A"/>
+        <ELEINFO CODE="103" VALUE="Only Voice from B"/>
+        <ELEINFO CODE="104" VALUE="Lose Channel"/>
+        <ELEINFO CODE="201" VALUE="Call discontinued"/>
+        <ELEINFO CODE="202" VALUE="Not Connect Voice Link"/>
+        <ELEINFO CODE="203" VALUE="Data Not Received"/>
+        <ELEINFO CODE="204" VALUE="Voice Request Failure"/>
+        <ELEINFO CODE="205" VALUE="Disk Full"/>
+        <ELEINFO CODE="206" VALUE="Voice Loss（One side or two）"/>
+        <ELEINFO CODE="301" VALUE="Fax demodulation fails."/>
+        <ELEINFO CODE="302" VALUE="Fax decoding fails"/>
+        <ELEINFO CODE="303" VALUE="Fax demodulation fails（JBIG）"/>
+        <ELEINFO CODE="304" VALUE="Fax decoding fails（JBIG）"/>
+        <ELEINFO CODE="305" VALUE="Fax demodulation fails（V34）"/>
+        <ELEINFO CODE="306" VALUE="Fax decoding fails（V34）"/>
+        <ELEINFO CODE="307" VALUE="Incorrect parameter of receving/sending fax."/>
+        <ELEINFO CODE="308" VALUE="Incorrect parameter of receving/sending fax.(V34)"/>
+        <ELEINFO CODE="309" VALUE="Fail to create fax message during decoding."/>
+        <ELEINFO CODE="310" VALUE="Fail to create fax message during decoding.(JBIG)"/>
+        <ELEINFO CODE="311" VALUE="Fail to create fax message during decoding.(V34)"/>
+        <ELEINFO CODE="312" VALUE="HF filter compensation needed for fax "/>
+        <ELEINFO CODE="313" VALUE="Fax Decoder Not Support the Coding"/>
+    </DIC>
+    <DIC NAME="DIC_COM_OVER_CAUSE">
+        <ELEINFO CODE="1" VALUE="Unassigned (unallocated)"/>
+        <ELEINFO CODE="3" VALUE="No route to destination"/>
+        <ELEINFO CODE="6" VALUE="Channel unacceptable"/>
+        <ELEINFO CODE="8" VALUE="Operator determined barring"/>
+        <ELEINFO CODE="16" VALUE="Normal call clearing"/>
+        <ELEINFO CODE="17" VALUE="User busy"/>
+        <ELEINFO CODE="18" VALUE="No user responding"/>
+        <ELEINFO CODE="19" VALUE="User alerting, no answer"/>
+        <ELEINFO CODE="21" VALUE="Call rejected"/>
+        <ELEINFO CODE="22" VALUE="Number changed"/>
+        <ELEINFO CODE="25" VALUE="Pre-emption"/>
+        <ELEINFO CODE="26" VALUE="Non selected user clearing"/>
+        <ELEINFO CODE="27" VALUE="Destination out of order"/>
+        <ELEINFO CODE="28" VALUE="Invalid number format"/>
+        <ELEINFO CODE="29" VALUE="Facility rejected"/>
+        <ELEINFO CODE="30" VALUE="Response to STATUS ENQUIRY"/>
+        <ELEINFO CODE="31" VALUE="Normal, unspecified"/>
+        <ELEINFO CODE="34" VALUE="No circuit/channel available"/>
+        <ELEINFO CODE="38" VALUE="Network out of order"/>
+        <ELEINFO CODE="41" VALUE="Temporary failure"/>
+        <ELEINFO CODE="42" VALUE="Switching equipment conges"/>
+        <ELEINFO CODE="43" VALUE="Access information discarded_Discarded Info."/>
+        <ELEINFO CODE="44" VALUE="requested circuit/channel"/>
+        <ELEINFO CODE="47" VALUE="Resources unavailable, un"/>
+        <ELEINFO CODE="49" VALUE="Quality of service"/>
+        <ELEINFO CODE="50" VALUE="Requested facility not sub"/>
+        <ELEINFO CODE="55" VALUE="Incoming calls barred with"/>
+        <ELEINFO CODE="57" VALUE="Bearer capability not au"/>
+        <ELEINFO CODE="58" VALUE="Bearer capability not pre"/>
+        <ELEINFO CODE="63" VALUE="Service or option not"/>
+        <ELEINFO CODE="65" VALUE="Bearer service not"/>
+        <ELEINFO CODE="68" VALUE="ACM equal to or greater"/>
+        <ELEINFO CODE="69" VALUE="Requested facility not"/>
+        <ELEINFO CODE="70" VALUE="Only restricted digital"/>
+        <ELEINFO CODE="79" VALUE="Service or option not"/>
+        <ELEINFO CODE="81" VALUE="Invalid transaction iden"/>
+        <ELEINFO CODE="87" VALUE="User not member of CUG"/>
+        <ELEINFO CODE="88" VALUE="Incompatible destination"/>
+        <ELEINFO CODE="91" VALUE="Invalid transit network se"/>
+        <ELEINFO CODE="95" VALUE="Semantically incorrect"/>
+        <ELEINFO CODE="96" VALUE="Invalid mandatory informa"/>
+        <ELEINFO CODE="97" VALUE="Message type non-existent"/>
+        <ELEINFO CODE="98" VALUE="Message type not compatible"/>
+        <ELEINFO CODE="99" VALUE="Information element non-ex"/>
+        <ELEINFO CODE="100" VALUE="Conditional IE error"/>
+        <ELEINFO CODE="101" VALUE="Message not compatible with_ Message type"/>
+        <ELEINFO CODE="102" VALUE="Recovery on timer expiry"/>
+        <ELEINFO CODE="111" VALUE="Protocol error, unspecified"/>
+        <ELEINFO CODE="127" VALUE="Interworking, unspecified"/>
+    </DIC>
+    <DIC NAME="DIC_CONTENT_STATUS">
+        <ELEINFO CODE="0" VALUE="Regular Content"/>
+        <ELEINFO CODE="1" VALUE="No Content"/>
+        <ELEINFO CODE="2" VALUE="Unknown Error"/>
+        <ELEINFO CODE="101" VALUE="Voice Timeout"/>
+        <ELEINFO CODE="102" VALUE="Only Voice from A"/>
+        <ELEINFO CODE="103" VALUE="Only Voice from B"/>
+        <ELEINFO CODE="104" VALUE="Lose Channel"/>
+        <ELEINFO CODE="201" VALUE="Call discontinued"/>
+        <ELEINFO CODE="202" VALUE="Not Connect Voice Link"/>
+        <ELEINFO CODE="203" VALUE="Data Not Received"/>
+        <ELEINFO CODE="204" VALUE="Voice Request Failure"/>
+        <ELEINFO CODE="205" VALUE="Disk Full"/>
+        <ELEINFO CODE="206" VALUE="Voice Loss（One side or two）"/>
+        <ELEINFO CODE="301" VALUE="Fax demodulation fails."/>
+        <ELEINFO CODE="302" VALUE="Fax decoding fails"/>
+        <ELEINFO CODE="303" VALUE="Fax demodulation fails（JBIG）"/>
+        <ELEINFO CODE="304" VALUE="Fax decoding fails（JBIG）"/>
+        <ELEINFO CODE="305" VALUE="Fax demodulation fails（V34）"/>
+        <ELEINFO CODE="306" VALUE="Fax decoding fails（V34）"/>
+        <ELEINFO CODE="307" VALUE="Incorrect parameter of receving/sending fax."/>
+        <ELEINFO CODE="308" VALUE="Incorrect parameter of receving/sending fax.(V34)"/>
+        <ELEINFO CODE="309" VALUE="Fail to create fax message during decoding."/>
+        <ELEINFO CODE="310" VALUE="Fail to create fax message during decoding.(JBIG)"/>
+        <ELEINFO CODE="311" VALUE="Fail to create fax message during decoding.(V34)"/>
+        <ELEINFO CODE="312" VALUE="HF filter compensation needed for fax "/>
+        <ELEINFO CODE="313" VALUE="Fax Decoder Not Support the Coding"/>
+    </DIC>
+    <DIC NAME="DIC_ROAM_TYPE">
+        <ELEINFO CODE="0" VALUE="Not Distinguish"/>
+        <ELEINFO CODE="1" VALUE="International Roaming Out Bill"/>
+        <ELEINFO CODE="2" VALUE="International Roaming In Bill"/>
+        <ELEINFO CODE="3" VALUE="Domestic Roaming Bill"/>
+    </DIC>
+    <DIC NAME="DIC_RADIUS_TIMEOUT">
+        <ELEINFO CODE="0" VALUE="Normal Offline"/>
+        <ELEINFO CODE="1" VALUE="Timeout Output"/>
+        <ELEINFO CODE="2" VALUE="Offline by IP Confict"/>
+    </DIC>
+    <DIC NAME="DIC_RADIUS_IP_ADDR_TYPE">
+        <ELEINFO CODE="public" VALUE="public"/>
+        <ELEINFO CODE="private" VALUE="private"/>
+    </DIC>
+    <!--运营商-->
+    <DIC NAME="DIC_CARRIER_CODE">
+        <ELEINFO CODE="0" VALUE="Unknown"/>
+        <ELEINFO CODE="50" VALUE="Smart"/>
+        <ELEINFO CODE="51" VALUE="Viettel"/>
+        <ELEINFO CODE="52" VALUE="CamGSM"/>
+    </DIC>
+    <!--系统类型-->
+    <DIC NAME="DIC_SYSTEM_ID">
+        <ELEINFO CODE="50008" VALUE="A-interface system"/>
+        <ELEINFO CODE="70005" VALUE="Internet interception system"/>
+    </DIC>
+    <!--数据特性-->
+    <DIC NAME="DIC_DATA_CHARACTER">
+        <ELEINFO CODE="NORMAL" VALUE="NORMAL"/>
+        <ELEINFO CODE="REPLAY" VALUE="REPLAY"/>
+        <ELEINFO CODE="SSL" VALUE="SSL"/>
+        <ELEINFO CODE="VPN_DEC" VALUE="VPN_DEC"/>
+        <ELEINFO CODE="VPN" VALUE="VPN"/>
+    </DIC>
+    <!--时区-->
+    <DIC NAME="DIC_TIMEZONE">
+        <ELEINFO CODE="+0000" VALUE="+0000"/>
+        <ELEINFO CODE="+0100" VALUE="+0100"/>
+        <ELEINFO CODE="+0200" VALUE="+0200"/>
+        <ELEINFO CODE="+0300" VALUE="+0300"/>
+        <ELEINFO CODE="+0400" VALUE="+0400"/>
+        <ELEINFO CODE="+0500" VALUE="+0500"/>
+        <ELEINFO CODE="+0600" VALUE="+0600"/>
+        <ELEINFO CODE="+0700" VALUE="+0700"/>
+        <ELEINFO CODE="+0800" VALUE="+0800"/>
+        <ELEINFO CODE="+0900" VALUE="+0900"/>
+        <ELEINFO CODE="+1000" VALUE="+1000"/>
+        <ELEINFO CODE="+1100" VALUE="+1100"/>
+        <ELEINFO CODE="+1200" VALUE="+1200"/>
+        <ELEINFO CODE="-1200" VALUE="-1200"/>
+        <ELEINFO CODE="-1100" VALUE="-1100"/>
+        <ELEINFO CODE="-1000" VALUE="-1000"/>
+        <ELEINFO CODE="-0900" VALUE="-0900"/>
+        <ELEINFO CODE="-0800" VALUE="-0800"/>
+        <ELEINFO CODE="-0700" VALUE="-0700"/>
+        <ELEINFO CODE="-0600" VALUE="-0600"/>
+        <ELEINFO CODE="-0500" VALUE="-0500"/>
+        <ELEINFO CODE="-0400" VALUE="-0400"/>
+        <ELEINFO CODE="-0300" VALUE="-0300"/>
+        <ELEINFO CODE="-0200" VALUE="-0200"/>
+        <ELEINFO CODE="-0100" VALUE="-0100"/>
+    </DIC>
+    <!--异常类型-->
+    <DIC NAME="DIC_STYPE">
+        <ELEINFO CODE="5" VALUE="Office Suffix Modified"/>
+        <ELEINFO CODE="6" VALUE="Compress Suffix Modified"/>
+        <ELEINFO CODE="7" VALUE="Picture Suffix Modified"/>
+        <ELEINFO CODE="8" VALUE="Other Suffix Modified"/>
+        <ELEINFO CODE="11" VALUE="Encrypted RAR"/>
+        <ELEINFO CODE="12" VALUE="Sub-volume rar"/>
+        <ELEINFO CODE="13" VALUE="Sub-volume &amp; Encryption rar"/>
+        <ELEINFO CODE="21" VALUE="Encrypted ZIP"/>
+        <ELEINFO CODE="22" VALUE="Sub-volume  zip"/>
+        <ELEINFO CODE="23" VALUE="Sub-volume &amp; Encryption zip"/>
+        <ELEINFO CODE="24" VALUE="7zip Encryption"/>
+        <ELEINFO CODE="25" VALUE="7zip Sub-volume"/>
+        <ELEINFO CODE="51" VALUE="&quot;PGP Encryption, Public/Private Key File&quot;"/>
+        <ELEINFO CODE="52" VALUE="&quot;PGPSDA, Public/Private Key File&quot;"/>
+        <ELEINFO CODE="53" VALUE="&quot;PGPDISK, Public/Private Key File&quot;"/>
+        <ELEINFO CODE="54" VALUE="&quot;PGPEMAIL, Public/Private Key File&quot;"/>
+        <ELEINFO CODE="55" VALUE="PGP Encrpted File"/>
+        <ELEINFO CODE="71" VALUE="word 2003 Encryption"/>
+        <ELEINFO CODE="72" VALUE="ppt 2003 Encryption"/>
+        <ELEINFO CODE="73" VALUE="excel 2003 Encryption"/>
+        <ELEINFO CODE="74" VALUE="word 2007 Encryption"/>
+        <ELEINFO CODE="75" VALUE="ppt 2007 Encryption"/>
+        <ELEINFO CODE="76" VALUE="excel 2007 Encryption"/>
+        <ELEINFO CODE="77" VALUE="Only Write Protect WORD2003"/>
+        <ELEINFO CODE="78" VALUE="Only Write Protect EXCEL2003"/>
+        <ELEINFO CODE="81" VALUE="csecsec Encryption"/>
+        <ELEINFO CODE="82" VALUE="exe Suffix Modified"/>
+        <ELEINFO CODE="83" VALUE="Coder Encryption"/>
+        <ELEINFO CODE="84" VALUE="USB Encryption"/>
+        <ELEINFO CODE="93" VALUE="Unencrypted Word Offical Document"/>
+        <ELEINFO CODE="94" VALUE="Decrypted Word Official Documents"/>
+        <ELEINFO CODE="167" VALUE="BCC"/>
+        <ELEINFO CODE="168" VALUE="Encrypted PDF"/>
+        <ELEINFO CODE="169" VALUE="Suspicious Spoofed Mail"/>
+        <ELEINFO CODE="200" VALUE="Suspicious Picture-Armed Force"/>
+        <ELEINFO CODE="201" VALUE="Suspicious Picture-Website Screenshot"/>
+        <ELEINFO CODE="202" VALUE="Suspicious Picture-Bank Note"/>
+        <ELEINFO CODE="203" VALUE="Suspicious picture-APP screenshot"/>
+        <ELEINFO CODE="204" VALUE="Suspicious Picture- Certificate"/>
+        <ELEINFO CODE="205" VALUE="Suspicious Picture-Bank Card"/>
+        <ELEINFO CODE="206" VALUE="Suspicious Picture-TV Station"/>
+        <ELEINFO CODE="207" VALUE="Suspicious Picture-Include Face"/>
+        <ELEINFO CODE="208" VALUE="Suspicious Picture-Include Interested Face"/>
+    </DIC>
+    <!--语种对应关系-->
+    <DIC NAME="DIC_LANGUAGE">
+        <ELEINFO CODE="af" VALUE="af"/>
+        <ELEINFO CODE="ar" VALUE="ar"/>
+        <ELEINFO CODE="az" VALUE="az"/>
+        <ELEINFO CODE="be" VALUE="be"/>
+        <ELEINFO CODE="bg" VALUE="bg"/>
+        <ELEINFO CODE="bn" VALUE="bn"/>
+        <ELEINFO CODE="bo" VALUE="bo"/>
+        <ELEINFO CODE="bo-bzd" VALUE="bo-bzd"/>
+        <ELEINFO CODE="bo-ty" VALUE="bo-ty"/>
+        <ELEINFO CODE="ca" VALUE="ca"/>
+        <ELEINFO CODE="cs" VALUE="cs"/>
+        <ELEINFO CODE="cy" VALUE="cy"/>
+        <ELEINFO CODE="da" VALUE="da"/>
+        <ELEINFO CODE="de" VALUE="de"/>
+        <ELEINFO CODE="dv" VALUE="dv"/>
+        <ELEINFO CODE="el" VALUE="el"/>
+        <ELEINFO CODE="en" VALUE="en"/>
+        <ELEINFO CODE="en-us" VALUE="en-us"/>
+        <ELEINFO CODE="es" VALUE="es"/>
+        <ELEINFO CODE="et" VALUE="et"/>
+        <ELEINFO CODE="eu" VALUE="eu"/>
+        <ELEINFO CODE="fa" VALUE="fa"/>
+        <ELEINFO CODE="fi" VALUE="fi"/>
+        <ELEINFO CODE="fo" VALUE="fo"/>
+        <ELEINFO CODE="fr" VALUE="fr"/>
+        <ELEINFO CODE="gl" VALUE="gl"/>
+        <ELEINFO CODE="gu" VALUE="gu"/>
+        <ELEINFO CODE="he" VALUE="he"/>
+        <ELEINFO CODE="hi" VALUE="hi"/>
+        <ELEINFO CODE="hr" VALUE="hr"/>
+        <ELEINFO CODE="hu" VALUE="hu"/>
+        <ELEINFO CODE="hy" VALUE="hy"/>
+        <ELEINFO CODE="id" VALUE="id"/>
+        <ELEINFO CODE="is" VALUE="is"/>
+        <ELEINFO CODE="it" VALUE="it"/>
+        <ELEINFO CODE="ja" VALUE="ja"/>
+        <ELEINFO CODE="ka" VALUE="ka"/>
+        <ELEINFO CODE="kk" VALUE="kk"/>
+        <ELEINFO CODE="kn" VALUE="kn"/>
+        <ELEINFO CODE="ko" VALUE="ko"/>
+        <ELEINFO CODE="kok" VALUE="kok"/>
+        <ELEINFO CODE="ky" VALUE="ky"/>
+        <ELEINFO CODE="lt" VALUE="lt"/>
+        <ELEINFO CODE="lv" VALUE="lv"/>
+        <ELEINFO CODE="mi" VALUE="mi"/>
+        <ELEINFO CODE="mk" VALUE="mk"/>
+        <ELEINFO CODE="ml" VALUE="ml"/>
+        <ELEINFO CODE="mn" VALUE="mn"/>
+        <ELEINFO CODE="mr" VALUE="mr"/>
+        <ELEINFO CODE="ms" VALUE="ms"/>
+        <ELEINFO CODE="mt" VALUE="mt"/>
+        <ELEINFO CODE="ne" VALUE="ne"/>
+        <ELEINFO CODE="nl" VALUE="nl"/>
+        <ELEINFO CODE="no" VALUE="no"/>
+        <ELEINFO CODE="ns" VALUE="ns"/>
+        <ELEINFO CODE="pa" VALUE="pa"/>
+        <ELEINFO CODE="pl" VALUE="pl"/>
+        <ELEINFO CODE="pt" VALUE="pt"/>
+        <ELEINFO CODE="qu" VALUE="qu"/>
+        <ELEINFO CODE="ro" VALUE="ro"/>
+        <ELEINFO CODE="ru" VALUE="ru"/>
+        <ELEINFO CODE="sa" VALUE="sa"/>
+        <ELEINFO CODE="se" VALUE="se"/>
+        <ELEINFO CODE="sk" VALUE="sk"/>
+        <ELEINFO CODE="sl" VALUE="sl"/>
+        <ELEINFO CODE="so" VALUE="so"/>
+        <ELEINFO CODE="sq" VALUE="sq"/>
+        <ELEINFO CODE="sr" VALUE="sr"/>
+        <ELEINFO CODE="sv" VALUE="sv"/>
+        <ELEINFO CODE="sw" VALUE="sw"/>
+        <ELEINFO CODE="syr" VALUE="syr"/>
+        <ELEINFO CODE="ta" VALUE="ta"/>
+        <ELEINFO CODE="te" VALUE="te"/>
+        <ELEINFO CODE="th" VALUE="th"/>
+        <ELEINFO CODE="tl" VALUE="tl"/>
+        <ELEINFO CODE="tn" VALUE="tn"/>
+        <ELEINFO CODE="tr" VALUE="tr"/>
+        <ELEINFO CODE="ts" VALUE="ts"/>
+        <ELEINFO CODE="tt" VALUE="tt"/>
+        <ELEINFO CODE="ug" VALUE="ug"/>
+        <ELEINFO CODE="ug-ltn" VALUE="ug-ltn"/>
+        <ELEINFO CODE="uk" VALUE="uk"/>
+        <ELEINFO CODE="ur" VALUE="ur"/>
+        <ELEINFO CODE="uz" VALUE="uz"/>
+        <ELEINFO CODE="vi" VALUE="vi"/>
+        <ELEINFO CODE="xh" VALUE="xh"/>
+        <ELEINFO CODE="zh-cn" VALUE="zh-cn"/>
+        <ELEINFO CODE="zh-tw" VALUE="zh-tw"/>
+        <ELEINFO CODE="zu" VALUE="zu"/>
+    </DIC>
+    <!--数据来源地-->
+    <DIC NAME="DIC_LOCATION_CODE">
+        <ELEINFO CODE="999900" VALUE="Local System"/>
+    </DIC>
+    <!--IP归属国家代码表-->
+    <DIC NAME="DIC_IP_AREA">
+        <ELEINFO CODE="0" VALUE="Unknown"/>
+        <ELEINFO CODE="1" VALUE="Unknown"/>
+        <ELEINFO CODE="4" VALUE="Afghanistan"/>
+        <ELEINFO CODE="248" VALUE="Aland Islands"/>
+        <ELEINFO CODE="8" VALUE="Albania"/>
+        <ELEINFO CODE="12" VALUE="Algeria"/>
+        <ELEINFO CODE="20" VALUE="Andorra"/>
+        <ELEINFO CODE="24" VALUE="Angola"/>
+        <ELEINFO CODE="660" VALUE="Anguilla"/>
+        <ELEINFO CODE="10" VALUE="Antarctica"/>
+        <ELEINFO CODE="28" VALUE="AntiguaandBarbuda"/>
+        <ELEINFO CODE="32" VALUE="Argentina"/>
+        <ELEINFO CODE="51" VALUE="Armenia"/>
+        <ELEINFO CODE="533" VALUE="Aruba"/>
+        <ELEINFO CODE="36" VALUE="Australia"/>
+        <ELEINFO CODE="40" VALUE="Austria"/>
+        <ELEINFO CODE="31" VALUE="Azerbaijan"/>
+        <ELEINFO CODE="44" VALUE="Bahamas"/>
+        <ELEINFO CODE="48" VALUE="Bahrain"/>
+        <ELEINFO CODE="832" VALUE="Bailiwick of Jersey"/>
+        <ELEINFO CODE="50" VALUE="Bangladesh"/>
+        <ELEINFO CODE="52" VALUE="Barbados"/>
+        <ELEINFO CODE="56" VALUE="Belgium"/>
+        <ELEINFO CODE="84" VALUE="Belize"/>
+        <ELEINFO CODE="204" VALUE="Benin"/>
+        <ELEINFO CODE="60" VALUE="Bermuda"/>
+        <ELEINFO CODE="64" VALUE="Bhutan"/>
+        <ELEINFO CODE="68" VALUE="Bolivia"/>
+        <ELEINFO CODE="70" VALUE="Bosnia and Herzegovina "/>
+        <ELEINFO CODE="72" VALUE="Botswana"/>
+        <ELEINFO CODE="74" VALUE="Bouvet Island"/>
+        <ELEINFO CODE="76" VALUE="Brazil"/>
+        <ELEINFO CODE="86" VALUE="British Indian Ocean Territory"/>
+        <ELEINFO CODE="96" VALUE="BruneiDarussalam"/>
+        <ELEINFO CODE="100" VALUE="Bulgaria"/>
+        <ELEINFO CODE="854" VALUE="BurkinaFaso"/>
+        <ELEINFO CODE="104" VALUE="Burma"/>
+        <ELEINFO CODE="108" VALUE="Burundi"/>
+        <ELEINFO CODE="116" VALUE="Cambodia"/>
+        <ELEINFO CODE="120" VALUE="Cameroon"/>
+        <ELEINFO CODE="124" VALUE="Canada"/>
+        <ELEINFO CODE="132" VALUE="Cape Verde "/>
+        <ELEINFO CODE="535" VALUE="Caribbean Netherlands"/>
+        <ELEINFO CODE="136" VALUE="Cayman Islands"/>
+        <ELEINFO CODE="148" VALUE="Chad"/>
+        <ELEINFO CODE="152" VALUE="Chile"/>
+        <ELEINFO CODE="156" VALUE="China"/>
+        <ELEINFO CODE="162" VALUE="Christmas Island"/>
+        <ELEINFO CODE="166" VALUE="Cocos Islands"/>
+        <ELEINFO CODE="170" VALUE="Colombia"/>
+        <ELEINFO CODE="174" VALUE="Comoros"/>
+        <ELEINFO CODE="184" VALUE="Cook Islands"/>
+        <ELEINFO CODE="188" VALUE="Costarica"/>
+        <ELEINFO CODE="191" VALUE="Croatia"/>
+        <ELEINFO CODE="192" VALUE="Cuba"/>
+        <ELEINFO CODE="196" VALUE="Cyprus"/>
+        <ELEINFO CODE="203" VALUE="Czech Republic"/>
+        <ELEINFO CODE="180" VALUE="Democratic Republic of Congo"/>
+        <ELEINFO CODE="208" VALUE="Denmark"/>
+        <ELEINFO CODE="262" VALUE="Djibouti"/>
+        <ELEINFO CODE="212" VALUE="Dominica"/>
+        <ELEINFO CODE="626" VALUE="East Timor"/>
+        <ELEINFO CODE="218" VALUE="Ecuador"/>
+        <ELEINFO CODE="818" VALUE="Egypt"/>
+        <ELEINFO CODE="222" VALUE="ElSalvador"/>
+        <ELEINFO CODE="226" VALUE="Equatorial Guinea"/>
+        <ELEINFO CODE="233" VALUE="Estonia"/>
+        <ELEINFO CODE="231" VALUE="Ethiopia"/>
+        <ELEINFO CODE="238" VALUE="Falkland Islands"/>
+        <ELEINFO CODE="234" VALUE="Faroe Islands"/>
+        <ELEINFO CODE="242" VALUE="Fiji Islands"/>
+        <ELEINFO CODE="246" VALUE="Finland"/>
+        <ELEINFO CODE="250" VALUE="France"/>
+        <ELEINFO CODE="258" VALUE="French Polynesia"/>
+        <ELEINFO CODE="260" VALUE="French Southern Territories"/>
+        <ELEINFO CODE="254" VALUE="FrenchGuiana"/>
+        <ELEINFO CODE="266" VALUE="Gabon"/>
+        <ELEINFO CODE="270" VALUE="Gambia"/>
+        <ELEINFO CODE="268" VALUE="Georgia"/>
+        <ELEINFO CODE="288" VALUE="Ghana"/>
+        <ELEINFO CODE="292" VALUE="Gibraltar"/>
+        <ELEINFO CODE="300" VALUE="Greece"/>
+        <ELEINFO CODE="304" VALUE="Greenland"/>
+        <ELEINFO CODE="308" VALUE="Grenada"/>
+        <ELEINFO CODE="276" VALUE="Grmany"/>
+        <ELEINFO CODE="312" VALUE="Guadeloupe"/>
+        <ELEINFO CODE="316" VALUE="Guam"/>
+        <ELEINFO CODE="320" VALUE="Guatemala"/>
+        <ELEINFO CODE="831" VALUE="Guernsey"/>
+        <ELEINFO CODE="324" VALUE="Guinea"/>
+        <ELEINFO CODE="624" VALUE="Guinea-Bissau"/>
+        <ELEINFO CODE="328" VALUE="Guyana"/>
+        <ELEINFO CODE="332" VALUE="Haiti"/>
+        <ELEINFO CODE="334" VALUE="Heard Island and McDonald Islands"/>
+        <ELEINFO CODE="340" VALUE="Honduras"/>
+        <ELEINFO CODE="344" VALUE="HongKong"/>
+        <ELEINFO CODE="348" VALUE="Hungary"/>
+        <ELEINFO CODE="352" VALUE="Iceland"/>
+        <ELEINFO CODE="356" VALUE="India"/>
+        <ELEINFO CODE="360" VALUE="Indonesia"/>
+        <ELEINFO CODE="364" VALUE="Iran"/>
+        <ELEINFO CODE="368" VALUE="Iraq"/>
+        <ELEINFO CODE="372" VALUE="Ireland"/>
+        <ELEINFO CODE="833" VALUE="Isle of Man"/>
+        <ELEINFO CODE="376" VALUE="Israel"/>
+        <ELEINFO CODE="380" VALUE="Italy"/>
+        <ELEINFO CODE="384" VALUE="Ivory Coast"/>
+        <ELEINFO CODE="388" VALUE="Jamaica"/>
+        <ELEINFO CODE="392" VALUE="Japan"/>
+        <ELEINFO CODE="400" VALUE="Jordan"/>
+        <ELEINFO CODE="398" VALUE="Kazakstan"/>
+        <ELEINFO CODE="404" VALUE="Kenya"/>
+        <ELEINFO CODE="296" VALUE="Kiribati"/>
+        <ELEINFO CODE="410" VALUE="Korea"/>
+        <ELEINFO CODE="414" VALUE="kuwait"/>
+        <ELEINFO CODE="417" VALUE="Kyrgyzstan"/>
+        <ELEINFO CODE="418" VALUE="Laos"/>
+        <ELEINFO CODE="428" VALUE="Latvia"/>
+        <ELEINFO CODE="422" VALUE="Lebanon"/>
+        <ELEINFO CODE="426" VALUE="Lesotho"/>
+        <ELEINFO CODE="430" VALUE="Liberia"/>
+        <ELEINFO CODE="434" VALUE="Libya"/>
+        <ELEINFO CODE="438" VALUE="Liechtenstein"/>
+        <ELEINFO CODE="440" VALUE="Lithuania"/>
+        <ELEINFO CODE="442" VALUE="Luxembourg"/>
+        <ELEINFO CODE="446" VALUE="Macao"/>
+        <ELEINFO CODE="807" VALUE="Macedonia"/>
+        <ELEINFO CODE="450" VALUE="Malagasy"/>
+        <ELEINFO CODE="454" VALUE="Malawi"/>
+        <ELEINFO CODE="458" VALUE="Malaysia"/>
+        <ELEINFO CODE="462" VALUE="Maldives"/>
+        <ELEINFO CODE="466" VALUE="Mali"/>
+        <ELEINFO CODE="470" VALUE="Malta"/>
+        <ELEINFO CODE="584" VALUE="MarshallIslands"/>
+        <ELEINFO CODE="474" VALUE="Martinique"/>
+        <ELEINFO CODE="478" VALUE="Mauritania"/>
+        <ELEINFO CODE="480" VALUE="Mauritius"/>
+        <ELEINFO CODE="175" VALUE="Mayotte"/>
+        <ELEINFO CODE="484" VALUE="Mexico"/>
+        <ELEINFO CODE="583" VALUE="Micronesia"/>
+        <ELEINFO CODE="498" VALUE="MoldovaRepublicof"/>
+        <ELEINFO CODE="492" VALUE="Monaco"/>
+        <ELEINFO CODE="496" VALUE="Mongolia"/>
+        <ELEINFO CODE="499" VALUE="Montenegro"/>
+        <ELEINFO CODE="500" VALUE="Montserrat"/>
+        <ELEINFO CODE="504" VALUE="Morocco"/>
+        <ELEINFO CODE="508" VALUE="Mozambique"/>
+        <ELEINFO CODE="516" VALUE="Namibia"/>
+        <ELEINFO CODE="520" VALUE="Naura"/>
+        <ELEINFO CODE="524" VALUE="Nepal"/>
+        <ELEINFO CODE="528" VALUE="Netherlands"/>
+        <ELEINFO CODE="540" VALUE="New Caledonia"/>
+        <ELEINFO CODE="554" VALUE="New Zealand"/>
+        <ELEINFO CODE="558" VALUE="Nicaragua"/>
+        <ELEINFO CODE="562" VALUE="Niger"/>
+        <ELEINFO CODE="566" VALUE="Nigeria"/>
+        <ELEINFO CODE="570" VALUE="Niue"/>
+        <ELEINFO CODE="574" VALUE="Norfolk Island"/>
+        <ELEINFO CODE="408" VALUE="North Korea"/>
+        <ELEINFO CODE="580" VALUE="Northern Mariana Islands"/>
+        <ELEINFO CODE="578" VALUE="Norway"/>
+        <ELEINFO CODE="512" VALUE="Oman"/>
+        <ELEINFO CODE="586" VALUE="Pakistan"/>
+        <ELEINFO CODE="585" VALUE="Palau"/>
+        <ELEINFO CODE="275" VALUE="Palestine"/>
+        <ELEINFO CODE="591" VALUE="Panama"/>
+        <ELEINFO CODE="598" VALUE="Papua"/>
+        <ELEINFO CODE="600" VALUE="Paraguay"/>
+        <ELEINFO CODE="604" VALUE="Peru"/>
+        <ELEINFO CODE="608" VALUE="Philippines"/>
+        <ELEINFO CODE="612" VALUE="Pitcairn Islands"/>
+        <ELEINFO CODE="616" VALUE="Poland"/>
+        <ELEINFO CODE="620" VALUE="Portugal"/>
+        <ELEINFO CODE="630" VALUE="PuertoRico"/>
+        <ELEINFO CODE="634" VALUE="Qatar"/>
+        <ELEINFO CODE="638" VALUE="Reunion Island"/>
+        <ELEINFO CODE="642" VALUE="Romania"/>
+        <ELEINFO CODE="643" VALUE="Russia"/>
+        <ELEINFO CODE="646" VALUE="Rwanda"/>
+        <ELEINFO CODE="666" VALUE="Saint Pierre and Miquelon"/>
+        <ELEINFO CODE="670" VALUE="Saint Vincent and the Grenadines"/>
+        <ELEINFO CODE="663" VALUE="Saint-Martin"/>
+        <ELEINFO CODE="882" VALUE="Samoa"/>
+        <ELEINFO CODE="16" VALUE="Samoa of the United States"/>
+        <ELEINFO CODE="674" VALUE="SanMarino"/>
+        <ELEINFO CODE="678" VALUE="Sao Tome and Principe"/>
+        <ELEINFO CODE="682" VALUE="SaudiArabia"/>
+        <ELEINFO CODE="686" VALUE="Senegal"/>
+        <ELEINFO CODE="688" VALUE="Serbia"/>
+        <ELEINFO CODE="690" VALUE="Seychelles"/>
+        <ELEINFO CODE="694" VALUE="Sierra Leone"/>
+        <ELEINFO CODE="702" VALUE="Singapore"/>
+        <ELEINFO CODE="703" VALUE="Slovakia"/>
+        <ELEINFO CODE="705" VALUE="Slovene"/>
+        <ELEINFO CODE="90" VALUE="Solomon Islands"/>
+        <ELEINFO CODE="706" VALUE="Somali"/>
+        <ELEINFO CODE="710" VALUE="South Africa"/>
+        <ELEINFO CODE="239" VALUE="South Georgia and The South Sandwich Islands"/>
+        <ELEINFO CODE="728" VALUE="South Sudan"/>
+        <ELEINFO CODE="724" VALUE="Spain"/>
+        <ELEINFO CODE="144" VALUE="SriLanka"/>
+        <ELEINFO CODE="652" VALUE="St.Barthelemy"/>
+        <ELEINFO CODE="659" VALUE="St.ChristopherandNevisIslands"/>
+        <ELEINFO CODE="654" VALUE="St.Helena"/>
+        <ELEINFO CODE="662" VALUE="St.Lucia"/>
+        <ELEINFO CODE="729" VALUE="Sudan"/>
+        <ELEINFO CODE="740" VALUE="Surinam"/>
+        <ELEINFO CODE="744" VALUE="Svalbard and JanMayen Islands"/>
+        <ELEINFO CODE="748" VALUE="Swaziland"/>
+        <ELEINFO CODE="752" VALUE="Sweden"/>
+        <ELEINFO CODE="756" VALUE="Switzerland"/>
+        <ELEINFO CODE="760" VALUE="Syria"/>
+        <ELEINFO CODE="158" VALUE="Taiwan"/>
+        <ELEINFO CODE="834" VALUE="Tanzania"/>
+        <ELEINFO CODE="764" VALUE="Thailand"/>
+        <ELEINFO CODE="92" VALUE="The British Virgin Islands"/>
+        <ELEINFO CODE="140" VALUE="The Central African Republic"/>
+        <ELEINFO CODE="232" VALUE="The Commonwealth of eritrea"/>
+        <ELEINFO CODE="214" VALUE="The Dominican Republic"/>
+        <ELEINFO CODE="178" VALUE="The Republic of Congo"/>
+        <ELEINFO CODE="796" VALUE="The Turks and Caicos Islands"/>
+        <ELEINFO CODE="840" VALUE="the United States"/>
+        <ELEINFO CODE="850" VALUE="The Virgin Islands of the United States"/>
+        <ELEINFO CODE="768" VALUE="Togo"/>
+        <ELEINFO CODE="772" VALUE="Tokelau Islands"/>
+        <ELEINFO CODE="776" VALUE="Tonga"/>
+        <ELEINFO CODE="780" VALUE="Trinidad and Tobago"/>
+        <ELEINFO CODE="762" VALUE="Tsjikistan"/>
+        <ELEINFO CODE="788" VALUE="Tunisia"/>
+        <ELEINFO CODE="792" VALUE="Turkey"/>
+        <ELEINFO CODE="795" VALUE="Turkomanstan"/>
+        <ELEINFO CODE="798" VALUE="Tuvalu"/>
+        <ELEINFO CODE="800" VALUE="Uganda"/>
+        <ELEINFO CODE="804" VALUE="Ukiain"/>
+        <ELEINFO CODE="784" VALUE="United Arab Emirates"/>
+        <ELEINFO CODE="826" VALUE="United Kingdom"/>
+        <ELEINFO CODE="581" VALUE="United States Minor Outlying Islands"/>
+        <ELEINFO CODE="858" VALUE="uruguay"/>
+        <ELEINFO CODE="860" VALUE="Uzbeakstan"/>
+        <ELEINFO CODE="548" VALUE="Vanuatu "/>
+        <ELEINFO CODE="336" VALUE="Vatican"/>
+        <ELEINFO CODE="862" VALUE="Venezuela"/>
+        <ELEINFO CODE="704" VALUE="Vietnam"/>
+        <ELEINFO CODE="876" VALUE="Wallis and Futuna Islands"/>
+        <ELEINFO CODE="732" VALUE="Western Sahara"/>
+        <ELEINFO CODE="112" VALUE="WhiteRussia"/>
+        <ELEINFO CODE="887" VALUE="Yemen"/>
+        <ELEINFO CODE="894" VALUE="Zambia"/>
+        <ELEINFO CODE="716" VALUE="Zimbabwe"/>
+    </DIC>
+    <!--IMSI国家对应表-->
+    <DIC NAME="DIC_IMSI_COUNTRY">
+        <ELEINFO CODE="000" VALUE="Unknown"/>
+        <ELEINFO CODE="412" VALUE="Afghanistan"/>
+        <ELEINFO CODE="276" VALUE="Albania"/>
+        <ELEINFO CODE="603" VALUE="Algeria"/>
+        <ELEINFO CODE="213" VALUE="Andorra"/>
+        <ELEINFO CODE="631" VALUE="Angola"/>
+        <ELEINFO CODE="365" VALUE="Anguilla"/>
+        <ELEINFO CODE="344" VALUE="AntiguaandBarbuda"/>
+        <ELEINFO CODE="722" VALUE="Argentina"/>
+        <ELEINFO CODE="283" VALUE="Armenia"/>
+        <ELEINFO CODE="363" VALUE="Aruba"/>
+        <ELEINFO CODE="505" VALUE="Australia"/>
+        <ELEINFO CODE="232" VALUE="Austria"/>
+        <ELEINFO CODE="400" VALUE="Azerbaijan"/>
+        <ELEINFO CODE="364" VALUE="Bahamas"/>
+        <ELEINFO CODE="426" VALUE="Bahrain"/>
+        <ELEINFO CODE="470" VALUE="Bangladesh"/>
+        <ELEINFO CODE="342" VALUE="Barbados"/>
+        <ELEINFO CODE="206" VALUE="Belgium"/>
+        <ELEINFO CODE="702" VALUE="Belize"/>
+        <ELEINFO CODE="616" VALUE="Benin"/>
+        <ELEINFO CODE="350" VALUE="Bermuda"/>
+        <ELEINFO CODE="402" VALUE="Bhutan"/>
+        <ELEINFO CODE="736" VALUE="Bolivia"/>
+        <ELEINFO CODE="218" VALUE="Bosnia and Herzegovina"/>
+        <ELEINFO CODE="652" VALUE="Botswana"/>
+        <ELEINFO CODE="724" VALUE="Brazil"/>
+        <ELEINFO CODE="528" VALUE="BruneiDarussalam"/>
+        <ELEINFO CODE="284" VALUE="Bulgaria"/>
+        <ELEINFO CODE="613" VALUE="BurkinaFaso"/>
+        <ELEINFO CODE="414" VALUE="Burma"/>
+        <ELEINFO CODE="642" VALUE="Burundi"/>
+        <ELEINFO CODE="456" VALUE="Cambodia"/>
+        <ELEINFO CODE="624" VALUE="Cameroon"/>
+        <ELEINFO CODE="302" VALUE="Canada"/>
+        <ELEINFO CODE="625" VALUE="Cape Verde "/>
+        <ELEINFO CODE="346" VALUE="Cayman Islands"/>
+        <ELEINFO CODE="622" VALUE="Chad"/>
+        <ELEINFO CODE="730" VALUE="Chile"/>
+        <ELEINFO CODE="460" VALUE="China"/>
+        <ELEINFO CODE="461" VALUE="China"/>
+        <ELEINFO CODE="732" VALUE="Colombia"/>
+        <ELEINFO CODE="654" VALUE="Comoros"/>
+        <ELEINFO CODE="548" VALUE="Cook Islands"/>
+        <ELEINFO CODE="712" VALUE="Costarica"/>
+        <ELEINFO CODE="219" VALUE="Croatia"/>
+        <ELEINFO CODE="368" VALUE="Cuba"/>
+        <ELEINFO CODE="362" VALUE="Curacao"/>
+        <ELEINFO CODE="280" VALUE="Cyprus"/>
+        <ELEINFO CODE="230" VALUE="Czech Republic"/>
+        <ELEINFO CODE="238" VALUE="Denmark"/>
+        <ELEINFO CODE="638" VALUE="Djibouti"/>
+        <ELEINFO CODE="366" VALUE="Dominica"/>
+        <ELEINFO CODE="514" VALUE="East Timor"/>
+        <ELEINFO CODE="740" VALUE="Ecuador"/>
+        <ELEINFO CODE="602" VALUE="Egypt"/>
+        <ELEINFO CODE="706" VALUE="ElSalvador"/>
+        <ELEINFO CODE="627" VALUE="Equatorial Guinea"/>
+        <ELEINFO CODE="248" VALUE="Estonia"/>
+        <ELEINFO CODE="636" VALUE="Ethiopia"/>
+        <ELEINFO CODE="750" VALUE="FalklandIslands"/>
+        <ELEINFO CODE="288" VALUE="Faroe Islands"/>
+        <ELEINFO CODE="542" VALUE="Fiji"/>
+        <ELEINFO CODE="244" VALUE="Finland"/>
+        <ELEINFO CODE="208" VALUE="France"/>
+        <ELEINFO CODE="547" VALUE="French Polynesia"/>
+        <ELEINFO CODE="742" VALUE="FrenchGuiana"/>
+        <ELEINFO CODE="628" VALUE="Gabon"/>
+        <ELEINFO CODE="607" VALUE="Gambia"/>
+        <ELEINFO CODE="282" VALUE="Georgia"/>
+        <ELEINFO CODE="620" VALUE="Ghana"/>
+        <ELEINFO CODE="266" VALUE="Gibraltar"/>
+        <ELEINFO CODE="202" VALUE="Greece"/>
+        <ELEINFO CODE="290" VALUE="Greenland"/>
+        <ELEINFO CODE="352" VALUE="Grenada"/>
+        <ELEINFO CODE="262" VALUE="Grmany"/>
+        <ELEINFO CODE="340" VALUE="Guadeloupe/Mauritania"/>
+        <ELEINFO CODE="535" VALUE="Guam"/>
+        <ELEINFO CODE="704" VALUE="Guatemala"/>
+        <ELEINFO CODE="611" VALUE="Guinea"/>
+        <ELEINFO CODE="632" VALUE="Guinea-Bissau"/>
+        <ELEINFO CODE="738" VALUE="Guyana"/>
+        <ELEINFO CODE="372" VALUE="Haiti"/>
+        <ELEINFO CODE="708" VALUE="Honduras"/>
+        <ELEINFO CODE="454" VALUE="HongKong"/>
+        <ELEINFO CODE="216" VALUE="Hungary"/>
+        <ELEINFO CODE="274" VALUE="Iceland"/>
+        <ELEINFO CODE="404" VALUE="India"/>
+        <ELEINFO CODE="405" VALUE="India"/>
+        <ELEINFO CODE="406" VALUE="India"/>
+        <ELEINFO CODE="510" VALUE="Indonesia"/>
+        <ELEINFO CODE="432" VALUE="Iran"/>
+        <ELEINFO CODE="418" VALUE="Iraq"/>
+        <ELEINFO CODE="272" VALUE="Ireland"/>
+        <ELEINFO CODE="425" VALUE="Israel/Palestine"/>
+        <ELEINFO CODE="222" VALUE="Italy"/>
+        <ELEINFO CODE="612" VALUE="Ivory Coast"/>
+        <ELEINFO CODE="338" VALUE="Jamaica"/>
+        <ELEINFO CODE="440" VALUE="Japan"/>
+        <ELEINFO CODE="441" VALUE="Japan"/>
+        <ELEINFO CODE="416" VALUE="Jordan"/>
+        <ELEINFO CODE="401" VALUE="Kazakstan"/>
+        <ELEINFO CODE="639" VALUE="Kenya"/>
+        <ELEINFO CODE="545" VALUE="Kiribati"/>
+        <ELEINFO CODE="450" VALUE="Korea"/>
+        <ELEINFO CODE="419" VALUE="kuwait"/>
+        <ELEINFO CODE="437" VALUE="Kyrgyzstan"/>
+        <ELEINFO CODE="457" VALUE="Laos"/>
+        <ELEINFO CODE="247" VALUE="Latvia"/>
+        <ELEINFO CODE="415" VALUE="Lebanon"/>
+        <ELEINFO CODE="651" VALUE="Lesotho"/>
+        <ELEINFO CODE="618" VALUE="Liberia"/>
+        <ELEINFO CODE="606" VALUE="Libya"/>
+        <ELEINFO CODE="295" VALUE="Liechtenstein"/>
+        <ELEINFO CODE="246" VALUE="Lithuania"/>
+        <ELEINFO CODE="270" VALUE="Luxembourg"/>
+        <ELEINFO CODE="294" VALUE="Luxembourg"/>
+        <ELEINFO CODE="455" VALUE="Macao"/>
+        <ELEINFO CODE="646" VALUE="Malagasy"/>
+        <ELEINFO CODE="650" VALUE="Malawi"/>
+        <ELEINFO CODE="502" VALUE="Malaysia"/>
+        <ELEINFO CODE="472" VALUE="Maldives"/>
+        <ELEINFO CODE="610" VALUE="Mali"/>
+        <ELEINFO CODE="278" VALUE="Malta"/>
+        <ELEINFO CODE="551" VALUE="MarshallIslands"/>
+        <ELEINFO CODE="609" VALUE="Mauritania"/>
+        <ELEINFO CODE="617" VALUE="Mauritius"/>
+        <ELEINFO CODE="334" VALUE="Mexico"/>
+        <ELEINFO CODE="550" VALUE="Micronesia"/>
+        <ELEINFO CODE="259" VALUE="MoldovaRepublicof"/>
+        <ELEINFO CODE="212" VALUE="Monaco"/>
+        <ELEINFO CODE="428" VALUE="Mongolia"/>
+        <ELEINFO CODE="297" VALUE="Montenegro"/>
+        <ELEINFO CODE="354" VALUE="Montserrat"/>
+        <ELEINFO CODE="604" VALUE="Morocco"/>
+        <ELEINFO CODE="643" VALUE="Mozambique"/>
+        <ELEINFO CODE="649" VALUE="Namibia"/>
+        <ELEINFO CODE="536" VALUE="Naura"/>
+        <ELEINFO CODE="429" VALUE="Nepal"/>
+        <ELEINFO CODE="204" VALUE="Netherlands"/>
+        <ELEINFO CODE="530" VALUE="New Zealand"/>
+        <ELEINFO CODE="546" VALUE="NewCaledonia"/>
+        <ELEINFO CODE="710" VALUE="Nicaragua"/>
+        <ELEINFO CODE="614" VALUE="Niger"/>
+        <ELEINFO CODE="621" VALUE="Nigeria"/>
+        <ELEINFO CODE="555" VALUE="Niue"/>
+        <ELEINFO CODE="467" VALUE="North Korea"/>
+        <ELEINFO CODE="534" VALUE="Northern Mariana Islands"/>
+        <ELEINFO CODE="242" VALUE="Norway"/>
+        <ELEINFO CODE="422" VALUE="Oman"/>
+        <ELEINFO CODE="410" VALUE="Pakistan"/>
+        <ELEINFO CODE="552" VALUE="Palau"/>
+        <ELEINFO CODE="714" VALUE="Panama"/>
+        <ELEINFO CODE="537" VALUE="Papua"/>
+        <ELEINFO CODE="744" VALUE="Paraguay"/>
+        <ELEINFO CODE="716" VALUE="Peru"/>
+        <ELEINFO CODE="515" VALUE="Philippines"/>
+        <ELEINFO CODE="260" VALUE="Poland"/>
+        <ELEINFO CODE="268" VALUE="Portugal"/>
+        <ELEINFO CODE="330" VALUE="PuertoRico"/>
+        <ELEINFO CODE="427" VALUE="Qatar"/>
+        <ELEINFO CODE="647" VALUE="Reunion Island"/>
+        <ELEINFO CODE="226" VALUE="Romania"/>
+        <ELEINFO CODE="250" VALUE="Russia"/>
+        <ELEINFO CODE="635" VALUE="Rwanda"/>
+        <ELEINFO CODE="356" VALUE="Saint Kitts and Nevis"/>
+        <ELEINFO CODE="360" VALUE="Saint Vincent and the Grenadines"/>
+        <ELEINFO CODE="549" VALUE="Samoa"/>
+        <ELEINFO CODE="544" VALUE="Samoa of the United States"/>
+        <ELEINFO CODE="292" VALUE="SanMarino"/>
+        <ELEINFO CODE="626" VALUE="Sao Tome and Principe"/>
+        <ELEINFO CODE="420" VALUE="SaudiArabia"/>
+        <ELEINFO CODE="608" VALUE="Senegal"/>
+        <ELEINFO CODE="220" VALUE="Serbia"/>
+        <ELEINFO CODE="633" VALUE="Seychelles"/>
+        <ELEINFO CODE="619" VALUE="Sierra Leone"/>
+        <ELEINFO CODE="525" VALUE="Singapore"/>
+        <ELEINFO CODE="231" VALUE="Slovakia"/>
+        <ELEINFO CODE="293" VALUE="Slovene"/>
+        <ELEINFO CODE="540" VALUE="Solomon Islands"/>
+        <ELEINFO CODE="637" VALUE="Somali"/>
+        <ELEINFO CODE="655" VALUE="South Africa"/>
+        <ELEINFO CODE="214" VALUE="Spain"/>
+        <ELEINFO CODE="413" VALUE="SriLanka"/>
+        <ELEINFO CODE="358" VALUE="St.Lucia"/>
+        <ELEINFO CODE="308" VALUE="St.PierreandMiquelon"/>
+        <ELEINFO CODE="634" VALUE="Sudan"/>
+        <ELEINFO CODE="746" VALUE="Surinam"/>
+        <ELEINFO CODE="653" VALUE="Swaziland"/>
+        <ELEINFO CODE="240" VALUE="Sweden"/>
+        <ELEINFO CODE="228" VALUE="Switzerland"/>
+        <ELEINFO CODE="417" VALUE="Syria"/>
+        <ELEINFO CODE="466" VALUE="Taiwan"/>
+        <ELEINFO CODE="640" VALUE="Tanzania"/>
+        <ELEINFO CODE="520" VALUE="Thailand"/>
+        <ELEINFO CODE="348" VALUE="The British Virgin Islands"/>
+        <ELEINFO CODE="623" VALUE="The Central African Republic"/>
+        <ELEINFO CODE="657" VALUE="The Commonwealth of eritrea"/>
+        <ELEINFO CODE="370" VALUE="The Dominican Republic"/>
+        <ELEINFO CODE="310" VALUE="the United States"/>
+        <ELEINFO CODE="311" VALUE="the United States"/>
+        <ELEINFO CODE="312" VALUE="the United States"/>
+        <ELEINFO CODE="313" VALUE="the United States"/>
+        <ELEINFO CODE="314" VALUE="the United States"/>
+        <ELEINFO CODE="315" VALUE="the United States"/>
+        <ELEINFO CODE="316" VALUE="the United States"/>
+        <ELEINFO CODE="332" VALUE="The Virgin Islands of the United States"/>
+        <ELEINFO CODE="615" VALUE="Togo"/>
+        <ELEINFO CODE="539" VALUE="Tonga"/>
+        <ELEINFO CODE="374" VALUE="Trinidad and Tobago"/>
+        <ELEINFO CODE="436" VALUE="Tsjikistan"/>
+        <ELEINFO CODE="605" VALUE="Tunisia"/>
+        <ELEINFO CODE="286" VALUE="Turkey"/>
+        <ELEINFO CODE="438" VALUE="Turkomanstan"/>
+        <ELEINFO CODE="376" VALUE="Turks and Caicos"/>
+        <ELEINFO CODE="641" VALUE="Uganda"/>
+        <ELEINFO CODE="255" VALUE="Ukiain"/>
+        <ELEINFO CODE="424" VALUE="United Arab Emirates"/>
+        <ELEINFO CODE="430" VALUE="United Arab Emirates"/>
+        <ELEINFO CODE="431" VALUE="United Arab Emirates"/>
+        <ELEINFO CODE="234" VALUE="United Kingdom"/>
+        <ELEINFO CODE="235" VALUE="United Kingdom"/>
+        <ELEINFO CODE="748" VALUE="uruguay"/>
+        <ELEINFO CODE="434" VALUE="Uzbeakstan"/>
+        <ELEINFO CODE="541" VALUE="Vanuatu"/>
+        <ELEINFO CODE="225" VALUE="Vatican"/>
+        <ELEINFO CODE="734" VALUE="Venezuela"/>
+        <ELEINFO CODE="452" VALUE="Vietnam"/>
+        <ELEINFO CODE="543" VALUE="Wallis and Furtuna Islands"/>
+        <ELEINFO CODE="257" VALUE="WhiteRussia"/>
+        <ELEINFO CODE="421" VALUE="Yemen"/>
+        <ELEINFO CODE="629" VALUE="Zaire"/>
+        <ELEINFO CODE="630" VALUE="Zaire"/>
+        <ELEINFO CODE="645" VALUE="Zambia"/>
+        <ELEINFO CODE="648" VALUE="Zimbabwe"/>
+    </DIC>
+    <!--电话区号表-->
+    <DIC NAME="DIC_PHONE_CITY">
+    </DIC>
+    <!--DATA_CALL话单类型码表-->
+    <DIC NAME="DIC_BILL_TYPE">
+        <ELEINFO CODE="0" VALUE="Unknown Type"/>
+        <ELEINFO CODE="1" VALUE="Power On"/>
+        <ELEINFO CODE="2" VALUE="Power Off"/>
+        <ELEINFO CODE="3" VALUE="Periodical Location Update"/>
+        <ELEINFO CODE="4" VALUE="Mandatory Location Update"/>
+        <ELEINFO CODE="5" VALUE="MO Switch"/>
+        <ELEINFO CODE="6" VALUE="MO Call Starts"/>
+        <ELEINFO CODE="7" VALUE="MT Call Starts"/>
+        <ELEINFO CODE="8" VALUE="IMEI Report"/>
+        <ELEINFO CODE="9" VALUE="Set CFU"/>
+        <ELEINFO CODE="10" VALUE="Set CFB"/>
+        <ELEINFO CODE="11" VALUE="Set CFNRy"/>
+        <ELEINFO CODE="12" VALUE="Set CFNRC"/>
+        <ELEINFO CODE="13" VALUE="Cancel CFU"/>
+        <ELEINFO CODE="14" VALUE="Cancel CFB"/>
+        <ELEINFO CODE="15" VALUE="Cancel CFNRY"/>
+        <ELEINFO CODE="16" VALUE="Cancel CFNRC"/>
+        <ELEINFO CODE="17" VALUE="Cacel ACF"/>
+        <ELEINFO CODE="18" VALUE="CDMA Surfing"/>
+        <ELEINFO CODE="19" VALUE="CDMA Fax"/>
+        <ELEINFO CODE="20" VALUE="CDMA Data"/>
+        <ELEINFO CODE="21" VALUE="Update Location"/>
+        <ELEINFO CODE="22" VALUE="MT Switch"/>
+        <ELEINFO CODE="25" VALUE="BSC External Switch"/>
+        <ELEINFO CODE="26" VALUE="Supplementary Service Query"/>
+        <ELEINFO CODE="30" VALUE="Additional Dial"/>
+        <ELEINFO CODE="32" VALUE="CFNRY"/>
+        <ELEINFO CODE="33" VALUE="CFU"/>
+        <ELEINFO CODE="34" VALUE="CFNRC "/>
+        <ELEINFO CODE="35" VALUE="Call Waiting"/>
+        <ELEINFO CODE="36" VALUE="Call Hold"/>
+        <ELEINFO CODE="37" VALUE="Multi-party Coversation"/>
+        <ELEINFO CODE="38" VALUE="MO Call Establishment"/>
+        <ELEINFO CODE="39" VALUE="MO Call Ends"/>
+        <ELEINFO CODE="40" VALUE="MO Ring"/>
+        <ELEINFO CODE="41" VALUE="MT Call Established"/>
+        <ELEINFO CODE="43" VALUE="MT Call Ends"/>
+        <ELEINFO CODE="44" VALUE="MT Ring"/>
+        <ELEINFO CODE="49" VALUE="Send SMS"/>
+        <ELEINFO CODE="50" VALUE="Receive SMS"/>
+        <ELEINFO CODE="54" VALUE="SMS Status Report"/>
+        <ELEINFO CODE="64" VALUE="Other "/>
+        <ELEINFO CODE="65" VALUE="Mo Bill"/>
+        <ELEINFO CODE="66" VALUE="MT Bill"/>
+        <ELEINFO CODE="67" VALUE="Ring"/>
+        <ELEINFO CODE="69" VALUE="Transfer MO"/>
+        <ELEINFO CODE="70" VALUE="Transfer MT"/>
+        <ELEINFO CODE="73" VALUE="Emergency Call"/>
+        <ELEINFO CODE="74" VALUE="Call Release"/>
+        <ELEINFO CODE="75" VALUE="Obtain Rounter Info."/>
+        <ELEINFO CODE="76" VALUE="Provide Roaming Code"/>
+        <ELEINFO CODE="78" VALUE="Provide Subscription Info."/>
+        <ELEINFO CODE="93" VALUE="Monitor Fails"/>
+        <ELEINFO CODE="79" VALUE="Supplementary Service"/>
+        <ELEINFO CODE="80" VALUE="Supplementary Service Operation"/>
+        <ELEINFO CODE="81" VALUE="Notification of Target Info. Change"/>
+        <ELEINFO CODE="82" VALUE="Online Notification"/>
+        <ELEINFO CODE="83" VALUE="User Access"/>
+        <ELEINFO CODE="84" VALUE="Channel Established"/>
+        <ELEINFO CODE="85" VALUE="Channel Closed"/>
+        <ELEINFO CODE="86" VALUE="Incoming Call"/>
+        <ELEINFO CODE="101" VALUE="Not Include Broadband Card"/>
+        <ELEINFO CODE="102" VALUE="Narrow Band Register"/>
+        <ELEINFO CODE="103" VALUE="Narrow Band MO"/>
+        <ELEINFO CODE="104" VALUE="Roaming Out"/>
+        <ELEINFO CODE="105" VALUE="Special Line"/>
+        <ELEINFO CODE="106" VALUE="Roaming In"/>
+        <ELEINFO CODE="107" VALUE="Call Transfer Bill (Call Forwarding)"/>
+        <ELEINFO CODE="108" VALUE="Roaming"/>
+        <ELEINFO CODE="109" VALUE="Converge"/>
+        <ELEINFO CODE="110" VALUE="Call Trial"/>
+        <ELEINFO CODE="111" VALUE="Multi-party Bill"/>
+        <ELEINFO CODE="112" VALUE="Domestic Roaming MO"/>
+        <ELEINFO CODE="113" VALUE="Internaltional Roaming MT"/>
+        <ELEINFO CODE="114" VALUE="Internaltional Roaming MO"/>
+        <ELEINFO CODE="115" VALUE="International Roaming MT"/>
+        <ELEINFO CODE="116" VALUE="Roam Call Forwarding"/>
+        <ELEINFO CODE="301" VALUE="Attach"/>
+        <ELEINFO CODE="303" VALUE="PDP Context Activation"/>
+        <ELEINFO CODE="304" VALUE="PDP Context Renew"/>
+        <ELEINFO CODE="305" VALUE="PDP Context Deactivation"/>
+        <ELEINFO CODE="306" VALUE="Channel Established"/>
+        <ELEINFO CODE="307" VALUE="Channel Closed"/>
+        <ELEINFO CODE="308" VALUE="Routing Area Update"/>
+        <ELEINFO CODE="309" VALUE="Service System Report"/>
+        <ELEINFO CODE="310" VALUE="VPDN Online"/>
+        <ELEINFO CODE="311" VALUE="VPDN Offline"/>
+        <ELEINFO CODE="312" VALUE="VPDN Account Renew"/>
+        <ELEINFO CODE="313" VALUE="VPDN Access Notification"/>
+        <ELEINFO CODE="340" VALUE="VPDN Out Service "/>
+        <ELEINFO CODE="341" VALUE="VPDN Account Cancellation"/>
+        <ELEINFO CODE="342" VALUE="VPDN Resume "/>
+        <ELEINFO CODE="314" VALUE="IMS Register"/>
+        <ELEINFO CODE="315" VALUE="IMS Logout"/>
+        <ELEINFO CODE="316" VALUE="IMS Modify media"/>
+        <ELEINFO CODE="317" VALUE="IMS Netwok Signalling"/>
+        <ELEINFO CODE="318" VALUE="IMS User Signalling"/>
+        <ELEINFO CODE="319" VALUE="IMS Business"/>
+        <ELEINFO CODE="321" VALUE="UE requests PDN to establish connection"/>
+        <ELEINFO CODE="322" VALUE="UE requests PDN to release connection"/>
+        <ELEINFO CODE="323" VALUE="User Notification Attached"/>
+        <ELEINFO CODE="324" VALUE="Load Activate"/>
+        <ELEINFO CODE="325" VALUE="Load Modify"/>
+        <ELEINFO CODE="326" VALUE="Load Deactivate"/>
+        <ELEINFO CODE="327" VALUE="UE request modifying loaded resouces"/>
+        <ELEINFO CODE="328" VALUE="EPC User Online Notification"/>
+        <ELEINFO CODE="329" VALUE="GUTI Renew"/>
+        <ELEINFO CODE="330" VALUE="DHCPV4 Address Distribution"/>
+        <ELEINFO CODE="331" VALUE="DHCPV4 Address Release"/>
+        <ELEINFO CODE="332" VALUE="EPC Network Switch"/>
+        <ELEINFO CODE="333" VALUE="PDP Monitor Start"/>
+        <ELEINFO CODE="334" VALUE="eHRPD Location Renew"/>
+        <ELEINFO CODE="335" VALUE="PMIP Session Establish Event"/>
+        <ELEINFO CODE="336" VALUE="PMIP Session Release Event"/>
+        <ELEINFO CODE="337" VALUE="PMIP Session Renew Info."/>
+        <ELEINFO CODE="338" VALUE="eHRPD User Online Notification"/>
+        <ELEINFO CODE="339" VALUE="IMS SMS Signalling"/>
+        <ELEINFO CODE="87" VALUE="4G Internal Switch"/>
+        <ELEINFO CODE="88" VALUE="X2 Switch"/>
+        <ELEINFO CODE="89" VALUE="S1 Switch"/>
+        <ELEINFO CODE="90" VALUE="CSFB Call In"/>
+        <ELEINFO CODE="91" VALUE="CSFB Call Out"/>
+        <ELEINFO CODE="92" VALUE="Bussiness Request"/>
+        <ELEINFO CODE="94" VALUE="Authentification"/>
+        <ELEINFO CODE="95" VALUE="Authentification"/>
+        <ELEINFO CODE="96" VALUE="Safe Mode"/>
+        <ELEINFO CODE="97" VALUE="Business Expansion Request"/>
+        <ELEINFO CODE="98" VALUE="Create Session"/>
+        <ELEINFO CODE="99" VALUE="Delete Session"/>
+        <ELEINFO CODE="100" VALUE="Paging"/>
+    </DIC>
+    <!--DATA_CALL用户归属国家代码表-->
+    <DIC NAME="DIC_USER_BELONG_COUNTRY_CODE">
+        <ELEINFO CODE="0093" VALUE="Afghanistan"/>
+        <ELEINFO CODE="00907" VALUE="Alaska"/>
+        <ELEINFO CODE="00355" VALUE="Albania"/>
+        <ELEINFO CODE="00213" VALUE="Algeria"/>
+        <ELEINFO CODE="001" VALUE="America/Canada"/>
+        <ELEINFO CODE="00376" VALUE="Andorra"/>
+        <ELEINFO CODE="00244" VALUE="Angola"/>
+        <ELEINFO CODE="001264" VALUE="AnguiliaIslands"/>
+        <ELEINFO CODE="0064672" VALUE="Antarctica"/>
+        <ELEINFO CODE="001268" VALUE="AntiguaandBarbuda"/>
+        <ELEINFO CODE="00871" VALUE="AOR-E"/>
+        <ELEINFO CODE="00874" VALUE="AOR-W"/>
+        <ELEINFO CODE="0054" VALUE="Argentina"/>
+        <ELEINFO CODE="00374" VALUE="Armenia"/>
+        <ELEINFO CODE="00297" VALUE="Aruba"/>
+        <ELEINFO CODE="00247" VALUE="Ascension"/>
+        <ELEINFO CODE="0061" VALUE="Australia"/>
+        <ELEINFO CODE="0043" VALUE="Austria"/>
+        <ELEINFO CODE="00994" VALUE="Azerbaijan"/>
+        <ELEINFO CODE="0035191" VALUE="Azores Islands"/>
+        <ELEINFO CODE="001242" VALUE="Bahamas"/>
+        <ELEINFO CODE="00973" VALUE="Bahrain"/>
+        <ELEINFO CODE="00880" VALUE="Bangladesh"/>
+        <ELEINFO CODE="001246" VALUE="Barbados"/>
+        <ELEINFO CODE="0032" VALUE="Belgium"/>
+        <ELEINFO CODE="00501" VALUE="Belize"/>
+        <ELEINFO CODE="00229" VALUE="Benin"/>
+        <ELEINFO CODE="001441" VALUE="Bermuda"/>
+        <ELEINFO CODE="00975" VALUE="Bhutan"/>
+        <ELEINFO CODE="00591" VALUE="Bolivia"/>
+        <ELEINFO CODE="00387" VALUE="Bosnia and Herzegovina "/>
+        <ELEINFO CODE="00267" VALUE="Botswana"/>
+        <ELEINFO CODE="0055" VALUE="Brazil"/>
+        <ELEINFO CODE="00246" VALUE="British indian Ocean Ter-ritory"/>
+        <ELEINFO CODE="00673" VALUE="BruneiDarussalam"/>
+        <ELEINFO CODE="00359" VALUE="Bulgaria"/>
+        <ELEINFO CODE="00226" VALUE="BurkinaFaso"/>
+        <ELEINFO CODE="0095" VALUE="Burma"/>
+        <ELEINFO CODE="00257" VALUE="Burundi"/>
+        <ELEINFO CODE="00855" VALUE="Cambodia"/>
+        <ELEINFO CODE="00237" VALUE="Cameroon"/>
+        <ELEINFO CODE="00238" VALUE="Cape Verde "/>
+        <ELEINFO CODE="001345" VALUE="Cayman Islands"/>
+        <ELEINFO CODE="00235" VALUE="Chad"/>
+        <ELEINFO CODE="0056" VALUE="Chile"/>
+        <ELEINFO CODE="0086" VALUE="China"/>
+        <ELEINFO CODE="00619164" VALUE="Christmas Island"/>
+        <ELEINFO CODE="00619162" VALUE="Cocos Island"/>
+        <ELEINFO CODE="0057" VALUE="Colombia"/>
+        <ELEINFO CODE="00269" VALUE="Comoros/Mayotte"/>
+        <ELEINFO CODE="00242" VALUE="Congo"/>
+        <ELEINFO CODE="00682" VALUE="Cook Islands"/>
+        <ELEINFO CODE="00506" VALUE="Costarica"/>
+        <ELEINFO CODE="00385" VALUE="Croatia"/>
+        <ELEINFO CODE="0053" VALUE="Cuba"/>
+        <ELEINFO CODE="005999" VALUE="Curacao"/>
+        <ELEINFO CODE="00357" VALUE="Cyprus"/>
+        <ELEINFO CODE="00420" VALUE="Czech Republic"/>
+        <ELEINFO CODE="0045" VALUE="Denmark"/>
+        <ELEINFO CODE="00246" VALUE="Diego Garcia "/>
+        <ELEINFO CODE="00253" VALUE="Djibouti"/>
+        <ELEINFO CODE="001767" VALUE="Dominica"/>
+        <ELEINFO CODE="00670" VALUE="East Timor"/>
+        <ELEINFO CODE="00684" VALUE="EastTimor"/>
+        <ELEINFO CODE="00593" VALUE="Ecuador"/>
+        <ELEINFO CODE="0020" VALUE="Egypt"/>
+        <ELEINFO CODE="00503" VALUE="ElSalvador"/>
+        <ELEINFO CODE="00240" VALUE="Equatorial Guinea"/>
+        <ELEINFO CODE="00372" VALUE="Estonia"/>
+        <ELEINFO CODE="00251" VALUE="Ethiopia"/>
+        <ELEINFO CODE="00500" VALUE="FalklandIslands"/>
+        <ELEINFO CODE="00298" VALUE="Faroe Islands"/>
+        <ELEINFO CODE="00679" VALUE="Fiji"/>
+        <ELEINFO CODE="00358" VALUE="Finland"/>
+        <ELEINFO CODE="0033" VALUE="France"/>
+        <ELEINFO CODE="00689" VALUE="French Polynesia"/>
+        <ELEINFO CODE="00594" VALUE="FrenchGuiana"/>
+        <ELEINFO CODE="00241" VALUE="Gabon"/>
+        <ELEINFO CODE="00220" VALUE="Gambia"/>
+        <ELEINFO CODE="00995" VALUE="Georgia"/>
+        <ELEINFO CODE="00233" VALUE="Ghana"/>
+        <ELEINFO CODE="00350" VALUE="Gibraltar"/>
+        <ELEINFO CODE="0030" VALUE="Greece"/>
+        <ELEINFO CODE="00299" VALUE="Greenland"/>
+        <ELEINFO CODE="001473" VALUE="Grenada"/>
+        <ELEINFO CODE="0049" VALUE="Grmany"/>
+        <ELEINFO CODE="00590" VALUE="Guadeloupe"/>
+        <ELEINFO CODE="001671" VALUE="Guam"/>
+        <ELEINFO CODE="00502" VALUE="Guatemala"/>
+        <ELEINFO CODE="00224" VALUE="Guinea"/>
+        <ELEINFO CODE="00245" VALUE="Guinea-Bissau"/>
+        <ELEINFO CODE="00592" VALUE="Guyana"/>
+        <ELEINFO CODE="00509" VALUE="Haiti"/>
+        <ELEINFO CODE="001808" VALUE="Hawaii/Wake Island/Midway Atoll"/>
+        <ELEINFO CODE="00504" VALUE="Honduras"/>
+        <ELEINFO CODE="00852" VALUE="HongKong"/>
+        <ELEINFO CODE="0036" VALUE="Hungary"/>
+        <ELEINFO CODE="00354" VALUE="Iceland"/>
+        <ELEINFO CODE="0091" VALUE="India"/>
+        <ELEINFO CODE="0062" VALUE="Indonesia"/>
+        <ELEINFO CODE="00873" VALUE="IOR"/>
+        <ELEINFO CODE="0098" VALUE="Iran"/>
+        <ELEINFO CODE="00964" VALUE="Iraq"/>
+        <ELEINFO CODE="00353" VALUE="Ireland"/>
+        <ELEINFO CODE="00972" VALUE="Israel"/>
+        <ELEINFO CODE="0039" VALUE="Italy"/>
+        <ELEINFO CODE="00225" VALUE="Ivory Coast"/>
+        <ELEINFO CODE="001876" VALUE="Jamaica"/>
+        <ELEINFO CODE="0081" VALUE="Japan"/>
+        <ELEINFO CODE="00962" VALUE="Jordan"/>
+        <ELEINFO CODE="0073" VALUE="Kazakstan"/>
+        <ELEINFO CODE="00254" VALUE="Kenya"/>
+        <ELEINFO CODE="00686" VALUE="Kiribati"/>
+        <ELEINFO CODE="0082" VALUE="Korea"/>
+        <ELEINFO CODE="00965" VALUE="kuwait"/>
+        <ELEINFO CODE="00996" VALUE="Kyrgyzstan"/>
+        <ELEINFO CODE="00856" VALUE="Laos"/>
+        <ELEINFO CODE="00371" VALUE="Latvia"/>
+        <ELEINFO CODE="00961" VALUE="Lebanon"/>
+        <ELEINFO CODE="00266" VALUE="Lesotho"/>
+        <ELEINFO CODE="00231" VALUE="Liberia"/>
+        <ELEINFO CODE="00218" VALUE="Libya"/>
+        <ELEINFO CODE="00423" VALUE="Liechtenstein"/>
+        <ELEINFO CODE="00370" VALUE="Lithuania"/>
+        <ELEINFO CODE="00352" VALUE="Luxembourg"/>
+        <ELEINFO CODE="00853" VALUE="Macao"/>
+        <ELEINFO CODE="00389" VALUE="Macedonia"/>
+        <ELEINFO CODE="0035196" VALUE="Madeira Islands"/>
+        <ELEINFO CODE="00261" VALUE="Malagasy"/>
+        <ELEINFO CODE="00265" VALUE="Malawi"/>
+        <ELEINFO CODE="0060" VALUE="Malaysia"/>
+        <ELEINFO CODE="00960" VALUE="Maldives"/>
+        <ELEINFO CODE="00223" VALUE="Mali"/>
+        <ELEINFO CODE="00356" VALUE="Malta"/>
+        <ELEINFO CODE="00306" VALUE="Malvinas Islands "/>
+        <ELEINFO CODE="001670" VALUE="Mariana Islands"/>
+        <ELEINFO CODE="00692" VALUE="MarshallIslands"/>
+        <ELEINFO CODE="00596" VALUE="Mauritania"/>
+        <ELEINFO CODE="00222" VALUE="Mauritania"/>
+        <ELEINFO CODE="00230" VALUE="Mauritius"/>
+        <ELEINFO CODE="0052" VALUE="Mexico"/>
+        <ELEINFO CODE="00691" VALUE="Micronesia"/>
+        <ELEINFO CODE="00373" VALUE="MoldovaRepublicof"/>
+        <ELEINFO CODE="00377" VALUE="Monaco"/>
+        <ELEINFO CODE="00976" VALUE="Mongolia"/>
+        <ELEINFO CODE="00382" VALUE="Montenegro"/>
+        <ELEINFO CODE="001664" VALUE="Montserrat"/>
+        <ELEINFO CODE="00212" VALUE="Morocco"/>
+        <ELEINFO CODE="00258" VALUE="Mozambique"/>
+        <ELEINFO CODE="00264" VALUE="Namibia"/>
+        <ELEINFO CODE="00674" VALUE="Naura"/>
+        <ELEINFO CODE="00977" VALUE="Nepal"/>
+        <ELEINFO CODE="0031" VALUE="Netherlands"/>
+        <ELEINFO CODE="00599" VALUE="NetherlandsAntilles"/>
+        <ELEINFO CODE="0064" VALUE="New Zealand"/>
+        <ELEINFO CODE="00687" VALUE="NewCaledonia"/>
+        <ELEINFO CODE="00505" VALUE="Nicaragua"/>
+        <ELEINFO CODE="00227" VALUE="Niger"/>
+        <ELEINFO CODE="00234" VALUE="Nigeria"/>
+        <ELEINFO CODE="00683" VALUE="Niue"/>
+        <ELEINFO CODE="00672" VALUE="Norfolk Island"/>
+        <ELEINFO CODE="00850" VALUE="North Korea"/>
+        <ELEINFO CODE="0047" VALUE="Norway"/>
+        <ELEINFO CODE="00968" VALUE="Oman"/>
+        <ELEINFO CODE="0092" VALUE="Pakistan"/>
+        <ELEINFO CODE="00680" VALUE="Palau"/>
+        <ELEINFO CODE="00970" VALUE="Palestine"/>
+        <ELEINFO CODE="00507" VALUE="Panama"/>
+        <ELEINFO CODE="00675" VALUE="Papua"/>
+        <ELEINFO CODE="00595" VALUE="Paraguay"/>
+        <ELEINFO CODE="0051" VALUE="Peru"/>
+        <ELEINFO CODE="0063" VALUE="Philippines"/>
+        <ELEINFO CODE="0048" VALUE="Poland"/>
+        <ELEINFO CODE="00872" VALUE="POR"/>
+        <ELEINFO CODE="00351" VALUE="Portugal"/>
+        <ELEINFO CODE="001787" VALUE="PuertoRico"/>
+        <ELEINFO CODE="00974" VALUE="Qatar"/>
+        <ELEINFO CODE="00262" VALUE="ReunionIsland"/>
+        <ELEINFO CODE="0040" VALUE="Romania"/>
+        <ELEINFO CODE="007" VALUE="Russia"/>
+        <ELEINFO CODE="00250" VALUE="Rwanda"/>
+        <ELEINFO CODE="001784" VALUE="Saint Vincent and the Grenadines"/>
+        <ELEINFO CODE="00378" VALUE="SanMarino"/>
+        <ELEINFO CODE="00239" VALUE="Sao Tome and Principe"/>
+        <ELEINFO CODE="00966" VALUE="SaudiArabia"/>
+        <ELEINFO CODE="00221" VALUE="Senegal"/>
+        <ELEINFO CODE="00381" VALUE="Serbia"/>
+        <ELEINFO CODE="00248" VALUE="Seychelles"/>
+        <ELEINFO CODE="00232" VALUE="Sierra Leone"/>
+        <ELEINFO CODE="0065" VALUE="Singapore"/>
+        <ELEINFO CODE="00421" VALUE="Slovakia"/>
+        <ELEINFO CODE="00386" VALUE="Slovene"/>
+        <ELEINFO CODE="00677" VALUE="Solomon Islands"/>
+        <ELEINFO CODE="00252" VALUE="Somali"/>
+        <ELEINFO CODE="0027" VALUE="South Africa"/>
+        <ELEINFO CODE="00211" VALUE="South Sudan"/>
+        <ELEINFO CODE="0034" VALUE="Spain/Canary Islands"/>
+        <ELEINFO CODE="0094" VALUE="SriLanka"/>
+        <ELEINFO CODE="001869" VALUE="St.ChristopherandNevisIslands"/>
+        <ELEINFO CODE="00290" VALUE="St.Helena"/>
+        <ELEINFO CODE="001758" VALUE="St.Lucia"/>
+        <ELEINFO CODE="00508" VALUE="St.PierreandMiquelon"/>
+        <ELEINFO CODE="00249" VALUE="Sudan"/>
+        <ELEINFO CODE="00597" VALUE="Surinam"/>
+        <ELEINFO CODE="00268" VALUE="Swaziland"/>
+        <ELEINFO CODE="0046" VALUE="Sweden"/>
+        <ELEINFO CODE="0041" VALUE="Switzerland"/>
+        <ELEINFO CODE="00963" VALUE="Syria"/>
+        <ELEINFO CODE="00886" VALUE="Taiwan"/>
+        <ELEINFO CODE="00255" VALUE="Tanzania"/>
+        <ELEINFO CODE="0066" VALUE="Thailand"/>
+        <ELEINFO CODE="001284" VALUE="The British Virgin Islands"/>
+        <ELEINFO CODE="00236" VALUE="The Central African Republic"/>
+        <ELEINFO CODE="00291" VALUE="The Commonwealth of eritrea"/>
+        <ELEINFO CODE="001809" VALUE="The Dominican Republic"/>
+        <ELEINFO CODE="001340" VALUE="The Virgin Islands of the United States"/>
+        <ELEINFO CODE="00228" VALUE="Togo"/>
+        <ELEINFO CODE="00690" VALUE="Tokela"/>
+        <ELEINFO CODE="00676" VALUE="Tonga"/>
+        <ELEINFO CODE="001868" VALUE="Trinidad and Tobago"/>
+        <ELEINFO CODE="00992" VALUE="Tsjikistan"/>
+        <ELEINFO CODE="00216" VALUE="Tunisia"/>
+        <ELEINFO CODE="0090" VALUE="Turkey"/>
+        <ELEINFO CODE="00993" VALUE="Turkomanstan"/>
+        <ELEINFO CODE="001649" VALUE="Turks and Caicos Islands"/>
+        <ELEINFO CODE="00688" VALUE="Tuvalu"/>
+        <ELEINFO CODE="00256" VALUE="Uganda"/>
+        <ELEINFO CODE="00380" VALUE="Ukiain"/>
+        <ELEINFO CODE="00971" VALUE="United Arab Emirates"/>
+        <ELEINFO CODE="0044" VALUE="United Kingdom"/>
+        <ELEINFO CODE="00598" VALUE="uruguay"/>
+        <ELEINFO CODE="00998" VALUE="Uzbeakstan"/>
+        <ELEINFO CODE="00678" VALUE="Vanuatu "/>
+        <ELEINFO CODE="00379" VALUE="Vatican"/>
+        <ELEINFO CODE="0058" VALUE="Venezuela"/>
+        <ELEINFO CODE="0084" VALUE="Vietnam"/>
+        <ELEINFO CODE="00681" VALUE="Wallis and Furtuna Islands"/>
+        <ELEINFO CODE="00685" VALUE="WesternSamoa"/>
+        <ELEINFO CODE="00375" VALUE="WhiteRussia"/>
+        <ELEINFO CODE="00967" VALUE="Yemen"/>
+        <ELEINFO CODE="00969" VALUE="Yemen(PDRY)"/>
+        <ELEINFO CODE="00243" VALUE="Zaire"/>
+        <ELEINFO CODE="00260" VALUE="Zambia"/>
+        <ELEINFO CODE="00259" VALUE="Zanzibar "/>
+        <ELEINFO CODE="00263" VALUE="Zimbabwe"/>
+    </DIC>
+    <DIC NAME="DIC_RECEIVER_TYPE">
+        <ELEINFO CODE="TO" VALUE="TO"/>
+        <ELEINFO CODE="CC" VALUE="CC"/>
+        <ELEINFO CODE="BCC" VALUE="BCC"/>
+    </DIC>
+    <DIC NAME="DIC_SUPSERVICE_TYPE">
+        <ELEINFO CODE="1" VALUE="Voice CFU"/>
+        <ELEINFO CODE="4" VALUE="Call Waiting"/>
+        <ELEINFO CODE="5" VALUE="&quot;3 party conversation, Multi-party conversation&quot;"/>
+        <ELEINFO CODE="6" VALUE="Call Delivery"/>
+        <ELEINFO CODE="7" VALUE="Voice Encryption"/>
+        <ELEINFO CODE="8" VALUE="Call Transfer"/>
+        <ELEINFO CODE="9" VALUE="&quot;MO Number Display（CDMA2000 CNIP, WCDMA CLIP ）&quot;"/>
+        <ELEINFO CODE="10" VALUE="MO Number Restriction（CDMA2000 CNIR，WCDMA CLIR）"/>
+        <ELEINFO CODE="11" VALUE="Data Encryption"/>
+        <ELEINFO CODE="13" VALUE="Password Call"/>
+        <ELEINFO CODE="14" VALUE="Meeting Call"/>
+        <ELEINFO CODE="15" VALUE="DND"/>
+        <ELEINFO CODE="16" VALUE="Flexible Alarm"/>
+        <ELEINFO CODE="17" VALUE="Notification"/>
+        <ELEINFO CODE="18" VALUE="User Hunting"/>
+        <ELEINFO CODE="19" VALUE="Optimal Language"/>
+        <ELEINFO CODE="20" VALUE="Optimal Assignment"/>
+        <ELEINFO CODE="21" VALUE="Remote Business Control"/>
+        <ELEINFO CODE="22" VALUE="Selecte Call"/>
+        <ELEINFO CODE="23" VALUE="Access Uer Pin Code"/>
+        <ELEINFO CODE="24" VALUE="Intercept User Pin Code"/>
+        <ELEINFO CODE="25" VALUE="Call Forwarding to Voice Mailbox"/>
+        <ELEINFO CODE="26" VALUE="CFNRY Unconditional"/>
+        <ELEINFO CODE="27" VALUE="CFNRA"/>
+        <ELEINFO CODE="28" VALUE="Call Hold"/>
+        <ELEINFO CODE="29" VALUE="CUG (Closed User Group)"/>
+        <ELEINFO CODE="30" VALUE="Bar"/>
+        <ELEINFO CODE="31" VALUE="Call Pickup"/>
+        <ELEINFO CODE="32" VALUE="Abbreviated Dial"/>
+        <ELEINFO CODE="34" VALUE="Immediate Hot Line"/>
+        <ELEINFO CODE="35" VALUE="Delayed Hot Line"/>
+        <ELEINFO CODE="36" VALUE="Clock Service"/>
+        <ELEINFO CODE="37" VALUE="DND During Certain Period"/>
+        <ELEINFO CODE="39" VALUE="Call Out Restrict"/>
+        <ELEINFO CODE="41" VALUE="Secretary Service"/>
+        <ELEINFO CODE="42" VALUE="Call Recovery"/>
+        <ELEINFO CODE="43" VALUE="Not Register Call Forwarding"/>
+        <ELEINFO CODE="44" VALUE="SMS CFU"/>
+        <ELEINFO CODE="45" VALUE="All Business CFU"/>
+    </DIC>
+    <DIC NAME="DIC_TUNNEL_TYPE">
+        <ELEINFO CODE="TOP_LAYER" VALUE="TOP_LAYER"/>
+        <ELEINFO CODE="6OVER4" VALUE="IPv6 in IPv4"/>
+        <ELEINFO CODE="6OVER6" VALUE="IPv6 in IPv6"/>
+        <ELEINFO CODE="4OVER4" VALUE="IPv4 in IPv4"/>
+        <ELEINFO CODE="4OVER6" VALUE="IPv4 in IPv6"/>
+        <ELEINFO CODE="L2TP" VALUE="L2TP"/>
+        <ELEINFO CODE="GRE" VALUE="GRE"/>
+        <ELEINFO CODE="GREPPP" VALUE="PPP in GRE"/>
+        <ELEINFO CODE="GTP" VALUE="GTP"/>
+        <ELEINFO CODE="A10" VALUE="Channel Type of 4G Falling to 3G"/>
+        <ELEINFO CODE="unknown" VALUE="UNKNOWN"/>
+    </DIC>
+</TRANSLATE>

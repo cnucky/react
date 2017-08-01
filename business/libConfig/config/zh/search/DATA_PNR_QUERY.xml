@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_PNR" DisplayName="民航旅客订座">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="PNR_CR_DATE" DisplayName="PNR创建日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="AIR_SEG_FLT_NBR" DisplayName="航班号" ControlType="Text"/>
+            <Condition Item="ENAME" DisplayName="合成英文全名" ControlType="Text"/>
+            <Condition Item="PAS_CNAME" DisplayName="旅客中文姓名" ControlType="Text"/>
+            <Condition Item="PAS_CERT_NUM" DisplayName="证件号码" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="PNR_CR_DATE" DisplayName="PNR创建日期" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="AIR_SEG_FLT_NBR" DisplayName="航班号" ControlType="Text"/>
+            <Condition Item="ENAME" DisplayName="合成英文全名" ControlType="Text"/>
+            <Condition Item="PAS_CNAME" DisplayName="旅客中文姓名" ControlType="Text"/>
+            <Condition Item="PAS_CERT_NUM" DisplayName="证件号码" ControlType="Text"/>
+    </Template>
+</Search>

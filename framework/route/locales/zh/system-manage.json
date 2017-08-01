@@ -1,0 +1,34 @@
+{
+    "rolemanage": {
+        "enum-nomal": "普通角色",
+        "enum-useradmin": "用户管理员",
+        "enum-authadmin": "授权管理员",
+        "enum-logadmin": "日志管理员",
+
+        "label-in": "在(",
+        "label-useip": ") 使用IP(",
+        "label-createroleoperation": ") 创建角色,角色名称(",
+        "label-desc": ")描述(",
+        "label-deleterolenameoperation": ")删除角色,角色名称(",
+        "label-roleid": ")角色ID(",
+        "label-addauthoperation": ") 新增权限(",
+        "label-torole": ")到角色(",
+        "label-deleteroleoperation": ") 删除角色(",
+        "label-toauth": ")的权限(",
+        "label-updateroledesc": ") 更新角色描述,角色名称(",
+        "label-updatedescto": ")描述更新为(",
+        "label-updateusrrole": ") 更新用户角色, 给用户(",
+        "label-update": ")更新(",
+        "label-role": ") 角色("
+    },
+    "log":{
+        "label-getuserlogsfail":"获取部门下用户的日志数据失败",
+        "label-submitlogquery":") 提交日志查询,查询条件如下:模块名称(",
+        "label-operationtype":")操作类型(",
+        "label-user":")用户(",
+        "label-macaddress":")MAC地址(",
+        "label-logcontent":")日志内容(",
+        "label-ipaddress":")IP地址(",
+        "label-timarange":")时间范围("
+    }
+}

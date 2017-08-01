@@ -1,0 +1,32 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<style>
+</style>
+<!-- end shim -->
+<section id="home-content" class="table-layout animated fadeIn">
+</section>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+function getQueryString(param) {
+    var reg = new RegExp("(^|&)"+param+"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null){
+    	return decodeURIComponent(r[2]);
+    }else{
+    	return null;
+    }
+    
+}
+var redirectUrl = getQueryString('redirectUrl');
+var pageName = getQueryString('pageName')==null?'第三方应用':getQueryString('pageName');
+var _pageConfig = {
+    title: pageName
+};
+var iframeHeight = $(window).height() - 42 - 50;//
+
+var tpl = '<iframe src="'+ redirectUrl +'" frameborder="0" height="'+iframeHeight+'px" width="100%"></iframe>';
+$('#home-content').append(tpl);
+hideLoader();
+</script>
+<!-- END: page scripts -->

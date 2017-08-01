@@ -1,0 +1,2701 @@
+<TRANSLATE>
+    <!--标记-->
+    <DIC NAME="IMG_MK_ISREAD">
+        <ELEINFO CODE="0" VALUE="未读,glyphicons-envelope,#669933"/>
+        <ELEINFO CODE="1" VALUE="已读,glyphicons-message_full,#CCCC33"/>
+    </DIC>
+    <DIC NAME="IMG_MK_IMPORTANCE">
+        <ELEINFO CODE="0" VALUE="未知,glyphicons-star,#FFFFFF"/>
+        <ELEINFO CODE="1" VALUE="一般,glyphicons-star,#669933"/>
+        <ELEINFO CODE="2" VALUE="重要,glyphicons-star,#E63F24"/>
+        <ELEINFO CODE="3" VALUE="垃圾,glyphicons-star,#9C9C9C"/>
+    </DIC>
+    <!-- 出材 -->
+    <DIC NAME="IMG_MK_MATERIAL">
+        <ELEINFO CODE="0" VALUE="未出材,glyphicons-nameplate,#FFFFFF"/>
+        <ELEINFO CODE="1" VALUE="已出材,glyphicons-nameplate,#61AFEF"/>
+    </DIC>
+    <!--SERVICE_TYPE -->
+    <DIC NAME="DIC_SERVICE_TYPE_RADIUS">
+        <ELEINFO CODE="RADIUS" VALUE="固网计费"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_WAPRADIUS">
+        <ELEINFO CODE="WAPRADIUS" VALUE="移动网计费"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_EMAIL">
+        <ELEINFO CODE="EMAIL" VALUE="电子邮件"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_WAPMMS">
+        <ELEINFO CODE="WAPMMS" VALUE="彩信"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_IM">
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+        <ELEINFO CODE="OLGAME" VALUE="网络游戏"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_VOIP">
+        <ELEINFO CODE="VOIP" VALUE="IP电话"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_HTTPTRACE">
+        <ELEINFO CODE="HTTPTRACE" VALUE="网页浏览"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_HTTPMULTI">
+        <ELEINFO CODE="EMAIL" VALUE="电子邮件"/>
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+        <ELEINFO CODE="HTTPBBS" VALUE="论坛"/>
+        <ELEINFO CODE="HTTPWEIBO" VALUE="微博"/>
+        <ELEINFO CODE="HTTPBLOG" VALUE="博客"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="社交网站"/>
+        <ELEINFO CODE="HTTPCLOUD" VALUE="云存储"/>
+        <ELEINFO CODE="HTTPSEARCH" VALUE="搜索"/>
+        <ELEINFO CODE="HTTPNEWS" VALUE="新闻"/>
+        <ELEINFO CODE="HTTPSHOP" VALUE="电子商务"/>
+        <ELEINFO CODE="HTTPJOB" VALUE="招聘求职"/>
+        <ELEINFO CODE="HTTPTICKET" VALUE="旅业票务"/>
+        <ELEINFO CODE="HTTPEXPRESS" VALUE="快递网站"/>
+        <ELEINFO CODE="HTTPDATING" VALUE="婚恋"/>
+        <ELEINFO CODE="HTTPFORECAST" VALUE="算命"/>
+        <ELEINFO CODE="HTTPGAMBLING" VALUE="赌博"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_NETAV">
+        <ELEINFO CODE="HTTPVIDEO" VALUE="HTTP视频"/>
+        <ELEINFO CODE="NETRADIO" VALUE="网络电台"/>
+        <ELEINFO CODE="NETVIDEO" VALUE="网络视频"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_TFTOOLS">
+        <ELEINFO CODE="VPNAPP" VALUE="VPN应用"/>
+        <ELEINFO CODE="TFTOOLS" VALUE="突防工具"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_REMOTECONNECT">
+        <ELEINFO CODE="REMOTECONNECT" VALUE="远程连接"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_DOWNLOADER">
+        <ELEINFO CODE="DOWNLOADER" VALUE="下载"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_TTK">
+        <ELEINFO CODE="TTKTERMINALFLAG" VALUE="终端标识信息"/>
+        <ELEINFO CODE="TTKSOFTWAREINFO" VALUE="终端软件信息"/>
+        <ELEINFO CODE="TTKDEVICEINFO" VALUE="终端设备信息"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_CONTACTLIST">
+        <ELEINFO CODE="CONTACTLIST" VALUE="通讯录"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_DNS">
+        <ELEINFO CODE="DNS" VALUE="DNS"/>
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_PCAP">
+        <ELEINFO CODE="RAWDATA" VALUE="原始数据包"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_FLOW">
+        <ELEINFO CODE="FLOWDATA" VALUE="流数据"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_LBS">
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+        <ELEINFO CODE="LBS" VALUE="位置信息"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_VPNDETECT">
+        <ELEINFO CODE="VPNDETECT" VALUE="VPN协议"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_PROXY">
+        <ELEINFO CODE="HTTPPROXY" VALUE="HTTP代理"/>
+        <ELEINFO CODE="HTTPSOCKS5" VALUE="SOCKS代理"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_SSL">
+        <ELEINFO CODE="SSL" VALUE="SSL加密应用"/>
+        <ELEINFO CODE="PAYMENT" VALUE="第三方支付"/>
+        <ELEINFO CODE="NETBANK" VALUE="网银"/>
+        <ELEINFO CODE="EMAIL" VALUE="电子邮件"/>
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+        <ELEINFO CODE="HTTPWEIBO" VALUE="微博"/>
+        <ELEINFO CODE="HTTPSNS" VALUE="社交网站"/>
+        <ELEINFO CODE="HTTPCLOUD" VALUE="云存储"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_NAVIGATION">
+        <ELEINFO CODE="NAVIGATION" VALUE="导航"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_NID">
+        <ELEINFO CODE="HTTPSHOP" VALUE="电子商务"/>
+        <ELEINFO CODE="HTTPJOB" VALUE="招聘求职"/>
+        <ELEINFO CODE="HTTPTICKET" VALUE="旅业票务"/>
+        <ELEINFO CODE="HTTPEXPRESS" VALUE="快递网站"/>
+        <ELEINFO CODE="HTTPDATING" VALUE="婚恋"/>
+        <ELEINFO CODE="HTTPFORECAST" VALUE="算命"/>
+        <ELEINFO CODE="HTTPGAMBLING" VALUE="赌博"/>
+    </DIC>
+    <DIC NAME="DIC_SERVICE_TYPE_FILE">
+        <ELEINFO CODE="EMAIL" VALUE="电子邮件"/>
+        <ELEINFO CODE="IM" VALUE="即时通讯"/>
+        <ELEINFO CODE="HTTPCLOUD" VALUE="云存储"/>
+        <ELEINFO CODE="FTP" VALUE="FTP"/>
+        <ELEINFO CODE="WAPMMS" VALUE="彩信"/>
+    </DIC>
+    <!--ACK_TYPE-->
+    <DIC NAME="DIC_ACT_TYPE_FTP">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="DATA" VALUE="文件"/>
+        <ELEINFO CODE="DATA_DOWNLOAD" VALUE="下载文件"/>
+        <ELEINFO CODE="DATA_LIST" VALUE="文件列表"/>
+        <ELEINFO CODE="DATA_UPLOAD" VALUE="上传文件"/>
+        <ELEINFO CODE="CMD" VALUE="命令轨迹"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_IM">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="IM_LOGON" VALUE="登录"/>
+        <ELEINFO CODE="IM_LOGOFF" VALUE="退出"/>
+        <ELEINFO CODE="IM_INUSE" VALUE="使用检测"/>
+        <ELEINFO CODE="IM_PAYMENT" VALUE="支付"/>
+        <ELEINFO CODE="IM_TEXTCHAT" VALUE="文本聊天"/>
+        <ELEINFO CODE="IM_FILETRANS" VALUE="文件传输"/>
+        <ELEINFO CODE="IM_AUDIOCHAT" VALUE="语音聊天"/>
+        <ELEINFO CODE="IM_VIDEOCHAT" VALUE="视频聊天"/>
+        <ELEINFO CODE="IM_GROUP_TEXTCHAT" VALUE="群聊天"/>
+        <ELEINFO CODE="IM_SUBGROUP_TEXTCHAT" VALUE="讨论组聊天"/>
+        <ELEINFO CODE="IM_GROUP_FILETRANS" VALUE="群内文件传输"/>
+        <ELEINFO CODE="IM_GROUP_AUDIOCHAT" VALUE="群语音聊天"/>
+        <ELEINFO CODE="IM_GROUP_VIDEOCHAT" VALUE="群视频聊天"/>
+        <ELEINFO CODE="IM_BROADCAST_TEXT" VALUE="广播/更新状态(文本)"/>
+        <ELEINFO CODE="IM_BROADCAST_AUDIO" VALUE="广播/更新状态(音频)"/>
+        <ELEINFO CODE="IM_BROADCAST_VIDEO" VALUE="广播/更新状态(视频)"/>
+        <ELEINFO CODE="IM_BROADCAST_FILETRANS" VALUE="广播/更新状态(文件)"/>
+        <ELEINFO CODE="IM_RAWDATA" VALUE="原始数据"/>
+        <ELEINFO CODE="IM_SHORTMSG" VALUE="短消息"/>
+        <ELEINFO CODE="IM_FRIEND_LIST" VALUE="好友列表"/>
+        <ELEINFO CODE="IM_FRIEND_LIST_KW" VALUE="好友列表(9K)"/>
+        <ELEINFO CODE="IM_FRIEND_IP" VALUE="好友IP"/>
+        <ELEINFO CODE="IM_REGISTER" VALUE="注册"/>
+        <ELEINFO CODE="IM_GROUP_REGISTER" VALUE="群注册"/>
+        <ELEINFO CODE="IM_GROUP" VALUE="群信息"/>
+        <ELEINFO CODE="IM_GROUPMEMBER_LIST" VALUE="群成员列表"/>
+        <ELEINFO CODE="IM_ADDRESS_BOOK" VALUE="通讯录"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_EMAIL">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="MAIL_LOGIN" VALUE="登录"/>
+        <ELEINFO CODE="MAIL_LOGOUT" VALUE="退出"/>
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="收主题"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="收正文"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="收邮件"/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="收附件"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="收片段"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="发主题"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="发正文"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="发邮件"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="发附件"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="网络空间"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="邮件列表"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="联系人"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="联系人列表"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_HTTPMULTI">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="MAIL_LOGIN" VALUE="登录（邮件）"/>
+        <ELEINFO CODE="MAIL_LOGOUT" VALUE="退出（邮件）"/>
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="收主题（邮件）"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="收正文（邮件）"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="收邮件（邮件）"/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="收附件（邮件）"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="收片段（邮件）"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="发主题（邮件）"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="发正文（邮件）"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="发邮件（邮件）"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="发附件（邮件）"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="网络空间（邮件）"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="邮件列表（邮件）"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="联系人（邮件）"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="联系人列表（邮件）"/>
+        <ELEINFO CODE="BBS_LOGIN" VALUE="登录（论坛）"/>
+        <ELEINFO CODE="BBS_LOGOUT" VALUE="退出（论坛）"/>
+        <ELEINFO CODE="BBS_POST" VALUE="发帖（论坛）"/>
+        <ELEINFO CODE="BBS_READ" VALUE="看帖（论坛）"/>
+        <ELEINFO CODE="BBS_ATTACH_POST" VALUE="上传文件（论坛）"/>
+        <ELEINFO CODE="BBS_ATTACH_READ" VALUE="下载文件（论坛）"/>
+        <ELEINFO CODE="BBS_READ_MSG" VALUE="读消息（论坛）"/>
+        <ELEINFO CODE="BBS_SEND_MSG" VALUE="发消息（论坛）"/>
+        <ELEINFO CODE="BBS_COMMENT_POST" VALUE="回帖（论坛）"/>
+        <ELEINFO CODE="SNS_LOGIN" VALUE="登录（社交）"/>
+        <ELEINFO CODE="SNS_USER_INFO" VALUE="用户信息（社交）"/>
+        <ELEINFO CODE="SNS_GROUP_INFO" VALUE="群信息（社交）"/>
+        <ELEINFO CODE="SNS_READ_TXT" VALUE="读文本（社交）"/>
+        <ELEINFO CODE="SNS_SEND_TXT" VALUE="发文本（社交）"/>
+        <ELEINFO CODE="SNS_READ_MSG" VALUE="读消息（社交）"/>
+        <ELEINFO CODE="SNS_SEND_MSG" VALUE="发消息（社交）"/>
+        <ELEINFO CODE="SNS_REPLY_MSG" VALUE="回复消息（社交）"/>
+        <ELEINFO CODE="SNS_POST_FILE" VALUE="上传文件（社交）"/>
+        <ELEINFO CODE="SNS_GET_FILE" VALUE="下载文件（社交）"/>
+        <ELEINFO CODE="SNS_FRIEND_LIST" VALUE="好友列表（社交）"/>
+        <ELEINFO CODE="SNS_FOLLOWER_LIST" VALUE="粉丝（社交）"/>
+        <ELEINFO CODE="SNS_FOLLOWING_LIST" VALUE="关注人（社交）"/>
+        <ELEINFO CODE="SNS_LOGOUT" VALUE="退出（社交）"/>
+        <ELEINFO CODE="SNS_SEND_FILE" VALUE="发送文件（社交）"/>
+        <ELEINFO CODE="SNS_RECV_FILE" VALUE="接收文件（社交）"/>
+        <ELEINFO CODE="SNS_SHARE_FILE" VALUE="分享文件（社交）"/>
+        <ELEINFO CODE="SNS_SHARE_FILE_INFO" VALUE="文件信息（社交）"/>
+        <ELEINFO CODE="SNS_DEL_FILE" VALUE="删除文件（社交）"/>
+        <ELEINFO CODE="NETDISK_LOGIN" VALUE="登录（网盘）"/>
+        <ELEINFO CODE="NETDISK_LOGOUT" VALUE="退出（网盘）"/>
+        <ELEINFO CODE="NETDISK_UPFILE" VALUE="上传文件（网盘）"/>
+        <ELEINFO CODE="NETDISK_DOWNLOAD" VALUE="下载文件（网盘）"/>
+        <ELEINFO CODE="SHOPPING_LOGIN" VALUE="登录（电商）"/>
+        <ELEINFO CODE="SHOPPING_REG" VALUE="注册（电商）"/>
+        <ELEINFO CODE="SHOPPING_INFO_VIEW" VALUE="查看信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_INFO_UPDATE" VALUE="更新信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDER" VALUE="提交订单（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDER_VIEW" VALUE="查看订单（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDERLIST_VIEW" VALUE="查看订单列表（电商）"/>
+        <ELEINFO CODE="SHOPPING_ADDR_UPDATE" VALUE="更新地址信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_ADDR_VIEW" VALUE="查看地址信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_LOGISTICS_UPDATE" VALUE="更新物流信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_LOGISTICS_VIEW" VALUE="查看物流信息（电商）"/>
+        <ELEINFO CODE="JOB_RESUME_CREATE" VALUE="创建个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_RESUME_VIEW" VALUE="查看个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_RESUME_UPDATE" VALUE="修改个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_POST_FILE" VALUE="上传简历附件"/>
+        <ELEINFO CODE="JOB_REG" VALUE="注册（招聘）"/>
+        <ELEINFO CODE="JOB_LOGIN" VALUE="登录（招聘）"/>
+        <ELEINFO CODE="JOB_COMPANY_INFO" VALUE="企业资料（招聘）"/>
+        <ELEINFO CODE="JOB_POSITION_INFO" VALUE="职位信息（招聘）"/>
+        <ELEINFO CODE="TICKET_LOGIN" VALUE="登录（票务）"/>
+        <ELEINFO CODE="TICKET_USER_INFO_VIEW" VALUE="用户信息（票务）"/>
+        <ELEINFO CODE="TICKET_SEARCH" VALUE="搜索（票务）"/>
+        <ELEINFO CODE="TICKET_CARE_LIST" VALUE="关注班次列表（票务）"/>
+        <ELEINFO CODE="TICKET_CARE" VALUE="关注某班次（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER" VALUE="订票（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER_LIST" VALUE="订票历史（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER_VIEW" VALUE="查看订单（票务）"/>
+        <ELEINFO CODE="EXPRESS_ORDER_SUBMIT" VALUE="提交快递单"/>
+        <ELEINFO CODE="EXPRESS_ORDER_VIEW" VALUE="查看快递单"/>
+        <ELEINFO CODE="LOGIN" VALUE="登录（算命）"/>
+        <ELEINFO CODE="FORECAST" VALUE="提交（算命）"/>
+        <ELEINFO CODE="SEARCH" VALUE="搜索"/>
+        <ELEINFO CODE="LBS_SEARCH" VALUE="位置信息搜索"/>
+        <ELEINFO CODE="WATCH" VALUE="观看视频"/>
+        <ELEINFO CODE="UPLOAD" VALUE="上传视频"/>
+        <ELEINFO CODE="LOGON" VALUE="登录（视频）"/>
+        <ELEINFO CODE="ACCESS" VALUE="阅读（新闻）"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_HTTPTRACE">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="POST" VALUE="浏览(POST)"/>
+        <ELEINFO CODE="GET" VALUE="浏览(GET)"/>
+        <ELEINFO CODE="LOGIN" VALUE="登录"/>
+        <ELEINFO CODE="REG" VALUE="注册"/>
+        <ELEINFO CODE="COMPOSE" VALUE="发邮件"/>
+        <ELEINFO CODE="UPFILE" VALUE="上传文件"/>
+        <ELEINFO CODE="UNKNOWN" VALUE="未知"/>
+        <ELEINFO CODE="SITE" VALUE="浏览(SITE)"/>
+        <ELEINFO CODE="JUMP" VALUE="跳转"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_NETAV">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="WATCH" VALUE="浏览"/>
+        <ELEINFO CODE="UPLOAD" VALUE="上传"/>
+        <ELEINFO CODE="DOWNLOAD" VALUE="下载"/>
+        <ELEINFO CODE="INUSE" VALUE="使用"/>
+        <ELEINFO CODE="LOGON" VALUE="登录"/>
+        <ELEINFO CODE="UPLOAD_FILE" VALUE="上传文件"/>
+        <ELEINFO CODE="DOWNLOAD_FILE" VALUE="下载文件"/>
+        <ELEINFO CODE="BROADCAST_TEXT" VALUE="广播文本"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_DOWNLOADER">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="DOWNLOAD" VALUE="下载"/>
+        <ELEINFO CODE="SHARE_FILE_INFO" VALUE="共享文件信息"/>
+        <ELEINFO CODE="BT_SEED_INFO" VALUE="BT种子信息"/>
+        <ELEINFO CODE="LOGON" VALUE="登录"/>
+        <ELEINFO CODE="INUSE" VALUE="使用"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_WAPRADIUS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="3GWZ_LOGIN" VALUE="3G登录"/>
+        <ELEINFO CODE="3GWZ_ENTER" VALUE="3G进入"/>
+        <ELEINFO CODE="3GWZ_LEAVE" VALUE="3G离开"/>
+        <ELEINFO CODE="3GWZ_LOGOUT" VALUE="3G退出"/>
+        <ELEINFO CODE="4GWZ_LOGIN" VALUE="4G登录"/>
+        <ELEINFO CODE="4GWZ_ENTER" VALUE="4G进入"/>
+        <ELEINFO CODE="4GWZ_LEAVE" VALUE="4G离开"/>
+        <ELEINFO CODE="4GWZ_LOGOUT" VALUE="4G退出"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_LBS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="LBS_CURRENT_POSITION" VALUE="当前位置"/>
+        <ELEINFO CODE="LBS_WIFI" VALUE="WIFI位置"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_RAWDATA">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="IP_RAW_DATA" VALUE="IP(段)类"/>
+        <ELEINFO CODE="DPI_RAW_DATA" VALUE="DPI类"/>
+        <ELEINFO CODE="ALL_RAW_DATA" VALUE="全收类"/>
+        <ELEINFO CODE="SAMPLE_RAW_DATA" VALUE="采样类"/>
+        <ELEINFO CODE="PORT_RAW_DATA" VALUE="端口类"/>
+        <ELEINFO CODE="IPSPORT_RAW_DATA" VALUE="IP同端端口类"/>
+        <ELEINFO CODE="IPDPORT_RAW_DATA" VALUE="IP对端端口类"/>
+        <ELEINFO CODE="IPPORTSEG_RAW_DATA" VALUE="IP段同端端口类"/>
+        <ELEINFO CODE="MOBILE_RAW_DATA" VALUE="手机规则"/>
+        <ELEINFO CODE="IMSI_RAW_DATA" VALUE="IMSI规则"/>
+        <ELEINFO CODE="IMEI_RAW_DATA" VALUE="IMEI规则"/>
+        <ELEINFO CODE="IPPORTSEG_RAW_DATA" VALUE="基站规则"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_TFTOOLS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="TFTOOLS" VALUE="使用"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_TELNET">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="FILE_TRANS" VALUE="文件传输"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_RADIUS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="RADIUS_UP" VALUE="上线"/>
+        <ELEINFO CODE="RADIUS_DOWN" VALUE="下线"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_WAPMMS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="SEND_MMS" VALUE="发彩信"/>
+        <ELEINFO CODE="RECV_MMS" VALUE="收彩信"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_VOIP">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="AUDIO_CHAT" VALUE="语音聊天"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_TTK">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="PROGRAM_LIST" VALUE="终端软件列表"/>
+        <ELEINFO CODE="SERVICE_LIST" VALUE="终端服务列表"/>
+        <ELEINFO CODE="STARTUP_LIST" VALUE="终端开机启动列表"/>
+        <ELEINFO CODE="CRONTAB_LIST" VALUE="终端计划任务列表"/>
+        <ELEINFO CODE="TERMINAL_FLAG" VALUE="终端标识"/>
+        <ELEINFO CODE="DEVICE_INFO" VALUE="终端设备信息"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_PHONEBOOK">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="ADDRESS_BOOK" VALUE="通讯录联系人信息"/>
+        <ELEINFO CODE="ADDRESS_BOOK_DETECT" VALUE="通讯录行为检测"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_VPN">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="VPN_UP" VALUE="连接尝试"/>
+        <ELEINFO CODE="VPN_DOWN" VALUE="连接结束"/>
+        <ELEINFO CODE="VPN_CONNECT" VALUE="连接建立"/>
+        <ELEINFO CODE="LOGON" VALUE="登录"/>
+        <ELEINFO CODE="INUSE" VALUE="正在使用"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_REMOTECONNECT">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="LOGON" VALUE="登录"/>
+        <ELEINFO CODE="LOGOFF" VALUE="登出"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_DNS">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="DNS" VALUE="域名请求"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_FLOW">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="FLOWINFO" VALUE="流信息"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_PROXY">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="CONNECT" VALUE="连接"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_SSL">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="ACCESS" VALUE="使用"/>
+        <ELEINFO CODE="CERT" VALUE="证书"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_NAVINFO">
+        <ELEINFO CODE="PUB_USER_INFO" VALUE="账号信息"/>
+        <ELEINFO CODE="NAVIGATION" VALUE="导航信息"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_NID">
+        <ELEINFO CODE="SHOPPING_LOGIN" VALUE="登录（电商）"/>
+        <ELEINFO CODE="SHOPPING_REG" VALUE="注册（电商）"/>
+        <ELEINFO CODE="SHOPPING_INFO_VIEW" VALUE="查看信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_INFO_UPDATE" VALUE="更新信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDER" VALUE="提交订单（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDER_VIEW" VALUE="查看订单（电商）"/>
+        <ELEINFO CODE="SHOPPING_ORDERLIST_VIEW" VALUE="查看订单列表（电商）"/>
+        <ELEINFO CODE="SHOPPING_ADDR_UPDATE" VALUE="更新地址信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_ADDR_VIEW" VALUE="查看地址信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_LOGISTICS_UPDATE" VALUE="更新物流信息（电商）"/>
+        <ELEINFO CODE="SHOPPING_LOGISTICS_VIEW" VALUE="查看物流信息（电商）"/>
+        <ELEINFO CODE="JOB_RESUME_CREATE" VALUE="创建个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_RESUME_VIEW" VALUE="查看个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_RESUME_UPDATE" VALUE="修改个人简历（招聘）"/>
+        <ELEINFO CODE="JOB_POST_FILE" VALUE="上传简历附件"/>
+        <ELEINFO CODE="JOB_REG" VALUE="注册（招聘）"/>
+        <ELEINFO CODE="JOB_LOGIN" VALUE="登录（招聘）"/>
+        <ELEINFO CODE="JOB_COMPANY_INFO" VALUE="企业资料（招聘）"/>
+        <ELEINFO CODE="JOB_POSITION_INFO" VALUE="职位信息（招聘）"/>
+        <ELEINFO CODE="TICKET_LOGIN" VALUE="登录（票务）"/>
+        <ELEINFO CODE="TICKET_USER_INFO_VIEW" VALUE="用户信息（票务）"/>
+        <ELEINFO CODE="TICKET_SEARCH" VALUE="搜索（票务）"/>
+        <ELEINFO CODE="TICKET_CARE_LIST" VALUE="关注班次列表（票务）"/>
+        <ELEINFO CODE="TICKET_CARE" VALUE="关注某班次（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER" VALUE="订票（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER_LIST" VALUE="订票历史（票务）"/>
+        <ELEINFO CODE="TICKET_ORDER_VIEW" VALUE="查看订单（票务）"/>
+        <ELEINFO CODE="EXPRESS_ORDER_SUBMIT" VALUE="提交快递单"/>
+        <ELEINFO CODE="EXPRESS_ORDER_VIEW" VALUE="查看快递单"/>
+        <ELEINFO CODE="LOGIN" VALUE="登录（算命）"/>
+        <ELEINFO CODE="FORECAST" VALUE="提交（算命）"/>
+        <ELEINFO CODE="SNS_LOGIN" VALUE="登录（社交）"/>
+        <ELEINFO CODE="SNS_USER_INFO" VALUE="用户信息（社交）"/>
+        <ELEINFO CODE="SNS_GROUP_INFO" VALUE="群信息（社交）"/>
+        <ELEINFO CODE="SNS_READ_TXT" VALUE="读文本（社交）"/>
+        <ELEINFO CODE="SNS_SEND_TXT" VALUE="发文本（社交）"/>
+        <ELEINFO CODE="SNS_READ_MSG" VALUE="读消息（社交）"/>
+        <ELEINFO CODE="SNS_SEND_MSG" VALUE="发消息（社交）"/>
+        <ELEINFO CODE="SNS_REPLY_MSG" VALUE="回复消息（社交）"/>
+        <ELEINFO CODE="SNS_POST_FILE" VALUE="上传文件（社交）"/>
+        <ELEINFO CODE="SNS_GET_FILE" VALUE="下载文件（社交）"/>
+        <ELEINFO CODE="SNS_FRIEND_LIST" VALUE="好友列表（社交）"/>
+        <ELEINFO CODE="SNS_FOLLOWER_LIST" VALUE="粉丝（社交）"/>
+        <ELEINFO CODE="SNS_FOLLOWING_LIST" VALUE="关注人（社交）"/>
+        <ELEINFO CODE="SNS_LOGOUT" VALUE="退出（社交）"/>
+        <ELEINFO CODE="SNS_SEND_FILE" VALUE="发送文件（社交）"/>
+        <ELEINFO CODE="SNS_RECV_FILE" VALUE="接收文件（社交）"/>
+        <ELEINFO CODE="SNS_SHARE_FILE" VALUE="分享文件（社交）"/>
+        <ELEINFO CODE="SNS_SHARE_FILE_INFO" VALUE="文件信息（社交）"/>
+        <ELEINFO CODE="SNS_DEL_FILE" VALUE="删除文件（社交）"/>
+    </DIC>
+    <DIC NAME="DIC_ACT_TYPE_FILE">
+        <ELEINFO CODE="MAIL_READ_SUBJECT" VALUE="收主题"/>
+        <ELEINFO CODE="MAIL_READ_BODY" VALUE="收正文"/>
+        <ELEINFO CODE="MAIL_READ_MAIL" VALUE="收邮件"/>
+        <ELEINFO CODE="MAIL_READ_ATT" VALUE="收附件"/>
+        <ELEINFO CODE="MAIL_SEND_SUBJECT" VALUE="发主题"/>
+        <ELEINFO CODE="MAIL_SEND_BODY" VALUE="发正文"/>
+        <ELEINFO CODE="MAIL_SEND_MAIL" VALUE="发邮件"/>
+        <ELEINFO CODE="MAIL_SEND_ATT" VALUE="发附件"/>
+        <ELEINFO CODE="MAIL_NET_SPACE" VALUE="网络空间"/>
+        <ELEINFO CODE="MAIL_MAIL_LIST" VALUE="邮件列表"/>
+        <ELEINFO CODE="MAIL_CONTACT_INFO" VALUE="联系人"/>
+        <ELEINFO CODE="MAIL_CONTACTS_LIST" VALUE="联系人列表"/>
+        <ELEINFO CODE="MAIL_READ_SNIPPET" VALUE="收片段"/>
+        <ELEINFO CODE="IM_TEXTCHAT" VALUE="文本聊天"/>
+        <ELEINFO CODE="IM_GROUP_TEXTCHAT" VALUE="群聊天"/>
+        <ELEINFO CODE="IM_SUBGROUP_TEXTCHAT" VALUE="讨论组聊天"/>
+        <ELEINFO CODE="IM_FILETRANS" VALUE="文件传输"/>
+        <ELEINFO CODE="IM_AUDIOCHAT" VALUE="语音聊天"/>
+        <ELEINFO CODE="IM_VIDEOCHAT" VALUE="视频聊天"/>
+        <ELEINFO CODE="IM_FRIEND_LIST" VALUE="好友列表"/>
+        <ELEINFO CODE="IM_RAWDATA" VALUE="原始数据"/>
+        <ELEINFO CODE="IM_SHORTMSG" VALUE="短消息"/>
+        <ELEINFO CODE="IM_GROUP_FILETRANS" VALUE="群内文件传输"/>
+        <ELEINFO CODE="NETDISK_UPFILE" VALUE="上传文件（网盘）"/>
+        <ELEINFO CODE="NETDISK_DOWNLOAD" VALUE="下载文件（网盘）"/>
+    </DIC>
+    <!--APP_PROTOCOL -->
+    <DIC NAME="DIC_APP_PROTOCOL_EMAIL">
+        <ELEINFO CODE="SMTP" VALUE="SMTP"/>
+        <ELEINFO CODE="POP3" VALUE="POP3"/>
+        <ELEINFO CODE="IMAP" VALUE="IMAP"/>
+        <ELEINFO CODE="HTTP" VALUE="HTTP"/>
+    </DIC>
+    <!-- 各协议翻译字段 -->
+    <DIC NAME="DIC_HTTP_METHOD">
+        <ELEINFO CODE="OPTIONS" VALUE="OPTIONS"/>
+        <ELEINFO CODE="GET" VALUE="GET"/>
+        <ELEINFO CODE="HEAD" VALUE="HEAD"/>
+        <ELEINFO CODE="POST" VALUE="POST"/>
+        <ELEINFO CODE="PUT" VALUE="PUT"/>
+        <ELEINFO CODE="DELETE" VALUE="DELETE"/>
+        <ELEINFO CODE="TRACE" VALUE="TRACE"/>
+        <ELEINFO CODE="CONNECT" VALUE="CONNECT"/>
+    </DIC>
+    <DIC NAME="DIC_MAIL_DIR">
+        <ELEINFO CODE="1" VALUE="草稿箱"/>
+        <ELEINFO CODE="2" VALUE="发件箱"/>
+        <ELEINFO CODE="3" VALUE="收件箱"/>
+        <ELEINFO CODE="4" VALUE="已删除"/>
+        <ELEINFO CODE="5" VALUE="垃圾箱"/>
+        <ELEINFO CODE="6" VALUE="订阅"/>
+        <ELEINFO CODE="7" VALUE="自定义"/>
+        <ELEINFO CODE="8" VALUE="未知"/>
+    </DIC>
+    <DIC NAME="DIC_COORD_TYPE">
+        <ELEINFO CODE="COORD_GPS" VALUE="绝对经纬度"/>
+        <ELEINFO CODE="COORD_BAIDU" VALUE="百度坐标"/>
+        <ELEINFO CODE="COORD_SOGOU" VALUE="搜狗坐标"/>
+        <ELEINFO CODE="COORD_GOOGLE" VALUE="谷歌坐标"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_END_SIDE">
+        <ELEINFO CODE="0" VALUE="源方向"/>
+        <ELEINFO CODE="1" VALUE="目的方向"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_START_FLAG">
+        <ELEINFO CODE="0" VALUE="由普通数据包开始"/>
+        <ELEINFO CODE="1" VALUE="由TCP的syn或synack包开始"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_FLOW_END_FLAG">
+        <ELEINFO CODE="0" VALUE="超时结束"/>
+        <ELEINFO CODE="1" VALUE="源方向发送RST报文"/>
+        <ELEINFO CODE="2" VALUE="目的方向发送RST报文"/>
+        <ELEINFO CODE="3" VALUE="双向互发RST报文"/>
+        <ELEINFO CODE="4" VALUE="源方向发送FIN报文"/>
+        <ELEINFO CODE="6" VALUE="源方向发送FIN报文，目的方向发送RST报文"/>
+        <ELEINFO CODE="8" VALUE="目的方向发送FIN报文"/>
+        <ELEINFO CODE="9" VALUE="源方向发送RST报文，目的方向发送FIN报文"/>
+        <ELEINFO CODE="12" VALUE="双向互发FIN报文"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_IM_DATA_TYPE">
+        <ELEINFO CODE="0" VALUE="双方语音"/>
+        <ELEINFO CODE="1" VALUE="用户视频"/>
+        <ELEINFO CODE="2" VALUE="好友视频"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_IM_NODATA_REASON">
+        <ELEINFO CODE="0" VALUE="正常截获"/>
+        <ELEINFO CODE="1" VALUE="受文件大小限制"/>
+        <ELEINFO CODE="2" VALUE="有一方拒绝或取消"/>
+        <ELEINFO CODE="3" VALUE="网络问题传输失败"/>
+        <ELEINFO CODE="4" VALUE="受文件后缀限制"/>
+        <ELEINFO CODE="5" VALUE="退出或其他原因"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_HTTP_NODATA_REASON">
+        <ELEINFO CODE="OVER_SIZE" VALUE="超出文件重组大小限制"/>
+        <ELEINFO CODE="OVER_TIME" VALUE="超出文件重组时间限制"/>
+        <ELEINFO CODE="EXIST_IN_SERVER" VALUE="服务器已存在，无文件内容传输"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_VPN_OUTPUT_REASON">
+        <ELEINFO CODE="CONNECTION_CLOSE" VALUE="VPN连接正常关闭"/>
+        <ELEINFO CODE="TIME_OUT" VALUE="VPN连接超时结束"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_SSL_DETECT_PRECISION">
+        <ELEINFO CODE="10" VALUE="可疑"/>
+        <ELEINFO CODE="20" VALUE="高度可疑"/>
+        <ELEINFO CODE="30" VALUE="精确"/>
+    </DIC>
+    <DIC NAME="DIC_DATA_PCAP_IS_ROUTER_DATA">
+        <ELEINFO CODE="YES" VALUE="是"/>
+        <ELEINFO CODE="NO" VALUE="否"/>
+    </DIC>
+    <DIC NAME="DIC_MSISDN_PHONE_TYPE">
+        <ELEINFO CODE="0" VALUE="未知"/>
+        <ELEINFO CODE="1" VALUE="手机"/>
+        <ELEINFO CODE="2" VALUE="固话"/>
+        <ELEINFO CODE="3" VALUE="手机报"/>
+        <ELEINFO CODE="4" VALUE="公共服务号"/>
+        <ELEINFO CODE="5" VALUE="一卡双号"/>
+        <ELEINFO CODE="6" VALUE="卫星电话"/>
+    </DIC>
+    <DIC NAME="DIC_CALL_STATUS_CODE">
+        <ELEINFO CODE="0" VALUE="未知"/>
+        <ELEINFO CODE="1" VALUE="未接续（没打通）（取机状态）"/>
+        <ELEINFO CODE="2" VALUE="未接听（打通，没人接）（振铃状态）"/>
+        <ELEINFO CODE="3" VALUE="已接听（打通，接听了）（建立状态）"/>
+        <ELEINFO CODE="4" VALUE="已挂机（通话完成状态）"/>
+        <ELEINFO CODE="5" VALUE="主叫挂机（通话完成状态）"/>
+        <ELEINFO CODE="6" VALUE="被叫挂机（通话完成状态）"/>
+        <ELEINFO CODE="7" VALUE="通话取消状态（sip特有）"/>
+        <ELEINFO CODE="8" VALUE="通话被拒绝状态（sip特有）"/>
+    </DIC>
+    <DIC NAME="DIC_ORIG_SMS_CODE">
+        <ELEINFO CODE="0" VALUE="7bit"/>
+        <ELEINFO CODE="4" VALUE="8bit"/>
+        <ELEINFO CODE="8" VALUE="UCS2"/>
+        <ELEINFO CODE="10" VALUE="ASCII"/>
+        <ELEINFO CODE="13" VALUE="短消息写卡操作"/>
+        <ELEINFO CODE="14" VALUE="二进制信息"/>
+        <ELEINFO CODE="15" VALUE="GB18030"/>
+        <ELEINFO CODE="20" VALUE="SMSC 确省字符"/>
+        <ELEINFO CODE="21" VALUE="IA5(CCITTT.50)/ASCII(ANSI X3.4)"/>
+        <ELEINFO CODE="22" VALUE="未指定8 位编码"/>
+        <ELEINFO CODE="23" VALUE="Latin1 ISO-8859-1"/>
+        <ELEINFO CODE="24" VALUE="未指定8 位编码"/>
+        <ELEINFO CODE="25" VALUE="JIS(X 0208-1990)"/>
+        <ELEINFO CODE="26" VALUE="Cyrllic ISO-8859-5"/>
+        <ELEINFO CODE="27" VALUE="Latin/Hebrew ISO-8859-8"/>
+        <ELEINFO CODE="28" VALUE="UCS2 ISO/IEC-10646"/>
+        <ELEINFO CODE="29" VALUE="象形编码"/>
+        <ELEINFO CODE="30" VALUE="ISO-2022-JP"/>
+        <ELEINFO CODE="31" VALUE="保留"/>
+        <ELEINFO CODE="32" VALUE="保留"/>
+        <ELEINFO CODE="33" VALUE="扩展Kanji JIS(X 0212-1990)"/>
+        <ELEINFO CODE="34" VALUE="KS C 5601"/>
+        <ELEINFO CODE="35" VALUE="保留"/>
+    </DIC>
+    <DIC NAME="DIC_CONTENT_STATUS">
+        <ELEINFO CODE="0" VALUE="内容正常"/>
+        <ELEINFO CODE="1" VALUE="无内容"/>
+        <ELEINFO CODE="2" VALUE="未知错误"/>
+        <ELEINFO CODE="101" VALUE="语音超时"/>
+        <ELEINFO CODE="102" VALUE="只有A方语音"/>
+        <ELEINFO CODE="103" VALUE="只有B方语音"/>
+        <ELEINFO CODE="104" VALUE="丢失信道"/>
+        <ELEINFO CODE="201" VALUE="通话未接续"/>
+        <ELEINFO CODE="202" VALUE="未接到语音链路"/>
+        <ELEINFO CODE="203" VALUE="未收到数据"/>
+        <ELEINFO CODE="204" VALUE="语音请求失败"/>
+        <ELEINFO CODE="205" VALUE="磁盘满"/>
+        <ELEINFO CODE="206" VALUE="语音缺失（缺一方或语音不全）"/>
+        <ELEINFO CODE="301" VALUE="传真解调失败"/>
+        <ELEINFO CODE="302" VALUE="传真解码失败"/>
+        <ELEINFO CODE="303" VALUE="传真解调失败（JBIG）"/>
+        <ELEINFO CODE="304" VALUE="传真解码失败（JBIG）"/>
+        <ELEINFO CODE="305" VALUE="传真解调失败（V34）"/>
+        <ELEINFO CODE="306" VALUE="传真解码失败（V34）"/>
+        <ELEINFO CODE="307" VALUE="传真收发相关参数不正确"/>
+        <ELEINFO CODE="308" VALUE="传真收发相关参数不正确(V34)"/>
+        <ELEINFO CODE="309" VALUE="传真解码时传真报文创建失败"/>
+        <ELEINFO CODE="310" VALUE="传真解码时传真报文创建失败(JBIG)"/>
+        <ELEINFO CODE="311" VALUE="传真解码时传真报文创建失败(V34)"/>
+        <ELEINFO CODE="312" VALUE="传真需要进行高频滤波补偿"/>
+        <ELEINFO CODE="313" VALUE="传真解码不支持该编码方式"/>
+    </DIC>
+    <DIC NAME="DIC_COM_OVER_CAUSE">
+        <ELEINFO CODE="1" VALUE="Unassigned (unallocated)"/>
+        <ELEINFO CODE="3" VALUE="No route to destination"/>
+        <ELEINFO CODE="6" VALUE="Channel unacceptable"/>
+        <ELEINFO CODE="8" VALUE="Operator determined barring"/>
+        <ELEINFO CODE="16" VALUE="Normal call clearing"/>
+        <ELEINFO CODE="17" VALUE="User busy"/>
+        <ELEINFO CODE="18" VALUE="No user responding"/>
+        <ELEINFO CODE="19" VALUE="User alerting, no answer"/>
+        <ELEINFO CODE="21" VALUE="Call rejected"/>
+        <ELEINFO CODE="22" VALUE="Number changed"/>
+        <ELEINFO CODE="25" VALUE="Pre-emption"/>
+        <ELEINFO CODE="26" VALUE="Non selected user clearing"/>
+        <ELEINFO CODE="27" VALUE="Destination out of order"/>
+        <ELEINFO CODE="28" VALUE="Invalid number format"/>
+        <ELEINFO CODE="29" VALUE="Facility rejected"/>
+        <ELEINFO CODE="30" VALUE="Response to STATUS ENQUIRY"/>
+        <ELEINFO CODE="31" VALUE="Normal, unspecified"/>
+        <ELEINFO CODE="34" VALUE="No circuit/channel available"/>
+        <ELEINFO CODE="38" VALUE="Network out of order"/>
+        <ELEINFO CODE="41" VALUE="Temporary failure"/>
+        <ELEINFO CODE="42" VALUE="Switching equipment conges"/>
+        <ELEINFO CODE="43" VALUE="Access information discarded_Discarded info"/>
+        <ELEINFO CODE="44" VALUE="requested circuit/channel"/>
+        <ELEINFO CODE="47" VALUE="Resources unavailable, un"/>
+        <ELEINFO CODE="49" VALUE="Quality of service"/>
+        <ELEINFO CODE="50" VALUE="Requested facility not sub"/>
+        <ELEINFO CODE="55" VALUE="Incoming calls barred with"/>
+        <ELEINFO CODE="57" VALUE="Bearer capability not au"/>
+        <ELEINFO CODE="58" VALUE="Bearer capability not pre"/>
+        <ELEINFO CODE="63" VALUE="Service or option not"/>
+        <ELEINFO CODE="65" VALUE="Bearer service not"/>
+        <ELEINFO CODE="68" VALUE="ACM equal to or greater"/>
+        <ELEINFO CODE="69" VALUE="Requested facility not"/>
+        <ELEINFO CODE="70" VALUE="Only restricted digital"/>
+        <ELEINFO CODE="79" VALUE="Service or option not"/>
+        <ELEINFO CODE="81" VALUE="Invalid transaction iden"/>
+        <ELEINFO CODE="87" VALUE="User not member of CUG"/>
+        <ELEINFO CODE="88" VALUE="Incompatible destination"/>
+        <ELEINFO CODE="91" VALUE="Invalid transit network se"/>
+        <ELEINFO CODE="95" VALUE="Semantically incorrect"/>
+        <ELEINFO CODE="96" VALUE="Invalid mandatory informa"/>
+        <ELEINFO CODE="97" VALUE="Message type non-existent"/>
+        <ELEINFO CODE="98" VALUE="Message type not compatible"/>
+        <ELEINFO CODE="99" VALUE="Information element non-ex"/>
+        <ELEINFO CODE="100" VALUE="Conditional IE error"/>
+        <ELEINFO CODE="101" VALUE="Message not compatible with_ Message type"/>
+        <ELEINFO CODE="102" VALUE="Recovery on timer expiry"/>
+        <ELEINFO CODE="111" VALUE="Protocol error, unspecified"/>
+        <ELEINFO CODE="127" VALUE="Interworking, unspecified"/>
+    </DIC>
+    <DIC NAME="DIC_CONTENT_STATUS">
+        <ELEINFO CODE="0" VALUE="内容正常"/>
+        <ELEINFO CODE="1" VALUE="无内容"/>
+        <ELEINFO CODE="2" VALUE="未知错误"/>
+        <ELEINFO CODE="101" VALUE="语音超时"/>
+        <ELEINFO CODE="102" VALUE="只有A方语音"/>
+        <ELEINFO CODE="103" VALUE="只有B方语音"/>
+        <ELEINFO CODE="104" VALUE="丢失信道"/>
+        <ELEINFO CODE="201" VALUE="通话未接续"/>
+        <ELEINFO CODE="202" VALUE="未接到语音链路"/>
+        <ELEINFO CODE="203" VALUE="未收到数据"/>
+        <ELEINFO CODE="204" VALUE="语音请求失败"/>
+        <ELEINFO CODE="205" VALUE="磁盘满"/>
+        <ELEINFO CODE="206" VALUE="语音缺失（缺一方或语音不全）"/>
+        <ELEINFO CODE="301" VALUE="传真解调失败"/>
+        <ELEINFO CODE="302" VALUE="传真解码失败"/>
+        <ELEINFO CODE="303" VALUE="传真解调失败（JBIG）"/>
+        <ELEINFO CODE="304" VALUE="传真解码失败（JBIG）"/>
+        <ELEINFO CODE="305" VALUE="传真解调失败（V34）"/>
+        <ELEINFO CODE="306" VALUE="传真解码失败（V34）"/>
+        <ELEINFO CODE="307" VALUE="传真收发相关参数不正确"/>
+        <ELEINFO CODE="308" VALUE="传真收发相关参数不正确(V34)"/>
+        <ELEINFO CODE="309" VALUE="传真解码时传真报文创建失败"/>
+        <ELEINFO CODE="310" VALUE="传真解码时传真报文创建失败(JBIG)"/>
+        <ELEINFO CODE="311" VALUE="传真解码时传真报文创建失败(V34)"/>
+        <ELEINFO CODE="312" VALUE="传真需要进行高频滤波补偿"/>
+        <ELEINFO CODE="313" VALUE="传真解码不支持该编码方式"/>
+    </DIC>
+    <DIC NAME="DIC_ROAM_TYPE">
+        <ELEINFO CODE="0" VALUE="不区分"/>
+        <ELEINFO CODE="1" VALUE="国际漫游来访话单"/>
+        <ELEINFO CODE="2" VALUE="国际漫游出访话单"/>
+        <ELEINFO CODE="3" VALUE="国内漫游话单"/>
+    </DIC>
+
+    <DIC NAME="DIC_RADIUS_TIMEOUT">
+        <ELEINFO CODE="0" VALUE="正常下线"/>
+        <ELEINFO CODE="1" VALUE="超时输出"/>
+        <ELEINFO CODE="2" VALUE="IP冲突下线"/>
+    </DIC>
+    <DIC NAME="DIC_RADIUS_IP_ADDR_TYPE">
+        <ELEINFO CODE="public" VALUE="公网IP"/>
+        <ELEINFO CODE="private" VALUE="内网IP"/>
+    </DIC>
+    <!--运营商-->
+    <DIC NAME="DIC_CARRIER_CODE">
+        <ELEINFO CODE="0" VALUE="未知"/>
+        <ELEINFO CODE="1" VALUE="中国移动"/>
+        <ELEINFO CODE="2" VALUE="中国联通"/>
+        <ELEINFO CODE="3" VALUE="中国电信"/>
+        <ELEINFO CODE="4" VALUE="中国铁通"/>
+        <ELEINFO CODE="5" VALUE="中国网通"/>
+        <ELEINFO CODE="6" VALUE="中国卫通"/>
+        <ELEINFO CODE="7" VALUE="中国广电"/>
+    </DIC>
+    <!--系统类型-->
+    <DIC NAME="DIC_SYSTEM_ID">
+        <ELEINFO CODE="10001" VALUE="4G综合侦控平台"/>
+        <ELEINFO CODE="50002" VALUE="电信用户资料查询系统"/>
+        <ELEINFO CODE="50003" VALUE="电子围栏侦控系统"/>
+        <ELEINFO CODE="50004" VALUE="区域性国际长话侦控系统"/>
+        <ELEINFO CODE="50005" VALUE="718系统"/>
+        <ELEINFO CODE="50006" VALUE="电信短信查询系统"/>
+        <ELEINFO CODE="50007" VALUE="923系统"/>
+        <ELEINFO CODE="50008" VALUE="A接口系统"/>
+        <ELEINFO CODE="50009" VALUE="993-2G"/>
+        <ELEINFO CODE="50010" VALUE="993-3G"/>
+        <ELEINFO CODE="50011" VALUE="993-固定网"/>
+        <ELEINFO CODE="50012" VALUE="993-32线"/>
+        <ELEINFO CODE="50013" VALUE="993-30b+d"/>
+        <ELEINFO CODE="50014" VALUE="VPDN侦控系统"/>
+        <ELEINFO CODE="50015" VALUE="4G警口侦控系统"/>
+        <ELEINFO CODE="50016" VALUE="IMS警口侦控系统"/>
+        <ELEINFO CODE="50017" VALUE="区域性复接系统"/>
+        <ELEINFO CODE="50018" VALUE="使领馆专线系统"/>
+        <ELEINFO CODE="50019" VALUE="海事卫星侦控系统"/>
+        <ELEINFO CODE="50020" VALUE="电信用户登记信息查询系统"/>
+        <ELEINFO CODE="50021" VALUE="LBS"/>
+        <ELEINFO CODE="50022" VALUE="016"/>
+        <ELEINFO CODE="50023" VALUE="电信侦控综合业务平台"/>
+        <ELEINFO CODE="50024" VALUE="H局"/>
+        <ELEINFO CODE="70001" VALUE="327-1平台"/>
+        <ELEINFO CODE="70002" VALUE="005平台"/>
+        <ELEINFO CODE="70003" VALUE="9K专项系统"/>
+        <ELEINFO CODE="70004" VALUE="互联网省市口系统"/>
+        <ELEINFO CODE="70005" VALUE="移动互联网系统"/>
+        <ELEINFO CODE="70006" VALUE="327-2系统"/>
+        <ELEINFO CODE="70007" VALUE="发现2号系统"/>
+        <ELEINFO CODE="80001" VALUE="烽火系统"/>
+        <ELEINFO CODE="80002" VALUE="淘沙综合数据分析系统"/>
+        <ELEINFO CODE="80003" VALUE="技侦综合作战一体化平台"/>
+        <ELEINFO CODE="80004" VALUE="综合数据侦察平台"/>
+        <ELEINFO CODE="80005" VALUE="528系统"/>
+        <ELEINFO CODE="90001" VALUE="邮检本地统一处理平台"/>
+        <ELEINFO CODE="90002" VALUE="邮检自助分析系统"/>
+    </DIC>
+    <!--数据特性-->
+    <DIC NAME="DIC_DATA_CHARACTER">
+        <ELEINFO CODE="NORMAL" VALUE="普通数据"/>
+        <ELEINFO CODE="REPLAY" VALUE="回放数据"/>
+        <ELEINFO CODE="SSL" VALUE="SSL解密数据"/>
+        <ELEINFO CODE="VPN_DEC" VALUE="VPN解密数据"/>
+        <ELEINFO CODE="VPN" VALUE="普通VPN数据"/>
+        <ELEINFO CODE="A10" VALUE="电信4G回落3G"/>
+    </DIC>
+    <!--时区-->
+    <DIC NAME="DIC_TIMEZONE">
+        <ELEINFO CODE="+0000" VALUE="中时区"/>
+        <ELEINFO CODE="+0100" VALUE="东一区"/>
+        <ELEINFO CODE="+0200" VALUE="东二区"/>
+        <ELEINFO CODE="+0300" VALUE="东三区"/>
+        <ELEINFO CODE="+0400" VALUE="东四区"/>
+        <ELEINFO CODE="+0500" VALUE="东五区"/>
+        <ELEINFO CODE="+0600" VALUE="东六区"/>
+        <ELEINFO CODE="+0700" VALUE="东七区"/>
+        <ELEINFO CODE="+0800" VALUE="东八区"/>
+        <ELEINFO CODE="+0900" VALUE="东九区"/>
+        <ELEINFO CODE="+1000" VALUE="东十区"/>
+        <ELEINFO CODE="+1100" VALUE="东十一区"/>
+        <ELEINFO CODE="+1200" VALUE="东十二区"/>
+        <ELEINFO CODE="-1200" VALUE="西十二区"/>
+        <ELEINFO CODE="-1100" VALUE="西十一区"/>
+        <ELEINFO CODE="-1000" VALUE="西十区"/>
+        <ELEINFO CODE="-0900" VALUE="西九区"/>
+        <ELEINFO CODE="-0800" VALUE="西八区"/>
+        <ELEINFO CODE="-0700" VALUE="西七区"/>
+        <ELEINFO CODE="-0600" VALUE="西六区"/>
+        <ELEINFO CODE="-0500" VALUE="西五区"/>
+        <ELEINFO CODE="-0400" VALUE="西四区"/>
+        <ELEINFO CODE="-0300" VALUE="西三区"/>
+        <ELEINFO CODE="-0200" VALUE="西二区"/>
+        <ELEINFO CODE="-0100" VALUE="西一区"/>
+    </DIC>
+    <!--异常类型-->
+    <DIC NAME="DIC_STYPE">
+        <ELEINFO CODE="5" VALUE="office系列修改后缀"/>
+        <ELEINFO CODE="6" VALUE="compress修改后缀"/>
+        <ELEINFO CODE="7" VALUE="图片修改后缀"/>
+        <ELEINFO CODE="8" VALUE="其他修改后缀"/>
+        <ELEINFO CODE="11" VALUE="加密rar"/>
+        <ELEINFO CODE="12" VALUE="分卷rar"/>
+        <ELEINFO CODE="13" VALUE="分卷且加密rar"/>
+        <ELEINFO CODE="21" VALUE="加密zip"/>
+        <ELEINFO CODE="22" VALUE="分卷zip"/>
+        <ELEINFO CODE="23" VALUE="分卷且加密zip"/>
+        <ELEINFO CODE="24" VALUE="7zip加密"/>
+        <ELEINFO CODE="25" VALUE="7zip分卷"/>
+        <ELEINFO CODE="51" VALUE="PGP加密，公钥/私钥文件"/>
+        <ELEINFO CODE="52" VALUE="PGPSDA，公钥/私钥文件"/>
+        <ELEINFO CODE="53" VALUE="PGPDISK，公钥/私钥文件"/>
+        <ELEINFO CODE="54" VALUE="PGPEMAIL，公钥/私钥文件"/>
+        <ELEINFO CODE="55" VALUE="PGP加密文件"/>
+        <ELEINFO CODE="71" VALUE="word 2003加密"/>
+        <ELEINFO CODE="72" VALUE="ppt 2003加密"/>
+        <ELEINFO CODE="73" VALUE="excel 2003加密"/>
+        <ELEINFO CODE="74" VALUE="word 2007加密"/>
+        <ELEINFO CODE="75" VALUE="ppt 2007加密"/>
+        <ELEINFO CODE="76" VALUE="excel 2007加密"/>
+        <ELEINFO CODE="77" VALUE="只写保护WORD2003"/>
+        <ELEINFO CODE="78" VALUE="只写保护EXCEL2003"/>
+        <ELEINFO CODE="81" VALUE="csecsec加密"/>
+        <ELEINFO CODE="82" VALUE="exe修改后缀"/>
+        <ELEINFO CODE="83" VALUE="coder加密"/>
+        <ELEINFO CODE="84" VALUE="usb加密"/>
+        <ELEINFO CODE="93" VALUE="未加密WORD红头文件"/>
+        <ELEINFO CODE="94" VALUE="解密后WORD红头文件"/>
+        <ELEINFO CODE="167" VALUE="BCC密送"/>
+        <ELEINFO CODE="168" VALUE="加密pdf"/>
+        <ELEINFO CODE="169" VALUE="疑似冒名邮件"/>
+        <ELEINFO CODE="200" VALUE="可疑图片-武装人员"/>
+        <ELEINFO CODE="201" VALUE="可疑图片-网页截图"/>
+        <ELEINFO CODE="202" VALUE="可疑图片-银行票据"/>
+        <ELEINFO CODE="203" VALUE="可疑图片-APP截图"/>
+        <ELEINFO CODE="204" VALUE="可疑图片-证件图片"/>
+        <ELEINFO CODE="205" VALUE="可疑图片-银行卡"/>
+        <ELEINFO CODE="206" VALUE="可疑图片-台标图片"/>
+        <ELEINFO CODE="207" VALUE="可疑图片-含有人脸的图片"/>
+        <ELEINFO CODE="208" VALUE="可疑图片-含有用户关注人脸的图片"/>
+    </DIC>
+    <!--语种对应关系-->
+    <DIC NAME="DIC_LANGUAGE">
+        <ELEINFO CODE="zh-cn" VALUE="汉语(中国)"/>
+        <ELEINFO CODE="zh-tw" VALUE="汉语(台湾)"/>
+        <ELEINFO CODE="ug" VALUE="维吾尔语"/>
+        <ELEINFO CODE="ug-ltn" VALUE="拉丁维文"/>
+        <ELEINFO CODE="kk" VALUE="哈萨克语"/>
+        <ELEINFO CODE="bo" VALUE="藏语(喜马拉雅)"/>
+        <ELEINFO CODE="bo-bzd" VALUE="藏语(班智达)"/>
+        <ELEINFO CODE="bo-ty" VALUE="藏语(同元)"/>
+        <ELEINFO CODE="ja" VALUE="日语"/>
+        <ELEINFO CODE="ko" VALUE="朝鲜语"/>
+        <ELEINFO CODE="hi" VALUE="印地语"/>
+        <ELEINFO CODE="id" VALUE="印度尼西亚语"/>
+        <ELEINFO CODE="ml" VALUE="印度西南部的 Dravidian 语的一方言"/>
+        <ELEINFO CODE="th" VALUE="泰语"/>
+        <ELEINFO CODE="vi" VALUE="越南语"/>
+        <ELEINFO CODE="ne" VALUE="尼泊尔语"/>
+        <ELEINFO CODE="tr" VALUE="土耳其语"/>
+        <ELEINFO CODE="en" VALUE="英语"/>
+        <ELEINFO CODE="en-us" VALUE="英语(美国)"/>
+        <ELEINFO CODE="de" VALUE="德语"/>
+        <ELEINFO CODE="ru" VALUE="俄语"/>
+        <ELEINFO CODE="fr" VALUE="法语"/>
+        <ELEINFO CODE="pt" VALUE="葡萄牙语"/>
+        <ELEINFO CODE="es" VALUE="西班牙语"/>
+        <ELEINFO CODE="it" VALUE="意大利语"/>
+        <ELEINFO CODE="sq" VALUE="阿尔巴尼亚语"/>
+        <ELEINFO CODE="ar" VALUE="阿拉伯语"/>
+        <ELEINFO CODE="az" VALUE="阿塞拜疆语"/>
+        <ELEINFO CODE="et" VALUE="爱沙尼亚语"/>
+        <ELEINFO CODE="eu" VALUE="巴士克语"/>
+        <ELEINFO CODE="xh" VALUE="班图语"/>
+        <ELEINFO CODE="bg" VALUE="保加利亚语"/>
+        <ELEINFO CODE="se" VALUE="北萨摩斯语"/>
+        <ELEINFO CODE="ns" VALUE="北梭托语"/>
+        <ELEINFO CODE="be" VALUE="比利时语"/>
+        <ELEINFO CODE="is" VALUE="冰岛语"/>
+        <ELEINFO CODE="pl" VALUE="波兰语"/>
+        <ELEINFO CODE="nl" VALUE="荷兰语"/>
+        <ELEINFO CODE="da" VALUE="丹麦语"/>
+        <ELEINFO CODE="tn" VALUE="茨瓦纳语"/>
+        <ELEINFO CODE="tt" VALUE="鞑靼语"/>
+        <ELEINFO CODE="dv" VALUE="第维埃语"/>
+        <ELEINFO CODE="fo" VALUE="法罗语"/>
+        <ELEINFO CODE="fa" VALUE="法斯语"/>
+        <ELEINFO CODE="sa" VALUE="梵文"/>
+        <ELEINFO CODE="fi" VALUE="芬兰语"/>
+        <ELEINFO CODE="ka" VALUE="格鲁吉亚语"/>
+        <ELEINFO CODE="gu" VALUE="古吉拉特语"/>
+        <ELEINFO CODE="ky" VALUE="吉尔吉斯语"/>
+        <ELEINFO CODE="gl" VALUE="加里西亚语"/>
+        <ELEINFO CODE="ca" VALUE="加泰隆语"/>
+        <ELEINFO CODE="cs" VALUE="捷克语"/>
+        <ELEINFO CODE="kn" VALUE="卡纳拉语"/>
+        <ELEINFO CODE="hr" VALUE="克罗地亚语"/>
+        <ELEINFO CODE="qu" VALUE="克丘亚语"/>
+        <ELEINFO CODE="kok" VALUE="孔卡尼语"/>
+        <ELEINFO CODE="lv" VALUE="拉脱维亚语"/>
+        <ELEINFO CODE="lt" VALUE="立陶宛语"/>
+        <ELEINFO CODE="ro" VALUE="罗马尼亚语"/>
+        <ELEINFO CODE="mt" VALUE="马耳他语"/>
+        <ELEINFO CODE="mr" VALUE="马拉地语"/>
+        <ELEINFO CODE="ms" VALUE="马来语"/>
+        <ELEINFO CODE="mk" VALUE="马其顿语"/>
+        <ELEINFO CODE="mi" VALUE="毛利语"/>
+        <ELEINFO CODE="bn" VALUE="孟加拉语"/>
+        <ELEINFO CODE="af" VALUE="南非语"/>
+        <ELEINFO CODE="no" VALUE="挪威语"/>
+        <ELEINFO CODE="pa" VALUE="旁遮普语"/>
+        <ELEINFO CODE="sv" VALUE="瑞典语"/>
+        <ELEINFO CODE="sr" VALUE="塞尔维亚语"/>
+        <ELEINFO CODE="sk" VALUE="斯洛伐克语"/>
+        <ELEINFO CODE="sl" VALUE="斯洛文尼亚语"/>
+        <ELEINFO CODE="sw" VALUE="斯瓦希里语"/>
+        <ELEINFO CODE="so" VALUE="索马里语"/>
+        <ELEINFO CODE="tl" VALUE="塔加路语"/>
+        <ELEINFO CODE="te" VALUE="泰卢固语"/>
+        <ELEINFO CODE="ta" VALUE="泰米尔语"/>
+        <ELEINFO CODE="cy" VALUE="威尔士语"/>
+        <ELEINFO CODE="ur" VALUE="乌都语"/>
+        <ELEINFO CODE="uk" VALUE="乌克兰语"/>
+        <ELEINFO CODE="uz" VALUE="乌兹别克语"/>
+        <ELEINFO CODE="mn" VALUE="西里尔蒙语"/>
+        <ELEINFO CODE="he" VALUE="希伯来语"/>
+        <ELEINFO CODE="el" VALUE="希腊语"/>
+        <ELEINFO CODE="hu" VALUE="匈牙利语"/>
+        <ELEINFO CODE="syr" VALUE="叙利亚语"/>
+        <ELEINFO CODE="hy" VALUE="亚美尼亚语"/>
+        <ELEINFO CODE="ts" VALUE="宗加语"/>
+        <ELEINFO CODE="zu" VALUE="祖鲁语"/>
+    </DIC>
+    <!--数据来源地-->
+    <DIC NAME="DIC_LOCATION_CODE">
+        <ELEINFO CODE="100000" VALUE="国家安全部"/>
+        <ELEINFO CODE="110000" VALUE="北京市"/>
+        <ELEINFO CODE="310000" VALUE="上海市"/>
+        <ELEINFO CODE="120000" VALUE="天津市"/>
+        <ELEINFO CODE="500000" VALUE="重庆市"/>
+
+        <ELEINFO CODE="710000" VALUE="北京出口局"/>
+        <ELEINFO CODE="720000" VALUE="上海出口局"/>
+        <ELEINFO CODE="730000" VALUE="广州出口局"/>
+
+        <ELEINFO CODE="340000" VALUE="安徽省"/>
+        <ELEINFO CODE="340800" VALUE="安徽省安庆市"/>
+        <ELEINFO CODE="340300" VALUE="安徽省蚌埠市"/>
+        <ELEINFO CODE="342600" VALUE="安徽省巢湖市"/>
+        <ELEINFO CODE="342900" VALUE="安徽省池州市"/>
+        <ELEINFO CODE="341100" VALUE="安徽省滁州市"/>
+        <ELEINFO CODE="341200" VALUE="安徽省阜阳市"/>
+        <ELEINFO CODE="340100" VALUE="安徽省合肥市"/>
+        <ELEINFO CODE="340600" VALUE="安徽省淮北市"/>
+        <ELEINFO CODE="340400" VALUE="安徽省淮南市"/>
+        <ELEINFO CODE="341000" VALUE="安徽省黄山市"/>
+        <ELEINFO CODE="342400" VALUE="安徽省六安市"/>
+        <ELEINFO CODE="340500" VALUE="安徽省马鞍山市"/>
+        <ELEINFO CODE="340700" VALUE="安徽省铜陵市"/>
+        <ELEINFO CODE="340200" VALUE="安徽省芜湖市"/>
+        <ELEINFO CODE="341300" VALUE="安徽省宿州市"/>
+        <ELEINFO CODE="342500" VALUE="安徽省宣城市"/>
+
+        <ELEINFO CODE="350000" VALUE="福建省"/>
+        <ELEINFO CODE="350100" VALUE="福建省福州市"/>
+        <ELEINFO CODE="350800" VALUE="福建省龙岩市"/>
+        <ELEINFO CODE="350700" VALUE="福建省南平市"/>
+        <ELEINFO CODE="352200" VALUE="福建省宁德市"/>
+        <ELEINFO CODE="350300" VALUE="福建省莆田市"/>
+        <ELEINFO CODE="350500" VALUE="福建省泉州市"/>
+        <ELEINFO CODE="350400" VALUE="福建省三明市"/>
+        <ELEINFO CODE="350200" VALUE="福建省厦门市"/>
+        <ELEINFO CODE="350600" VALUE="福建省漳州市"/>
+
+        <ELEINFO CODE="620000" VALUE="甘肃省"/>
+        <ELEINFO CODE="620400" VALUE="甘肃省白银市"/>
+        <ELEINFO CODE="622400" VALUE="甘肃省定西市"/>
+        <ELEINFO CODE="623000" VALUE="甘肃省甘南市"/>
+        <ELEINFO CODE="620200" VALUE="甘肃省嘉峪关市"/>
+        <ELEINFO CODE="620300" VALUE="甘肃省金昌市"/>
+        <ELEINFO CODE="622100" VALUE="甘肃省酒泉市"/>
+        <ELEINFO CODE="620100" VALUE="甘肃省兰州市"/>
+        <ELEINFO CODE="622900" VALUE="甘肃省临夏市"/>
+        <ELEINFO CODE="622600" VALUE="甘肃省陇南市"/>
+        <ELEINFO CODE="622700" VALUE="甘肃省平凉市"/>
+        <ELEINFO CODE="622800" VALUE="甘肃省庆阳市"/>
+        <ELEINFO CODE="620500" VALUE="甘肃省天水市"/>
+        <ELEINFO CODE="622300" VALUE="甘肃省威武市"/>
+        <ELEINFO CODE="622200" VALUE="甘肃省张掖市"/>
+
+        <ELEINFO CODE="440000" VALUE="广东省"/>
+        <ELEINFO CODE="445100" VALUE="广东省潮州市"/>
+        <ELEINFO CODE="441900" VALUE="广东省东莞市"/>
+        <ELEINFO CODE="440600" VALUE="广东省佛山市"/>
+        <ELEINFO CODE="440100" VALUE="广东省广州市"/>
+        <ELEINFO CODE="441600" VALUE="广东省河源市"/>
+        <ELEINFO CODE="441300" VALUE="广东省惠州市"/>
+        <ELEINFO CODE="440700" VALUE="广东省江门市"/>
+        <ELEINFO CODE="445200" VALUE="广东省揭阳市"/>
+        <ELEINFO CODE="440900" VALUE="广东省茂名市"/>
+        <ELEINFO CODE="441400" VALUE="广东省梅州市"/>
+        <ELEINFO CODE="441800" VALUE="广东省清远市"/>
+        <ELEINFO CODE="440500" VALUE="广东省汕头市"/>
+        <ELEINFO CODE="441500" VALUE="广东省汕尾市"/>
+        <ELEINFO CODE="440200" VALUE="广东省韶关市"/>
+        <ELEINFO CODE="440300" VALUE="广东省深圳市"/>
+        <ELEINFO CODE="441700" VALUE="广东省阳江市"/>
+        <ELEINFO CODE="445300" VALUE="广东省云浮市"/>
+        <ELEINFO CODE="440800" VALUE="广东省湛江市"/>
+        <ELEINFO CODE="441200" VALUE="广东省肇庆市"/>
+        <ELEINFO CODE="442000" VALUE="广东省中山市"/>
+        <ELEINFO CODE="440400" VALUE="广东省珠海市"/>
+
+        <ELEINFO CODE="450000" VALUE="广西自治区"/>
+        <ELEINFO CODE="453200" VALUE="广西百色市"/>
+        <ELEINFO CODE="450500" VALUE="广西北海市"/>
+        <ELEINFO CODE="451000" VALUE="广西崇左市"/>
+        <ELEINFO CODE="453100" VALUE="广西东兴办事处"/>
+        <ELEINFO CODE="450600" VALUE="广西防城港市"/>
+        <ELEINFO CODE="450800" VALUE="广西贵港市"/>
+        <ELEINFO CODE="450300" VALUE="广西桂林市"/>
+        <ELEINFO CODE="453400" VALUE="广西河池市"/>
+        <ELEINFO CODE="453500" VALUE="广西贺州市"/>
+        <ELEINFO CODE="453300" VALUE="广西来宾市"/>
+        <ELEINFO CODE="450200" VALUE="广西柳州市"/>
+        <ELEINFO CODE="450100" VALUE="广西南宁市"/>
+        <ELEINFO CODE="453000" VALUE="广西凭祥办事处"/>
+        <ELEINFO CODE="450700" VALUE="广西钦州市"/>
+        <ELEINFO CODE="450400" VALUE="广西梧州市"/>
+        <ELEINFO CODE="450900" VALUE="广西玉林市"/>
+
+        <ELEINFO CODE="520000" VALUE="贵州省"/>
+        <ELEINFO CODE="522500" VALUE="贵州省安顺市"/>
+        <ELEINFO CODE="522400" VALUE="贵州省毕节市"/>
+        <ELEINFO CODE="520100" VALUE="贵州省贵阳市"/>
+        <ELEINFO CODE="520200" VALUE="贵州省六盘水市"/>
+        <ELEINFO CODE="522600" VALUE="贵州省黔东南市"/>
+        <ELEINFO CODE="522700" VALUE="贵州省黔南市"/>
+        <ELEINFO CODE="522300" VALUE="贵州省黔西南市"/>
+        <ELEINFO CODE="522200" VALUE="贵州省铜仁市"/>
+        <ELEINFO CODE="520300" VALUE="贵州省遵义市"/>
+
+        <ELEINFO CODE="460000" VALUE="海南省"/>
+        <ELEINFO CODE="460100" VALUE="海南省海口市"/>
+        <ELEINFO CODE="460200" VALUE="海南省三亚市"/>
+
+        <ELEINFO CODE="130000" VALUE="河北省"/>
+        <ELEINFO CODE="130600" VALUE="河北省保定市"/>
+        <ELEINFO CODE="130900" VALUE="河北省沧州市"/>
+        <ELEINFO CODE="130800" VALUE="河北省承德市"/>
+        <ELEINFO CODE="130400" VALUE="河北省邯郸市"/>
+        <ELEINFO CODE="131100" VALUE="河北省衡水市"/>
+        <ELEINFO CODE="131000" VALUE="河北省廊坊市"/>
+        <ELEINFO CODE="130300" VALUE="河北省秦皇岛市"/>
+        <ELEINFO CODE="130100" VALUE="河北省石家庄市"/>
+        <ELEINFO CODE="130200" VALUE="河北省唐山市"/>
+        <ELEINFO CODE="130500" VALUE="河北省邢台市"/>
+        <ELEINFO CODE="130700" VALUE="河北省张家口市"/>
+
+        <ELEINFO CODE="410000" VALUE="河南省"/>
+        <ELEINFO CODE="410500" VALUE="河南省安阳市"/>
+        <ELEINFO CODE="410600" VALUE="河南省鹤壁市"/>
+        <ELEINFO CODE="410800" VALUE="河南省焦作市"/>
+        <ELEINFO CODE="410200" VALUE="河南省开封市"/>
+        <ELEINFO CODE="410300" VALUE="河南省洛阳市"/>
+        <ELEINFO CODE="411100" VALUE="河南省漯河市"/>
+        <ELEINFO CODE="411300" VALUE="河南省南阳市"/>
+        <ELEINFO CODE="410400" VALUE="河南省平顶山市"/>
+        <ELEINFO CODE="410900" VALUE="河南省濮阳市"/>
+        <ELEINFO CODE="411200" VALUE="河南省三门峡市"/>
+        <ELEINFO CODE="411400" VALUE="河南省商丘市"/>
+        <ELEINFO CODE="410700" VALUE="河南省新乡市"/>
+        <ELEINFO CODE="411500" VALUE="河南省信阳市"/>
+        <ELEINFO CODE="411000" VALUE="河南省许昌市"/>
+        <ELEINFO CODE="410100" VALUE="河南省郑州市"/>
+        <ELEINFO CODE="412700" VALUE="河南省周口市"/>
+        <ELEINFO CODE="412800" VALUE="河南省驻马店市"/>
+
+        <ELEINFO CODE="230000" VALUE="黑龙江省"/>
+        <ELEINFO CODE="230600" VALUE="黑龙江省大庆市"/>
+        <ELEINFO CODE="232700" VALUE="黑龙江省大兴安岭市"/>
+        <ELEINFO CODE="230100" VALUE="黑龙江省哈尔滨市"/>
+        <ELEINFO CODE="230400" VALUE="黑龙江省鹤岗市"/>
+        <ELEINFO CODE="231100" VALUE="黑龙江省黑河市"/>
+        <ELEINFO CODE="230300" VALUE="黑龙江省鸡西市"/>
+        <ELEINFO CODE="230800" VALUE="黑龙江省佳木斯市"/>
+        <ELEINFO CODE="231000" VALUE="黑龙江省牡丹江市"/>
+        <ELEINFO CODE="230900" VALUE="黑龙江省七台河市"/>
+        <ELEINFO CODE="230200" VALUE="黑龙江省齐齐哈尔市"/>
+        <ELEINFO CODE="230500" VALUE="黑龙江省双鸭市"/>
+        <ELEINFO CODE="232000" VALUE="黑龙江省绥芬河市"/>
+        <ELEINFO CODE="232300" VALUE="黑龙江省绥化市"/>
+        <ELEINFO CODE="230700" VALUE="黑龙江省伊春市"/>
+
+        <ELEINFO CODE="420000" VALUE="湖北省"/>
+        <ELEINFO CODE="420700" VALUE="湖北省鄂州市"/>
+        <ELEINFO CODE="422800" VALUE="湖北省恩施市"/>
+        <ELEINFO CODE="421100" VALUE="湖北省黄冈市"/>
+        <ELEINFO CODE="420200" VALUE="湖北省黄石市"/>
+        <ELEINFO CODE="420800" VALUE="湖北省荆门市"/>
+        <ELEINFO CODE="421000" VALUE="湖北省荆州市"/>
+        <ELEINFO CODE="420300" VALUE="湖北省十堰市"/>
+        <ELEINFO CODE="420100" VALUE="湖北省武汉市"/>
+        <ELEINFO CODE="421200" VALUE="湖北省咸宁市"/>
+        <ELEINFO CODE="420600" VALUE="湖北省襄樊市"/>
+        <ELEINFO CODE="420900" VALUE="湖北省孝感市"/>
+        <ELEINFO CODE="420500" VALUE="湖北省宜昌市"/>
+
+        <ELEINFO CODE="430000" VALUE="湖南省"/>
+        <ELEINFO CODE="430700" VALUE="湖南省常德市"/>
+        <ELEINFO CODE="431000" VALUE="湖南省郴州市"/>
+        <ELEINFO CODE="430400" VALUE="湖南省衡阳市"/>
+        <ELEINFO CODE="431200" VALUE="湖南省怀化市"/>
+        <ELEINFO CODE="432500" VALUE="湖南省娄底市"/>
+        <ELEINFO CODE="430500" VALUE="湖南省邵阳市"/>
+        <ELEINFO CODE="430300" VALUE="湖南省湘潭市"/>
+        <ELEINFO CODE="433100" VALUE="湖南省湘西自治州"/>
+        <ELEINFO CODE="430900" VALUE="湖南省益阳市"/>
+        <ELEINFO CODE="431100" VALUE="湖南省永州市"/>
+        <ELEINFO CODE="430600" VALUE="湖南省岳阳市"/>
+        <ELEINFO CODE="430800" VALUE="湖南省张家界市"/>
+        <ELEINFO CODE="430100" VALUE="湖南省长沙市"/>
+        <ELEINFO CODE="430200" VALUE="湖南省株州市"/>
+
+        <ELEINFO CODE="220000" VALUE="吉林省"/>
+        <ELEINFO CODE="220800" VALUE="吉林省白城市"/>
+        <ELEINFO CODE="222600" VALUE="吉林省白山市"/>
+        <ELEINFO CODE="220100" VALUE="吉林省长春市"/>
+        <ELEINFO CODE="220200" VALUE="吉林省吉林市"/>
+        <ELEINFO CODE="220400" VALUE="吉林省辽源市"/>
+        <ELEINFO CODE="220300" VALUE="吉林省四平市"/>
+        <ELEINFO CODE="220700" VALUE="吉林省松原市"/>
+        <ELEINFO CODE="220500" VALUE="吉林省通化市"/>
+        <ELEINFO CODE="222400" VALUE="吉林省延边市"/>
+
+        <ELEINFO CODE="320000" VALUE="江苏省"/>
+        <ELEINFO CODE="320400" VALUE="江苏省常州市"/>
+        <ELEINFO CODE="320800" VALUE="江苏省淮安市"/>
+        <ELEINFO CODE="320700" VALUE="江苏省连云港市"/>
+        <ELEINFO CODE="320100" VALUE="江苏省南京市"/>
+        <ELEINFO CODE="320600" VALUE="江苏省南通市"/>
+        <ELEINFO CODE="320500" VALUE="江苏省苏州市"/>
+        <ELEINFO CODE="321200" VALUE="江苏省泰州市"/>
+        <ELEINFO CODE="320200" VALUE="江苏省无锡市"/>
+        <ELEINFO CODE="321300" VALUE="江苏省宿迁市"/>
+        <ELEINFO CODE="320300" VALUE="江苏省徐州市"/>
+        <ELEINFO CODE="320900" VALUE="江苏省盐城市"/>
+        <ELEINFO CODE="321000" VALUE="江苏省扬州市"/>
+        <ELEINFO CODE="321100" VALUE="江苏省镇江市"/>
+
+        <ELEINFO CODE="360000" VALUE="江西省"/>
+        <ELEINFO CODE="362500" VALUE="江西省抚州市"/>
+        <ELEINFO CODE="360700" VALUE="江西省赣州市"/>
+        <ELEINFO CODE="362400" VALUE="江西省吉安市"/>
+        <ELEINFO CODE="360200" VALUE="江西省景德镇市"/>
+        <ELEINFO CODE="360400" VALUE="江西省九江市"/>
+        <ELEINFO CODE="360100" VALUE="江西省南昌市"/>
+        <ELEINFO CODE="360300" VALUE="江西省萍乡市"/>
+        <ELEINFO CODE="362300" VALUE="江西省上饶市"/>
+        <ELEINFO CODE="360500" VALUE="江西省新余市"/>
+        <ELEINFO CODE="362200" VALUE="江西省宜春市"/>
+        <ELEINFO CODE="360600" VALUE="江西省鹰潭市"/>
+
+        <ELEINFO CODE="210000" VALUE="辽宁省"/>
+        <ELEINFO CODE="210300" VALUE="辽宁省鞍山市"/>
+        <ELEINFO CODE="210500" VALUE="辽宁省本溪市"/>
+        <ELEINFO CODE="211300" VALUE="辽宁省朝阳市"/>
+        <ELEINFO CODE="210200" VALUE="辽宁省大连市"/>
+        <ELEINFO CODE="210600" VALUE="辽宁省丹东市"/>
+        <ELEINFO CODE="210400" VALUE="辽宁省抚顺市"/>
+        <ELEINFO CODE="210900" VALUE="辽宁省阜新市"/>
+        <ELEINFO CODE="211400" VALUE="辽宁省葫芦岛市"/>
+        <ELEINFO CODE="210700" VALUE="辽宁省锦州市"/>
+        <ELEINFO CODE="211000" VALUE="辽宁省辽阳市"/>
+        <ELEINFO CODE="211100" VALUE="辽宁省盘锦市"/>
+        <ELEINFO CODE="210100" VALUE="辽宁省沈阳市"/>
+        <ELEINFO CODE="211200" VALUE="辽宁省铁岭市"/>
+        <ELEINFO CODE="210800" VALUE="辽宁省营口市"/>
+
+        <ELEINFO CODE="150000" VALUE="内蒙古自治区"/>
+        <ELEINFO CODE="152900" VALUE="内蒙古阿拉善盟"/>
+        <ELEINFO CODE="151800" VALUE="内蒙古巴彦卓尔盟"/>
+        <ELEINFO CODE="150200" VALUE="内蒙古包头"/>
+        <ELEINFO CODE="150400" VALUE="内蒙古赤峰"/>
+        <ELEINFO CODE="150100" VALUE="内蒙古呼和浩特"/>
+        <ELEINFO CODE="152100" VALUE="内蒙古呼伦贝尔盟"/>
+        <ELEINFO CODE="153000" VALUE="内蒙古满洲里市"/>
+        <ELEINFO CODE="150300" VALUE="内蒙古乌海"/>
+        <ELEINFO CODE="152600" VALUE="内蒙古乌兰察布盟"/>
+        <ELEINFO CODE="152500" VALUE="内蒙古锡林郭勒盟"/>
+        <ELEINFO CODE="152200" VALUE="内蒙古兴安盟"/>
+        <ELEINFO CODE="152700" VALUE="内蒙古伊克昭盟"/>
+        <ELEINFO CODE="152300" VALUE="内蒙古哲里木盟"/>
+
+        <ELEINFO CODE="640000" VALUE="宁夏自治区"/>
+        <ELEINFO CODE="642200" VALUE="宁夏固原市"/>
+        <ELEINFO CODE="640200" VALUE="宁夏石嘴山市"/>
+        <ELEINFO CODE="640300" VALUE="宁夏吴中市"/>
+        <ELEINFO CODE="640100" VALUE="宁夏银川市"/>
+
+        <ELEINFO CODE="630000" VALUE="青海省"/>
+        <ELEINFO CODE="633000" VALUE="青海省格尔木市"/>
+        <ELEINFO CODE="632600" VALUE="青海省果洛市"/>
+        <ELEINFO CODE="632200" VALUE="青海省海北市"/>
+        <ELEINFO CODE="632100" VALUE="青海省海东市"/>
+        <ELEINFO CODE="632500" VALUE="青海省海南市"/>
+        <ELEINFO CODE="632800" VALUE="青海省海西市"/>
+        <ELEINFO CODE="632300" VALUE="青海省黄南市"/>
+        <ELEINFO CODE="630100" VALUE="青海省西宁市"/>
+        <ELEINFO CODE="632700" VALUE="青海省玉树市"/>
+
+        <ELEINFO CODE="370000" VALUE="山东省"/>
+        <ELEINFO CODE="372300" VALUE="山东省滨州市"/>
+        <ELEINFO CODE="371400" VALUE="山东省德州市"/>
+        <ELEINFO CODE="370500" VALUE="山东省东营市"/>
+        <ELEINFO CODE="372900" VALUE="山东省荷泽市"/>
+        <ELEINFO CODE="370100" VALUE="山东省济南市"/>
+        <ELEINFO CODE="370800" VALUE="山东省济宁市"/>
+        <ELEINFO CODE="371200" VALUE="山东省莱芜市"/>
+        <ELEINFO CODE="371500" VALUE="山东省聊城市"/>
+        <ELEINFO CODE="371300" VALUE="山东省临沂市"/>
+        <ELEINFO CODE="370200" VALUE="山东省青岛市"/>
+        <ELEINFO CODE="371100" VALUE="山东省日照市"/>
+        <ELEINFO CODE="370900" VALUE="山东省泰安市"/>
+        <ELEINFO CODE="371000" VALUE="山东省威海市"/>
+        <ELEINFO CODE="370700" VALUE="山东省潍坊市"/>
+        <ELEINFO CODE="370600" VALUE="山东省烟台市"/>
+        <ELEINFO CODE="370400" VALUE="山东省枣庄市"/>
+        <ELEINFO CODE="370300" VALUE="山东省淄博市"/>
+
+        <ELEINFO CODE="140000" VALUE="山西省"/>
+        <ELEINFO CODE="140200" VALUE="山西省大同市"/>
+        <ELEINFO CODE="140500" VALUE="山西省晋城市"/>
+        <ELEINFO CODE="142400" VALUE="山西省晋中市"/>
+        <ELEINFO CODE="142600" VALUE="山西省临汾市"/>
+        <ELEINFO CODE="142300" VALUE="山西省吕梁市"/>
+        <ELEINFO CODE="140600" VALUE="山西省朔州市"/>
+        <ELEINFO CODE="140100" VALUE="山西省太原市"/>
+        <ELEINFO CODE="142200" VALUE="山西省忻州市"/>
+        <ELEINFO CODE="140300" VALUE="山西省阳泉市"/>
+        <ELEINFO CODE="142700" VALUE="山西省运城市"/>
+        <ELEINFO CODE="140400" VALUE="山西省长治市"/>
+
+        <ELEINFO CODE="610000" VALUE="陕西省"/>
+        <ELEINFO CODE="612400" VALUE="陕西省安康市"/>
+        <ELEINFO CODE="610300" VALUE="陕西省宝鸡市"/>
+        <ELEINFO CODE="610700" VALUE="陕西省汉中市"/>
+        <ELEINFO CODE="612500" VALUE="陕西省商洛市"/>
+        <ELEINFO CODE="610200" VALUE="陕西省铜川市"/>
+        <ELEINFO CODE="610500" VALUE="陕西省渭南市"/>
+        <ELEINFO CODE="610100" VALUE="陕西省西安市"/>
+        <ELEINFO CODE="610400" VALUE="陕西省咸阳市"/>
+        <ELEINFO CODE="610600" VALUE="陕西省延安市"/>
+        <ELEINFO CODE="612700" VALUE="陕西省榆林市"/>
+
+        <ELEINFO CODE="510000" VALUE="四川省"/>
+        <ELEINFO CODE="513200" VALUE="四川省阿坝市"/>
+        <ELEINFO CODE="513700" VALUE="四川省巴中市"/>
+        <ELEINFO CODE="510100" VALUE="四川省成都市"/>
+        <ELEINFO CODE="513000" VALUE="四川省达川市"/>
+        <ELEINFO CODE="510600" VALUE="四川省德阳市"/>
+        <ELEINFO CODE="513300" VALUE="四川省甘孜市"/>
+        <ELEINFO CODE="513600" VALUE="四川省广安市"/>
+        <ELEINFO CODE="510800" VALUE="四川省广元市"/>
+        <ELEINFO CODE="511100" VALUE="四川省乐山市"/>
+        <ELEINFO CODE="513400" VALUE="四川省凉山市"/>
+        <ELEINFO CODE="510500" VALUE="四川省泸州市"/>
+        <ELEINFO CODE="513800" VALUE="四川省眉山市"/>
+        <ELEINFO CODE="510700" VALUE="四川省绵阳市"/>
+        <ELEINFO CODE="511300" VALUE="四川省南允市"/>
+        <ELEINFO CODE="511000" VALUE="四川省内江市"/>
+        <ELEINFO CODE="510400" VALUE="四川省攀枝花市"/>
+        <ELEINFO CODE="510900" VALUE="四川省遂宁市"/>
+        <ELEINFO CODE="513100" VALUE="四川省雅安市"/>
+        <ELEINFO CODE="511500" VALUE="四川省宜宾市"/>
+        <ELEINFO CODE="513900" VALUE="四川省资阳市"/>
+        <ELEINFO CODE="510300" VALUE="四川省自贡市"/>
+
+        <ELEINFO CODE="540000" VALUE="西藏自治区"/>
+        <ELEINFO CODE="542500" VALUE="西藏自治区阿里市"/>
+        <ELEINFO CODE="542100" VALUE="西藏自治区昌都市"/>
+        <ELEINFO CODE="540100" VALUE="西藏自治区拉萨市"/>
+        <ELEINFO CODE="542600" VALUE="西藏自治区林芝市"/>
+        <ELEINFO CODE="542400" VALUE="西藏自治区那曲市"/>
+        <ELEINFO CODE="542300" VALUE="西藏自治区日喀则市"/>
+        <ELEINFO CODE="542200" VALUE="西藏自治区山南市"/>
+
+        <ELEINFO CODE="660000" VALUE="新疆自治区"/>
+        <ELEINFO CODE="662900" VALUE="新疆阿克苏市"/>
+        <ELEINFO CODE="664300" VALUE="新疆阿勒泰"/>
+        <ELEINFO CODE="663000" VALUE="新疆阿图什市"/>
+        <ELEINFO CODE="662700" VALUE="新疆博乐市"/>
+        <ELEINFO CODE="662300" VALUE="新疆昌吉市"/>
+        <ELEINFO CODE="662200" VALUE="新疆哈密市"/>
+        <ELEINFO CODE="663200" VALUE="新疆和田市"/>
+        <ELEINFO CODE="663100" VALUE="新疆喀什市"/>
+        <ELEINFO CODE="660200" VALUE="新疆克拉玛依市"/>
+        <ELEINFO CODE="662800" VALUE="新疆库尔勒市"/>
+        <ELEINFO CODE="664000" VALUE="新疆奎屯市"/>
+        <ELEINFO CODE="664200" VALUE="新疆塔城市"/>
+        <ELEINFO CODE="662100" VALUE="新疆吐鲁番市"/>
+        <ELEINFO CODE="660100" VALUE="新疆乌鲁木齐市"/>
+        <ELEINFO CODE="664100" VALUE="新疆伊犁市"/>
+
+        <ELEINFO CODE="650000" VALUE="新疆生产建设兵团"/>
+        <ELEINFO CODE="650100" VALUE="新疆生产建设兵团一师"/>
+        <ELEINFO CODE="650300" VALUE="新疆生产建设兵团三师"/>
+        <ELEINFO CODE="650400" VALUE="新疆生产建设兵团四师"/>
+        <ELEINFO CODE="650800" VALUE="新疆生产建设兵团八师"/>
+        <ELEINFO CODE="651400" VALUE="新疆生产建设兵团十四师"/>
+
+        <ELEINFO CODE="530000" VALUE="云南省"/>
+        <ELEINFO CODE="533000" VALUE="云南省保山市"/>
+        <ELEINFO CODE="532300" VALUE="云南省楚雄市"/>
+        <ELEINFO CODE="532900" VALUE="云南省大理市"/>
+        <ELEINFO CODE="533100" VALUE="云南省德宏市"/>
+        <ELEINFO CODE="533400" VALUE="云南省迪庆市"/>
+        <ELEINFO CODE="532500" VALUE="云南省红河市"/>
+        <ELEINFO CODE="530100" VALUE="云南省昆明市"/>
+        <ELEINFO CODE="533200" VALUE="云南省丽江市"/>
+        <ELEINFO CODE="533500" VALUE="云南省临沧市"/>
+        <ELEINFO CODE="533300" VALUE="云南省怒江市"/>
+        <ELEINFO CODE="530300" VALUE="云南省曲靖市"/>
+        <ELEINFO CODE="532700" VALUE="云南省思茅市"/>
+        <ELEINFO CODE="532600" VALUE="云南省文山市"/>
+        <ELEINFO CODE="532800" VALUE="云南省西双版纳市"/>
+        <ELEINFO CODE="530400" VALUE="云南省玉溪市"/>
+        <ELEINFO CODE="530200" VALUE="云南省昭通市"/>
+
+        <ELEINFO CODE="330000" VALUE="浙江省"/>
+        <ELEINFO CODE="330100" VALUE="浙江省杭州市"/>
+        <ELEINFO CODE="330500" VALUE="浙江省湖州市"/>
+        <ELEINFO CODE="330400" VALUE="浙江省嘉兴市"/>
+        <ELEINFO CODE="330700" VALUE="浙江省金华市"/>
+        <ELEINFO CODE="332500" VALUE="浙江省丽水市"/>
+        <ELEINFO CODE="330200" VALUE="浙江省宁波市"/>
+        <ELEINFO CODE="330800" VALUE="浙江省衢州市"/>
+        <ELEINFO CODE="330600" VALUE="浙江省绍兴市"/>
+        <ELEINFO CODE="331000" VALUE="浙江省台州市"/>
+        <ELEINFO CODE="330300" VALUE="浙江省温州市"/>
+        <ELEINFO CODE="330900" VALUE="浙江省舟山市"/>
+    </DIC>
+    <!--IP归属国家代码表-->
+    <DIC NAME="DIC_IP_AREA">
+        <ELEINFO CODE="0" VALUE="未知"/>
+        <ELEINFO CODE="1" VALUE="国外未知"/>
+        <ELEINFO CODE="8" VALUE="阿尔巴尼亚"/>
+        <ELEINFO CODE="12" VALUE="阿尔及利亚"/>
+        <ELEINFO CODE="4" VALUE="阿富汗"/>
+        <ELEINFO CODE="32" VALUE="阿根廷"/>
+        <ELEINFO CODE="784" VALUE="阿联酋"/>
+        <ELEINFO CODE="533" VALUE="阿鲁巴"/>
+        <ELEINFO CODE="512" VALUE="阿曼"/>
+        <ELEINFO CODE="31" VALUE="阿塞拜疆"/>
+        <ELEINFO CODE="818" VALUE="埃及"/>
+        <ELEINFO CODE="231" VALUE="埃塞俄比亚"/>
+        <ELEINFO CODE="372" VALUE="爱尔兰"/>
+        <ELEINFO CODE="233" VALUE="爱沙尼亚"/>
+        <ELEINFO CODE="20" VALUE="安道尔"/>
+        <ELEINFO CODE="24" VALUE="安哥拉"/>
+        <ELEINFO CODE="660" VALUE="安圭拉"/>
+        <ELEINFO CODE="28" VALUE="安提瓜和巴布达"/>
+        <ELEINFO CODE="40" VALUE="奥地利"/>
+        <ELEINFO CODE="248" VALUE="奥兰群岛"/>
+        <ELEINFO CODE="36" VALUE="澳大利亚"/>
+        <ELEINFO CODE="446" VALUE="澳门"/>
+        <ELEINFO CODE="52" VALUE="巴巴多斯"/>
+        <ELEINFO CODE="598" VALUE="巴布亚新几内亚"/>
+        <ELEINFO CODE="44" VALUE="巴哈马"/>
+        <ELEINFO CODE="586" VALUE="巴基斯坦"/>
+        <ELEINFO CODE="600" VALUE="巴拉圭"/>
+        <ELEINFO CODE="275" VALUE="巴勒斯坦"/>
+        <ELEINFO CODE="48" VALUE="巴林"/>
+        <ELEINFO CODE="591" VALUE="巴拿马"/>
+        <ELEINFO CODE="76" VALUE="巴西"/>
+        <ELEINFO CODE="112" VALUE="白俄罗斯"/>
+        <ELEINFO CODE="60" VALUE="百慕大"/>
+        <ELEINFO CODE="100" VALUE="保加利亚"/>
+        <ELEINFO CODE="580" VALUE="北马里亚纳群岛"/>
+        <ELEINFO CODE="204" VALUE="贝宁"/>
+        <ELEINFO CODE="56" VALUE="比利时"/>
+        <ELEINFO CODE="352" VALUE="冰岛"/>
+        <ELEINFO CODE="630" VALUE="波多黎各"/>
+        <ELEINFO CODE="70" VALUE="波黑"/>
+        <ELEINFO CODE="616" VALUE="波兰"/>
+        <ELEINFO CODE="68" VALUE="玻利维亚"/>
+        <ELEINFO CODE="84" VALUE="伯利兹"/>
+        <ELEINFO CODE="72" VALUE="博茨瓦纳"/>
+        <ELEINFO CODE="64" VALUE="不丹"/>
+        <ELEINFO CODE="854" VALUE="布基纳法索"/>
+        <ELEINFO CODE="108" VALUE="布隆迪"/>
+        <ELEINFO CODE="74" VALUE="布韦岛"/>
+        <ELEINFO CODE="408" VALUE="朝鲜"/>
+        <ELEINFO CODE="226" VALUE="赤道几内亚"/>
+        <ELEINFO CODE="208" VALUE="丹麦"/>
+        <ELEINFO CODE="276" VALUE="德国"/>
+        <ELEINFO CODE="626" VALUE="东帝汶"/>
+        <ELEINFO CODE="768" VALUE="多哥"/>
+        <ELEINFO CODE="214" VALUE="多米尼加"/>
+        <ELEINFO CODE="212" VALUE="多米尼克"/>
+        <ELEINFO CODE="643" VALUE="俄罗斯"/>
+        <ELEINFO CODE="218" VALUE="厄瓜多尔"/>
+        <ELEINFO CODE="232" VALUE="厄立特里亚"/>
+        <ELEINFO CODE="250" VALUE="法国"/>
+        <ELEINFO CODE="234" VALUE="法罗群岛"/>
+        <ELEINFO CODE="258" VALUE="法属波利尼西亚"/>
+        <ELEINFO CODE="254" VALUE="法属圭亚那"/>
+        <ELEINFO CODE="260" VALUE="法属南部领地"/>
+        <ELEINFO CODE="663" VALUE="法属圣马丁"/>
+        <ELEINFO CODE="336" VALUE="梵蒂冈"/>
+        <ELEINFO CODE="608" VALUE="菲律宾"/>
+        <ELEINFO CODE="242" VALUE="斐济群岛"/>
+        <ELEINFO CODE="246" VALUE="芬兰"/>
+        <ELEINFO CODE="132" VALUE="佛得角"/>
+        <ELEINFO CODE="270" VALUE="冈比亚"/>
+        <ELEINFO CODE="178" VALUE="刚果(布)"/>
+        <ELEINFO CODE="180" VALUE="刚果(金)"/>
+        <ELEINFO CODE="170" VALUE="哥伦比亚"/>
+        <ELEINFO CODE="188" VALUE="哥斯达黎加"/>
+        <ELEINFO CODE="308" VALUE="格林纳达"/>
+        <ELEINFO CODE="304" VALUE="格陵兰"/>
+        <ELEINFO CODE="268" VALUE="格鲁吉亚"/>
+        <ELEINFO CODE="831" VALUE="根西岛"/>
+        <ELEINFO CODE="192" VALUE="古巴"/>
+        <ELEINFO CODE="312" VALUE="瓜德罗普"/>
+        <ELEINFO CODE="316" VALUE="关岛"/>
+        <ELEINFO CODE="328" VALUE="圭亚那"/>
+        <ELEINFO CODE="398" VALUE="哈萨克斯坦"/>
+        <ELEINFO CODE="332" VALUE="海地"/>
+        <ELEINFO CODE="410" VALUE="韩国"/>
+        <ELEINFO CODE="528" VALUE="荷兰"/>
+        <ELEINFO CODE="535" VALUE="荷兰加勒比区"/>
+        <ELEINFO CODE="334" VALUE="赫德岛和麦克唐纳群岛"/>
+        <ELEINFO CODE="499" VALUE="黑山"/>
+        <ELEINFO CODE="340" VALUE="洪都拉斯"/>
+        <ELEINFO CODE="296" VALUE="基里巴斯"/>
+        <ELEINFO CODE="262" VALUE="吉布提"/>
+        <ELEINFO CODE="417" VALUE="吉尔吉斯斯坦"/>
+        <ELEINFO CODE="324" VALUE="几内亚"/>
+        <ELEINFO CODE="624" VALUE="几内亚比绍"/>
+        <ELEINFO CODE="124" VALUE="加拿大"/>
+        <ELEINFO CODE="288" VALUE="加纳"/>
+        <ELEINFO CODE="266" VALUE="加蓬"/>
+        <ELEINFO CODE="116" VALUE="柬埔寨"/>
+        <ELEINFO CODE="203" VALUE="捷克"/>
+        <ELEINFO CODE="716" VALUE="津巴布韦"/>
+        <ELEINFO CODE="120" VALUE="喀麦隆"/>
+        <ELEINFO CODE="634" VALUE="卡塔尔"/>
+        <ELEINFO CODE="136" VALUE="开曼群岛"/>
+        <ELEINFO CODE="166" VALUE="科科斯群岛"/>
+        <ELEINFO CODE="174" VALUE="科摩罗"/>
+        <ELEINFO CODE="384" VALUE="科特迪瓦"/>
+        <ELEINFO CODE="414" VALUE="科威特"/>
+        <ELEINFO CODE="191" VALUE="克罗地亚"/>
+        <ELEINFO CODE="404" VALUE="肯尼亚"/>
+        <ELEINFO CODE="184" VALUE="库克群岛"/>
+        <ELEINFO CODE="428" VALUE="拉脱维亚"/>
+        <ELEINFO CODE="426" VALUE="莱索托"/>
+        <ELEINFO CODE="418" VALUE="老挝"/>
+        <ELEINFO CODE="422" VALUE="黎巴嫩"/>
+        <ELEINFO CODE="440" VALUE="立陶宛"/>
+        <ELEINFO CODE="430" VALUE="利比里亚"/>
+        <ELEINFO CODE="434" VALUE="利比亚"/>
+        <ELEINFO CODE="438" VALUE="列支敦士登"/>
+        <ELEINFO CODE="638" VALUE="留尼汪"/>
+        <ELEINFO CODE="442" VALUE="卢森堡"/>
+        <ELEINFO CODE="646" VALUE="卢旺达"/>
+        <ELEINFO CODE="642" VALUE="罗马尼亚"/>
+        <ELEINFO CODE="450" VALUE="马达加斯加"/>
+        <ELEINFO CODE="833" VALUE="马恩岛"/>
+        <ELEINFO CODE="462" VALUE="马尔代夫"/>
+        <ELEINFO CODE="238" VALUE="马尔维纳斯群岛(福克兰)"/>
+        <ELEINFO CODE="470" VALUE="马耳他"/>
+        <ELEINFO CODE="454" VALUE="马拉维"/>
+        <ELEINFO CODE="458" VALUE="马来西亚"/>
+        <ELEINFO CODE="466" VALUE="马里"/>
+        <ELEINFO CODE="807" VALUE="马其顿"/>
+        <ELEINFO CODE="584" VALUE="马绍尔群岛"/>
+        <ELEINFO CODE="474" VALUE="马提尼克"/>
+        <ELEINFO CODE="175" VALUE="马约特"/>
+        <ELEINFO CODE="480" VALUE="毛里求斯"/>
+        <ELEINFO CODE="478" VALUE="毛里塔尼亚"/>
+        <ELEINFO CODE="840" VALUE="美国"/>
+        <ELEINFO CODE="581" VALUE="美国本土外小岛屿"/>
+        <ELEINFO CODE="16" VALUE="美属萨摩亚"/>
+        <ELEINFO CODE="850" VALUE="美属维尔京群岛"/>
+        <ELEINFO CODE="496" VALUE="蒙古国"/>
+        <ELEINFO CODE="500" VALUE="蒙塞拉特岛"/>
+        <ELEINFO CODE="50" VALUE="孟加拉"/>
+        <ELEINFO CODE="604" VALUE="秘鲁"/>
+        <ELEINFO CODE="583" VALUE="密克罗尼西亚联邦"/>
+        <ELEINFO CODE="104" VALUE="缅甸"/>
+        <ELEINFO CODE="498" VALUE="摩尔多瓦"/>
+        <ELEINFO CODE="504" VALUE="摩洛哥"/>
+        <ELEINFO CODE="492" VALUE="摩纳哥"/>
+        <ELEINFO CODE="508" VALUE="莫桑比克"/>
+        <ELEINFO CODE="484" VALUE="墨西哥"/>
+        <ELEINFO CODE="516" VALUE="纳米比亚"/>
+        <ELEINFO CODE="710" VALUE="南非"/>
+        <ELEINFO CODE="10" VALUE="南极洲"/>
+        <ELEINFO CODE="239" VALUE="南乔治亚岛和南桑威奇群岛"/>
+        <ELEINFO CODE="728" VALUE="南苏丹"/>
+        <ELEINFO CODE="520" VALUE="瑙鲁"/>
+        <ELEINFO CODE="524" VALUE="尼泊尔"/>
+        <ELEINFO CODE="558" VALUE="尼加拉瓜"/>
+        <ELEINFO CODE="562" VALUE="尼日尔"/>
+        <ELEINFO CODE="566" VALUE="尼日利亚"/>
+        <ELEINFO CODE="570" VALUE="纽埃"/>
+        <ELEINFO CODE="578" VALUE="挪威"/>
+        <ELEINFO CODE="574" VALUE="诺福克岛"/>
+        <ELEINFO CODE="585" VALUE="帕劳"/>
+        <ELEINFO CODE="612" VALUE="皮特凯恩群岛"/>
+        <ELEINFO CODE="620" VALUE="葡萄牙"/>
+        <ELEINFO CODE="392" VALUE="日本"/>
+        <ELEINFO CODE="752" VALUE="瑞典"/>
+        <ELEINFO CODE="756" VALUE="瑞士"/>
+        <ELEINFO CODE="222" VALUE="萨尔瓦多"/>
+        <ELEINFO CODE="882" VALUE="萨摩亚"/>
+        <ELEINFO CODE="688" VALUE="塞尔维亚"/>
+        <ELEINFO CODE="694" VALUE="塞拉利昂"/>
+        <ELEINFO CODE="686" VALUE="塞内加尔"/>
+        <ELEINFO CODE="196" VALUE="塞浦路斯"/>
+        <ELEINFO CODE="690" VALUE="塞舌尔"/>
+        <ELEINFO CODE="682" VALUE="沙特阿拉伯"/>
+        <ELEINFO CODE="652" VALUE="圣巴泰勒米岛"/>
+        <ELEINFO CODE="162" VALUE="圣诞岛"/>
+        <ELEINFO CODE="678" VALUE="圣多美和普林西比"/>
+        <ELEINFO CODE="654" VALUE="圣赫勒拿"/>
+        <ELEINFO CODE="659" VALUE="圣基茨和尼维斯"/>
+        <ELEINFO CODE="662" VALUE="圣卢西亚"/>
+        <ELEINFO CODE="674" VALUE="圣马力诺"/>
+        <ELEINFO CODE="666" VALUE="圣皮埃尔和密克隆"/>
+        <ELEINFO CODE="670" VALUE="圣文森特和格林纳丁斯"/>
+        <ELEINFO CODE="144" VALUE="斯里兰卡"/>
+        <ELEINFO CODE="703" VALUE="斯洛伐克"/>
+        <ELEINFO CODE="705" VALUE="斯洛文尼亚"/>
+        <ELEINFO CODE="744" VALUE="斯瓦尔巴群岛和扬马延岛"/>
+        <ELEINFO CODE="748" VALUE="斯威士兰"/>
+        <ELEINFO CODE="729" VALUE="苏丹"/>
+        <ELEINFO CODE="740" VALUE="苏里南"/>
+        <ELEINFO CODE="90" VALUE="所罗门群岛"/>
+        <ELEINFO CODE="706" VALUE="索马里"/>
+        <ELEINFO CODE="762" VALUE="塔吉克斯坦"/>
+        <ELEINFO CODE="158" VALUE="台湾"/>
+        <ELEINFO CODE="764" VALUE="泰国"/>
+        <ELEINFO CODE="834" VALUE="坦桑尼亚"/>
+        <ELEINFO CODE="776" VALUE="汤加"/>
+        <ELEINFO CODE="796" VALUE="特克斯和凯科斯群岛"/>
+        <ELEINFO CODE="780" VALUE="特立尼达和多巴哥"/>
+        <ELEINFO CODE="788" VALUE="突尼斯"/>
+        <ELEINFO CODE="798" VALUE="图瓦卢"/>
+        <ELEINFO CODE="792" VALUE="土耳其"/>
+        <ELEINFO CODE="795" VALUE="土库曼斯坦"/>
+        <ELEINFO CODE="772" VALUE="托克劳"/>
+        <ELEINFO CODE="876" VALUE="瓦利斯和富图纳"/>
+        <ELEINFO CODE="548" VALUE="瓦努阿图"/>
+        <ELEINFO CODE="320" VALUE="危地马拉"/>
+        <ELEINFO CODE="862" VALUE="委内瑞拉"/>
+        <ELEINFO CODE="96" VALUE="文莱"/>
+        <ELEINFO CODE="800" VALUE="乌干达"/>
+        <ELEINFO CODE="804" VALUE="乌克兰"/>
+        <ELEINFO CODE="858" VALUE="乌拉圭"/>
+        <ELEINFO CODE="860" VALUE="乌兹别克斯坦"/>
+        <ELEINFO CODE="724" VALUE="西班牙"/>
+        <ELEINFO CODE="732" VALUE="西撒哈拉"/>
+        <ELEINFO CODE="300" VALUE="希腊"/>
+        <ELEINFO CODE="344" VALUE="香港"/>
+        <ELEINFO CODE="702" VALUE="新加坡"/>
+        <ELEINFO CODE="540" VALUE="新喀里多尼亚"/>
+        <ELEINFO CODE="554" VALUE="新西兰"/>
+        <ELEINFO CODE="348" VALUE="匈牙利"/>
+        <ELEINFO CODE="760" VALUE="叙利亚"/>
+        <ELEINFO CODE="388" VALUE="牙买加"/>
+        <ELEINFO CODE="51" VALUE="亚美尼亚"/>
+        <ELEINFO CODE="887" VALUE="也门"/>
+        <ELEINFO CODE="368" VALUE="伊拉克"/>
+        <ELEINFO CODE="364" VALUE="伊朗"/>
+        <ELEINFO CODE="376" VALUE="以色列"/>
+        <ELEINFO CODE="380" VALUE="意大利"/>
+        <ELEINFO CODE="356" VALUE="印度"/>
+        <ELEINFO CODE="360" VALUE="印尼"/>
+        <ELEINFO CODE="826" VALUE="英国"/>
+        <ELEINFO CODE="92" VALUE="英属维尔京群岛"/>
+        <ELEINFO CODE="86" VALUE="英属印度洋领地"/>
+        <ELEINFO CODE="400" VALUE="约旦"/>
+        <ELEINFO CODE="704" VALUE="越南"/>
+        <ELEINFO CODE="894" VALUE="赞比亚"/>
+        <ELEINFO CODE="832" VALUE="泽西岛"/>
+        <ELEINFO CODE="148" VALUE="乍得"/>
+        <ELEINFO CODE="292" VALUE="直布罗陀"/>
+        <ELEINFO CODE="152" VALUE="智利"/>
+        <ELEINFO CODE="140" VALUE="中非"/>
+        <ELEINFO CODE="156" VALUE="中国"/>
+    </DIC>
+    <!--IMSI国家对应表-->
+    <DIC NAME="DIC_IMSI_COUNTRY">
+        <ELEINFO CODE="000" VALUE="未知"/>
+        <ELEINFO CODE="276" VALUE="阿尔巴尼亚"/>
+        <ELEINFO CODE="603" VALUE="阿尔及利亚"/>
+        <ELEINFO CODE="412" VALUE="阿富汗"/>
+        <ELEINFO CODE="722" VALUE="阿根廷"/>
+        <ELEINFO CODE="424" VALUE="阿拉伯联合酋长国"/>
+        <ELEINFO CODE="430" VALUE="阿拉伯联合酋长国"/>
+        <ELEINFO CODE="431" VALUE="阿拉伯联合酋长国"/>
+        <ELEINFO CODE="363" VALUE="阿鲁巴"/>
+        <ELEINFO CODE="422" VALUE="阿曼"/>
+        <ELEINFO CODE="400" VALUE="阿塞拜疆"/>
+        <ELEINFO CODE="602" VALUE="埃及"/>
+        <ELEINFO CODE="636" VALUE="埃塞俄比亚"/>
+        <ELEINFO CODE="272" VALUE="爱尔兰共和国"/>
+        <ELEINFO CODE="248" VALUE="爱沙尼亚"/>
+        <ELEINFO CODE="213" VALUE="安道尔"/>
+        <ELEINFO CODE="631" VALUE="安哥拉"/>
+        <ELEINFO CODE="365" VALUE="安圭拉"/>
+        <ELEINFO CODE="344" VALUE="安提瓜和巴布达"/>
+        <ELEINFO CODE="232" VALUE="奥地利"/>
+        <ELEINFO CODE="455" VALUE="澳门"/>
+        <ELEINFO CODE="505" VALUE="澳洲"/>
+        <ELEINFO CODE="342" VALUE="巴巴多斯"/>
+        <ELEINFO CODE="537" VALUE="巴布亚新几内亚"/>
+        <ELEINFO CODE="364" VALUE="巴哈马"/>
+        <ELEINFO CODE="410" VALUE="巴基斯坦"/>
+        <ELEINFO CODE="744" VALUE="巴拉圭"/>
+        <ELEINFO CODE="426" VALUE="巴林"/>
+        <ELEINFO CODE="714" VALUE="巴拿马"/>
+        <ELEINFO CODE="724" VALUE="巴西"/>
+        <ELEINFO CODE="257" VALUE="白俄罗斯"/>
+        <ELEINFO CODE="350" VALUE="百慕大"/>
+        <ELEINFO CODE="284" VALUE="保加利亚"/>
+        <ELEINFO CODE="467" VALUE="北朝鲜"/>
+        <ELEINFO CODE="534" VALUE="北马里亚纳群岛"/>
+        <ELEINFO CODE="616" VALUE="贝宁"/>
+        <ELEINFO CODE="206" VALUE="比利时"/>
+        <ELEINFO CODE="274" VALUE="冰岛"/>
+        <ELEINFO CODE="330" VALUE="波多黎各"/>
+        <ELEINFO CODE="260" VALUE="波兰"/>
+        <ELEINFO CODE="218" VALUE="波斯尼亚与赫塞哥维纳"/>
+        <ELEINFO CODE="736" VALUE="玻利维亚"/>
+        <ELEINFO CODE="702" VALUE="伯利兹"/>
+        <ELEINFO CODE="652" VALUE="博茨瓦纳"/>
+        <ELEINFO CODE="402" VALUE="不丹"/>
+        <ELEINFO CODE="613" VALUE="布基纳法索"/>
+        <ELEINFO CODE="642" VALUE="布隆迪"/>
+        <ELEINFO CODE="622" VALUE="查德"/>
+        <ELEINFO CODE="627" VALUE="赤道几内亚"/>
+        <ELEINFO CODE="238" VALUE="丹麦"/>
+        <ELEINFO CODE="262" VALUE="德国"/>
+        <ELEINFO CODE="514" VALUE="东帝汶"/>
+        <ELEINFO CODE="539" VALUE="东加"/>
+        <ELEINFO CODE="615" VALUE="多哥"/>
+        <ELEINFO CODE="370" VALUE="多米尼加共和国"/>
+        <ELEINFO CODE="366" VALUE="多米尼克"/>
+        <ELEINFO CODE="250" VALUE="俄罗斯"/>
+        <ELEINFO CODE="740" VALUE="厄瓜多尔"/>
+        <ELEINFO CODE="657" VALUE="厄立特里亚"/>
+        <ELEINFO CODE="208" VALUE="法国"/>
+        <ELEINFO CODE="288" VALUE="法罗群岛"/>
+        <ELEINFO CODE="547" VALUE="法属波利尼西亚"/>
+        <ELEINFO CODE="742" VALUE="法属圭亚那"/>
+        <ELEINFO CODE="225" VALUE="梵蒂冈"/>
+        <ELEINFO CODE="515" VALUE="菲律宾"/>
+        <ELEINFO CODE="542" VALUE="斐济"/>
+        <ELEINFO CODE="244" VALUE="芬兰"/>
+        <ELEINFO CODE="625" VALUE="佛得角"/>
+        <ELEINFO CODE="750" VALUE="福克兰群岛"/>
+        <ELEINFO CODE="607" VALUE="冈比亚"/>
+        <ELEINFO CODE="629" VALUE="刚果共和国"/>
+        <ELEINFO CODE="630" VALUE="刚果民主共和国"/>
+        <ELEINFO CODE="732" VALUE="哥伦比亚"/>
+        <ELEINFO CODE="712" VALUE="哥斯达黎加"/>
+        <ELEINFO CODE="352" VALUE="格林纳达"/>
+        <ELEINFO CODE="290" VALUE="格陵兰"/>
+        <ELEINFO CODE="368" VALUE="古巴"/>
+        <ELEINFO CODE="340" VALUE="瓜德罗普/马提尼克"/>
+        <ELEINFO CODE="535" VALUE="关岛"/>
+        <ELEINFO CODE="738" VALUE="圭亚那"/>
+        <ELEINFO CODE="401" VALUE="哈萨克"/>
+        <ELEINFO CODE="372" VALUE="海地"/>
+        <ELEINFO CODE="450" VALUE="韩国"/>
+        <ELEINFO CODE="204" VALUE="荷兰"/>
+        <ELEINFO CODE="297" VALUE="黑山共和国"/>
+        <ELEINFO CODE="708" VALUE="洪都拉斯"/>
+        <ELEINFO CODE="545" VALUE="基里巴斯"/>
+        <ELEINFO CODE="638" VALUE="吉布提"/>
+        <ELEINFO CODE="437" VALUE="吉尔吉斯"/>
+        <ELEINFO CODE="611" VALUE="几内亚"/>
+        <ELEINFO CODE="632" VALUE="几内亚比绍"/>
+        <ELEINFO CODE="302" VALUE="加拿大"/>
+        <ELEINFO CODE="620" VALUE="加纳"/>
+        <ELEINFO CODE="628" VALUE="加蓬"/>
+        <ELEINFO CODE="456" VALUE="柬埔寨"/>
+        <ELEINFO CODE="230" VALUE="捷克"/>
+        <ELEINFO CODE="648" VALUE="津巴布韦"/>
+        <ELEINFO CODE="624" VALUE="喀麦隆"/>
+        <ELEINFO CODE="427" VALUE="卡达"/>
+        <ELEINFO CODE="346" VALUE="开曼群岛"/>
+        <ELEINFO CODE="654" VALUE="科摩罗"/>
+        <ELEINFO CODE="612" VALUE="科特迪瓦"/>
+        <ELEINFO CODE="419" VALUE="科威特"/>
+        <ELEINFO CODE="219" VALUE="克罗地亚"/>
+        <ELEINFO CODE="639" VALUE="肯尼亚"/>
+        <ELEINFO CODE="548" VALUE="库克群岛"/>
+        <ELEINFO CODE="362" VALUE="库拉索"/>
+        <ELEINFO CODE="247" VALUE="拉脱维亚"/>
+        <ELEINFO CODE="651" VALUE="莱索托"/>
+        <ELEINFO CODE="457" VALUE="老挝"/>
+        <ELEINFO CODE="415" VALUE="黎巴嫩"/>
+        <ELEINFO CODE="246" VALUE="立陶宛"/>
+        <ELEINFO CODE="618" VALUE="利比里亚"/>
+        <ELEINFO CODE="606" VALUE="利比亚"/>
+        <ELEINFO CODE="295" VALUE="列支敦士登"/>
+        <ELEINFO CODE="647" VALUE="留尼汪"/>
+        <ELEINFO CODE="270" VALUE="卢森堡"/>
+        <ELEINFO CODE="294" VALUE="卢森堡"/>
+        <ELEINFO CODE="635" VALUE="卢旺达"/>
+        <ELEINFO CODE="226" VALUE="罗马尼亚"/>
+        <ELEINFO CODE="646" VALUE="马达加斯加"/>
+        <ELEINFO CODE="472" VALUE="马尔代夫"/>
+        <ELEINFO CODE="278" VALUE="马耳他"/>
+        <ELEINFO CODE="650" VALUE="马拉维"/>
+        <ELEINFO CODE="502" VALUE="马来西亚"/>
+        <ELEINFO CODE="610" VALUE="马里共和国"/>
+        <ELEINFO CODE="551" VALUE="马绍尔群岛"/>
+        <ELEINFO CODE="617" VALUE="毛里求斯"/>
+        <ELEINFO CODE="609" VALUE="毛里塔尼亚"/>
+        <ELEINFO CODE="310" VALUE="美国"/>
+        <ELEINFO CODE="311" VALUE="美国"/>
+        <ELEINFO CODE="312" VALUE="美国"/>
+        <ELEINFO CODE="313" VALUE="美国"/>
+        <ELEINFO CODE="314" VALUE="美国"/>
+        <ELEINFO CODE="315" VALUE="美国"/>
+        <ELEINFO CODE="316" VALUE="美国"/>
+        <ELEINFO CODE="544" VALUE="美属萨摩亚"/>
+        <ELEINFO CODE="332" VALUE="美属维尔京群岛"/>
+        <ELEINFO CODE="428" VALUE="蒙古国"/>
+        <ELEINFO CODE="354" VALUE="蒙塞拉特岛"/>
+        <ELEINFO CODE="470" VALUE="孟加拉国"/>
+        <ELEINFO CODE="716" VALUE="秘鲁"/>
+        <ELEINFO CODE="550" VALUE="密克罗尼西亚联邦"/>
+        <ELEINFO CODE="414" VALUE="缅甸"/>
+        <ELEINFO CODE="259" VALUE="摩尔多瓦"/>
+        <ELEINFO CODE="604" VALUE="摩洛哥"/>
+        <ELEINFO CODE="212" VALUE="摩纳哥"/>
+        <ELEINFO CODE="643" VALUE="莫桑比克"/>
+        <ELEINFO CODE="334" VALUE="墨西哥"/>
+        <ELEINFO CODE="649" VALUE="纳米比亚"/>
+        <ELEINFO CODE="655" VALUE="南非"/>
+        <ELEINFO CODE="536" VALUE="瑙鲁"/>
+        <ELEINFO CODE="429" VALUE="尼泊尔"/>
+        <ELEINFO CODE="710" VALUE="尼加拉瓜"/>
+        <ELEINFO CODE="614" VALUE="尼日"/>
+        <ELEINFO CODE="621" VALUE="尼日利亚"/>
+        <ELEINFO CODE="555" VALUE="纽埃"/>
+        <ELEINFO CODE="242" VALUE="挪威"/>
+        <ELEINFO CODE="552" VALUE="帕劳"/>
+        <ELEINFO CODE="268" VALUE="葡萄牙"/>
+        <ELEINFO CODE="282" VALUE="乔治亚"/>
+        <ELEINFO CODE="440" VALUE="日本"/>
+        <ELEINFO CODE="441" VALUE="日本"/>
+        <ELEINFO CODE="240" VALUE="瑞典"/>
+        <ELEINFO CODE="228" VALUE="瑞士"/>
+        <ELEINFO CODE="706" VALUE="萨尔瓦多"/>
+        <ELEINFO CODE="549" VALUE="萨摩亚"/>
+        <ELEINFO CODE="220" VALUE="塞尔维亚共和国"/>
+        <ELEINFO CODE="608" VALUE="塞内加尔"/>
+        <ELEINFO CODE="280" VALUE="塞浦路斯"/>
+        <ELEINFO CODE="633" VALUE="塞舌尔"/>
+        <ELEINFO CODE="420" VALUE="沙特阿拉伯"/>
+        <ELEINFO CODE="626" VALUE="圣多美普林西比"/>
+        <ELEINFO CODE="356" VALUE="圣克里斯多福与尼维斯"/>
+        <ELEINFO CODE="358" VALUE="圣卢西亚"/>
+        <ELEINFO CODE="292" VALUE="圣马力诺"/>
+        <ELEINFO CODE="308" VALUE="圣皮耶与密克隆群岛"/>
+        <ELEINFO CODE="360" VALUE="圣文森及格林纳丁"/>
+        <ELEINFO CODE="619" VALUE="狮子山共和国"/>
+        <ELEINFO CODE="413" VALUE="斯里兰卡"/>
+        <ELEINFO CODE="231" VALUE="斯洛伐克"/>
+        <ELEINFO CODE="293" VALUE="斯洛文尼亚"/>
+        <ELEINFO CODE="653" VALUE="斯威士兰"/>
+        <ELEINFO CODE="634" VALUE="苏丹"/>
+        <ELEINFO CODE="746" VALUE="苏里南"/>
+        <ELEINFO CODE="540" VALUE="所罗门群岛"/>
+        <ELEINFO CODE="637" VALUE="索马里"/>
+        <ELEINFO CODE="436" VALUE="塔吉克"/>
+        <ELEINFO CODE="466" VALUE="台湾"/>
+        <ELEINFO CODE="520" VALUE="泰国"/>
+        <ELEINFO CODE="640" VALUE="坦桑尼亚"/>
+        <ELEINFO CODE="374" VALUE="特立尼达和多巴哥"/>
+        <ELEINFO CODE="605" VALUE="突尼斯"/>
+        <ELEINFO CODE="286" VALUE="土耳其"/>
+        <ELEINFO CODE="376" VALUE="土克凯可群岛"/>
+        <ELEINFO CODE="438" VALUE="土库曼"/>
+        <ELEINFO CODE="543" VALUE="瓦利斯和富图纳群岛"/>
+        <ELEINFO CODE="541" VALUE="瓦努阿图"/>
+        <ELEINFO CODE="704" VALUE="危地马拉"/>
+        <ELEINFO CODE="734" VALUE="委内瑞拉"/>
+        <ELEINFO CODE="528" VALUE="文莱"/>
+        <ELEINFO CODE="641" VALUE="乌干达"/>
+        <ELEINFO CODE="255" VALUE="乌克兰"/>
+        <ELEINFO CODE="748" VALUE="乌拉圭"/>
+        <ELEINFO CODE="434" VALUE="乌兹别克"/>
+        <ELEINFO CODE="214" VALUE="西班牙"/>
+        <ELEINFO CODE="202" VALUE="希腊"/>
+        <ELEINFO CODE="454" VALUE="香港"/>
+        <ELEINFO CODE="525" VALUE="新加坡"/>
+        <ELEINFO CODE="546" VALUE="新喀里多尼亚"/>
+        <ELEINFO CODE="530" VALUE="新西兰"/>
+        <ELEINFO CODE="216" VALUE="匈牙利"/>
+        <ELEINFO CODE="417" VALUE="叙利亚"/>
+        <ELEINFO CODE="338" VALUE="牙买加"/>
+        <ELEINFO CODE="283" VALUE="亚美尼亚"/>
+        <ELEINFO CODE="421" VALUE="也门"/>
+        <ELEINFO CODE="418" VALUE="伊拉克"/>
+        <ELEINFO CODE="432" VALUE="伊朗"/>
+        <ELEINFO CODE="425" VALUE="以色列/巴勒斯坦"/>
+        <ELEINFO CODE="222" VALUE="意大利"/>
+        <ELEINFO CODE="404" VALUE="印度"/>
+        <ELEINFO CODE="405" VALUE="印度"/>
+        <ELEINFO CODE="406" VALUE="印度"/>
+        <ELEINFO CODE="510" VALUE="印度尼西亚"/>
+        <ELEINFO CODE="234" VALUE="英国"/>
+        <ELEINFO CODE="235" VALUE="英国"/>
+        <ELEINFO CODE="348" VALUE="英属维尔京群岛"/>
+        <ELEINFO CODE="416" VALUE="约旦"/>
+        <ELEINFO CODE="452" VALUE="越南"/>
+        <ELEINFO CODE="645" VALUE="赞比亚"/>
+        <ELEINFO CODE="266" VALUE="直布罗陀"/>
+        <ELEINFO CODE="730" VALUE="智利"/>
+        <ELEINFO CODE="623" VALUE="中非共和国"/>
+        <ELEINFO CODE="460" VALUE="中国"/>
+        <ELEINFO CODE="461" VALUE="中国"/>
+    </DIC>
+    <!--电话区号表-->
+    <DIC NAME="DIC_PHONE_CITY">
+        <ELEINFO CODE="000" VALUE="未知"/>
+
+        <ELEINFO CODE="010" VALUE="北京市"/>
+        <ELEINFO CODE="021" VALUE="上海市"/>
+        <ELEINFO CODE="022" VALUE="天津市"/>
+        <ELEINFO CODE="023" VALUE="重庆市"/>
+
+        <ELEINFO CODE="0550,0551,0552,0553,0554,0555,0556,0557,0558,0559,0561,0562,0563,0564,0566" VALUE="安徽省"/>
+        <ELEINFO CODE="0556" VALUE="安徽省安庆市"/>
+        <ELEINFO CODE="0552" VALUE="安徽省蚌埠市"/>
+        <ELEINFO CODE="0566" VALUE="安徽省池州市"/>
+        <ELEINFO CODE="0550" VALUE="安徽省滁州市"/>
+        <ELEINFO CODE="0558" VALUE="安徽省阜阳市/亳州市"/>
+        <ELEINFO CODE="0551" VALUE="安徽省合肥市"/>
+        <ELEINFO CODE="0561" VALUE="安徽省淮北市"/>
+        <ELEINFO CODE="0554" VALUE="安徽省淮南市"/>
+        <ELEINFO CODE="0559" VALUE="安徽省黄山市"/>
+        <ELEINFO CODE="0564" VALUE="安徽省六安市"/>
+        <ELEINFO CODE="0555" VALUE="安徽省马鞍山"/>
+        <ELEINFO CODE="0562" VALUE="安徽省铜陵市"/>
+        <ELEINFO CODE="0553" VALUE="安徽省芜湖市"/>
+        <ELEINFO CODE="0557" VALUE="安徽省宿州市"/>
+        <ELEINFO CODE="0563" VALUE="安徽省宣城市"/>
+
+        <ELEINFO CODE="0591,0592,0593,0594,0595,0596,0597,0598,0599" VALUE="福建省"/>
+        <ELEINFO CODE="0591" VALUE="福建省福州市"/>
+        <ELEINFO CODE="0597" VALUE="福建省龙岩市"/>
+        <ELEINFO CODE="0599" VALUE="福建省南平市"/>
+        <ELEINFO CODE="0593" VALUE="福建省宁德市"/>
+        <ELEINFO CODE="0594" VALUE="福建省莆田市"/>
+        <ELEINFO CODE="0595" VALUE="福建省泉州市"/>
+        <ELEINFO CODE="0598" VALUE="福建省三明市"/>
+        <ELEINFO CODE="0592" VALUE="福建省厦门市"/>
+        <ELEINFO CODE="0596" VALUE="福建省漳州市"/>
+
+        <ELEINFO CODE="0930,0931,0932,0933,0934,0935,0936,0937,0938,0939,0941,0943" VALUE="甘肃省"/>
+        <ELEINFO CODE="0943" VALUE="甘肃省白银市"/>
+        <ELEINFO CODE="0932" VALUE="甘肃省定西市"/>
+        <ELEINFO CODE="0941" VALUE="甘肃省甘南藏族自治州"/>
+        <ELEINFO CODE="0937" VALUE="甘肃省酒泉市/嘉峪关市"/>
+        <ELEINFO CODE="0931" VALUE="甘肃省兰州市"/>
+        <ELEINFO CODE="0930" VALUE="甘肃省临夏回族自治州"/>
+        <ELEINFO CODE="0939" VALUE="甘肃省陇南市"/>
+        <ELEINFO CODE="0933" VALUE="甘肃省平凉市"/>
+        <ELEINFO CODE="0934" VALUE="甘肃省庆阳市"/>
+        <ELEINFO CODE="0938" VALUE="甘肃省天水市"/>
+        <ELEINFO CODE="0935" VALUE="甘肃省武威市/金昌市"/>
+        <ELEINFO CODE="0936" VALUE="甘肃省张掖市"/>
+
+        <ELEINFO
+                CODE="020,0660,0662,0668,0750,0751,0752,0753,0754,0755,0756,0757,0758,0759,0760,0762,0763,0766,0768,0769"
+                VALUE="广东省"/>
+        <ELEINFO CODE="0768" VALUE="广东省潮州市"/>
+        <ELEINFO CODE="0769" VALUE="广东省东莞市"/>
+        <ELEINFO CODE="0757" VALUE="广东省佛山市"/>
+        <ELEINFO CODE="020" VALUE="广东省广州市"/>
+        <ELEINFO CODE="0762" VALUE="广东省河源市"/>
+        <ELEINFO CODE="0752" VALUE="广东省惠州市"/>
+        <ELEINFO CODE="0750" VALUE="广东省江门市"/>
+        <ELEINFO CODE="0663" VALUE="广东省揭阳市"/>
+        <ELEINFO CODE="0668" VALUE="广东省茂名市"/>
+        <ELEINFO CODE="0753" VALUE="广东省梅州市"/>
+        <ELEINFO CODE="0763" VALUE="广东省清远市"/>
+        <ELEINFO CODE="0754" VALUE="广东省汕头市"/>
+        <ELEINFO CODE="0660" VALUE="广东省汕尾市"/>
+        <ELEINFO CODE="0751" VALUE="广东省韶关市"/>
+        <ELEINFO CODE="0755" VALUE="广东省深圳市"/>
+        <ELEINFO CODE="0662" VALUE="广东省阳江市"/>
+        <ELEINFO CODE="0766" VALUE="广东省云浮市"/>
+        <ELEINFO CODE="0759" VALUE="广东省湛江市"/>
+        <ELEINFO CODE="0758" VALUE="广东省肇庆市"/>
+        <ELEINFO CODE="0760" VALUE="广东省中山市"/>
+        <ELEINFO CODE="0756" VALUE="广东省珠海市"/>
+
+        <ELEINFO CODE="0770,0771,0772,0773,0774,0775,0776,0777,0778,0779" VALUE="广西自治区"/>
+        <ELEINFO CODE="0776" VALUE="广西百色市"/>
+        <ELEINFO CODE="0779" VALUE="广西北海市"/>
+        <ELEINFO CODE="0770" VALUE="广西防城港市"/>
+        <ELEINFO CODE="0775" VALUE="广西贵港市/玉林市"/>
+        <ELEINFO CODE="0773" VALUE="广西桂林市"/>
+        <ELEINFO CODE="0778" VALUE="广西河池市"/>
+        <ELEINFO CODE="0772" VALUE="广西柳州市/来宾市"/>
+        <ELEINFO CODE="0771" VALUE="广西南宁市/崇左市"/>
+        <ELEINFO CODE="0777" VALUE="广西钦州市"/>
+        <ELEINFO CODE="0774" VALUE="广西梧州市/贺州市"/>
+
+        <ELEINFO CODE="0851,0852,0853,0854,0855,0856,0857,0858,0859" VALUE="贵州省"/>
+        <ELEINFO CODE="0853" VALUE="贵州省安顺市"/>
+        <ELEINFO CODE="0857" VALUE="贵州省毕节市"/>
+        <ELEINFO CODE="0851" VALUE="贵州省贵阳市"/>
+        <ELEINFO CODE="0858" VALUE="贵州省六盘水"/>
+        <ELEINFO CODE="0855" VALUE="贵州省黔东南苗族侗族自治州"/>
+        <ELEINFO CODE="0854" VALUE="贵州省黔南布依族苗族自治州"/>
+        <ELEINFO CODE="0859" VALUE="贵州省黔西南布依族苗族自治州"/>
+        <ELEINFO CODE="0856" VALUE="贵州省铜仁市"/>
+        <ELEINFO CODE="0852" VALUE="贵州省遵义市"/>
+
+        <ELEINFO CODE="0898" VALUE="海南省"/>
+
+        <ELEINFO CODE="0310,0311,0312,0313,0314,0315,0316,0317,0318,0319,0335" VALUE="河北省"/>
+        <ELEINFO CODE="0312" VALUE="河北省保定市"/>
+        <ELEINFO CODE="0317" VALUE="河北省沧州市"/>
+        <ELEINFO CODE="0314" VALUE="河北省承德市"/>
+        <ELEINFO CODE="0310" VALUE="河北省邯郸市"/>
+        <ELEINFO CODE="0318" VALUE="河北省衡水市"/>
+        <ELEINFO CODE="0316" VALUE="河北省廊坊市"/>
+        <ELEINFO CODE="0335" VALUE="河北省秦皇岛"/>
+        <ELEINFO CODE="0311" VALUE="河北省石家庄市"/>
+        <ELEINFO CODE="0315" VALUE="河北省唐山市"/>
+        <ELEINFO CODE="0319" VALUE="河北省邢台市"/>
+        <ELEINFO CODE="0313" VALUE="河北省张家口"/>
+
+        <ELEINFO CODE="0370,0371,0372,0373,0374,0375,0376,0377,0379,0391,0392,0393,0394,0395,0396,0398" VALUE="河南省"/>
+        <ELEINFO CODE="0372" VALUE="河南省安阳市"/>
+        <ELEINFO CODE="0392" VALUE="河南省鹤壁市"/>
+        <ELEINFO CODE="0391" VALUE="河南省焦作市/济源市"/>
+        <ELEINFO CODE="0379" VALUE="河南省洛阳市"/>
+        <ELEINFO CODE="0395" VALUE="河南省漯河市"/>
+        <ELEINFO CODE="0377" VALUE="河南省南阳市"/>
+        <ELEINFO CODE="0375" VALUE="河南省平顶山"/>
+        <ELEINFO CODE="0393" VALUE="河南省濮阳市"/>
+        <ELEINFO CODE="0398" VALUE="河南省三门峡"/>
+        <ELEINFO CODE="0370" VALUE="河南省商丘市"/>
+        <ELEINFO CODE="0373" VALUE="河南省新乡市"/>
+        <ELEINFO CODE="0376" VALUE="河南省信阳市"/>
+        <ELEINFO CODE="0374" VALUE="河南省许昌市"/>
+        <ELEINFO CODE="0371" VALUE="河南省郑州市"/>
+        <ELEINFO CODE="0394" VALUE="河南省周口市"/>
+        <ELEINFO CODE="0396" VALUE="河南省驻马店"/>
+
+        <ELEINFO CODE="0451,0452,0453,0454,0455,0456,0457,0458,0459,0464,0467,0468,0469" VALUE="黑龙江省"/>
+        <ELEINFO CODE="0459" VALUE="黑龙江省大庆市"/>
+        <ELEINFO CODE="0457" VALUE="黑龙江省大兴安岭地区"/>
+        <ELEINFO CODE="0451" VALUE="黑龙江省哈尔滨市"/>
+        <ELEINFO CODE="0468" VALUE="黑龙江省鹤岗市"/>
+        <ELEINFO CODE="0456" VALUE="黑龙江省黑河市"/>
+        <ELEINFO CODE="0467" VALUE="黑龙江省鸡西市"/>
+        <ELEINFO CODE="0454" VALUE="黑龙江省佳木斯"/>
+        <ELEINFO CODE="0453" VALUE="黑龙江省牡丹江"/>
+        <ELEINFO CODE="0464" VALUE="黑龙江省七台河"/>
+        <ELEINFO CODE="0452" VALUE="黑龙江省齐齐哈尔"/>
+        <ELEINFO CODE="0469" VALUE="黑龙江省双鸭山"/>
+        <ELEINFO CODE="0455" VALUE="黑龙江省绥化市"/>
+        <ELEINFO CODE="0458" VALUE="黑龙江省伊春市"/>
+
+        <ELEINFO CODE="027,0710,0711,0712,0713,0714,0715,0716,0717,0718,0719,0722,0724,0728" VALUE="湖北省"/>
+        <ELEINFO CODE="0711" VALUE="湖北省鄂州市"/>
+        <ELEINFO CODE="0718" VALUE="湖北省恩施土家族苗族自治州"/>
+        <ELEINFO CODE="0713" VALUE="湖北省黄冈市"/>
+        <ELEINFO CODE="0714" VALUE="湖北省黄石市"/>
+        <ELEINFO CODE="0728" VALUE="湖北省江汉区"/>
+        <ELEINFO CODE="0724" VALUE="湖北省荆门市"/>
+        <ELEINFO CODE="0716" VALUE="湖北省荆州市"/>
+        <ELEINFO CODE="0719" VALUE="湖北省十堰市/神农架林区"/>
+        <ELEINFO CODE="0722" VALUE="湖北省随州市"/>
+        <ELEINFO CODE="027" VALUE="湖北省武汉市"/>
+        <ELEINFO CODE="0715" VALUE="湖北省咸宁市"/>
+        <ELEINFO CODE="0710" VALUE="湖北省襄阳市"/>
+        <ELEINFO CODE="0712" VALUE="湖北省孝感市"/>
+        <ELEINFO CODE="0717" VALUE="湖北省宜昌市"/>
+
+        <ELEINFO CODE="0730,0731,0734,0735,0736,0737,0738,0739,0743,0744,0745,0746" VALUE="湖南省"/>
+        <ELEINFO CODE="0736" VALUE="湖南省常德市"/>
+        <ELEINFO CODE="0735" VALUE="湖南省郴州市"/>
+        <ELEINFO CODE="0734" VALUE="湖南省衡阳市"/>
+        <ELEINFO CODE="0745" VALUE="湖南省怀化市"/>
+        <ELEINFO CODE="0738" VALUE="湖南省娄底市"/>
+        <ELEINFO CODE="0739" VALUE="湖南省邵阳市"/>
+        <ELEINFO CODE="0743" VALUE="湖南省湘西土家族苗族自治州"/>
+        <ELEINFO CODE="0737" VALUE="湖南省益阳市"/>
+        <ELEINFO CODE="0746" VALUE="湖南省永州市"/>
+        <ELEINFO CODE="0730" VALUE="湖南省岳阳市"/>
+        <ELEINFO CODE="0744" VALUE="湖南省张家界"/>
+        <ELEINFO CODE="0731" VALUE="湖南省长沙市/湘潭市/株洲市"/>
+
+        <ELEINFO CODE="0431,0432,0433,0434,0435,0436,0437,0438,0439" VALUE="吉林省"/>
+        <ELEINFO CODE="0436" VALUE="吉林省白城市"/>
+        <ELEINFO CODE="0439" VALUE="吉林省白山市"/>
+        <ELEINFO CODE="0431" VALUE="吉林省长春市"/>
+        <ELEINFO CODE="0432" VALUE="吉林省吉林市"/>
+        <ELEINFO CODE="0437" VALUE="吉林省辽源市"/>
+        <ELEINFO CODE="0434" VALUE="吉林省四平市"/>
+        <ELEINFO CODE="0438" VALUE="吉林省松原市"/>
+        <ELEINFO CODE="0435" VALUE="吉林省通化市/梅河口/辉南/柳河"/>
+        <ELEINFO CODE="0433" VALUE="吉林省延边市/珲春市"/>
+
+        <ELEINFO CODE="025,0510,0511,0512,0513,0514,0515,0516,0517,0518,0519,0523,0527" VALUE="江苏省"/>
+        <ELEINFO CODE="0519" VALUE="江苏省常州市"/>
+        <ELEINFO CODE="0517" VALUE="江苏省淮安市"/>
+        <ELEINFO CODE="0518" VALUE="江苏省连云港"/>
+        <ELEINFO CODE="025" VALUE="江苏省南京市"/>
+        <ELEINFO CODE="0513" VALUE="江苏省南通市"/>
+        <ELEINFO CODE="0512" VALUE="江苏省苏州市"/>
+        <ELEINFO CODE="0523" VALUE="江苏省泰州市"/>
+        <ELEINFO CODE="0510" VALUE="江苏省无锡市"/>
+        <ELEINFO CODE="0527" VALUE="江苏省宿迁市"/>
+        <ELEINFO CODE="0516" VALUE="江苏省徐州市"/>
+        <ELEINFO CODE="0515" VALUE="江苏省盐城市"/>
+        <ELEINFO CODE="0514" VALUE="江苏省扬州市"/>
+        <ELEINFO CODE="0511" VALUE="江苏省镇江市"/>
+
+        <ELEINFO CODE="0701,0790,0792,0793,0794,0795,0796,0797,0798,0799" VALUE="江西省"/>
+        <ELEINFO CODE="0794" VALUE="江西省抚州市"/>
+        <ELEINFO CODE="0797" VALUE="江西省赣州市"/>
+        <ELEINFO CODE="0796" VALUE="江西省吉安市"/>
+        <ELEINFO CODE="0798" VALUE="江西省景德镇"/>
+        <ELEINFO CODE="0792" VALUE="江西省九江市"/>
+        <ELEINFO CODE="0791" VALUE="江西省南昌市"/>
+        <ELEINFO CODE="0799" VALUE="江西省萍乡市"/>
+        <ELEINFO CODE="0793" VALUE="江西省上饶市"/>
+        <ELEINFO CODE="0790" VALUE="江西省新余市"/>
+        <ELEINFO CODE="0795" VALUE="江西省宜春市"/>
+        <ELEINFO CODE="0701" VALUE="江西省鹰潭市"/>
+
+        <ELEINFO CODE="024,0411,0412,0414,0415,0416,0417,0418,0419,0421,0427,0429" VALUE="辽宁省"/>
+        <ELEINFO CODE="0412" VALUE="辽宁省鞍山市"/>
+        <ELEINFO CODE="0414" VALUE="辽宁省本溪市"/>
+        <ELEINFO CODE="0421" VALUE="辽宁省朝阳市"/>
+        <ELEINFO CODE="0411" VALUE="辽宁省大连市"/>
+        <ELEINFO CODE="0415" VALUE="辽宁省丹东市"/>
+        <ELEINFO CODE="0418" VALUE="辽宁省阜新市"/>
+        <ELEINFO CODE="0429" VALUE="辽宁省葫芦岛"/>
+        <ELEINFO CODE="0416" VALUE="辽宁省锦州市"/>
+        <ELEINFO CODE="0419" VALUE="辽宁省辽阳市"/>
+        <ELEINFO CODE="0427" VALUE="辽宁省盘锦市"/>
+        <ELEINFO CODE="024" VALUE="辽宁省沈阳市/抚顺市/铁岭市"/>
+        <ELEINFO CODE="0417" VALUE="辽宁省营口市"/>
+
+        <ELEINFO CODE="0470,0471,0472,0473,0474,0475,0476,0477,0478,0479,0482,0483" VALUE="内蒙古自治区"/>
+        <ELEINFO CODE="0483" VALUE="内蒙古阿拉善盟"/>
+        <ELEINFO CODE="0478" VALUE="内蒙古巴彦淖尔"/>
+        <ELEINFO CODE="0472" VALUE="内蒙古包头"/>
+        <ELEINFO CODE="0476" VALUE="内蒙古赤峰"/>
+        <ELEINFO CODE="0477" VALUE="内蒙古鄂尔多斯"/>
+        <ELEINFO CODE="0471" VALUE="内蒙古呼和浩特"/>
+        <ELEINFO CODE="0470" VALUE="内蒙古呼伦贝尔"/>
+        <ELEINFO CODE="0475" VALUE="内蒙古通辽"/>
+        <ELEINFO CODE="0473" VALUE="内蒙古乌海"/>
+        <ELEINFO CODE="0474" VALUE="内蒙古乌兰察布"/>
+        <ELEINFO CODE="0479" VALUE="内蒙古锡林郭勒"/>
+        <ELEINFO CODE="0482" VALUE="内蒙古兴安盟"/>
+
+        <ELEINFO CODE="0951,0952,0953,0954,0955" VALUE="宁夏自治区"/>
+        <ELEINFO CODE="0954" VALUE="宁夏固原市"/>
+        <ELEINFO CODE="0952" VALUE="宁夏石嘴山市"/>
+        <ELEINFO CODE="0953" VALUE="宁夏吴忠市"/>
+        <ELEINFO CODE="0951" VALUE="宁夏银川市"/>
+        <ELEINFO CODE="0955" VALUE="宁夏中卫市"/>
+
+        <ELEINFO CODE="0970,0971,0972,0973,0974,0975,0976,0977,0979" VALUE="青海省"/>
+        <ELEINFO CODE="0977" VALUE="青海省德令哈市"/>
+        <ELEINFO CODE="0979" VALUE="青海省格尔木市"/>
+        <ELEINFO CODE="0975" VALUE="青海省果洛藏族自治州"/>
+        <ELEINFO CODE="0970" VALUE="青海省海北藏族自治州"/>
+        <ELEINFO CODE="0972" VALUE="青海省海东地区"/>
+        <ELEINFO CODE="0974" VALUE="青海省海南藏族自治州"/>
+        <ELEINFO CODE="0973" VALUE="青海省黄南藏族自治州"/>
+        <ELEINFO CODE="0971" VALUE="青海省西宁市"/>
+        <ELEINFO CODE="0976" VALUE="青海省玉树藏族自治州"/>
+
+        <ELEINFO CODE="0530,0531,0532,0533,0534,0535,0536,0537,0538,0539,0543,0546,0631,0632,0633,0634,0635"
+                 VALUE="山东省"/>
+        <ELEINFO CODE="0543" VALUE="山东省滨州市"/>
+        <ELEINFO CODE="0534" VALUE="山东省德州市"/>
+        <ELEINFO CODE="0546" VALUE="山东省东营市"/>
+        <ELEINFO CODE="0530" VALUE="山东省菏泽市"/>
+        <ELEINFO CODE="0531" VALUE="山东省济南市"/>
+        <ELEINFO CODE="0537" VALUE="山东省济宁市"/>
+        <ELEINFO CODE="0634" VALUE="山东省莱芜市"/>
+        <ELEINFO CODE="0635" VALUE="山东省聊城市"/>
+        <ELEINFO CODE="0539" VALUE="山东省临沂市"/>
+        <ELEINFO CODE="0532" VALUE="山东省青岛市"/>
+        <ELEINFO CODE="0633" VALUE="山东省日照市"/>
+        <ELEINFO CODE="0538" VALUE="山东省泰安市"/>
+        <ELEINFO CODE="0631" VALUE="山东省威海市"/>
+        <ELEINFO CODE="0536" VALUE="山东省潍坊市"/>
+        <ELEINFO CODE="0535" VALUE="山东省烟台市"/>
+        <ELEINFO CODE="0632" VALUE="山东省枣庄市"/>
+        <ELEINFO CODE="0533" VALUE="山东省淄博市"/>
+
+        <ELEINFO CODE="0349,0350,0351,0352,0353,0354,0355,0356,0357,0358,0359" VALUE="山西省"/>
+        <ELEINFO CODE="0352" VALUE="山西省大同市"/>
+        <ELEINFO CODE="0356" VALUE="山西省晋城市"/>
+        <ELEINFO CODE="0354" VALUE="山西省晋中市"/>
+        <ELEINFO CODE="0357" VALUE="山西省临汾市"/>
+        <ELEINFO CODE="0358" VALUE="山西省吕梁市"/>
+        <ELEINFO CODE="0349" VALUE="山西省朔州市"/>
+        <ELEINFO CODE="0351" VALUE="山西省太原市"/>
+        <ELEINFO CODE="0350" VALUE="山西省忻州市"/>
+        <ELEINFO CODE="0353" VALUE="山西省阳泉市"/>
+        <ELEINFO CODE="0359" VALUE="山西省运城市"/>
+        <ELEINFO CODE="0355" VALUE="山西省长治市"/>
+
+        <ELEINFO CODE="029,0911,0912,0913,0914,0915,0916,0917,0919" VALUE="陕西省"/>
+        <ELEINFO CODE="0915" VALUE="陕西省安康市"/>
+        <ELEINFO CODE="0917" VALUE="陕西省宝鸡市"/>
+        <ELEINFO CODE="0916" VALUE="陕西省汉中市"/>
+        <ELEINFO CODE="0914" VALUE="陕西省商洛市"/>
+        <ELEINFO CODE="0919" VALUE="陕西省铜川市"/>
+        <ELEINFO CODE="0913" VALUE="陕西省渭南市"/>
+        <ELEINFO CODE="029" VALUE="陕西省西安市/咸阳市"/>
+        <ELEINFO CODE="0911" VALUE="陕西省延安市"/>
+        <ELEINFO CODE="0912" VALUE="陕西省榆林市"/>
+
+        <ELEINFO CODE="028,0812,0813,0816,0817,0818,0825,0826,0827,0830,0831,0832,0833,0834,0835,0836,0837,0838,0839"
+                 VALUE="四川省"/>
+        <ELEINFO CODE="0837" VALUE="四川省阿坝藏族羌族自治州"/>
+        <ELEINFO CODE="0827" VALUE="四川省巴中市"/>
+        <ELEINFO CODE="028" VALUE="四川省成都市"/>
+        <ELEINFO CODE="0818" VALUE="四川省达州市"/>
+        <ELEINFO CODE="0838" VALUE="四川省德阳市"/>
+        <ELEINFO CODE="0836" VALUE="四川省甘孜藏族自治州"/>
+        <ELEINFO CODE="0826" VALUE="四川省广安市"/>
+        <ELEINFO CODE="0839" VALUE="四川省广元市"/>
+        <ELEINFO CODE="0833" VALUE="四川省乐山市"/>
+        <ELEINFO CODE="0834" VALUE="四川省凉山彝族自治州"/>
+        <ELEINFO CODE="0830" VALUE="四川省泸州市"/>
+        <ELEINFO CODE="0816" VALUE="四川省绵阳市"/>
+        <ELEINFO CODE="0817" VALUE="四川省南充市"/>
+        <ELEINFO CODE="0832" VALUE="四川省内江市"/>
+        <ELEINFO CODE="0812" VALUE="四川省攀枝花"/>
+        <ELEINFO CODE="0825" VALUE="四川省遂宁市"/>
+        <ELEINFO CODE="0835" VALUE="四川省雅安市"/>
+        <ELEINFO CODE="0831" VALUE="四川省宜宾市"/>
+        <ELEINFO CODE="0813" VALUE="四川省自贡市"/>
+
+        <ELEINFO CODE="0891,0892,0893,0894,0895,0896,0897" VALUE="西藏自治区"/>
+        <ELEINFO CODE="0897" VALUE="西藏阿里地区"/>
+        <ELEINFO CODE="0895" VALUE="西藏昌都地区"/>
+        <ELEINFO CODE="0891" VALUE="西藏拉萨"/>
+        <ELEINFO CODE="0894" VALUE="西藏林芝地区"/>
+        <ELEINFO CODE="0896" VALUE="西藏那曲地区"/>
+        <ELEINFO CODE="0892" VALUE="西藏日喀则地区"/>
+        <ELEINFO CODE="0893" VALUE="西藏山南地区"/>
+
+        <ELEINFO CODE="0991,0901,0902,0903,0906,0908,0909,0990,0992,0993,0994,0995,0996,0997,0998,0999" VALUE="新疆自治区"/>
+        <ELEINFO CODE="0997" VALUE="新疆阿克苏地区"/>
+        <ELEINFO CODE="0906" VALUE="新疆阿勒泰地区"/>
+        <ELEINFO CODE="0996" VALUE="新疆巴音郭楞蒙古自治州"/>
+        <ELEINFO CODE="0909" VALUE="新疆博尔塔拉蒙古自治州"/>
+        <ELEINFO CODE="0994" VALUE="新疆昌吉回族自治州"/>
+        <ELEINFO CODE="0902" VALUE="新疆哈密地区"/>
+        <ELEINFO CODE="0903" VALUE="新疆和田地区"/>
+        <ELEINFO CODE="0998" VALUE="新疆喀什地区"/>
+        <ELEINFO CODE="0990" VALUE="新疆克拉玛依"/>
+        <ELEINFO CODE="0908" VALUE="新疆克孜勒苏柯尔克孜自治州"/>
+        <ELEINFO CODE="0992" VALUE="新疆奎屯市"/>
+        <ELEINFO CODE="0993" VALUE="新疆石河子"/>
+        <ELEINFO CODE="0901" VALUE="新疆塔城地区"/>
+        <ELEINFO CODE="0995" VALUE="新疆吐鲁番地区"/>
+        <ELEINFO CODE="0991" VALUE="新疆乌鲁木齐"/>
+        <ELEINFO CODE="0999" VALUE="新疆伊犁哈萨克自治州"/>
+
+        <ELEINFO CODE="0870,0871,0872,0873,0874,0875,0876,0877,0878,0879,0883,0886,0887,0888,0691,0692" VALUE="云南省"/>
+        <ELEINFO CODE="0875" VALUE="云南省保山市"/>
+        <ELEINFO CODE="0878" VALUE="云南省楚雄彝族自治州"/>
+        <ELEINFO CODE="0872" VALUE="云南省大理白族自治州"/>
+        <ELEINFO CODE="0692" VALUE="云南省德宏傣族景颇族自治州"/>
+        <ELEINFO CODE="0887" VALUE="云南省迪庆藏族自治州"/>
+        <ELEINFO CODE="0873" VALUE="云南省红河哈尼族彝族自治州"/>
+        <ELEINFO CODE="0871" VALUE="云南省昆明市"/>
+        <ELEINFO CODE="0888" VALUE="云南省丽江市"/>
+        <ELEINFO CODE="0883" VALUE="云南省临沧市"/>
+        <ELEINFO CODE="0886" VALUE="云南省怒江傈僳族自治州"/>
+        <ELEINFO CODE="0874" VALUE="云南省曲靖市"/>
+        <ELEINFO CODE="0879" VALUE="云南省思茅市"/>
+        <ELEINFO CODE="0876" VALUE="云南省文山壮族苗族自治州"/>
+        <ELEINFO CODE="0691" VALUE="云南省西双版纳傣族自治州"/>
+        <ELEINFO CODE="0877" VALUE="云南省玉溪市"/>
+        <ELEINFO CODE="0870" VALUE="云南省昭通市"/>
+
+        <ELEINFO CODE="0570,0571,0572,0573,0574,0575,0576,0577,0578,0579,0580" VALUE="浙江省"/>
+        <ELEINFO CODE="0571" VALUE="浙江省杭州市"/>
+        <ELEINFO CODE="0572" VALUE="浙江省湖州市"/>
+        <ELEINFO CODE="0573" VALUE="浙江省嘉兴市"/>
+        <ELEINFO CODE="0579" VALUE="浙江省金华市"/>
+        <ELEINFO CODE="0578" VALUE="浙江省丽水市"/>
+        <ELEINFO CODE="0574" VALUE="浙江省宁波市"/>
+        <ELEINFO CODE="0570" VALUE="浙江省衢州市"/>
+        <ELEINFO CODE="0575" VALUE="浙江省绍兴市"/>
+        <ELEINFO CODE="0576" VALUE="浙江省台州市"/>
+        <ELEINFO CODE="0577" VALUE="浙江省温州市"/>
+        <ELEINFO CODE="0580" VALUE="浙江省舟山市"/>
+    </DIC>
+    <!--DATA_CALL话单类型码表-->
+    <DIC NAME="DIC_BILL_TYPE">
+        <ELEINFO CODE="0" VALUE="未知类型"/>
+        <ELEINFO CODE="1" VALUE="开机"/>
+        <ELEINFO CODE="2" VALUE="关机"/>
+        <ELEINFO CODE="3" VALUE="周期性位置更新"/>
+        <ELEINFO CODE="4" VALUE="强制性位置更新"/>
+        <ELEINFO CODE="5" VALUE="主叫切换"/>
+        <ELEINFO CODE="6" VALUE="主叫呼叫开始"/>
+        <ELEINFO CODE="7" VALUE="被叫呼叫开始"/>
+        <ELEINFO CODE="8" VALUE="IMEI报告"/>
+        <ELEINFO CODE="9" VALUE="设置无条件呼转"/>
+        <ELEINFO CODE="10" VALUE="设置遇忙呼转"/>
+        <ELEINFO CODE="11" VALUE="设置无应答呼转"/>
+        <ELEINFO CODE="12" VALUE="设置不可达呼转"/>
+        <ELEINFO CODE="13" VALUE="取消无条件呼转"/>
+        <ELEINFO CODE="14" VALUE="取消遇忙呼转"/>
+        <ELEINFO CODE="15" VALUE="取消无应答呼转"/>
+        <ELEINFO CODE="16" VALUE="取消不可达呼转"/>
+        <ELEINFO CODE="17" VALUE="取消全部呼转"/>
+        <ELEINFO CODE="18" VALUE="CDMA上网"/>
+        <ELEINFO CODE="19" VALUE="CDMA传真"/>
+        <ELEINFO CODE="20" VALUE="CDMA数据"/>
+        <ELEINFO CODE="21" VALUE="位置更新"/>
+        <ELEINFO CODE="22" VALUE="被叫切换"/>
+        <ELEINFO CODE="25" VALUE="BSC外部切换"/>
+        <ELEINFO CODE="26" VALUE="补充业务查询"/>
+        <ELEINFO CODE="30" VALUE="附加拨号"/>
+        <ELEINFO CODE="31" VALUE="遇忙呼转"/>
+        <ELEINFO CODE="32" VALUE="无应答呼转"/>
+        <ELEINFO CODE="33" VALUE="无条件呼转"/>
+        <ELEINFO CODE="34" VALUE="不可达呼转"/>
+        <ELEINFO CODE="35" VALUE="呼叫等待"/>
+        <ELEINFO CODE="36" VALUE="呼叫保持"/>
+        <ELEINFO CODE="37" VALUE="多方通话"/>
+        <ELEINFO CODE="38" VALUE="主叫呼叫建立"/>
+        <ELEINFO CODE="39" VALUE="主叫呼叫结束"/>
+        <ELEINFO CODE="40" VALUE="主叫呼叫振铃"/>
+        <ELEINFO CODE="41" VALUE="被叫呼叫建立"/>
+        <ELEINFO CODE="43" VALUE="被叫呼叫结束"/>
+        <ELEINFO CODE="44" VALUE="被叫呼叫振铃"/>
+        <ELEINFO CODE="49" VALUE="发送短信"/>
+        <ELEINFO CODE="50" VALUE="接收短信"/>
+        <ELEINFO CODE="54" VALUE="短信状态报告"/>
+        <ELEINFO CODE="64" VALUE="其它"/>
+        <ELEINFO CODE="65" VALUE="主叫话单"/>
+        <ELEINFO CODE="66" VALUE="被叫话单"/>
+        <ELEINFO CODE="67" VALUE="振铃"/>
+        <ELEINFO CODE="69" VALUE="呼转主叫"/>
+        <ELEINFO CODE="70" VALUE="呼转被叫"/>
+        <ELEINFO CODE="73" VALUE="紧急呼叫"/>
+        <ELEINFO CODE="74" VALUE="通话释放"/>
+        <ELEINFO CODE="75" VALUE="获取路由信息"/>
+        <ELEINFO CODE="76" VALUE="提供漫游码"/>
+        <ELEINFO CODE="77" VALUE="任意时间查询"/>
+        <ELEINFO CODE="78" VALUE="提供签约信息"/>
+        <ELEINFO CODE="93" VALUE="监听失败"/>
+        <ELEINFO CODE="79" VALUE="补充业务"/>
+        <ELEINFO CODE="80" VALUE="补充业务操作"/>
+        <ELEINFO CODE="81" VALUE="被控目标信息更改通知"/>
+        <ELEINFO CODE="82" VALUE="用户在线通知"/>
+        <ELEINFO CODE="83" VALUE="用户接入"/>
+        <ELEINFO CODE="84" VALUE="通道建立"/>
+        <ELEINFO CODE="85" VALUE="通道关闭"/>
+        <ELEINFO CODE="86" VALUE="被叫呼入"/>
+        <ELEINFO CODE="101" VALUE="不含宽带卡"/>
+        <ELEINFO CODE="102" VALUE="窄带注册"/>
+        <ELEINFO CODE="103" VALUE="窄带主叫"/>
+        <ELEINFO CODE="104" VALUE="省内窄带用户出访漫游"/>
+        <ELEINFO CODE="105" VALUE="专线"/>
+        <ELEINFO CODE="106" VALUE="省外窄带用户入访漫游"/>
+        <ELEINFO CODE="107" VALUE="是呼叫转移话单(前转)"/>
+        <ELEINFO CODE="108" VALUE="漫游"/>
+        <ELEINFO CODE="109" VALUE="汇接"/>
+        <ELEINFO CODE="110" VALUE="试呼"/>
+        <ELEINFO CODE="111" VALUE="多方通话话单"/>
+        <ELEINFO CODE="112" VALUE="国内漫游主叫"/>
+        <ELEINFO CODE="113" VALUE="国内漫游被叫"/>
+        <ELEINFO CODE="114" VALUE="国际漫游主叫"/>
+        <ELEINFO CODE="115" VALUE="国际漫游被叫"/>
+        <ELEINFO CODE="116" VALUE="漫游呼转"/>
+        <ELEINFO CODE="301" VALUE="附着"/>
+        <ELEINFO CODE="302" VALUE="分离"/>
+        <ELEINFO CODE="303" VALUE="PDP上下文激活"/>
+        <ELEINFO CODE="304" VALUE="PDP上下文更新"/>
+        <ELEINFO CODE="305" VALUE="PDP上下文去活"/>
+        <ELEINFO CODE="306" VALUE="隧道建立"/>
+        <ELEINFO CODE="307" VALUE="隧道关闭"/>
+        <ELEINFO CODE="308" VALUE="路由区更新"/>
+        <ELEINFO CODE="309" VALUE="服务系统上报"/>
+        <ELEINFO CODE="310" VALUE="VPDN上线"/>
+        <ELEINFO CODE="311" VALUE="VPDN下线"/>
+        <ELEINFO CODE="312" VALUE="VPDN用户账户更新"/>
+        <ELEINFO CODE="313" VALUE="VPDN接入通知"/>
+        <ELEINFO CODE="340" VALUE="VPDN停机事件"/>
+        <ELEINFO CODE="341" VALUE="VPDN销户事件"/>
+        <ELEINFO CODE="342" VALUE="VPDN复机事件"/>
+        <ELEINFO CODE="314" VALUE="IMS注册"/>
+        <ELEINFO CODE="315" VALUE="IMS注销"/>
+        <ELEINFO CODE="316" VALUE="IMS修改媒体"/>
+        <ELEINFO CODE="317" VALUE="IMS网络信令"/>
+        <ELEINFO CODE="318" VALUE="IMS用户信令"/>
+        <ELEINFO CODE="319" VALUE="IMS业务"/>
+        <ELEINFO CODE="320" VALUE="跟踪区更新"/>
+        <ELEINFO CODE="321" VALUE="UE请求PDN连接建立"/>
+        <ELEINFO CODE="322" VALUE="UE请求PDN连接释放"/>
+        <ELEINFO CODE="323" VALUE="已附着用户通知"/>
+        <ELEINFO CODE="324" VALUE="承载激活"/>
+        <ELEINFO CODE="325" VALUE="承载修改"/>
+        <ELEINFO CODE="326" VALUE="承载去活"/>
+        <ELEINFO CODE="327" VALUE="UE请求承载资源修改"/>
+        <ELEINFO CODE="328" VALUE="EPC用户在线通知"/>
+        <ELEINFO CODE="329" VALUE="GUTI更新"/>
+        <ELEINFO CODE="330" VALUE="DHCPV4地址分配"/>
+        <ELEINFO CODE="331" VALUE="DHCPV4地址释放"/>
+        <ELEINFO CODE="332" VALUE="EPC网络切换"/>
+        <ELEINFO CODE="333" VALUE="PDP监听启动"/>
+        <ELEINFO CODE="334" VALUE="eHRPD位置更新"/>
+        <ELEINFO CODE="335" VALUE="PMIP会话建立事件"/>
+        <ELEINFO CODE="336" VALUE="PMIP会话释放事件"/>
+        <ELEINFO CODE="337" VALUE="PMIP会话更新消息"/>
+        <ELEINFO CODE="338" VALUE="eHRPD用户在线通知"/>
+        <ELEINFO CODE="339" VALUE="IMS短消息信令"/>
+        <ELEINFO CODE="87" VALUE="4G内部切换"/>
+        <ELEINFO CODE="88" VALUE="X2切换"/>
+        <ELEINFO CODE="89" VALUE="S1切换"/>
+        <ELEINFO CODE="90" VALUE="CSFB呼入"/>
+        <ELEINFO CODE="91" VALUE="CSFB呼出"/>
+        <ELEINFO CODE="92" VALUE="业务请求"/>
+        <ELEINFO CODE="94" VALUE="鉴权"/>
+        <ELEINFO CODE="95" VALUE="认证"/>
+        <ELEINFO CODE="96" VALUE="安全模式"/>
+        <ELEINFO CODE="97" VALUE="扩展业务请求"/>
+        <ELEINFO CODE="98" VALUE="创建会话"/>
+        <ELEINFO CODE="99" VALUE="删除会话"/>
+        <ELEINFO CODE="100" VALUE="寻呼"/>
+    </DIC>
+    <!--DATA_CALL用户归属国家代码表-->
+    <DIC NAME="DIC_USER_BELONG_COUNTRY_CODE">
+        <ELEINFO CODE="0086" VALUE="中国"/>
+        <ELEINFO CODE="00852" VALUE="中国香港"/>
+        <ELEINFO CODE="00853" VALUE="中国澳门"/>
+        <ELEINFO CODE="00886" VALUE="中国台湾"/>
+        <ELEINFO CODE="00355" VALUE="阿尔巴尼亚"/>
+        <ELEINFO CODE="00213" VALUE="阿尔及利亚"/>
+        <ELEINFO CODE="0093" VALUE="阿富汗"/>
+        <ELEINFO CODE="0054" VALUE="阿根廷"/>
+        <ELEINFO CODE="00907" VALUE="阿拉斯加"/>
+        <ELEINFO CODE="00971" VALUE="阿联酋"/>
+        <ELEINFO CODE="00297" VALUE="阿鲁巴岛"/>
+        <ELEINFO CODE="00968" VALUE="阿曼"/>
+        <ELEINFO CODE="00994" VALUE="阿塞拜疆"/>
+        <ELEINFO CODE="00247" VALUE="阿森松"/>
+        <ELEINFO CODE="0020" VALUE="埃及"/>
+        <ELEINFO CODE="00251" VALUE="埃塞俄比亚"/>
+        <ELEINFO CODE="00353" VALUE="爱尔兰"/>
+        <ELEINFO CODE="00372" VALUE="爱沙尼亚"/>
+        <ELEINFO CODE="00376" VALUE="安道尔"/>
+        <ELEINFO CODE="00244" VALUE="安哥拉"/>
+        <ELEINFO CODE="001264" VALUE="安圭拉岛(英)"/>
+        <ELEINFO CODE="001268" VALUE="安提瓜和巴布达"/>
+        <ELEINFO CODE="0043" VALUE="奥地利"/>
+        <ELEINFO CODE="0061" VALUE="澳大利亚"/>
+        <ELEINFO CODE="001246" VALUE="巴巴多斯"/>
+        <ELEINFO CODE="00675" VALUE="巴布亚新几内亚"/>
+        <ELEINFO CODE="001242" VALUE="巴哈马"/>
+        <ELEINFO CODE="0092" VALUE="巴基斯坦"/>
+        <ELEINFO CODE="00595" VALUE="巴拉圭"/>
+        <ELEINFO CODE="00970" VALUE="巴勒斯坦"/>
+        <ELEINFO CODE="00973" VALUE="巴林"/>
+        <ELEINFO CODE="00507" VALUE="巴拿马"/>
+        <ELEINFO CODE="0055" VALUE="巴西"/>
+        <ELEINFO CODE="00375" VALUE="白俄罗斯"/>
+        <ELEINFO CODE="001441" VALUE="百慕大群岛"/>
+        <ELEINFO CODE="00359" VALUE="保加利亚"/>
+        <ELEINFO CODE="00229" VALUE="贝宁"/>
+        <ELEINFO CODE="0032" VALUE="比利时"/>
+        <ELEINFO CODE="00354" VALUE="冰岛"/>
+        <ELEINFO CODE="001787" VALUE="波多黎各"/>
+        <ELEINFO CODE="0048" VALUE="波兰"/>
+        <ELEINFO CODE="00387" VALUE="波斯尼亚和黑塞哥维那"/>
+        <ELEINFO CODE="00591" VALUE="玻利维亚"/>
+        <ELEINFO CODE="00501" VALUE="伯利兹"/>
+        <ELEINFO CODE="00267" VALUE="博茨瓦纳"/>
+        <ELEINFO CODE="00975" VALUE="不丹"/>
+        <ELEINFO CODE="00226" VALUE="布基纳法索"/>
+        <ELEINFO CODE="00257" VALUE="布隆迪"/>
+        <ELEINFO CODE="00850" VALUE="朝鲜"/>
+        <ELEINFO CODE="00240" VALUE="赤道几内亚"/>
+        <ELEINFO CODE="00871" VALUE="大西洋东区(海事卫星)"/>
+        <ELEINFO CODE="00874" VALUE="大西洋西区(海事卫星)"/>
+        <ELEINFO CODE="0045" VALUE="丹麦"/>
+        <ELEINFO CODE="0049" VALUE="德国"/>
+        <ELEINFO CODE="00246" VALUE="迪戈加西亚"/>
+        <ELEINFO CODE="00670" VALUE="东帝汶"/>
+        <ELEINFO CODE="00684" VALUE="东萨摩亚"/>
+        <ELEINFO CODE="00228" VALUE="多哥"/>
+        <ELEINFO CODE="001809" VALUE="多米尼加共和国"/>
+        <ELEINFO CODE="001767" VALUE="多米尼克"/>
+        <ELEINFO CODE="007" VALUE="俄罗斯"/>
+        <ELEINFO CODE="00593" VALUE="厄瓜多尔"/>
+        <ELEINFO CODE="00291" VALUE="厄里特里亚"/>
+        <ELEINFO CODE="0033" VALUE="法国"/>
+        <ELEINFO CODE="00298" VALUE="法罗群岛"/>
+        <ELEINFO CODE="00689" VALUE="法属玻利尼西亚"/>
+        <ELEINFO CODE="00594" VALUE="法属圭亚那"/>
+        <ELEINFO CODE="00379" VALUE="梵蒂冈"/>
+        <ELEINFO CODE="0063" VALUE="菲律宾"/>
+        <ELEINFO CODE="00679" VALUE="斐济"/>
+        <ELEINFO CODE="00358" VALUE="芬兰"/>
+        <ELEINFO CODE="00238" VALUE="佛得角"/>
+        <ELEINFO CODE="00500" VALUE="福克兰群岛"/>
+        <ELEINFO CODE="00220" VALUE="冈比亚"/>
+        <ELEINFO CODE="00242" VALUE="刚果"/>
+        <ELEINFO CODE="0057" VALUE="哥伦比亚"/>
+        <ELEINFO CODE="00506" VALUE="哥斯达黎加"/>
+        <ELEINFO CODE="001473" VALUE="格林纳达"/>
+        <ELEINFO CODE="00299" VALUE="格陵兰岛"/>
+        <ELEINFO CODE="00995" VALUE="格鲁吉亚"/>
+        <ELEINFO CODE="0053" VALUE="古巴"/>
+        <ELEINFO CODE="00590" VALUE="瓜德罗普岛(法)"/>
+        <ELEINFO CODE="001671" VALUE="关岛"/>
+        <ELEINFO CODE="00592" VALUE="圭亚那"/>
+        <ELEINFO CODE="0073" VALUE="哈萨克斯坦"/>
+        <ELEINFO CODE="00509" VALUE="海地"/>
+        <ELEINFO CODE="0082" VALUE="韩国"/>
+        <ELEINFO CODE="0031" VALUE="荷兰"/>
+        <ELEINFO CODE="00599" VALUE="荷属安的列斯群岛"/>
+        <ELEINFO CODE="00382" VALUE="黑山"/>
+        <ELEINFO CODE="00504" VALUE="洪都拉斯"/>
+        <ELEINFO CODE="00686" VALUE="基里巴斯"/>
+        <ELEINFO CODE="00253" VALUE="吉布提"/>
+        <ELEINFO CODE="00996" VALUE="吉尔吉斯斯坦"/>
+        <ELEINFO CODE="00224" VALUE="几内亚"/>
+        <ELEINFO CODE="00245" VALUE="几内亚比绍"/>
+        <ELEINFO CODE="00233" VALUE="加纳"/>
+        <ELEINFO CODE="00241" VALUE="加蓬"/>
+        <ELEINFO CODE="00855" VALUE="柬埔寨"/>
+        <ELEINFO CODE="00420" VALUE="捷克"/>
+        <ELEINFO CODE="00263" VALUE="津巴布韦"/>
+        <ELEINFO CODE="00237" VALUE="喀麦隆"/>
+        <ELEINFO CODE="00974" VALUE="卡塔尔"/>
+        <ELEINFO CODE="001345" VALUE="开曼群岛"/>
+        <ELEINFO CODE="00619162" VALUE="科科斯岛"/>
+        <ELEINFO CODE="00269" VALUE="科摩罗/马约特岛"/>
+        <ELEINFO CODE="00225" VALUE="科特迪瓦"/>
+        <ELEINFO CODE="00965" VALUE="科威特"/>
+        <ELEINFO CODE="00385" VALUE="克罗地亚"/>
+        <ELEINFO CODE="00254" VALUE="肯尼亚"/>
+        <ELEINFO CODE="00682" VALUE="库克群岛"/>
+        <ELEINFO CODE="005999" VALUE="库拉索"/>
+        <ELEINFO CODE="00371" VALUE="拉脱维亚"/>
+        <ELEINFO CODE="00266" VALUE="莱索托"/>
+        <ELEINFO CODE="00856" VALUE="老挝"/>
+        <ELEINFO CODE="00961" VALUE="黎巴嫩"/>
+        <ELEINFO CODE="00370" VALUE="立陶宛"/>
+        <ELEINFO CODE="00231" VALUE="利比里亚"/>
+        <ELEINFO CODE="00218" VALUE="利比亚"/>
+        <ELEINFO CODE="00423" VALUE="列支敦士登"/>
+        <ELEINFO CODE="00262" VALUE="留尼旺"/>
+        <ELEINFO CODE="00352" VALUE="卢森堡"/>
+        <ELEINFO CODE="00250" VALUE="卢旺达"/>
+        <ELEINFO CODE="0040" VALUE="罗马尼亚"/>
+        <ELEINFO CODE="00261" VALUE="马达加斯加"/>
+        <ELEINFO CODE="0035196" VALUE="马德拉群岛(萄)"/>
+        <ELEINFO CODE="00960" VALUE="马尔代夫"/>
+        <ELEINFO CODE="00306" VALUE="马尔维纳斯群岛"/>
+        <ELEINFO CODE="00356" VALUE="马耳他"/>
+        <ELEINFO CODE="00265" VALUE="马拉维"/>
+        <ELEINFO CODE="0060" VALUE="马来西亚"/>
+        <ELEINFO CODE="00223" VALUE="马里"/>
+        <ELEINFO CODE="001670" VALUE="马里亚那群岛"/>
+        <ELEINFO CODE="00389" VALUE="马其顿"/>
+        <ELEINFO CODE="00692" VALUE="马绍尔群岛"/>
+        <ELEINFO CODE="00596" VALUE="马提尼克(法)"/>
+        <ELEINFO CODE="00230" VALUE="毛里求斯"/>
+        <ELEINFO CODE="00222" VALUE="毛里塔尼亚"/>
+        <ELEINFO CODE="001" VALUE="美国/加拿大"/>
+        <ELEINFO CODE="00976" VALUE="蒙古"/>
+        <ELEINFO CODE="001664" VALUE="蒙特塞拉特岛"/>
+        <ELEINFO CODE="00880" VALUE="孟加拉"/>
+        <ELEINFO CODE="0051" VALUE="秘鲁"/>
+        <ELEINFO CODE="00691" VALUE="密克罗尼西亚"/>
+        <ELEINFO CODE="0095" VALUE="缅甸"/>
+        <ELEINFO CODE="00373" VALUE="摩尔多瓦"/>
+        <ELEINFO CODE="00212" VALUE="摩洛哥"/>
+        <ELEINFO CODE="00377" VALUE="摩纳哥"/>
+        <ELEINFO CODE="00258" VALUE="莫桑比克"/>
+        <ELEINFO CODE="0052" VALUE="墨西哥"/>
+        <ELEINFO CODE="00264" VALUE="纳米比亚"/>
+        <ELEINFO CODE="0027" VALUE="南非"/>
+        <ELEINFO CODE="0064672" VALUE="南极"/>
+        <ELEINFO CODE="00211" VALUE="南苏丹"/>
+        <ELEINFO CODE="00674" VALUE="瑙鲁"/>
+        <ELEINFO CODE="00977" VALUE="尼泊尔"/>
+        <ELEINFO CODE="00505" VALUE="尼加拉瓜"/>
+        <ELEINFO CODE="00227" VALUE="尼日尔"/>
+        <ELEINFO CODE="00234" VALUE="尼日利亚"/>
+        <ELEINFO CODE="00683" VALUE="纽埃岛(新)"/>
+        <ELEINFO CODE="0047" VALUE="挪威"/>
+        <ELEINFO CODE="00672" VALUE="诺福克岛(澳)"/>
+        <ELEINFO CODE="00680" VALUE="帕劳"/>
+        <ELEINFO CODE="00351" VALUE="葡萄牙"/>
+        <ELEINFO CODE="0081" VALUE="日本"/>
+        <ELEINFO CODE="0046" VALUE="瑞典"/>
+        <ELEINFO CODE="0041" VALUE="瑞士"/>
+        <ELEINFO CODE="00503" VALUE="萨尔瓦多"/>
+        <ELEINFO CODE="00381" VALUE="塞尔维亚"/>
+        <ELEINFO CODE="00232" VALUE="塞拉利昂"/>
+        <ELEINFO CODE="00221" VALUE="塞内加尔"/>
+        <ELEINFO CODE="00357" VALUE="塞浦路斯"/>
+        <ELEINFO CODE="00248" VALUE="塞舌尔"/>
+        <ELEINFO CODE="00259" VALUE="桑给巴尔"/>
+        <ELEINFO CODE="00966" VALUE="沙特阿拉伯"/>
+        <ELEINFO CODE="00619164" VALUE="圣诞岛"/>
+        <ELEINFO CODE="00239" VALUE="圣多美和普林西比"/>
+        <ELEINFO CODE="00290" VALUE="圣赫勒拿岛"/>
+        <ELEINFO CODE="001869" VALUE="圣基茨和尼维斯"/>
+        <ELEINFO CODE="001758" VALUE="圣卢西亚"/>
+        <ELEINFO CODE="00378" VALUE="圣马力诺"/>
+        <ELEINFO CODE="00508" VALUE="圣皮埃尔岛及密克隆岛"/>
+        <ELEINFO CODE="001784" VALUE="圣文森特和格林纳丁斯"/>
+        <ELEINFO CODE="0094" VALUE="斯里兰卡"/>
+        <ELEINFO CODE="00421" VALUE="斯洛伐克"/>
+        <ELEINFO CODE="00386" VALUE="斯洛文尼亚"/>
+        <ELEINFO CODE="00268" VALUE="斯威士兰"/>
+        <ELEINFO CODE="00249" VALUE="苏丹"/>
+        <ELEINFO CODE="00597" VALUE="苏里南"/>
+        <ELEINFO CODE="00677" VALUE="所罗门群岛(英)"/>
+        <ELEINFO CODE="00252" VALUE="索马里"/>
+        <ELEINFO CODE="00992" VALUE="塔吉克斯坦"/>
+        <ELEINFO CODE="00872" VALUE="太平洋地区(海事卫星)"/>
+        <ELEINFO CODE="0066" VALUE="泰国"/>
+        <ELEINFO CODE="00255" VALUE="坦桑尼亚"/>
+        <ELEINFO CODE="00676" VALUE="汤加"/>
+        <ELEINFO CODE="001649" VALUE="特克斯和凯科斯群岛（英）"/>
+        <ELEINFO CODE="001868" VALUE="特立尼达和多巴哥"/>
+        <ELEINFO CODE="00216" VALUE="突尼斯"/>
+        <ELEINFO CODE="00688" VALUE="图瓦卢"/>
+        <ELEINFO CODE="0090" VALUE="土耳其"/>
+        <ELEINFO CODE="00993" VALUE="土库曼斯坦"/>
+        <ELEINFO CODE="00690" VALUE="托克劳群岛(新)"/>
+        <ELEINFO CODE="00681" VALUE="瓦利斯和富图纳群岛"/>
+        <ELEINFO CODE="00678" VALUE="瓦努阿图"/>
+        <ELEINFO CODE="00502" VALUE="危地马拉"/>
+        <ELEINFO CODE="001340" VALUE="维尔京群岛(美)"/>
+        <ELEINFO CODE="001284" VALUE="维尔京群岛(英)"/>
+        <ELEINFO CODE="0058" VALUE="委内瑞拉"/>
+        <ELEINFO CODE="00673" VALUE="文莱"/>
+        <ELEINFO CODE="00256" VALUE="乌干达"/>
+        <ELEINFO CODE="00380" VALUE="乌克兰"/>
+        <ELEINFO CODE="00598" VALUE="乌拉圭"/>
+        <ELEINFO CODE="00998" VALUE="乌兹别克斯坦"/>
+        <ELEINFO CODE="0034" VALUE="西班牙/加那利群岛"/>
+        <ELEINFO CODE="00685" VALUE="西萨摩亚"/>
+        <ELEINFO CODE="0030" VALUE="希腊"/>
+        <ELEINFO CODE="001808" VALUE="夏威夷/威克岛(美)/中途岛(美)"/>
+        <ELEINFO CODE="0065" VALUE="新加坡"/>
+        <ELEINFO CODE="00687" VALUE="新喀里多尼亚群岛(法)"/>
+        <ELEINFO CODE="0064" VALUE="新西兰"/>
+        <ELEINFO CODE="0036" VALUE="匈牙利"/>
+        <ELEINFO CODE="00963" VALUE="叙利亚"/>
+        <ELEINFO CODE="001876" VALUE="牙买加"/>
+        <ELEINFO CODE="00374" VALUE="亚美尼亚"/>
+        <ELEINFO CODE="0035191" VALUE="亚速尔群岛(萄)"/>
+        <ELEINFO CODE="00967" VALUE="也门"/>
+        <ELEINFO CODE="00964" VALUE="伊拉克"/>
+        <ELEINFO CODE="0098" VALUE="伊朗"/>
+        <ELEINFO CODE="00972" VALUE="以色列"/>
+        <ELEINFO CODE="0039" VALUE="意大利"/>
+        <ELEINFO CODE="0091" VALUE="印度"/>
+        <ELEINFO CODE="0062" VALUE="印度尼西亚"/>
+        <ELEINFO CODE="00873" VALUE="印度洋地区(海事卫星)"/>
+        <ELEINFO CODE="0044" VALUE="英国"/>
+        <ELEINFO CODE="00246" VALUE="英属印度洋领土"/>
+        <ELEINFO CODE="00969" VALUE="原民主也门地区"/>
+        <ELEINFO CODE="00962" VALUE="约旦"/>
+        <ELEINFO CODE="0084" VALUE="越南"/>
+        <ELEINFO CODE="00260" VALUE="赞比亚"/>
+        <ELEINFO CODE="00243" VALUE="扎伊尔"/>
+        <ELEINFO CODE="00235" VALUE="乍得"/>
+        <ELEINFO CODE="00350" VALUE="直布罗陀(英)"/>
+        <ELEINFO CODE="0056" VALUE="智利"/>
+        <ELEINFO CODE="00236" VALUE="中非共和国"/>
+    </DIC>
+    <DIC NAME="DIC_RECEIVER_TYPE">
+        <ELEINFO CODE="TO" VALUE="收信人"/>
+        <ELEINFO CODE="CC" VALUE="抄送"/>
+        <ELEINFO CODE="BCC" VALUE="密送"/>
+    </DIC>
+    <DIC NAME="DIC_SUPSERVICE_TYPE">
+        <ELEINFO CODE="1" VALUE="语音业务无条件前转"/>
+        <ELEINFO CODE="2" VALUE="遇忙前转"/>
+        <ELEINFO CODE="3" VALUE="隐含前转"/>
+        <ELEINFO CODE="4" VALUE="呼叫等待"/>
+        <ELEINFO CODE="5" VALUE="3方通话，多方通话"/>
+        <ELEINFO CODE="6" VALUE="呼叫传递"/>
+        <ELEINFO CODE="7" VALUE="语音加密"/>
+        <ELEINFO CODE="8" VALUE="呼叫转移"/>
+        <ELEINFO CODE="9" VALUE="主叫号码显示（CDMA2000的CNIP，WCDMA的CLIP ）"/>
+        <ELEINFO CODE="10" VALUE="主叫号码限制（CDMA2000的CNIR，WCDMA的CLIR）"/>
+        <ELEINFO CODE="11" VALUE="数据加密"/>
+        <ELEINFO CODE="12" VALUE="应答保持"/>
+        <ELEINFO CODE="13" VALUE="口令呼叫"/>
+        <ELEINFO CODE="14" VALUE="会议呼叫"/>
+        <ELEINFO CODE="15" VALUE="免打扰"/>
+        <ELEINFO CODE="16" VALUE="灵活告警"/>
+        <ELEINFO CODE="17" VALUE="消息通知"/>
+        <ELEINFO CODE="18" VALUE="用户寻线"/>
+        <ELEINFO CODE="19" VALUE="优选语言"/>
+        <ELEINFO CODE="20" VALUE="优先指配"/>
+        <ELEINFO CODE="21" VALUE="远程业务控制"/>
+        <ELEINFO CODE="22" VALUE="选择呼叫"/>
+        <ELEINFO CODE="23" VALUE="用户PIN码接入"/>
+        <ELEINFO CODE="24" VALUE="用户PIN码截取"/>
+        <ELEINFO CODE="25" VALUE="用户选择呼叫前转到语音邮箱"/>
+        <ELEINFO CODE="26" VALUE="无应答前转"/>
+        <ELEINFO CODE="27" VALUE="不可及前转"/>
+        <ELEINFO CODE="28" VALUE="呼叫保持"/>
+        <ELEINFO CODE="29" VALUE="闭合用户群"/>
+        <ELEINFO CODE="30" VALUE="闭锁"/>
+        <ELEINFO CODE="31" VALUE="呼叫代答"/>
+        <ELEINFO CODE="32" VALUE="缩位拨号"/>
+        <ELEINFO CODE="33" VALUE="遇忙回叫"/>
+        <ELEINFO CODE="34" VALUE="立即热线"/>
+        <ELEINFO CODE="35" VALUE="延时热线"/>
+        <ELEINFO CODE="36" VALUE="闹钟服务"/>
+        <ELEINFO CODE="37" VALUE="限时免打扰"/>
+        <ELEINFO CODE="38" VALUE="遇忙寄存"/>
+        <ELEINFO CODE="39" VALUE="呼出限制"/>
+        <ELEINFO CODE="40" VALUE="多用户号码"/>
+        <ELEINFO CODE="41" VALUE="秘书服务"/>
+        <ELEINFO CODE="42" VALUE="呼叫恢复"/>
+        <ELEINFO CODE="43" VALUE="未注册前转"/>
+        <ELEINFO CODE="44" VALUE="短消息业务无条件前转"/>
+        <ELEINFO CODE="45" VALUE="所有业务无条件前转"/>
+    </DIC>
+    <DIC NAME="DIC_TUNNEL_TYPE">
+        <ELEINFO CODE="TOP_LAYER" VALUE="最内层"/>
+        <ELEINFO CODE="6OVER4" VALUE="IPv6 in IPv4"/>
+        <ELEINFO CODE="6OVER6" VALUE="IPv6 in IPv6"/>
+        <ELEINFO CODE="4OVER4" VALUE="IPv4 in IPv4"/>
+        <ELEINFO CODE="4OVER6" VALUE="IPv4 in IPv6"/>
+        <ELEINFO CODE="L2TP" VALUE="L2TP"/>
+        <ELEINFO CODE="GRE" VALUE="GRE"/>
+        <ELEINFO CODE="GREPPP" VALUE="PPP in GRE；PPTP使用此隧道类型"/>
+        <ELEINFO CODE="GTP" VALUE="GTP"/>
+        <ELEINFO CODE="A10" VALUE="电信4G回落3G使用的隧道类型"/>
+        <ELEINFO CODE="unknown" VALUE="未列出的隧道类型"/>
+    </DIC>
+</TRANSLATE>

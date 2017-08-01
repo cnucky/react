@@ -1,0 +1,116 @@
+{
+  "minddiagram": {
+    "button": {
+      "open-diagram": "打开",
+      "refresh-diagram": "刷新",
+      "import":"导入码址",
+      "manage-diagram": "导图管理",
+      "add-diagram": "新建",
+      "del-diagram": "删除",
+      "edit-diagram": "编辑",
+      "back-diagram": "返回导图"
+    },
+    "label": {
+      "diagram-name": "导图名称",
+      "diagram-desc": "导图描述",
+      "diagram-state": "导图状态",
+      "diagram-start": "使用",
+      "diagram-stop": "结束",
+      "name": "名称",
+      "condition": "条件",
+      "desc": "描述",
+      "keys": "码址",
+      "type" : "类型"
+    },
+    "text": {
+      "multi-lines-input": "多行，每行输入一个"
+    },
+    "sidebar": {
+      "tab": {
+        "node-type": "元素选择",
+        "node-mark": "标记元素"
+      },
+      "node-group": {
+        "known-condition": "已知条件"
+      },
+      "mark-type": {
+        "color": "标记颜色",
+        "state": "标记状态"
+      },
+      "state-type": {
+        "important": "重要",
+        "common": "一般",
+        "doubtful": "疑问",
+        "default": "默认"
+      }
+    },
+    "dialog-title": {
+      "select-diagram": "导图选择",
+      "new-diagram": "新建导图",
+      "edit-diagram": "编辑导图",
+      "detail": "详情",
+      "add-node": "添加节点",
+      "edit-node": "编辑节点"
+    },
+    "notify-title": {
+      "choose-one-diagram": "请只选择一个导图编辑!",
+      "input-diagram-name": "请输入导图名称!",
+      "task-del": "任务已删除，请删除该节点!",
+      "input-node-name": "请填写节点名称!",
+      "input-condition": "请填写条件信息!",
+      "input-keylist" : "请填写码址信息！",
+      "get-diagram-list-faild": "获取导图列表失败!",
+      "get-diagram-content-faild": "获取导图内容失败!",
+      "get-node-type-faild": "获取节点类型失败!",
+      "add-diagram-faild": "创建导图失败!",
+      "del-diagram-faild": "删除导图失败!",
+      "update-diagram-faild": "更新导图失败!",
+      "add-node-faild": "添加节点失败!",
+      "del-node-faild": "删除节点失败!",
+      "update-node-faild": "更新节点失败!",
+      "update-multi-nodes-faild": "更新多个节点失败!",
+      "add-link-faild": "添加连线失败!",
+      "del-link-faild": "删除连线失败!",
+      "update-link-faild": "更新连线失败!",
+      "pick-up-success": "提取成功!",
+      "pick-up-faild": "提取失败!",
+      "no-related-diagram": "无关联导图!",
+      "get-task-status-faild": "获取任务进度失败!",
+      "ignore-overflowed-data": "码址行数超过了100000, 仅选取前100000行。"
+    },
+    "bootbox-msg": {
+      "is-del": "是否删除?"
+    },
+    "carrier": {
+      "none": "不区分运营商"
+    },
+    "lacci-operate": {
+      "del": "删除"
+    },
+    "node-text": {
+      "to-fill-in": "待填写",
+      "name": "名称",
+      "condition": "条件",
+      "result": "结果"
+    },
+    "link-text": {
+      "custom": "自定义",
+      "pick-up": "提取"
+    },
+    "circle-menu-btn": {
+      "operation":"运算",
+      "intersection":"碰撞",
+      "union":"合并",
+      "differ":"排除",
+      "watch": "查看",
+      "comment": "注释",
+      "delete": "删除",
+      "detail": "详情",
+      "search": "查询",
+      "search-all": "一键搜索",
+      "clue-expand": "智能扩线",
+      "relate": "位置伴随",
+      "similar-account": "相似账号"
+    }
+  }
+}

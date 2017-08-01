@@ -1,0 +1,12 @@
+#groupstatistics button.multiselect {
+	min-width: 110px;
+	/*max-width: 110px;*/
+}
+
+#groupstatistics input#statisticalCondition {
+	min-height: 40px;
+}
+
+#groupstatistics label.group-label {
+	font-size: 15px;
+}

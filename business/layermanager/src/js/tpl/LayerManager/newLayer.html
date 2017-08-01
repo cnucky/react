@@ -1,0 +1,182 @@
+<div id="${TabPage}">
+<div class="portlet box green">
+    <div class="portlet-title" style="padding: 5px 0px 1px 10px;">
+        <div class="caption" style="font-size: 14px;margin-bottom: 3px;">
+            <i class="icon-edit" style="margin-top: 3px;"></i>
+            图层信息
+        </div>
+    </div>
+
+    <div class="portlet-body">
+        <table border="0" style="width: 100%;">
+            <tr>
+                <th style="width: 100px;height: 30px;">目录</td>
+                <td style="width: 250px;"><input type="text" name="directory" class="" style="width: 200px;" value="${Directory}" readonly="true"></td>
+                <th style="width: 50px;">图标</td>
+                <td>
+                    <img class="layerIcon" id="${ImgId}" iconName="marker-icon.png" title="请选择图标" src="${root}/layermanager/img/LayerManager/newLayer/icon/marker-icon.png" style="cursor: pointer;"  height="20px" width="20px">
+                </td>
+                <td style="width: 100px;height: 30px;">经度字段</td>
+                <td><input id="${LONGID}" type="text" name="longField" class="" value="经度" readonly="true"></td>
+            </tr>
+            <tr>
+                <th  style="width: 100px;height: 30px;">名称</td>
+                <td><input id="${LayerNameID}" title="请输入图层名称" type="text" name="layerName" class="" style="width: 200px;"></td>
+                <td></td>
+                <td></td>
+                <td style="width: 100px;height: 30px;">纬度字段</td>
+                <td><input id="${LATID}" type="text" name="latField" class="" readonly="true" value="纬度"></td>
+            </tr>
+            <tr>
+                <th  style="width: 100px;height: 30px;">最大比例尺</td>
+                <td>
+                    <select id="${Scale}_1" class="medium m-wrap" style="height: 27px !important;width: 200px !important;border: 1px solid #A8A8A8;">
+                        <!--<option value="1">比例尺_国家</option>-->
+                        <!--<option value="2" selected="selected">比例尺_省</option>-->
+                        <!--<option value="3">比例尺_市</option>-->
+                        <!--<option value="4">比例尺_县区</option>-->
+                        <!--<option value="5">比例尺_街道</option>-->
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td style="width: 100px;height: 30px;">名称字段</td>
+                <td><input id="${NameID}" type="text" name="nameField" class="" readonly="true" value="名称"></td>
+            </tr>
+            <tr>
+                <th style="width: 100px;height: 30px;">最小比例尺</td>
+                <td>
+                    <select id="${Scale}_2" class="medium m-wrap" tabindex="1" style="height: 27px !important;width: 200px !important;border: 1px solid #A8A8A8;">
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td style="width: 100px;height: 30px;">地址字段</td>
+                <td><input id="${Address}" type="text" name="addrField" class="" readonly="true" value="地址"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="portlet box green tabbable">
+    <div class="portlet-title" style="padding: 5px 0px 1px 10px;">
+        <div class="caption" style="font-size: 14px;margin-bottom: 3px;">
+            <i class="icon-reorder" style="margin-top: 3px;"></i>
+            字段信息
+        </div>
+    </div>
+
+    <div class="portlet-body">
+        <div class="tabbable portlet-tabs">
+            <ul class="nav nav-tabs">
+                <li><a href="#${PortletTab}2" data-toggle="tab">待添加字段</a></li>
+                <li class="active"><a href="#${PortletTab}1" data-toggle="tab">已有字段</a></li>
+            </ul>
+
+            <div class="tab-content" style="margin-top: -35px !important">
+                <div class="tab-pane active" id="${PortletTab}1" >
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th style="font-weight: 800;width: 20%;">序号</th>
+                            <th style="font-weight: 800;width: 20%;">展示名称</th>
+                            <th style="font-weight: 800;width: 20%;">类型</th>
+                            <th style="font-weight: 800;width: 20%;">长度</th>
+                            <th style="font-weight: 800;width: 20%;">精度</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <div id="${TableParent}1" style="overflow-y:auto;height: 100px;">
+                        <table class="table table-striped table-hover">
+                            <tbody id="${ExistItem}">
+                            <tr>
+                                <td style="width: 20%;">1</td>
+                                <td style="width: 20%;">经度</td>
+                                <td style="width: 20%;">数值</td>
+                                <td style="width: 20%;">40</td>
+                                <td style="width: 20%;">10</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>纬度</td>
+                                <td>数值</td>
+                                <td>40</td>
+                                <td>10</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>名称</td>
+                                <td>字符串</td>
+                                <td>500</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>地址</td>
+                                <td>字符串</td>
+                                <td>500</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="${PortletTab}2">
+                    <div class="clearfix">
+                        <div class="btn-group">
+                            <button id="${EditTable}_new" class="btn blue">增加字段 <i class="icon-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th style="font-weight: 800;width: 25%;">展示名称</th>
+                            <th style="font-weight: 800;width: 25%;">类型</th>
+                            <th style="font-weight: 800;width: 15%;">长度</th>
+                            <th style="font-weight: 800;width: 15%;">精度</th>
+                            <th style="font-weight: 800;text-align: center;width: 10%;">编辑</th>
+                            <th style="font-weight: 800;text-align: center;width: 10%;">删除</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <div id="${TableParent}2"  style="overflow-y:auto;">
+                        <table class="table table-striped table-hover" id="${EditTable}">
+
+                            <thead style="display: none;">
+                            <tr>
+                                <th style="font-weight: 800;">展示名称</th>
+                                <th style="font-weight: 800;">类型</th>
+                                <th style="font-weight: 800;">长度</th>
+                                <th style="font-weight: 800;">精度</th>
+                                <th style="font-weight: 800;text-align: center;">编辑</th>
+                                <th style="font-weight: 800;text-align: center;">删除</th>
+                            </tr>
+                            </thead>
+
+                            <tbody id="${NewItem}">
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center;">
+    <a id="${OK}" href="#" class="btn blue" style="margin-right: 15px;" direId="${DireID}"><i class="icon-ok"></i> 确&nbsp;&nbsp;定&nbsp;</a>
+    <a id="${Cancel}" href="#" class="btn blue" style="margin-left: 15px;"><i class="icon-remove"></i> 取&nbsp;&nbsp;消&nbsp;</a>
+</div>
+
+</div>

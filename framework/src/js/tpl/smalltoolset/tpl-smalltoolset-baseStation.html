@@ -1,0 +1,54 @@
+<div class="small-tool-set-i18n">
+    <div id="sts-modal">
+        <div class="panel" style="width: 779px; height: 60px; margin: 10px 10px 10px 10px;">
+            <div class="panel-body" style="width: 779px; height: 60px;">
+                <div style="width: 157px;height:50px;float: left;margin-top:5px;">
+                    <a class="radio-custom mb5">
+                        <input type="radio" id="sts-baserad1" checked name="radio1">
+                        <label for="sts-baserad1" style="margin-right: 0px;" data-i18n="smalltoolset.baseStation.baserad1"></label>
+                    </a>
+
+                    <a class="radio-custom mb5">
+                        <input type="radio" id="sts-baserad2" name="radio2">
+                        <label for="sts-baserad2" style="margin-right: 0px;" data-i18n="smalltoolset.baseStation.baserad2"></label>
+                    </a>
+                </div>
+                <div id="sts-tab1">
+                    <select id="sts-baseStationType">
+                        <% _.each(carriers, function(item) { %>
+                        <option value="<%-  item.key %>"><%-  item.value %></option>
+                        <% }) %>
+                    </select>
+                    <input type="text" id="sts-LACSearch" placeholder="LAC">
+                    <input type="text" id="sts-CISearch" placeholder="CI">
+                    <button type="button" id="sts-LACCI1" class="btn btn-sm btn-info btn-block" data-i18n="smalltoolset.baseStation.searchBtn"></button>
+                </div>
+                <div id="sts-tab2">
+                    <!--<label id="sts-addressLabel">地址</label>-->
+                    <input type="text" id="sts-address" data-i18n="[placeholder]smalltoolset.baseStation.searchAddress" placeholder="">
+                    <button type="button" id="sts-LACCI2" class="btn btn-sm btn-info btn-block" data-i18n="smalltoolset.baseStation.searchBtn"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sts-baseStaCon" >
+            <table class="table" style="height: 20px;">
+                <thead >
+                <tr class="primary">
+                    <th width="6%" data-i18n="smalltoolset.baseStation.tableNumber"></th>
+                    <th width="10%" data-i18n="smalltoolset.baseStation.tableCarrier"></th>
+                    <th width="9%">LAC</th>
+                    <th width="9%">CL</th>
+                    <th width="35%" data-i18n="smalltoolset.baseStation.tableAddress"></th>
+                    <th width="15%" data-i18n="smalltoolset.baseStation.tablelongitude"></th>
+                    <th width="15%" data-i18n="smalltoolset.baseStation.tablelatitude"></th>
+                </tr>
+                </thead>
+            </table>
+            <div id="sts-baseStationTabDiv" class="clearDiv" style="height:414px; max-height: 414px;overflow-y: auto;">
+                <table id="sts-longitudeTab" class="table" style="width: 100%;word-break: break-all;word-wrap: break-word;">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

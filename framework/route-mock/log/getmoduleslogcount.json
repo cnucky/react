@@ -1,0 +1,11 @@
+{
+    "code": 0,
+    "data": [
+        { "count": 400,"moduleType": 1 },
+        { "count": 100, "moduleType": 2 },
+        { "count": 200, "moduleType": 3 },
+        { "count": 200, "moduleType": 4 },
+        { "count": 100, "moduleType": 101 }
+    ],
+    "message": ""
+}

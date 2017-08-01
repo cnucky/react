@@ -1,0 +1,431 @@
+#map{
+    height: 100%;
+    top:0;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+#map * {
+    box-sizing: content-box;
+}
+.invert{
+    -webkit-filter:invert(1);
+    opacity: 0.75;
+}
+
+.my-marker-cluster-small {
+    background-color: rgba(233, 100, 100, 0.9);
+}
+.my-marker-cluster-small div {
+    background-color: rgba(233, 100, 100, 0.9);
+}
+
+.my-marker-cluster-medium {
+    background-color: rgba(233, 100, 100, 0.8);
+}
+.my-marker-cluster-medium div {
+    background-color: rgba(233, 100, 100, 0.8);
+}
+
+.my-marker-cluster-large {
+    background-color: rgba(233, 100, 100, 0.7);
+}
+.my-marker-cluster-large div {
+    background-color: rgba(233, 100, 100, 0.7);
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+    background-color: rgb(181, 226, 140);
+}
+.leaflet-oldie .marker-cluster-small div {
+    background-color: rgb(110, 204, 57);
+}
+
+.leaflet-oldie .marker-cluster-medium {
+    background-color: rgb(241, 211, 87);
+}
+.leaflet-oldie .marker-cluster-medium div {
+    background-color: rgb(240, 194, 12);
+}
+
+.leaflet-oldie .marker-cluster-large {
+    background-color: rgb(253, 156, 115);
+}
+.leaflet-oldie .marker-cluster-large div {
+    background-color: rgb(241, 128, 23);
+}
+
+.my-marker-cluster-s {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+.my-marker-cluster-s div {
+    width: 15px;
+    height: 15px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+
+    text-align: center;
+    border-radius: 7.5px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color:#ffffff;
+}
+.my-marker-cluster-s span {
+    line-height: 15px;
+}
+
+
+.my-marker-cluster-m {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+.my-marker-cluster-m div {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 10px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color:#ffffff;
+}
+.my-marker-cluster-m span {
+    line-height: 20px;
+}
+
+.my-marker-cluster-l {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+.my-marker-cluster-l div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color:#ffffff;
+}
+.my-marker-cluster-l span {
+    line-height: 30px;
+}
+
+@keyframes warn{
+    0% {
+        transform:scale(1);
+        opacity:0.8;
+    }
+    25% {
+        transform:scale(1.5);
+        opacity:0.6;
+    }
+    50% {
+        transform:scale(2);
+        opacity:0.4;
+    }
+    75% {
+        transform:scale(3);
+        opacity:0.2;
+    }
+   100% {
+        transform:scale(5);
+        opacity:0.0;
+    }
+}
+
+@-webkit-keyframes warn{
+    0% {
+        -webkit-transform:scale(1);
+        opacity:0.8;
+    }
+    25% {
+        -webkit-transform:scale(1.5);
+        opacity:0.6;
+    }
+    50% {
+        -webkit-transform:scale(2);
+        opacity:0.4;
+    }
+    75% {
+        -webkit-transform:scale(3);
+        opacity:0.2;
+    }
+    100% {
+        -webkit-transform:scale(5);
+        opacity:0.0;
+    }
+}
+
+.pulse{
+    width: 10px;
+    height: 10px;
+    margin-top: -2px;
+    margin-left: -2.5px;
+    border: 2px solid red;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    opacity: 0;
+    -webkit-animation:warn 1.5s ease-out;
+    -moz-animation:warn 1.5s ease-out;
+    animation:warn 1.5s ease-out;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+
+.warnpoint{
+    background-color: rgba(255, 0, 0, 0.8);
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+
+.warnpoint div{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.groupedLayerControl {
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    background-color: rgb(74, 154, 255) !important;
+    padding: 0px !important;
+}
+.groupedLayerControl form{
+    margin:0px !important;
+}
+
+.overlyGroup{
+    display: flex;
+}
+
+.overlyGroup label{
+    margin: 0px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color:#000;
+    font-family: "幼圆";
+    font-weight: bold;
+}
+
+.overlyGroup label input{
+    display: none;
+}
+
+.overlyGroup label span{
+    -webkit-user-select:none;
+    user-select:none;
+    cursor: pointer;
+}
+
+.overlyGroupUnChecked{
+    background-color: rgb(12, 22, 97) !important;
+    color:rgb(71, 148, 247) !important;
+}
+
+.hide{
+    display: none;
+}
+
+/*================================trace css==========================================*/
+
+
+footer.lp {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.lp .transport {
+    margin: 0 auto;
+    width:690px;
+}
+
+.lp .navbar {
+    margin-bottom: 0;
+}
+
+.lp .navbar-inner {
+    background-color: rgb(71, 148, 247) !important;
+    background-image: none !important;
+    border: 0;
+    border-radius: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.lp #play-pause {
+    color:rgb(12, 22, 97) !important;
+    font-family: "幼圆";
+    text-shadow: none !important;
+    width: 18px;
+}
+
+.lp #speed-btn {
+    color:rgb(12, 22, 97) !important;
+    font-family: "幼圆";
+    text-shadow: none !important;
+    width: 65px;
+}
+
+.lp .ui-slider {
+    margin: 13px;
+}
+
+.lp #time-slider {
+    background-color: rgb(12, 22, 97);
+    border: 0px;
+    width:370px;
+}
+
+.lp #time-slider span{
+    background-color: #4a9aff;
+    border: 1px solid rgb(12, 22, 97);
+}
+
+.lp #calendar {
+    margin: 5px;
+}
+
+.leaflet-control-layers-list {
+    margin-bottom: 0;
+}
+
+.lp .speed-menu {
+    min-width: 60px;
+}
+
+.lp .speed-menu input{
+    background-color: #4a9aff;
+    border: 1px solid rgb(12, 22, 97);
+    color: rgb(12, 22, 97);
+}
+
+.lp .dropdown-menu {
+    border-radius: 0;
+    background-color: #4a9aff;
+    color: rgb(12, 22, 97);
+    padding: 5px;
+    text-align: center;
+}
+
+.lp #speed-slider {
+    background-color: rgb(12, 22, 97);
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lp #speed-slider span{
+    background-color: #4a9aff;
+    border: 1px solid rgb(12, 22, 97);
+}
+
+.lp .navbar .btn,
+.lp .navbar .btn-group {
+    margin-top: 0;
+    padding: 0;
+}
+
+.lp .navbar .nav > li > a.clock {
+    color:rgb(12, 22, 97) !important;
+    font-family: "幼圆";
+    text-shadow: none !important;
+    padding: 0 3px 0 3px;
+    text-align: center;
+    margin-left:4px;
+    margin-right:4px;
+}
+
+.lp li.ctrl {
+    background-color: #4a9aff !important;
+    background-image: none !important;
+    /*-o-animation: !important;*/
+    /*animation: !important;*/
+    /**background-color: #e6e6e6;*/
+    /*background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);*/
+    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));*/
+    /*background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);*/
+    /*background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);*/
+    /*background-image: linear-gradient(top, #ffffff, #e6e6e6);*/
+    /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);*/
+    /*background-repeat: repeat-x;*/
+    border-right: 1px solid rgb(12, 22, 97);
+    user-select:none;
+    cursor: pointer;
+
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.lp .pull-right li.ctrl {
+    border-right: 0;
+    border-left: 1px solid rgb(12, 22, 97);
+}
+
+.lp li.ctrl:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+/*.lp li.ctrl:hover a {
+  color: #a9ff00;
+}*/
+
+.lp li.ctrl:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/*Bootstrap interfering with leaflet*/
+input {
+    vertical-align: baseline;
+}
+
+label {
+    font-weight: bold;
+}
+
+/*bootstrap mod*/
+.navbar .nav { margin: 0; }
+
+.navbar .nav > li > .dropdown-menu:before,
+.bootstrap-timepicker-widget.dropdown-menu:before {
+    top: auto;
+    bottom: -7px;
+    border-top: 7px solid #4a9aff;
+    border-bottom: 0;
+    border-top-color: #4a9aff;
+}
+
+.navbar .nav > li > .dropdown-menu:after,
+.bootstrap-timepicker-widget.dropdown-menu:after {
+    top: auto;
+    bottom: -6px;
+    border-top: 6px solid #4a9aff;
+    border-bottom: 0;
+}

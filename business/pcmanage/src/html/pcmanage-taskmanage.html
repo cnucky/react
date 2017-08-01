@@ -1,0 +1,272 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/jquery-ui-bts.css">
+<link rel="stylesheet" href="${root}/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" href="${root}/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/select2/css/select2.css">
+<style>
+div#task-treeview > ul {
+    border: none;
+}
+
+table tr th,
+table tr td {
+    text-overflow: ellipsis;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#datatype-tree-panel ul.fancytree-container {
+    min-height: 120px;
+    max-height: 100%;
+    padding-left: 6px;
+    border: none;
+}
+
+#taskmanage-content #loadtaskmanage {
+    min-height: 120px;
+    max-height: 100%;
+}
+
+#dataimport-div #mainForm {
+    min-height: 120px;
+    max-height: 100%;
+}
+
+.ui-contextmenu {
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
+}
+
+.my-icon-dataimport {
+    background-image: url('/pcmanage/img/dataimport.png');
+}
+
+.my-icon-taskmanage {
+    background-image: url('/pcmanage/img/taskmanage.png');
+}
+
+.selectedRow {
+    background-color: #7DBAEF !important;
+}
+</style>
+<!-- end shim -->
+<script>
+$(window).on("resize", function() {
+    var leftTray = $('.tray.tray-left');
+    var leftHeight = window.innerHeight - leftTray.offset().top;
+    var mainFormHeight = window.innerHeight - $('#dataimport-div').position().top;
+    $('#mainForm').height(mainFormHeight);
+    $('.tray.tray-center').height(leftHeight);
+
+});
+</script>
+<section id="content" class="table-layout animated fadeIn">
+    <aside style="" class="tray tray-left tray290 pn" style="vertical-align: top;">
+        <div class="panel mbn flex-layout flex-vertical" style="height: 100%;">
+            <div class="panel-heading pn " style="padding-bottom:0px;border:none;">
+                <div class="col-md-12" style="">
+                    <div class="col-md-6 pn">
+                        <button type="button" id="showAllTasks" class="btn btn-info btn-block mt10" style="">查看所有导入任务</button>
+                    </div>
+                    <div class="col-md-6" style="padding-right:0px;">
+                        <button type="button" id="importFromFile" class="btn btn-info btn-block mt10">从模型文件导入</button>
+                    </div>
+                </div>
+            </div>
+            <div id="datatype-tree-panel" class="panel-body flex-item pn" style="border: none;">
+                <div id="task-treeview" class="datatype-tree"></div>
+            </div>
+        </div>
+    </aside>
+    <div class="tray tray-center pl10 pn" style="">
+        <div class="layout panel module-disk dbview-module mbn" id="taskmanage-content" style="height: 100%;display:none;vertical-align:top;">
+            <div id="loadtaskmanage" class="panel-body pn ml" style="border: none;overflow-y:auto;">
+                <div class="widget-menu mb10 mt10" style="margin-left:11px;">
+                    <button id="btn-begin-loadtask" title="开始任务" data-toggle="tooltip" data-placement="bottom" disabled='true' type="button" class="btn btn-sm btn-primary  ph15 mr5"><span class="glyphicon glyphicon-play"></span><span>开始</span></button>
+                    <button id="btn-stop-loadtask" title="停止任务" data-toggle="tooltip" data-placement="bottom" disabled='true' type="button" class="btn btn-sm btn-warning ph15 mr5"><span class="glyphicon glyphicon-stop"></span><span>停止</span></button>
+                    <button id="btn-refresh-loadtask" title="刷新任务" data-toggle="tooltip" data-placement="bottom" type="button" class="btn btn-sm btn-info ph15 mr5"><span class="glyphicon glyphicon-refresh"></span><span>刷新</span></button>
+                    <button id="btn-copy-loadtask" title="复制任务" data-toggle="tooltip" data-placement="bottom" disabled='true' type="button" class="btn btn-sm btn-success ph15 mr5"><span class="glyphicon glyphicon-pencil"></span><span>复制编辑</span></button>
+                    <button id="btn-delete-loadtask" title="删除任务" data-toggle="tooltip" data-placement="bottom" disabled='true' type="button" class="btn btn-sm btn-danger ph15 mr5"><span class="glyphicon glyphicon-remove"></span><span>删除</span></button>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-visible mb10" id="spy2">
+                        <div class="panel-heading">
+                            <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                <span style="color: #70ca63" class="glyphicon glyphicon-tasks"></span>任务详情
+                            </div>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table" id="loadTaskTable" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:5%;font-weight: bold;">任务ID</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:35%;font-weight: bold">任务名称</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:8%;font-weight: bold">任务类型</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:15%;font-weight: bold">数据类型</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:7%;font-weight: bold">运行状态</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:15%;font-weight: bold">开始时间</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:15%;font-weight: bold">结束时间</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:5%;font-weight: bold">任务进度</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;width:5%;font-weight: bold">提交用户</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-visible" id="">
+                        <div class="panel-heading">
+                            <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                <span style="color: #70ca63" class="glyphicon glyphicon-tasks"></span>批次详情
+                            </div>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table" id="loadBatchTable" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">批次ID</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">开始时间</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">结束时间</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">完成百分比</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">导入状态</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">批次类型</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="display:none">
+                    <div class="panel panel-visible" id="">
+                        <div class="panel-heading">
+                            <div class="panel-title hidden-xs" style="color: #3498db;font-weight: bold">
+                                <span style="color: #70ca63" class="glyphicon glyphicon-file"></span>数据项详情
+                            </div>
+                        </div>
+                        <div class="panel-body pn of-x-a">
+                            <table class="table" id="loadItemTable" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;">数据项ID</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold">数据项名称</th>
+                                        <th style="padding-left:8px;text-align: left;color: #3498db;font-weight: bold;">数据项类型</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-small" id="dataimport-content" style="display:none;vertical-align:top;">
+            <ul class="nav nav-tabs mt10" id="dataimport-nav-tabs">
+                <li>
+                    <button type="button" id="back-Button" class="btn disabled btn-system" style="margin-right:1px;">
+                        <span>上一步</span>
+                    </button>
+                </li>
+                <li class="active"><a href="#step1" id="step1_href" class="step">第 1 步：基本设置</a></li>
+                <li><a href="#step2" id="step2_href" class="step">第 2 步：数据筛选</a></li>
+                <li><a href="#step3" id="step3_href" class="step">第 3 步：属性映射</a></li>
+                <li><a href="#step4" id="step4_href" class="step">第 4 步：设置实体</a></li>
+                <li><a href="#step5" id="step5_href" class="step">第 5 步：设置关系</a></li>
+                <li><a href="#step6" id="step6_href" class="step">第 6 步：提交</a></li>
+                <li>
+                    <button type="button" id="next-Button" class="btn btn-raised btn-primary " style="margin-top:0px;">
+                        <span>下一步</span>
+                    </button>
+                </li>
+            </ul>
+            <div id="dataimport-div">
+                <form id="mainForm" class="form-horizontal" style="overflow-y:auto">
+                    <div class="col-md-12">
+                        <div id="step1" class="admin-form">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-6">
+                                <div class="control-group" style="padding-top:8px;">
+                                    <label class="control-label">数据类型</label>
+                                    <label class="field prepend-icon file mt10">
+                                        <span id="choose-data-button" class="button btn-primary">选择数据类型</span>
+                                        <input class="gui-input" id="data-type-text" placeholder="选择数据类型" type="text" readonly>
+                                        <label class="field-icon">
+                                            <i class="fa fa-database"></i>
+                                        </label>
+                                    </label>
+                                    <label class="control-label mt10">导入类型 </label>
+                                    <div class="controls mt10" id="choose-fileImport-type">
+                                        <label class="radio-inline mr10" title='tooltip'>
+                                            <input type="radio" name="selectFileType" checked value="1">自定义导入
+                                        </label>
+                                        <label class="radio-inline mr10">
+                                            <input type="radio" name="selectFileType" value="2">对接导入
+                                        </label>
+                                        <label class="radio-inline mr10" style="display:none">
+                                            <input type="radio" name="selectFileType" value="3">分批对接导入
+                                        </label>
+                                    </div>
+                                    <label class="control-label mt10">选择时间戳</label>
+                                    <div class="input-group mt10" style="width:100%">
+                                        <select id="select2" class="form-control" placeholder="选择时间戳">
+                                        </select>
+                                    </div>
+                                    <div class="input-group mt15 col-md-12" style="">
+                                        <span class="col-md-2 control-label" style="margin-right:-15px;padding:9px 0px 0px 0px;text-align:left;">选择模式</span>
+                                        <label class="col-md-6 switch switch-info switch-large round switch-inline" style="margin:0px 0px 0px 0px;">
+                                            <input id="checkboxSwitch" type="checkbox">
+                                            <label for="checkboxSwitch" data-on="高级" data-off="简单"></label>
+                                        </label>
+                                    </div>
+                                    <div id="ruleSets" class="col-md-12 pn" style="display:none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step2" class="stepDetails " style="display: none">
+                        </div>
+                        <div id="step3" class="stepDetails " style="display: none;">
+                        </div>
+                        <div id="step4" class="stepDetails " style="display: none">
+                        </div>
+                        <div id="step5" class="stepDetails" style="display: none">
+                        </div>
+                        <div id="step6" class="stepDetails" style="display: none">
+                            <div class="col-md-12">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-8 mt50 ml50">
+                                    <button type="button" id="taskCommitButton" class="btn btn-rounded btn-system btn-block" style="width:30%;">提交</button>
+                                    <button type="button" id="btn-save-as-file" class="btn btn-rounded btn-info btn-block" style="width:30%;">另存为文件</button>
+                                    <button type="button" id="btn-save-model" class="btn btn-rounded btn-success btn-block" style="width:30%;">保存模型</button>
+                                    <button type="button" id="btn-save-as-model" class="btn btn-rounded btn-primary btn-block" style="width:30%;">另存为模型</button>
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="${entryRoot}/pcmanage-taskmanage.js">
+</script>

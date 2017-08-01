@@ -1,0 +1,36 @@
+<div id="${TabPage}" style="height: 100%">
+    <div id="out-panel" class="out-panel out-panel-open" >
+        <div class="panel" style="opacity: 0.9">
+            <div class="track-group-title" unselectable="on" style="-webkit-user-select: none;">
+                <span class="fa fa-exchange text-primary" style="font-size: 23px;padding-left: 12px;padding-right: 12px;"></span>
+                <span class="panel-title">地图查询工具</span>
+            </div>
+            <div class="track-group-body" >
+                <div id="queryCondition" style="margin: 8px;height: 40px">
+                    <input name="searchInput" id="searchInput" type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="请输入关键字" ng-model="keyword" style="width: 85%;float: left;display: inline">
+                    <button class="btn-custom btn-primary" id="searchBtn" style="width: 15%;float: left;display: inline"><i class="fa fa-search"></i></button>
+                </div>
+                <div id="menuBtn" style="margin: 10px;height: 20px">
+                    <button type="button" class="btn_custom_small btn-success">
+                        <i class="fa fa-edit"></i>编辑
+                    </button>
+                    <button type="button" class="btn_custom_small btn-success">
+                        <i class="fa fa-home"></i>添加
+                    </button>
+                    <button type="button" class="btn_custom_small btn-success">
+                        <i class="fa fa-coffee"></i>删除
+                    </button>
+                    <button type="button" class="btn_custom_small btn-success">
+                        <i class="fa fa-save"></i>保存
+                    </button>
+                </div>
+                <div id="resultTab" style="overflow: auto">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" style="height: 100%">
+    </div>
+</div>

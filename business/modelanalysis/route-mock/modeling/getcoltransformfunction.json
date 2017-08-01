@@ -1,0 +1,37 @@
+{
+    "code": 0,
+    "message": "",
+    "data": [{
+        "title": "目录1",
+        "folder": true,
+        "children": [{
+            "title": "取子串(substring)",
+            "caption": "取子串",
+            "name": "substring",
+            "format": "substring(*,*,*)",
+            "hint": "取子串(字段，起始，结束)"
+        }, {
+            "title": "求和(sum)",
+            "caption": "求和",
+            "name": "sum",
+            "format": "sum(*,*)",
+            "hint": "求和(字段1， 字段2)"
+        }]
+    }, {
+        "title": "目录2",
+        "folder": true,
+        "children": [{
+            "title": "取子串(substring)",
+            "caption": "取子串",
+            "name": "substring",
+            "format": "substring(*,*,*)",
+            "hint": "取子串(字段，起始，结束)"
+        }, {
+            "title": "求和(sum)",
+            "caption": "求和",
+            "name": "sum",
+            "format": "sum(*,*)",
+            "hint": "求和(字段1， 字段2)"
+        }]
+    }]
+}

@@ -1,0 +1,73 @@
+<style>
+.panel {
+    margin-bottom: 0;
+    /*overflow-y: hidden;*/
+}
+
+#mapToolBar {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+.latlng {
+    color: white;
+    position: absolute;
+    right: 70px;
+}
+
+.latlngtop {
+    top: 18px;
+}
+
+#lng {
+    float: right;
+    color: white;
+}
+
+#lat {
+    position: absolute;
+    right: 0;
+    color: white;
+}
+
+.regionLabel {
+    color: white;
+}
+
+#scale {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+<div id='main-container' style="height: 100%;top:0;bottom: 0px;left: 0px;position: absolute;width: 100%">
+    <div class="functionPanel-out" id="out-panel" style="display: none">
+        <div id="setPositionPanel" style="display: none"></div>
+        <div id="setLayerPanel" style="display: none"></div>
+        <div id="searchPOIPanel" style="display: none"></div>
+        <div id="manageAimTrackPanel" style="display: none;"></div>
+        <div id="enclosureManagePanel" style="display: none;"></div>
+        <div id="intelligentQueryPanel" style="display: none;"></div>
+    </div>
+    <div id='boxes'>
+    </div>
+    <div id='loadChinaRegion'></div>
+    <!-- <div id='toolbar'></div> -->
+    <div id="map">
+        <div id="mapToolBar" style='display:none'>
+          <!--   <input type='checkbox' id='regionCheck' style='display:none'>
+            <label class="regionLabel" style='display:none'>显示区域</label>
+            </input>
+            <div id="provinceList"></div>
+            <div id="cityList"></div>
+            <div id="countyList"></div> -->
+            <label class="latlng">经度:</label>
+            <label id="lng"></label>
+            <label class="latlng latlngtop">纬度:</label>
+            <label class="latlngtop" id="lat"></label>
+        </div>
+    </div>
+</div>

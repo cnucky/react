@@ -1,0 +1,53 @@
+<div class="admin-form">
+    <form id="form-advancedset-dialog">
+        <div class="panel">
+            <div class="panel-heading hide" style="padding: 0px 0px 0px 0px">
+                <div class="widget-menu ml10 mb10">
+                    <span><i class='glyphicon glyphicon-star' style='color: red'></i></span>
+                    <label>当前操作：</label>
+                    <label id="oprlabel" style="color: lightcoral; font-weight: bolder"></label>
+
+                    <div class="widget-menu ml10 mb10 pull-right" id="btn-group-editmode">
+                        <a type="button" id="btn-advanced-set" class="btn btn-sm btn-system ph10 mr5">
+                            <span class="fa fa-cogs pr5"></span>
+                            高级设置
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body" style="padding: 3px 0px 10px 0px">
+                <div class="col-md-12 mt10">
+                    <div class="panel heading-border" style="width:99.9%; margin: 0 auto">
+                        <div class="panel-heading pn h-30" style="background-color: lavender">
+                            <h6 class="ml5" style="color: #1C1C1C">错误信息
+                                <a id="file-preview" class="pull-right mr10 hide" style="color:blue">
+                                    <span class="fa fa-cloud-download pr5"></span>
+                                    批量下载错误文件</a>
+                            </h6>
+                        </div>
+
+                        <div class="panel-body pn of-x-a">
+                            <table class="table table-striped table-hover" id="errorfiles-table" cellspacing="0"
+                                   width="100%" style="font-size: 13px;">
+                                <thead>
+                                <tr>
+                                    <!--<th class="hide" style="text-align: center;color: #3498db;font-weight: bold;width:50px">序号</th>-->
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px">文件ID</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:150px">文件名称</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:auto">错误原因</th>
+                                    <th style="text-align: center;color: #3498db;font-weight: bold;width:80px; display: none">下载标识</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

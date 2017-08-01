@@ -1,0 +1,9 @@
+.protocol-check-btn {
+    font-weight: 600;
+}
+
+.protocol-check-btn.protocol-select {
+    font-weight: 600;
+    color : #3078D7 !important;
+    border-left-color: #3498db !important;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_FLOW" DisplayName="流数据">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="流信息">
+            <Condition Item="DOWN_DATA_LEN" DisplayName="下行数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_PKTS" DisplayName="下行数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_DATA_LEN" DisplayName="上行数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_PKTS" DisplayName="上行数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_SEQ_LEN" DisplayName="下行SEQ差值" ControlType="Text"/>
+            <Condition Item="UP_SEQ_LEN" DisplayName="上行SEQ差值" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_ACK_LEN" DisplayName="下行ACK差值" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_ACK_LEN" DisplayName="上行ACK差值" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_ACK_PKTS" DisplayName="下行ACK包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_ACK_PKTS" DisplayName="上行ACK包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="DOWN_DATA_LEN" DisplayName="下行数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_PKTS" DisplayName="下行数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_DATA_LEN" DisplayName="上行数据长度" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_PKTS" DisplayName="上行数据包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_SEQ_LEN" DisplayName="下行SEQ差值" ControlType="Text"/>
+            <Condition Item="UP_SEQ_LEN" DisplayName="上行SEQ差值"  ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_ACK_LEN" DisplayName="下行ACK差值" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_ACK_LEN" DisplayName="上行ACK差值" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="DOWN_ACK_PKTS" DisplayName="下行ACK包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="UP_ACK_PKTS" DisplayName="上行ACK包数" ControlType="TextRange" ValueType="number" Rule="intgtezero"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

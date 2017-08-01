@@ -1,0 +1,180 @@
+.jqx-fill-state-pressed{ background: #1ca8dd;}
+/*::-webkit-scrollbar-thumb:active{ background-color: #1ca8dd; }*/
+/*::-webkit-scrollbar-thumb:hover{ background-color: red; }*/
+
+.ui-thumbview .mobile-info{
+    float: left;
+    width: 300px;
+    height: 130px;
+    background: #ffffff;
+    margin:5px 5px 10px 10px;
+    border: solid 2px #47a3da;
+    border-radius:3px;
+}
+
+.ui-thumbview .mobile-info .mobile-head{
+    background: #9ccdeb;
+    height: 30px;
+    padding-top: 3px;
+}
+
+.ui-thumbview .mobile-info .phone-img{
+    font-size:12px;
+    margin-left:10px;
+    margin-right:5px;
+    color:black;
+    font-weight:bold;
+}
+
+.ui-thumbview .mobile-info .phone-number{
+    font-size:14px;
+    color:black;
+    font-weight:bold;
+
+}
+
+
+.ui-thumbview .mobile-info .mobile-head .head-icon-btn{
+    margin-top: -3px;
+    margin-right:0px;
+    border: none;
+    display: none;
+}
+
+.ui-thumbview .mobile-info:hover .mobile-head .head-icon-btn{
+
+    display: inline-block;
+}
+
+.ui-thumbview .mobile-info .mobile-head .head-icon-btn:hover{
+    background: #666666;
+}
+
+
+.ui-thumbview .mobile-info .right-panel{
+    margin-left:10px;
+
+}
+
+.ui-thumbview .mobile-info .info-item{
+    margin-left:0px;
+    margin-right:0px;
+    height:19px;
+    color:black;
+}
+
+.ui-thumbview .mobile-info .info-item .icon{
+
+    display:block;
+    width:20px;
+    /*float:left;*/
+}
+
+.ui-thumbview .mobile-info .info-item .info-key{
+
+    display:block;
+    float:left;
+    width:85px;
+    /*text-align:right;*/
+}
+
+
+.ui-thumbview .mobile-info .info-item .info-value{
+    margin-left:10px;
+
+}
+
+.ui-thumbview .mobile-info .info-item .info-value .exist-in-book{
+    /*color:#E63F24*/
+    color:#669933
+}
+
+.ui-thumbview .mobile-info .info-item .info-value .not-exist-in-book{
+    display: none;
+
+}
+
+
+
+.ui-thumbview .mobile-info .info-item .record-number-link{
+    color: black;
+    text-decoration: none;
+    /*cursor:pointer;*/
+}
+
+.ui-thumbview .mobile-info .info-item .remark-item{
+    color: black;
+    padding-left:9px;
+    height:18px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/*hoverÑùÊ½*/
+.ui-thumbview .mobile-info:hover{
+    background: #f2f7fd;
+    /*border: solid 2px #7da2ce;*/
+}
+
+.ui-thumbview .mobile-info .bottom-menu {
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    position:relative;
+}
+
+/*.ui-thumbview .mobile-info:hover .bottom-menu {*/
+/*visibility: visible;*/
+/*margin-top:0px;*/
+/*}*/
+
+
+.ui-thumbview .mobile-info:hover .bottom-menu .menu-bg{
+    height:23px;
+    width: 300px;
+    margin-left:-2px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    top:0px;
+    left:0px;
+    z-index: 3;
+    position:absolute;
+    background: #707070;/*707070*/
+    opacity: 0.8;
+    /*border-radius:15px;*/
+}
+
+.ui-thumbview .mobile-info:hover .bottom-menu .menu-list{
+    top:0px;
+    left:0px;
+    z-index: 4;
+    position:absolute;
+    margin-left:45px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.ui-thumbview .mobile-info:hover .bottom-menu .menu-list .icon-btn{
+    height:23px;
+    width: 26px;
+    margin-right:30px;
+    border: none;
+}
+
+.ui-thumbview .mobile-info:hover .bottom-menu .menu-list .icon-btn:hover{
+    background: #666666;
+}
+
+.menu-icon
+{
+    margin-left:-5px;
+    margin-right:30px;
+    margin-top:-4px;
+    margin-bottom:0px;
+    font-size:16px;
+    /*cursor:pointer;*/
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_KD" DisplayName="快递数据">
+    <Combine>
+        <ConditionGroup GroupName="基本信息">
+            <Condition Item="SEND_TIME" DisplayName="寄件时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="SEND_NAME" DisplayName="寄件人姓名" ControlType="Text"/>
+            <Condition Item="SEND_ADDR" DisplayName="寄件人地址" ControlType="Text"/>
+            <Condition Item="SEND_CERTID" DisplayName="寄件人证件号码" ControlType="Text"/>
+            <Condition Item="SEND_PHONENUMBER" DisplayName="寄件人电话" ControlType="Text"/>
+            <Condition Item="RECEIVE_NAME" DisplayName="收件人姓名" ControlType="Text"/>
+            <Condition Item="RECEIVE_ADDR" DisplayName="收件人地址" ControlType="Text"/>
+            <Condition Item="RECEIVE_CERTID" DisplayName="收件人证件号码" ControlType="Text"/>
+            <Condition Item="RECEIVE_PHONENUMBER" DisplayName="收件人电话" ControlType="Text"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="SEND_TIME" DisplayName="寄件时间" ControlType="TextRange" ValueType="date" Rule="date"/>
+            <Condition Item="SEND_NAME" DisplayName="寄件人姓名" ControlType="Text"/>
+            <Condition Item="SEND_ADDR" DisplayName="寄件人地址" ControlType="Text"/>
+            <Condition Item="SEND_CERTID" DisplayName="寄件人证件号码" ControlType="Text"/>
+            <Condition Item="SEND_PHONENUMBER" DisplayName="寄件人电话" ControlType="Text"/>
+            <Condition Item="RECEIVE_NAME" DisplayName="收件人姓名" ControlType="Text"/>
+            <Condition Item="RECEIVE_ADDR" DisplayName="收件人地址" ControlType="Text"/>
+            <Condition Item="RECEIVE_CERTID" DisplayName="收件人证件号码" ControlType="Text"/>
+            <Condition Item="RECEIVE_PHONENUMBER" DisplayName="收件人电话" ControlType="Text"/>
+    </Template>
+</Search>

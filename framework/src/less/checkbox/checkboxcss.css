@@ -1,0 +1,49 @@
+/* 自定义样式 */
+.checkbox-in-table{
+    background: url(./ico.png) no-repeat 0px -363px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 0;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+.checkbox-in-tool{
+    background: url(./ico.png) no-repeat 0px -363px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 0;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+
+.checkbox-checked .checkbox-in-tool{
+    background: url(./ico.png) no-repeat 0px -414px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 1;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}
+
+.checkbox-checked .checkbox-in-table{
+    background: url(./ico.png) no-repeat 0px -414px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    padding: 1;
+    left: -1px;
+    top: -1px;
+    cursor: default;
+}

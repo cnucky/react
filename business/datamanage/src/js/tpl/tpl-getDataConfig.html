@@ -1,0 +1,70 @@
+<div class="section">
+    <label class="field-label"> 系统名称：</label>
+    <select id="systemSelectForMap" style="width: 75%">
+    </select>
+</div>
+<div class="section">
+    <label class="field-label"> 数据类型：</label>
+    <select id="dataTypeSelectForMap" style="width: 75%">
+    </select>
+</div>
+
+<div class="section">
+    <label class="checkbox">
+        <input unchecked id="batchCheckbox" name="tabletitle"
+               type="checkbox">是否基于任务获取配置
+    </label>
+</div>
+
+<div id="byBatchDiv" style="display: none">
+    <div class="section">
+        <label class="field-label"> 数据库类型：</label>
+        <select id="dbTypeSelectForMap">
+            <option value="Oracle" selected="selected">Oracle数据库</option>
+            <!--<option value="2">MySql数据库</option>-->
+        </select>
+    </div>
+
+    <div class="section">
+        <label class="field-label"> 用户名：</label>
+        <input type="text" class="form-control" id="dbUserNameForMap" style="padding-right:0px;">
+    </div>
+
+    <div class="section">
+        <label class="field-label"> 密码：</label>
+        <input type="password" class="form-control" id="dbPassWordForMap" style="padding-right:0px;">
+    </div>
+
+    <div class="section">
+        <label class="field-label"> 数据库IP：</label>
+        <input type="text" class="form-control" id="dataBaseIPForMap" style="padding-right:0px;">
+    </div>
+
+    <div class="section">
+        <label class="field-label"> 数据库实例名：</label>
+        <input type="text" class="form-control" id="dBInstanceForMap" style="padding-right:0px;">
+    </div>
+
+    <div class="section">
+        <button type="button" id="getBatchListBtn" class="btn btn-success" style="float:right;horiz-align: right;">
+            <span>获取该数据类型的对接任务</span>
+        </button>
+    </div>
+    <br>
+
+    <div class="section">
+        <label class="field-label"> 导入任务：</label>
+        <select id="dataTypeTaskSelectForMap" style="width: 75%">
+        </select>
+    </div>
+</div>
+
+<!--<div class="section">-->
+<!--<label class="field-label"> 数据来源类型：</label>-->
+<!--<select id="dataSourceType">-->
+<!--<option value="0" selected="selected">实时数据</option>-->
+<!--<option value="1">历史数据</option>-->
+<!--</select>-->
+<!--</div>-->
+
+

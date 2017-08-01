@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title data-i18n="base:login.pagetitle"></title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AbsoluteAdmin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/skin/theme.css">
+    <!-- Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/ladda.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <![endif]-->
+    <script type="text/javascript" src="${root}/js/components/lib/jquery.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/jquery.history.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/underscore.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/q.min.js"></script>
+    <script type="text/javascript" src="${root}/js/components/lib/socket.io-1.4.5.js"></script>
+    <script type="text/javascript" src="${root}/js/components/i18next/i18next.js"></script>
+    <script type="text/javascript" src="${root}/js/components/jquery-i18next/jquery-i18next.js"></script>
+    <script type="text/javascript" src="/js/vendor.js"></script>
+    <script type="text/javascript" src="${root}/config-window.js"></script>
+</head>
+
+<body class="external-page sb-l-c sb-r-c">
+    <!-- Start: Main -->
+    <div id="main" class="animated fadeIn">
+        <!-- Start: Content-Wrapper -->
+        <section id="content_wrapper">
+            <!-- begin canvas animation bg -->
+            <div id="canvas-wrapper">
+                <canvas id="demo-canvas"></canvas>
+            </div>
+            <!-- Begin: Content -->
+            <section id="content">
+                <div class="admin-form theme-info" id="login1">
+                    <div class="panel panel-info mt10 br-n">
+                        <!-- <div class="panel-heading heading-border bg-blue">
+
+            </div> -->
+                        <!-- end .form-header section -->
+                        <form id="form-login">
+                            <div class="panel-body bg-light p30">
+                                <div class="row">
+                                    <div class="col-sm-7 pr30">
+                                        <div class="section row hidden">
+                                            <div class="col-md-4">
+                                                <a href="#" class="button btn-social facebook span-left mr5 btn-block">
+                                                    <span>
+                            <i class="fa fa-facebook"></i>
+                          </span>Facebook</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="#" class="button btn-social twitter span-left mr5 btn-block">
+                                                    <span>
+                            <i class="fa fa-twitter"></i>
+                          </span>Twitter</a>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="#" class="button btn-social googleplus span-left btn-block">
+                                                    <span>
+                            <i class="fa fa-google-plus"></i>
+                          </span>Google+</a>
+                                            </div>
+                                        </div>
+                                        <div class="section">
+                                            <label for="username" class="field-label text-muted fs18 mb10" data-i18n="base:login.label-username"></label>
+                                            <label for="username" class="field prepend-icon">
+                                                <input type="text" name="username" id="username" class="gui-input" data-i18n="[placeholder]base:login.holder-username">
+                                                <label for="username" class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                        <div class="section">
+                                            <label for="username" class="field-label text-muted fs18 mb10" data-i18n="base:login.label-password"></label>
+                                            <label for="password" class="field prepend-icon">
+                                                <input type="password" name="password" id="password" class="gui-input" data-i18n="[placeholder]base:login.holder-password">
+                                                <label for="password" class="field-icon">
+                                                    <i class="fa fa-lock"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <!-- end section -->
+                                    </div>
+                                    <div class="col-sm-5 br-l br-grey pl30">
+                                        <h3 class="mb25" data-i18n="base:login.label-youcan"></h3>
+                                        <p class="mb15">
+                                            <span class="fa fa-check text-success pr5" ></span>
+                                            <span id='youcan1' data-i18n="base:login.label-manage"></span>
+                                        </p>
+                                        <p class="mb15">
+                                            <span class="fa fa-check text-success pr5" ></span>
+                                            <span id='youcan2' data-i18n="base:login.label-analysis"></span>
+                                        </p>
+                                        <p class="mb15">
+                                            <span class="fa fa-check text-success pr5"></span>
+                                            <span id='youcan3' data-i18n="base:login.label-modeling"></span>
+                                        </p>
+                                        <p class="mb15">
+                                            <span class="fa fa-check text-success pr5"></span>
+                                            <span id='youcan4' data-i18n="base:login.label-application"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .form-body section -->
+                            <div class="panel-footer clearfix p10 ph15">
+                                <button type="submit" id="btn-login" class="button btn-primary ladda-button mr10 pull-right" data-style="expand-right"><span class="ladda-label" data-i18n="base:login.button-login"></span>
+                                    <span class="ladda-spinner"></span>
+                                    <div class="ladda-progress" style="width: 0px;"></div>
+                                </button>
+                                <label class="switch ib switch-primary pull-left input-align mt10">
+                                    <input type="checkbox" name="remember" id="remember" checked>
+                                    <label for="remember" data-on="YES" data-off="NO"></label>
+                                    <span data-i18n="base:login.label-remeberme"></span>
+                                </label>
+                            </div>
+                            <!-- end .form-footer section -->
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- End: Content -->
+        </section>
+        <!-- End: Content-Wrapper -->
+    </div>
+    <!-- End: Main -->
+    <!-- BEGIN: PAGE SCRIPTS -->
+    <!-- jQuery -->
+    
+    <script src="/js/login.js"></script>
+    <!-- END: PAGE SCRIPTS -->
+</body>
+
+</html>

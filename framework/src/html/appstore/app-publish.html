@@ -1,0 +1,39 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="${root}/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${root}/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="${root}/fonts/glyphicons/glyphicons.css">
+<style type="text/css">
+#content-container {}
+
+
+/* header#topbar {
+         display: none;
+     }*/
+
+#content #top-toolbar {
+    height: 42px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+#content #top-toolbar button {
+    margin-right: 5px;
+}
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+var _pageConfig = {
+    title: '应用发布',
+    link: '/appstore/app-publish.html'
+};
+$(function() {
+    var container = $('#content-container');
+    container.height(window.innerHeight - container.offset().top);
+})
+</script>
+<section id="content-container">
+</section>
+<script type="text/javascript" src="${root}/js/app-publish.js"></script>

@@ -1,0 +1,243 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>测试...</title>
+    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="ByUTech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap-theme.min.css"> -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/loaders.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/admin-forms.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/tagmanager.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/nova.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/datatables/css/dataTables.bootstrap.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.base.css">
+    <link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/conduct.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/loaders.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/glyphicons-pro/glyphicons-pro.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/octicons/octicons.css">
+    <link rel="stylesheet" type="text/css" href="../css/skin/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="/dataprocess/css/pagination.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/searchAll/searchAll.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/modalfunc/modal-search-all.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/skin/magnific-popup.css">
+
+    <link rel="stylesheet" type="text/css" href="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css"
+          href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MyMarkerCluster.Default-4g.css">
+    <link rel="stylesheet" type="text/css"
+          href="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/MarkerCluster.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../js/utility/fuckie/html5shiv.js"></script>
+    <script src="../js/utility/fuckie/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../js/components/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/components/lib/jquery.history.js"></script>
+    <script type="text/javascript" src="../js/components/i18next/i18next.js"></script>
+    <script type="text/javascript" src="../js/components/jquery-i18next/jquery-i18next.js"></script>
+    <script type="text/javascript" src="../js/components/lib/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/components/lib/underscore.js"></script>
+    <script type="text/javascript" src="../js/components/lib/q.min.js"></script>
+    <script src="../js/vendor.js"></script>
+    <!--map相关script-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/0.7.7/leaflet-src.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/esri-leaflet-1.0.0/esri-leaflet.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/leaflet-omnivore.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/markercluster/dist/leaflet.markercluster-src-4g.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/heatmap/heatmap.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/heatmap/leaflet-heatmap.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/anti-line/leaflet-ant-path.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/plugins/minimap/src/Control.MiniMap.min.js"></script>-->
+    <!--<script src="../js/components/gisWidget/gisLibs/leaflet/selfDefination/esri-leaflet-clustered-feature-layer.js"></script>-->
+    <!--<script src="../js/components/gisWidget/leaflet.toolbar-src.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/bezier.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/gis-smooth.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/MovingMarker.js"></script>-->
+    <!--<script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrackModule-4g.js"></script>-->
+    <script src="../js/components/gisWidget/manageAimTrackModule/manageAimTrack-widget-files.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="../css/jqwidgets4/jqx.base.css">-->
+
+</head>
+<body style="background: #fff;">
+<div class="conduct">
+    <div class="draw">
+        <div class="header">
+            <div class="drawSVG button" type="force">
+                <span class="img2 "></span>
+                <span class="text" style="font-size: 12px;">力导</span>
+            </div>
+            <div class="drawSVG button" type="rect">
+                <span class="img1 "></span>
+                <span class="text" style="font-size: 12px;">矩形</span>
+            </div>
+
+            <div class="drawSVG button" type="tree">
+                <span class="img3 "></span>
+                <span class="text" style="font-size: 12px;">树形</span>
+            </div>
+
+            <div class="drawSVG button" type="round">
+                <span class="img4 "></span>
+                <span class="text" style="font-size: 12px;">圆形</span>
+            </div>
+            <div class="drawSVG button" type="level">
+                <span style="transform: rotate(-90deg)" class="img5 "></span>
+                <span class="text" style="font-size: 12px;">层次</span>
+            </div>
+
+            <span class="rows"></span>
+            <div  class="button" type="whole">
+                <span class="img6"></span>
+                <span class="text" style="font-size: 12px;">全局</span>
+            </div>
+
+            <div class="button" type="part">
+                <span class="img7 "></span>
+                <span class="text" style="font-size: 12px;">局部全局</span>
+            </div>
+
+            <div class="button">
+                <span class="img8 "></span>
+                <span class="text" style="font-size: 12px;">缩略图</span>
+            </div>
+            <span class="rows"></span>
+            <div class="button" type="bigger">
+                <span class="inherit fa fa-search-plus"></span>
+                <span class="text" style="font-size: 12px;">放大</span>
+            </div>
+            <div class="button" type="smaller">
+                <span class="inherit fa fa-search-minus"></span>
+                <span class="text" style="font-size: 12px;">缩小</span>
+            </div>
+
+            <span class="rows"></span>
+            <div id="downloadImg" class="button">
+                <span class="inherit fa fa-picture-o"></span>
+                <span class="text" style="font-size: 12px;">导出图片</span>
+            </div>
+            <div class="button" id="download">
+                <span class="inherit fa fa-file"></span>
+                <!--<span class="text" style="font-size: 12px;"><a id="CVS1" onclick="saveCVS(); return false;" style="color: #000;" href="http://192.5.1.111:3000/dataprocess/a.csv"> 导出文档</a></span>-->
+
+                <span class="text" style="font-size: 12px;">导出文档</span>
+            </div>
+        </div>
+        <div class="contents">
+            <div id="relation_charts">
+            </div>
+        </div>
+    </div>
+
+    <div class="timeList">
+        <div id="timeBox">
+            <div class="select_ranger_box" id="select_ranger_box">
+                <!--范围选择-->
+                <div class="select_ranger">
+                    <div class="left_space ranger_space"></div>
+                    <div class="ranger"></div>
+                    <div class="right_space ranger_space"></div>
+                    <div class="left_square ranger_square"><div class="num" style="display: none;"></div></div>
+                    <div class="right_square ranger_square"><div class="num" style="display: none;"></div></div>
+                </div>
+                <!--数据-->
+                <div class="charts"></div>
+                <!--标线-->
+                <div class="bottom_border"></div>
+            </div>
+        </div>
+    </div>
+    <div class="statusBar">
+        <ul class="navStatus">
+            <li class="active">筛选器-边</li>
+            <li>筛选器-点</li>
+            <li>编辑器</li>
+        </ul>
+        <div class="status">
+            <div class="pages sizer-dian">
+                <div class="extend">
+                    <h1><span>拓扑</span></h1>
+                    <ul>
+                        <li>
+                            <h2>总度数:</h2>
+                            <p><i></i><span><label>max</label><input class="maxTotalDegree" value="3"></span><span><label>min</label><input class="minTotalDegree" value="1"></span></p>
+                        </li>
+
+                        <!--<li>-->
+                        <!--<h2>出度:</h2>-->
+                        <!--<p><i></i><span><label>max</label><input class="maxOutDegree" value="3"></span><span><label>min</label><input class="minOutDegree" value="1"></span></p>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                        <!--<h2>入度:</h2>-->
+                        <!--<p><i></i><span><label>max</label><input class="maxInDegree" value="3"></span><span><label>min</label><input class="minInDegree" value="1"></span></p>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="submit">
+                    <span class="btn btn-info btn-sm clearDegree">清除</span>
+                    <span class="btn btn-info btn-sm confirmDegree">确定</span>
+                </div>
+            </div>
+            <div class="pages sizer-bian hide">
+                <div class="type">
+                    <h1><span>属性:</span></h1>
+                    <p style="padding: 15px 0 5px;"><label>名称:</label><input class="designAtion" type="text"></p>
+
+                </div>
+                <div class="extend">
+                    <h1><span>拓扑</span></h1>
+                    <ul>
+                        <li>
+                            <h2>总度数:</h2>
+                            <p><i></i><span><label>max</label><input class="maxTotalDegree"></span><span><label>min</label><input class="minTotalDegree"></span></p>
+                        </li>
+                        <li>
+                            <h2>出度:</h2>
+                            <p><i></i><span><label>max</label><input class="maxOutDegree"></span><span><label>min</label><input class="minOutDegree"></span></p>
+                        </li>
+                        <li>
+                            <h2>入度:</h2>
+                            <p><i></i><span><label>max</label><input class="maxInDegree"></span><span><label>min</label><input class="minInDegree"></span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submit">
+                    <span class="btn btn-info btn-sm clearDesignAtion">清除</span>
+                    <span class="btn btn-info btn-sm confirmDesignAtion">确定</span>
+                </div>
+            </div>
+            <div class="pages editor hide">
+                <div class="type">
+                    <h1><span>属性</span><i></i></h1>
+                    <p><label>颜色:</label><input type="color" class="changeColor"></p>
+                    <p><label>粗细:</label><input step="1" type="range" min="1" max="3" class="changeSize" value="1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class="loading loader">
+    <div class="loader-inner line-scale">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <p></p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/components/svgenie/lib/rgbcolor.js"></script>
+<script type="text/javascript" src="../js/components/svgenie/lib/canvg.js"></script>
+<script type="text/javascript" src="../js/components/svgenie/svgenie.js"></script>
+
+<script type="text/javascript" src='/dataprocess/js/conduct.js'></script>
+</html>

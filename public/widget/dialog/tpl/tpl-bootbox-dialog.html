@@ -1,0 +1,16 @@
+<div id="modal-panel" class="popup-basic popup-<%- style %> bg-none mfp-with-anim"
+<% if (width > 0) { %>style="max-width: <%- width %>px"<% } %> >
+    <div class="panel">
+        <div id="nv-dialog-body" class="panel-body " style="height:auto">
+            <%= content %>
+        </div>
+        <div class="panel-footer text-right" id="nv-dialog-footer">
+            <button id="nv-dialog-leftbtn" class="btn btn-default" type="button" style="margin-right:15px;min-width:60px">
+                <%= leftBtn %>
+            </button>
+            <button id="nv-dialog-rightbtn" class="btn btn-primary" type="button" style="min-width:60px">
+                <%= rightBtn %>
+            </button>
+        </div>
+    </div>
+</div>

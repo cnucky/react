@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+_build/
+npm-debug.log*
+*.swp
+.idea/
+.vscode/
+*.iml
+/.project
+log.txt
+logs/route/*.log
+mysheet.xlsx
+.happypack/
+tmp/
+jsconfig.json
+dist/

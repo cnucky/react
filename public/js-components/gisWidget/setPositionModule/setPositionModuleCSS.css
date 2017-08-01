@@ -1,0 +1,79 @@
+.group-title
+{
+    height: 20px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: lightsteelblue;
+    border-width: 1px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.setPos-group-body
+{
+    height: 140px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+.z_input
+{
+    width: 90%;
+    height: 22px;
+    border: 1px solid #E5E5E5 !important;
+}
+.z_input:focus
+{
+    border: 1px solid #000000 !important;
+}
+.lonlat_input
+{
+    width: 90%;
+    height: 25px;
+    border: 1px solid lightgrey !important;
+}
+.lonlat_input:focus
+{
+    border: 1px solid blue !important;
+}
+.lonlat_input:hover
+{
+    border: 1px solid #E5E5E5 !important;
+}
+.z_button
+{
+    width: 60px;
+    height: 28px;
+    background-color: dodgerblue;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.setPosition_button
+{
+    width: 60px;
+    height: 28px;
+    background-color: dodgerblue;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+    border:0px;
+}
+.button-style{
+    border:1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    color:#3498db;
+}
+.button-style:hover{
+    background-color: #F0F0F0 !important;
+    cursor: pointer;
+}
+/*.leaflet-control{
+    margin-right:0px !important;
+    margin-top:0px !important;
+}*/

@@ -1,0 +1,28 @@
+{
+  "mobileentity": {
+    "common": {
+      "pre_page": "Previous Page",
+      "next_page": "Next Page"
+    },
+    "mobileinfo": {
+      "loc": "Home Region:",
+      "number": "Sum of Appearance:",
+      "name": "Name:",
+      "remark": "Note:",
+      "show_record": "View Bill",
+      "phone_book": "Phonebook:",
+      "menu": {
+        "mobile_archive": "Phone Archive:",
+        "time_sequence": "Time Sequence Info.",
+        "mobile_trace": "Number Trace"
+      }
+    },
+    "notify": {
+      "exceed_max_cache": "Reach the upper limit of data obtaining!",
+      "info_detail": "Info. Detail",
+      "query_cache_failure": "Fail to obtain cache!",
+      "query_cache_failure2": "Fail to obtain cache (from countCache)!",
+      "query_mobile_entity_failure": "Fail to obtain cell phone target!"
+    }
+  }
+}

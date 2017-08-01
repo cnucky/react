@@ -1,0 +1,47 @@
+<form class="form-horizontal p10" role="form">
+    <div class=" form-group ">
+        <label class="control-label col-md-4 mb10 ptn pln">节点类型：</label>
+
+        <div id="icon-grid">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="filter-keyword" class="col-md-4 control-label pln">标题包含：</label>
+
+        <div class="col-md-8">
+            <div class="bs-component">
+                <input type="text" id="filter-keyword" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label pln">线上纪录数：</label>
+
+        <div class="col-md-4">
+            <input type="number" id="min-frequency" class="form-control" min="0" placeholder="从">
+        </div>
+        <div class="col-md-4">
+            <input type="number" id="max-frequency" class="form-control" min="0" placeholder="到">
+        </div>
+    </div>
+    <div class="form-group mbn">
+        <label class="col-md-4 control-label pln">筛选方式：</label>
+
+            <div class="radio-custom radio-primary col-md-4 mt10">
+                <input id="translucentMode" type="radio" name="filterMode" value="translucent" checked>
+                <label for="translucentMode" class="mrn">透明</label>
+            </div>
+            <div class="radio-custom radio-primary col-md-4 mt10">
+                <input id="hideMode" type="radio" name="filterMode" value="hide">
+                <label for="hideMode" class="mrn">隐藏</label>
+            </div>
+    </div>
+</form>
+
+<div class="text-right m10">
+    <button id="button-filter" type="button" class="btn btn-sm btn-primary ph15  mr15">筛选</button>
+    <button id="button-recovery" type="button" class="btn btn-sm btn-primary ph15">还原</button>
+</div>
+

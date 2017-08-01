@@ -1,0 +1,28 @@
+<li id="process-tooltip" class="dropdown menu-merge">
+    <div class="navbar-btn btn-group">
+        <button id="btn-task-dropdown" data-toggle="dropdown" class="btn btn-sm dropdown-toggle">
+            <span class="octicon octicon-mail" id="span-task-icon"></span>
+            <span class="badge badge-danger" id="span-task-number"></span>
+        </button>
+        <div id="task-dropdown-menu" class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">
+            <div class="panel mbn">
+                <div class="panel-menu">
+                    <span class="octicon octicon-mail"></span>
+                    <span class="panel-title fw600" data-i18n="workprocess.names.todolist"></span>
+                </div>
+                <div class="panel-body panel-scroller scroller-navbar pn scroller task-panel" style="overflow-y: auto;max-height: 235px;">
+                    <div id="issues-list" class="alerts-widget">
+                        
+                    </div>
+                </div>
+                <div class="panel-footer text-right p7">
+                    <p style="float: left; margin: 0;color: #666;">
+                       <span id="show-issues-count"></span>
+                    </p>
+                    <a href="/workprocess/workprocess.html"
+                       class="link-unstyled"><span data-i18n="workprocess.processtooltip.seemore"></span>&nbsp;<span class="fa fa-angle-double-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

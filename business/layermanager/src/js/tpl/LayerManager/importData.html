@@ -1,0 +1,88 @@
+<div id="${TabPage}">
+    <div style="height: 30px;vertical-align: middle;">
+        <span class="btn blue fileinput-button" style="padding: 7px 12px;margin-right: 10px;margin-bottom: 5px;">
+            <i class="icon-plus icon-white"></i>
+            <span>上传文件</span>
+            <input id="${FilePath}" name="file" multiple type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+        </span>
+        <button id="${DelFile}" type="button" class="btn blue delete" style="padding: 7px 12px;margin-right: 10px;margin-bottom: 5px;">
+            <i class="icon-trash icon-white"></i>
+            <span>删除</span>
+        </button>
+        <span style="height: 100%;width: 1px;border-left:1px solid #000000; margin-left: 10px;"></span>
+        <span style="margin-left: 10px;">
+            <label style="font-weight: 800;">任务名称</label>
+            <input id="${TaskName}" title="请输入任务名称" type="text" name="taskName" class="" style="width: 200px;">
+        </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span><input id="${Deflect}" type="checkbox" checked="true"/><label style="font-weight: 800;">是否偏转</label></span>
+    </div>
+
+    <div class="portlet box green" id="${FileList}">
+        <div class="portlet-title" style="padding: 5px 0px 1px 10px;">
+            <div class="caption" style="font-size: 14px;margin-bottom: 3px;">
+                <i class="icon-edit" style="margin-top: 3px;"></i>
+               文件列表
+            </div>
+        </div>
+
+        <div class="portlet-body" style="">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th style="font-weight: 800;width: 15%;">选择</th>
+                    <th style="font-weight: 800;width: 20%;">状态</th>
+                    <th style="font-weight: 800;width: 25%;">文件名</th>
+                    <th style="font-weight: 800;width: 20%;">文件大小</th>
+                    <th style="font-weight: 800;width: 20%;">数据总量</th>
+                </tr>
+                </thead>
+            </table>
+
+            <div id="${TableParent}" style="overflow-y:auto;min-height: 200px;max-height: 200px;">
+                <table class="table table-striped table-hover">
+                    <thead style="display: none;">
+                    <tr>
+                        <th style="font-weight: 800;width: 15%;">选择</th>
+                        <th style="font-weight: 800;width: 20%;">状态</th>
+                        <th style="font-weight: 800;width: 25%;">文件名</th>
+                        <th style="font-weight: 800;width: 20%;">文件大小</th>
+                        <th style="font-weight: 800;width: 20%;">数据总量</th>
+                    </tr>
+                    </thead>
+                    <tbody id="${FileListBody}">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="portlet box green tabbable">
+        <div class="portlet-title" style="padding: 5px 0px 1px 10px;">
+            <div class="caption" style="font-size: 14px;margin-bottom: 3px;">
+                <i class="icon-reorder" style="margin-top: 3px;"></i>
+                采样数据<span id="${SampleLable}" style="color: #ffff00;display: none;">（请指定字段映射关系）</span>
+            </div>
+        </div>
+
+        <div class="portlet-body" style="min-height: 100px;">
+
+                <div style="overflow:auto;"  id="${SamleDataList}">
+                    <table class="table table-striped table-hover sampleData">
+                        <thead id="${TempletHead}">
+                        </thead>
+                        <tbody id="${TempletData}" getData="false">
+                        </tbody>
+                    </table>
+                </div>
+
+
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a id="${OK}" href="#" class="btn blue" style="margin-right: 15px;" direId="${DireID}"><i class="icon-ok"></i> 确&nbsp;&nbsp;定&nbsp;</a>
+        <a id="${Cancel}" href="#" class="btn blue" style="margin-left: 15px;"><i class="icon-remove"></i> 取&nbsp;&nbsp;消&nbsp;</a>
+    </div>
+
+</div>

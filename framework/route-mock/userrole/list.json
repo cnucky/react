@@ -1,0 +1,52 @@
+{
+    "code": 0,
+    "data": [{
+        "key": 0,
+        "title": "普通角色",
+        "folder": true,
+        "hideCheckbox": true
+
+    }, {
+        "key": 1,
+        "title": "用户管理员",
+        "folder": true,
+        "hideCheckbox": true,
+        "children": [{
+            "desc": "",
+            "isReserved": 0,
+            "name": "Role_用户管理员",
+            "roleID": 3607,
+            "roleType": 1,
+            "key": 3607,
+            "title": "Role_用户管理员"
+        }]
+    }, {
+        "key": 2,
+        "title": "授权管理员",
+        "folder": true,
+        "hideCheckbox": true,
+        "children": [{
+            "desc": "",
+            "isReserved": 0,
+            "name": "Role_授权管理员",
+            "roleID": 3609,
+            "roleType": 2,
+            "key": 3609,
+            "title": "Role_授权管理员"
+        }]
+    }, {
+        "key": 3,
+        "title": "日志管理员",
+        "folder": true,
+        "hideCheckbox": true,
+        "children": [{
+            "desc": "",
+            "isReserved": 0,
+            "name": "日志管理员",
+            "roleID": 3611,
+            "roleType": 3,
+            "key": 3611,
+            "title": "日志管理员"
+        }]
+    }]
+}

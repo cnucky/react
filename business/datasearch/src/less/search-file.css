@@ -1,0 +1,52 @@
+#map {
+    height: 100%;
+    min-height: 190px;
+}
+
+.functionPanel-out {
+    position: fixed;
+    width: 350px;
+    height: 260px;
+    float: right;
+    overflow: visible !important;;
+    background-color: #ffffff;
+    opacity: 0.9;
+    z-index: 999;
+    top: 135px;
+    right: 10px;
+    border: 1px solid:#e2e2e2;
+    border-radius: 3px;
+    box-shadow: 1px 2px 1px;
+}
+
+/*地图围栏样式begin*/
+.leaflet-mouse-marker {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+.leaflet-edit-move {
+    cursor: move;
+}
+
+.leaflet-draw-guide-dash {
+    font-size: 1%;
+    opacity: 0.6;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.measuring-label-tooltip .leaflet-popup-content-wrapper {
+    border-radius: 4px 4px 4px 4px;
+    opacity: 1;
+    padding: 1px;
+    text-align: center;
+}
+
+.edit-look {
+    stroke-dasharray: 2, 10;
+}
+.leaflet-top {
+    top: 35px;
+}

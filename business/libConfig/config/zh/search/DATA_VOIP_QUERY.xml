@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Search Type="DATA_VOIP" DisplayName="IP电话" FullText="True">
+    <Combine>
+        <ConditionGroup GroupName="网络信息">
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="应用信息">
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="IP电话信息">
+            <Condition Item="USER_NAME,FRIEND_NAME" DisplayName="用户账号" ControlType="Text"/>
+            <Condition Item="USER_UID,FRIEND_UID" DisplayName="用户内部编号" ControlType="Text"/>
+            <Condition Item="USER_NICKNAME,FRIEND_NICKNAME" DisplayName="用户昵称" ControlType="Text"/>
+            <Condition Item="TIMEZONE,FRIEND_TIMEZONE" DisplayName="用户时区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_TIMEZONE"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="数据标签">
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+        </ConditionGroup>
+        <ConditionGroup GroupName="计费信息">
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+        </ConditionGroup>
+    </Combine>
+    <Template>
+            <Condition Item="CLIENT_IP" DisplayName="客户端IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="CLIENT_AREA" DisplayName="客户端区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVER_IP" DisplayName="服务器IP" ControlType="TextRange" ValueType="ip" Rule="ip"/>
+            <Condition Item="SERVER_AREA" DisplayName="服务器区域" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_IP_AREA"/>
+            <Condition Item="SERVICE_NAME" DisplayName="应用名" ControlType="Text"/>
+            <Condition Item="USER_NAME" DisplayName="登录方账号" ControlType="Text"/>
+            <Condition Item="FRIEND_NAME" DisplayName="好友账号" ControlType="Text"/>
+            <Condition Item="USER_UID" DisplayName="登录方内部编号" ControlType="Text"/>
+            <Condition Item="FRIEND_UID" DisplayName="好友内部编号" ControlType="Text"/>
+            <Condition Item="USER_NICKNAME" DisplayName="登录方昵称" ControlType="Text"/>
+            <Condition Item="FRIEND_NICKNAME" DisplayName="好友昵称" ControlType="Text"/>
+            <Condition Item="TIMEZONE" DisplayName="登录方时区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_TIMEZONE"/>
+            <Condition Item="FRIEND_TIMEZONE" DisplayName="好友时区" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_TIMEZONE"/>
+            <Condition Item="DATA_CHARACTER" DisplayName="数据特性" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_DATA_CHARACTER"/>
+            <Condition Item="LANGUAGE" DisplayName="语种" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_LANGUAGE"/>
+            <Condition Item="STYPE" DisplayName="异常类型" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_STYPE"/>
+            <Condition Item="AAA_USERNAME" DisplayName="计费账号/手机号" ControlType="Text"/>
+            <Condition Item="AAA_MSISDN_PHONE_CITY" DisplayName="号码归属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+            <Condition Item="AAA_CALLINGNUM" DisplayName="手机卡串号" ControlType="Text"/>
+            <Condition Item="AAA_IMEI" DisplayName="手机机身号" ControlType="Text"/>
+            <Condition Item="BASE_STATION" DisplayName="基站" ControlType="Text" ValueType="UserPosition" Rule="UserPosition"/>
+            <Condition Item="BASE_STATION_CITY" DisplayName="基站属地" ControlType="DropDownMultiSelect" ValueType="multi" ItemConfig="DIC_PHONE_CITY"/>
+    </Template>
+</Search>

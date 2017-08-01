@@ -1,0 +1,200 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet"  href="/css/skin/datatables.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jqx.base.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-multiselect.css">
+<style type="text/css">
+.qq-tree-container ul.fancytree-container {
+    height: 540px;
+    border: none;
+    padding: 10px
+}
+
+.qq-group ul.fancytree-container {
+    border: 1px solid #DDD;
+    height: 360px;
+}
+
+.meta-dialog:hover {
+    cursor: pointer;
+}
+#actioninfo-tag .tm-tag{
+    font-size: 15px;
+}
+
+.hoverStyle{
+    color:#3498db;
+    /*border-bottom: solid #3498db 1px;*/
+}
+
+.ui-contextmenu {
+    z-index: 10000;
+}
+
+/** timeline **/
+
+#timeline .timeline-date {
+    z-index: 1;
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #fff;
+    color: #1d6fa5;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 3px;
+    left: -30px;
+    right: auto;
+    box-shadow: 0 0 0 3px #eee
+}
+.loader{
+    height: 30vh;
+}
+.loader-style{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    z-index: 9999;
+}
+</style>
+<!-- end shim -->
+<!-- shim toolbar -->
+<button type="button" title="导出Word" data-toggle="tooltip" data-placement="bottom" id="btn-export-word" class="btn btn-default btn-sm mr10">
+    导出Word
+</button>
+<!-- end shim -->
+<script type="text/javascript">
+window._pageConfig = {
+    page: '/renlifang/search.html'
+}
+</script>
+<section id="content">
+    <div class="page-heading" style="border-bottom:1px solid #ccc;background-color:#ffffff;">
+        <div class="media clearfix">
+            <div class="media-left pr30">
+                <a href="javascript:void(0);">
+                    <img id="profile-avatar" class="media-object mw80" src="/img/avatar-placeholder.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body va-m">
+                <h3 class="media-heading">
+                    <!-- <a href="javascript:void(0);"> -->
+                        <span id="profile-name" class="text-primary"></span>
+                        <span id="name-confidence-range" class="text-primary mn fs14 fw500"></span>
+                    <!-- </a> -->
+
+                    <small class="ml10">
+                        <span class="fa fa-credit-card"></span>
+                        <span id="profile-cert"></span>
+                        <span id="cert-confidence-range" class="text-primary mn fs14 fw500"></span>
+                    </small>
+                </h3>
+                <div class="mt10">
+                    <span id="profile-address" class="hidden"></span>
+                    <span id="address-confidence-range" class="text-primary mr10 fs14 fw500">--</span>
+                    <a href="javascript:void(0);">
+                        <span class="fa fa-phone hidden"></span>
+                        <span id="profile-phone"></span>
+                    </a>
+                    <span id="phone-confidence-range" class="text-primary mn fs14 fw500"></span>
+                </div>
+                <div id='suspicious-action-tag' class='mt10 hidden'></div>
+            </div>
+        </div>
+    </div>
+    <div class="panel" style="margin: 0px -20px 0px;background-color:#ffffff;">
+        <div class="panel-heading">
+            <ul class="nav panel-tabs-border panel-tabs panel-tabs-left" id="auth-tabs">
+                <li class="type-tab active" id="tab-summary">
+                    <a href="#summary" data-toggle="tab">概要</a>
+                </li>
+                <li class="type-tab" id="tab-properties">
+                    <a href="#properties" data-toggle="tab">属性</a>
+                </li>
+                <li class="type-tab hidden" id="tab-relations">
+                    <a href="#relations" data-toggle="tab">关系</a>
+                </li>
+                <li class="type-tab hidden" id="tab-relations-predict">
+                    <a href="#relations-predict" data-toggle="tab">关系推测</a>
+                </li>
+                <li class="type-tab hidden" id="tab-behavior">
+                    <a href="#behaviors" data-toggle="tab">行为数据</a>
+                </li>
+                <li class="type-tab hidden" id="tab-actioninfo">
+                    <a href="#actioninfo" data-toggle="tab">行为轨迹</a>
+                </li>
+                <li class="type-tab hidden" id="tab-suspicious-action">
+                    <a href="#suspicious-action" data-toggle="tab">可疑行为</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-body" style="min-height:600px">
+            <div class="tab-content pn br-n" id="auth-content">
+                <div id="summary" class="tab-pane fade in active"></div>
+                <div id="properties" class="tab-pane fade"></div>
+                <div id="relations" class="tab-pane fade"></div>
+                <div id="relations-predict" class="tab-pane fade"></div>
+                <div id="actioninfo" class="tab-pane fade">
+                    <div id="timeline" class="mt30 timeline-single">
+                        <!-- Timeline Divider -->
+                        <div class="timeline-divider mtn row">
+                            <div class="col-md-3 divider-label mt20" id="actioninfo-start">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                            </div>
+                            <div class="col-md-11">
+                                <label id="times-statistic" class="mn" style="display:none">最后一次出行记录的一年内到达城市次数统计</label>
+                                <div id="actioninfo-tag" style="padding-top:2px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Timeline - Left Column -->
+                            <div class="col-sm-6 left-column" id="actioninfo-timeline-items">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="suspicious-action" class="tab-pane fade"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ul id="option" class="ui-helper-hidden content-menu">
+    <li data-command="searchbykey"><i class="glyphicon glyphicon-search"></i><span>一键搜</span></li>
+</ul>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.filter.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.storage.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.edit.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxdata.export.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.export.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxgrid.grouping.js"></script>
+<script type="text/javascript" src="/js/components/jqwidgets/jqxpanel.js"></script>
+<script type="text/javascript" src="/js/components/lib/jbase64.js"></script>
+<script type="text/javascript" src="${entryRoot}/url-util.js"></script>
+<script type="text/javascript" src="${entryRoot}/renlifang-profile.js"></script>

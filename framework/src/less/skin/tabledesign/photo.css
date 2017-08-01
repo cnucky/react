@@ -1,0 +1,59 @@
+.photo{
+	height:160px;
+	text-align:center;
+	/*background-image:url('noImage.gif');*/
+	background-position:center center;
+	background-repeat:no-repeat;
+	text-align:center;
+	vertical-align:middle;
+	/*display:table-cell;*/
+}
+
+.photo2{
+	background-image:none;
+}
+
+.photo div.thumbnail{
+	margin:3px;
+	display:inline-block;
+	*display:inline;
+	width:100px;
+	height:127px;
+}
+.photo div.thumbnail img{
+	width:100%;
+	display:inline-block;
+	*display:inline;
+}
+.photo .tagDiv{
+	width:42px;
+	height:42px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:center center no-repeat
+}
+.photo .aTag{
+	left:0px;
+	top:0px;
+}
+.photo .bTag{
+	right:0px;
+	top:0px;
+}
+.photo .cTag{
+	left:0px;
+	bottom:0px;
+}
+.photo .dTag{
+	right:0px;
+	bottom:0px;
+}
+
+.photo .btnDiv{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	text-align:center;
+	left:0px
+}

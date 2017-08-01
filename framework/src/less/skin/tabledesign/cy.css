@@ -1,0 +1,84 @@
+
+.cy{
+  /*border-bottom:2px solid #ccc;*/
+}
+
+.cy .bootstrap-datetimepicker-widget {
+  z-index: 999999999!important;
+  display: block!important;
+}
+
+.cy .titleLabel{
+  width:100%;
+  background-color:#ccc;
+  padding:10px;
+  font-size:+2px;
+  font-weight:bolder;
+  text-align: left;
+}
+.cy input[type=checkbox],.cy input[type=radio]{
+  margin:0px!important;
+  width:30px;
+}
+.cy label{
+  /*white-space:nowrap;*/
+  overflow:hidden;
+  text-overflow:ellipsis; 
+}
+
+.summernote{
+  height:250px;
+}
+
+.selectLi{
+  background-color:#3498db;
+}
+.selectLi label{
+  color:#fff!important;
+}
+
+
+.cy .row {
+	position: relative;
+    padding: 15px;
+    /*border-bottom: 1px solid #e2e2e2;*/
+}
+
+.cy .row .groupName{
+	position: relative;
+    height: 52px;
+    line-height: 49px;
+    letter-spacing: 0.2px;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 400;
+    background: #fafafa;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.cy .col-md-4{
+	/*padding-left: 40px;*/
+	text-align: right;
+}
+.cy .col-md-2{
+  /*padding-left: 40px;*/
+  text-align: right;
+}
+
+.cy .col-md-2{
+  /*padding-left: 40px;*/
+  text-align: right;
+}
+
+.cy .col-md-6{
+  padding-top: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.cy .col-md-12{
+  padding-top: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}

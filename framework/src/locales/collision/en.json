@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "new-task":"NEW-TASK",
+        "result-show":"SHOW-RESULT",
+        "runBtn": "Run",
+        "collisionType":"COLLISOIN-TYPE",
+        "collisionSemantic":"COLLISION-SEMANTIC",
+        "custom":"CUSTOM",
+        "customSemantic":"CUSTOM-SEMANTIC",
+        "add-button":"ADD",
+        "semanticAdded":"SEMANTIC-ADDED",
+        "other":"OTHER",
+        "firstSet":"FIRST-SET",
+        "collisionNumber":"COLLISION-NUMBER",
+        "collisionCondition":"CONDITION"
+    }
+}

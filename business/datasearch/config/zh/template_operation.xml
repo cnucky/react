@@ -1,0 +1,24 @@
+<TemplateOperation>
+    <ValueType name="text">
+        <Operation key="EQ"/>
+        <Operation key="STARTWITH"/>
+        <Operation key="ENDWITH"/>
+        <Operation key="LIKE"/>
+    </ValueType>
+    <ValueType name="number">
+        <Operation key="BTW"/>
+    </ValueType>
+    <ValueType name="ip">
+        <Operation key="BTW"/>
+    </ValueType>
+    <ValueType name="date">
+        <Operation key="BTW"/>
+    </ValueType>
+    <ValueType name="multi">
+        <Operation key="IN"/>
+        <Operation key="NOTIN"/>
+    </ValueType>
+    <ValueType name="UserPosition">
+        <Operation key="EQ"/>
+    </ValueType>
+</TemplateOperation>

@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CONFIG_SPYSYSTEM>
+    <AREAS>
+        <AREA NAME="DataCenter" AREA_CODE="650000"/>
+    </AREAS>
+    <!-- 系统类型定义 -->
+    <SYSTEMS>
+        <SYSTEM NAME="A-interface system" SYSTEM_CODE="50008" SPY_FORM_CODE="100001">
+            <CLUE_TYPES>
+                <CLUE_TYPE CODE="MSISDN"/>
+                <CLUE_TYPE CODE="IMSI"/>
+                <CLUE_TYPE CODE="IMEI"/>
+            </CLUE_TYPES>
+        </SYSTEM>
+        <SYSTEM NAME="Internet interception system" SYSTEM_CODE="70005" SPY_FORM_CODE="100005" SERVICES="*">
+            <CLUE_TYPES>
+                <CLUE_TYPE CODE="EMAILADDR"/>
+                <CLUE_TYPE CODE="IMACCOUNT"/>
+                <CLUE_TYPE CODE="IMGROUP"/>
+                <CLUE_TYPE CODE="FTPACCOUNT"/>
+                <CLUE_TYPE CODE="TELNETACCOUNT"/>
+                <CLUE_TYPE CODE="NETACCOUNT"/>
+                <CLUE_TYPE CODE="RADIUS_ADSL"/>
+                <CLUE_TYPE CODE="IP"/>
+                <CLUE_TYPE CODE="IPSEG"/>
+                <CLUE_TYPE CODE="ISDN"/>
+                <CLUE_TYPE CODE="MSISDN"/>
+                <CLUE_TYPE CODE="IMSI"/>
+                <CLUE_TYPE CODE="IMEI"/>
+                <CLUE_TYPE CODE="MAC"/>
+                <CLUE_TYPE CODE="PORT"/>
+                <CLUE_TYPE CODE="IP_PORT"/>
+                <CLUE_TYPE CODE="IPSEG_PORT"/>
+            </CLUE_TYPES>
+        </SYSTEM>
+    </SYSTEMS>
+    <!-- 线索类型定义 -->
+    <CLUE_TYPES>
+        <CLUE_TYPE NAME="Fixed Line Number" CODE="ISDN" TYPE="string" RULE="\S" HINT="Required(Number)">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Mobile Telephone Number" CODE="MSISDN" TYPE="string" RULE="\S" HINT="Required(Number)">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+                <SERVICE CODE="WAPRADIUS"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IMSI/MIN" CODE="IMSI" TYPE="string" RULE="\S" HINT="Required.">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+                <SERVICE CODE="WAPRADIUS"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IMEI/ESN" CODE="IMEI" TYPE="string" RULE="\S" HINT="Required.">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+                <SERVICE CODE="WAPRADIUS"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Email Address" CODE="EMAILADDR" TYPE="string" RULE="\w+([-+.]\w)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                   HINT="e.g. abc@mail.com">
+            <SERVICES>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Chat Account" CODE="IMACCOUNT" TYPE="complex" RULE="\S"
+                   HINT="Account and Service name should be seperated by comma.">
+            <FIELDS>
+                <FIELD NAME="Account" CODE="IMACCOUNT" TYPE="string" RULE="\S" HINT="Required."/>
+                <FIELD NAME="Service name" CODE="SERVICENAME" TYPE="string" RULE="DP_SERVICENAME_IM" HINT=""/>
+            </FIELDS>
+            <SERVICES>
+                <SERVICE CODE="IM"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Chat Group Number/Name" CODE="IMGROUP" TYPE="string" RULE="\S" HINT="Required.">
+            <SERVICES>
+                <SERVICE CODE="IM"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="FTP Account" CODE="FTPACCOUNT" TYPE="complex" RULE="\S"
+                   HINT="Account and Server IP should be seperated by comma.">
+            <FIELDS>
+                <FIELD NAME="Account" CODE="NETACCOUNT" TYPE="string" RULE="\S" HINT="Required."/>
+                <FIELD NAME="Server IP" CODE="IP" TYPE="string" RULE="ip"
+                       HINT="e.g. 192.4.196.25 or CDCD:910A:2222:5498:8475:1111:3900:2020"/>
+            </FIELDS>
+            <SERVICES>
+                <SERVICE CODE="FTP"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Telnet Account" CODE="TELNETACCOUNT" TYPE="complex" RULE="\S"
+                   HINT="Account and Server IP should be seperated by comma.">
+            <FIELDS>
+                <FIELD NAME="Account" CODE="NETACCOUNT" TYPE="string" RULE="\S" HINT="Required."/>
+                <FIELD NAME="Server IP" CODE="IP" TYPE="string" RULE="ip"
+                       HINT="e.g. 192.4.196.25 or CDCD:910A:2222:5498:8475:1111:3900:2020"/>
+            </FIELDS>
+            <SERVICES>
+                <SERVICE CODE="TELNET"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Network Account" CODE="NETACCOUNT" TYPE="string" RULE="\S" HINT="Required.">
+            <SERVICES>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="HTTPTRACE"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Billing Account" CODE="RADIUS_ADSL" TYPE="string" RULE="\S" HINT="Required.">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IP Address" CODE="IP" TYPE="string" RULE="ip"
+                   HINT="e.g. 192.4.196.25 or CDCD:910A:2222:5498:8475:1111:3900:2020">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IP Segment" CODE="IPSEG" TYPE="string" RULE="ipseg"
+                   HINT="Start IP and end IP should be seperated by minus.">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="Port" CODE="PORT" TYPE="string"
+                   RULE="^(0|([1-9]\d{0,3})|([1-5]\d{4})|(6[0-4]\d{3})|(65[0-4]\d{0,3})|(655[0-2]\d)|(6553[0-5]))$"
+                   HINT="0 to 65535">
+            <SERVICES>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IP Address+Port" CODE="IP_PORT" TYPE="complex" RULE="\S"
+                   HINT="IP and port should be seperated by comma.">
+            <FIELDS>
+                <FIELD NAME="IP Address" CODE="IP" TYPE="string" RULE="ip"
+                       HINT="e.g：192.4.196.25 or CDCD:910A:2222:5498:8475:1111:3900:2020"/>
+                <FIELD NAME="Port" CODE="PORT" TYPE="string"
+                       RULE="^(0|([1-9]\d{0,3})|([1-5]\d{4})|(6[0-4]\d{3})|(65[0-4]\d{0,3})|(655[0-2]\d)|(6553[0-5]))$"
+                       HINT="0 to 65535"/>
+            </FIELDS>
+            <SERVICES>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="IP Segment+Port" CODE="IPSEG_PORT" TYPE="complex" RULE="\S"
+                   HINT="Start IP and end IP should be seperated by minus,IP segment and port should be seperated by comma.">
+            <FIELDS>
+                <FIELD NAME="IP Segment" CODE="IPSEG" TYPE="string" RULE="ipseg"
+                       HINT="Start IP and end IP should be seperated by minus."/>
+                <FIELD NAME="Port" CODE="PORT" TYPE="string"
+                       RULE="^(0|([1-9]\d{0,3})|([1-5]\d{4})|(6[0-4]\d{3})|(65[0-4]\d{0,3})|(655[0-2]\d)|(6553[0-5]))$"
+                       HINT="0 to 65535"/>
+            </FIELDS>
+            <SERVICES>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+            </SERVICES>
+        </CLUE_TYPE>
+        <CLUE_TYPE NAME="MAC Address" CODE="MAC" TYPE="string" RULE="^(([A-Fa-f0-9]{2}-){5}[A-Fa-f0-9]{2})$"
+                   HINT="e.g. 1F-23-AD-45-09-BB。">
+            <SERVICES>
+                <SERVICE CODE="CALL"/>
+                <SERVICE CODE="VOIP"/>
+                <SERVICE CODE="SMS"/>
+                <SERVICE CODE="WAPMMS"/>
+                <SERVICE CODE="FAX"/>
+                <SERVICE CODE="EVENT"/>
+                <SERVICE CODE="RADIUS"/>
+                <SERVICE CODE="EMAIL"/>
+                <SERVICE CODE="IM"/>
+                <SERVICE CODE="HTTPBBS"/>
+                <SERVICE CODE="HTTPSNS"/>
+                <SERVICE CODE="HTTPBLOG"/>
+                <SERVICE CODE="HTTPWEIBO"/>
+                <SERVICE CODE="FTP"/>
+                <SERVICE CODE="TELNET"/>
+                <SERVICE CODE="VPNDETECT"/>
+                <SERVICE CODE="SSL"/>
+                <SERVICE CODE="DNS"/>
+                <SERVICE CODE="RAWDATA"/>
+                <SERVICE CODE="FLOWDATA"/>
+                <SERVICE CODE="WAPRADIUS"/>
+            </SERVICES>
+        </CLUE_TYPE>
+    </CLUE_TYPES>
+    <!-- 表单定义 -->
+    <SPY_FORMS>
+    </SPY_FORMS>
+    <APPROVAL_FORMS>
+    </APPROVAL_FORMS>
+</CONFIG_SPYSYSTEM>

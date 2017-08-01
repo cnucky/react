@@ -1,0 +1,37 @@
+<div class="modal fade">
+    <div class="modal-dialog" style='width:450px;'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">分类标签</h4>
+            </div>
+            <div class="modal-body">
+                <div class='row '>
+                    <div class='col-md-12'>
+                        <!-- <div class='col-md-7 col-md-offset-1'>
+                			
+                		</div>
+                		<div class='col-md-2'>
+                			
+                		</div> -->
+                        <div class='center fancytree-filter'>
+                            <input style='margin-right:20px;width:220px'  ng-model='filterValue' id='filter-input' ng-keyup='myKeyup($event)' class='tree-filter-input'>
+                            <button ng-click='filter()' style='height:25px;' class='btn btn-xs btn-primary'>搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-12'>
+                        <fancytree id="tagTree" disabled="false" checkbox="false" debuglevel="0"></fancytree>
+                    </div>
+                    <div class='col-md-12'>
+                        <custom-value-row></custom-value-row>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer" ng-show='multiSelectFlag'>
+                <button type="button" ng-click="ctrl.close()" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div> -->
+        </div>
+    </div>
+</div>

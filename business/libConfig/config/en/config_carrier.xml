@@ -1,0 +1,7 @@
+<CONFIG_DATA>
+    <CARRIER CODE="-1" NAME="Insensitive"/>
+    <CARRIER CODE="50" NAME="Smart"/>
+    <CARRIER CODE="51" NAME="Viettel"/>
+    <CARRIER CODE="52" NAME="CamGSM"/>
+    <CARRIER CODE="0" NAME="Others"/>
+</CONFIG_DATA>

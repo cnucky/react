@@ -1,0 +1,23 @@
+{
+    "tab-data-tree": "数据",
+    "tab-components-tree": "组件",
+    "searchInputPlaceholder": "过滤...",
+    "clearBtn": "清除",
+    "loadModelBtn": "载入模型",
+    "runBtn": "运行",
+    "taskInfoBtn": "运行信息",
+    "new-model": "模型另存为",
+    "save-model": "保存模型",
+    "import-model": "从本地打开",
+    "export-model": "导出到本地",
+    "ligature": "节点连线",
+    "removeEdge": "删除元素",
+    "overview": "鹰眼图",
+    "storeimg": "保存图片",
+    "longitudinal-hierarchical": "自动调整",
+    "toggle-direction": "纵向布局",
+    "model-apply": "模型固化",
+    "show-detail": "节点详情",
+    "show-result": "数据结果",
+    "start-task": "提交整个建模任务"
+}

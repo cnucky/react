@@ -1,0 +1,11 @@
+{
+    "code": 0 ,
+    "message": "",
+    "data":
+    [
+        { "semanticID": 1, "semanticName": "PHONE", "semanticDisplayName": "电话号码"},
+        { "semanticID": 2, "semanticName": "IPADDR", "semanticDisplayName": "IP地址"},
+        { "semanticID": 3, "semanticName": "ID", "semanticDisplayName": "身份证号码"},
+        { "semanticID": 4, "semanticName": "MESSAGECONTENT", "semanticDisplayName": "短信息内容"}
+    ]
+}

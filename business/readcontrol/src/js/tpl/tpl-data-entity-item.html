@@ -1,0 +1,60 @@
+<!--PHONE_NUMBER        号码-->
+<!--ENTITY_COUNT        出现次数-->
+<!--PHONE_LOC           归属地区-->
+<!--IN_PHONE_BOOK       是否已经在号码簿-->
+<!--PHONE_BOOK_NAME     号码簿名称-->
+<!--REMARK              备注 -->
+<!--ENTITY_COUNT: "28"-->
+<!--IN_PHONE_BOOK: "1"-->
+<!--PHONE_BOOK_NAME: "1"-->
+<!--PHONE_LOC: ""-->
+<!--PHONE_NUMBER: "1"-->
+<!--REMARK: "1"-->
+
+<% _.each(Data, function(item) { %>
+    <div class="mobile-info">
+        <div >
+            <div class="mobile-head" >
+                <span class="glyphicon glyphicon-phone phone-img" ></span>
+                <span class=" info-value phone-number" ><%- item.PHONE_NUMBER %></span>
+                <!--<span style="float:right;">-->
+                     <!--<span  class="head-icon-btn btn btn-sm phone-detail" data-i18n="[title]mobileentity.mobileinfo.menu.mobile_archive" >-->
+                         <!--<span style="font-size: 12px;margin-right:0px;" class="glyphicons glyphicons-list  text-white " ></span>-->
+                    <!--</span>-->
+                <!--</span>-->
+            </div>
+          <div class="right-panel">
+
+
+              <div class="info-item">
+                  <span class="info-key" data-i18n="mobileentity.mobileinfo.entity_count"></span>
+                  <span class="info-value">
+                    <a  class="record-number-link" data-i18n="[title]mobileentity.mobileinfo.entity_count"><%- item.ENTITY_COUNT %></a></span>
+              </div>
+
+              <div class="info-item">
+                  <span class="info-key" data-i18n="mobileentity.mobileinfo.phone_loc"></span>
+                  <span class="other-item info-value"><%- item.PHONE_LOC %></span>
+              </div>
+              <div class="info-item">
+                  <span class="info-key" data-i18n="mobileentity.mobileinfo.phonebook_exist"></span>
+                  <span class="other-item info-value ">
+                      <span class="glyphicons  <%- item.PHONEBOOK_EXIST == 1 ? 'glyphicons-ok_2' : '' %> " ></span>
+                  </span>
+              </div>
+
+              <div class="info-item">
+                  <span class="info-key" data-i18n="mobileentity.mobileinfo.phone_book_name"></span>
+                  <span class="other-item info-value"><%- item.PHONEBOOK_NAME %></span>
+              </div>
+
+              <div class="info-item">
+                  <span class="info-key" data-i18n="mobileentity.mobileinfo.phonebook_remake"></span>
+                  <div class="remark-item  info-value" title="<%- item.PHONEBOOK_REMARK %>"><%- item.PHONEBOOK_REMARK %></div>
+                  <!--<div class="remark-item  info-value" title="<%- item.remark %>"><%- item.PHONE_BOOK_REMARK %></div>-->
+              </div>
+          </div>
+        </div>
+
+    </div>
+    <% }) %>

@@ -1,0 +1,115 @@
+{
+    "code": 0,
+    "message": "",
+    "data": [{
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 123,
+        "userId": 24,
+        "moduleName": "用户管理",
+        "operationName": "新增",
+        "ip": "192.168.0.1",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffs",
+        "detailType": 1,
+        "detailId": 123
+    }, {
+        "id": 343324534,
+        "userId": 24,
+        "moduleName": "用户管理adsf",
+        "operationName": "新增sdf",
+        "ip": "192.168.0.1sadf",
+        "mac": "",
+        "operationTime": "2016-01-06 9:20:21",
+        "content": "dsffdsfsdfs",
+        "detailType": 1,
+        "detailId": 123
+    }]
+}

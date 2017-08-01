@@ -1,0 +1,387 @@
+{
+  "datasearch":{
+    "onekey-search": "一键搜索",
+    "sort-search": "分类查询",
+    "template-search": "模板查询",
+    "file-search": "文件查询",
+    "system-search": "专项系统",
+    "dianwei-search": "电围查询",
+    "special-search": "专项查询",
+    "searchall":{
+      "buttons": {
+        "btnBatch":"批量协查",
+        "btnSingle":"单个搜索",
+        "btnSearch":"查询",
+        "btn_import":"从文件导入",
+        "btn_map":"从地图导入",
+        "btn_add":"添加",
+        "btn_cancel": "取消"
+      },
+      "tab_header":{
+        "li_address":{
+          "text":"码址/关键词",
+          "tip_s":"码址 / 手机号 / 手机卡号 / 机身号 / 宽带账号 / 关键词",
+          "tip_b":"多行，每行一个码址 / 手机号 / 手机卡号 / 机身号 / 宽带账号 / 关键词"
+        },
+        "li_url":{
+          "text":"网站信息",
+          "tip_s":"主机名 / Url",
+          "tip_b":"多行，每行一个主机名 / Url"
+        },
+        "li_ip":{
+          "text":"IP地址/段",
+          "tip_s":"支持IPv4和IPv6，IP段的两个IP中间用减号分隔",
+          "tip_b":"多行，每行一个IP或IP段，IP段的两个IP中间用减号分隔"
+        },
+        "li_lacci":{
+          "text":"基站信息",
+          "tip_s":"LAC和CI用逗号分隔",
+          "tip_b":"多行，每行一组LAC和CI，中间用逗号分隔"
+        }
+      },
+      "basestation_table":{
+        "carrier":"运营商",
+        "carrier_code":"运营商编号",
+        "base_station":"基站",
+        "operation":"操作"
+      },
+      "labels":{
+        "data_type":"数据类型:",
+        "all":"全部",
+        "custom":"自定义",
+        "selectall":"全选",
+        "search_position":"检索位置:",
+        "structured_only":"协议信息",
+        "structured_text":"协议信息+文本内容"
+      },
+      "js":{
+        "basestation":"基站:",
+        "carrier":"运营商:",
+        "select_basestation":"基站选取",
+        "delete":"删除",
+        "import_warning":"数据已存在或者错误，部分数据导入成功!",
+        "illegal_input":"输入值不合法!",
+        "failed":"提交失败!",
+        "succeeded":"提交成功!",
+        "wrong_time_range":"请输入正确的时间范围!",
+        "lack_datacenter":"请选择数据中心!",
+        "lack_search_position":"请选择检索位置!",
+        "lack_datatype":"请选择数据类型!",
+        "too_many_conditions":"查询条件过多",
+        "max_conditions":"查询条件不能超过1000行",
+        "batch":"批量",
+        "one_key_search":"一键搜索",
+        "wrong_address":"请正确输入码址或关键词",
+        "wrong_url":"请正确输入主机名或 Url",
+        "wrong_ip":"请输入合法的 IP 或 IP 段",
+        "address":"码址:",
+        "cap_time":"截获时间",
+        "search_position":"检索位置",
+        "one_key_search_type":"一键搜类型:",
+        "basestation_exists":"基站已存在!",
+        "address_type":"码址/关键词",
+        "url_type":"网站信息",
+        "ip_type":"IP地址/段",
+        "basestation_type":"基站信息",
+        "datatable":{
+          "processing": "正在加载中标数据...",
+          "lengthMenu": "每页显示_MENU_条数据",
+          "sZeroRecords": "0条数据",
+          "info": "当前显示_START_到_END_条，共有_TOTAL_条数据",
+          "search": "搜索",
+          "paginate": {
+            "sFirst": "首页",
+            "previous": "前一页",
+            "next": "后一页",
+            "sLast": "尾页"
+          }
+        }
+      },
+      "notify":{
+        "pick-up-success": "Extract successfully!",
+        "pick-up-faild": "Fail to extract!",
+        "no-related-diagram": "No related mind map!"
+      }
+    },
+    "datacenter-range":{
+      "return_numbers":"返回数",
+      "max_numbers":"每个数据中心最大返回记录数:",
+      "datacenter":"数据中心:",
+      "message": {
+        "no-datacenter": "没有数据中心权限"
+      }
+    },
+    "time-range":{
+      "recent_week":"近一周",
+      "recent_month":"近一月",
+      "recent_halfyear":"近半年",
+      "recent_year":"近一年",
+      "custom":"自定义",
+      "to":" 到 ",
+      "select_time":"时间选择:"
+    },
+    "search-service":{
+      "failed":"任务提交失败!",
+      "succeeded":"任务提交成功!",
+      "checkresult_faild": "规则检测失败!",
+      "failed_cluelist": "有失败的搜索条件!",
+      "failed_resourcelist": "系统资源不足!",
+      "examinfos_failed": "获取审批信息失败!"
+    },
+    "searchfile":{
+      "labels":{
+        "filetype":"文件类型",
+        "office_meta_query":"office元信息查询",
+        "photo_meta_query":"图片元信息查询",
+        "file_md5_query":"文件MD5值查询",
+        "bin_character_query":"二进制特征查询",
+        "similar_picture_query":"相似图片查询",
+        "fax_note_query":"传真笔记查询",
+        "voice_query":"声纹特征查询",
+        "search_range":"查询范围",
+        "file_md5":"文件MD5值:",
+        "search_conditions":"查询条件",
+        "file_name":"文件名:",
+        "client_ip":"客户端IP:",
+        "server_ip":"服务器IP:",
+        "office_title":"标题:",
+        "office_author":"作者/修改者:",
+        "office_company":"公司名:",
+        "office_template":"模板名:",
+        "file_postfix":"文件扩展名:",
+        "app_device":"应用/设备:",
+        "long_lat":"拍摄经纬度:"
+      },
+      "buttons": {
+        "btnSearch":"查询",
+        "btn_import":"从文件导入",
+        "btn_map":"从地图导入",
+        "batch_import":"批量导入MD5值",
+        "pick_file":"选取文件进行计算"
+      },
+      "message":{
+        "not_authorized":"权限判断失败!",
+        "lack_datacenter":"请选择数据中心",
+        "wrong_time_range":"请输入正确的时间范围",
+        "failed":"提交失败!",
+        "succeeded":"提交成功!"
+      },
+      "title":{
+        "coordinate_position":"选择地理坐标范围",
+        "longitude":"经度:",
+        "latitude":"纬度:",
+        "longitude_range":"经度范围",
+        "latitude_range":"纬度范围"
+      },
+      "text":{
+        "file_search":"文件查询:",
+        "cap_time":"截获时间:",
+        "md5_placeholder":"每行输入一个MD5值,支持从预先编辑好的文件中批量导入;\r\n支持选取本地文件,由系统计算其MD5值"
+      }
+    },
+    "search-validation":{
+      "wrong_ip":"请输入正确的IP地址!",
+      "wrong_email":"请输入正确的邮箱地址!",
+      "wrong_number":"请输入正确的数字!",
+      "wrong_int":"请输入正确的整数!",
+      "wrong_time":"请输入正确的时间!"
+    },
+    "searchsort": {
+      "button": {
+        "search": "查询"
+      },
+      "group-name": {
+        "search-range": "查询范围"
+      },
+      "notify-title": {
+        "input-right-num-range": "请输入正确的取值范围!",
+        "choose-datacenter": "请选择数据中心!"
+      },
+      "param-str": {
+        "cap-time": "截获时间"
+      }
+    },
+    "protocol-checkbtn": {
+      "label": {
+        "data-type":"数据类型",
+        "use-vpn": "使用VPN"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "全选",
+        "non-selected-text": "未选",
+        "selected-text": "已选",
+        "all-selected-text": "所有"
+      },
+      "tag-multi-select-param": {
+        "placeholder": "请点击选择"
+      },
+      "message": {
+        "no-data-type": "没有数据权限"
+      }
+    },
+    "searchtemplate": {
+      "aside": {
+        "title": " 模板选择 ",
+        "subtitle": " 选择已有模板,或创建新的模板",
+        "create-template": "创建模板",
+        "existing-template": "已有模板"
+      },
+      "button": {
+        "save": "保存",
+        "save-as": "另存为",
+        "delete": "删除",
+        "search": "查询",
+        "clear-template": "清空模板"
+      },
+      "label": {
+        "can-edit": "可编辑",
+        "template-name": "模板名",
+        "use-vpn": "使用VPN"
+      },
+      "text": {
+        "input-template-name": "请输入模版名"
+      },
+      "notify-title": {
+        "get-template-list-faild": "获取模板列表失败!",
+        "add-template-success": "添加成功!",
+        "add-template-faild": "添加失败!",
+        "del-template-success": "删除成功!",
+        "del-template-faild": "删除失败!",
+        "update-template-success": "更新成功!",
+        "update-template-faild": "更新失败!",
+        "get-template-condition-faild": "获取模板内容失败!",
+        "get-datatype-faild": "获取协议分类失败!",
+        "get-opt-type-faild": "获取操作类型失败!",
+        "get-dropdown-item-faild": "获取下拉项失败!",
+        "choose-datacenter": "请选择数据中心!",
+        "input-condition": "请填写查询条件!",
+        "input-template-name": "请输入模板名!",
+        "input-wrong": "输入格式错误!",
+        "template-is-empty": "模板内容为空!"
+      },
+      "dialog-title":{
+        "prompt": "提示",
+        "change-template": "更换模板类型，未保存的模板内容将被清空!",
+        "is-clear-template": "确定清空模板吗?",
+        "template-save-as": "另存模板"
+      },
+      "bootbox-msg": {
+        "is-del": "是否删除?"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "全选",
+        "non-selected-text": "未选",
+        "selected-text": "已选",
+        "all-selected-text": "所有"
+      },
+      "param-str": {
+        "cap-time": "截获时间"
+      },
+      "template-bar": {
+        "relation": "关系",
+        "condition": "条件"
+      }
+
+    },
+    "searchsystem": {
+      "aside": {
+        "system-type": "专项系统",
+        "dianwei-search": "电围前台查询"
+      }
+    },
+    "searchdianwei": {
+      "title": {
+        "search-range": "查询范围",
+        "search-condition": "查询条件"
+      },
+      "button": {
+        "search": "查询",
+        "delete": "删除"
+      },
+      "label": {
+        "search-type": "查询类型",
+        "num-type": "号码类型",
+        "number": "号码",
+        "imsi": "卡号",
+        "imei": "机身号",
+        "num-content": "号码内容",
+        "match-side": "匹配位置",
+        "user": "本端",
+        "oppo": "对端",
+        "user-country": "用户归属国家",
+        "user-area": "用户归属地区",
+        "oppo-country": "对方归属国家",
+        "oppo-area": "对方归属地区",
+        "bs-info": "基站信息",
+        "sms-content": "短信内容"
+      },
+      "display-attr": {
+        "number": "号码",
+        "imsi": "用户手机卡号",
+        "imei": "用户手机机身号",
+        "user": "用户",
+        "oppo": "对端",
+        "user-country": "用户归属国家",
+        "user-area": "用户归属地区",
+        "oppo-country": "对方归属国家",
+        "oppo-area": "对方归属地区",
+        "sms-content": "短信内容"
+      },
+      "text": {
+        "import-from-file": "从文件导入",
+        "one-each-line": "每行一个",
+        "msc-code": "交换机代码",
+        "in-20": "20字以内"
+      },
+      "search-type": {
+        "number-search": "号码查询",
+        "area-search": "属地查询",
+        "bs-search": "基站查询",
+        "sms-search": "短信查询"
+      },
+      "notify-title": {
+        "choose-datacenter": "请选择数据中心!",
+        "input-number": "请填写号码!",
+        "choose-num-side": "请选择匹配位置!",
+        "choose-country-or-area": "请选择国家或地区!",
+        "only-country-or-area": "只能选择国家或地区!",
+        "basestation-already-exist": "基站已存在!",
+        "part-data-import-success": "数据已存在或者错误，部分数据导入成功!",
+        "input-basestation-info": "请输入基站信息!",
+        "too-much-search-condition": "查询条件过多!",
+        "cannot-greater-than-1000": "查询条件不能超过1000行!",
+        "input-sms-content": "请填写短信内容!",
+        "sms-content-too-long": "填写内容过长（20字以内）!"
+      },
+      "dropdown-multi-select-param": {
+        "select-all-text": "全选",
+        "non-selected-text": "未选",
+        "selected-text": "已选",
+        "all-selected-text": "所有"
+      },
+      "datatable": {
+        "processing": "正在加载中标数据...",
+        "lengthMenu": "每页显示_MENU_条数据",
+        "sZeroRecords": "0条数据",
+        "info": "当前显示_START_到_END_条，共有_TOTAL_条数据",
+        "search": "搜索",
+        "sFirst": "首页",
+        "previous": "前一页",
+        "next": "后一页",
+        "sLast": "尾页",
+        "carrier": "运行商",
+        "carrier-code": "运营商编号",
+        "base-station": "基站",
+        "msc-code": "交换机代码",
+        "operation": "操作"
+      },
+      "param-str": {
+        "cap-time": "截获时间",
+        "carrier-code": "运营商编号",
+        "user-msc": "用户方交换机代码",
+        "user-bs": "用户当前基站",
+        "bs-info": "基站信息"
+      }
+    }
+  }
+}

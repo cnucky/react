@@ -1,0 +1,20 @@
+<div class="timeline-item">
+    <div class="timeline-date">
+        <span> <%- date %></span>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <table class="table table-hover">
+                <tbody>
+                    <% _.each(action, function(item) { %>
+                        <tr>
+                            <td>
+                                <%- item.action %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

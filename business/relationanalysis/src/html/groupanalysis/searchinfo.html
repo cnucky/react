@@ -1,0 +1,53 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/fonts/alibaba/alibaba.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/bootstrap-datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+
+<style type="text/css">
+
+
+</style>
+<!-- BEGIN: page scripts -->
+<script type="text/javascript">
+    var _pageConfig = {
+        title: '亲密度分析'
+    };
+
+</script>
+<!-- end shim -->
+<section ref="analysisPanel" id="content" class="tab-block p10">
+    <ul class="nav tabs-left tabs-border">
+        <li class="active">
+            <a href="#content-container" data-toggle="tab" aria-expanded="true"><i class="text-purple pr5 fs16 " ></i>亲密度分析</a>
+        </li>
+        <li>
+            <a href="#content-container1" data-toggle="tab" aria-expanded="true"><i class="text-purple pr5 fs16 " ></i>群组分析</a>
+        </li>
+        <li>
+            <a href="#content-container2" data-toggle="tab" aria-expanded="true"><i class="text-purple pr5 fs16 " ></i>关系探索</a>
+        </li>
+
+    </ul>
+
+    <div  class="tab-content pn" style="height: 100%">
+    	<!--界面主体-->
+        <div id="content-container"  class="tab-pane panel-container fade active in tab-box" >
+
+        </div>
+        <div id="content-container1" class="tab-pane panel-container fade tab-box" >
+
+        </div>
+
+        <div id="content-container2" class="tab-pane panel-container fade tab-box" >
+
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="${entryRoot}/group-analysis-search.js"></script>
+<script type="text/javascript" src="${entryRoot}/multi-target-searchinfo.js"></script>
+<script type="text/javascript" src="${entryRoot}/relationship-analysis-search.js"></script>

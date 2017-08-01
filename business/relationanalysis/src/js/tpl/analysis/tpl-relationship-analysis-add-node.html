@@ -1,0 +1,130 @@
+<form class="admin-form mt20" id="search-form">
+    <div class="col-md-12 mt10">
+        <div class="col-md-3">
+            <label class="control-label pull-right mt10">实体 1：</label>
+        </div>
+        <div class="input-group col-md-6">
+            <div class="input-group-btn" id="query-node-box1">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-user fa-fw"></span> 身份证
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:void(0);" data-type='1' id="button_1">
+                            <span class='fa fa-user fa-fw'></span> 身份证
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='5' id="button_5">
+                            <span class='fa fa-phone-square fa-fw'></span> 手机
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='12' id="button_12">
+                            <span class='fa fa-envelope fa-fw'></span> 电子邮箱
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='2' id="button_2">
+                            <span class='fa fa-ticket fa-fw'></span> 护照
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='3' id="button_3">
+                            <span class='fa fa-cc-visa fa-fw'></span> 签证
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='16' id="button_16">
+                            <span class='alibaba alitao fs14'></span> 淘宝
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='17' id="button_17">
+                            <span class='alibaba alipay fs14'></span> 支付宝
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /btn-group -->
+            <input id="txt-query-node-key-src" type="text" class="form-control" aria-label="...">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="col-md-12 mt10">
+        <div class="col-md-3">
+            <label class="control-label pull-right mt10">实体 2：</label>
+        </div>
+        <div class="input-group col-md-6">
+            <div class="input-group-btn" id="query-node-box2">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="<%- types[0].icon.name %> fa-fw"></span>
+                    <%- types[0].caption %>
+                        <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="javascript:void(0);" data-type='1' id="button_1">
+                            <span class='fa fa-user fa-fw'></span> 身份证
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='5' id="button_5">
+                            <span class='fa fa-phone-square fa-fw'></span> 手机
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='12' id="button_12">
+                            <span class='fa fa-envelope fa-fw'></span> 电子邮箱
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='2' id="button_2">
+                            <span class='fa fa-ticket fa-fw'></span> 护照
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='3' id="button_3">
+                            <span class='fa fa-cc-visa fa-fw'></span> 签证
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='16' id="button_16">
+                            <span class='alibaba alitao fs14'></span> 淘宝
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-type='17' id="button_17">
+                            <span class='alibaba alipay fs14'></span> 支付宝
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /btn-group -->
+            <input id="txt-query-node-key-dst" type="text" class="form-control" aria-label="...">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="col-md-12 mt10" style="text-align: center">
+        <div class="col-md-6 center-block">
+            <button id="btn-query-node-search" type="submit" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-search"></span> 搜索
+            </button>
+        </div>
+    </div>
+</form>

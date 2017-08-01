@@ -1,0 +1,74 @@
+<section class="table-layout">
+    <div class="col-md-4">
+        <h5 class="mt5 mbn ph10 pb5 br-b fw600" data-i18n="workspace.tb-appstatus">
+            <!--<small class="pull-right fw600 text-primary">审批中 </small>-->
+        </h5>
+        <table class="table mbn tc-med-1 tc-bold-last tc-fs13-last" id = "approval-result">
+            <thead>
+            <tr class="hidden">
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <i class="fa fa-circle text-warning fs8 pr15"></i>
+                    <span data-i18n="workspace.tb-processtype"></span>
+                </td>
+                <td><%-processType%></td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-circle text-warning fs8 pr15"></i>
+                    <span data-i18n="workspace.tb-processname"></span>
+                </td>
+                <td><%- processName %></td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-circle text-warning fs8 pr15"></i>
+                    <span data-i18n="workspace.tb-businessstatus"></span>
+                </td>
+                <td><%- taskStatus %></td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-circle text-warning fs8 pr15"></i>
+                    <span data-i18n="workspace.tb-currentassignee"></span>
+                </td>
+                <td><%- currentAssignee%></td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa fa-circle text-warning fs8 pr15"></i>
+                    <span data-i18n="workspace.tb-result"></span>
+                </td>
+                <td><%- result%></td>
+            </tr>
+            </tbody>
+        </table>
+        <h5 class="mt15 mbn ph10 pb5 br-b fw600" data-i18n="workspace.tb-details">
+            <!--<small class="pull-right fw600 text-primary">View Report </small>-->
+        </h5>
+        <table class="table mbn tc-med-1" id="approval-details">
+            <thead>
+            <tr class="hidden">
+                <th></th>
+                <!--<th>Count</th>-->
+            <!--</tr>-->
+            </thead>
+            <tbody>
+
+            <tr>
+                <td >
+                    <!--<i class="fa fa-circle text-warning fs8 pr15"></i>-->
+                    <%-details%>
+                </td>
+                <!--<td>256</td>-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>

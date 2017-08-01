@@ -1,0 +1,41 @@
+<!-- shim styles -->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/fancytree/ui.fancytree.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/admin-forms.min.css">
+<link rel="stylesheet" type="text/css" href="/css/skin/jquery-ui-bts.css">
+<style type="text/css">
+#content-container {}
+
+header#topbar {
+    display: none;
+}
+
+#top-toolbar {
+    height: 42px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+
+#top-toolbar button {
+    margin-right: 5px;
+}
+</style>
+<!-- end shim -->
+<script type="text/javascript">
+
+window._pageConfig = {
+    title: "模型固化"
+}
+
+$(function() {
+    var container = $('#content-container');
+    container.height(window.innerHeight - container.offset().top);
+})
+</script>
+<section id="content-container">
+</section>
+<script type="text/javascript" src="${entryRoot}/model-apply.js"></script>

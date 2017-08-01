@@ -1,0 +1,47 @@
+<section class="table-layout">
+    <div class="tab-content mw900 center-block center-children">
+        <div class="admin-form theme-info tab-pane mw700 active" id="add-user" role="tabpanel">
+            <form id="form-add">
+                <div id="alert-container-fixed" class="mb5" style="display: none">
+                    <div class="alert light alert-dismissable nova-alert alert-warning" id="alert-keyword-empty">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <i class="fa fa-keyboard-o pr10"></i>
+                        <strong data-i18n="rolemanage.tpl-norole"></strong>
+                    </div>
+                </div>
+                <div class="section">
+                    <label for="add-role-name" class="field-label"
+                           data-i18n="rolemanage.tpl-rolename"></label>
+                    <label for="name" class="field">
+                        <input type="text" name="add-role-name" id="add-role-name" class="gui-input">
+                    </label>
+                </div>
+                <!-- end section -->
+                <div class="section">
+                    <label for="add-role-type" class="field-label" data-i18n="rolemanage.tpl-roletype"></label>
+                    <label class="field select">
+                        <select id="add-role-type" name="role">
+                            <option value="0" data-i18n="rolemanage.enum-nomal"></option>
+                            <option value="1" data-i18n="rolemanage.enum-useradmin"></option>
+                            <option value="2" data-i18n="rolemanage.enum-authadmin"></option>
+                            <option value="3" data-i18n="rolemanage.enum-logadmin"></option>
+                        </select>
+                        <i class="arrow double"></i>
+                    </label>
+                </div>
+                <!-- end section -->
+                <div class="section">
+                    <label for="add-role-description" class="field-label"
+                           data-i18n="rolemanage.tpl-description"></label>
+                    <label for="add-role-description" class="field">
+                        <textarea type="description" name="add-role-description" id="add-role-description"
+                                  class="gui-textarea" style="vertical-align: top;"></textarea>
+                    </label>
+                </div>
+                <!-- end section -->
+                <!-- end .form-body section -->
+            </form>
+            <!-- end .admin-form section -->
+        </div>
+    </div>
+</section>
