@@ -25,11 +25,9 @@ srcEntityId = Util.getURLParameter('srcentityid');
 dstEntityType = Util.getURLParameter('dstentitytype');
 dstEntityId = Util.getURLParameter('dstentityid');
 
-
 initNetwork();
 
 getEntityData().then(function(entityData) {
-    console.log(entityData)
     renderNetwork('entity', entityData.nodes, entityData.edges);
 
     hideLoader();
@@ -163,11 +161,12 @@ function constructEntityData(nodeinfo, edgeinfo) {
     _.each(nodeinfo, function(item) {
         // 搜索的两个实体节点设为 fixed
         var nodeItem;
-        if ((item.nodeId + item.nodeType) === (srcEntityId + srcEntityType) || (item.nodeId + item.nodeType) === (dstEntityId + dstEntityType)) {
-            nodeItem = _.extend({}, item, { fixed: true, nodeId: item.nodeId + '_' + item.nodeType });
-        } else {
-            nodeItem = _.extend({}, item, { fixed: false, nodeId: item.nodeId + '_' + item.nodeType });
-        }
+        /*  if ((item.nodeId + item.nodeType) === (srcEntityId + srcEntityType) || (item.nodeId + item.nodeType) === (dstEntityId + dstEntityType)) {
+         nodeItem = _.extend({}, item, { fixed: true, nodeId:  item.nodeType + '_' +item.nodeId });
+         } else {
+         nodeItem = _.extend({}, item, { fixed: false, nodeId: item.nodeType + '_' +item.nodeId});
+         }*/
+        nodeItem = _.extend({}, item, {nodeId:  item.nodeType + '_' +item.nodeId });
         nodeItem.keyword = item.nodeId;
         nodes.add(generateNode(nodeItem, 'nodeId', 'nodeTitle'));
         //console.log(generateNode(nodeItem, 'nodeId', 'nodeTitle'));
@@ -177,13 +176,13 @@ function constructEntityData(nodeinfo, edgeinfo) {
     _.each(edgeinfo, function(item) {
         //console.log(item);
         //var id = [item.fromNodeId,item.fromNodeType,item.toNodeId, item.toNodeType].sort().join('_');
-        var id = [item.fromNodeId,item.fromNodeType,item.toNodeId, item.toNodeType].join('_');
+        var id = [item.fromNodeType,item.fromNodeId, item.toNodeType,item.toNodeId].join('_');
         //console.log(id);
         var preEdge = edges.get(id);
         //console.log(preEdge);
         var edgeItem;
         if (preEdge === null) {
-            edgeItem = _.extend({ id: id }, item);
+            edgeItem = _.extend({}, item, { id: id});
             edges.add(generateEntityEdge(edgeItem, 'fromNodeId', 'toNodeId'));
             //console.log("!!");
         } else {
@@ -206,20 +205,21 @@ function constructPersonData(nodeInfo, edgeInfo) {
     _.each(nodeInfo, function(item) {
         // 遍历 persons 里的 nodes，如果包含搜索的两个节点就把这个 person 节点设为fixed
         _.each(item.nodes, function(item1) {
-            if ((item1.nodeId + item1.nodeType) === (srcEntityId + srcEntityType) || (item1.nodeId + item1.nodeType) === (dstEntityId + dstEntityType)) {
-                item = _.extend({ nodeType: 0, fixed: true }, item);
-            } else {
-                item = _.extend({ nodeType: 0, fixed: false }, item);
-            }
+            /*if ((item1.nodeId + item1.nodeType) === (srcEntityId + srcEntityType) || (item1.nodeId + item1.nodeType) === (dstEntityId + dstEntityType)) {
+             item = _.extend({ nodeType: 0, fixed: true }, item);
+             } else {
+             item = _.extend({ nodeType: 0, fixed: false }, item);
+             }*/
+            item = _.extend({ nodeType: 0}, item);
         });
-            
+
         // 人物节点的悬浮上去显示节点包含的 persons 里的 nodes 的全部 personName
         var titleArray = [];
         titleArray.push(item.personName);
         // 人物节点的悬浮上去显示节点包含的 persons 里的 nodes 的全部 nodeTitle
         /*   _.each(item.nodes, function(item) {
-            titleArray.push(item.nodeTitle);
-        });*/
+         titleArray.push(item.nodeTitle);
+         });*/
         var nodeItem = _.extend({ titleArray: titleArray.toString() }, item);
 
         nodes.add(generateNode(nodeItem, 'personId', 'personName', 'titleArray'));
@@ -252,7 +252,6 @@ function generateNode(node, id, label, title) {
     }
 
 
-    var srcEntityType = 5;var srcEntityId = '15298836424_5';var dstEntityType = 5;var dstEntityId = '15298836152_5';
 
     var  generateNode= {};
     if((node.nodeId == srcEntityType + '_' + srcEntityId && node.nodeType == srcEntityType) || (node.nodeId == dstEntityType + '_' + dstEntityId && node.nodeType == dstEntityType) ){
@@ -311,8 +310,8 @@ function generateNode(node, id, label, title) {
 function generateEntityEdge(edge, from, to) {
     return {
         id: edge.id,
-        from: edge[from] + '_' + edge.fromNodeType,
-        to: edge[to] + '_' + edge.toNodeType,
+        from: edge.fromNodeType + '_' + edge[from],
+        to: edge.toNodeType + '_' + edge[to],
         title: edge.linkedTitle.toString(),
         font: {
             align: 'top'
@@ -492,14 +491,14 @@ function showNodeDetail(nodeId) {
         item.keyword = item.nodeId;
     })
     var nodesInfo = networkName==='entity'?[{
-                nodeId: node.id,
-                nodeType: node.nodeType,
-                keyword: node.origNode.keyword
-            }]:node.origNode.nodes;
+            nodeId: node.id,
+            nodeType: node.nodeType,
+            keyword: node.origNode.keyword
+        }]:node.origNode.nodes;
 
 
-    $.getJSON('/relationanalysis/relationgraph/getnodedetail', { 
-        nodes: JSON.stringify(nodesInfo) 
+    $.getJSON('/relationanalysis/relationgraph/getnodedetail', {
+        nodes: JSON.stringify(nodesInfo)
     }, function(rsp) {
         loader.hide();
         if (rsp.code != 0 || !rsp.data) {
@@ -536,122 +535,43 @@ function inflateNodeDetail(dataList) {
     });
 }
 
-// 增加展示窗口空间
-var leftObject = null; //This gets a value as soon as a resize start
 
-function resizeObject() {
-    this.el = null; //pointer to the object
-    this.dir = "";      //type of current resize (n, s, e, w, ne, nw, se, sw)
-    this.grabx = null;     //Some useful values
-    this.graby = null;
-    this.width = null;
-    this.height = null;
-    this.left = null;
-    this.top = null;
-}
 
-//Find out what kind of resize! Return a string inlcluding the directions
-function getDirection(el) {
-    var xPos, yPos, offset, dir;
-    dir = "";
+//拉伸面板------
+(function() {
+    var lastY;
+    $('#right-panel-splitter').draggable({
+        cursor: "s-resize",
+        axis: 'y',
+        distance: 10,
+        containment: '#content',
+        scorll: false,
+        start: function (event, ui) {
+            $('#right-panel-splitter').addClass('btn-info light');
+            lastY = ui.position.top;
+        },
+        drag: function (event, ui) {
+            var deltaY = ui.position.top - lastY;
+            lastY = ui.position.top;
+            var newHeight = $('#panel-container').height() + deltaY;
+            if (newHeight < 150 || newHeight > window.innerHeight / 1.25 ) {
+                $('#right-panel-splitter').removeClass('btn-info light');
+                event.preventDefault();
+                return;
+            }
+            $('#panel-container').height(newHeight);
+        },
+        stop: function (event, ui) {
+            var deltaY = ui.position.top - lastY;
+            lastY = ui.position.top;
+            var newHeight = $('#panel-container').height() + deltaY;
+            $('#panel-container').height(newHeight);
 
-    xPos = window.event.offsetX;
-    yPos = window.event.offsetY;
-
-    offset = 8; //The distance from the edge in pixels
-
-    if (yPos<offset) {
-        dir += "n";
-    } else if (yPos > el.offsetHeight-offset){
-        dir += "s";
-    }
-    if (xPos<offset) {
-        dir += "w";
-    }else if (xPos > el.offsetWidth-offset){
-        dir += "e";
-    }
- 
-    return dir;
-}
-
-function doDown() {
-    var el = getReal(event.srcElement, "className", "resizeMe");
-    var er = getReal(event.srcElement, "className", "resizeRight");
-
-    if (el == null) {
-        theobject = null;
-        return;
-    }  
-
-    dir = getDirection(el);
-    if (dir == "") {
-        return;
-    }
-
-    leftObject = new resizeObject();
-  
-    leftObject.el = el;
-    leftObject.dir = dir;
-
-    leftObject.grabx = window.event.clientX;
-    leftObject.graby = window.event.clientY;
-    leftObject.width = el.offsetWidth;
-    leftObject.height = el.offsetHeight;
-    leftObject.left = el.offsetLeft;
-    leftObject.top = el.offsetTop;
-
-    window.event.returnValue = false;
-    window.event.cancelBubble = true;
-}
-
-function doUp() {
-    if (leftObject != null) {
-        leftObject = null;
-    }
-}
-
-function doMove() {
-    $('#panel-top').removeClass('panel-shadow');
-    var el, er, xPos, yPos, str, xMin, yMin;
-    xMin = 200; //The smallest width possible
-    yMin = 200; //             height
-
-    el = getReal(event.srcElement, "className", "resizeMe");
-    er = getReal(event.srcElement, "className", "resizeRight");
-    if (el.className == "panel-body resizeMe") {
-        str = getDirection(el);
-        //Fix the cursor 
-        if (str != "s") {
-            str = "default";
-        }else {
-            str += "-resize";
-            $('#panel-top').addClass('panel-shadow');
+            $('#right-panel-splitter').removeClass('btn-info light').css({
+                top: 'auto',
+                bottom: 0
+            });
         }
-        el.style.cursor = str;
-    }
+    });
+} ());
 
-    //Dragging starts here
-    if(leftObject != null) {
-        if (dir.indexOf("s") != -1){
-            leftObject.el.style.height = Math.max(yMin, leftObject.height + window.event.clientY - leftObject.graby) + "px";
-        }
-        window.event.returnValue = false;
-        window.event.cancelBubble = true;
-    } 
-}
-
-function getReal(el, type, value) {
-    temp = el;
-    while ((temp != null) && (temp.tagName != "BODY")) {
-        if (eval("temp." + type) == value) {
-            el = temp;
-            return el;
-        }
-        temp = temp.parentElement;
-    }
-    return el;
-}
-
-document.onmousedown = doDown;
-document.onmouseup   = doUp;
-document.onmousemove = doMove;

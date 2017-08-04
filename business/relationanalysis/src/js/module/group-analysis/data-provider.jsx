@@ -80,7 +80,7 @@ export default class DataProvider {
                 edges:entityEdges,
             }
         }
-        console.log('start',Date.now() % 100000)
+
 
         return this.filterEntity = getEntityNodesLinks(data);
 

@@ -111,8 +111,21 @@
         bottom: 10px;
         left: 95px;
     }
-    .panel-shadow{
-        box-shadow: 0 0 10px #888;
+
+    #right-panel-splitter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    z-index: 10;
+    pointer-events: auto;
+    width: 100%;
+    margin-bottom: -2px;
+    }
+
+    #right-panel-splitter:hover {
+        background-color: #3BAFDA;
+        cursor: s-resize;
     }
 </style>
 <!-- end shim -->
@@ -124,7 +137,7 @@
     }
 </script>
 <section id="content" class="animated fadeIn">
-    <div class="panel" id="panel-top">
+    <div class="panel">
         <div class="panel-heading">
             <span id="panel-title" class="panel-title">
                 <span class="fa fa-file-text"></span>中间人分析</span>
@@ -135,7 +148,7 @@
                 </button>
             </div>
         </div>
-        <div class="panel-body resizeMe" style="height: 400px;">
+        <div class="panel-body" id="panel-container" style="height: 400px;">
             <div id="entity-div" style="height: 100%;">
                 <div style="border: 1px solid #e2e2e2; height: 100%;">
                     <div id="entity" style="height: 100%;">
@@ -170,6 +183,7 @@
             <div id="entity-table" data-initmark="true" style="height: 100%; display: none">
             </div>
         </div>
+        <div id="right-panel-splitter"></div>
     </div>
     <div class="row">
         <div class="col-md-6" id="position0">

@@ -57,6 +57,23 @@ export default class NodeFilter extends React.Component {
         this.props.onChange && this.props.onChange(newSelected, this.state.relationTypes);
     }
 
+    allSelect(){
+        var newSelected = [];
+        var selectedTypes = this.state.entityTypes;
+        if(selectedTypes.length === this.state.allEntities.length){
+            newSelected = [];
+
+        } else {
+            _.each(this.state.allEntities, item=> {
+                newSelected.push(item);
+            });
+        }
+        console.log(newSelected);
+
+        this.setState({entityTypes: newSelected});
+        this.props.onChange && this.props.onChange(newSelected, this.state.relationTypes);
+    }
+
     selectRelation(value, e) {
         var newSelected = [], isSelected;
         _.each(this.state.relationTypes, item=> {
@@ -75,21 +92,7 @@ export default class NodeFilter extends React.Component {
         this.props.onChange && this.props.onChange(this.state.entityTypes, newSelected);
     }
 
-    allSelect(){
-        var newSelected = [];
-        var selectedTypes = this.state.entityTypes;
-        if(selectedTypes.length === this.state.allEntities.length){
-            newSelected = [];
 
-        } else {
-            _.each(this.state.allEntities, item=> {
-                newSelected.push(item);
-            });
-        }
-
-        this.setState({entityTypes: newSelected});
-        this.props.onChange && this.props.onChange(newSelected, this.state.relationTypes);
-    }
 
     oneSelect(){
         var newSelected = [];
@@ -128,7 +131,6 @@ export default class NodeFilter extends React.Component {
 
 
     render() {
-        // console.log("render");
 
         if(this.props.types != undefined)
         {
@@ -143,6 +145,7 @@ export default class NodeFilter extends React.Component {
             var selectedTypes = this.state.entityTypes;
             var selectedRelations = this.state.relationTypes;
         }
+
         return (
             <div className="br-a panel-shadow p10" style={{background: '#fff', pointerEvents: 'auto', maxWidth: 455, marginTop: 3}}>
                 <Tabs defaultActiveKey="1" type="line">
@@ -268,7 +271,6 @@ export default class NodeFilter extends React.Component {
                     selectedRelations = props.types ? props.types.relation : _.keys(relations),
                     allEntities = _.keys(entities),
                     allRelations = _.keys(relations);
-                console.log(entities,relations);
                 break;
             case MODE.MULTI_TARGET:
                 // console.log(props)

@@ -317,7 +317,6 @@ var reducer = function(state = defaultState, action) {
 
             }
             delete newState[mode].detailData;
-            delete newState[mode].filterTypes;
             return _.assign({}, state, newState);
         }
         case 'TOGGLE_TREE': {

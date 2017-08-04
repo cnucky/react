@@ -1,7 +1,8 @@
 {
     "code": 0,
     "data": {
-        "edges": [{
+        "edges": [
+            {
             "fromNodeId": "15298836424",
             "fromNodeType": 5,
             "linkedTitle": "关联",
