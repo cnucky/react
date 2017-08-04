@@ -233,7 +233,7 @@ var Time=React.createClass({
         } else if (_.contains(["isNull", "isNotNull"], opr)){
             datetimePicker = (<ValueInput className="form-control ph5" style={{height: '40px'}} disabled={true} onChange={this.valueChange}/>);
         } else {
-            datetimePicker = (<BsDateTimePicker type="range" needDel={false} formatString="yyyy-MM-dd HH:mm:ss" value={this.props.value && _.isEmpty(this.props.value)&&this.props.value.length!=2?null:this.props.value}
+            datetimePicker = (<BsDateTimePicker type="range" needDel={false} formatString="yyyy-MM-dd" value={this.props.value && _.isEmpty(this.props.value)&&this.props.value.length!=2?null:this.props.value}
                                                 inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:value.split('~'))} />);
         }
 

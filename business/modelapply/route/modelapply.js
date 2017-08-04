@@ -137,6 +137,106 @@ router.post('/submitValues', function(req, res) {
     }, res.endj);
 });
 
+router.get('/listbireportTree',function(req,res){
+    TaskApi(req).getModelDir()
+        .then(function(rsp) {
+            var dirs = rsp.data;
+            TaskApi(req).getSolid({modelType:501})
+                .then(function(rsp2) {
+                    console.log('getsolid', rsp2.data, '\n\n\n\n');
+                    var datasource = rsp2.data;
+                    var sysRoot = [];
+                    var personalRoot = [];
+                    var sysIdmap = {};
+                    var personalIdmap = {};
+                    var returnData = [];
+                    var result = {
+                        systree:[],
+                        personaltree:[]
+                    };
+
+                    function findParent(dir, tree, idmap) {
+                        if (!idmap[dir.parentId]) {
+                            if (!_.contains(tree, dir)) {
+                                tree.push(dir);
+                            }
+                        } else {
+                            var parent = idmap[dir.parentId];
+                            if (parent) {
+                                parent.children = parent.children || [];
+                                if (!_.contains(parent.children, dir)) {
+                                    parent.children.push(dir);
+                                    parent.folder = true;
+                                    findParent(parent, tree, idmap);
+                                }
+                            }
+                        }
+
+                    }
+
+                    _.each(dirs.sysDir, function(dir) {
+                        sysIdmap[dir.dirId] = dir;
+                        dir.folder = false;
+                        dir.key = dir.dirId;
+                        dir.title = dir.dirName;
+                        dir.extraClasses = "nv-dir";
+                        dir.hideCheckbox = true;
+                    });
+
+                    _.each(dirs.personalDir, function(dir) {
+                        personalIdmap[dir.dirId] = dir;
+                        dir.folder = false;
+                        dir.key = dir.dirId;
+                        dir.title = dir.dirName;
+                        dir.extraClasses = "nv-dir";
+                        dir.hideCheckbox = true;
+                    })
+
+                    _.each(dirs.sysDir, function(dir){
+                        findParent(dir, sysRoot, sysIdmap);
+                    })
+
+                    _.each(dirs.personalDir, function(dir){
+                        findParent(dir, personalRoot, personalIdmap);
+                    })
+
+                    _.each(datasource, function(model) {
+                        var dir = sysIdmap[model.dirId];
+                        if (dir) {
+                            dir.children = dir.children || [];
+                            model.title = model.modelName;
+                            model.key = model.modelId;
+                            model.extraClasses = 'nv-model';
+                            dir.children.push(model);
+                            dir.folder = true;
+                            findParent(dir, result.systree, sysIdmap);
+                        }
+                    });
+
+                    _.each(datasource, function(model) {
+                        var dir = personalIdmap[model.dirId];
+                        if (dir) {
+                            dir.children = dir.children || [];
+                            model.title = model.modelName;
+                            model.key = model.modelId;
+                            model.extraClasses = 'nv-model';
+                            dir.children.push(model);
+                            dir.folder = true;
+                            findParent(dir, result.personaltree, personalIdmap);
+                        }
+                    });
+
+                    result.systree[0]==null?returnData.push(sysRoot[0]):returnData.push(result.systree[0]);
+                    result.personaltree[0]==null?returnData.push(personalRoot[0]):returnData.push(result.personaltree[0]);
+
+                    res.endj({
+                        code: 0,
+                        data: returnData
+                    });
+                }).catch(res.endj);
+        }).catch(res.endj);
+});
+
 router.post('/getAllData', function(req, res) {
     var params = req.query.solidId ? {solidId: req.query.solidId} : {
             modelDetail: JSON.parse(req.query.modelDetail)

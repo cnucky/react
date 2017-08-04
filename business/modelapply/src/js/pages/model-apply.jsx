@@ -26,9 +26,9 @@ registerLocales(require.context('../locales/ds-replace', false, /\.js/), 'module
 class ToolBar extends React.Component {
 
 	componentDidMount () {
-		window.onbeforeunload = function(event) {
-			return window.i18n.t("model-apply.some-data-may-not-be-saved");
-		}
+		//window.onbeforeunload = function(event) {
+		//	return window.i18n.t("model-apply.some-data-may-not-be-saved");
+		//}
 	}
 
 	reset(){
@@ -81,12 +81,18 @@ class ToolBar extends React.Component {
 			window.location = '/modelapply/model-apply.html?modelid=' + modelid;
 		});
 	}
+	changeReport(){
+		changeModel.open_report(function (solidid) {
+			//document.getElementById("changeTask").className='hide';
+			window.location = '/modelapply/model-apply.html?solidid=' + solidid;
+		});
+	}
 
     render() {
         return (
             <div id="top-toolbar" className="p5" style={{ position: 'relative' }}>
-                <Tooltip title="载入报表" placement="bottom">
-					<button type="button" className="btn btn-default btn-sm" style={{ position: 'relative' }} onClick={this.changeModel}>
+                <Tooltip title="载入模型固化" placement="bottom">
+					<button type="button" className="btn btn-default btn-sm" style={{ position: 'relative' }} onClick={this.changeReport}>
 	                    <i className="fa fa-folder-open fa-fw"></i>
                     </button>
                 </Tooltip>
@@ -113,7 +119,7 @@ class ToolBar extends React.Component {
 
 				{
 					!modelId && !solidId ? (
-						<div id="changeTask" style={{ position: 'absolute' ,right:'90px',top:'3px'}}>
+						<div id="changeTask" style={{ position: 'absolute' ,right:10,top:3}}>
 							<Tooltip title="选择模型" placement="bottom">
 								<a className="large red button"  onClick={this.changeModel}>请先选择模型</a>
 							</Tooltip>
@@ -121,7 +127,7 @@ class ToolBar extends React.Component {
 					):''
 				}
 
-                <button id='btn-subApp' type="button" className="btn btn-primary btn-sm pull-right disabled hide" onClick={this.doPost}>
+                <button id='btn-subApp' style={{display:'none'}} type="button" className="btn btn-primary btn-sm pull-right disabled " onClick={this.doPost}>
 	                 上传应用
 	            </button>
 

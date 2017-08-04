@@ -1,0 +1,130 @@
+@import "~antd/dist/antd.less";
+@icon-url: "/fonts/anticon/iconfont";
+
+/** card */
+.ant-card-bordered.active {
+	box-shadow: 0 1px 6px #7DCFE9;
+	border-color: #A7CFF0;
+}
+.ant-card-body {
+	padding: 0;
+}
+
+/** border */
+.border-none {
+	border: 0px;
+	border-radius: 0px;
+}
+
+.border-hover {
+	border: 1px solid white;
+	border-radius: 3px;
+}
+.border-hover:hover {
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 3px;
+}
+
+/** tabs */
+.ant-tabs-bar {
+	margin-bottom: 0px;
+}
+
+/** react-bootstrap-table */
+.react-bs-table-tool-bar .btn-success {
+    color: #666666;
+    background-color: #f7f7f7;
+}
+
+.react-bs-table-pagination .dropdown-menu {
+	top: -145px;
+}
+
+.react-bs-table-pagination .col-md-6:nth-child(2) {
+	height: 48px;
+	overflow: auto;
+}
+
+/** react-data-grid */
+.react-grid-checkbox-container {
+	text-align: center;
+}
+
+.ant-table-bordered.ant-table-fixed-header {
+	height: 360px;
+}
+
+.react-grid-Row .react-grid-checkbox-label {
+	margin: 5px 10px 5px 10px !important;
+}
+
+/** animation **/
+
+.button { background: #222  repeat-x 0 0; display: inline-block; padding: 5px 15px 6px; color: #fff !important; font-size: 13px; font-weight: bold; line-height: 1; text-decoration: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); border-bottom: 1px solid rgba(0,0,0,0.25); position: relative; cursor: pointer; overflow: visible; width: auto; }
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+.button:hover { background-color: #111; color: #fff; }
+.button:active { -webkit-transform: translateY(1px); -moz-transform: translateY(1px); }
+/* Small Buttons */
+
+/* Large Buttons */
+.large.button { font-size: 14px; padding: 8px 19px 9px; }
+/* Colors for our beloved buttons */
+
+.red.button { background-color: #ff5c00; }
+.red.button:hover { background-color: #d45500; }
+
+
+/* Make the buttons super awesomer */
+
+.large.super.button { background-position: left bottom; -webkit-border-radius: 18px; -moz-border-radius: 18px; }
+.large.super.button span { font-size: 14px; padding: 7px 20px 9px; -webkit-border-radius: 17px; -moz-border-radius: 17px; }
+
+@-webkit-keyframes redPulse {
+	from { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+	50% { background-color: #ff5c00; -webkit-box-shadow: 0 0 18px #ff5c00; }
+	to { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+a.button {
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s; }
+
+/*.box{ animation: change 1s  ease-in  infinite ; font-size: 20px; font-weight: 400}*/
+/*@keyframes change {*/
+	/*0%{color:#007d9a;  text-shadow: 0 0 4px #333}*/
+	/*50%{color:#2daebf; text-shadow: 0 0 40px #2daebf}*/
+	/*100%{color:#007d9a; text-shadow: 0 0 4px #333}*/
+/*}*/
+
+.button-icon-right:hover {
+	opacity: 0.6;
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);		/* IE 9 */
+	-webkit-transform: rotate(180deg);	/* Safari and Chrome */
+	-o-transform: rotate(180deg);		/* Opera */
+	-moz-transform: rotate(180deg);		/* Firefox */
+}
+.button-icon {
+	cursor: pointer;
+}
+.button-icon:hover {
+	opacity: 0.7;
+}
+.button-icon-right {
+	transform: rotate(0deg);
+}
+.button-icon-left {
+	transform: rotate(180deg)
+}
+.button-icon-left:hover {
+	opacity: 0.6;
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);		/* IE 9 */
+	-webkit-transform: rotate(360deg);	/* Safari and Chrome */
+	-o-transform: rotate(360deg);		/* Opera */
+	-moz-transform: rotate(360deg);		/* Firefox */
+}

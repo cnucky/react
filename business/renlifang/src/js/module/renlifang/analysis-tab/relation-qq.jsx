@@ -100,7 +100,9 @@ export default class RelationQQ extends React.Component {
                             if (data.node.extraClasses && data.node.extraClasses=='nv-group-item') {
                                 renderQQGroupDetail(data.node.data.number);
                             }
-                            if (data.node.extraClasses && data.node.extraClasses=='nv-qq-people') {
+                            let result=$("input[name=search]").val();
+
+                            if (data.node.extraClasses && data.node.extraClasses=='nv-qq-people' && result !== '') {
                                 window.open(UrlUtil.getProfileUrl(data.node.data.qq == undefined ? '' : data.node.data.qq, data.node.data.valueType == undefined ? '' : data.node.data.valueType));
                             }
                         },

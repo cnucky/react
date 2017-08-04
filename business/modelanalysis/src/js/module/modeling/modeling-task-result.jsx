@@ -140,7 +140,7 @@ var TaskResult = React.createClass({
                 </div>
                 <div className="flex-item ">
                     <div>
-                    <table className="table table-hover table-bordered modeling_table" id="table_modeling">
+                    <table className="table table-hover table-bordered modeling_table" id="table_modeling" style={{fontSize:'14px'}}>
                         <thead>
                         <tr>
                             {

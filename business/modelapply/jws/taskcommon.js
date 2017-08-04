@@ -415,6 +415,15 @@ module.exports = function (req, res) {
 			},
 			
 
+			"getSolid": function (args, callback) {
+				if (_.isFunction(args)) {
+					callback = args;
+					args = {};
+				}
+				return jws(url, "getSolid", args, callback, req, res);
+			},
+			
+
 			"getSolidModelInfoByDirId": function (args, callback) {
 				if (_.isFunction(args)) {
 					callback = args;
@@ -565,6 +574,15 @@ module.exports = function (req, res) {
 					args = {};
 				}
 				return jws(url, "previewNodeData", args, callback, req, res);
+			},
+			
+
+			"previewNodeData_old": function (args, callback) {
+				if (_.isFunction(args)) {
+					callback = args;
+					args = {};
+				}
+				return jws(url, "previewNodeData_old", args, callback, req, res);
 			},
 			
 

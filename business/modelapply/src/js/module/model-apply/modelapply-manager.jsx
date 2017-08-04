@@ -413,6 +413,7 @@ function submitValue(subOpts, onSub) {
     //var newWindow = window.open();
     var data = store.getState().data;
     var components = data.viewDetail.components;
+    var solidId = utils.getURLParameter('solidid');
     // console.log(data);
     /**valuesMap**/
     let value = [];
@@ -486,7 +487,7 @@ function submitValue(subOpts, onSub) {
                     type: 'success'
                 });
 
-                location.href ="/modelanalysis/modeling.html?taskid="+rsp.data;
+                location.href ="/modelanalysis/modeling.html?taskid="+rsp.data+'&solidid='+solidId;
                 //window.location.href = "/analysis/modeling.html?taskid="+rsp.data;
                 //setTimeout(function() {
                 //    window.open("/analysis/modeling.html?taskid="+rsp.data);
