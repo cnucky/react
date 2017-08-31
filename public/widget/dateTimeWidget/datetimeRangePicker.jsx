@@ -38,7 +38,7 @@ var DateTimeRangePicker = React.createClass({
                 break;
             case 'range':
                 cfg.type = "range";
-                if(props.value && props.value.length ==2){
+                if(props.value.length ==2){
                     cfg.startTime =props.value[0];
                     cfg.endTime =props.value[1];
                 }else{

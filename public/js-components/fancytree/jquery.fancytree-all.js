@@ -5708,7 +5708,7 @@ $.ui.fancytree._FancytreeNodeClass.prototype.editStart = function(){
 			options: tree.options,
 			isNew: $(node[tree.statusClassPropName]).hasClass("fancytree-edit-new"),
 			orgTitle: node.title,
-			input: '',
+			input: null,
 			dirty: false
 			};
 

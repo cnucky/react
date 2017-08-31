@@ -13,7 +13,6 @@ var rangeOption = {
     autoApply: true,
     timePicker: true,
     timePicker24Hour: true,
-    timePickerSeconds:true,
     linkedCalendars: false,
     autoUpdateInput: false,
     showCustomRangeLabel: false,

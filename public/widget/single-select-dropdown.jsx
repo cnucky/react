@@ -30,10 +30,10 @@ var DropDown = React.createClass({
 	},
 	render: function() {
 		var searchInput = this.state.searchInput;
-		var resultData = _.map(this.props.data, _.bind(function(item, index) {
+		var resultData = _.map(this.props.data, _.bind(function(item) {
 			if (item.title.indexOf(searchInput) >= 0) {
 				return (
-					<li style={{display: 'list-item'}} key={index + 2}>
+					<li style={{display: 'list-item'}}>
 						<a tabIndex="0">
 							<label className="radio">
 								<input type="radio" value={item.value} name="identity" onClick={this.handleItemClicked}/>
@@ -46,9 +46,9 @@ var DropDown = React.createClass({
 		},this))
 		return (
 			<div style={{display: this.state.display}}>
-				<div style={{position: 'fixed',top: 0,right: 0,left: 0,bottom: 0,zIndex: 0}} onClick={this.handleClose}/>
+				<div style={{position: 'fixed',top: '0',right: '0',left: '0',bottom: '0',zIndex: '0'}} onClick={this.handleClose}/>
 				<ul className="multiselect-container dropdown-menu" style={{maxHeight: '300px', display: 'block', overflow: 'auto', zIndex: '100'}}>
-					<li className="multiselect-item filter" value="0" key={1}>
+					<li className="multiselect-item filter" value="0">
 						<div className="input-group">
 							<span className="input-group-addon">
 								<i className="glyphicon glyphicon-search"/>

@@ -8,7 +8,7 @@ export default class ValueInput extends React.Component {
 	}
 
 	render() {
-		let {onBlur, onChange, splitWord, value, title, multiple, ...others} = this.props;
+		let {onChange, splitWord, value, title, multiple, ...others} = this.props;
 		splitWord = splitWord || ',';
 		return (<input {...others}  
 			value={!_.isArray(value) ? value : 
@@ -42,26 +42,10 @@ export default class ValueInput extends React.Component {
 					}
 					return false;
 				}
-			}}
-			onBlur={(e) => {
-				let value = e.target.value;
-				if(_.isEmpty(value)) {
-					value = [];
-				} else if(!multiple) {
-					value = [value];
-				} else if(value.indexOf(MAGIC_WORD) != -1) {
-					value = value.split(MAGIC_WORD);
-				} else {
-					value = value.split(splitWord);
-				}
-				if(onBlur) {
-					onBlur(value, e);
-				}
 			}} />)
 	}
 }
 
 ValueInput.propTypes = {
-	onChange: React.PropTypes.func,
-	onBlur: React.PropTypes.func
+	onChange: React.PropTypes.func
 }

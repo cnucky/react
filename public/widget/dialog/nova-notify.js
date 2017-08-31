@@ -5,50 +5,59 @@
  * 使用Bootstrap样式,type也可以是bootsrap中的success warning error danger等
  */
 require('pnotify');
-var PNotify = window.PNotify;
+
 // styling 可以是bootstrap2，bootstrap3，fontawesome, brighttheme(default)
 PNotify.prototype.options.styling = "bootstrap3";
 
-var _opts, openedNotify = {};
-var stackTopRight = {
+var _opts;
+var Stacks = {
+    'stack-top-right': {
         "dir1": "down",
         "dir2": "left",
-        "push": "top"
+        "push": "top",
+        "spacing1": 10,
+        "spacing2": 10
     },
-    stackTopLeft = {
+    'stack-top-left': {
         "dir1": "down",
         "dir2": "right",
         "push": "top",
         "spacing1": 10,
         "spacing2": 10
     },
-    stackBottomLeft = {
+    'stack-bottom-left': {
         "dir1": "right",
         "dir2": "up",
         "push": "top",
         "spacing1": 10,
         "spacing2": 10
     },
-    stackBottomRight = {
+    'stack-bottom-right': {
         "dir1": "left",
         "dir2": "up",
         "push": "top",
         "spacing1": 10,
         "spacing2": 10
     },
-    stackBarTop = {
+    'stack-bar-top': {
         "dir1": "down",
         "dir2": "right",
         "push": "top",
         "spacing1": 0,
         "spacing2": 0
     },
-    stackBarBottom = {
+    'stack-bar-bottom': {
         "dir1": "up",
         "dir2": "right",
         "spacing1": 0,
         "spacing2": 0
-    };
+    },
+    'stack-context': {
+        "dir1": "down",
+        "dir2": "left",
+        "context": $("#stack-context")
+    }
+}
 
 function _findWidth(noteStack) {
     if (noteStack == "stack-bar-top") {
@@ -75,68 +84,37 @@ function simpleNotify(title, text, type) {
 }
 
 function show(opts) {
-    if (_.isString(opts)) {
-        opts = {text: opts}
-    }
-    opts.title = opts.title || '';
-    opts.text = opts.text || opts.title;
-    // text为必选字段
-    if (opts.title == opts.text) {
-        opts.title = '';
-    }
-    opts.type = opts.type || 'info';
-
-    var noteStack = opts.stack || 'stack-topright';
-    var selectedStack = getStackOf(noteStack);
-    opts.width = opts.width || _findWidth(noteStack);
-
     _opts = opts;
-
-    var notifyKey = opts.title + opts.text + opts.type;
-    if (openedNotify[notifyKey]) {
+    if (_.isString(opts)) {
+        new PNotify(opts);
         return;
     }
-    openedNotify[notifyKey] = _opts;
+
+    if (_.isEmpty(opts.text)) {
+        opts.text = opts.title;
+        opts.title = '';
+    }
+    
+    var noteStack = opts.stack || 'stack-top-right';
+    var selectedStack = Stacks[noteStack];
 
     new PNotify({
             title: opts.title,
             text: opts.text,
             opacity: 1,
             addclass: noteStack,
-            type: opts.type,
-            // stack: selectedStack,
-            width: opts.width,
+            type: opts.type || 'info',
+            stack: selectedStack,
+            width: opts.width || _findWidth(noteStack),
             confirm: opts.confirm,
-            delay: opts.type === 'error' ? 5000 : 2000,
+            delay: 1200,
             buttons: {
                 sticker: false
             },
             animate_speed: 'fast',
-            afterOpen: function(notice, options) {
-                opts.afterOpen && opts.afterOpen(notice, options)
-            },
-            afterClose: function(notice, options) {
-                delete openedNotify[notifyKey];
-                opts.afterClose && opts.afterClose(notice, options)
-            }
+            afterOpen: opts.afterOpen,
+            afterClose: opts.afterClose
         });
-}
-
-function getStackOf(type) {
-    switch (type) {
-        case 'stack-topright':
-            return stackTopRight;
-        case 'stack-topleft':
-            return stackTopLeft;
-        case 'stack-bottomleft':
-            return stackBottomLeft;
-        case 'stack-bottomright':
-            return stackBottomRight;
-        case 'stack-bar-top':
-            return stackBarTop;
-        case 'stack-bar-bottom':
-            return stackBarBottom;
-    }
 }
 
 module.exports = {
