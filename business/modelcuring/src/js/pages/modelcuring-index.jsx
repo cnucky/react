@@ -25,7 +25,7 @@ class ModelcuringWrapper  extends React.Component {
                 item.markId = index
                 return item
             })
-            store.dispatch({type: 'GET_MODELDATA', modelData: modelData})
+            store.dispatch({type: 'GET_MODELDATA', modelData: modelData, isFirst: true})
         });
      
         // $.getJSON("/modelcuring/modelcuring/detailList", function(rsp) {
@@ -61,12 +61,11 @@ class ModelcuringWrapper  extends React.Component {
 
   	render () {
         var state = store.getState();
-        const { height, modelData, listData, modelType } = state
+        const { modelData, listData, modelType } = state
 
         return (
-            <div className="url_wrap" style={{height: `${height}px`, width: '100%'}}> 
+            <div className="url_wrap" style={{position: 'absolute', width: '100%', left: '0px', right: '0px', top: '40px', bottom: '0px'}}> 
                 <PageContent
-                    height={height}
                     listData={listData}
                     modelData={modelData}
                     modelType={modelType}

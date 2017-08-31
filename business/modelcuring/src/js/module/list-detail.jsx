@@ -9,6 +9,15 @@ let tabConfigs = [{
 }, {
     tab: 'myApps',
     label: '所有模型'
+}, {
+    tab: 'task',
+    label: '任务模型'
+}, {
+    tab: 'analyze',
+    label: '分析模型'
+}, {
+    tab: 'general',
+    label: '通用模型'
 }];
 
 class ListDetail extends React.Component {
@@ -50,14 +59,14 @@ class ListDetail extends React.Component {
     }
 
     render() {
-        const { height, listData, modelData } = this.props;
+        const { listData, modelData } = this.props;
         let {currentTab} = this.state;
         let tabs = [];
         _.each(tabConfigs, (cfg, index)=>{
             let isActive = currentTab == cfg.tab;
            
             tabs.push(
-                <li key={index} className={'' + (isActive ? 'li-active' : '')} >
+                <li key={index}>
                     <a className={isActive ? 'tab-wrap' : ''} onClick={(() => this.onTabChanged(cfg.tab))}>{cfg.label}
                         <span style={{marginLeft:'10px'}}>({this._getCount(cfg.tab)})</span>
                     </a>
@@ -65,7 +74,7 @@ class ListDetail extends React.Component {
             );
         }, this);
         return (
-            <div className="list-detail" style={{height: `${height}px`}}>
+            <div className="list-detail" style={{height: '100%'}}>
                 {/*<div className="list-title">
                     <h1 className="list-title-text">模型分类</h1>
                 </div>*/}
@@ -80,7 +89,6 @@ class ListDetail extends React.Component {
 }
 
 ListDetail.propTypes = {
-        height: React.PropTypes.number,
         listData: React.PropTypes.object,
         modelData: React.PropTypes.array
 };
