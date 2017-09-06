@@ -1,0 +1,12 @@
+{
+	"info": {
+		"notify-add-favor-fail": "add favorite fail",
+		"notify-add-favor-success": "add favorite success",
+		"notify-delete-favor-fail": "delete favorite fail",
+		"notify-delete-favor-success": "delete favorite success"
+	},
+	"module": {
+		"finish-btn": "finish",
+		"cancel-btn": "cancel"
+	}
+}

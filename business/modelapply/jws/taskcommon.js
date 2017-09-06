@@ -4,7 +4,7 @@ var _ = require('underscore');
 var path = require('path');
 var jws = require(path.join(process.cwd(), 'utils/jws'));
 var appConfig = require('../config.js');
-var url = 'http://' + appConfig['dc-analysis'] + '/CloudTaskCommon/services/TaskCommonService?wsdl';
+var url = 'http://' + appConfig['dc-analysis'] + ':8080/CloudTaskCommon/services/TaskCommonService?wsdl';
 
 module.exports = function (req, res) {
 	return {
@@ -748,7 +748,7 @@ module.exports = function (req, res) {
 			},
 			
 
-		url: 'http://' + appConfig['dc-analysis'] + '/CloudTaskCommon/services/TaskCommonService?wsdl'
+		url: 'http://' + appConfig['dc-analysis'] + ':8080/CloudTaskCommon/services/TaskCommonService?wsdl'
 	}
 
 }

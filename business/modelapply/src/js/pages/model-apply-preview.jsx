@@ -17,6 +17,9 @@ function getQueryString(name) {
         return unescape(r[2]);
     return null;
 }
+
+
+
 class Wrapper extends React.Component {
     componentWillUnmount() {
         var id = getQueryString('id');
@@ -25,7 +28,7 @@ class Wrapper extends React.Component {
 
     render() {
         return (
-            <App editable={true}/>
+            <App  editable={true} />
         );
     }
 }
@@ -51,6 +54,7 @@ if (solidId) {
 
 } else {
     data = JSON.parse(localStorage.getItem(id));
+    console.log(data)
     store.dispatch({
         type: 'REPLACE',
         data: data
@@ -59,7 +63,6 @@ if (solidId) {
         render(<PreviewWrapper />, document.getElementById('content-container'));
         hideLoader();
     });
-
 
 }
 

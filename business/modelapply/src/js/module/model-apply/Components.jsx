@@ -19,6 +19,7 @@ import { Tooltip, Row, Col} from 'antd';
 import ValueInput from 'widget/value-input';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import { Popconfirm, Switch, message } from 'antd';
 
 var dateTimeOpr = [{ key: 'equal', name: '等于', expert: true },
     { key: 'notEqual', name: '不等于', expert: true },
@@ -114,6 +115,7 @@ var Footer = React.createClass({
         var data = store.getState().data;
         var solidId = data.solidId || utils.getURLParameter('solidid');
         var nodes = data.nodes;
+        var asWidget = this.props.asWidget;
         return (
             <div className='app-component ph30 pv20'>
                 <Row type="flex" gutter="10px" justify="start" align="top" title={this.props.hint}>
@@ -126,12 +128,10 @@ var Footer = React.createClass({
                         <div>
                             {
                                 _.map(nodes, (item) =>
-                                    <span className={item.selected ? "tm-tag tm-tag-info" : "tm-tag"} 
+                                    <span className={"tm-tag tm-tag-info"}
                                         key={item.nodeId} onClick={this.tagClick} data-id={item.nodeId}
                                         style={{cursor: 'pointer'}}>
                                     <span>{item.title}</span>
-                                    {item.mapTarget && <span><i className="fa fa-long-arrow-right" style={{padding: '0 3px 0 3px'}}></i>{item.mapTarget.caption}
-                                    <a href="#" className="tm-tag-remove" onClick={(e) => this.removeColumnMapping(item.nodeId, e)}>x</a></span>}
                                     </span> 
                                 )
                             }
@@ -145,7 +145,7 @@ var Footer = React.createClass({
                     <span style={{fontSize:'13px',width:'100%',background:'#eee',padding:'20px',borderRadius:'5px'}}>模型描述:{this.props.describe}</span>
                 </Row>
                     {
-                        solidId &&(
+                        (solidId || asWidget) &&(
                             <div style={{marginTop:'30px'}}>
                                 <form action='' >
                                     <button onClick={this.submitValues} type='button' className="btn btn-primary" style={{minWidth:'100px',marginLeft:'42%',fontSize:'15px'}}>提交</button>
@@ -162,6 +162,65 @@ module.exports.Footer = Footer;
 /** 字符类型 */
 
 var Str=React.createClass({
+
+
+    getInitialState: function(){
+        return {
+            visible:false
+        }
+    },
+
+    onChangeValue:function(values,e){
+        let value=e.target.value;
+        this.setState({
+            value: value
+        })
+    },
+    uniqValue:function (values,e) {
+        let value = values;
+        let isUniq = false;
+
+        for(var i = 0; i < value.length - 1; i++) {
+            if (value[i] == value[i+1]) {
+                isUniq = true
+            }
+        }
+
+        if(isUniq){
+            this.setState({
+                visible:true,
+                value:value
+            })
+        }else {
+            store.dispatch({
+                type: 'CHANGE_VALUE',
+                index: this.props.index,
+                value: value
+            });
+            this.setState({
+                value:value
+            })
+        }
+
+    },
+    confirm:function () {
+        store.dispatch({
+            type: 'CHANGE_VALUE',
+            index: this.props.index,
+            value: _.uniq(this.state.value)
+        });
+        this.setState({ visible: false , value:_.uniq(this.state.value)});
+
+    },
+    cancel:function () {
+        store.dispatch({
+            type: 'CHANGE_VALUE',
+            index: this.props.index,
+            value: this.state.value
+        });
+        this.setState({ visible: false });
+    },
+
     valueChange:function(value){
         store.dispatch({
             type: 'CHANGE_VALUE',
@@ -169,7 +228,12 @@ var Str=React.createClass({
             value: value
         });
     },
+
     render:function(){
+        let opr = [];
+        _.each(this.props.selectData , (item , key)=>{
+            opr.push(item.opr);
+        })
         return (
             <Row type="flex" gutter="10px" justify="start" align="middle">
                     <Col span={10}>
@@ -188,9 +252,27 @@ var Str=React.createClass({
                      )}
 
                     </Col>
-                    <Col span={14} >
-                        <ValueInput type='text' className="ph5 form-control"  title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
-                         onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                    <Col span={14}>
+                        {
+                            this.props.editable ? (
+                                _.contains(opr, 'in') || _.contains(opr, 'ontIn')?(
+                                <Popconfirm visible={this.state.visible} title="输入值重复，是否去重" okText="确认" cancelText="取消" onCancel={this.cancel} onConfirm={this.confirm}>
+                                    <ValueInput type='text' className="ph5 form-control" value={this.state.value} title={this.props.hint} multiple={this.props.isMultiple} placeholder='以逗号分割多个值'
+                                                onChange={(value,e)=> this.onChangeValue(value,e)}      onBlur={(value,e)=> this.uniqValue(value,e)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                                </Popconfirm>
+
+                                ):(
+                                    <ValueInput type='text' className="ph5 form-control"  title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
+                                                onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                                )
+                            ):(
+                                <ValueInput type='text' className="ph5 form-control"  title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
+                                            onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                            )
+
+                        }
+
+
                     </Col>
                 </Row>
 
@@ -201,7 +283,7 @@ var Str=React.createClass({
 /** 时间类型 */
 var Time=React.createClass({
     valueChange:function(val){
-        console.log(val);
+
         this.value = val;
         store.dispatch({
             type: 'CHANGE_VALUE',
@@ -220,21 +302,46 @@ var Time=React.createClass({
 
     },
     getTimePicker:function(){
-        let opr = 'equal';
+        let opr = '';
+        let columnType = '';
         _.each(this.props.selectData , (item , key)=>{
-            opr = item.opr
+            opr = item.opr;
+            columnType = item.columnType;
         })
 
-        var datetimePicker;
 
-        if (_.contains(["notGreaterThan", "notLessThan", "equal", "notEqual"], opr)){
-            datetimePicker = (<BsDateTimePicker type="single" needDel={false} formatString="yyyy-MM-dd" value={this.props.value && _.isEmpty(this.props.value)?null:this.props.value}
-                                                inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:[value])} />);
-        } else if (_.contains(["isNull", "isNotNull"], opr)){
-            datetimePicker = (<ValueInput className="form-control ph5" style={{height: '40px'}} disabled={true} onChange={this.valueChange}/>);
+        var datetimePicker;
+        if(columnType == "date") {
+            if (_.contains(["notGreaterThan", "notLessThan", "equal", "notEqual"], opr)){
+                datetimePicker = (<BsDateTimePicker type="single" needDel={false} formatString="yyyy-MM-dd" value={this.props.value && _.isEmpty(this.props.value)?null:this.props.value}
+                                                    inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:[value])} />);
+            } else if (_.contains(["isNull", "isNotNull"], opr)){
+                datetimePicker = (<ValueInput className="form-control ph5" style={{height: '40px'}} disabled={true} onChange={this.valueChange}/>);
+            } else {
+                datetimePicker = (<BsDateTimePicker type="range" needDel={false} formatString="yyyy-MM-dd" value={this.props.value && _.isEmpty(this.props.value)&&this.props.value.length!=2?null:this.props.value}
+                                                    inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:value.split('~'))} />);
+            }
+
+        } else if(columnType == "datetime" || columnType == "timestamp"){
+            if (_.contains(["notGreaterThan", "notLessThan", "equal", "notEqual"], opr)){
+                datetimePicker = (<BsDateTimePicker type="single" needDel={false} formatString="yyyy-MM-dd HH:mm:ss" value={this.props.value && _.isEmpty(this.props.value)?null:this.props.value}
+                                                    inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:[value])} />);
+            } else if (_.contains(["isNull", "isNotNull"], opr)){
+                datetimePicker = (<ValueInput className="form-control ph5" style={{height: '40px'}} disabled={true} onChange={this.valueChange}/>);
+            } else {
+                datetimePicker = (<BsDateTimePicker type="range" needDel={false} formatString="yyyy-MM-dd HH:mm:ss" value={this.props.value && _.isEmpty(this.props.value)&&this.props.value.length!=2?null:this.props.value}
+                                                    inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:value.split('~'))} />);
+            }
+
         } else {
-            datetimePicker = (<BsDateTimePicker type="range" needDel={false} formatString="yyyy-MM-dd" value={this.props.value && _.isEmpty(this.props.value)&&this.props.value.length!=2?null:this.props.value}
-                                                inputWidth="100%" callback={(value) => this.valueChange(_.isEmpty(value)?[]:value.split('~'))} />);
+
+            datetimePicker =(
+                <div className="input-group" style={{width:'100%'}}>
+                    <input type="text" style={{height: '40px', cursor: 'auto'}} className="form-control input-sm"
+                           placeholder={this.props.hint} ></input>
+                </div>
+            )
+
         }
 
         return(
@@ -289,6 +396,65 @@ var Time=React.createClass({
 
 /** 数字类型 */
 var Count = React.createClass({
+
+    getInitialState: function(){
+        return {
+            visible:false
+        }
+    },
+
+    onChangeValue:function(values,e){
+        let value=e.target.value;
+        this.setState({
+            value: value
+        })
+    },
+    uniqValue:function (values,e) {
+        let value = values;
+        let isUniq = false;
+
+        for(var i = 0; i < value.length - 1; i++) {
+            if (value[i] == value[i+1]) {
+                isUniq = true
+            }
+        }
+
+        if(isUniq){
+            this.setState({
+                visible:true,
+                value:value
+            })
+        }else {
+            store.dispatch({
+                type: 'CHANGE_VALUE',
+                index: this.props.index,
+                value: value
+            });
+            this.setState({
+                value:value
+            })
+        }
+
+    },
+    confirm:function () {
+        store.dispatch({
+            type: 'CHANGE_VALUE',
+            index: this.props.index,
+            value: _.uniq(this.state.value)
+        });
+        this.setState({ visible: false , value:_.uniq(this.state.value)});
+
+    },
+    cancel:function () {
+        store.dispatch({
+            type: 'CHANGE_VALUE',
+            index: this.props.index,
+            value: this.state.value
+        });
+        this.setState({ visible: false });
+    },
+
+
     valueChange:function(value){
         store.dispatch({
             type: 'CHANGE_VALUE',
@@ -297,6 +463,11 @@ var Count = React.createClass({
         });
     },
     render: function() {
+        let opr = [];
+        _.each(this.props.selectData , (item , key)=>{
+            opr.push(item.opr);
+        })
+
         return (
             <Row type="flex" gutter="10px" justify="start" align="middle">
                     <Col span={10}>
@@ -314,8 +485,24 @@ var Count = React.createClass({
                     )}
                     </Col>
                     <Col span={14}>
-                        <ValueInput type='text'  className="ph5 form-control" title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
-                                    onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                        {
+                            this.props.editable ? (
+                                _.contains(opr, 'in') || _.contains(opr, 'ontIn')?(
+                                    <Popconfirm visible={this.state.visible} title="输入值重复，是否去重" okText="确认" cancelText="取消" onCancel={this.cancel} onConfirm={this.confirm}>
+                                        <ValueInput type='text' className="ph5 form-control" value={this.state.value} title={this.props.hint} multiple={this.props.isMultiple} placeholder='以逗号分割多个值'
+                                                    onChange={(value,e)=> this.onChangeValue(value,e)}      onBlur={(value,e)=> this.uniqValue(value,e)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                                    </Popconfirm>
+
+                                ):(
+                                    <ValueInput type='text' className="ph5 form-control"  title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
+                                                onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                                )
+                            ):(
+                                <ValueInput type='text' className="ph5 form-control"  title={this.props.hint} multiple={this.props.isMultiple} placeholder={this.props.hint}
+                                            onBlur={(value)=> this.valueChange(value)} splitWord={SPLIT_WORD}  style={{cursor: 'auto',width:this.props.size}} disabled={!this.props.editable}/>
+                            )
+
+                        }
                     </Col>
                 </Row>
         )
@@ -326,7 +513,6 @@ var Count = React.createClass({
 var Timein = React.createClass({
     timeType(item,option,select,checked){
         var type = option.val();
-        console.log(type)
         store.dispatch({
             type: 'CHANGE_TIMETYPE',
             index: this.props.index,
@@ -393,11 +579,22 @@ var Timein = React.createClass({
 
 var Code=React.createClass({
     valueChange:function(value){
+        this.value = value;
         store.dispatch({
             type: 'CHANGE_VALUE',
             index: this.props.index,
-            value: value
+            value: this.value
         });
+    },
+    shouldComponentUpdate(nextProps){
+
+        if(this.props.editable && nextProps.value == this.value){
+            return false;
+        }
+        if(!this.props.editable){
+            return true;
+        }
+
     },
     render:function(){
         return (

@@ -1,6 +1,7 @@
 var router = require('express').Router();
 var TaskApi = require('../jws/taskcommon');
 var _ = require('underscore');
+var RegularApi = require('../jws/tactics');
 
 
 const OPR_MAP = {
@@ -145,13 +146,13 @@ router.get('/listbireportTree',function(req,res){
                 .then(function(rsp2) {
                     console.log('getsolid', rsp2.data, '\n\n\n\n');
                     var datasource = rsp2.data;
-                    var sysRoot = [];
+                    //var sysRoot = [];
                     var personalRoot = [];
-                    var sysIdmap = {};
+                    //var sysIdmap = {};
                     var personalIdmap = {};
                     var returnData = [];
                     var result = {
-                        systree:[],
+                        //systree:[],
                         personaltree:[]
                     };
 
@@ -174,14 +175,14 @@ router.get('/listbireportTree',function(req,res){
 
                     }
 
-                    _.each(dirs.sysDir, function(dir) {
-                        sysIdmap[dir.dirId] = dir;
-                        dir.folder = false;
-                        dir.key = dir.dirId;
-                        dir.title = dir.dirName;
-                        dir.extraClasses = "nv-dir";
-                        dir.hideCheckbox = true;
-                    });
+                    //_.each(dirs.sysDir, function(dir) {
+                    //    sysIdmap[dir.dirId] = dir;
+                    //    dir.folder = false;
+                    //    dir.key = dir.dirId;
+                    //    dir.title = dir.dirName;
+                    //    dir.extraClasses = "nv-dir";
+                    //    dir.hideCheckbox = true;
+                    //});
 
                     _.each(dirs.personalDir, function(dir) {
                         personalIdmap[dir.dirId] = dir;
@@ -192,26 +193,26 @@ router.get('/listbireportTree',function(req,res){
                         dir.hideCheckbox = true;
                     })
 
-                    _.each(dirs.sysDir, function(dir){
-                        findParent(dir, sysRoot, sysIdmap);
-                    })
+                    //_.each(dirs.sysDir, function(dir){
+                    //    findParent(dir, sysRoot, sysIdmap);
+                    //})
 
                     _.each(dirs.personalDir, function(dir){
                         findParent(dir, personalRoot, personalIdmap);
                     })
 
-                    _.each(datasource, function(model) {
-                        var dir = sysIdmap[model.dirId];
-                        if (dir) {
-                            dir.children = dir.children || [];
-                            model.title = model.modelName;
-                            model.key = model.modelId;
-                            model.extraClasses = 'nv-model';
-                            dir.children.push(model);
-                            dir.folder = true;
-                            findParent(dir, result.systree, sysIdmap);
-                        }
-                    });
+                    //_.each(datasource, function(model) {
+                    //    var dir = sysIdmap[model.dirId];
+                    //    if (dir) {
+                    //        dir.children = dir.children || [];
+                    //        model.title = model.modelName;
+                    //        model.key = model.modelId;
+                    //        model.extraClasses = 'nv-model';
+                    //        dir.children.push(model);
+                    //        dir.folder = true;
+                    //        findParent(dir, result.systree, sysIdmap);
+                    //    }
+                    //});
 
                     _.each(datasource, function(model) {
                         var dir = personalIdmap[model.dirId];
@@ -226,7 +227,7 @@ router.get('/listbireportTree',function(req,res){
                         }
                     });
 
-                    result.systree[0]==null?returnData.push(sysRoot[0]):returnData.push(result.systree[0]);
+                    //result.systree[0]==null?returnData.push(sysRoot[0]):returnData.push(result.systree[0]);
                     result.personaltree[0]==null?returnData.push(personalRoot[0]):returnData.push(result.personaltree[0]);
 
                     res.endj({
@@ -243,6 +244,76 @@ router.post('/getAllData', function(req, res) {
         };
     TaskApi(req).getAllDataSourceInSolid(params, res.endj);
 });
+
+router.post('/getCuringType', function(req, res) {
+    RegularApi(req).getTacticsTypes(res.endj);
+});
+
+router.post('/getCuring', function(req, res) {
+    var params = {
+        solidIds: req.query.solidIds,
+        tacticsTypeId: req.query.tacticsTypeId
+    }
+    RegularApi(req).releaseTactics(params, res.endj);
+});
+
+//  modelcuring
+router.get('/getTactics', function(req, res) {
+    RegularApi(req).getTactics(res.endj);
+})
+
+router.get('/getTacticsFavorByUser', function(req, res) {
+    TaskApi(req).getPersonFavor({
+        type: req.query.type
+    }, res.endj);
+})
+
+router.post('/addTacticsFavor', function(req, res) {
+    TaskApi(req).addPersonFavor({
+        id: req.query.id,
+        caption: req.query.caption,
+        type: req.query.type
+    }, res.endj);
+})
+
+router.post('/deleteTacticsFavor', function(req, res) {
+    TaskApi(req).delPersonFavor({
+        id: req.query.id,
+        type: req.query.type
+    }, res.endj);
+})
+router.post('/createMarketType', function(req, res) {
+    RegularApi(req).createTacticsType({
+        typeName: req.query.typeName
+    }, res.endj);
+})
+
+router.post('/modifyMarketTypeName', function(req, res) {
+    RegularApi(req).modifyTacticsTypeName({
+        typeId: req.query.typeId,
+        newTypeName: req.query.newTypeName
+    }, res.endj);
+})
+
+router.post('/createTacticsType', function(req, res) {
+    RegularApi(req).createTacticsType({
+        typeName: req.query.typeName
+    }, res.endj);
+})
+
+router.post('/deleteTacticsType', function(req, res) {
+    RegularApi(req).deleteTacticsType({
+        typeIds: req.query.typeIds
+    }, res.endj);
+})
+
+router.post('/modifyTacticsTypeName', function(req, res) {
+    RegularApi(req).modifyTacticsTypeName({
+        newTypeName: req.query.typeName,
+        typeId: req.query.typeId
+    }, res.endj);
+})
+
 
 
 module.exports = router;

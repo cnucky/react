@@ -88,10 +88,14 @@ class ToolBar extends React.Component {
 		});
 	}
 
+	postCuring(){
+		manager.showCuringDialog();
+	}
+
     render() {
         return (
             <div id="top-toolbar" className="p5" style={{ position: 'relative' }}>
-                <Tooltip title="载入模型固化" placement="bottom">
+                <Tooltip title="载入模型" placement="bottom">
 					<button type="button" className="btn btn-default btn-sm" style={{ position: 'relative' }} onClick={this.changeReport}>
 	                    <i className="fa fa-folder-open fa-fw"></i>
                     </button>
@@ -126,6 +130,14 @@ class ToolBar extends React.Component {
 						</div>
 					):''
 				}
+				{
+					modelId || solidId ? (
+						<button id='btn-subCuring' type="button" className="btn btn-primary btn-sm pull-right disabled" onClick={this.postCuring}>
+							发布战法
+						</button>
+					):''
+				}
+
 
                 <button id='btn-subApp' style={{display:'none'}} type="button" className="btn btn-primary btn-sm pull-right disabled " onClick={this.doPost}>
 	                 上传应用

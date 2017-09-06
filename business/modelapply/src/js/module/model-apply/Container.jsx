@@ -55,7 +55,7 @@ var Container = React.createClass({
         else
             return (<div className="target-wrap" style={{width: '100%', border: '1px solid transparent', overflow: 'auto'}}>
 					    <Target fontSize={this.props.fontSize} components={this.props.components} editable={this.props.editable} />
-                        <Footer describe={this.props.describe} fontSize={this.props.fontSize} editable={this.props.editable}/>
+                        <Footer asWidget={this.props.asWidget} describe={this.props.describe} fontSize={this.props.fontSize} editable={this.props.editable}/>
                     </div>);
 	}
 });

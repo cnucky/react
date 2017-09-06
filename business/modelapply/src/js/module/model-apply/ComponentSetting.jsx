@@ -229,7 +229,7 @@ var ComponentSetting = React.createClass({
                     var isselect = oprData.opr != 'in' && oprData.opr != 'between' && oprData.opr != 'notIn' && oprData.opr != 'notBetween';
                     var selected = selectedOpr != 'in' && selectedOpr != 'between' && selectedOpr != 'notIn' && selectedOpr != 'notBetween';
                     if (isselect != selected && !data.node.isSelected()) {
-                        Notify.simpleNotify('错误', '单值多值不能同时勾选', 'error');
+                        Notify.simpleNotify('错误', '单值多值不能同时勾选', 'warning');
                         return false;
                     }
                 }
@@ -238,7 +238,7 @@ var ComponentSetting = React.createClass({
                     let selecting=oprData.codeTable+oprData.codeField+oprData.codeDisNameField;
                     // console.log(selected,selecting)
                     if( selected !=selecting && !data.node.isSelected()){
-                        Notify.simpleNotify('错误', '代码表字段不同，不能同时勾选', 'error');
+                        Notify.simpleNotify('错误', '代码表字段不同，不能同时勾选', 'warning');
                         return false;
                     }
                 }
@@ -251,7 +251,7 @@ var ComponentSetting = React.createClass({
                     }
                 });
                 if (!_.contains(oprData.type,selectType) && !data.node.isSelected()) {
-                    Notify.simpleNotify('错误', '类型不匹配,所选组件类型为：' + selectType + ',勾选项类型为' + oprData.type, 'error');
+                    Notify.simpleNotify('错误', '类型不匹配,所选组件类型为：' + selectType + ',勾选项类型为' + oprData.type, 'warning');
                     return false;
                 }
             },
@@ -364,7 +364,7 @@ var ComponentSetting = React.createClass({
                                             title: oprItem.key,
                                             value: oprItem.name,
                                             type: 'string',
-                                            selected: oprItem.key == operationChar
+                                            selected: oprItem.name == operationChar
                                         }
                                     })
                                 }/>

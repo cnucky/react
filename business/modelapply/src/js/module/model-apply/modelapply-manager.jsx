@@ -4,10 +4,14 @@ const ModelapplySaver = require('./modelapply-saver');
 const ModelapplySub = require('./modelapply-submit');
 const moment = require('moment');
 const FileHelper = require('utility/FileSaver/FileSaver');
+var Dialog = require('nova-dialog');
 var store = require('./model-apply-store');
 const Q = require('q');
 var utils = require('nova-utils');
+var React = require('react');
+var ReactDOM = require('react-dom');
 const NodeManager = require('../modeling/modeling-toolbar-handler');
+import { Tag, Input, Tooltip, Button } from 'antd'
 
 let solidId, modelSaveCfg, viewDetail, modelDetail, field, modelSubCfg;
 
@@ -38,7 +42,6 @@ function loadTree(modelId) {
                             dir.type.push('string')
                         } else if (isNumber(dir.columnType)) {
                             dir.type.push('decimal')
-                            dir.type.push('datetime')
                         } else if (dir.columnType == "date" || dir.columnType == "datetime" || dir.columnType == "timestamp") {
                             dir.type.push('date')
                         }
@@ -73,9 +76,7 @@ function loadTree(modelId) {
                         isMultiple: false,
                     }
                 }
-                if (component.type == 'datetime') {
-                    component.condition.timeType = 'day';
-                }
+
                 if(component.type =='date'){
                     component.condition.opr="等于";
                 }
@@ -242,8 +243,8 @@ function saveModelPost(saveOpts, onSaved) {
     _.each(viewDetail.components , (item , key)=>{
         item.condition.hint = item.condition.hint.replace(/\n/g,'');
     });
-    viewDetail.appDescribe = viewDetail.appDescribe.replace(/\n/g,'');
-    console.log(viewDetail)
+    viewDetail.appDescribe = saveOpts.modelDesc;
+    console.log(saveOpts)
     $.post('/modelapply/modelapply/savemodelapply', {
         solidId: _.isEmpty(solidId) ? undefined : solidId,
         solidName: saveOpts.modelName,
@@ -257,6 +258,7 @@ function saveModelPost(saveOpts, onSaved) {
         if (rsp.code == 0) {
             $('#btn-save-model').removeClass('hide');
             $('#btn-subApp').removeClass('disabled');
+            $('#btn-subCuring').removeClass('disabled');
             solidId = rsp.data.solidId;
             console.log(solidId);
             store.dispatch({
@@ -280,10 +282,10 @@ function saveModelPost(saveOpts, onSaved) {
 module.exports.saveApply = saveApply;
 
 
-function openApply() {
+function openApply(solidId) {
     let defer = Q.defer();
     $.post('/modelapply/modelapply/openmodelapply', {
-        solidId: utils.getURLParameter('solidid')
+        solidId: utils.getURLParameter('solidid') || solidId
     }, function (rsp) {
         if (rsp.code == 0) {
             //console.log(rsp.data,Date.now());
@@ -302,6 +304,12 @@ function openApply() {
                 type: 'CHANGE_MODELDETAIL',
                 modelDetail: modelDetail
             });
+            store.dispatch({
+                type: 'CHANGE_SOURCE',
+                source: viewDetail.source
+            });
+            $('#btn-subCuring').removeClass('disabled');
+
             defer.resolve();
         } else {
             Notify.simpleNotify('错误', rsp.message ||'模型固化：加载失败', 'error');
@@ -329,7 +337,7 @@ function subApply(onSub) {
         return item == '';
     });
     if (value[position] == '') {
-        Notify.simpleNotify('错误', title[position] + '的必填项必须填写', 'error');
+        Notify.simpleNotify('错误', title[position] + '的必填项必须填写', 'warning');
         return false;
     } else {
         ModelapplySub.subDialog(function (subOpts) {
@@ -535,5 +543,255 @@ function getAllData() {
         }, 'json');
     return defer.promise;
 }
+
 module.exports.getAllData = getAllData;
+
+
+
+var Content = React.createClass({
+
+    getInitialState: function(){
+        return {
+            rspData:[],
+            typeId:'',
+            inputVisible: false,
+            inputValue: '',
+            newTab:{},
+            selectKey:'',
+            textChange:''
+        }
+    },
+    componentDidMount: function() {
+        let that = this;
+        $.post('/modelapply/modelapply/getCuringType',{
+
+        },function (rsp) {
+            if(rsp.code == 0){
+                that.setState({
+                    rspData:rsp.data.tacticsTypes,
+                    typeId:rsp.data.tacticsTypes[0].typeId
+                })
+                store.dispatch({
+                    type: 'CURING_TYPE',
+                    curingType: rsp.data.tacticsTypes[0].typeId
+                });
+
+            }else {
+                Notify.simpleNotify('错误', '没有获取类型', 'error');
+            }
+        },'json');
+    },
+    changeSelection(option , key) {
+        this.setState({
+            typeId: option
+        });
+        store.dispatch({
+            type: 'CURING_TYPE',
+            curingType: option
+        });
+    },
+    ShowText(key,typeName){
+        this.setState({
+            selectKey: key,
+            textChange:typeName
+        });
+
+    },
+    showInput(){
+        this.setState({ inputVisible: true },() => this.input.focus());
+    },
+    inputLeave(key){
+
+        if(this.state.textChange.trim()!=''){
+
+            let data = this.state.rspData;
+
+            let repeat = false;
+            _.each(data, (item , keys)=>{
+                if(item.typeName == this.state.textChange && key!=keys){
+                    repeat = true;
+                }
+            })
+
+            if(repeat != true){
+                let that = this;
+
+                $.post('/modelapply/modelapply/modifyMarketTypeName',{
+                    typeId:data[key].typeId,
+                    newTypeName:that.state.textChange
+                },function (rsp) {
+                    if(rsp.code == 0){
+                        data[key].typeName = that.state.textChange;
+                        that.setState({
+                            selectKey: '',
+                            rspData:data,
+                            textChange:''
+                        });
+                    }
+                },'json');
+
+            }else {
+                Notify.simpleNotify('错误', '目录名称重复', 'warning');
+                this.setState({
+                    textChange:''
+                });
+            }
+
+        }
+
+
+    },
+    handleInputChange(e){
+
+        this.setState({ inputValue: e.target.value });
+
+    },
+    textChange(e){
+        this.setState({ textChange: e.target.value });
+    },
+    handleInputConfirm () {
+        const state = this.state;
+        const inputValue = state.inputValue;
+        if(inputValue.trim() !=''){
+            let rspData = state.rspData;
+            let that = this;
+            $.post('/modelapply/modelapply/createMarketType',{
+                typeName:inputValue
+            },function (rsp) {
+                if(rsp.code == 0){
+                    let inputValues ={
+                        typeId:rsp.data.typeId,
+                        typeName:inputValue
+                    }
+
+                    let repeat = false;
+                    _.each(rspData ,(item)=>{
+                        if(item.typeName === inputValues.typeName){
+                            repeat = true;
+                        }
+                    })
+
+                    if (repeat != true) {
+                        rspData = [...rspData, inputValues];
+                    }else {
+                        Notify.simpleNotify('错误', '目录名称重复', 'warning');
+                    }
+                    console.log(rspData);
+                    that.setState({
+                        rspData,
+                        inputVisible: false,
+                        inputValue: '',
+                    });
+
+
+                }else {
+                    Notify.simpleNotify('错误', '创建目录失败', 'warning');
+                }
+            },'json');
+        }
+
+    },
+
+    render:function(){
+        const {inputVisible , inputValue ,selectKey ,textChange } = this.state;
+        return(
+            <div>
+                <div className="row">
+                    {
+                        _.map(this.state.rspData ,(item , key)=>{
+                            return(
+                                <div>
+                                    <div  style={{width:'80%',margin:'auto',marginTop:20}} className={"btn  btn-gradient btn-alt btn-block item-active" + ( item.typeId == this.state.typeId ? " btn-primary  " : " " )} onClick={this.changeSelection.bind(this,item.typeId)}>
+                                        <div className="text-ellipsis" >
+                                            <div className={(selectKey===key) ?'':'hide' }>
+                                                <Input
+                                                    type="text"
+                                                    size="default"
+                                                    style={{width:'100%'}}
+                                                    value={textChange}
+                                                    onChange={this.textChange}
+                                                    onBlur={this.inputLeave.bind(this,key)}
+                                                />
+                                            </div>
+                                            <div className={(selectKey===key) ?'hide':'' }>
+                                                {item.typeName}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            )
+                        })
+                    }
+                </div>
+
+                <div style={{width:'84%',margin:'auto',marginTop:20}}>
+                    <Input
+                        type="text"
+                        size="default"
+                        style={{width:'89%'}}
+                        value={inputValue}
+                        onChange={this.handleInputChange}
+                        onBlur={this.handleInputConfirm}
+                        onPressEnter={this.handleInputConfirm}
+                        placeholder="创建目录"
+                    />
+                    <span>
+                       <button onClick={this.showInput} style={{marginLeft:8}} className="add-record btn btn-rounded btn-primary btn-xs">
+                           <i className="fa fa-plus fa-fw"></i>
+                       </button>
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        )
+    }
+})
+
+
+function showCuringDialog(callback, preset) {
+
+    Dialog.build({
+        title: '上传战法集市',
+        minHeight: '200px',
+        maxHeight:'400px',
+        content: '<div id="replacement-dialog-content"></div>',
+        rightBtnCallback: function() {
+            var state = store.getState();
+            let solidId=state.data.solidId || utils.getURLParameter('solidid');
+
+            $.post('/modelapply/modelapply/getCuring',{
+                solidIds: [solidId],
+                tacticsTypeId: state.data.curingType
+            },function (rsp) {
+                if(rsp.code == 0){
+                    Notify.show({
+                        title: '提示',
+                        text: '上传 成功',
+                        type: 'success'
+                    });
+
+                }else {
+                    Notify.simpleNotify('错误', '没有获取类型', 'error');
+                }
+            },'json');
+
+            $.magnificPopup.close();
+
+        }
+    }).show(function() {
+
+        ReactDOM.render(<Content></Content>, document.getElementById('replacement-dialog-content'));
+
+    });
+
+}
+
+module.exports.showCuringDialog = showCuringDialog;
+
+
+
 

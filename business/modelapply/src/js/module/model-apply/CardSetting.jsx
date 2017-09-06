@@ -117,7 +117,7 @@ var ColorPicker = React.createClass({
         };
         var colorPickerPanel =  (
             <div>   
-                <div style={ alignLeft ? popoverLeft : popoverRight }>
+                <div className="colorPicker"  style={ alignLeft ? popoverLeft : popoverRight }>
                     <div style={ cover } onClick={ this.handleClose } />
                     <ChromePicker color={color} onChange={ this.handleChange }/>
                 </div>
@@ -197,26 +197,26 @@ var CardSetting = React.createClass({
             <form class="form-horizontal" role="form">
                 <div className='ml20 mr20'>
                     <div className='row'>
-                        <label className='control-label' for='title'>应用名称 <span style={{color:'red',marginLeft:'5px'}}>*</span></label>
+                        <label className='control-label' for='title'>表头名称 <span style={{color:'red',marginLeft:'5px'}}>*</span></label>
                     </div>
                     <div className='row'>
                             <input type='text' className='form-control' id='title' onChange={this.titleChange} value={title} />
                     </div>
                 </div>
 
-                <div className='ml20 mr20 mt20'>
+                {/*<div className='ml20 mr20 mt20'>
                     <div className='row'>
                         <label className='control-label' for='title'>模型描述</label>
                     </div>
                     <div className='row'>
                         <textarea className="form-control"  rows="3" onChange={this.describe} value={describe}></textarea>
                     </div>
-                </div>
+                </div>*/}
 
                 <div className='ml20 mr20 mt20'>
                     <div className='row'>
                         <label className='control-label'>主题</label>
-                    </div>            
+                    </div>
                     {
                         _.map(themes, function(theme, index) {
                                 return (

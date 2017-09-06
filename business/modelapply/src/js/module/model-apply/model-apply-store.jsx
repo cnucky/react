@@ -67,9 +67,7 @@ var reducer = function(state = {},action) {
                     isMultiple: false
                 }
             }
-            if(component.type =='datetime'){
-                component.condition.timeType='day';
-            }
+
             if(component.type =='date'){
                 component.condition.opr="等于";
             }
@@ -301,6 +299,12 @@ var reducer = function(state = {},action) {
                 }
                 return _.assign({}, state, { data: data });
             }
+        case 'CURING_TYPE':
+        {
+            let data = state.data;
+            data.curingType = action.curingType;
+            return _.assign({}, state, { data: data });
+        }
         case 'CHANGE_VALUE':
             {
                 let data = state.data;

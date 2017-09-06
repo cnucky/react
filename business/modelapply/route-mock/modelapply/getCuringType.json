@@ -1,0 +1,24 @@
+{
+	"code": 0,
+	"data": {
+		"tacticsTypes": [{
+			"typeId": 1,
+			"typeName": "任务模型",
+			"creatorId": 18,
+			"createTime": "2017-06-10",
+			"lastModifyTime": "2017-08-30"
+		}, {
+			"typeId": 2,
+			"typeName": "分析模型",
+			"creatorId": 18,
+			"createTime": "2017-06-10",
+			"lastModifyTime": "2017-08-30"
+		}, {
+			"typeId": 3,
+			"typeName": "通用模型",
+			"creatorId": 18,
+			"createTime": "2017-06-10",
+			"lastModifyTime": "2017-08-30"
+		}]
+	}
+}

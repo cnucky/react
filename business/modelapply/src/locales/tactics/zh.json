@@ -1,0 +1,12 @@
+{
+	"info": {
+		"notify-add-favor-fail": "战法偏好添加失败",
+		"notify-add-favor-success": "战法偏好添加成功",
+		"notify-delete-favor-fail": "战法偏好删除失败",
+		"notify-delete-favor-success": "战法偏好删除成功"
+	},
+	"module": {
+		"finish-btn": "确定",
+		"cancel-btn": "取消"
+	}
+}
